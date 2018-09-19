@@ -13,4 +13,5 @@ tags:
 - communication
 ---
 
-[caption id="attachment_3399" align="aligncenter" width="640"][!["Customers are happy with the way it is!"](http://rlc.vlinder.ca/wp-content/uploads/2014/10/IMG_1303-1024x279.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/10/IMG_1303.png) Miss(ed) Communication[/caption]
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/10/IMG_1303-1024x279.png" caption="Miss(ed) Communication" %}
+
