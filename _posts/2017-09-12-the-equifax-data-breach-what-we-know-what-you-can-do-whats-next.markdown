@@ -20,9 +20,9 @@ tags:
 - security
 ---
 
-<div class="dropshadowbox">**The TL;DR:**
+<!--div class="dropshadowbox"-->**The TL;DR:**
 [caption id="attachment_4255" align="aligncenter" width="141"][![TL;DR mindmap](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368-141x300.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368.jpg) TL;DR mindmap[/caption]
-</div>
+<!--/div-->
 <!-- more -->
 
 
