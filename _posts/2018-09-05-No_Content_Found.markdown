@@ -1,0 +1,83 @@
+---
+author: rlc
+comments: true
+date: 2018-09-05 00:00:00+00:00
+layout: post
+link: http://rlc.vlinder.ca/?p=4140
+published: false
+slug: No Content Found
+title: On the importance of requirements gathering
+wordpress_id: 4140
+categories:
+- Software Engineering
+---
+
+Requirements analysis is a three-step, cyclical process. The steps are: **Requirements Gathering**, **Requirements Documentation** and **Requirements Validation**. These three steps aren't just repeated over and over during a project's development: they are progressively _refined_ as requirements evolve and the project progresses.
+
+This post is about the first part: requirements gathering.
+
+[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:**
+
+
+
+	
+  * you can avoid scope creep by defining a clear vision
+
+	
+  * you can avoid scope skew by seeking out the expertise and weighing requirements against the vision
+
+	
+  * you can avoid unwarranted requirement complexity by identifying conflicting requirements and factoring them out, favouring the requirements that drive toward the vision
+
+
+
+
+[/dropshadowbox]
+<!-- more -->
+The first step in requirements gathering is getting a hold on the scope of the project. In the beginning, this may be a daunting task as most stakeholders will have only a vague idea of what they really want and you might not have access to all the stakeholders (i.e. you are usually not in direct contact with the end user). This introduces three kinds of errors into your requirements definition: _scope creep_, which is an effect of ever-moving requirements caused by assumptions (usually about the market) that turn out to be wrong; _scope skew_, which is the wrongful assignment of weight to certain requirements relative to others, usually caused by wrong assumptions and too-strong convictions; and _unwarranted requirements complexity_, which is a result trying to reconcile contradictory requirements. Each of these problems can be avoided up to a point.
+
+
+
+### Avoiding Scope Creep
+
+
+In order to avoid scope creep, you have to understand (from the outset, if possible) what the over-arching goal of the project is. Try to get the stakeholders to agree on that one point, and go back to that point every time it goes out of focus.
+
+This over-arching goal has to be something relatively concrete. It's a vision of what the future should bring, and what the role of this project is in bringing that future. It becomes the **_vision statement_**, once it is sufficiently distilled and refined.
+
+
+
+<blockquote>Creating an effective project vision requires excellent communication skills and a deep understanding of both organisational culture and the history and trigger mechanisms that create underlying assumptions of individuals and groups comprising project teams. A project vision can be an artefact that defines the project’s soul so that it anchors project participants through their core values to a project outcome that all can relate to. Clearly, this is a difficult task requiring intelligence, wisdom and insightfulness on the part of project leaders. Crafting a vision requires insights into the underlying assumptions that determine values and to create artefacts that can be accepted and internalised. (("_Vision as a Critical Success Factor to Project Outcomes_", 
+D. Christenson and D.H.T. Walke; 17th World Congress on Project Management, Moscow, 2003))</blockquote>
+
+
+
+A vision statement should be a concise statement: it should inspire in its readers (the project stakeholders) a vivid, lucid image of what the future should look like and excite in them an urge to make it so. Long-winded treatises rarely have that effect (or at least, haven't had that effect with any discernible frequency since the late 19th century).
+
+A good example of a vision statement (for a memory allocator) is: "µpool2 is a blindingly fast, incredibly flexible small object allocator". At the time that statement was written, µpool2 was a nascent project that was intended to become a small object allocator. Nobody was (or is) going to go blind because it's so fast and the credibility of its flexibility, at that time, is not, and never was, in doubt. Compare that statement with the following statement, though, about the same project: "µpool2 should become a faster-than-average, relatively flexible small object allocator. When I say 'faster than average', I mean that it should at least beat the most common allocators (especially the slow ones) in a widely accepted allocator benchmark. Good candidates to test it against would be the allocators in Newlib, glibc, the one in Microsoft's CRT, and maybe some less common allocators such as Hoard. As far as its flexibility goes: it would be nice if it could be optimised for certain object sizes and certain scenarios -- such as single-thrded use vs. multi-threaded use, etc. Maybe some statistics and somesuch would be nice as well." The latter version, while more precise and perhaps S.M.A.R.T.er, is by no means inspiring and therefore a failure as a vision statement.
+
+Once you have a good grasp of the scope in the form of a vision statement, any new requirement -- and any new development -- can be tested to see whether it drives the project toward that vision. If it does not, the new requirement should not be accepted.
+
+Note that this is different from defining a _minimal viable product_: a minimal viable product, or MVP, is defined by how far you need to go toward the product vision to have something you can put on the market and sell. It determines the amount of resources (time, money) you need to invest in the project before the result of the project can start making money (and eventually start paying for its own improvements, and making profit).
+
+
+
+### Avoiding Scope Skew
+
+
+Once you've defined a vision (and general scope) for the project, you can start determining what features the project should have, and what the functional requirements for each of those features are. Each feature is more or less important to drive toward the vision, so each feature needs to be weighted to determine in what order and to what extent each of them should be implemented.
+
+This is where developer's expertise is especially important: features may depend on each other and some features may be much harder to implement than others, or much harder to implement if others are also present. Some features may place requirements on other parts of the project over which you may have no control.
+
+For example: if you have to implement the logic for a coffee maker. One of the requested features is to have a standby mode in which a simple press of a button gets the coffee maker to immediately brew a cup of coffee. As any caffeine addict will know, coffee is only worth drinking if it's between 77 and 82°C. However, coffee, when served, is never as hot as when it's brewed, so the water used for heating should actually be between 80 and 85°C. This means that in order to implement the requested feature, the hardware needs a means to measure the temperature of the heating element -- a thermometer, which in turn means that the firmware needs a means to communicate with that thermometer, etc.
+
+Expertise becomes especially important if the customer (the stakeholder who is requesting the development of the project) has none, or very little. In that case, the customer is effectively buying expertise as well as product. Imagine the person who wants you to develop the coffee machine firmware never drinks coffee. You'd have to tell them coffee needs to be hot, but not too hot. Espresso is different from "_cafe filtre_", which is different from American-style coffee, etc. What kind of coffee do they want their coffeemaker to brew?
+
+
+
+### Avoiding Unwarranted Requirement Complexity
+
+
+Requirements become more complex as they start "bumping into each other". For example, for our coffee maker, if the customer doesn't understand that espresso really is different from filtered coffee, he might want the machine to make both. Imagine a coffee maker that makes both espresso and filtered coffee and you'll see how much more complex that coffeemaker is than a coffeemaker that does either one, but not both.
+
+If at all possible, contradictory requirement should be identified as such and should be factored out as much as possible. _Keep it simple, stupid_ is, in this case, a mantra to live by. Again, weighing the requirements w.r.t. the project vision and prioritizing them will help. 

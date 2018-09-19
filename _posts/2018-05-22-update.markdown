@@ -1,0 +1,18 @@
+---
+author: rlc
+comments: true
+date: 2018-05-22 21:42:36+00:00
+layout: post
+link: http://rlc.vlinder.ca/blog/2018/05/update/
+slug: update
+title: Update
+wordpress_id: 4305
+---
+
+Readers of this site may wonder what I've been doing for last six months, which is an unusually long hiatus for me to not write anything. The answer is: I've been busy.
+<!-- more -->
+About nine months ago, I co-founded a new company called [Optimus Analysis](http://optimus-analysis.ca) and have been putting quite a bit of work into the proof of concept as well as working with my co-founder to find some financing. I've also been working on a research project triggered by the so-called ["PGP server hack"](http://rlc.vlinder.ca/blog/2017/03/police-hack-pgp-server-really/) which, though going slowly, is getting along fairly well and has the potential to create a competitor new communications network.
+
+Add to this my day job, consulting work, standards-related with, and family life, I've been a bit too busy to update this site.
+
+I'll try to write something interesting...

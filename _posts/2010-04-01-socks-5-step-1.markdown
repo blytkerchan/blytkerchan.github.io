@@ -1,0 +1,16 @@
+---
+author: rlc
+comments: true
+date: 2010-04-01 12:30:44+00:00
+layout: post
+link: http://rlc.vlinder.ca/blog/2010/04/socks-5-step-1/
+slug: socks-5-step-1
+title: 'SOCKS 5, step 1: Serializing a Token'
+wordpress_id: 500
+categories:
+- C++ for the self-taught
+tags:
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+---
+
