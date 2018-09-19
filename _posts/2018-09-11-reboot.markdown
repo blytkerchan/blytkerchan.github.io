@@ -14,3 +14,4 @@ Some formatting will need to be fixed for older posts, and I will start doing th
 
 Some of what I post may be PDF files: I've been using LaTeX a lot lately, and have some interesting stuff that presents better as PDFs. I'll see how that turns out as well.
 
+Also: please let me know about any bugs you see: the site is large enough for me to not be able to re-read everything, so there may be a few bugs I've missed.
