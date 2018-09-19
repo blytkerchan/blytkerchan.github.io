@@ -20,9 +20,9 @@ tags:
 - security
 ---
 
-<!--div class="dropshadowbox"-->**The TL;DR:**
+{% include shadowbox.html text="**The TL;DR:**" open_only=true %}
 {% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368-141x300.jpg" caption="TL;DR mindmap" %}
-<!--/div-->
+</div>
 <!--more-->
 
 
