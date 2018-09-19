@@ -81,9 +81,17 @@ There are fiveimportant events the slave has to handle:
 
 
 
-[caption id="attachment_3362" align="alignright" width="300"][![Selection just before a SPI clock rising edge](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-1-300x90.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-1.png) Selection just before a SPI clock rising edge[/caption][caption id="attachment_3363" align="alignright" width="300"][![Selection just before a SPI clock falling edge](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-3-300x90.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-3.png) Selection just before a SPI clock falling edge[/caption]**Being selected** means the master is now talking to us, which means we should start sending it data if we have any and we should read the data it sends us. The question is when the select becomes effective: my implementation needs at least a clock tick between the falling edge of the select# signal and the first rising edge of the SPI clock, and will ignore a falling edge in the SPI clock if it occurs before that first rising edge.
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-1-300x90.png" caption="Selection just before a SPI clock rising edge" %}
 
-[caption id="attachment_3366" align="alignright" width="300"][![Delesection - first case](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-2-300x90.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-2.png) Delesection - first case[/caption][caption id="attachment_3367" align="alignright" width="300"][![Delesection - second case](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-4-300x90.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-4.png) Delesection - second case[/caption]**Being deselected** means we should stop driving the MISO output immediately, and should stop reading the MOSI input. This can occur at any time, so we need to make sure that we align the 8-bit byte boundary for the next time we're selected.
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-3-300x90.png" caption="Selection just before a SPI clock falling edge" %}
+
+**Being selected** means the master is now talking to us, which means we should start sending it data if we have any and we should read the data it sends us. The question is when the select becomes effective: my implementation needs at least a clock tick between the falling edge of the select# signal and the first rising edge of the SPI clock, and will ignore a falling edge in the SPI clock if it occurs before that first rising edge.
+
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-2-300x90.png" caption="Delesection - first case" %}
+
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/10/select-4-300x90.png" caption="Delesection - second case" %}
+
+**Being deselected** means we should stop driving the MISO output immediately, and should stop reading the MOSI input. This can occur at any time, so we need to make sure that we align the 8-bit byte boundary for the next time we're selected.
 
 **New data being available to send** is indicated by the surrounding code by the data-ready input going high. If we're selected at the moment that that happens, we'll start sending the data at the next 8-bit boundary. The reason for this is that if the data becomes available after the transaction has begun, the MISO output will be pulled down by the slave, so to start sending data at just any moment would shift the bits of every byte by a potentially random amount. As SPI has no start-stop bits, there is no way to frame the data -- unless there is a protocol above SPI that takes care of framing (e.g. by adding start/stop octets and an escape octet).
 

@@ -17,7 +17,7 @@ tags:
 
 The flurry of DNP3-related vulnerabilities reported to ICS-CERT as part of [Automatak's project Robus](http://www.automatak.com/robus/) seems to have subsided a bit, so it may be time to take a look at where we are regarding ICS security, and where we might be going next.
 
-Of course, I'll only look at communications protocol security in this context: low-tech attacks on the grid ((e.g. letting two helium-filled balloons up with a wire between them, under a high-voltage power line, in order to cause a short between the phases [caption id="attachment_3194" align="alignright" width="768"][![Balloon hack illustration](http://rlc.vlinder.ca/wp-content/uploads/2014/07/balloon-hack.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/07/balloon-hack.png) Balloon hack illustration -- don't do this![/caption])) is outside the scope of this article. In stead, I will take a look at two questions: why the focus on DNP3, and what else could they, and should they, be looking at.
+Of course, I'll only look at communications protocol security in this context: low-tech attacks on the grid ((e.g. letting two helium-filled balloons up with a wire between them, under a high-voltage power line, in order to cause a short between the phases {% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/07/balloon-hack.png" caption="Balloon hack illustration -- don't do this!" %})) is outside the scope of this article. In stead, I will take a look at two questions: why the focus on DNP3, and what else could they, and should they, be looking at.
 
 <!--more-->
 
@@ -164,7 +164,7 @@ In the case of Crain and Sistrunk, I believe they uphold a very high standard of
 	
     * their smart fuzzer tool was on,y made available after vendors had had a chance to fix their implementations and utilities had had a chance to deploy them ((though the time to deploy the fixes was very short: due to power consumption cycles, every time is not necessarily a good time to plan an outage to update firmware, as this chart from [Statistics Canada](http://www.statcan.gc.ca/daily-quotidien/140626/dq140626d-eng.htm) illustrates:
 
-[caption id="attachment_3208" align="alignright" width="1024"][![Power Generation per month in Canada](http://rlc.vlinder.ca/wp-content/uploads/2014/07/20140710-161529-58529743.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2014/07/20140710-161529-58529743.jpg) Power Generation per month in Canada[/caption]))
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/07/20140710-161529-58529743.jpg" caption="Power Generation per month in Canada" %}))
 
 	
     * their smart fuzzer tool is available to vendors (though not for free)

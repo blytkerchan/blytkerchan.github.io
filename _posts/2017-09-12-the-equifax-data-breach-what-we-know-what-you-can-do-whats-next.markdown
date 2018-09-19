@@ -21,7 +21,7 @@ tags:
 ---
 
 <!--div class="dropshadowbox"-->**The TL;DR:**
-[caption id="attachment_4255" align="aligncenter" width="141"][![TL;DR mindmap](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368-141x300.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368.jpg) TL;DR mindmap[/caption]
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7368-141x300.jpg" caption="TL;DR mindmap" %}
 <!--/div-->
 <!--more-->
 
@@ -86,6 +86,8 @@ I would expect each of the following:
 # Conclusion
 
 
-[caption id="attachment_4254" align="alignright" width="150"][![Equifax dip after announcing breach](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7371-150x150.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7371.jpg) Equifax dip after announcing breach[/caption]**We're all screwed.** The only sure way to prevent this from happening again is to seriously revise the financial system's way of dealing with their customers' personal information, which would come at significant cost and while Equifax lost a bit over 10% in market capitalisation over the last few days, analysts are already saying to ["buy the dip"](http://www.seekingalpha.com/news/3294739) and, taking into account how ingrained Equifax is in consumer credit, they'd be foolish not to.
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2017/09/img_7371-150x150.jpg" caption="Equifax dip after announcing breach" %}
+
+**We're all screwed.** The only sure way to prevent this from happening again is to seriously revise the financial system's way of dealing with their customers' personal information, which would come at significant cost and while Equifax lost a bit over 10% in market capitalisation over the last few days, analysts are already saying to ["buy the dip"](http://www.seekingalpha.com/news/3294739) and, taking into account how ingrained Equifax is in consumer credit, they'd be foolish not to.
 
 A less-sure way is for companies to take development seriously, implement a security life cycle and do regular security audits. Even with such measures in place security issues will slip by, so the emphasis should always be on _deter, detect, deny, delay_.
