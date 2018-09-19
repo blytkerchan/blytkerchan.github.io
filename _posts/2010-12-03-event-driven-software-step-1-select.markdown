@@ -18,7 +18,7 @@ tags:
 [donate]
 
 In this installment, we will look at the basic networking functions and start looking at event-driven software design. Starring in this installment will be the `select` function.
-<!-- more -->
+<!--more-->
 The `select` function is probably one of the most-described yet most poorly understood functions in C and C++ programming. It is what's called a "_synchronous multiplexing_" function in that it allows you to poll a number of objects, in this case socket file descriptors, for events. There are three types of events you can poll the sockets for: _data is ready to be read_, _out-of-bound (exception) data is ready to be read_ and _the socket is ready to be written to_. For different types of sockets, these events have different meanings, but all of them are events nonetheless.
 
 Event handling is usually implemented as follows: the program polls the system to know whether any events occurred, the system holds on to the calling thread as long as no events have occurred and will only allow the thread to continue execution once it has, indicating which event has occurred on what object, or returning a message to the calling thread. The thread then handles the event before it comes back to poll the system again.

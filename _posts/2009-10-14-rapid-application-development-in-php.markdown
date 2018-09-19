@@ -15,7 +15,7 @@ tags:
 ---
 
 For the last few days, I've been out of my usual C++ cocoon and working, in stead, on a web app to help me better organize my projects and - more especially - help me better track them.
-<!-- more -->
+<!--more-->
 The way I work is very close to an agile practice called "Scrum" (you might have heard of it: it's probably the most popular agile methodology Out There) with the addition of Kanbans. There are just a few things in my development cycle that aren't as well-suited to scrum as I would like them to be - most notably the release cycle.
 
 For the release cycle of any given product, whether it be Funky, Arachnida, Yara, or any of the other products I work on, there are a few steps that are always the same and that aren't necessarily linked specifically to user stories, use-cases, etc.

@@ -15,7 +15,7 @@ tags:
 ---
 
 In [July last year](http://rlc.vlinder.ca/blog/2014/07/ics-security-current-and-future-focus/), I discussed why Adam Crain and Chris Sistrunk fuzzed DNP3 stacks in devices from various vendors, finding many issues along the way (see [project Robus](https://automatak.com/robus/)). This time, I'll provide a bit of an overview of what has happened since.
-<!-- more -->
+<!--more-->
 In a nutshell:
 
 

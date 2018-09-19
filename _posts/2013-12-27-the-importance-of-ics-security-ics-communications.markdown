@@ -17,7 +17,7 @@ tags:
 
 For an ICS, having communications abilities generally means implementing some machine-to-machine communications protocol, such as DNP3 or Modbus. These protocols, which allow the device to report data to a "master" device and take their cue from those devices w.r.t. things they should be doing, are generally not designed with security in mind: most of them do not require, or expect, user authentication for any commands you might send them, and don't implement anything approaching what you'd expect from, e.g., a bank (confidentiality, integrity, authentication, authorization, non-repudiation).
 
-<!-- more -->
+<!--more-->
 
 DNP3 is a notable exception: it is one of the few industrial M2M protocols that actually does include a secure authentication option. Regrettably, DNP3 Secure Authentication is often colloquially called "Secure DNP3" and thought to include several things it does not (such as authorization and non-repudiation).
 

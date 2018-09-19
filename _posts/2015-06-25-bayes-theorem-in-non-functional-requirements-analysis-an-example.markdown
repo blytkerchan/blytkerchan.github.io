@@ -21,7 +21,7 @@ tags:
 ---
 
 [caption id="attachment_3543" align="alignright" width="147"][![Bayes' theorem](http://rlc.vlinder.ca/wp-content/uploads/2015/06/BayesTheorem.png)](http://rlc.vlinder.ca/wp-content/uploads/2015/06/BayesTheorem.png) Bayes' theorem[/caption]I am not a mathematician, but I do like Bayes' theorem for non-functional requirements analysis -- and I'd like to present an example of its application. ((I was actually going to give a _theoretical_ example of availability requirements, but then a real example popped up...))
-<!-- more -->
+<!--more-->
 Recently, a question was brought to the DNP technical committee about the application of a part of section 13 of IEEE Standard 1815-2012 (the standard that defines DNP). Section 13 explains how to use DNP over TCP/IP, as it was originally designed to be used over serial links. It basically says "pretend it's a serial link", and "here's how you do TCP networking".
 
 [caption id="attachment_3639" align="alignright" width="320"][![Network diagram — Bayes](http://rlc.vlinder.ca/wp-content/uploads/2015/06/Network-diagram-—-Bayes-New-Page-1-1024x645.png)](http://rlc.vlinder.ca/wp-content/uploads/2015/06/Network-diagram-—-Bayes-New-Page-1.png) Network diagram of the use-case[/caption]The use-case in question involved a master device talking to several oustation devices over a single TCP connection. The TCP connection in question really connected to a port server, which transformed the TCP connection into several serial connections.

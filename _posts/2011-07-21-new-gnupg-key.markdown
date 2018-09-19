@@ -23,7 +23,7 @@ For those who want to be able to verify .deb packages I make: I have a new GnuPG
 
 
 You can download it from [keys.gnupg.net](http://http-keys.gnupg.net/pks/lookup?op=get&search=0x5E0C4AF16D3CD07B)
-<!-- more -->
+<!--more-->
 Or you can copy-paste it here:
 
     

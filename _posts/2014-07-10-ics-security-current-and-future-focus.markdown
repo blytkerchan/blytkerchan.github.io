@@ -19,7 +19,7 @@ The flurry of DNP3-related vulnerabilities reported to ICS-CERT as part of [Auto
 
 Of course, I'll only look at communications protocol security in this context: low-tech attacks on the grid ((e.g. letting two helium-filled balloons up with a wire between them, under a high-voltage power line, in order to cause a short between the phases [caption id="attachment_3194" align="alignright" width="768"][![Balloon hack illustration](http://rlc.vlinder.ca/wp-content/uploads/2014/07/balloon-hack.png)](http://rlc.vlinder.ca/wp-content/uploads/2014/07/balloon-hack.png) Balloon hack illustration -- don't do this![/caption])) is outside the scope of this article. In stead, I will take a look at two questions: why the focus on DNP3, and what else could they, and should they, be looking at.
 
-<!-- more -->
+<!--more-->
 
 
 

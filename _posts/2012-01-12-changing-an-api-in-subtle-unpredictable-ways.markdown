@@ -17,7 +17,7 @@ tags:
 ---
 
 Many seasoned Windows systems programmers will know that you can wait for the death of a thread with `WaitForSingleObject` and for the deaths of multiple threads with its bigger brother, `WaitForMultipleObjects`. Big brother changes its behavior on some platforms, though -- as I just found out myself, the hard way.
-<!-- more -->
+<!--more-->
 `WaitForMultipleObjects` takes four parameters: the number of objects to wait for, the handles of the objects to wait for, whether or not it should wait for all of the objects to be signalled before returning, and a time-out. One common way to wait for a bunch of threads to die looks like this:
 
     

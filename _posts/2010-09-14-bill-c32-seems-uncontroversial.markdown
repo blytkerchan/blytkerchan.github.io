@@ -15,7 +15,7 @@ tags:
 
 Copyright is an important part of my work: every time I sign a work-related contract, I have to make sure that I don't sign away the rights of previous works to which I retain the rights, nor the rights to work that I do outside the scope of the contract I am signing at that point. I spend a significant amount of time and energy creating copyrighted material and some of that material has to remain mine. Like any copyright bill would, bill C-32 provides a framework to fall back on when cases aren't covered by contract and now, it looks like it's on its way to be passed.
 
-<!-- more -->
+<!--more-->
 
 
 

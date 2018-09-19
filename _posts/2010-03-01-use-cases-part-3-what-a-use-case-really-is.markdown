@@ -17,7 +17,7 @@ tags:
 [donate]
 
 Before we start using use-cases in the description of the functional requirements we want to meet in our project, we need to understand what a use-case really is and how to go about writing one. In this installment I will attempt to answer both those questions. However, this series is called "C++ for the self-taught" for a reason: I will include references for all of the material I have cited in this installment, and I hope you will take it upon yourself to go out and look a bit yourself as well.
-<!-- more -->
+<!--more-->
 
 
 ## what use-cases are(n't)

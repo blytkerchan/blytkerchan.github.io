@@ -17,7 +17,7 @@ tags:
 
 I explained the problem I presented in my [previous post](http://rlc.vlinder.ca/blog/2014/09/optimization-by-puzzle/) to my wife overt dinner yesterday. She's a professor at law and a very intelligent person, but has no notion of set theory, graph theory, or algorithms. I'm sure many of my colleagues run into similar problems, so I thought I'd share the analogies I used to explain the problem, and the solution. I didn't get to explaining how to arrive at computational complexity, though.
 
-<!-- more -->
+<!--more-->
 
 Say you have a class full of third-grade children. Their instructions are simple: 
 

@@ -17,7 +17,7 @@ tags:
 [donate]
 
 In this installment, we will expand the `MechanismFactory` class for SSPI. We will take a slightly closer look at the SSPI call than we would normally do,  and we will also take a look at the Unicode/"ANSI" differences on Windows. Because of this, we will _not_ have time to take a look at the GSS-API side of things, which we will therefore look into next time around.
-<!-- more -->
+<!--more-->
 Let's first take a look at the code being added:
 
     

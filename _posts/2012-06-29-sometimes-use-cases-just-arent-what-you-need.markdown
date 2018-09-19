@@ -25,7 +25,7 @@ When you get a new piece of hardware and a vague set of requirements, what do yo
   3. a bit of **a**, a bit of **b**
   4. other... (leave a comment)
 
-<!-- more -->
+<!--more-->
 On a recent project, I was given a chunk of hardware (with specs! ((accurate ones too!)) ) and a description of a function that hardware was to perform. The function in question was to interpret certain signals from various sources, allowing the selection of those sources through various criteria ((the actual requirement was only slightly less vague)). The mandate was to build a future-proof chunk of software with a stable, high-level API and all the necessary logic between that high-level API and the actual hardware. This meant that the implementation would need to be able to stand the test of time: a number of years from now, future products using very similar hardware would only need to have the hardware-specific parts changed while the vast majority of the code would remain un-touched.
 
 Being presented with such a case implies that you need to identify a number of choices that will have to be left to future generations. Those choices, such as the weight of a piece of data from one source vs. the weight of the same kind of data from another source, would have to be documented and made configurable. The question is: configurable to whom?

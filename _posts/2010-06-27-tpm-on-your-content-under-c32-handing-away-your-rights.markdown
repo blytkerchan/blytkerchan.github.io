@@ -14,7 +14,7 @@ tags:
 ---
 
 Under bill C-32 it would be illegal to remove TPM under by far most circumstances. Does that mean that, if you decide to publish software you create with TPM, you're handing away the rights of your software to the TPM manufacturer? No, it doesn't.
-<!-- more -->
+<!--more-->
 Let's say you're writing a big and expensive piece of software: you've poored time and money into its development, perhaps even hired other people to work on your dime for that development, and you're ready to bring it to the market. Like I said, this is a big and expensive piece of software: you _know_ it's going to be very successful and you don't want software pirates to get their hands on it, so you decide to buy a dongle kit - which is a TPM measure.
 
 When implementing such a TPM, you basically buy a bunch of dongles and get a licence to use an SDK or an API that allows you to use those dongles in your software. In your code, at a few strategic places, you insert the calls necessary to make sure the dongle is present. Does that mean you have signed away your rights to your own software? That you can't change your mind and remove the dongle from your product? Of course not!

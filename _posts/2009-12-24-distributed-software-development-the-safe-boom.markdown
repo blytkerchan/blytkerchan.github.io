@@ -17,7 +17,7 @@ tags:
 ---
 
 As I said in [a previous post](http://landheer-cieslak.com/?p=422), the new economic realities that come with peak oil and climate change will change the way we work and the way the computing industry is run. One of those changes will be limiting unnecessary costs related to moving people around - something we already do for goods.
-<!-- more -->
+<!--more-->
 The industry has seen a boom, lately, in distributed software development: people from all over the globe collaborating on a single project. Of course, out-sourcing to India is part of the trends that drive this boom (as is out-sourcing to Canada, by the way). The distributed development model of the Linux kernel and other, often smaller, open-source projects is another driver. Regardless of the drivers, however, the trends are there and the boom is happening. Now the question isn't "what are we going to do about it?" but is rather "how are we going to profit from it?"
 
 One has to understand that this particular boom has two economical aspects that make it very interesting all the while not being worrisome at all: 1) it is free and 2) there are no economical stake-holders of any importance involved. I.e. this is not a potential bubble in which big institutions (investment banks, etc.) have tied their money to not-so-brilliant college grads and/or bad, high-risk debt. Nobody is making any money off pushing for a change in the principles of software development, except perhaps a few consultants that could find other stuff to talk about should this whole deal fall through: the only money being made is the money that's being saved. The only way bottom lines are getting any greener through distributed software development is by expenses going down, rather than up.

@@ -16,7 +16,7 @@ tags:
 
 After a brief discussion on the subject on StackOverflow chat, I've decided to try my hand at Python, using the on-line IDE at [Ideone.com](http://ideone.com).
 [Here](https://ideone.com/ummB0) is my rendering of "99 bottles of beer" in Python...
-<!-- more -->
+<!--more-->
 I must say I find it a bit of a strange language, and I still have my reserves as far as its use of white space goes. For example:
 
     

@@ -17,7 +17,7 @@ tags:
 [donate]
 
 I know you must have been aching for the response to the quiz from three weeks ago. If you haven't thought of your own answer yet, go back to the code and have another look. Try running it through a compiler with all the warnings turned on - it might tell you what the bug is (more or less), but probably not how to solve it.
-<!-- more -->
+<!--more-->
 The `Yard` class does not have a constructor in the example, meaning its members, most notable `have_fox_` are not initialized or (in the case of `animals_`) that they are default-constructed. You'll have noted that `have_fox_` and `animals_` are treated differently. That's because `have_fox_` is an instance of a fundamental (a.k.a. primitive) type (`bool`, in this case) whereas `animals_` is an instance of a class (a `vector` of pointers to `Animal`s, in this case). When a class, like `Yard`, doesn't have a default constructor, the compiler will generate one for you, which will call the default constructs of any members of your class. However, it won't initialize anything to any "default" value - there is no such thing as a default value in C++.
 
 If you are used to programming in Java or C#, this lack of automatic initialization of a variable in C++ may come as a surprise to you, so it may be useful to see what the Standard as to say about this:

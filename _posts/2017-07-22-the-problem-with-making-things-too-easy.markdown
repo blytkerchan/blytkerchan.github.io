@@ -19,7 +19,7 @@ tags:
 [dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:**
 https://twitter.com/blytkerchan/status/888378949683773440
 [/dropshadowbox]
-<!-- more -->
+<!--more-->
 A few years ago, we hired an "interior decorator" to help us with a few things in our kitchen. It was a disaster: her incompetence was as staggering as her lack of self-awareness. The whole project took only a few weeks, but the mess she made took longer than that to clean up. She had, of course, lied about her credentials and her experience and, in retrospect, her references were more than a bit shaky, but hindsight is 20/20.
 
 A project I worked on recently reminded me of that particular episode (and of the nail found in our son's diaper during that episode -- he's ten years old now and no longer wears diapers): the person I was working with had several years of experience designing and implementing software and the job we had for him was (I thought), fairly straight-forward. Turns out it wasn't.

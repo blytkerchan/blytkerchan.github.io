@@ -16,7 +16,7 @@ tags:
 ---
 
 For the last few weeks, I've been doing what you might call _bungee coding_: going from high-level to low-level code and back. This week, a whole team is doing it -- fun!
-<!-- more -->
+<!--more-->
 For the project this post is about, several layers had to be developed, from programmable logic in [structured text](http://en.wikipedia.org/wiki/Structured_text), to FPGA logic in [VHDL](http://en.wikipedia.org/wiki/VHDL). The project involved, among other things:
 
 

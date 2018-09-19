@@ -16,7 +16,7 @@ tags:
 ---
 
 In recent literature from the scientific side of software engineering, there've been a lot of publications on producing and maintaining high-quality software. A lot of focus is being put on tools, systems, procedures and processes that aim to reduce the price-tag of quality and avoid the price-tag of failure.
-<!-- more -->
+<!--more-->
 The Software Engineering Institute shares the preacher's lament: they, too, spend a lot of energy on process and procedure; while the IEEE Transactions on Software Engineering has published at least one article on testing, quality or something related in each and every issue of the current volume (volume 35) - and I expect there will be at least one more in the volume's final issue.
 
 So why is it that so much effort is being put into designing tools (sometimes very complex tools), systems (sometimes very complex systems), procedures and processes around software quality, but software quality as a whole does not seem to improve significantly? We no longer have an environment where we have a huge variety of hardware architectures to cope with: this vast majority of programmers only ever works on Intel's IA-32 (x86) architecture and a majority of those work under either Windows or Linux most of the time. We no longer work in very limited environments in which every byte has to be accounted for (twice) and none can be wasted: even "embedded" systems now have mega-bytes of memory, solid state drives, and full-fledged operating systems. Arguably, the people who work outside of these well-known platforms with plenty of resources and user-friendly operating systems (like myself and most of the people I work with) work in a niche of the software engineering industry. Or do they?

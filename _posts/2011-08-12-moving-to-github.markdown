@@ -14,7 +14,7 @@ categories:
 
 I will be moving my open source projects (yes, all of them) to GitHub.  
 
-<!-- more -->  
+<!--more-->  
 
 This will be a bit of a gradual process, as some of the projects are rather old and have been defunct for a while.
 

@@ -17,7 +17,7 @@ tags:
 In my day to day life, there are few things I truly dislike doing: I'm a pretty happy person. There is one thing, though, that I really don't like - at all - and that strikes me as a truly pointless exercise in futility: searching. Shouldn't we have a solution for that by now?
 
 It strikes me we already have all of the necessary technology to come up with a viable solution: I've worked with most of them! Let's have a look what this might look like.
-<!-- more -->
+<!--more-->
 
 
 ## How It Would Work

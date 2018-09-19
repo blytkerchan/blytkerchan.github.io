@@ -13,7 +13,7 @@ categories:
 
 This is another "HOWTO" post -- setting up a Xubuntu-based kiosk, which I did to make a new "TV" for my kids.
 
-<!-- more -->
+<!--more-->
 
 
 

@@ -20,7 +20,7 @@ I recently went on a bug-hunt in a huge system that I knew next to nothing about
 
 These are some notes I took during the bug-hunt, some of which intentionally kept vague so as to protect the [guilty](http://rlc.vlinder.ca/guilty.html).
 
-<!-- more -->
+<!--more-->
 
 The first thing I did, of course, was confirm the bug's presence in the latest version of the system, with a minimal configuration. The minimal configuration necessary turned out to be fairly minimal, and using the default settings of the system, so this was easier than I expected: it just took two systems (one doing the talking, one doing the bugging), a few wires and an oscilloscope -- all of which I had on or around my desk ((I try to walk at least 10,000 paces a day, but this bug wasn't going to get me away from my desk a lot...)).
 

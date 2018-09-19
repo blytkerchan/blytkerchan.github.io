@@ -23,7 +23,7 @@ BrainFuck is an esoteric Turing-complete programming language that consists of o
     ++++++++++.>>+++++++[<+++++++>-]<---.[-]+++[<----->-]<.--.
 
 
-<!-- more -->
+<!--more-->
 BrainFuck is commonly called BrainF*** or something similar, to hide the explicative in the language's name. Understanding the BrainFuck language means understanding the Turing machine, and vice-versa.
 
 A Turing machine, in fact, is a model of a universal computer that consists of an infinite ribbon which can be navigated in steps and of which only the "current" value can be read from and written to. BrainFuck makes the ribbon 32K, but otherwise does the same thing: `>` goes to the next cell, `<` to the previous one, `+` increments the current value, `-` decrements it, and `[...]` is a loop construct. Dots and commas are used for I/O.

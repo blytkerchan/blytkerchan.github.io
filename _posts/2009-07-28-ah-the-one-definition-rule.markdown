@@ -14,7 +14,7 @@ tags:
 - C++
 ---
 
-In response to Scott Meyers' [question on non-inline non-template functions and the one-definition rule](http://groups.google.com/group/comp.std.c++/msg/863b3f502efae0e0), Francis Glassborow replied with a very interesting example of two _lexically_ identical functions that weren't _actually_ identical. <!-- more -->
+In response to Scott Meyers' [question on non-inline non-template functions and the one-definition rule](http://groups.google.com/group/comp.std.c++/msg/863b3f502efae0e0), Francis Glassborow replied with a very interesting example of two _lexically_ identical functions that weren't _actually_ identical. <!--more-->
 Try to find the difference:
 
     
@@ -38,6 +38,6 @@ Try to find the difference:
     }
 
 
-<!-- more -->The difference between the two, of course, is that the two functions do not refer to the same instance of _i_: each translation unit has its own definition and, as such, each version of _f_ refers to its own version of _i_.
+<!--more-->The difference between the two, of course, is that the two functions do not refer to the same instance of _i_: each translation unit has its own definition and, as such, each version of _f_ refers to its own version of _i_.
 
 When reading this thread on comp.std.c++, this post convinced me that mr Meyers may well have under-estimated the complexity of what he proposed - and that the one definition rule is likely one of the hardest rules to cope with - and one of the rules one is most likely to stumble upon by accident if one doesn't conciously avoid it - in the C++ programming language.

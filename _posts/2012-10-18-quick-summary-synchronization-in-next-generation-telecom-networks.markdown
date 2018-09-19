@@ -21,7 +21,7 @@ Over the last few years, communications networks have changed radically: their u
 
 Time synchronization requirements, in terms of quality of time, have only gotten stricter, so new methods for clock synchronization are now required - i.e. NTP can't do the job to the level of accuracy that's needed.
 
-<!-- more -->
+<!--more-->
 
 As the first presenter, Ravi Subrahmanyan, noted, for various reasons, two synchronization protocols have won out over all others: Synchronous Ethernet, which synchronizes the clock frequencies of the Ethernet PHYs, and IEEE-1588 PTP.
 

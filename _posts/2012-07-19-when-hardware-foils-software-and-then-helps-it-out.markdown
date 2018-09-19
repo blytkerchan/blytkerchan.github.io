@@ -15,7 +15,7 @@ tags:
 
 Sometimes, an oscilloscope can come in very handy.
 
-<!-- more -->
+<!--more-->
 
 About a year ago I was working on a signal processing driver that, for several weeks, I could seem to get to work correctly (part of the ordeal is documented [here](http://rlc.vlinder.ca/blog/2011/06/hardware-designers-please-think-of-us/). At the time, I was working under the assumption that I had a problem with the timing of the incoming signal (fronts were taking too long to get to my driver and the delay was both random and huge -- at least, that was the hypothesis). What I was trying to do is to get the signal I received to come out of the board somewhere, so I could probe it. There being no test points on the board anywhere ((Test points are points on the printed circuit board where you can easily put an oscilloscope probe to see the current passing through the circuit they're connected to.)) the only way to do that was to output the signal through a GPIO((A GPIO is a General-Purpose Input/Output. Software can use it to directly interact with the physical world. They can be programmed as either an input or an output and can be represented by a single bit or boolean in the software.)) and probe that (the incoming signal was tucked away nice and snug so I couldn't get at it).
 

@@ -18,7 +18,7 @@ tags:
 
 In my [previous post](http://rlc.vlinder.ca/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/) on the subject, I talked about using magic numbers and versions, alignment, and later added a note about endianness after a suggestion from Michel Fortin. This time, I'll talk about padding, how the sizeof operator can be misleading and how to debug padding and alignment errors.
 
-<!-- more -->
+<!--more-->
 
 A few days ago we were debugging the interface between some application code and one of my drivers. The driver implemented an I/O control which, before doing anything with the buffer passed to it, checked the sizes and output a trace if they didn't match the expected size: 
     

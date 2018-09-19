@@ -18,7 +18,7 @@ I am not usually one to make much of a fuss about coding style: as long as the c
   2. does the new code integrate well with the rest of the code?
 I do have a few suggestions, though, but above all, I recognize it can be difficult to change habits -- and therefore to change one's coding style.
 
-<!-- more -->
+<!--more-->
 
 I've recently made a change to my preferred coding style, that I still haven't quite turned into a habit yet. It concerns the way I declare and call functions, and the future maintainability of code.
 

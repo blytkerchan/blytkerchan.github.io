@@ -15,7 +15,7 @@ tags:
 ---
 
 In this post, I will take a brief look at how using type lists can help optimize certain applications.
-<!-- more -->
+<!--more-->
 Some of the optimizations in Vlinder Sofwtare's more special-purpose parsers are possible because they are written in C++ and can therefore use template meta-programming for parts of their work. We've recently folded part of the code we use for template meta-programming into a separate library we've baptized "meta" and which we will be progressively introducing into our other libraries, picking the meta-parts out of those libraries and moving them into the new library as we go.
 
 One of the adverse effects of this migration/consolidation/refactoring is that some of the configuration headers of some of our libraries will need to be changed client-side, but in return for that we get faster parsers.

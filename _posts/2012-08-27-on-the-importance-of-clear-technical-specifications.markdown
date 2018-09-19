@@ -17,7 +17,7 @@ tags:
 
 Even when the code is working like a charm, technical specifications -- and their different interpretations by different people -- can lead to confusion and hours-long debugging sessions.
 
-<!-- more -->
+<!--more-->
 
 I was recently working on a driver ((A driver is a piece of software that talks directly to a piece of hardware and abstracts the function of that hardware for the operating system. For example, a driver for a hard disk provides an abstraction to the operating system that allows the OS to use the hard disk regardless of the way it needs to talk to the hard disk -- because the driver does all the talking.)) for a piece of hardware that contained three sets of registers ((A register (like the one I decribe here -- there are different sorts) is one of the ways software can talk to hardware. To the software, they look like any other bit of memory, but unlike other bits of memory, the values are communicated directly to/from the device. That way, the precise way the computer talks to the device (e.g. through some kind of protocol, such as PCIe) is invisible to the software)) that were very similar: the layout of each of the registers were the same (bit for bit) but their meaning was slightly different. The documentation for the device described the registers in three separate places: the first contained a list of all the sets of registers and their relative addresses, the second contained a list of registers for each set and the third described each register in detail. In these three places, the order of the sets of registers was different.
 

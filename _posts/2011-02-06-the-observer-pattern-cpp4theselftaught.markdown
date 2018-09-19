@@ -20,7 +20,7 @@ In this installment of C++ for the self-taught, we will be looking at the Observ
 In this installment, there will be quite a few things aside from the Observer pattern that will appear in the code, but we won't dwell on those for now - that just means we will be mining this code for another installment or two to thoroughly understand what's going on in it.
 
 The focus, in the code itself, is on code re-use, terseness and functional clarity. The focus is _not_ on how easy it is to understand what's going on behind the scenes at first glance.
-<!-- more -->
+<!--more-->
 Let's start by having a look at this little video I prepared to explain the Observer Pattern: a conversation between "Hugh" and "Joanne" in which "Joanne" explains the pattern, and its uses, to "Hugh":
 
 

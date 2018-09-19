@@ -18,7 +18,7 @@ tags:
 [donate]
 
 In this installment, we'll be doing a final bit of clean-up and starting to implement a GSS-API/SSPI client program, while focusing on the _Abstract Factory Pattern_
-<!-- more -->
+<!--more-->
 The first set of changes we'll discuss in this installment prepares our code for use with IPv6. It's pretty cheap to do that at this stage and would be far more costly to do later. In fact, the only thing we need to do in order to allow his is to use the `sockaddr_storage` structure wherever we pass addresses around. TCP and UDP ports are the same between IPv4 and IPv6 - mainly because they are built on top of IP - so the only thing that really changes is the size of the address. There are a few caveats that we might want to work out later, but as long as we keep in mind that we want our code to work both with IPv4 and IPv6 networks, we'll be OK for now.
 
 The two commits that follow, moving the code and renaming the include guards, should, of course, have been a single commit, but I am human, so I forget things sometimes.

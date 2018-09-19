@@ -20,7 +20,7 @@ One of the most common ways of "persisting" or communicating data in an embedded
 
 Note that I am by no means advocating anything more than a few simple rules to follow when dumping data. Particularly, I am _not_ going to advocate using XML, JSON or any other intermediary form: each of those has their place, but they neither should be considered to solve the problems faced when trying to access binary data, nor can they replace binary data.
 
-<!-- more -->
+<!--more-->
 
 
 

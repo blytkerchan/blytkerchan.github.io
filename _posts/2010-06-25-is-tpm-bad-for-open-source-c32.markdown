@@ -14,7 +14,7 @@ tags:
 ---
 
 It's been argued that TPM and bill C-32 are bad for Free/Libre Open Source Software development. Is that true? If so, why? If not, why not? Personally, I don't think so, and I'll tell you why.
-<!-- more -->
+<!--more-->
 Let's first have a look at what you can legally do under C-32: 
 
 <blockquote>30.6 It is not an infringement of copyright in a computer program for a person who owns a copy of the computer program that is authorized by the owner of the copyright, or has a licence to use a copy of the computer program, to

@@ -19,7 +19,7 @@ tags:
 ---
 
 Though laudable, the quest for bug-free software is doomed to failure. This should be news to no-one as the argument for this is as old as I am.
-<!-- more -->
+<!--more-->
 
 
 ## Software Verification

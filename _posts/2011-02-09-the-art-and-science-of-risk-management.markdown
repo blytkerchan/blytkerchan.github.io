@@ -14,7 +14,7 @@ tags:
 ---
 
 I like to take a rational approach to risk management: identify risks and opportunities, their probability and their impact, maximize the impact and probability of opportunities and minimize those of risks. In this article, I explain a bit of my approach, I expound upon risk dependencies, based on a recent article by Tak Wah Kwan and Hareton K.N. Leung, and I offer some practical advice. 
-<!-- more -->
+<!--more-->
 
 
 ## Introduction

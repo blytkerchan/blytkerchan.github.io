@@ -15,7 +15,7 @@ tags:
 
 There are two canonical acronyms for Perl: "Practical Extraction and Report Language" and "Pathologically Eclectic Rubbish Lister". Arguably, Perl can be both.
 
-<!-- more -->
+<!--more-->
 
 I like Perl for a number of things: I sometimes run tests that generate a lot of raw data (temperature measurements, frequency measurements, etc.) and then run Perl scripts on that data to extract the information I need (e.g. distribution statistics). An alternative would be to dump the data into a spreadsheet and let an Excel look-alike play with it, but I usually have too much data for that, so I need Perl to pre-chew the data before I can let an Excel look-alike generate the nice little graphs that go into the reports.
 

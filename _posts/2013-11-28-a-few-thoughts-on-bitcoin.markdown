@@ -17,6 +17,6 @@ tags:
 
 Mindmap of a few thoughts on BitCoin I'd meant to turn into prose (still might)
 
-<!-- more -->
+<!--more-->
 
 [![20131128-173715.jpg](http://rlc.vlinder.ca/wp-content/uploads/2013/11/20131128-173715.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2013/11/20131128-173715.jpg)

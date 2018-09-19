@@ -19,7 +19,7 @@ tags:
 
 This guy has to be completely bonkers: he wrote an application in C# (would not have my language of choice) to detect a human face in a live video feed and point a laser at it.
 
-<!-- more -->
+<!--more-->
 
 https://youtu.be/Q8zC3-ZQFJI
 

@@ -14,7 +14,7 @@ tags:
 ---
 
 One of the most common problems with synchronization occurs when things need each other that you didn't expect to need each other.
-<!-- more -->
+<!--more-->
 Consider, for example, a server application where the client establishes a connection to the server and, after some hand-shaking and polling, expects to be notified if "anything of interest" occurs. The server has a database (e.g. it might be a financial system and "something of interest" might be a transaction on a specific account). The database is set up in such a way that a write to a specific table, when it meets specific requirements, triggers an event message to be written to the connection.
 
 This is all fine, as long as it's implemented correctly: as anyone who has worked with databases will tell you, triggers are tricky: they can't be rolled back, so if the transaction fails the message will still have been sent but when the client comes to check on the table, the value hasn't changed (time stamps are still the same, etc.) -- has the transaction not finished yet, or has it failed?

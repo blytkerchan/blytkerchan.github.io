@@ -16,7 +16,7 @@ tags:
 ---
 
 Accroding to [The Appropriation Art Coalition](http://web.archive.org/web/20100120083653/http://www.appropriationart.ca/) applying TPM to public domain content effectively removes that content from the public domain. Is that really true? I don't think so, and here's why.
-<!-- more -->
+<!--more-->
 
 From their post on this subject:  
 

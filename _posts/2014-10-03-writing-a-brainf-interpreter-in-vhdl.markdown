@@ -17,7 +17,7 @@ tags:
 
 I've written parsers and interpreters before, but usually in C++ or, if I was feeling like doing _all_ of the hard work myself, in C.
 
-<!-- more -->
+<!--more-->
 
 Interpreters usually end up looking like a state machine managed by a tight loop with a lot of machinery around to manage objects, caches and somesuch. Other times they end up being visitors on an AST in stead. In any case, once the pattern emerges and the first few design decisions have been made, the rest kinda falls into place on its own.
 

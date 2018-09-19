@@ -20,7 +20,7 @@ In the two previous posts, I've shown that industrial control systems -- ICSs --
 
 Now, let's make the link with current events.
 
-<!-- more -->
+<!--more-->
 
 This is where the Crain-Sistrunk vulnerabilities come in: Adam Crain and Chris Sistrunk have discovered vulnerabilities in the vast majority of ICSs that implement DNP3.
 

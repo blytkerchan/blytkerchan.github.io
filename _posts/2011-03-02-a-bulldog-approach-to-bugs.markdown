@@ -17,7 +17,7 @@ tags:
 The only bugs I like are butterflies - and even then, only a specific blue butterfly that happens to be a drawing. Aside from those, I spend a lot of time rooting them out.
 
 I advocate what you might call a bulldog approach to bugs: track them, hunt them down, kill them. Don't let go until you're sure they're dead. This might seem overly agressive, but remember we're talking about software errors here - not actual living beings.
-<!-- more -->
+<!--more-->
 For the next few weeks, I will be exploring the art of bug-hunting on this blog - so we now have our first theme (yay!). If any-one wants to come up with a theme song, I'll be happy to post them here :)
 
 I also made a few wallpapers to go with the theme:

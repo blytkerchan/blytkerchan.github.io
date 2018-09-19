@@ -18,7 +18,7 @@ tags:
 
 For one of the projects I'm working on, I needed a compile-time version of the KMP algorithm in C++. I started by making the algorithm functional.
 
-<!-- more -->
+<!--more-->
 
 [![](http://imgs.xkcd.com/comics/haskell.png)](http://xkcd.com/1312/)
 The Knuth-Morris-Pratt algorithm, useful for finding subsequences in a sequence, consists of two parts: one part looks at the subsequence to create a table of integers to see how much back-tracking is necessary if a match fails at a given point in the subsequence, and one part applies the matching and back-tracking to the sequence.

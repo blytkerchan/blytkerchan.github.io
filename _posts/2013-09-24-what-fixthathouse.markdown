@@ -14,7 +14,7 @@ tags:
 ---
 
 Those of you who follow me on Twitter might wonder why, all of a sudden, I started tweeting assertions with the #fixthathouse hashtag. The reason is simple, [CBC The House](http://cbc.ca/thehouse) made me do it.
-<!-- more -->
+<!--more-->
 The Canadian parliament is having a rough decade. The things I tweeted are ideas to revitalize an re-engineer the system.
 
 Some might recognize some (most?) of the things I tweeted as aspects of the Dutch system. You'd be right. The Netherlands has one of the oldest democratic systems with a parliamentary democracy and a constitutional monarchy. It also started out as a federal republic, and has quite a few remnants of those days still. It is remarkably stable and has democratic institutions that pre-date the parliamentary system that are still functioning today -- notably the system that manages the dykes.

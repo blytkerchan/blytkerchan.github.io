@@ -16,7 +16,7 @@ tags:
 
 The Windows API contains a synchronization primitive that _is_ a mutual exclusion device, but is also a colossal misnomer. I mean, of course, the `CRITICAL_SECTION`.
 
-<!-- more -->
+<!--more-->
 
 The "critical section" describes a piece of code that accesses a shared resource -- shared between threads or processes. While such code should be analyzed and well-understood, and is indeed critical in a sense, it's the _data_ that needs to be protected from concurrent access, _if necessary_.
 

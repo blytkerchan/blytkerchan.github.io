@@ -19,7 +19,7 @@ tags:
 With a few minor adjustments to the existing `Token` class, we can finish the first part of our implementation of RFC 1961 for now - we will hook it into an implementation of the GSS API later. Before we do that, though, we'll create a new directory in our project called lib/rfc1961 and move our files there: it seems more appropriate that way, as we will have a lot more code to write. We will also move our implementation into its own namespace, which will be `Vlinder::Chausette::RFC1961`. In the first part of this installment, we will look at the changes necessary to do that and we will discuss the importance of namespaces.
 
 In the second part of this installment, we will start implementing a simple program to send a GSSAPI token from a client to a server. As we will see, this isn't as simple as it might seem at first glance. We will build upon this example in the following installments to finish the implementation of RFC 1961.
-<!-- more -->
+<!--more-->
 First, let's take a look at the changes to move the implementation into its own namespace, and the changes leading up to that. The first thing I did was to implement the constructors of the `Token` class (`struct`) and implement the `TokenType` enumerator. These two changes are very related, which is why they're in a single patch. The reason why I've added a constructor to the `Token` class is that I want to be able to automatically set the `ver_`, `mtyp_`, `len_` and `token_` members by passing a type and a raw token (without the extra version and type information) to a class instance, a bit like this:
 
     

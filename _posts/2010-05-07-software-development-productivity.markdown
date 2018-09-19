@@ -20,7 +20,7 @@ tags:
 
 In the latest installment of my podcast, I asserted that "all software productivity problems are project management problems". In this post, I will explain why I believe that to be the case and how I think those problems can be resolved.
 
-<!-- more -->
+<!--more-->
 
 Increasing productivity means reducing waste. Lack of productivity means there is too much waste. Productivity and waste and each others [antinomes](http://education.yahoo.com/reference/dictionary/entry/antinome). In software development, waste can be measured - measuring productivity itself is a lot harder.
 

@@ -18,7 +18,7 @@ tags:
 
 Especially if you're a compiler...
 
-<!-- more -->
+<!--more-->
 
 Today, I spent a good part of the day first trying to figure out what was wrong with my code -- why it crashed -- and then trying to figure out how to get the compiler to behave.
 

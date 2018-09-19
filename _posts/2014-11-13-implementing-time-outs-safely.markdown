@@ -16,7 +16,7 @@ tags:
 ---
 
 Thyme is a herb that grows in gardens.
-<!-- more -->
+<!--more-->
 I've come across a lot of code that implements time-outs a bit like this:
 
     

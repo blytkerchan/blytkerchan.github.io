@@ -14,7 +14,7 @@ tags:
 ---
 
 While listening to Spark, on CBC Radio, I had the idea it might be nice for non-developers (and aspiring developers) to know what a typical day might look like.
-<!-- more -->
+<!--more-->
 I get up at around 6:40 am, and spend most of the next hour with my better half getting the kids ready for school and daycare. We leave for school at 7:40, school starts at 8 and there's no bus (because we didn't choose the default school for our neighborhood). As I usually only take the eldest of our two children to school, leaving the youngest to the love of my life, I arrive at the office at about 8:15.
 
 Currently, I work as an analyst-programmer, so I design and implement software according to functional (requirements) specifications. That means my job consists of analysing functional requirements, analysing existing software that the new software has to integrate with, designing the new software, implementing it and testing it. I do this, like most of my peers, mostly working alone and validating the analyses with my peers, making sure I have sufficienly understood the requirements and the existing software, before diving into design and implementation. The teamwork part of my job, in this type if setting, is in the validation of the analyses and the discussion of the design.

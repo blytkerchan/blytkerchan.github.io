@@ -15,7 +15,7 @@ tags:
 ---
 
 One of the things I like about Eclipse is the way it is designed. I'm not talking about the GUI when I say that - although the GUI is arguably well-designed as well: I mean the way hundreds of pieces fit together to make Eclipse an IDE for Java, C, C++, PHP, Python, ..., etc.
-<!-- more -->
+<!--more-->
 I found this presentation on Slide Share that explains what Eclipse is, and a bit of what's new:
 
 

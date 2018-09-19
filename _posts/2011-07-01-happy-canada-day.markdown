@@ -12,7 +12,7 @@ tags:
 ---
 
 On the occasion of Canada day, I thought I'd put up the Canada-themed autumn wallpapers I'd prepared.
-<!-- more -->
+<!--more-->
 [![](http://rlc.vlinder.ca/wp-content/uploads/2011/06/autumn-wallpaper.png)](http://rlc.vlinder.ca/wp-content/uploads/2011/06/autumn-wallpaper.png)
 
 and the smaller version:

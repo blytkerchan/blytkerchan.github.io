@@ -43,7 +43,7 @@ When _you_ count, that doesn't add up to four, does it?
 
 That's what design by committee is all about!
 
-<!-- more -->
+<!--more-->
 
 Let's take a look at a few protocols that deal with time and were designed by committees:
 

@@ -20,7 +20,7 @@ tags:
 ---
 
 One of the most common sources of bugs is ambiguity: some too-subtle API change that's missed in a library update and introduces a subtle bug, that finally only gets found out in the field. My answer to that problem is radical: make changes breaking changes -- make sure the code just won't compile unless fixed: the compiler is generally better at finding things you missed than you are.
-<!-- more -->
+<!--more-->
 Recently, I found a bug in a smart pointer implementation in Acari, Vlinder Software's toolbox library used for, among other things, the Arachnida HTTP(s) server/client framework. The bug was subtle, not likely to cause problems in most current deployments of Arachnida, but limiting for one of our customers (so it had to be fixed).
 
 When I started setting up the necessary testing framework, I came to the conclusion that the bug in question was a design flaw, and that not only the code would have to be changed, but the calling code at at least one of the call sites as well. I now had two things to make sure of:

@@ -19,7 +19,7 @@ tags:
 ---
 
 While going through some old code, for another article I'm writing that will come up on the blog, I came across an implementation of binary search in C. While the implementation itself was certainly OK, it wasn't exactly a general-purpose implementation, so I thought I'd write one and put it on the C++ for the self-taught side of my blog. While I was at it, I also analyzed
-<!-- more -->
+<!--more-->
 Now, as I'm posting this on the "educational" part of the blog, I'll go through it bit by bit and explain what each bit means.
 
 

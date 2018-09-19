@@ -16,7 +16,7 @@ tags:
 
 Sometimes, when all else fails, you have to change your tack.  
 
-<!-- more -->  
+<!--more-->  
 
 The Perl programming language is largely based on the idea that "there's more than one way to do it". This same idea can be applied to real-time embedded programming -- especially when the method of choice just doesn't seem to want to work. Coming to that conclusion sometimes takes a bit of time -- especially when you've been focusing on getting your first approach to work -- and may require input from a colleague. That can actually work even if the colleague in question doesn't know what you're talking about.
 

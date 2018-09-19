@@ -14,7 +14,7 @@ tags:
 ---
 
 It is amazing how much code you can cram into a single line, and how much magic happens behind the scenes when you do.
-<!-- more -->
+<!--more-->
 I'm working on a pet project in one of the fields I like most: embeddable domain-specific languages. One of the things I want to be able to do with this particular domain-specific language is output any type of literal for debugging purposes while compiling (or interpreting) the script. In order to do that, I want my code to be expressive such that typing 
     
     C c(...);

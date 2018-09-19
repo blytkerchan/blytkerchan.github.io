@@ -16,7 +16,7 @@ tags:
 
 The two most popular threading APIs, the Windows API and pthreads, both have the same basic way of locking and unlocking a mutex -- that is, with two separate functions. This leaves the code prone to lock leak: the thread that acquired a lock doesn't release it because an error occurred.
 
-<!-- more -->
+<!--more-->
 
 Lock leak is surprisingly common, and can be a source of deadlocks, among other things. The most common way to cause a lock leak is to _not_ use RAII.
 

@@ -15,7 +15,7 @@ tags:
 
 
 I've decided to take a little time to make use of those 20000+ hours of C++ I have under my belt and make life a bit easier on those of you that are learning C++. In order to do that, I have created a new category called "C++ for the self-taught" that will basically show you how to program in C++.
-<!-- more -->
+<!--more-->
 I will touch on managed C++ (C++/CLI) as well as standard C++, but the focus will be on standard C++. The approach will be one through which you will learn C++ directly as a programming language in and of itself - not as a beefed-up derivative of C or as a predecessor of Java. We will dive directly into the C++ programming language and forgo the usual detour of "learning C before you learn C++".
 
 We will rely heavily on free software: you will be expected to have either [Cygwin](http://cygwin.com/setup-x86.exe) on Windows, or some Linux distribution. Example code will have been compiled on Cygwin and Debian Lenny, with G++ version 3.4 and 4.4.

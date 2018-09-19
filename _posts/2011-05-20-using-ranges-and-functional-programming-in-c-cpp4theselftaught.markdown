@@ -17,7 +17,7 @@ tags:
 ---
 
 [audio src="http://vlinder.ca/podcasts/30-functional.mp3"]C++ is a very versatile language. Among other things, you can do generic meta-programming and functional programming in C++, as well as the better-known facilities for procedural and object-oriented programming. In this installment, we will look at the functional programming facilities in the now-current C++ standard (C++03) as well as the upcoming C++0x standard. We will look at what a _closure_ is and how to apply one to a range, but we will first look at some simpler uses of ranges -- to warm up.
-<!-- more -->
+<!--more-->
 If you look at the current version of Chausette, in the code for episode 28, you will find this: 
     
     int main(int argc, const char **argv)

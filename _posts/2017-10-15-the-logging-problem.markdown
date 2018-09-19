@@ -18,7 +18,7 @@ A recurring problem in real-time industrial devices is logging: you want to log 
 
 The solution seems obvious: just look a minute or so into the future and, if any trouble is brewing, start logging. But as a wise person once said: "Always in motion the future is."
 In the real world, we need real solutions.
-<!-- more -->
+<!--more-->
 The trade-off is obvious: keeping debug messages around and storing them to disk cannot be free: it takes memory, processor time, ..., resources. Not keeping the messages means information is lost if an error occurs, and the underlying bug may never be fixed. Hence, storing the debug messages during run-time represents an investment for which the costs and benefits have to be weighed against each other.
 
 

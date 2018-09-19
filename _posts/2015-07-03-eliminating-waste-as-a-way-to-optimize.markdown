@@ -17,7 +17,7 @@ tags:
 I recently had a chance to work on an implementation of an Arachnida-based web server that had started using a lot of memory as new features were being added.
 
 Arachnida itself is pretty lean and comes with a number of tools to help build web services in industrial devices, but it is not an "app in a box": some assembly is required and you have to make some of the parts yourself.
-<!-- more -->
+<!--more-->
 [caption id="attachment_3516" align="alignright" width="294"][![Structure of a typical Arachnida-based web server](http://rlc.vlinder.ca/wp-content/uploads/2015/06/arachnida-based-web-server.png)](http://rlc.vlinder.ca/wp-content/uploads/2015/06/arachnida-based-web-server.png) Structure of a typical Arachnida-based web server[/caption]
 In most cases, the resulting web server looks a lot like one of the examples: there's a `Server` class that contains the `Listener` instance, `HTTPRequestHandler` and a bunch of objects that implement services using a `Service` interface. Each service implements a part of the web application and is responsible for responding to its requests. To dispatch between different services, usually, some part of the request URI is used.
 

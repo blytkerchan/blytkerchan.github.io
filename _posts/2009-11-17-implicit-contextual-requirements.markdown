@@ -17,7 +17,7 @@ tags:
 ---
 
 We tend to forget what we know implicitly: if we've been working in the same domain for long enough, we tend to forget that not everybody knows the same things and has the same experience we do. For example, some-one who has been working in distribution for a long time may think it's obvious that, even if you do switch to RFID, you will still need line-of-sight machine-readable codes (because RFID might fail and because the technology for using line-of-sight machine-readable codes is much mire ubiquitous than RFID is) and when they think of line-of-sight machine-readable codes, they think of barcodes and, depending on what and where they distribute, they might think of Data Matrix codes, UPC-12 codes, or any number of other barcodes.
-<!-- more -->
+<!--more-->
 For some-one who has been working in a different field, e.g. travel documents, "moving to" RFID has an entirely different meaning: it enables adding biometric data to those travel documents, it enables reading those documents at a certain distance, etc. It doesn't necessarily make sense to have barcodes on travel documents, so the requirement of having them may be far less obvious.
 
 As long as we all stick to our industries, that's just fine. But as soon as we change the industry we work for, these "implicit" requirements may make quite a difference - especially if they are not written down in documents such as requirements specifications.

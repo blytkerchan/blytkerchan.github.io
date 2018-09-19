@@ -17,7 +17,7 @@ tags:
 In a recent article [on ZDNet](http://www.zdnet.com/blog/service-oriented/gartner-soas-next-step-is-managing-events/5972), Joe McKendrick writes that Roy Schulte, the Gartner analyst who helped define the SOA space more than a decade ago, says as SOA becomes embedded into the digital enterprise realm, organizations are moving services to support event-driven interactions, versus request/reply interactions.
 
 This, of course, is old news...
-<!-- more -->
+<!--more-->
 EPCGlobal was formed in 2003, as a successor to the MIT Auto-ID lab, which dates back at least to the year 2000. They had been working on the Auto-ID infrastructure, which has since become the Electronic Product Code Information System, or EPCIS.
 
 EPCIS is a classic example of service-oriented architecture: it exposes a Query Control Interface in which you can query a database, and a Capturing Interface to which devices send events. The events are sent using a non-WSDL XML-over-HTTP format. It is those events that are stored in the EPCIS repository and it is that repository that is queried using the Query Control Interface.

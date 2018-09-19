@@ -26,7 +26,7 @@ https://twitter.com/jadamcrain/status/439774683827679233
 
 I don't think the industry is ready -- and here's why.
 
-<!-- more -->
+<!--more-->
 
 Most vendors, including the one I work for ((Vlinder Software does not currently have any products related to DNP3, but I also work as a senior developer for Eaton's Cooper Power Systems and am a member, on their behalf, of the DNP3 Technical Committee.  
 I am writing this post on my own behalf. Any opinions expressed herein are entirely my own and do not reflect Eaton's or Cooper Power Systems' policies or opinions in any way.)), have released fixes for the vulnerabilities that have been exposed so far using this tool and have made their customer base aware of the problems and the scope of those problems. Some vendors regrettably have been far less pro-active than others, but I'd like to believe most vendors have made fixes available to their customers, even if they haven't been public about it ((I have no way of knowing that, of course, but it is the only way to account for the apparent silence on the part of some vendors and still have some faith in the quality of their products and the way they handle security issues)).

@@ -17,7 +17,7 @@ tags:
 [donate]
 
 As I mentioned in the [previous installment](http://landheer-cieslak.com/?p=970), our current way of handling exceptions leaves a few things to be desired. In this installment, we will fix that problem.
-<!-- more -->
+<!--more-->
 Always, one of the most effective ways of going about refactoring (which is what we are doing now) is to make cleanly breaking changes. Let's take a look at this change, for example: 
     
     @@ -10,10 +10,29 @@

@@ -14,7 +14,7 @@ tags:
 - organized labor
 ---
 
-I've been watching the Canada Post labor dispute from afar over Twitter and saw the back-to-work bill pass on third reading. Does that mean the dispute is over? I don't think so...<!-- more -->
+I've been watching the Canada Post labor dispute from afar over Twitter and saw the back-to-work bill pass on third reading. Does that mean the dispute is over? I don't think so...<!--more-->
 
 
 

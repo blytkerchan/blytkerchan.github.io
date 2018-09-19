@@ -23,7 +23,7 @@ Either Linux would no longer exist or Linus would have been declared mad, and Li
 
 [![](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0134849ab5bb970c-pi)](http://geekandpoke.typepad.com/geekandpoke/2010/06/real-coders-help-each-other.html)Centrally managed version control systems are fundamentally flawed and impede productivity. Any project with more than a handful of developers/programmers using a centrally managed version control system will either lose control over the quality of the product, or bring productivity to a grinding halt.
 
-<!-- more -->
+<!--more-->
 
 There are several popular centrally managed SCMs Out There: Microsoft has TFS, many open source and commercial projects use Subversion -- some people even still use CVS ((no, really, I mean it!)). I've personally worked with TFS, SVN, CVS and MKS -- I've even used RCS, though that is arguably the first distributed version manager ((Again, I mean it, really!)).
 

@@ -16,7 +16,7 @@ tags:
 [donate]
 
 In this installment, we'll get you set up to compile everything that needs compiling in our project. We'll try to keep it short and sweet and you'll be able to download most of what you need just by following the links on this page.
-<!-- more -->
+<!--more-->
 
 
 ## Prerequisites

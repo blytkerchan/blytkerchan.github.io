@@ -18,7 +18,7 @@ tags:
 ---
 
 While researching lock-free queue algorithms, I came across a few articles that made some interesting modifications to the Lamport queue. One made it more efficient by exploiting C11's new memory model, while another made it more efficient by using cache locality. As I found the first one to be more interesting, and the refinements more useful for general multi-threaded programming, I thought I'd explain that one in a bit more detail.
-<!-- more -->
+<!--more-->
 [dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:** I
 
 

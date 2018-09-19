@@ -20,7 +20,7 @@ tags:
 ---
 
 While a specification should not specify the C++ code that should be implemented for the specified feature, it should specify the feature in a verifiable manner. In some cases, formal -- and even executable -- specifications can be of great help.
-<!-- more -->
+<!--more-->
 For the last few weeks, I've been working on the way a rather complex system presents itself to the user of that system, though a LED and a number of binary inputs, and through statistics that can be read with a specialized client. For the LED and the binary inputs, we found several bugs in the original specification, to the point that we decided to re-do the specification from scratch, on a whiteboard.
 
 When I started writing on the whiteboard, I found myself writing Haskell code on the whiteboard. It looked a bit like this: 

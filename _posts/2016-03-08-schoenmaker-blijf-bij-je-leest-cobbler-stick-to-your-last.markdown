@@ -14,7 +14,7 @@ categories:
 This is an old Dutch saying, which probably has its origins in a village with a particularly opinionated cobbler.
 
 I am not one to stick to my last -- but if I were a cobbler, I don't think I'd be _that_ cobbler: I like to know what I'm doing.
-<!-- more -->
+<!--more-->
 This saying came to my mind while working on maintaining a scripting engine written by a number of people over a large amount of time who neither coordinated their efforts nor documented them.
 
 Sometimes, it's hard to know whether or not you should go ahead and try _that new thing_: have you ever asked yourself why there are so many `String` classes Out There? I've written a few of those myself, of course, two of which I still use regularly in production code: the first a wrapper for C-style strings to allow iterator access to them (the whole thing about 20 lines of code and zero overhead once compiled) and the second a copy-on-write string with support for my series of allocators.

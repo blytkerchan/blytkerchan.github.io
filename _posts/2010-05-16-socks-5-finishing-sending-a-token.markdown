@@ -17,7 +17,7 @@ tags:
 [donate]
 
 In this installment, we will finish the implementation for sending a token from the client to the server. We will answer the remaining open questions and, in doing so, improve the code a bit more. When we're done, we will have a client that sends a token to the server, and a server that reads the token and parses its envelope - which is a pretty good foundation to build on. We will later make that foundation a bit more solid by removing the classes involved from the test code and moving them to their final locations. First, however, let's take a look at those questions and the answers.
-<!-- more -->
+<!--more-->
 There will be fairly little prose in this installment, and perhaps a bit more code than usual, but a line of code speaks a hundred words (not quite as efficacious as a picture, but more so that prose alone).
 
 

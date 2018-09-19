@@ -19,7 +19,7 @@ tags:
 In the [previous installment](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue/), on this subject, I described a few modifications to the Lamport queue introduced by Nhat Minh Le _et al._ to relax operations on shared state as much as possible, while maintaining correctness.
 
 In this article, I will discuss the further optimizations to reduce the number of operations on shared state, thus eliminating the need for memory barriers completely in many cases.
-<!-- more -->
+<!--more-->
 [dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:** I
 
 

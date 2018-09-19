@@ -14,7 +14,7 @@ tags:
 ---
 
 Error messages should provide enough information for the user to correct their error, but they shouldn't provide any more than that, or malicious users could abuse them - as shown recently with the ASP.NET server.
-<!-- more -->
+<!--more-->
 While going through my reading list, I came across the following news brief:
 
 

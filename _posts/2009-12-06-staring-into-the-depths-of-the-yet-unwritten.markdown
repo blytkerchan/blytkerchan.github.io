@@ -18,7 +18,7 @@ By the end of the decade after that, the last wild polar bear will have drowned 
 By the end of my expected natural life-span, there will be no edible fish left in the ocean.
 
 These statements, which are corroborated by leading economist and, for the one about the polar ice cap, meteorologists rather than environmentalists, have a profound impact on the way we work and on the computing industry in general.
-<!-- more -->
+<!--more-->
 This is where we take out our crystal balls, get a cup of green tea (to look at the leaves) and start staring into the depths of the yet unwritten - spooky!
 
 For one thing, communications networks won't disappear just because we run out of oil, fish and polar bears, so the Internet is very likely to continue operating as if nothing's changed. That's a good thing, too: we're gonna need it! Where else would we get the reports of all that lively stuff going on in our back yards - you know, that polar bear coming over for lunch (just before you shoot it) - if not on the Internet?

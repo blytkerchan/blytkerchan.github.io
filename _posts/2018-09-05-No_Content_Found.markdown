@@ -33,7 +33,7 @@ This post is about the first part: requirements gathering.
 
 
 [/dropshadowbox]
-<!-- more -->
+<!--more-->
 The first step in requirements gathering is getting a hold on the scope of the project. In the beginning, this may be a daunting task as most stakeholders will have only a vague idea of what they really want and you might not have access to all the stakeholders (i.e. you are usually not in direct contact with the end user). This introduces three kinds of errors into your requirements definition: _scope creep_, which is an effect of ever-moving requirements caused by assumptions (usually about the market) that turn out to be wrong; _scope skew_, which is the wrongful assignment of weight to certain requirements relative to others, usually caused by wrong assumptions and too-strong convictions; and _unwarranted requirements complexity_, which is a result trying to reconcile contradictory requirements. Each of these problems can be avoided up to a point.
 
 

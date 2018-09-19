@@ -18,7 +18,7 @@ Up until 2008, the global economy was humming along on what seemed like smooth s
 
 Sound familiar?
 
-<!-- more -->
+<!--more-->
 
 What the engineers of the economy had done, as the engineers of another magnificent, and equally doomed, new vessel before them, was a robustness analysis -- but a faulty one (either that, or they hadn't followed their own advice afterward). When the proverbial excraments did hit the proverbial fan, another robustness analysis was in order. The one they did on the first vessel led them to abandon ship. The one they did on the second vessel led to drastic course corrections, at least in some countries.
 

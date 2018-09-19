@@ -19,7 +19,7 @@ tags:
 I have recently had to modify some code that, to say the least, was very hard to maintain -- or refactor, for that matter.
 
 The following are a few, firmly tongue-in-cheek, steps to make sure your code is thoroughly frustrating to whoever needs to maintain it after you.
-<!-- more -->
+<!--more-->
 **Step 1: unpredictability**
 Above all else, be impossible to predict.
 

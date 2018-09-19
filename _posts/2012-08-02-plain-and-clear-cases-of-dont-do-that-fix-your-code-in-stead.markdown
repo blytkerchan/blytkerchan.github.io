@@ -16,7 +16,7 @@ tags:
 
 For the last few days, a [discussion](https://groups.google.com/forum/m/?fromgroups#!topic/comp.lang.c/YAuFFz7SmVc) (that has become heated from time to time) has been going on on the comp.lang.c usenet group. The subject is a "signal anomaly": the OP wants to catch SIGSEGV and carry on along its merry way.
 
-<!-- more -->
+<!--more-->
 
 SIGSEGV is the POSIX way of saying "Access Violation": it means the program tried to access a resource (usually some memory) and really shouldn't have. When that happens, the program dies.
 

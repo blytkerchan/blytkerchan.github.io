@@ -14,7 +14,7 @@ tags:
 ---
 
 When working on a large project, implementing a system that has to run 24/7 and handle significant peak loads of communication, at some point, you have to ask yourself how robust your solution really is. You have to ascertain that it meets the goals you have set out and will consistently do so. There are diverse ways of doing this. Some are more efficient than others. In this article, I will discuss some of the methods I have found useful in the past.
-<!-- more -->
+<!--more-->
 Robustness analysis is a form of behavior analysis that focuses on finding possible faults in the design and implementation of the system (or the part of the system being investigated). It can be approached from several angles, including object-behavioral analysis, static analysis, sequence-of-events analysis, etc. Each of these approaches is useful and is likely to be complementary to other approaches, so for a successful robustness analysis, I would recommend using a mixture of these approaches, starting with an analysis of the sequence of events leading up to normal operation,
 
 

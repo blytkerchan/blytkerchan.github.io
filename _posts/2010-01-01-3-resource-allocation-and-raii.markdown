@@ -17,7 +17,7 @@ tags:
 [donate]
 
 In standard C++, there is no garbage collector: there is no built-in mechanism that will magically clean up after you if you make a mess. You do, however, have the possibility to allocate resources, such as memory or files, and work with them. You should, therefore, be able to manage them consistently so you don't "leak" them.
-<!-- more -->
+<!--more-->
 In this post, we will look at how resources are allocated and how they are deallocated. We will also see how to automate the process of deallocating them by using the built-in semantics of the C++ programming language. We will see our very first template, create our very first class and use two new keywords: new and delete. We will also introduce five new concepts: pointers, smart pointers, the constructor, the destructor and RAII, which stands for Resource Acquisition Is Initialization. At the end of this post, you should be able to:
 
 

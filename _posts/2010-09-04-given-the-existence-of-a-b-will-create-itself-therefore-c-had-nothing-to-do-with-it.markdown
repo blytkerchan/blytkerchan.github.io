@@ -16,7 +16,7 @@ tags:
 ---
 
 Stephen Hawking's new book promises a lot of hype. CNN Already published two separate articles about it on their site even hough no-one has read it yet. I've added it to my [Amazon Science Books Wishlist](http://amzn.com/w/2NIU712R6L9YF), and will buy it when I come round to it unless some generous soul wants to offer it to me first. About the hype, though:
-<!-- more -->
+<!--more-->
 "Given the existence of gravity ..."
 
 OK, but given by whom?

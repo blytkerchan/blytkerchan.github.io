@@ -21,7 +21,7 @@ In North America, ICS security, as regards the electricity grid, is regulated by
 
 In this post, I'll provide a quick overview of those standards, provisions slightly more in-depth information than in my [previous post](http://rlc.vlinder.ca/blog/2014/01/the-crain-sistrunk-vulnerabilities/).
 
-<!-- more -->
+<!--more-->
 
 Industry standards generally focus on TCP/IP communications for as far as they are concerned with security. In the context of smart grids, the [NERC-CIP (Critical Infrastructure Protection)](http://web.archive.org/web/20151019112638/http://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx) standards are a good example: CIP-005-3a, the electronic security perimeter standard, includes dial-up and non-routable protocols as entry points to the electronic perimeter (section B, requirement R1.1) but electronic access control is only required "where technically feasible" and only if access is interactive: 
 

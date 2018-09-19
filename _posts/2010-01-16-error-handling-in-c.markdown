@@ -16,7 +16,7 @@ tags:
 ---
 
 One of the things I do as a analyst-programmer is write software - that would be the "programmer" part. I usually do that in C++ but, sometimes, when the facilities of C++ aren't available (e.g. no exception handling and no RTTI) C becomes a more obvious choice. When that happens, RTTI is not the thing I miss the most - you can get around that using magic numbers if you need to. Exceptions, on the other hand, become a very painful absence when you're used to using them.
-<!-- more -->
+<!--more-->
 Error handling is a very important part of programming: a lot of things can go wrong when a program runs and most of those things need to be handled properly because the functionalities of your program depend on them. C++ uses exceptions for this purpose, so that if a call to `foo` fails, you don't have to handle that failure in the context of your call - especially if you wouldn't be able to do anything about it anyway. Thus, the following code:
 
     

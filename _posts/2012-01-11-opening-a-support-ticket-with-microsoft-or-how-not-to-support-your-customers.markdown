@@ -17,7 +17,7 @@ tags:
 I had to open a support ticket with Microsoft today: I found a bug in the TCP/IP stack of Windows Embedded Compact 7 that I wanted them to know about (and to fix). I also wanted to know when it would be _fixed_ -- after all, the bug is critical and the company I work for is a Microsoft Gold partner, so I had a reasonably high expectation of service.
 
 Suffice it to say I was disappointed.
-<!-- more -->
+<!--more-->
 Reporting a bug should be easy: bugs provide the most valuable kind of feed-back about your software in that it tells you that it went wrong, that it is being used and that someone cares enough about it going wrong to tell you about it. As a rule of thumb, you should assume that for each bug report you get, there are at least seven bug reports that you don't get. In Microsoft's case, I would expect this latter number to be higher rather than lower.
 
 Reporting a bug should be a two-step process: click an appropriate link, fill in a form. In the case of Microsoft's system, it is rather more complicated. Here are the steps I went through:

@@ -20,7 +20,7 @@ In this post, I show using a fictitious example why real-time systems are define
 Imagine you're running a coffee shop -- not the kind you find in Amsterdam, but one where they actually serve coffee. Your customers are generally in a hurry, so they just want to get a cup of coffee, pay and leave to catch their plane, train or automobile. To attract more customers and appeal to the Geek crowd, you name your coffee shop "Real-Time Thirsty" and promise an "Average case serving within one minute!".
 
 While you get many customers, you're not getting the Geeks-in-a-hurry crowd you were expecting.
-<!-- more -->
+<!--more-->
 
 
 ## Average-case vs. worst-case timing

@@ -12,7 +12,7 @@ tags:
 ---
 
 Today, my wife asked me to write an app that would tell her to sit straight every 15 minutes. I know apps like that already exist and I could've pointed her to one, but I decided to write one myself. The result is tannez-moi (which is French for "bother me").
-<!-- more -->
+<!--more-->
 It's written in C++ and uses Qt as a GUI framework. It allows you to set a message, an interval and a start and stop time and displays the message in the system tray at the given interval between the given times. It stores its configuration in the registry so it remembers it when you start it.
 
 It's been a while since I last used Qt to write anything new. It has a few flaws: the moc framework (which does the signals and slots) could use a better parser so it would pick up typos at compile-time; there's probably a lot more code than necessary; and it turns C++ RAII on its head, but for GUI apps, that's not really a problem.

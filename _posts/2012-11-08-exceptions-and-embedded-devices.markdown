@@ -27,7 +27,7 @@ Lately, I've had a number of discussions on this subject, in which the same ques
 
 My answer to these two questions are yes and yes (no) resp.: exceptions can and should be used (appropriately) in embedded devices and exceptions may occur during normal operation (i.e. not every exception that occurs is a bug).
 
-<!-- more -->
+<!--more-->
 
 Exceptions are a way of signaling an error to calling code, and encapsulating that error in an object which should contain sufficient information to tell the calling code what's going on and what it can do about it. A good example of an exception is one that is thrown when the calling code attempts to write to a connection that has already been closed, possibly asynchronously, without the knowledge of the calling code. A connection that may be closed asynchronously (which all connections may be: they may be closed by whatever they are connected to) does not allow for a self-evident way of checking whether the connection is still usable - i.e. the following snippet of code will not reliably work:
 

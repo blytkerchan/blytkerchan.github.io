@@ -17,7 +17,7 @@ tags:
 
 While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is ((Apparently, power outlets at Chicago O'Hare are a rare commodity, to the point that their internal website points you to "Power stations" of which there were three in my vacinity, but all of them were fully -- ehm.. -- used. I finally found an outlet in the foodcourt with a gentleman standing next to it, but only using one socket, so I connected my laptop the the other so socket and a small constellation of devices to the various USB ports on my laptop...)). My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.
 
-<!-- more -->
+<!--more-->
 
 I like SPI for a number of reasons. First, it's a full-duplex bus: both sides (master and slave) talk at the same time, at the same rate. It is also astoundingly simple: the master drives a clock -- which can be as fast as it can bang bits -- and selects the slave to talk to with a dedicated `slave_select#` signal, one for each slave. There are two other signals which are shared by all of the slaves: MOSI, for master-out-slave-in, and MISO, for (you guessed it) master-in-slave-out. When a slave is not selected, it sets its MISO output to high-impedance (tristate) so the selected slave can talk. When it is selected, common convention is to drive it low when you have nothing to say, or drive it to whatever your bit value is when you do.
 

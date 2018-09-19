@@ -18,7 +18,7 @@ Just because I charge by the hour, that doesn't mean you should be wasting my ti
 
 This morning, in the wee hours of the morning (time differences can keep you up at night, as can young children), I spent more than an hour and a half doing makework. Most of that work, probably all of it, could have been avoided if I'd been given a working setup rather than a huge chunk of source code and a recipe to make it work. Granted, the recipe did work, but it was still a huge waste of time.
 
-<!-- more -->
+<!--more-->
 
 I usually don't use this site as a forum to vent steam, but writing up a bill of several hundreds of dollars for something my client could have done for a fraction of the cost, simply because the client in question chose to have me do the legwork in stead is a bit too much. I will, however, attempt to give this decidedly ranty post a positive spin.
 

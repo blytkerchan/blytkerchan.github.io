@@ -19,7 +19,7 @@ If you follow the News feed from [Vlinder Software's site](http://vlinder.ca) yo
 
 If you've been following me for a while, you'll know that I am the founder and sole proprietor of Vlinder Software, as well as the CEO and an Analyst. I don't usually sign off as CEO, but this is one of those decisions that is mine alone to take. In this post, I will explain why.
 
-<!-- more -->
+<!--more-->
 
 Funky is an elegant little language, albeit a bit clunky. The elegance comes from the fact that its grammar can be expressed in only five productions. Its clunkiness from the fact that its semantics are defined almost entirely by whatever you happen to plug into the interpreter, and from the fact it's a lispier language than Lisp.
 

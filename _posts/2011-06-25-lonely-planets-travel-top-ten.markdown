@@ -14,7 +14,7 @@ tags:
 ---
 
 Lonely Planet came out with a book on their top-ten places to visit recently. In light of recent events, some of their choices merit revision and as I don't have anything better to do right now, I thought I'd do a bit of revision on my iPod...
-<!-- more -->
+<!--more-->
 
 
 ## Syria

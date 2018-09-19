@@ -19,7 +19,7 @@ tags:
 [donate]
 
 As far as error handling is concerned, C++ has all of the features and capabilities of C, but they are wholly inadequate in an object-oriented language. One very evident way in which C-style error handling is inadequate in an object-oriented language is in the implementation of a constructor of any non-trivial class, but this only becomes evident when we've analyzed two things: the guarantees that any method (including special methods such as constructors and destructors) can give, and the _minimal_ guarantees that each of these special methods _must_ give.
-<!-- more -->
+<!--more-->
 
 
 ## A Contractual Basis for Exception-Safety

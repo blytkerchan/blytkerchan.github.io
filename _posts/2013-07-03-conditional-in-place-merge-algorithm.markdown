@@ -33,7 +33,7 @@ OK, so don't say it. It's true anyway. Now we need an algorithm to
 
 Let's have a look at that algorithm.
 
-<!-- more -->
+<!--more-->
 
 Our sequence will need to provide multi-pass bidirectional input/output iterators: we need to be able to dereference each iterator more than once, we need to be able to read through them and write through them, and we need to be able to go forward, and backward (we'll see why below).
 

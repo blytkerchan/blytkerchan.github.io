@@ -13,7 +13,7 @@ categories:
 ---
 
 Today, I announced on behalf of my company, Vlinder Software, that we would no longer be supporting "Depends", the dependency tracker. I think it may be worthwhile to tell you a by about the history of Depends, how it became a product of Vlinder Software, and why it no longer is one.
-<!-- more -->
+<!--more-->
 Depends was first written as part of Jail, an experiment I was working on in 2007. Some of the code from the Jail project was never made public but the parts that were were often interesting: there's an implementation of Maged M. Michael's Safe Memory Reclamation algorithm (SMR) ((A patent application was filed under the title "Method for efficient implementation of dynamic lock-free data structures with safe memory reclamation" in 2002, but was never granted so AFAICT (but IANAL) the algorithm is in the public domain, but I've posted a question about it [here](http://patents.stackexchange.com/questions/13107/what-is-the-legal-status-of-safe-memory-a-reclamation))), for example, that has some useless sorting added to it bug is otherwise interesting to look at. I was playing a lot with lock-free code back then -- it's gotten a bit more serious since -- and tried out several algorithms of which SMR is probably the most elegant.
 
 I also wrote a dependency tracker, based on the idea over an annotated directed a cyclic graph that was serializable and accessible as an STL-style associative container. I still very much like the idea of using familiar interfaces (assuming competent C++ programmers are familiar with the STL) and hiding nifty algorithms behind them so the "thing" you're working with just "magically" does what you want it to do.

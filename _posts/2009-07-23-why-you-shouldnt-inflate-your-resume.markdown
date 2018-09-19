@@ -17,7 +17,7 @@ tags:
 
 Many people inflate their resumes when they apply for a job. When I'm on the hiring side of the equasion, I tend to frown upon such practices: though I usually don't care much about references, I do check the outliers. But what I check more is expertise - and that's something I can't stand inflation on.
 
-<!-- more -->
+<!--more-->
 
 Overly inflated resumes are usually very easy to spot: some-one who just finished university is hardly ever an expert inÂ _anything_, especially if they've opted to reduce the number of internships or have taken internships in companies that basically use interns for the heavy lifting(read: boring work) and routine maintenance (read: debugging legacy spaghetti code) that you don't want to spend your valuable programmer time on. Yet, most of them seem to think they know everything about everything, especially if they had high grades.
 

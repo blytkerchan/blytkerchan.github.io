@@ -32,7 +32,7 @@ You may assume the following:
   4. `query` results never contain their argument ((i.e. for the case at hand, we're querying a directed acyclic graph, so our first argument will never be seen in any of the `query` results, although any given value may appear more than once in `query` results))
 
 
-<!-- more -->
+<!--more-->
 
 This is almost exactly the problem I had to solve recently: a tool was taking several minutes to perform a routine task that, in my opinion, should take milliseconds. Several other issues were involved as well, but this one has the bonus of being fun.
 

@@ -27,7 +27,7 @@ In a discussion with a "Product Owner" recently, I told him I take a more techno
   * to successfully manage an "agile" development team and create a viable product, one has to have a vision and break it down from there.
 
 [/dropshadowbox]
-<!-- more -->
+<!--more-->
 Well-running teams tend to be able to execute their tasks efficiently, but large development teams do not necessarily have a clear vision of where the product, or product line, is going and therefore don't necessarily know what direction to take the code in. This may have an adverse effect on the product's system architecture, especially with agile teams that tend to decide the architecture by the seat of their pants.
 
 This is why I tend to take a more "technocratic" approach to project management and team management: I do not believe that every person in a large team is equally apt to work on every part of a large system architecture. Rather, the architecture should be compartmentalized and each part of the architecture should have a small group of designated "experts": people that know that part of the system inside out and work on it whenever work needs to be done on it.

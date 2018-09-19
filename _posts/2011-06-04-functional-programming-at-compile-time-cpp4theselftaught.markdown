@@ -16,7 +16,7 @@ tags:
 ---
 
 [audio src="http://vlinder.ca/podcasts/31-compile-time-fp.mp3"]In the [previous installment](http://rlc.vlinder.ca/blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/) I talked about functional programming a bit, introducing the idea of _functors_ and _lambda expressions_. This time, we will look at another type of functional programming: a type that is done at compile-time.
-<!-- more -->
+<!--more-->
 
 
 ## Meta-functions

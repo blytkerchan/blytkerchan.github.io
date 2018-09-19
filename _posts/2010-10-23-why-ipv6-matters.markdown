@@ -17,7 +17,7 @@ tags:
 ---
 
 Given the rapid growth of the Internet, and the number of Internet-enabled devices, we are running out of IPv4 addresses - fast. This is a problem mostly for ISPs and large businesses who allocate their own public IP addresses from pools of addresses and sell or sub-let those addresses to .. us. When _they_ run out of addresses, as with any finite resource, the _haves_ will once again be pitted against the _have-nots_ and the Internet will become less egalitarian. But that is not the only reason why you should be interested in IPv6: more important than the 340 trillion, trillion, trillion addresses that the 128-bit address space of IPv6 allows (as opposed to the "mere" four billion of IPv4) are IPv6's _other_ features.
-<!-- more -->
+<!--more-->
 The Obama administration hosted a workshop on the importance of the adoption and deployment of IPv6 addresses for industry, the U.S. Government, and the Internet economy on sept 29 of this year at which the federal Chief Information Officer presented a memo which explains why the U.S. government is interested:
 
 

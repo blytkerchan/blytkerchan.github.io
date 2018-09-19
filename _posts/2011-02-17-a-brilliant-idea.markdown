@@ -14,7 +14,7 @@ tags:
 ---
 
 For a few days now, I've been carrying an idea around for a new app I could really use for my projects: something that integrates requirements management, risk management, workflow, billing, bug/issue tracking, action items, etc. with the code repositories. Wouldn't that be fun?
-<!-- more -->
+<!--more-->
 Yes, it would, but it would also be a hell of a lot of work to write one of those things, let alone maintain one and as I am not in the business of selling and maintaining that kind of software and/or service (after all, I do mostly embedded or distributed work - anything high performance and small footprint, really), it might not be such a brilliant idea for me to do after all. Even as a side project - as if I really had time for more side projects!
 
 So, I went through the fastest project start-up-to-stage-gate-to-finish yet - took me all of twenty minutes. I baptized the project "hippocampus", wrote down a project vision, started looking for existing solutions that correspond to that vision (more or less: in this kind of exploratory work you don't look for exact matches) and decided that the project was a no-go.

@@ -14,7 +14,7 @@ tags:
 ---
 
 There are a few misconceptions I hear about Git that I find should be cleared up a bit, so here goes:
-<!-- more -->
+<!--more-->
 
 
 

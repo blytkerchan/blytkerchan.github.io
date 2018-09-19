@@ -16,7 +16,7 @@ tags:
 [donate]
 
 Before we delve into the realm of object-oriented programming (which we will get into in the next post), there is a notion that is so basic, and so important to any type of programming, that we have to treat it in order to make the whole notion of object-oriented-programming comprehensible.
-<!-- more -->
+<!--more-->
 Programming is all about treating data (sometimes from the implementation's environment, sometimes from somewhere else). That data usually represents something - which is where the notion of object-oriented programming comes from. In order to be able to treat that data, it has to be structured in some way.
 
 In various programming languages there are various different ways to structure data. In the family of programming languages C++ comes from, we structure data into, well, structures. In C, one of the direct ancestors of C++, there is a special keyword to designate structures of data - it is `struct`. Though C++ adds quite a few features to the `struct` w.r.t. C, the basic notion of the structure is still the same.

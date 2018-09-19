@@ -16,7 +16,7 @@ tags:
 
 Industrial Control Systems (ICSs) are becoming pervasive throughout all branches of industry and all parts of our infrastructure: they are a part of every part of the electricity grid, from the nuclear power station to your home; they're found in the traffic lights of virtually every crossing; they regulate train traffic; they run the cookie factory that makes your favorite cookies and pack the pills your doctor prescribed.
 
-<!-- more -->
+<!--more-->
 
 For this article, and for the following articles in the series of which this will be the first, I will concentrate on the power grid.
 

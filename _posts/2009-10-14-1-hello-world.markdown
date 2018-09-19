@@ -16,7 +16,7 @@ tags:
 [donate]
 
 This is the first post in the "C++ for the self-taught" series - the second if you count the introduction. We will take a look at how to create your first C++ application.
-<!-- more -->
+<!--more-->
 In order to create an application in C++, you need a _compiler_: unlike some _interpreted languages_ such as Perl, Python and PHP, C++ is first compiled into machine code, and then executed. For brevity, we won't go into that process, which actually involves several more steps than compiling, now, but we'll dive directly into the code and see the machinery at work.
 
 Let's take our first look at a program written in C++: 

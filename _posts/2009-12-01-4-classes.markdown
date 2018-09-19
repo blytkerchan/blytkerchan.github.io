@@ -16,7 +16,7 @@ tags:
 [donate]
 
 In any language that supports object-oriented programming, the class is a, if not the, basic building block. In this post, we'll take a closer look at what a class is, and how that ties in with what we've seen in the previous post, data structures, and in the two next posts: pointers, references, objects and RAII.
-<!-- more -->
+<!--more-->
 A class can be thought of as a collection of objects and functions that, together, implement a functionality. In any given class, you'll find whatever you need to implement its functionality both in terms of data and in terms of logic, and you should find no more than that. For example, in a class that implements a smart pointer, you should find a pointer, perhaps a reference counter, and the logic needed to manage the life-time of the object to which it points. A well-designed class is minimal but complete: it has everything it needs to perform its duty, but no more. (This is an important rule when designing a class!)
 
 You can also think of a class as a description of what an object of a given type (the type of the class) should look and behave like. From this point of view, the class doesn't necessarily have a specific function, but has a more organic reason of being. I don't always like this approach myself, but it is popular and legitimate (at least in some cases).

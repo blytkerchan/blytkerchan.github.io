@@ -16,7 +16,7 @@ tags:
 
 One of the most time-consuming tasks in embedded software development can be device driver debugging. Especially if that debugging has to be done in a real-time system without disturbing its real-time characteristics. This usually amounts to producing an output signal on a pin of the CPU and probing the output to see what's going on. In order to be able to do that, the people who design the hardware have to keep in mind that the people who design the software will have some debugging to do on the final hardware -- even if it's just to make sure everything is working OK.  
 
-<!-- more -->  
+<!--more-->  
 
 I have recently spent a lot of time experimenting with different GPIOs to output a signal that I could probe on a system in its production setup (all of the final hardware, but with an open box).
 

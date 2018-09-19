@@ -14,5 +14,5 @@ tags:
 ---
 
 I have recently made some changes to the format of the podcast: there is background music all the time now (not just a jingle at the beginning) and most installments are about 30 minutes. I'd like to know what you think about this new format.
-<!-- more -->
+<!--more-->
 [wp_surveys]

@@ -17,7 +17,7 @@ tags:
 
 Four of these need not apply for a government job in Quebec if the new PQ charter of values becomes law. Can you pick the one that might still get the job?
 
-<!-- more -->
+<!--more-->
 
 I don't often post about politics on this blog: I usually keep my political opinions to myself and focus in technology and project management -- mostly technology, mostly C++, ...
 

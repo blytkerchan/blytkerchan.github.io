@@ -16,7 +16,7 @@ tags:
 [donate]
 
 The difference between references and pointers, what they are w.r.t. pointers and how to handle each has often been the source of confusion, sometimes even for seasoned programmers and often for formally trained, inexperienced programmers. Very often, especially in legacy code, I find one if the ugliest constructs imaginable: a function that returns a reference that is the result of dereferencing a pointer, if which the address is subsequently taken to validate its value. Ugh!
-<!-- more -->
+<!--more-->
 
 
 ## Objects, Pointers and Where Objects Live
