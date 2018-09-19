@@ -11,6 +11,6 @@ post_format:
 - Gallery
 ---
 
-{% include image url="http://rlc.vlinder.ca/wp-content/uploads/2016/09/image-2-1024x768.jpeg" caption="Felicia, our cat, relaxing" %}
+{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/09/image-2-1024x768.jpeg" caption="Felicia, our cat, relaxing" %}
 
 The Twitterverse has spoken, quietly, with a single vote -- a cat it is...

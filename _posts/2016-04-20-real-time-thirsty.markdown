@@ -26,7 +26,7 @@ While you get many customers, you're not getting the Geeks-in-a-hurry crowd you 
 ## Average-case vs. worst-case timing
 
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/04/IMG_07981-e1461091049572-1024x708.jpg" caption="Fig. 1: Ordering coffee" %}
+{% include image.html url="/assets/img/2016/04/e1461091049572.jpg" caption="Fig. 1: Ordering coffee" %}
 
 Fig. 1 shows the interaction needed to get a cup of coffee: the customer requests a coffee, the barista gets a cup, fills it, asks for money and gives the coffee to the customer. The whole exchange might take all of one minute in the average case -- you're keeping your promise, so why won't the Geeks-in-a-hurry come?
 
