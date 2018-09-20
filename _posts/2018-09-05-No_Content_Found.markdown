@@ -5,7 +5,7 @@ date: 2018-09-05 00:00:00+00:00
 layout: post
 link: http://rlc.vlinder.ca/?p=4140
 published: false
-slug: No Content Found
+slug: On the importance of requirements gathering
 title: On the importance of requirements gathering
 wordpress_id: 4140
 categories:
@@ -16,7 +16,7 @@ Requirements analysis is a three-step, cyclical process. The steps are: **Requir
 
 This post is about the first part: requirements gathering.
 
-{% include dropshadowbox.html open_only=true %}
+{% include shadowbox.html open_only=true %}
  **The TL;DR:**
 
 
