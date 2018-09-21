@@ -16,9 +16,9 @@ tags:
 - rant
 ---
 
-[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:**
+{% include shadowbox.html open_only=true %}**The TL;DR:**
 https://twitter.com/blytkerchan/status/888378949683773440
-[/dropshadowbox]
+</div>
 <!--more-->
 A few years ago, we hired an "interior decorator" to help us with a few things in our kitchen. It was a disaster: her incompetence was as staggering as her lack of self-awareness. The whole project took only a few weeks, but the mess she made took longer than that to clean up. She had, of course, lied about her credentials and her experience and, in retrospect, her references were more than a bit shaky, but hindsight is 20/20.
 

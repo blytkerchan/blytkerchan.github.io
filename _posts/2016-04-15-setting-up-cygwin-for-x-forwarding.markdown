@@ -15,8 +15,10 @@ tags:
 - X forwarding
 ---
 
-[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:**
-This is one of those "recipe" posts that tend to be useful if you happen to want to do exactly what I just did. The end result of this one is a Windows shortcut called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux box, with X forwarding.[/dropshadowbox]
+{% include shadowbox.html open_only=true %}
+**The TL;DR:**
+This is one of those "recipe" posts that tend to be useful if you happen to want to do exactly what I just did. The end result of this one is a Windows shortcut called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux box, with X forwarding.
+</div>
 <!--more-->
 For my day-to-day work I, like many people, use a mix of Linux, Windows and iOS; the three of which working less-than-seamlessly together to help make my working day productive. In my case, the Linux boxes are mostly Ubuntu boxes (I moved from vanilla Debian to Ubuntu a few years ago; from RedHat to Debian before that) and the Windows boxes are either a Windows 7 desktop, a Windows 7 laptop or a Windows 10 laptop.
 
