@@ -17,15 +17,12 @@ tags:
 In a discussion with a "Product Owner" recently, I told him I take a more technocratic approach to project management than they did. We discussed different project management styles for the next hour or so.
 
 {% include shadowbox.html open_only=true %}
-**TL;DR:** I believe that
+<b><i>TL;DR:</i></b> I believe that
 
-
-
-	
-  * to effectively and efficiently run a large team of developers who are collectively responsible for a product with a large code-base, that team needs to be organized as a network of smaller teams with experts leading each of those smaller teams, and
-
-	
-  * to successfully manage an "agile" development team and create a viable product, one has to have a vision and break it down from there.
+<ul>
+<li>to effectively and efficiently run a large team of developers who are collectively responsible for a product with a large code-base, that team needs to be organized as a network of smaller teams with experts leading each of those smaller teams, and</li>
+<li>to successfully manage an "agile" development team and create a viable product, one has to have a vision and break it down from there.</li>
+</ul>
 
 </div>
 <!--more-->
