@@ -13,8 +13,11 @@ categories:
 
 Recently, I spent a significant part of the day in a meeting reviewing the year's progress on several projects, including the introduction of an agile methodology -- Scrum. The approach in the meeting was simple: write on a sticky note what we did well, and on another what we should not repeat or how we should improve. The subject was "Scrum/agile". I only wrote one sticky note: "get rid of Scrum".
 
-[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:**
-Scrum, in my opinion, is (moderately) useful for small teams with a single, short-term project -- something like a web application. The overhead it imposes _vastly_ outweighs the benefits for larger teams and larger projects.[/dropshadowbox]
+{% include shadowbox.html open_only=true %}
+<b><i>The TL;DR:</i></b>
+Scrum, in my opinion, is (moderately) useful for small teams with a single, short-term project -- something like a web application. The overhead it imposes _vastly_ outweighs the benefits for larger teams and larger projects.
+</div>
+
 <!--more-->
 Imagine you're running a team of 20 or so developers, each of which work on different parts of a complex platform that has almost two decades of legacy code in it -- about a thousand person-years of legacy code. The team is tasked with adding new features to that platform. They work 40 hours a week, 50 weeks per year -- which amounts to 40,000 person-hours per year of work on the platform.
 

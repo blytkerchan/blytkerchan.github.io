@@ -17,18 +17,13 @@ Requirements analysis is a three-step, cyclical process. The steps are: **Requir
 This post is about the first part: requirements gathering.
 
 {% include shadowbox.html open_only=true %}
- **The TL;DR:**
+<b><i>The TL;DR:</i></b>
 
-
-
-	
-  * you can avoid scope creep by defining a clear vision
-
-	
-  * you can avoid scope skew by seeking out the expertise and weighing requirements against the vision
-
-	
-  * you can avoid unwarranted requirement complexity by identifying conflicting requirements and factoring them out, favouring the requirements that drive toward the vision
+<ul>
+<li>you can avoid scope creep by defining a clear vision</li>
+<li>you can avoid scope skew by seeking out the expertise and weighing requirements against the vision</li>
+<li>you can avoid unwarranted requirement complexity by identifying conflicting requirements and factoring them out, favouring the requirements that drive toward the vision</li>
+</ul>
 
 
 </div>
