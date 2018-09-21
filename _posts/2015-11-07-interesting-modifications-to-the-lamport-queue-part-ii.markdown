@@ -20,21 +20,16 @@ In the [previous installment](http://rlc.vlinder.ca/blog/2015/11/interesting-mod
 
 In this article, I will discuss the further optimizations to reduce the number of operations on shared state, thus eliminating the need for memory barriers completely in many cases.
 <!--more-->
-[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:** I
+{% include shadowbox.html open_only=true %}
+<b><i>The TL;DR:</i></b> I
 
+<ul>
+<li>briefly recap the [previous article](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue/)</li>
+<li>explain the cost of synchronization</li>
+<li>show a way to get around that cost most of the time</li>
+</ul>
+</div>
 
-
-	
-  * briefly recap the [previous article](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue/)
-
-	
-  * explain the cost of synchronization
-
-	
-  * show a way to get around that cost most of the time
-
-
-[/dropshadowbox]
 A quick recap:
 
 	

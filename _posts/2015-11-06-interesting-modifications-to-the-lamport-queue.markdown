@@ -19,24 +19,16 @@ tags:
 
 While researching lock-free queue algorithms, I came across a few articles that made some interesting modifications to the Lamport queue. One made it more efficient by exploiting C11's new memory model, while another made it more efficient by using cache locality. As I found the first one to be more interesting, and the refinements more useful for general multi-threaded programming, I thought I'd explain that one in a bit more detail.
 <!--more-->
-[dropshadowbox effect="lifted-right" border-width="1" inside_shadow="false"]**The TL;DR:** I
+{% include shadowbox.html open_only=true %}<b><i>The TL;DR:</i></b> I
 
-
-
-
-  * provide a brief explanation of lock-free queue categories
-
-
-  * explain an article by Nhat Minh Le _et al._ in programmer-ese
-
-
-  * provide their improvement upon the Lamport queue, [with code](https://github.com/blytkerchan/Lamport)
-
-
-  * show why alternative approaches don't work
-
-
-  * explain what a data race is, and how the C11 memory model fits in and addresses it
+<ul>
+<li>provide a brief explanation of lock-free queue categories</li>
+<li>explain an article by Nhat Minh Le _et al._ in programmer-ese</li>
+<li>provide their improvement upon the Lamport queue, [with code](https://github.com/blytkerchan/Lamport)</li>
+<li>show why alternative approaches don't work</li>
+<li>explain what a data race is, and how the C11 memory model fits in and addresses it</li>
+</ul>
+</div>
 
 
 [/dropshadowbox]

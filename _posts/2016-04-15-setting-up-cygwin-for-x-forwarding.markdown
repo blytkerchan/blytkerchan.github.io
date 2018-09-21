@@ -16,7 +16,7 @@ tags:
 ---
 
 {% include shadowbox.html open_only=true %}
-<b><i>The TL;DR:</i></b>
+<b><i>The TL;DR:</i></b><br/>
 
 This is one of those "recipe" posts that tend to be useful if you happen to want to do exactly what I just did. The end result of this one is a Windows shortcut called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux box, with X forwarding.
 </div>

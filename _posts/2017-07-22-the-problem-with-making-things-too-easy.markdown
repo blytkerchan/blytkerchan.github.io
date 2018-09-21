@@ -16,7 +16,8 @@ tags:
 - rant
 ---
 
-{% include shadowbox.html open_only=true %}<b><i>The TL;DR:</i></b>
+{% include shadowbox.html open_only=true %}
+<b><i>The TL;DR:</i></b><br/>
 https://twitter.com/blytkerchan/status/888378949683773440
 </div>
 <!--more-->

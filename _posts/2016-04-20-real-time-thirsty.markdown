@@ -15,7 +15,8 @@ tags:
 ---
 
 {% include shadowbox.html open_only=true %}
-**The TL;DR:**
+<b><i>The TL;DR:</i></b><br/>
+
 In this post, I show using a fictitious example why real-time systems are defined by their worst-case timing rather than their average-case timing.
 
 </div>
