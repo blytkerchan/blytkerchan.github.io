@@ -1,4 +1,4 @@
-@container_id = rand().to_s;
+{% @container_id = rand().to_s; %}
 <div id="tweet_{{ @container_id }}"></div>
 <script>
 twttr.widgets.createTweet(@include.id, document.getElementById('tweet_{{ @container_id }}'));
