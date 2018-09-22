@@ -15,7 +15,9 @@ tags:
 - open source
 ---
 
-There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug ((OpenSSL is very widely used, which makes its effect on the Internet enormous, and the effect of bugs in the protocol implementation huge. That explains why such bugs are so well-publicized. Another factor in the publicity is the name of the bug (which was very well-found).)).
+There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug[^1].
+
+[^1]: OpenSSL is very widely used, which makes its effect on the Internet enormous, and the effect of bugs in the protocol implementation huge. That explains why such bugs are so well-publicized. Another factor in the publicity is the name of the bug (which was very well-found).
 
 Then there's the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in the Linux kernel.
 
@@ -23,7 +25,9 @@ So, is there a systemic problem with Open Source software? Does proprietary soft
 
 <!--more-->
 
-Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost ((Truecrypt gave up the ghost in May of this year, ostensibly because modern OSs come with their own disk encryption options. This does not reflect the quality of Truecrypt -- just that it is no longer maintained.)) and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where [latex]0 \le M \le cN[/latex].
+Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost[^2] and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where [latex]0 \le M \le cN[/latex].
+
+[^2]: Truecrypt gave up the ghost in May of this year, ostensibly because modern OSs come with their own disk encryption options. This does not reflect the quality of Truecrypt -- just that it is no longer maintained.
 
 The only way to not write buggy code is to not write code at all. This is true regardless of whether you're getting paid for writing the code, and regardless of how much experience you have writing code. Of course, more experienced coders are less likely to write buggy code most of the time, but even the most experienced coder is guaranteed to write buggy code some of the time.
 
@@ -129,6 +133,8 @@ In Open Source software, you just have to take a look at the commit log. The Hea
 Running queries over the CVE database, I've found that the percentage of vulnerabilities that were in Open Source software has remained relatively stable even though Open Source software has become more popular, which in itself would indicate a decline in vulnerabilities and therefore an increase in quality.
 
 One would expect to find more vulnerabilities in a category of software as it becomes more popular, as it would be increasingly scrutinized, followed by a decrease as awareness goes up. Awareness has been, and remained, high w.r.t. security in the Open Source world for decades -- well before it became as popular as it is today.
-I verified this premise by looking for recent vulnerabilities in old software -- Microsoft Windows CE 4.2 ((I had to do that anyway  for unrelated research)). Microsoft Windows CE 4.2 has been obsolete for a very long time, but devices using it are still being shipped and maintained, even though support for the embedded OS by Microsoft ceased in 2008. While there are recent vulnerabilities in newer versions of CE, security researchers don't seem to bother with old, obsolete platforms as much as they do with the shiny new ones. Popularity spurs interest from hackers (regardless of the color of their hat) as well as the general public. That doesn't mean there are no vulnerabilities in older software: it means vulnerabilities are more likely to be found in more popular software, if they're there.
+I verified this premise by looking for recent vulnerabilities in old software -- Microsoft Windows CE 4.2[^3]. Microsoft Windows CE 4.2 has been obsolete for a very long time, but devices using it are still being shipped and maintained, even though support for the embedded OS by Microsoft ceased in 2008. While there are recent vulnerabilities in newer versions of CE, security researchers don't seem to bother with old, obsolete platforms as much as they do with the shiny new ones. Popularity spurs interest from hackers (regardless of the color of their hat) as well as the general public. That doesn't mean there are no vulnerabilities in older software: it means vulnerabilities are more likely to be found in more popular software, if they're there.
+
+[^3]: I had to do that anyway  for unrelated research.
 
 So, is Open Source software security falling apart? No, it's not: Open Source software is as healthy as ever, and as safe as it ever has been. As with all software, procurement should be done with open eyes and a healthy dose of scepticism, but a preference for the proprietary does not appear founded if it is based on a premise of better software security.
