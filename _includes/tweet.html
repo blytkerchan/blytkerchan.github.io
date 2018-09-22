@@ -1,7 +1,7 @@
-{% assign container_id = rand().to_s; %}
+{% assign container_id rand().to_s; %}
 <div id="tweet_{{ container_id }}"></div>
 <script>
-twttr.widgets.createTweet(@include.id, document.getElementById('tweet_{{ container_id }}'));
+twttr.widgets.createTweet({{ @include.id }}, document.getElementById('tweet_{{ container_id }}'));
 </script>
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
