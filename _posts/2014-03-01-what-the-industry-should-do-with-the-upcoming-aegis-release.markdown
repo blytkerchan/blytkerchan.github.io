@@ -18,11 +18,13 @@ tags:
 
 [Automatak will be releasing](http://automatak.net/wordpress/?p=482) the Aegis fuzzing tool publicly and for free for the first time in a few days. Like I said yesterday:
 
-https://twitter.com/blytkerchan/status/439582028259147777
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Can hardly wait:  &quot;2 weeks until Aegis™ release&quot; <a href="http://t.co/KrQkrbb9a9">http://t.co/KrQkrbb9a9</a></p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/439582028259147777?ref_src=twsrc%5Etfw">March 1, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 to which Adam replied:
 
-https://twitter.com/jadamcrain/status/439774683827679233
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/blytkerchan?ref_src=twsrc%5Etfw">@blytkerchan</a> I just hope the industry is ready!</p>&mdash; Code Monkey Hate Bug (@jadamcrain) <a href="https://twitter.com/jadamcrain/status/439774683827679233?ref_src=twsrc%5Etfw">March 1, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I don't think the industry is ready -- and here's why.
 

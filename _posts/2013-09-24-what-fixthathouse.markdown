@@ -36,25 +36,33 @@ Proportional representation also means that some fringe parties get seats -- suc
 The Canadian system lacks transparency: the prime minister is the leader of the party that has the most seats and, in the case of a majority, does not have much of an opposition to contend with. It is a strong-man's system. This is in contrast with Canadian culture, which is not a strong-man's culture.
 
 Each of the things I tweeted would take power away from the government:
-https://twitter.com/blytkerchan/status/381908075961397248
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> proportional representation: each party presents a country-wide list of people to vote for -- most votes gets a seat</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381908075961397248?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 takes power away from the party leader: if the party convention chooses who the candidates are, the political leader can only keep that position if he/she at least gets enough votes to get into parliament. Voters can very well choose to vote for someone else (in the same party), if they want to.
 
 They can, of course, also vote for someone from another party.
 
-https://twitter.com/blytkerchan/status/381908444309372928
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> senators appointed by provincial &amp; territorial parliaments/legislative assemblies. Number regardless of population.</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381908444309372928?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 The canadian system requires regional representation, but that representation would be moved to the senate, where the bills are tested for regional interest. Senators, appointed by legislative assemblies, provincial parliaments, or national assemblies (as the case may be) make the senate indirectly elected -- but still more so than the current senate -- and with a clear mandate.
 
-https://twitter.com/blytkerchan/status/381910656297226241
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Every Friday, 1-hour interview with PM (or, if out of country, minister) on TV, public broadcaster, no screening of questions <a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a></p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381910656297226241?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 Makes the Prime Minister directly answerable to the people. Not comfortable for him, but a good thing for democracy.
 
-https://twitter.com/blytkerchan/status/381909211292377088
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> question period once a week, one full hour, no &quot;lists&quot; of members scheduled to ask questions, just stand up &amp; be recognized</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381909211292377088?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 The current QP would only get raudier if swords were let back in. Once a week, real questions.
 
-https://twitter.com/blytkerchan/status/381911678944026624
-https://twitter.com/blytkerchan/status/381911745880928256
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> committee members chosen by parliament, members nominate themselves, vote for each other....</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381911678944026624?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> ... Each two votes of which one must not be for own party.</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381911745880928256?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 This would force parliament members to vote for people not from their party, who would be given real power to work on legislation. It would also allow parliament members to work on things that interest them, regardless of whether their leader wants to appoint them.
 
 AFAIK, this is not part of the current Dutch system.
 
-https://twitter.com/blytkerchan/status/381913384180269056
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> corrective referendum: if gov&#39;t or parl&#39;t does something wrong, ppl can stop it with a referendum. Rescinds royal assent.</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381913384180269056?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 This one didn't fly in the Netherlands (just look up Hans Wiegel on Wikipedia to know why) but it's a good idea nonetheless: it allows the people to correct the government's actions.

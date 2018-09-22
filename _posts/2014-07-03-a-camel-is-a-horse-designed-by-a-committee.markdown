@@ -53,7 +53,8 @@ IEEE StdTM 1588 is even worse: it defines PTP, the Precision Time Protocol. It's
 
 IEEE 1588 uses TAI as its base ((TAI stands for International Atomic Time -- but just like I thought gigaoctet sounded too french, IAT just wasn't french enough...
 
-https://twitter.com/jadamcrain/status/461649300494483456
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;I wanted to say gigaoctets but it sounded too French&quot; -<a href="https://twitter.com/blytkerchan?ref_src=twsrc%5Etfw">@blytkerchan</a></p>&mdash; Code Monkey Hate Bug (@jadamcrain) <a href="https://twitter.com/jadamcrain/status/461649300494483456?ref_src=twsrc%5Etfw">April 30, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 )). Most other systems use UTC (GPS being a notable exception). UTC is TAI plus a leap or 33. That means that when translating from a C37.118.1-enhanced IRIG-B signal to IEEE-1588, you need to apply a conversion -- and you need to apply it the other way around when translating back or producing time stamps. It's trivial, but it's frustrating nonetheless.
 

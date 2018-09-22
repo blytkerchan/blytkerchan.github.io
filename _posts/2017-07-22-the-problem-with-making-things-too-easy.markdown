@@ -18,7 +18,8 @@ tags:
 
 {% include shadowbox.html open_only=true %}
 <b><i>The TL;DR:</i></b><br/>
-{% include tweet.html id="888378949683773440" %}
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The thing with making things easier is that it makes mediocre people seem competent and incompetent people seem mediocre...</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/888378949683773440?ref_src=twsrc%5Etfw">July 21, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <!--more-->
 A few years ago, we hired an "interior decorator" to help us with a few things in our kitchen. It was a disaster: her incompetence was as staggering as her lack of self-awareness. The whole project took only a few weeks, but the mess she made took longer than that to clean up. She had, of course, lied about her credentials and her experience and, in retrospect, her references were more than a bit shaky, but hindsight is 20/20.

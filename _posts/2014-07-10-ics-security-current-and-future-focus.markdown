@@ -141,7 +141,8 @@ There are also a few less obvious, and perhaps less important, issues to conside
 	
   * Security issues have not been taken particularly seriously in the smart grid historically.  
 From Adam's tweet concerning two posts on this blog:
-https://twitter.com/jadamcrain/statuses/419829607307567104
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">2 posts from <a href="https://twitter.com/blytkerchan?ref_src=twsrc%5Etfw">@blytkerchan</a> about impact of <a href="https://twitter.com/hashtag/DNP3?src=hash&amp;ref_src=twsrc%5Etfw">#DNP3</a> vulns:<a href="http://t.co/MNpGBJxCQS">http://t.co/MNpGBJxCQS</a><a href="http://t.co/rA8Rf62lyV">http://t.co/rA8Rf62lyV</a><br>Wake up NERC!</p>&mdash; Code Monkey Hate Bug (@jadamcrain) <a href="https://twitter.com/jadamcrain/status/419829607307567104?ref_src=twsrc%5Etfw">January 5, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 one might surmise he is somewhat frustrated with this state of affairs
 
 	
