@@ -137,7 +137,9 @@ If you're designing a structure that is going to be part of a collection of stru
 
 
 
-## Other bits ((I was going to call this section "Optional bits" but it's not really optional any more than the text itself implies -- I don't want you to skip over this section just because I said it was optional))
+## Other bits[^1]
+
+[^1]: I was going to call this section "Optional bits" but it's not really optional any more than the text itself implies -- I don't want you to skip over this section just because I said it was optional
 
 
 If the data you are dumping is somehow variable-sized (i.e. it's the header of something), _please include the size_ so we know how much data to skip. If need be the size can be used in _lieu_ of a version (as one Redmond-based company often does).
