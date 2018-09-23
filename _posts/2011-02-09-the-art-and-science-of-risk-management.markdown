@@ -193,13 +193,17 @@ The second restriction is in the fact that the [latex]R_a \to R_b[/latex] depend
 
 The two restrictions greatly simplify the model and probably made the case studies for their research feasible. Among other things, they have the effect of rendering the directed graph they define as the _Risk Dependency Graph_ _acyclic_: if only the occurence of a risk [latex]R_a[/latex] triggers the dependency, the probability [latex]P_b[/latex] remains independent of probability [latex]P_a[/latex] even if [latex]R_a \to R_b[/latex] and both [latex]P_a[/latex] and [latex]P_b[/latex] can be assessed independently. The same is not true if [latex]P_a \to P_b[/latex], in which case it becomes impossible to asses [latex]P_b[/latex] independently from [latex]P_a[/latex] and in which case the directed graph becomes artifically acyclic in order to be able to assess the probabilities of each risk.
 
-Regardless of, or perhaps because of, these restrictions, their model is certainly useful: they define useful methods to define dependency values, by defining a Risk Dependency Value and a Risk Dependency Multiplier, which can be used to calculate the new probability of the dependent risk and which produces the new risk [latex]R^{+a}_b=f(P^{+a}_b,I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P^{+a}_b\in P[/latex] **or** [latex]R^{+a}_b=f(P_b DM_{ab'},I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P_b DM_{ab'}\in P[/latex] ((_ibid._)).
+Regardless of, or perhaps because of, these restrictions, their model is certainly useful: they define useful methods to define dependency values, by defining a Risk Dependency Value and a Risk Dependency Multiplier, which can be used to calculate the new probability of the dependent risk and which produces the new risk [latex]R^{+a}_b=f(P^{+a}_b,I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P^{+a}_b\in P[/latex] **or** [latex]R^{+a}_b=f(P_b DM_{ab'},I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P_b DM_{ab'}\in P[/latex][^6].
 
-They also provide three methods of compounding multiple dependencies - i.e. scenarios in which [latex]R_p \to R_s[/latex] and [latex]R_q \to R_s[/latex] and [latex]R_r \to R_s[/latex] and [latex]P_s[/latex] needs to be calculated. The three methods, dubbed the _Conservative Method_, the _Optimistic Method_ and the _Weighted Method_ ((_ibid._)) are well-considered and explained, including their advantages and drawbacks.
+[^6]: _ibid._
 
-They also provide clear and concise matrices to apply their method of risk dependency assessment and to give guidance for risk dependency action plans. These matrices and guidelines are potentially very useful, especially when combined with the proposed metrics for analyzing (posterior) risk and response effectiveness ((_ibid._)). Evidently, I will not reproduce them here - you should read the article in IEEE Transactions on Software Engineering.
+They also provide three methods of compounding multiple dependencies - i.e. scenarios in which [latex]R_p \to R_s[/latex] and [latex]R_q \to R_s[/latex] and [latex]R_r \to R_s[/latex] and [latex]P_s[/latex] needs to be calculated. The three methods, dubbed the _Conservative Method_, the _Optimistic Method_ and the _Weighted Method_[^7] are well-considered and explained, including their advantages and drawbacks.
 
+[^7]: _ibid._
 
+They also provide clear and concise matrices to apply their method of risk dependency assessment and to give guidance for risk dependency action plans. These matrices and guidelines are potentially very useful, especially when combined with the proposed metrics for analyzing (posterior) risk and response effectiveness[^8]. Evidently, I will not reproduce them here - you should read the article in IEEE Transactions on Software Engineering.
+
+[^8]: _ibid._
 
 ## Calculating Risk Severity
 
