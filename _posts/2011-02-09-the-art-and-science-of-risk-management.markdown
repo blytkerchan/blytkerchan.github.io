@@ -99,22 +99,23 @@ The Software Engineering Institute specifies five phases to risk management[^2][
   * _Control_ risk response actions
 
 
-As noted in every source you might read on the subject, risk management is a continuous process that starts at the inception of the project and never ends as long as the result of the project is maintained. As ISO 31000 puts it: 
+As noted in every source you might read on the subject, risk management is a continuous process that starts at the inception of the project and never ends as long as the result of the project is maintained. As ISO 31000 puts it[^4]: 
 
-<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles][^4]:
+<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles]:
 
-1. Risk management creates and protects value (...);
-2. Risk management is an integral part of all organizational processes (...);
-3. Risk management is part of decision making (...);
-4. Risk management explicitly addresses uncertainty (...);
-5. Risk management is systematic, structured and timely (...);
-6. Risk management is systematic, structured and timely (...);
-7. Risk management is tailored (...);
-8. Risk management takes human and cultural factors into account (...);
-9. Risk management is transparent and inclusive. (...);
-10. Risk management is dynamic, iterative and responsive to change (...);
-11. Risk management facilitates continual improvement of the organization (...).
-
+<ol>
+<li>Risk management creates and protects value (...);</li>
+<li>Risk management is an integral part of all organizational processes (...);</li>
+<li>Risk management is part of decision making (...);</li>
+<li>Risk management explicitly addresses uncertainty (...);</li>
+<li>Risk management is systematic, structured and timely (...);</li>
+<li>Risk management is systematic, structured and timely (...);</li>
+<li>Risk management is tailored (...);</li>
+<li>Risk management takes human and cultural factors into account (...);</li>
+<li>Risk management is transparent and inclusive. (...);</li>
+<li>Risk management is dynamic, iterative and responsive to change (...);</li>
+<li>Risk management facilitates continual improvement of the organization (...).</li>
+</ol>
 </blockquote>
 
 [^4]: "Risk management -- Principles and guidelines", ISO/FDIS 31000:2009(E)
