@@ -101,7 +101,7 @@ The Software Engineering Institute specifies five phases to risk management[^2][
 
 As noted in every source you might read on the subject, risk management is a continuous process that starts at the inception of the project and never ends as long as the result of the project is maintained. As ISO 31000 puts it: 
 
-<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles]:
+<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles][^4]:
 
 1. Risk management creates and protects value (...);
 2. Risk management is an integral part of all organizational processes (...);
@@ -113,7 +113,7 @@ As noted in every source you might read on the subject, risk management is a con
 8. Risk management takes human and cultural factors into account (...);
 9. Risk management is transparent and inclusive. (...);
 10. Risk management is dynamic, iterative and responsive to change (...);
-11. Risk management facilitates continual improvement of the organization (...)[^4].
+11. Risk management facilitates continual improvement of the organization (...).
 
 </blockquote>
 
