@@ -73,9 +73,15 @@ The severity is a function of the probability and the impact, and can be calcula
 
 
 ![](http://www.computer.org/cms/Computer.org/dl/mags/so/1997/03/figures/figthmnl/s30751.gif)  
-Figure 1: The SEI Risk Management Paradigm ((R Williams _et al_, "Putting Risk Management into Practice", IEEE Software 14(3), 1997, pp. 75-82))
+Figure 1: The SEI Risk Management Paradigm[^1].
 
-The Software Engineering Institute specifies five phases to risk management ((_ibid._)) ((Kwan _et al._, "A Risk Management Methodology for Project Risk Dependencies", IEEE Transactions on Software Engineering 99(preprint), 2010)):
+[^1]: R Williams _et al_, "Putting Risk Management into Practice", IEEE Software 14(3), 1997, pp. 75-82.
+
+The Software Engineering Institute specifies five phases to risk management[^2][^3]:
+
+[^2]: _ibid._
+
+[^3]: Kwan _et al._, "A Risk Management Methodology for Project Risk Dependencies", IEEE Transactions on Software Engineering 99(preprint), 2010
 
 
 
@@ -95,26 +101,23 @@ The Software Engineering Institute specifies five phases to risk management ((_i
 
 As noted in every source you might read on the subject, risk management is a continuous process that starts at the inception of the project and never ends as long as the result of the project is maintained. As ISO 31000 puts it: 
 
-<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles]: 
-> 
-> 
+<blockquote>For risk management to be effective, an organization should at all levels comply with the [following principles]:
 
->   1. Risk management creates and protects value (...);
->   2. Risk management is an integral part of all organizational processes (...);
-> 
+1. Risk management creates and protects value (...);
+2. Risk management is an integral part of all organizational processes (...);
+3. Risk management is part of decision making (...);
+4. Risk management explicitly addresses uncertainty (...);
+5. Risk management is systematic, structured and timely (...);
+6. Risk management is systematic, structured and timely (...);
+7. Risk management is tailored (...);
+8. Risk management takes human and cultural factors into account (...);
+9. Risk management is transparent and inclusive. (...);
+10. Risk management is dynamic, iterative and responsive to change (...);
+11. Risk management facilitates continual improvement of the organization (...)[^4].
 
->   3. Risk management is part of decision making (...);
->   4. Risk management explicitly addresses uncertainty (...);
->   5. Risk management is systematic, structured and timely (...);
->   6. Risk management is systematic, structured and timely (...);
->   7. Risk management is tailored (...);
->   8. Risk management takes human and cultural factors into account (...);
->   9. Risk management is transparent and inclusive. (...);
->   10. Risk management is dynamic, iterative and responsive to change (...);
->   11. Risk management facilitates continual improvement of the organization (...). (("Risk management -- Principles and guidelines", ISO/FDIS 31000:2009(E) ))
-> </blockquote>
+</blockquote>
 
-
+[^4]: "Risk management -- Principles and guidelines", ISO/FDIS 31000:2009(E)
 
 In agile projects, this means that risk management implies every person who works on the project: stakeholders as well as developers -- pigs as well as chickens.
 
@@ -179,19 +182,25 @@ In most risk assessment models I've come accross, risks are synonymous with fail
 
 One issue that has, in my experience, always been overlooked is the possible dependencies between risks. Kwan and Leung address this in their article "A Risk Management Methodology for Project Risk Dependencies", to be published in IEEE Transactions on Software Engineering. 
 
-In their article, they specify a method for risk dependency tracking and risk management that restricts risk dependency to "an effect due to the occurence of a risk and this effect can either increase or decrease the probability of the occurence of other risk(s)" ((_ibid._ note 3)). I.e. risk dependencies are restricted in two ways in this model: if risk [latex]R_a[/latex] is a _Direct Predecessor_ of risk [latex]R_b[/latex], and risk [latex]R_b[/latex] is a tuple of the probability of the risk occuring, [latex]P_b[/latex], and its impact, [latex]I_b[/latex], the occurrence of [latex]R_a[/latex] changes the probability [latex]P_b[/latex], but not the impact [latex]I_b[/latex]. The reasoning for this is the following: "as each risk [is a tuple of] the Probability [latex]P[/latex] and the Impact [latex]I[/latex], for the case of [latex]R_a \to R_b[/latex] if [latex]R_a[/latex] occurs, the risk dependency may have an effect on either [latex]P_b[/latex] or [latex]I_b[/latex] of [latex]R_b[/latex]. At a given time, if the impact estimations are done correctly, the impact of [latex]R_b[/latex] should already have considered the effect of other risks. It will not need to be changed even if we add the risk dependency.". This reasoning presumes that the impact of a risk cannot be compounded by the occurence of the risked event of another risk. Such is, in my opinion. clearly not the case. As a counter-example, the proximity of two components on a PCB may cause the components to overheat or may cause short-circuits. While individually these two risks may cause minor damage, the overheating and the short circuit together may compound and cause a fire. Each of these risks does not increase the probability of the other, but they do increase each other's impact.
+In their article, they specify a method for risk dependency tracking and risk management that restricts risk dependency to "an effect due to the occurence of a risk and this effect can either increase or decrease the probability of the occurence of other risk(s)"[^5]. I.e. risk dependencies are restricted in two ways in this model: if risk [latex]R_a[/latex] is a _Direct Predecessor_ of risk [latex]R_b[/latex], and risk [latex]R_b[/latex] is a tuple of the probability of the risk occuring, [latex]P_b[/latex], and its impact, [latex]I_b[/latex], the occurrence of [latex]R_a[/latex] changes the probability [latex]P_b[/latex], but not the impact [latex]I_b[/latex]. The reasoning for this is the following: "as each risk [is a tuple of] the Probability [latex]P[/latex] and the Impact [latex]I[/latex], for the case of [latex]R_a \to R_b[/latex] if [latex]R_a[/latex] occurs, the risk dependency may have an effect on either [latex]P_b[/latex] or [latex]I_b[/latex] of [latex]R_b[/latex]. At a given time, if the impact estimations are done correctly, the impact of [latex]R_b[/latex] should already have considered the effect of other risks. It will not need to be changed even if we add the risk dependency.". This reasoning presumes that the impact of a risk cannot be compounded by the occurence of the risked event of another risk. Such is, in my opinion. clearly not the case. As a counter-example, the proximity of two components on a PCB may cause the components to overheat or may cause short-circuits. While individually these two risks may cause minor damage, the overheating and the short circuit together may compound and cause a fire. Each of these risks does not increase the probability of the other, but they do increase each other's impact.
+
+[^5]: _ibid._ note 3
 
 The second restriction is in the fact that the [latex]R_a \to R_b[/latex] dependency is only "activated" when [latex]R_a[/latex] occurs. However, by the relation itself, it can be inferred that any increase in the probability [latex]P_a[/latex], [latex]P_b[/latex] must also change, so the dependency relation [latex]R_a \to R_b[/latex] implies a dependency relation [latex]P_a \to P_b[/latex]. The same is not necessarily the case for [latex]I_a \to I_b[/latex] or [latex]P_a \to I_b[/latex], however.
 
 The two restrictions greatly simplify the model and probably made the case studies for their research feasible. Among other things, they have the effect of rendering the directed graph they define as the _Risk Dependency Graph_ _acyclic_: if only the occurence of a risk [latex]R_a[/latex] triggers the dependency, the probability [latex]P_b[/latex] remains independent of probability [latex]P_a[/latex] even if [latex]R_a \to R_b[/latex] and both [latex]P_a[/latex] and [latex]P_b[/latex] can be assessed independently. The same is not true if [latex]P_a \to P_b[/latex], in which case it becomes impossible to asses [latex]P_b[/latex] independently from [latex]P_a[/latex] and in which case the directed graph becomes artifically acyclic in order to be able to assess the probabilities of each risk.
 
-Regardless of, or perhaps because of, these restrictions, their model is certainly useful: they define useful methods to define dependency values, by defining a Risk Dependency Value and a Risk Dependency Multiplier, which can be used to calculate the new probability of the dependent risk and which produces the new risk [latex]R^{+a}_b=f(P^{+a}_b,I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P^{+a}_b\in P[/latex] **or** [latex]R^{+a}_b=f(P_b DM_{ab'},I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P_b DM_{ab'}\in P[/latex] ((_ibid._)).
+Regardless of, or perhaps because of, these restrictions, their model is certainly useful: they define useful methods to define dependency values, by defining a Risk Dependency Value and a Risk Dependency Multiplier, which can be used to calculate the new probability of the dependent risk and which produces the new risk [latex]R^{+a}_b=f(P^{+a}_b,I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P^{+a}_b\in P[/latex] **or** [latex]R^{+a}_b=f(P_b DM_{ab'},I_b)=f(P_b+D_{ab'}I_b)[/latex] where [latex]P_b DM_{ab'}\in P[/latex][^6].
 
-They also provide three methods of compounding multiple dependencies - i.e. scenarios in which [latex]R_p \to R_s[/latex] and [latex]R_q \to R_s[/latex] and [latex]R_r \to R_s[/latex] and [latex]P_s[/latex] needs to be calculated. The three methods, dubbed the _Conservative Method_, the _Optimistic Method_ and the _Weighted Method_ ((_ibid._)) are well-considered and explained, including their advantages and drawbacks.
+[^6]: _ibid._
 
-They also provide clear and concise matrices to apply their method of risk dependency assessment and to give guidance for risk dependency action plans. These matrices and guidelines are potentially very useful, especially when combined with the proposed metrics for analyzing (posterior) risk and response effectiveness ((_ibid._)). Evidently, I will not reproduce them here - you should read the article in IEEE Transactions on Software Engineering.
+They also provide three methods of compounding multiple dependencies - i.e. scenarios in which [latex]R_p \to R_s[/latex] and [latex]R_q \to R_s[/latex] and [latex]R_r \to R_s[/latex] and [latex]P_s[/latex] needs to be calculated. The three methods, dubbed the _Conservative Method_, the _Optimistic Method_ and the _Weighted Method_[^7] are well-considered and explained, including their advantages and drawbacks.
 
+[^7]: _ibid._
 
+They also provide clear and concise matrices to apply their method of risk dependency assessment and to give guidance for risk dependency action plans. These matrices and guidelines are potentially very useful, especially when combined with the proposed metrics for analyzing (posterior) risk and response effectiveness[^8]. Evidently, I will not reproduce them here - you should read the article in IEEE Transactions on Software Engineering.
+
+[^8]: _ibid._
 
 ## Calculating Risk Severity
 
