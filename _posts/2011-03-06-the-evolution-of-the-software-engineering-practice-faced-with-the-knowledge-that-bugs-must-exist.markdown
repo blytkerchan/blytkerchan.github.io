@@ -25,19 +25,19 @@ Though laudable, the quest for bug-free software is doomed to failure. This shou
 ## Software Verification
 
 
-The argument in question goes as follows: proving a mathematical theorem is a social process that can only succeed if the theorem in question is sufficiently general and simple (or interesting) to interest a large number of people. Any real software is inherently neither general (because it has to deal with real-world input) nor simple, so formal proof of the correctness of real software will be extremely complex and will not be able to interest a large enough number of people to be discussed in symposia or during lunch breaks where proofs can be scribbled on napkins. Therefore, the social process breaks down[ˆ1].
+The argument in question goes as follows: proving a mathematical theorem is a social process that can only succeed if the theorem in question is sufficiently general and simple (or interesting) to interest a large number of people. Any real software is inherently neither general (because it has to deal with real-world input) nor simple, so formal proof of the correctness of real software will be extremely complex and will not be able to interest a large enough number of people to be discussed in symposia or during lunch breaks where proofs can be scribbled on napkins. Therefore, the social process breaks down[^1].
 
-[ˆ1]: "Social Processes and Proofs of Theorems and Programs", Richard A. DeMillo, Richard J. Lipton and Alan J. Perlis; POPL '77 Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages
+[^1]: "Social Processes and Proofs of Theorems and Programs", Richard A. DeMillo, Richard J. Lipton and Alan J. Perlis; POPL '77 Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages
 
-This point is perhaps best illustrated with an anecdote offered by its original authors[ˆ2]:
+This point is perhaps best illustrated with an anecdote offered by its original authors[^2]:
 
 <blockquote>The fast pattern matching algorithm of Knuth, Morris and Pratt was first implemented and proved by Jim Morris as part of Berkeley's text editing system. Subsequently, a system programmer who did not understand the new algorithm, pulled it from the text editor and replaced it with a much slower pattern matching routine. Presumably the system programmer "understood" the new algorithm.</blockquote>
 
-[ˆ2]: _ibid._
+[^2]: _ibid._
 
-They conclude, from this anecdote, that "give[n] a choice between a very good algorithm with a proof of correctness, but which may be hard to understand, and a straightforward, unproven algorithm which an implementor believes he understands, the complex algorithm invariably loses"[ˆ3] and they are probably right.
+They conclude, from this anecdote, that "give[n] a choice between a very good algorithm with a proof of correctness, but which may be hard to understand, and a straightforward, unproven algorithm which an implementor believes he understands, the complex algorithm invariably loses"[^3] and they are probably right.
 
-[ˆ3]: _ibid._
+[^3]: _ibid._
 
 It is perhaps heartening to know that, back in the late seventies, they already knew that the perfect solution could not exist but, as noted by Bertrand Meyer, "practitioners and researchers have largely ignored those who said verification would never work, and instead patiently built verification methods and tools that are increasingly useful and scalable"[^4]. He is, of course, right: static verification tools are getting better but, as he points out, "proofs are great when they succeed; but they can fail  (after all, we are dealing with undecidable theories), and they can only prove what has been explicitly specified. In practice we need both [proofs and tests]."[^5].
 
