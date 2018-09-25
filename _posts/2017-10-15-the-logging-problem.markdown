@@ -26,19 +26,11 @@ The trade-off is obvious: keeping debug messages around and storing them to disk
 ## Getting the messages
 
 
-In a recent ((Publication of this post is significantly delayed to allow the implementation in question to be patented before this hits the web.)) implementation to solve this problem in Windows Embedded Compact, I redirected `OEMWriteDebugString` to a driver by creating an I/O Control in the OAL to which function pointers within the (kernel-mode) driver are given (one to set the pointer, one to read the current value). Hooking in then really becomes quite easy:
+In a recent[^1] implementation to solve this problem in Windows Embedded Compact, I redirected `OEMWriteDebugString` to a driver by creating an I/O Control in the OAL to which function pointers within the (kernel-mode) driver are given (one to set the pointer, one to read the current value). Hooking in then really becomes quite easy:
 
+[^1]: Publication of this post is significantly delayed to allow the implementation in question to be patented before this hits the web.
     
-    // pseudo-code: do not expect this to compile
-    PFN_WriteDebugString previous_function_pointer__;
-    
-    void hookFunctionPointers()
-    {
-        if (!KernelIoControl(get_functions, 0, 0, &previous_function_pointer__, sizeof(previous_function_pointer__), 0)) throw ...;
-        PFN_WriteDebugString the_hook = writeDebugString;
-        if (!KernelIoControl(set_functions, &the_hook, sizeof(the_hook), 0, 0, 0)) throw ...;
-    }
-
+{% gist 9702620403f11773fe3b1200ce785eee kernel-hooks.cpp %}
 
 and all the `writeDebugString` hook function needs to do is queue the message. We make sure that for debug messages, the OEM function also gets called at some point -- either directly in the hook or elsewhere -- so the solution appears transparent.
 
@@ -105,59 +97,13 @@ The driver further created a named event, using Windows' `CreateEvent` function,
 The interface of the abstract data type looks a bit like this:
 
     
-    template < typename T >
-    class DebugMessageQueue
-    {
-    public :
-    	typedef implementation_defined Buckets;
-    
-    	DebugMessageQueue() = default;
-    	~DebugMessageQueue() = default;
-    
-    	DebugMessageQueue(DebugMessageQueue const&) = delete;
-    	DebugMessageQueue& operator=(DebugMessageQueue const &) = delete;
-    
-    	void push(T const &v;);
-    	Buckets popAll();
-    	void release(Buckets &buckets;);
-    };
-
+{% gist 9702620403f11773fe3b1200ce785eee debugmessagequeue.hpp %}
 
 
 The "intrusive" part in the descriptive list above is fairly clear: when you pop all of the buckets, you get an implementation-defined _thing_ called `Buckets`, which you go through to get all the messages and release afterwards. If we assume that `Buckets` has an STL-like interface, the consuming thread would look something like this:
 
     
-    Event event_;
-    DebugMessageQueue< ImplementationDefinedMessage > implementation_defined_queue_;
-    File dumpable_in_memory_file_;
-    
-    void consumingThread()
-    {
-    	while (!done_)
-    	{
-    		bool const should_dump(event_.wait(configured_timeout__));
-    		Buckets buckets(implementation_defined_queue_.popAll());
-    		for (auto bucket : buckets)
-    		{
-    			dumpable_in_memory_file_.add(*bucket);
-    			if (bucket->source_ == debug_message_destined_for_oem_debug_write__)
-    			{
-    				hookedOutputFunction(bucket->string_);
-    			}
-    			else
-    			{ /* no need to output this */ }
-    		}
-    		if (should_dump)
-    		{
-    			dump();
-    		}
-    		else
-    		{ /* not dumping yet */ }
-    	}
-    }
-
-
-
+{% gist 9702620403f11773fe3b1200ce785eee consumingthread.cpp %}
 
 
 ### Pushing into the queue
@@ -180,21 +126,7 @@ If no free buckets are available, a bucket can be popped from the queue. In orde
 This means `push` looks something like this:
 
     
-    void push(T const &v;)
-    {
-    	Bucket *bucket(allocateBucket());
-    	ScopedReference< Buckets > current_head_tail(acquireCurrentHeadTail());
-    	if (bucket)
-    	{
-    		*bucket = v;
-    		current_head_tail->enqueue(bucket);
-    	}
-    	else
-    	{ /* no buckets left, and for some reason cannot pop oldest */
-    		ErrorPolicy::badAlloc();
-    	}
-    	// auto-release head/tail pair
-    }
+{% gist 9702620403f11773fe3b1200ce785eee push.cpp %}
 
 in which `allocateBucket` is coded according to the selected method.
 
