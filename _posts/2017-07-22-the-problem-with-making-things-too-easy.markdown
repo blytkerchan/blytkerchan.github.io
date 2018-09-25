@@ -34,14 +34,18 @@ Another part of the problem is that software development looks a lot like firmwa
 
 But these tools can also hide lack of competence: someone who would be able to develop software without fancy tools and frameworks will still be able to do so with them, but someone who would not be able to do the job without the help of the new tools is now _also_ able. This can be a good thing, but it is also pernicious.
 
-For example: many compilers now perform static analysis on the code they compile and will tell the developer that "N bytes may be read from A, which is only M bytes in size". Bugs get caught like this that would otherwise have to be tested for specifically, which is good ((However, that doesn't mean you shouldn't still test your corner cases!)). What the compiler won't tell you, however, is that your shared state is shared state -- that your server will only be able to serve a single client at a time. An experienced and competent developer will take a look at your code and say "hmmm.. that looks odd" and, even if he can't put his finger on the bug right away, the code won't "smell" right. Compilers have no sense of smell -- and apparently neither do less-than-competent developers.
+For example: many compilers now perform static analysis on the code they compile and will tell the developer that "N bytes may be read from A, which is only M bytes in size". Bugs get caught like this that would otherwise have to be tested for specifically, which is good[^2]. What the compiler won't tell you, however, is that your shared state is shared state -- that your server will only be able to serve a single client at a time. An experienced and competent developer will take a look at your code and say "hmmm.. that looks odd" and, even if he can't put his finger on the bug right away, the code won't "smell" right. Compilers have no sense of smell -- and apparently neither do less-than-competent developers.
 
-In the code I'm thinking of, there were two f{r,l}agrant examples of unintentional shared state: one was in a server application that was, in deed, only able to serve a single client at a time (if two clients queried it simultaneously, it would mix up its responses); another was a static index variable in a function shared by **_eight_** threads[^2]
+[^2]: However, that doesn't mean you shouldn't still test your corner cases!
 
-[^2]:
+In the code I'm thinking of, there were two f{r,l}agrant examples of unintentional shared state: one was in a server application that was, in deed, only able to serve a single client at a time (if two clients queried it simultaneously, it would mix up its responses); another was a static index variable in a function shared by **_eight_** threads[^3].
+
+[^3]:
     Of course, part of the problem here was unnecessary multi-threading.
     <blockquote class="reddit-card" data-card-created="1537640697"><a href="https://www.reddit.com/r/ProgrammerHumor/comments/63kko1/unnecessary_multi_threading/">Unnecessary multi threading.</a> from <a href="http://www.reddit.com/r/ProgrammerHumor">r/ProgrammerHumor</a></blockquote><script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 
 Embedded devices are getting better CPUs, more memory, hard disks, etc. They are being connected to the Internet and are being called "IoT devices". Everyone and their grandmother can develop apps for phones, connected devices, and any type of widget you can think of. This is fun, and fun is good. However, that also means that people who claim to have experience with embedded devices are becoming more common, and device failures will, _on average_ become less critical. A security breach in a router running Linux in a home somewhere will generally not be a huge problem. Stopping production in your local cookie factory can be a nuisance, but is hardly critical. Turning the lights off on an entire country is a different matter.
 
-The skill-set required to develop for that home-based router is very close to the skill-set to develop for IEDs ((Intelligent Electronic Devices, not Improvised Explosive Devices)) but sometimes, very close doesn't cut it.
+The skill-set required to develop for that home-based router is very close to the skill-set to develop for IEDs[^4] but sometimes, very close doesn't cut it.
+
+[^4]: Intelligent Electronic Devices, not Improvised Explosive Devices.
