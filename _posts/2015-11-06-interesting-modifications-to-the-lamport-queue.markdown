@@ -30,11 +30,11 @@ While researching lock-free queue algorithms, I came across a few articles that 
 </ul>
 </div>
 
-
-[/dropshadowbox]
 The article I will explain part is "Correct and Efficient Bounded FIFO Queues" by Nhat Minh Le _et al._, which you can find [here](http://dx.doi.org/10.1109/SBAC-PAD.2013.8). I have set up a [Git repository on GitHub](https://github.com/blytkerchan/Lamport) with the C11 code. In order to build it, you need at least GCC version 4.9. In order to test it properly, you need something like Thread Sanitizer, which is included in GCC and used by the provided Makefile -- but the article itself contains ample proof that the code will work.
 
-Let's first take a look at the Lamport queue, as originally presented by Lamport in "Proving the Correctness of Multiprocess Programs" (available [here](http://dx.doi.org/10.1109/TSE.1977.229904)) as an example of a lock-free queue. It wasn't ostensibly designed to be particularly efficient but rather as a nice, simple, easy-to-analyse example of a multi-process program ((This is another reason why I prefer the article I'm explaining rather than the other candidate which caught my attention: the tone is much friendlier)).
+Let's first take a look at the Lamport queue, as originally presented by Lamport in "Proving the Correctness of Multiprocess Programs" (available [here](http://dx.doi.org/10.1109/TSE.1977.229904)) as an example of a lock-free queue. It wasn't ostensibly designed to be particularly efficient but rather as a nice, simple, easy-to-analyse example of a multi-process program[^1]
+
+[^1]: This is another reason why I prefer the article I'm explaining rather than the other candidate which caught my attention: the tone is much friendlier.
 
 The code for Lamport's queue, translated to C11, looks like this:
 
@@ -50,7 +50,9 @@ The code for Lamport's queue, translated to C11, looks like this:
 This defines the structure of the queue itself. The queue is a lock-free single-producer/single-consumer (SPSC) single-in/single-out (SISO) FIFO queue.
 This is where you say "What does that mean?".
 
-Queues are classified along various categories, according to the guarantees they give you. Among various others (some of which I will discuss below), there is the question of "how many threads can push something into the queue at the same time?", rephrased as _single-producer_, or _multi-producer_ because generally, if you can push with two threads at the same time, you can push with three threads at the same time, etc. ((Note that this is not always the case!)).
+Queues are classified along various categories, according to the guarantees they give you. Among various others (some of which I will discuss below), there is the question of "how many threads can push something into the queue at the same time?", rephrased as _single-producer_, or _multi-producer_ because generally, if you can push with two threads at the same time, you can push with three threads at the same time, etc.[^2].
+
+[^2]: Note that this is not always the case!
 
 Analogously, you can ask "with how many threads can I pop stuff from the queue at the same time?", rephrased as _single-consumer_ or _multi-consumer_. With these two questions answered, we now have four classes of queue algorithms: SPSC, MPSC, SPMC and MPMC. If you go out looking for queue algorithms, you'll find the SPSC kind is the most ubiquitous.
 
@@ -68,7 +70,9 @@ Lock-freedom:
     From any point in a program’s execution, some thread is guaranteed to complete its operation. Lock-freedom ensures the absence of livelock, but not starvation.
 Obstruction-freedom
     Every thread is guaranteed to complete its operation provided it eventually executes in isolation. In other words, if at some point in a program’s execution we suspend all threads except one, then this thread’s operation will terminate.
-Wait-freedom is the Holy Grail of non-blocking algorithms: if you can find a non-trivial wait-free algorithm that suits a general need, you will have earned the respect of many a programmer. Lamport's algorithm is actually wait-free, but it has the caveat of failing when the queue is full/empty (which is OK in many cases, but in some cases, it means the producer has to loop back and wait for there to be space available, so the algorithm really becomes lock-free rather than wait-free) ((So close, yet so far away....)).
+Wait-freedom is the Holy Grail of non-blocking algorithms: if you can find a non-trivial wait-free algorithm that suits a general need, you will have earned the respect of many a programmer. Lamport's algorithm is actually wait-free, but it has the caveat of failing when the queue is full/empty (which is OK in many cases, but in some cases, it means the producer has to loop back and wait for there to be space available, so the algorithm really becomes lock-free rather than wait-free)[^3].
+
+[^3]: So close, yet so far away...
 
 Let's get back to the code. Initializing the structure is straight-forward:
 
