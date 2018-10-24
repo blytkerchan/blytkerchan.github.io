@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-10-18 13:35:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/10/radical-refactoring-have-the-compiler-to-some-of-the-reviewing/
+permalink: /blog/2014/10/radical-refactoring-have-the-compiler-to-some-of-the-reviewing/
 slug: radical-refactoring-have-the-compiler-to-some-of-the-reviewing
 title: 'Radical Refactoring: Have the compiler to (some of) the reviewing'
 wordpress_id: 3346

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-21 16:23:14+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/the-manchester-baby-is-63-years-old-today/
+permalink: /blog/2011/06/the-manchester-baby-is-63-years-old-today/
 slug: the-manchester-baby-is-63-years-old-today
 title: The Manchester Baby is 63 years old today
 wordpress_id: 1533

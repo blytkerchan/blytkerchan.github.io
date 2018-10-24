@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-12-05 02:21:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/
+permalink: /blog/2012/12/how-to-design-a-struct-for-storage-or-networking/
 slug: how-to-design-a-struct-for-storage-or-networking
 title: How to design a struct for storage or communicating
 wordpress_id: 1966

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-02-17 03:53:07+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/02/a-brilliant-idea/
+permalink: /blog/2011/02/a-brilliant-idea/
 slug: a-brilliant-idea
 title: A "brilliant" idea (?)
 wordpress_id: 1210

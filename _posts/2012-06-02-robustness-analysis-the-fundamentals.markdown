@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-06-02 13:45:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/06/robustness-analysis-the-fundamentals/
+permalink: /blog/2012/06/robustness-analysis-the-fundamentals/
 slug: robustness-analysis-the-fundamentals
 title: 'Robustness analysis: the fundamentals'
 wordpress_id: 1840

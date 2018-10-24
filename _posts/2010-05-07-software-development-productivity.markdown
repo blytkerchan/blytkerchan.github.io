@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-07 23:02:05+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/software-development-productivity/
+permalink: /blog/2010/05/software-development-productivity/
 slug: software-development-productivity
 title: Software development productivity
 wordpress_id: 621

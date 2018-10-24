@@ -8,7 +8,7 @@ excerpt: 'functional combines
 
   sheerly fun coding'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/funky-functional-programming-and-looping/
+permalink: /blog/2009/07/funky-functional-programming-and-looping/
 slug: funky-functional-programming-and-looping
 title: Funky, functional programming and looping
 wordpress_id: 103

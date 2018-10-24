@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-15 12:32:23+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/mail-down-and-back-up-again/
+permalink: /blog/2009/08/mail-down-and-back-up-again/
 slug: mail-down-and-back-up-again
 title: Mail down - and back up again
 wordpress_id: 165

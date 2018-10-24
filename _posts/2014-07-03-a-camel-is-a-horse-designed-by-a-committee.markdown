@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-07-03 03:59:21+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/07/a-camel-is-a-horse-designed-by-a-committee/
+permalink: /blog/2014/07/a-camel-is-a-horse-designed-by-a-committee/
 slug: a-camel-is-a-horse-designed-by-a-committee
 title: '"A camel is a horse designed by a committee"'
 wordpress_id: 3165

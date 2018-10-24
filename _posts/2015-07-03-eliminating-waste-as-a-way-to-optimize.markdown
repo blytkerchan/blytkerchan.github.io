@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-07-03 12:40:18+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/07/eliminating-waste-as-a-way-to-optimize/
+permalink: /blog/2015/07/eliminating-waste-as-a-way-to-optimize/
 slug: eliminating-waste-as-a-way-to-optimize
 title: Eliminating waste as a way to optimize
 wordpress_id: 3511

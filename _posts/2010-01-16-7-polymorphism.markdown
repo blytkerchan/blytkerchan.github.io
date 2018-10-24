@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-01-16 19:57:58+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/01/7-polymorphism/
+permalink: /blog/2010/01/7-polymorphism/
 slug: 7-polymorphism
 title: 7- Polymorphism
 wordpress_id: 365

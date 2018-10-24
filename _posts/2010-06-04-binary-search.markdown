@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-04 22:54:47+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/binary-search/
+permalink: /blog/2010/06/binary-search/
 slug: binary-search
 title: Binary Search
 wordpress_id: 730

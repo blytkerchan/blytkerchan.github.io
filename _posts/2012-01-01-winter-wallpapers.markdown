@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-01-01 03:50:40+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/12/winter-wallpapers/
+permalink: /blog/2011/12/winter-wallpapers/
 slug: winter-wallpapers
 title: Winter wallpapers
 wordpress_id: 1771

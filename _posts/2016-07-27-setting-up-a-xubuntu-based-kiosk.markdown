@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-07-27 11:16:52+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/07/setting-up-a-xubuntu-based-kiosk/
+permalink: /blog/2016/07/setting-up-a-xubuntu-based-kiosk/
 slug: setting-up-a-xubuntu-based-kiosk
 title: Setting up a Xubuntu-based kiosk
 wordpress_id: 4060

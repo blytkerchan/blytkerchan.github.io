@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-02-15 20:34:42+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/02/why-i-didnt-buy-a-new-ipad-today/
+permalink: /blog/2015/02/why-i-didnt-buy-a-new-ipad-today/
 slug: why-i-didnt-buy-a-new-ipad-today
 title: Why I didn't buy a new iPad today
 wordpress_id: 3435

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-03-25 18:16:34+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/03/robustness-analysis-finding-faults/
+permalink: /blog/2012/03/robustness-analysis-finding-faults/
 slug: robustness-analysis-finding-faults
 title: 'Robustness analysis: finding fault(s)'
 wordpress_id: 1823

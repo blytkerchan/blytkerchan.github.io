@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-07-21 02:49:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/07/on-the-importance-of-coverage-profiling/
+permalink: /blog/2010/07/on-the-importance-of-coverage-profiling/
 slug: on-the-importance-of-coverage-profiling
 title: On the Importance of Coverage Profiling
 wordpress_id: 844

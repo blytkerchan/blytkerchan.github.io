@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-12-16 22:45:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/12/3-objects-references-and-pointers/
+permalink: /blog/2009/12/3-objects-references-and-pointers/
 slug: 3-objects-references-and-pointers
 title: 5- Objects, References and Pointers
 wordpress_id: 326

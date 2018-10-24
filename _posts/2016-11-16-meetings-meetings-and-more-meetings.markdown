@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-11-16 12:08:33+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/11/meetings-meetings-and-more-meetings/
+permalink: /blog/2016/11/meetings-meetings-and-more-meetings/
 slug: meetings-meetings-and-more-meetings
 title: Meetings, meetings, and more meetings
 wordpress_id: 4126

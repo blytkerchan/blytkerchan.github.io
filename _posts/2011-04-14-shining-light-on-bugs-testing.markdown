@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-04-14 01:16:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/04/shining-light-on-bugs-testing/
+permalink: /blog/2011/04/shining-light-on-bugs-testing/
 slug: shining-light-on-bugs-testing
 title: 'Shining light on bugs: testing'
 wordpress_id: 1357

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-10-22 01:38:53+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/10/improving-the-brainf-interpreter/
+permalink: /blog/2014/10/improving-the-brainf-interpreter/
 slug: improving-the-brainf-interpreter
 title: Improving the BrainF interpreter
 wordpress_id: 3338

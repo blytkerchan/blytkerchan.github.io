@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-24 22:28:46+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/out-of-touch-techies-marketing-retoric-and-nonsense-you-do-the-math/
+permalink: /blog/2009/09/out-of-touch-techies-marketing-retoric-and-nonsense-you-do-the-math/
 slug: out-of-touch-techies-marketing-retoric-and-nonsense-you-do-the-math
 title: Out-of-touch techies, marketing retoric, and nonsense. You do the math.
 wordpress_id: 213

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-01-03 00:25:38+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/01/the-crain-sistrunk-vulnerabilities/
+permalink: /blog/2014/01/the-crain-sistrunk-vulnerabilities/
 slug: the-crain-sistrunk-vulnerabilities
 title: The Crain-Sistrunk vulnerabilities
 wordpress_id: 2427

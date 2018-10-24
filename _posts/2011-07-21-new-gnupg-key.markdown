@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-21 02:36:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/new-gnupg-key/
+permalink: /blog/2011/07/new-gnupg-key/
 slug: new-gnupg-key
 title: New GnuPG key
 wordpress_id: 1573

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-02-16 21:40:09+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/02/use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases/
+permalink: /blog/2010/02/use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases/
 slug: use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases
 title: 'Use-Cases Part 2: What Use-Cases Are For (The history, present and future
   of use-cases)'

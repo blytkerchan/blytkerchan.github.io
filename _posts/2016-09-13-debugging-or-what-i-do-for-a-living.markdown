@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-09-13 01:20:13+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/09/debugging-or-what-i-do-for-a-living/
+permalink: /blog/2016/09/debugging-or-what-i-do-for-a-living/
 slug: debugging-or-what-i-do-for-a-living
 title: 'Debugging — or: what I do for a living'
 wordpress_id: 4100

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-08-05 23:12:10+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/08/cis-unexpected-coupling/
+permalink: /blog/2015/08/cis-unexpected-coupling/
 slug: cis-unexpected-coupling
 title: 'CIS: Unexpected Coupling'
 wordpress_id: 3266

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-10-24 20:36:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/10/radical-refactoring-breaking-changes/
+permalink: /blog/2014/10/radical-refactoring-breaking-changes/
 slug: radical-refactoring-breaking-changes
 title: 'Radical Refactoring: Breaking Changes'
 wordpress_id: 3349

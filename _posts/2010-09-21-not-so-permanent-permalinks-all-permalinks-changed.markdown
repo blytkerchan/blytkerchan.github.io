@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-09-21 22:26:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/09/not-so-permanent-permalinks-all-permalinks-changed/
+permalink: /blog/2010/09/not-so-permanent-permalinks-all-permalinks-changed/
 slug: not-so-permanent-permalinks-all-permalinks-changed
 title: 'Updated: Not-so-permanent permalinks (all permalinks changed)'
 wordpress_id: 948

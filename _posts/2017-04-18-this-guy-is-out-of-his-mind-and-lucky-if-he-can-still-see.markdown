@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-04-18 20:17:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/04/this-guy-is-out-of-his-mind-and-lucky-if-he-can-still-see/
+permalink: /blog/2017/04/this-guy-is-out-of-his-mind-and-lucky-if-he-can-still-see/
 slug: this-guy-is-out-of-his-mind-and-lucky-if-he-can-still-see
 title: This guy is out of his mind (and lucky if he can still see)
 wordpress_id: 4169

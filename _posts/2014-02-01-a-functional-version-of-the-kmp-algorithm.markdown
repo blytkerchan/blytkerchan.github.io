@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-02-01 21:09:52+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/02/a-functional-version-of-the-kmp-algorithm/
+permalink: /blog/2014/02/a-functional-version-of-the-kmp-algorithm/
 slug: a-functional-version-of-the-kmp-algorithm
 title: A functional version of the KMP algorithm
 wordpress_id: 2527

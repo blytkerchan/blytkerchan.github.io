@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-09-12 01:48:09+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/09/the-equifax-data-breach-what-we-know-what-you-can-do-whats-next/
+permalink: /blog/2017/09/the-equifax-data-breach-what-we-know-what-you-can-do-whats-next/
 slug: the-equifax-data-breach-what-we-know-what-you-can-do-whats-next
 title: 'The Equifax data breach: what we know, what you can do, what''s next'
 wordpress_id: 4252

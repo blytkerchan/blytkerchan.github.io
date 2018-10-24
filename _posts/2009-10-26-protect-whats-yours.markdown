@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-10-26 03:33:18+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/10/protect-whats-yours/
+permalink: /blog/2009/10/protect-whats-yours/
 slug: protect-whats-yours
 title: Protect what's yours
 wordpress_id: 322

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-17 00:31:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/cpp4theselftaught-refactoring-exceptions/
+permalink: /blog/2010/10/cpp4theselftaught-refactoring-exceptions/
 slug: cpp4theselftaught-refactoring-exceptions
 title: Refactoring Exceptions
 wordpress_id: 982

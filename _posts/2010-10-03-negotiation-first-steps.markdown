@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-03 03:46:00+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/negotiation-first-steps/
+permalink: /blog/2010/10/negotiation-first-steps/
 slug: negotiation-first-steps
 title: 'Negotiation: first steps'
 wordpress_id: 970

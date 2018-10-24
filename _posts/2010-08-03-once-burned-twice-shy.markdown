@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-08-03 02:08:40+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/08/once-burned-twice-shy/
+permalink: /blog/2010/08/once-burned-twice-shy/
 slug: once-burned-twice-shy
 title: Once burned, twice shy
 wordpress_id: 863

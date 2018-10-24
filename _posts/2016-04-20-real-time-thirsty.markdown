@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-04-20 02:45:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/04/real-time-thirsty/
+permalink: /blog/2016/04/real-time-thirsty/
 slug: real-time-thirsty
 title: Real-time thirsty
 wordpress_id: 3843

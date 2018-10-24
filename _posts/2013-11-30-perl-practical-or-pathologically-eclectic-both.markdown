@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-11-30 20:11:40+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/11/perl-practical-or-pathologically-eclectic-both/
+permalink: /blog/2013/11/perl-practical-or-pathologically-eclectic-both/
 slug: perl-practical-or-pathologically-eclectic-both
 title: 'Perl: Practical or Pathologically Eclectic? Both?'
 wordpress_id: 2415

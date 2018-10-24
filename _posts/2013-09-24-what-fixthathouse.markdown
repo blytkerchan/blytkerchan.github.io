@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-24 00:36:51+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/what-fixthathouse/
+permalink: /blog/2013/09/what-fixthathouse/
 slug: what-fixthathouse
 title: 'Why #fixthathouse?'
 wordpress_id: 2382

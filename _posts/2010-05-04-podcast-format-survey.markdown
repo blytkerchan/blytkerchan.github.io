@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-04 02:05:30+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/podcast-format-survey/
+permalink: /blog/2010/05/podcast-format-survey/
 slug: podcast-format-survey
 title: Podcast format survey
 wordpress_id: 599

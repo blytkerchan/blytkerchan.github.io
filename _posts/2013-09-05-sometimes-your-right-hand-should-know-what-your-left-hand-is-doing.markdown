@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-05 02:34:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/sometimes-your-right-hand-should-know-what-your-left-hand-is-doing/
+permalink: /blog/2013/09/sometimes-your-right-hand-should-know-what-your-left-hand-is-doing/
 slug: sometimes-your-right-hand-should-know-what-your-left-hand-is-doing
 title: Sometimes, your right hand should know what your left hand is doing
 wordpress_id: 2349

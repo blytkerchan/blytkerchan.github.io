@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-08-27 21:00:01+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/08/on-the-importance-of-clear-technical-specifications/
+permalink: /blog/2012/08/on-the-importance-of-clear-technical-specifications/
 slug: on-the-importance-of-clear-technical-specifications
 title: On the importance of clear technical specifications
 wordpress_id: 1906

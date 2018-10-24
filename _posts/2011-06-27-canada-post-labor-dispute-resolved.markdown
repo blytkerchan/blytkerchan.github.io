@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-27 00:19:15+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/canada-post-labor-dispute-resolved/
+permalink: /blog/2011/06/canada-post-labor-dispute-resolved/
 slug: canada-post-labor-dispute-resolved
 title: Canada Post Labor Dispute -- Resolved?
 wordpress_id: 1549

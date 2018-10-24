@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-04-16 12:00:54+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/04/socks-5-step-2-exchanging-a-token/
+permalink: /blog/2010/04/socks-5-step-2-exchanging-a-token/
 slug: socks-5-step-2-exchanging-a-token
 title: 'SOCKS 5 Step 2: exchanging a token'
 wordpress_id: 534

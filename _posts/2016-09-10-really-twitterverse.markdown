@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-09-10 22:17:27+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/09/really-twitterverse/
+permalink: /blog/2016/09/really-twitterverse/
 slug: really-twitterverse
 title: Really, Twitterverse?
 wordpress_id: 4118

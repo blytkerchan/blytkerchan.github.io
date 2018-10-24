@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-02-01 17:00:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/02/use-cases-part-1-introduction-ingredients/
+permalink: /blog/2010/02/use-cases-part-1-introduction-ingredients/
 slug: use-cases-part-1-introduction-ingredients
 title: 'Use-Cases Part 1: Introduction & Ingredients'
 wordpress_id: 383

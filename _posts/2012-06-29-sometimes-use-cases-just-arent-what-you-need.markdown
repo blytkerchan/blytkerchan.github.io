@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-06-29 03:50:47+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/06/sometimes-use-cases-just-arent-what-you-need/
+permalink: /blog/2012/06/sometimes-use-cases-just-arent-what-you-need/
 slug: sometimes-use-cases-just-arent-what-you-need
 title: Sometimes, use-cases just aren't what you need
 wordpress_id: 1878

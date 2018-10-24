@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-25 22:06:09+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/installing-git-on-centos-5-2/
+permalink: /blog/2009/09/installing-git-on-centos-5-2/
 slug: installing-git-on-centos-5-2
 title: Installing Git on CentOS 5.2
 wordpress_id: 216

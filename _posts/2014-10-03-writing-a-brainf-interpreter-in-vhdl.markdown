@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-10-03 20:00:42+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/10/writing-a-brainf-interpreter-in-vhdl/
+permalink: /blog/2014/10/writing-a-brainf-interpreter-in-vhdl/
 slug: writing-a-brainf-interpreter-in-vhdl
 title: Writing a BrainF interpreter ... in VHDL
 wordpress_id: 3303

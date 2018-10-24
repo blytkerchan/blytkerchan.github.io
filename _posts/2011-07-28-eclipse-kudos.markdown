@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-28 16:56:30+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/eclipse-kudos/
+permalink: /blog/2011/07/eclipse-kudos/
 slug: eclipse-kudos
 title: 'Eclipse: kudos'
 wordpress_id: 1597

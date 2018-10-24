@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-11-08 00:25:20+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/11/radix-sort/
+permalink: /blog/2011/11/radix-sort/
 slug: radix-sort
 title: Radix Sort
 wordpress_id: 1714

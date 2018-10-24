@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-20 22:58:08+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/run-time-composed-predicates-and-code-generation/
+permalink: /blog/2013/09/run-time-composed-predicates-and-code-generation/
 slug: run-time-composed-predicates-and-code-generation
 title: Run-time composed predicates and Code generation
 wordpress_id: 2367

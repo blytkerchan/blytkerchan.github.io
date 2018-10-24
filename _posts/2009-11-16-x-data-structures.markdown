@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-16 16:09:13+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/x-data-structures/
+permalink: /blog/2009/11/x-data-structures/
 slug: x-data-structures
 title: 3- Data Structures
 wordpress_id: 340

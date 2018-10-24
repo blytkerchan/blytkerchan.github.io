@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-01-19 01:53:31+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/01/confusing-the-compiler/
+permalink: /blog/2010/01/confusing-the-compiler/
 slug: confusing-the-compiler
 title: Confusing the compiler
 wordpress_id: 454

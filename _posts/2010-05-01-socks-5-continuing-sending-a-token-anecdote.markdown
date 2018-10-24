@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-01 12:00:31+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/socks-5-continuing-sending-a-token-anecdote/
+permalink: /blog/2010/05/socks-5-continuing-sending-a-token-anecdote/
 slug: socks-5-continuing-sending-a-token-anecdote
 title: 'Socks 5: Continuing Sending a Token - Anecdote'
 wordpress_id: 584

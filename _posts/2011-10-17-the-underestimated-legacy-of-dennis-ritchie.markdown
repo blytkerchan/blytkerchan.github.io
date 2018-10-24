@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-10-17 00:50:21+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/10/the-underestimated-legacy-of-dennis-ritchie/
+permalink: /blog/2011/10/the-underestimated-legacy-of-dennis-ritchie/
 slug: the-underestimated-legacy-of-dennis-ritchie
 title: The underestimated legacy of Dennis Ritchie
 wordpress_id: 1708

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-07-16 10:13:14+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/07/three-ideas-you-should-steal-from-continuous-integration/
+permalink: /blog/2015/07/three-ideas-you-should-steal-from-continuous-integration/
 slug: three-ideas-you-should-steal-from-continuous-integration
 title: Three ideas you should steal from Continuous Integration
 wordpress_id: 3674

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-12-03 04:12:04+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/12/event-driven-software-step-1-select/
+permalink: /blog/2010/12/event-driven-software-step-1-select/
 slug: event-driven-software-step-1-select
 title: 'Event-driven software, step 1: select'
 wordpress_id: 1137

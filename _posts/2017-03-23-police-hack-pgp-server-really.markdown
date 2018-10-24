@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-03-23 22:19:45+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/03/police-hack-pgp-server-really/
+permalink: /blog/2017/03/police-hack-pgp-server-really/
 slug: police-hack-pgp-server-really
 title: '"Police hack PGP server" -- really?'
 wordpress_id: 4162

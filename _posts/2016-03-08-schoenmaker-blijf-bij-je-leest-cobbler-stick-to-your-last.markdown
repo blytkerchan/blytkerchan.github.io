@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-03-08 09:38:49+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/03/schoenmaker-blijf-bij-je-leest-cobbler-stick-to-your-last/
+permalink: /blog/2016/03/schoenmaker-blijf-bij-je-leest-cobbler-stick-to-your-last/
 slug: schoenmaker-blijf-bij-je-leest-cobbler-stick-to-your-last
 title: Schoenmaker, blijf bij je leest (Cobbler, stick to your last)
 wordpress_id: 3441

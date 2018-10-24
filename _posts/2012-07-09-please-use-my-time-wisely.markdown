@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-07-09 21:43:18+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/07/please-use-my-time-wisely/
+permalink: /blog/2012/07/please-use-my-time-wisely/
 slug: please-use-my-time-wisely
 title: Please use my time wisely
 wordpress_id: 1889

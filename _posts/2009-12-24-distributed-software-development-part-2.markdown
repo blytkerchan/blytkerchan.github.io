@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-12-24 02:20:04+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/12/distributed-software-development-part-2/
+permalink: /blog/2009/12/distributed-software-development-part-2/
 slug: distributed-software-development-part-2
 title: 'Distributed Software Development Part 2: Management Challenges'
 wordpress_id: 434

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-01-01 19:29:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/01/3-resource-allocation-and-raii/
+permalink: /blog/2010/01/3-resource-allocation-and-raii/
 slug: 3-resource-allocation-and-raii
 title: 6- Resource Allocation and RAII
 wordpress_id: 303

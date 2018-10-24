@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-08-06 02:09:49+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/08/tell-me-twice/
+permalink: /blog/2010/08/tell-me-twice/
 slug: tell-me-twice
 title: Tell me twice
 wordpress_id: 865

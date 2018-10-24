@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-02-09 02:33:49+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/02/the-art-and-science-of-risk-management/
+permalink: /blog/2011/02/the-art-and-science-of-risk-management/
 slug: the-art-and-science-of-risk-management
 title: The Art and Science of Risk Management
 wordpress_id: 1206

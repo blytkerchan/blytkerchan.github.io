@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-22 16:37:01+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized-genome/
+permalink: /blog/2010/05/creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized-genome/
 slug: creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized-genome
 title: Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome
 wordpress_id: 648

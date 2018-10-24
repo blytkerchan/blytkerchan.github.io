@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-12-24 01:48:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/12/distributed-software-development-the-safe-boom/
+permalink: /blog/2009/12/distributed-software-development-the-safe-boom/
 slug: distributed-software-development-the-safe-boom
 title: 'Distributed Software Development Part 1: The Safe Boom'
 wordpress_id: 431

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-10-26 15:22:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/10/badly-defined-semantics/
+permalink: /blog/2009/10/badly-defined-semantics/
 slug: badly-defined-semantics
 title: Badly defined semantics
 wordpress_id: 324

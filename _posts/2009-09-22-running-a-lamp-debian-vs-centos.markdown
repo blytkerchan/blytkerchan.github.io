@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-22 02:35:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/running-a-lamp-debian-vs-centos/
+permalink: /blog/2009/09/running-a-lamp-debian-vs-centos/
 slug: running-a-lamp-debian-vs-centos
 title: 'Running a LAMP: Debian vs. CentOS'
 wordpress_id: 197

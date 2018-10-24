@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-08-01 23:31:26+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/08/socks-5-credentials-on-windows/
+permalink: /blog/2010/08/socks-5-credentials-on-windows/
 slug: socks-5-credentials-on-windows
 title: 'Socks 5: Credentials on Windows'
 wordpress_id: 847

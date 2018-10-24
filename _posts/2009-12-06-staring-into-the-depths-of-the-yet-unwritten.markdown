@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-12-06 20:58:59+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/12/staring-into-the-depths-of-the-yet-unwritten/
+permalink: /blog/2009/12/staring-into-the-depths-of-the-yet-unwritten/
 slug: staring-into-the-depths-of-the-yet-unwritten
 title: Staring into the depths of the yet unwritten
 wordpress_id: 422

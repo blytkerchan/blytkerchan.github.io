@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-08-02 17:04:20+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/08/plain-and-clear-cases-of-dont-do-that-fix-your-code-in-stead/
+permalink: /blog/2012/08/plain-and-clear-cases-of-dont-do-that-fix-your-code-in-stead/
 slug: plain-and-clear-cases-of-dont-do-that-fix-your-code-in-stead
 title: Plain and clear cases of "don't do that - fix your code in stead"
 wordpress_id: 1913

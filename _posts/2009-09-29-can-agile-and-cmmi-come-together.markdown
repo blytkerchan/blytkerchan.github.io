@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-29 02:51:02+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/can-agile-and-cmmi-come-together/
+permalink: /blog/2009/09/can-agile-and-cmmi-come-together/
 slug: can-agile-and-cmmi-come-together
 title: Can Agile and CMMI Come Together?
 wordpress_id: 227

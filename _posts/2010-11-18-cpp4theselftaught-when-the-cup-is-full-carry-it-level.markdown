@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-11-18 05:33:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/11/cpp4theselftaught-when-the-cup-is-full-carry-it-level/
+permalink: /blog/2010/11/cpp4theselftaught-when-the-cup-is-full-carry-it-level/
 slug: cpp4theselftaught-when-the-cup-is-full-carry-it-level
 title: When the cup is full, carry it level
 wordpress_id: 1131

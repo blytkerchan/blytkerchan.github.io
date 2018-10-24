@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-03-28 00:54:19+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/03/checked-output-iterator/
+permalink: /blog/2016/03/checked-output-iterator/
 slug: checked-output-iterator
 title: Checked output iterator
 wordpress_id: 3806

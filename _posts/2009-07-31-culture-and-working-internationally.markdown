@@ -8,7 +8,7 @@ excerpt: 'When autumn turns hence
 
   spring awaits summer'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/culture-and-working-internationally/
+permalink: /blog/2009/07/culture-and-working-internationally/
 slug: culture-and-working-internationally
 title: Culture and working internationally
 wordpress_id: 110

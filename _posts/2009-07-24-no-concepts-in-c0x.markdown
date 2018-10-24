@@ -8,7 +8,7 @@ excerpt: 'Sadness of winter
 
   no concept survived'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/no-concepts-in-c0x/
+permalink: /blog/2009/07/no-concepts-in-c0x/
 slug: no-concepts-in-c0x
 title: No Concepts in C++0x
 wordpress_id: 54

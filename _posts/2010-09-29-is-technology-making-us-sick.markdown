@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-09-29 01:11:59+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/09/is-technology-making-us-sick/
+permalink: /blog/2010/09/is-technology-making-us-sick/
 slug: is-technology-making-us-sick
 title: Is technology making us sick?
 wordpress_id: 952

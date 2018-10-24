@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-21 23:22:16+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/maintenance/
+permalink: /blog/2010/10/maintenance/
 slug: maintenance
 title: Maintenance
 wordpress_id: 1057

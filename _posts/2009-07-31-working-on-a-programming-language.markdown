@@ -8,7 +8,7 @@ excerpt: 'Like a warm spring breeze
 
   as language to dusk'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/working-on-a-programming-language/
+permalink: /blog/2009/07/working-on-a-programming-language/
 slug: working-on-a-programming-language
 title: Working on a programming language
 wordpress_id: 117

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-08-14 17:54:53+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/08/cpp4theselftaught-com-temporarily-down/
+permalink: /blog/2017/08/cpp4theselftaught-com-temporarily-down/
 slug: cpp4theselftaught-com-temporarily-down
 title: cpp4theselftaught.com temporarily down
 wordpress_id: 4216

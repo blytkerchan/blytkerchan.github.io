@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-03-27 17:36:58+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/03/git-server-down-for-maintenance/
+permalink: /blog/2010/03/git-server-down-for-maintenance/
 slug: git-server-down-for-maintenance
 title: Git server down for maintenance
 wordpress_id: 523

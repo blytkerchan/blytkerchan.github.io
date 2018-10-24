@@ -8,7 +8,7 @@ excerpt: 'flabbergasted I
 
   perhaps just autumn'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/msofficeus-fixoutlook-whats-the-big-deal/
+permalink: /blog/2009/07/msofficeus-fixoutlook-whats-the-big-deal/
 slug: msofficeus-fixoutlook-whats-the-big-deal
 title: '@msofficeus @fixoutlook - what''s the big deal?'
 wordpress_id: 44

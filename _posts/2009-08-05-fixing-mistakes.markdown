@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-05 04:32:49+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/fixing-mistakes/
+permalink: /blog/2009/08/fixing-mistakes/
 slug: fixing-mistakes
 title: Fixing mistakes
 wordpress_id: 116

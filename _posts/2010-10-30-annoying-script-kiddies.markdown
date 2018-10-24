@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-30 19:54:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/annoying-script-kiddies/
+permalink: /blog/2010/10/annoying-script-kiddies/
 slug: annoying-script-kiddies
 title: Annoying Script Kiddies
 wordpress_id: 1128

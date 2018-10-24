@@ -8,7 +8,7 @@ excerpt: 'a glass of water
 
   blizzards there are rare'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/critical-sections-of-what/
+permalink: /blog/2009/07/critical-sections-of-what/
 slug: critical-sections-of-what
 title: Critical sections - of what?
 wordpress_id: 94

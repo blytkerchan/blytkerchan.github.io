@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-07-02 00:52:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/07/expanding-the-factory/
+permalink: /blog/2010/07/expanding-the-factory/
 slug: expanding-the-factory
 title: 'Socks 5: Expanding the factory'
 wordpress_id: 810

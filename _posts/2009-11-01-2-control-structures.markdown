@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-01 14:40:52+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/2-control-structures/
+permalink: /blog/2009/11/2-control-structures/
 slug: 2-control-structures
 title: 2-Control Structures
 wordpress_id: 294

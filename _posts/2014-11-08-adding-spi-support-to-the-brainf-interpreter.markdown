@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-11-08 20:42:38+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/11/adding-spi-support-to-the-brainf-interpreter/
+permalink: /blog/2014/11/adding-spi-support-to-the-brainf-interpreter/
 slug: adding-spi-support-to-the-brainf-interpreter
 title: Adding SPI support to the BrainF interpreter
 wordpress_id: 3359

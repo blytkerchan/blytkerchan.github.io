@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-18 20:33:53+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/naming-conventions-and-name-mangling/
+permalink: /blog/2009/08/naming-conventions-and-name-mangling/
 slug: naming-conventions-and-name-mangling
 title: Naming conventions and name mangling
 wordpress_id: 171

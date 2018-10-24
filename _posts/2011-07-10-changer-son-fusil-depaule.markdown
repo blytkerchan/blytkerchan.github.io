@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-10 16:01:23+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/changer-son-fusil-depaule/
+permalink: /blog/2011/07/changer-son-fusil-depaule/
 slug: changer-son-fusil-depaule
 title: '"Changer son fusil d''épaule"'
 wordpress_id: 1565

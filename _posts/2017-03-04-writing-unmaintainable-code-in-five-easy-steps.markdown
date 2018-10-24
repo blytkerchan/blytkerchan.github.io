@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-03-04 20:26:12+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/03/writing-unmaintainable-code-in-five-easy-steps/
+permalink: /blog/2017/03/writing-unmaintainable-code-in-five-easy-steps/
 slug: writing-unmaintainable-code-in-five-easy-steps
 title: Writing unmaintainable code in five easy steps
 wordpress_id: 4154

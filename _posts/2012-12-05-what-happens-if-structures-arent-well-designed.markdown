@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-12-05 22:17:10+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/12/what-happens-if-structures-arent-well-designed/
+permalink: /blog/2012/12/what-happens-if-structures-arent-well-designed/
 slug: what-happens-if-structures-arent-well-designed
 title: What happens if structures aren't well-designed
 wordpress_id: 1979

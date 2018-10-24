@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-05-24 20:48:03+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/05/globe-and-mail-canada-lacks-law-that-defines-protects-trade-secrets/
+permalink: /blog/2015/05/globe-and-mail-canada-lacks-law-that-defines-protects-trade-secrets/
 slug: globe-and-mail-canada-lacks-law-that-defines-protects-trade-secrets
 title: 'Globe and Mail: Canada lacks law that defines, protects trade secrets'
 wordpress_id: 3507

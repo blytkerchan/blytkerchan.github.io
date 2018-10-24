@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-21 02:47:08+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/shtrict-a-very-restricted-shell-for-nix/
+permalink: /blog/2011/07/shtrict-a-very-restricted-shell-for-nix/
 slug: shtrict-a-very-restricted-shell-for-nix
 title: 'shtrict: a very restricted shell for *nix'
 wordpress_id: 1571

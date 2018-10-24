@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-23 16:59:57+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/a-new-theme/
+permalink: /blog/2009/09/a-new-theme/
 slug: a-new-theme
 title: A new theme
 wordpress_id: 211

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-08-11 20:30:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/08/looking-for-bugs-in-several-wrong-places/
+permalink: /blog/2014/08/looking-for-bugs-in-several-wrong-places/
 slug: looking-for-bugs-in-several-wrong-places
 title: Looking for bugs (in several wrong places)
 wordpress_id: 3254

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-27 21:11:38+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/hardware-designers-please-think-of-us/
+permalink: /blog/2011/06/hardware-designers-please-think-of-us/
 slug: hardware-designers-please-think-of-us
 title: Hardware designers, please, think of us!
 wordpress_id: 1551

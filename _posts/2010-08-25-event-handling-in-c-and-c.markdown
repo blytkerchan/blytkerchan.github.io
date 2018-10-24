@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-08-25 00:26:50+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/08/event-handling-in-c-and-c/
+permalink: /blog/2010/08/event-handling-in-c-and-c/
 slug: event-handling-in-c-and-c
 title: Event handling in C and C++
 wordpress_id: 887

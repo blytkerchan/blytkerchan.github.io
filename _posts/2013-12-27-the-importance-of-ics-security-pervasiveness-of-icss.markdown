@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-12-27 01:12:13+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/
+permalink: /blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/
 slug: the-importance-of-ics-security-pervasiveness-of-icss
 title: 'The importance of ICS security: pervasiveness of ICSs'
 wordpress_id: 2453

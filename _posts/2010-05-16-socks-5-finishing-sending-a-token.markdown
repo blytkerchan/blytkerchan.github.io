@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-16 12:00:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/socks-5-finishing-sending-a-token/
+permalink: /blog/2010/05/socks-5-finishing-sending-a-token/
 slug: socks-5-finishing-sending-a-token
 title: 'Socks 5: Finishing sending a token'
 wordpress_id: 625

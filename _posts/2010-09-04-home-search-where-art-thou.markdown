@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-09-04 00:51:43+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/09/home-search-where-art-thou/
+permalink: /blog/2010/09/home-search-where-art-thou/
 slug: home-search-where-art-thou
 title: Home Search, Where Art Thou?
 wordpress_id: 892

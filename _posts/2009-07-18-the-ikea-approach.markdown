@@ -8,7 +8,7 @@ excerpt: 'spring cleaning brings it
 
   at least much leaner'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/the-ikea-approach/
+permalink: /blog/2009/07/the-ikea-approach/
 slug: the-ikea-approach
 title: The IKEA Approach
 wordpress_id: 14

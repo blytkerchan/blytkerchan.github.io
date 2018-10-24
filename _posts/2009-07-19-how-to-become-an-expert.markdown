@@ -8,7 +8,7 @@ excerpt: 'Many summers spent
 
   expertise attained?'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/how-to-become-an-expert/
+permalink: /blog/2009/07/how-to-become-an-expert/
 slug: how-to-become-an-expert
 title: How to become an expert
 wordpress_id: 36

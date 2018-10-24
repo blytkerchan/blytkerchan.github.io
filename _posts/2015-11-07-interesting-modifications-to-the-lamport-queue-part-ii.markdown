@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-11-07 20:10:47+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue-part-ii/
+permalink: /blog/2015/11/interesting-modifications-to-the-lamport-queue-part-ii/
 slug: interesting-modifications-to-the-lamport-queue-part-ii
 title: Interesting modifications to the Lamport queue, part II
 wordpress_id: 3763

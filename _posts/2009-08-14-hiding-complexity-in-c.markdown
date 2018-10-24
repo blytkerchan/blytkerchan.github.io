@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-14 14:39:55+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/hiding-complexity-in-c/
+permalink: /blog/2009/08/hiding-complexity-in-c/
 slug: hiding-complexity-in-c
 title: Hiding Complexity in C++
 wordpress_id: 150

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-18 15:33:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/using-four-letter-words-in-code/
+permalink: /blog/2009/08/using-four-letter-words-in-code/
 slug: using-four-letter-words-in-code
 title: Using Four-Letter Words In Code
 wordpress_id: 169

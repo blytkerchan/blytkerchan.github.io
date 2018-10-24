@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-22 20:08:52+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/the-importance-of-patterns/
+permalink: /blog/2009/08/the-importance-of-patterns/
 slug: the-importance-of-patterns
 title: The Importance of Patterns
 wordpress_id: 173

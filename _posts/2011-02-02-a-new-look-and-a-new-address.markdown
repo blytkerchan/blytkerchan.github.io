@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-02-02 01:32:55+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/02/a-new-look-and-a-new-address/
+permalink: /blog/2011/02/a-new-look-and-a-new-address/
 slug: a-new-look-and-a-new-address
 title: A new look and a new address
 wordpress_id: 1152

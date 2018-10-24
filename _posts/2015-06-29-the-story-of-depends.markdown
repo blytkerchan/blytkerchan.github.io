@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-06-29 03:01:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/06/the-story-of-depends/
+permalink: /blog/2015/06/the-story-of-depends/
 slug: the-story-of-depends
 title: The story of "Depends"
 wordpress_id: 3647

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-09-29 22:37:45+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/09/harper-government-reintroduces-toughened-online-copyright-law/
+permalink: /blog/2011/09/harper-government-reintroduces-toughened-online-copyright-law/
 slug: harper-government-reintroduces-toughened-online-copyright-law
 title: Harper government reintroduces toughened online copyright law
 wordpress_id: 1692

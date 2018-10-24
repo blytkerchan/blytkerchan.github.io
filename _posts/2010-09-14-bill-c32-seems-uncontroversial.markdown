@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-09-14 00:55:12+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/09/bill-c32-seems-uncontroversial/
+permalink: /blog/2010/09/bill-c32-seems-uncontroversial/
 slug: bill-c32-seems-uncontroversial
 title: 'Bill #c32 seems to be getting less controversial'
 wordpress_id: 912

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-11 02:00:37+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/the-quest-for-bug-free-software/
+permalink: /blog/2009/11/the-quest-for-bug-free-software/
 slug: the-quest-for-bug-free-software
 title: The Quest For Bug-Free Software
 wordpress_id: 370

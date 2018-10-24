@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-01-16 04:42:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/01/error-handling-in-c/
+permalink: /blog/2010/01/error-handling-in-c/
 slug: error-handling-in-c
 title: Error handling in C
 wordpress_id: 441

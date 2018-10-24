@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-05-08 00:35:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/05/starting-python-99-bottles-of-beer/
+permalink: /blog/2011/05/starting-python-99-bottles-of-beer/
 slug: starting-python-99-bottles-of-beer
 title: Starting Python - 99 bottles of beer
 wordpress_id: 1384

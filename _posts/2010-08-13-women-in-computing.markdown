@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-08-13 02:18:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/08/women-in-computing/
+permalink: /blog/2010/08/women-in-computing/
 slug: women-in-computing
 title: Women in computing
 wordpress_id: 872

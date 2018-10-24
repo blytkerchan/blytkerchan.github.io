@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-05-20 02:47:12+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/
+permalink: /blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/
 slug: using-ranges-and-functional-programming-in-c-cpp4theselftaught
 title: Using Ranges and Functional Programming in C++
 wordpress_id: 1399

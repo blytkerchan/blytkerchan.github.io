@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-03-01 14:59:43+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/03/what-the-industry-should-do-with-the-upcoming-aegis-release/
+permalink: /blog/2014/03/what-the-industry-should-do-with-the-upcoming-aegis-release/
 slug: what-the-industry-should-do-with-the-upcoming-aegis-release
 title: What the industry should do with the upcoming Aegis release
 wordpress_id: 3074

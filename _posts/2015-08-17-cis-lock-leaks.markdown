@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-08-17 02:03:34+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/08/cis-lock-leaks/
+permalink: /blog/2015/08/cis-lock-leaks/
 slug: cis-lock-leaks
 title: 'CIS: Lock Leaks'
 wordpress_id: 3241

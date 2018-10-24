@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-25 16:59:04+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/is-tpm-bad-for-open-source-c32/
+permalink: /blog/2010/06/is-tpm-bad-for-open-source-c32/
 slug: is-tpm-bad-for-open-source-c32
 title: Is TPM bad for Open Source? (#c32)
 wordpress_id: 795

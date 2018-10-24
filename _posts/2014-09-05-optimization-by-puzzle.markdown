@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-09-05 02:17:43+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/09/optimization-by-puzzle/
+permalink: /blog/2014/09/optimization-by-puzzle/
 slug: optimization-by-puzzle
 title: Optimization by puzzle
 wordpress_id: 3274

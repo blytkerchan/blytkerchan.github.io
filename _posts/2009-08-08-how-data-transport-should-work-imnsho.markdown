@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-08 18:59:29+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/how-data-transport-should-work-imnsho/
+permalink: /blog/2009/08/how-data-transport-should-work-imnsho/
 slug: how-data-transport-should-work-imnsho
 title: How Data Transport Should Work IMNSHO
 wordpress_id: 146

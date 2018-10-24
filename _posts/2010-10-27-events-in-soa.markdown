@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-27 02:48:23+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/events-in-soa/
+permalink: /blog/2010/10/events-in-soa/
 slug: events-in-soa
 title: Events in SOA
 wordpress_id: 1103

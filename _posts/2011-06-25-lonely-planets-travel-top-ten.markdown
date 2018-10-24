@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-25 01:50:21+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/lonely-planets-travel-top-ten/
+permalink: /blog/2011/06/lonely-planets-travel-top-ten/
 slug: lonely-planets-travel-top-ten
 title: Lonely Planet's Travel Top Ten
 wordpress_id: 1547

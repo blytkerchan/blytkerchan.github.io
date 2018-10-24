@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-05-06 09:30:25+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/05/to-those-of-you-who-dont-speak-french-and-follow-me-on-twitter/
+permalink: /blog/2017/05/to-those-of-you-who-dont-speak-french-and-follow-me-on-twitter/
 slug: to-those-of-you-who-dont-speak-french-and-follow-me-on-twitter
 title: To those of you who don't speak French and follow me on Twitter
 wordpress_id: 4174

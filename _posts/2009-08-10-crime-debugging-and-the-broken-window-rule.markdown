@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-10 01:42:40+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/crime-debugging-and-the-broken-window-rule/
+permalink: /blog/2009/08/crime-debugging-and-the-broken-window-rule/
 slug: crime-debugging-and-the-broken-window-rule
 title: Crime, Debugging and the Broken Window Rule
 wordpress_id: 147

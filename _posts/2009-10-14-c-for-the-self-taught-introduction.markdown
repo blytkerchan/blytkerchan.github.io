@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-10-14 18:53:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/10/c-for-the-self-taught-introduction/
+permalink: /blog/2009/10/c-for-the-self-taught-introduction/
 slug: c-for-the-self-taught-introduction
 title: 'C++ for the self-taught: Introduction'
 wordpress_id: 268

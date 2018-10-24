@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-05-25 02:48:23+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/05/technocracy-ii/
+permalink: /blog/2016/05/technocracy-ii/
 slug: technocracy-ii
 title: Technocracy II
 wordpress_id: 3893

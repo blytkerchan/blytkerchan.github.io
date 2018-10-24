@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-10-01 19:11:10+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/10/the-importance-of-meaningful-work/
+permalink: /blog/2009/10/the-importance-of-meaningful-work/
 slug: the-importance-of-meaningful-work
 title: The importance of meaningful work
 wordpress_id: 109

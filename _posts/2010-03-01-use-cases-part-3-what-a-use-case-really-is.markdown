@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-03-01 21:41:25+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/03/use-cases-part-3-what-a-use-case-really-is/
+permalink: /blog/2010/03/use-cases-part-3-what-a-use-case-really-is/
 slug: use-cases-part-3-what-a-use-case-really-is
 title: 'Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases'
 wordpress_id: 391

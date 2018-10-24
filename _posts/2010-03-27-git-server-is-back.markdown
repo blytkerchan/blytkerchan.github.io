@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-03-27 18:07:35+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/03/git-server-is-back/
+permalink: /blog/2010/03/git-server-is-back/
 slug: git-server-is-back
 title: Git server is back
 wordpress_id: 525

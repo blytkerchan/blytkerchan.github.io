@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-04-02 19:16:09+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/04/shutting-down-servers/
+permalink: /blog/2016/04/shutting-down-servers/
 slug: shutting-down-servers
 title: Shutting down servers
 wordpress_id: 3810

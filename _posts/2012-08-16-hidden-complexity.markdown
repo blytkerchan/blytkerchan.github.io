@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-08-16 01:57:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/?p=1916
+permalink: /?p=1916
 published: false
 slug: hidden-complexity
 title: Hidden complexity

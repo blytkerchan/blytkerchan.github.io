@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-04 21:09:09+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/functional-programming-at-compile-time-cpp4theselftaught/
+permalink: /blog/2011/06/functional-programming-at-compile-time-cpp4theselftaught/
 slug: functional-programming-at-compile-time-cpp4theselftaught
 title: Functional Programming at Compile-Time
 wordpress_id: 1503

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-04 00:06:43+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/speaking-different-languages/
+permalink: /blog/2010/05/speaking-different-languages/
 slug: speaking-different-languages
 title: Speaking different languages
 wordpress_id: 590

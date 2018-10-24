@@ -8,7 +8,7 @@ excerpt: 'recursive locking:
 
   to summer''s loud "no"'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/recursive-locking-is-evil-or-is-it/
+permalink: /blog/2009/07/recursive-locking-is-evil-or-is-it/
 slug: recursive-locking-is-evil-or-is-it
 title: Recursive Locking Is Evil, or is it?
 wordpress_id: 57

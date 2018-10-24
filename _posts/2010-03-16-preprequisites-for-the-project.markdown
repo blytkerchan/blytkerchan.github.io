@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/03/preprequisites-for-the-project/
+permalink: /blog/2010/03/preprequisites-for-the-project/
 slug: preprequisites-for-the-project
 title: Preprequisites for the project
 wordpress_id: 481

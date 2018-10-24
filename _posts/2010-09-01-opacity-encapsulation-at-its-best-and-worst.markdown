@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-09-01 12:00:20+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/09/opacity-encapsulation-at-its-best-and-worst/
+permalink: /blog/2010/09/opacity-encapsulation-at-its-best-and-worst/
 slug: opacity-encapsulation-at-its-best-and-worst
 title: 'Opacity: Encapsulation at its best (and worst)'
 wordpress_id: 891

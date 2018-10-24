@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-14 02:15:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/common-nonsense-the-charter-of-quebec-values/
+permalink: /blog/2013/09/common-nonsense-the-charter-of-quebec-values/
 slug: common-nonsense-the-charter-of-quebec-values
 title: 'Common nonsense: the charter of Quebec Values'
 wordpress_id: 2358

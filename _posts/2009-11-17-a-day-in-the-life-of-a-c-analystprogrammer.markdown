@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-17 00:25:08+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/a-day-in-the-life-of-a-c-analystprogrammer/
+permalink: /blog/2009/11/a-day-in-the-life-of-a-c-analystprogrammer/
 slug: a-day-in-the-life-of-a-c-analystprogrammer
 title: A Day In The Life Of A C++ Analyst/Programmer
 wordpress_id: 375

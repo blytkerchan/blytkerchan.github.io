@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-26 23:08:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/quantum-teleportation-achieved-over-16-km/
+permalink: /blog/2010/05/quantum-teleportation-achieved-over-16-km/
 slug: quantum-teleportation-achieved-over-16-km
 title: Quantum teleportation achieved over 16 km
 wordpress_id: 661

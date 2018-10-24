@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-10-18 16:28:47+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/10/quick-summary-synchronization-in-next-generation-telecom-networks/
+permalink: /blog/2012/10/quick-summary-synchronization-in-next-generation-telecom-networks/
 slug: quick-summary-synchronization-in-next-generation-telecom-networks
 title: 'Quick Summary: Synchronization in Next-Generation Telecom Networks'
 wordpress_id: 1932

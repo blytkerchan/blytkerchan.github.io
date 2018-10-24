@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-05-05 02:44:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/05/why-i-recommend-brainf-and-what-i-recommend-it-for/
+permalink: /blog/2011/05/why-i-recommend-brainf-and-what-i-recommend-it-for/
 slug: why-i-recommend-brainf-and-what-i-recommend-it-for
 title: Why I Recommend BrainF--- (and what I recommend it for)
 wordpress_id: 1368

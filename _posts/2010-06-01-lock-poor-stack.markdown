@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-01 23:26:58+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/lock-poor-stack/
+permalink: /blog/2010/06/lock-poor-stack/
 slug: lock-poor-stack
 title: Lock-Poor Stack
 wordpress_id: 713

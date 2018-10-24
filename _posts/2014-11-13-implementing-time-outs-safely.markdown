@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-11-13 11:19:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/11/implementing-time-outs-safely/
+permalink: /blog/2014/11/implementing-time-outs-safely/
 slug: implementing-time-outs-safely
 title: Implementing time-outs (safely)
 wordpress_id: 3423

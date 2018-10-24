@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-05-24 17:16:21+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/05/albion-college-decides-to-scrap-computer-science-and-journalism-majors/
+permalink: /blog/2010/05/albion-college-decides-to-scrap-computer-science-and-journalism-majors/
 slug: albion-college-decides-to-scrap-computer-science-and-journalism-majors
 title: Albion College decides to scrap Computer Science and Journalism majors
 wordpress_id: 657

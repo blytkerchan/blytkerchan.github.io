@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-03-08 13:44:47+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/03/geek-mythology-women-and-the-start-of-software-engineering/
+permalink: /blog/2011/03/geek-mythology-women-and-the-start-of-software-engineering/
 slug: geek-mythology-women-and-the-start-of-software-engineering
 title: 'Geek Mythology: Women and the Start of Software Engineering'
 wordpress_id: 1280

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-25 02:06:13+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/git-server-off-line/
+permalink: /blog/2010/06/git-server-off-line/
 slug: git-server-off-line
 title: Git server off-line
 wordpress_id: 793

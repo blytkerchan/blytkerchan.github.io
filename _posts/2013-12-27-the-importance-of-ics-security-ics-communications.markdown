@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-12-27 01:40:12+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/12/the-importance-of-ics-security-ics-communications/
+permalink: /blog/2013/12/the-importance-of-ics-security-ics-communications/
 slug: the-importance-of-ics-security-ics-communications
 title: 'The importance of ICS security: ICS communications'
 wordpress_id: 2456

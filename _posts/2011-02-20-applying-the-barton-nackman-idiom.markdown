@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-02-20 01:18:43+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/02/applying-the-barton-nackman-idiom/
+permalink: /blog/2011/02/applying-the-barton-nackman-idiom/
 slug: applying-the-barton-nackman-idiom
 title: Applying the Barton-Nackman idiom
 wordpress_id: 1264

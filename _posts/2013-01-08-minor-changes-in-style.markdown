@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-01-08 23:20:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/01/minor-changes-in-style/
+permalink: /blog/2013/01/minor-changes-in-style/
 slug: minor-changes-in-style
 title: Minor changes in style
 wordpress_id: 2010

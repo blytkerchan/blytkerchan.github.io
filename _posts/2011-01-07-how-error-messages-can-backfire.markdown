@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-01-07 00:46:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/01/how-error-messages-can-backfire/
+permalink: /blog/2011/01/how-error-messages-can-backfire/
 slug: how-error-messages-can-backfire
 title: How error messages can backfire
 wordpress_id: 1144

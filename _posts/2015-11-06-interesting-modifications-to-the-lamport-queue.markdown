@@ -199,4 +199,4 @@ On line 45, we read from a _foreign_ variable, so we will need some kind of barr
 The wording is important here: unless we tell it otherwise, the compiler/CPU is allowed to re-order anything we do in a single thread as long as from the thread itself, everything still _seems_ to have occurred in the same order. The _visible order_ from any other thread may well be different. Memory barriers and atomic operations affect the way things are seen from outside the thread. So when I say that the thread "cannot be seen to read from the shared state before reading the foreign variable" that means that the visible order of those operations, as seen from outside the thread, should be such that the read from the foreign atomic variable _happens-before_ the read from the shared data.
   
 
-[_Continued..._](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue-part-ii/)
+[_Continued..._](/blog/2015/11/interesting-modifications-to-the-lamport-queue-part-ii/)

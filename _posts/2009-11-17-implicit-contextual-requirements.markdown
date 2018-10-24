@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-17 20:59:37+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/implicit-contextual-requirements/
+permalink: /blog/2009/11/implicit-contextual-requirements/
 slug: implicit-contextual-requirements
 title: Implicit, Contextual Requirements
 wordpress_id: 379

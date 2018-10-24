@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-07 22:24:50+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/google-releases-new-dialect-of-basic/
+permalink: /blog/2009/08/google-releases-new-dialect-of-basic/
 slug: google-releases-new-dialect-of-basic
 title: Google releases new dialect of Basic
 wordpress_id: 144

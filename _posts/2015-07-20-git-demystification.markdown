@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-07-20 10:16:10+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/07/git-demystification/
+permalink: /blog/2015/07/git-demystification/
 slug: git-demystification
 title: Git demystification
 wordpress_id: 3662

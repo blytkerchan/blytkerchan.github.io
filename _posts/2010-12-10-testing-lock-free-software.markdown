@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-12-10 03:53:05+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/12/testing-lock-free-software/
+permalink: /blog/2010/12/testing-lock-free-software/
 slug: testing-lock-free-software
 title: Testing Lock-Free Software
 wordpress_id: 1142

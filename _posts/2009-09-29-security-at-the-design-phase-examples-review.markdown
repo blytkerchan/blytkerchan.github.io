@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-29 18:02:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/security-at-the-design-phase-examples-review/
+permalink: /blog/2009/09/security-at-the-design-phase-examples-review/
 slug: security-at-the-design-phase-examples-review
 title: Security at the Design Phase - Examples & Review
 wordpress_id: 240

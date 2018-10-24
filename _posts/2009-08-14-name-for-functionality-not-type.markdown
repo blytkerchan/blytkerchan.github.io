@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-14 16:12:15+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/name-for-functionality-not-type/
+permalink: /blog/2009/08/name-for-functionality-not-type/
 slug: name-for-functionality-not-type
 title: Name For Functionality, Not Type
 wordpress_id: 158

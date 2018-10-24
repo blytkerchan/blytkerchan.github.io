@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-22 03:28:31+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/you-according-to-google-analytics/
+permalink: /blog/2011/07/you-according-to-google-analytics/
 slug: you-according-to-google-analytics
 title: You, according to Google Analytics
 wordpress_id: 1590

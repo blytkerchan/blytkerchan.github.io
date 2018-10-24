@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2016-04-15 16:52:52+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2016/04/setting-up-cygwin-for-x-forwarding/
+permalink: /blog/2016/04/setting-up-cygwin-for-x-forwarding/
 slug: setting-up-cygwin-for-x-forwarding
 title: Setting up Cygwin for X forwarding
 wordpress_id: 3816

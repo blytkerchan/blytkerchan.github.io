@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-07-19 21:30:30+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/07/when-hardware-foils-software-and-then-helps-it-out/
+permalink: /blog/2012/07/when-hardware-foils-software-and-then-helps-it-out/
 slug: when-hardware-foils-software-and-then-helps-it-out
 title: When hardware foils software -- and then helps it out!
 wordpress_id: 1895

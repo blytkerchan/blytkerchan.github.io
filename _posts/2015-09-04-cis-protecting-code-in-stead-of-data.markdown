@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-09-04 01:08:33+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/09/cis-protecting-code-in-stead-of-data/
+permalink: /blog/2015/09/cis-protecting-code-in-stead-of-data/
 slug: cis-protecting-code-in-stead-of-data
 title: 'CIS: "Protecting" code in stead of data'
 wordpress_id: 3236

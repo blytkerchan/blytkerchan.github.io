@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-11-08 23:35:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/11/exceptions-and-embedded-devices/
+permalink: /blog/2012/11/exceptions-and-embedded-devices/
 slug: exceptions-and-embedded-devices
 title: Exceptions and Embedded Devices
 wordpress_id: 1938

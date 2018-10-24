@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-10-15 17:14:46+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/10/the-logging-problem/
+permalink: /blog/2017/10/the-logging-problem/
 slug: the-logging-problem
 title: The Logging "problem"
 wordpress_id: 3457

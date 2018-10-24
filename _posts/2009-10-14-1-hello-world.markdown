@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-10-14 19:17:37+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/10/1-hello-world/
+permalink: /blog/2009/10/1-hello-world/
 slug: 1-hello-world
 title: 1- "Hello, world!"
 wordpress_id: 273

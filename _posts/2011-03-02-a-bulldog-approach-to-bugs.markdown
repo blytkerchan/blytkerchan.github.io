@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-03-02 17:47:03+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/03/a-bulldog-approach-to-bugs/
+permalink: /blog/2011/03/a-bulldog-approach-to-bugs/
 slug: a-bulldog-approach-to-bugs
 title: A bulldog approach to bugs
 wordpress_id: 1276

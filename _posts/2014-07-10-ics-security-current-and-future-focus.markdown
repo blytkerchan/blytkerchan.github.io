@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-07-10 20:16:48+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/07/ics-security-current-and-future-focus/
+permalink: /blog/2014/07/ics-security-current-and-future-focus/
 slug: ics-security-current-and-future-focus
 title: 'ICS Security: Current and Future Focus'
 wordpress_id: 2576

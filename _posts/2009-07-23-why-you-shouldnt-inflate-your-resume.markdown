@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-07-23 00:39:11+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/why-you-shouldnt-inflate-your-resume/
+permalink: /blog/2009/07/why-you-shouldnt-inflate-your-resume/
 slug: why-you-shouldnt-inflate-your-resume
 title: Why you shouldn't inflate your resume
 wordpress_id: 47

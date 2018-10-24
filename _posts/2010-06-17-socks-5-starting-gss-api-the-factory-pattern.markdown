@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-17 03:42:22+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/socks-5-starting-gss-api-the-factory-pattern/
+permalink: /blog/2010/06/socks-5-starting-gss-api-the-factory-pattern/
 slug: socks-5-starting-gss-api-the-factory-pattern
 title: 'Socks 5: Starting GSS-API - The Factory Pattern'
 wordpress_id: 746

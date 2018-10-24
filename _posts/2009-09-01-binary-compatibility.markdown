@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-01 03:26:55+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/binary-compatibility/
+permalink: /blog/2009/08/binary-compatibility/
 slug: binary-compatibility
 title: Binary Compatibility
 wordpress_id: 177

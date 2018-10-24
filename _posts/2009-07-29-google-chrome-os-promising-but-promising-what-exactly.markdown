@@ -8,7 +8,7 @@ excerpt: 'is this coming spring
 
   spring doth promise much!'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/google-chrome-os-promising-but-promising-what-exactly/
+permalink: /blog/2009/07/google-chrome-os-promising-but-promising-what-exactly/
 slug: google-chrome-os-promising-but-promising-what-exactly
 title: 'Google Chrome OS: Promising - but promising what, exactly?'
 wordpress_id: 106

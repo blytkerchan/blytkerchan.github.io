@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-06-17 18:05:53+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/06/summer-is-here/
+permalink: /blog/2011/06/summer-is-here/
 slug: summer-is-here
 title: Summer is here
 wordpress_id: 1505

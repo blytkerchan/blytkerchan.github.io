@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-11-09 02:15:19+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/11/bungee-coding/
+permalink: /blog/2014/11/bungee-coding/
 slug: bungee-coding
 title: Bungee coding
 wordpress_id: 3158

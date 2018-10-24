@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-07-29 01:17:58+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/storing-data-in-an-optical-illusion/
+permalink: /blog/2009/07/storing-data-in-an-optical-illusion/
 slug: storing-data-in-an-optical-illusion
 title: Storing data in an optical illusion
 wordpress_id: 90

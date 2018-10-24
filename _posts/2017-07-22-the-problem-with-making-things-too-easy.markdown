@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2017-07-22 02:20:14+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2017/07/the-problem-with-making-things-too-easy/
+permalink: /blog/2017/07/the-problem-with-making-things-too-easy/
 slug: the-problem-with-making-things-too-easy
 title: The problem with making things too easy
 wordpress_id: 4185

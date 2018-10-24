@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-01-05 05:24:12+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/01/ics-security-and-regulatory-requirements/
+permalink: /blog/2014/01/ics-security-and-regulatory-requirements/
 slug: ics-security-and-regulatory-requirements
 title: ICS security and regulatory requirements
 wordpress_id: 2490

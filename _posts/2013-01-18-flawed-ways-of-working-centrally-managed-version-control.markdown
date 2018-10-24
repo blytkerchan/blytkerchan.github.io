@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-01-18 14:27:05+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/01/flawed-ways-of-working-centrally-managed-version-control/
+permalink: /blog/2013/01/flawed-ways-of-working-centrally-managed-version-control/
 slug: flawed-ways-of-working-centrally-managed-version-control
 title: 'Flawed ways of working: centrally managed version control'
 wordpress_id: 2019

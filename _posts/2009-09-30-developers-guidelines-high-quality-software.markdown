@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-30 18:19:42+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/developers-guidelines-high-quality-software/
+permalink: /blog/2009/09/developers-guidelines-high-quality-software/
 slug: developers-guidelines-high-quality-software
 title: Developer's Guidelines & High-Quality Software
 wordpress_id: 247

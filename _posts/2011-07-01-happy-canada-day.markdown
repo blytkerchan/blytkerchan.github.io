@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-07-01 04:00:48+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/07/happy-canada-day/
+permalink: /blog/2011/07/happy-canada-day/
 slug: happy-canada-day
 title: Happy Canada Day
 wordpress_id: 1553

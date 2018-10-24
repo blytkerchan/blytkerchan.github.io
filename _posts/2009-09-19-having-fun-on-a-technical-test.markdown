@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-19 03:15:34+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/having-fun-on-a-technical-test/
+permalink: /blog/2009/09/having-fun-on-a-technical-test/
 slug: having-fun-on-a-technical-test
 title: Having fun on a technical test
 wordpress_id: 196

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-07-28 03:59:36+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/ah-the-one-definition-rule/
+permalink: /blog/2009/07/ah-the-one-definition-rule/
 slug: ah-the-one-definition-rule
 title: Ah - The One Definition Rule
 wordpress_id: 81

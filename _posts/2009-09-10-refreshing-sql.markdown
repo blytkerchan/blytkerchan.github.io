@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-10 13:01:57+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/refreshing-sql/
+permalink: /blog/2009/09/refreshing-sql/
 slug: refreshing-sql
 title: Refreshing SQL
 wordpress_id: 189

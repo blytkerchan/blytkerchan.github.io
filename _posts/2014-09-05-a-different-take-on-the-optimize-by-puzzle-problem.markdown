@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-09-05 15:32:31+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/09/a-different-take-on-the-optimize-by-puzzle-problem/
+permalink: /blog/2014/09/a-different-take-on-the-optimize-by-puzzle-problem/
 slug: a-different-take-on-the-optimize-by-puzzle-problem
 title: A different take on the "optimize by puzzle" problem
 wordpress_id: 3291

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-07-03 22:40:10+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/07/conditional-in-place-merge-algorithm/
+permalink: /blog/2013/07/conditional-in-place-merge-algorithm/
 slug: conditional-in-place-merge-algorithm
 title: Conditional in-place merge algorithm
 wordpress_id: 2336

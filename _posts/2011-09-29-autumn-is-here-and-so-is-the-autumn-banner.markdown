@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-09-29 16:59:08+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/09/autumn-is-here-and-so-is-the-autumn-banner/
+permalink: /blog/2011/09/autumn-is-here-and-so-is-the-autumn-banner/
 slug: autumn-is-here-and-so-is-the-autumn-banner
 title: Autumn is here - and so is the autumn banner
 wordpress_id: 1689

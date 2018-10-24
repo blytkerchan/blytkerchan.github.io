@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-01-11 22:40:16+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/01/opening-a-support-ticket-with-microsoft-or-how-not-to-support-your-customers/
+permalink: /blog/2012/01/opening-a-support-ticket-with-microsoft-or-how-not-to-support-your-customers/
 slug: opening-a-support-ticket-with-microsoft-or-how-not-to-support-your-customers
 title: 'Opening a support ticket with Microsoft (or: how not to support your customers)'
 wordpress_id: 1779

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-01-12 22:14:34+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/01/changing-an-api-in-subtle-unpredictable-ways/
+permalink: /blog/2012/01/changing-an-api-in-subtle-unpredictable-ways/
 slug: changing-an-api-in-subtle-unpredictable-ways
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785

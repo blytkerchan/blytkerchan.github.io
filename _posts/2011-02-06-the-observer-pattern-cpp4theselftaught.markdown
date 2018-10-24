@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-02-06 02:37:02+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/02/the-observer-pattern-cpp4theselftaught/
+permalink: /blog/2011/02/the-observer-pattern-cpp4theselftaught/
 slug: the-observer-pattern-cpp4theselftaught
 title: The Observer Pattern
 wordpress_id: 1167

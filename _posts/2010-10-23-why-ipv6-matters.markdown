@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-10-23 03:36:16+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/10/why-ipv6-matters/
+permalink: /blog/2010/10/why-ipv6-matters/
 slug: why-ipv6-matters
 title: Why IPv6 Matters
 wordpress_id: 1082

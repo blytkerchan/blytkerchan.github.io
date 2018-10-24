@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-25 16:36:23+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/the-benefits-of-formal-executable-specifications/
+permalink: /blog/2013/09/the-benefits-of-formal-executable-specifications/
 slug: the-benefits-of-formal-executable-specifications
 title: The benefits of formal, executable specifications
 wordpress_id: 2387

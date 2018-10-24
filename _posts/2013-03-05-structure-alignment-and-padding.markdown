@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-03-05 00:06:32+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/03/structure-alignment-and-padding/
+permalink: /blog/2013/03/structure-alignment-and-padding/
 slug: structure-alignment-and-padding
 title: Structure alignment and padding
 wordpress_id: 2050

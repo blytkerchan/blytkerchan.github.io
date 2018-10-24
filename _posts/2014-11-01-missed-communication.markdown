@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-11-01 15:25:16+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/11/missed-communication/
+permalink: /blog/2014/11/missed-communication/
 slug: missed-communication
 title: Miss(ed) Communication
 wordpress_id: 3400

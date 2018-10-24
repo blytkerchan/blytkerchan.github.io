@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-03-04 22:18:05+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/03/ill-be-back-soon/
+permalink: /blog/2012/03/ill-be-back-soon/
 slug: ill-be-back-soon
 title: I'll be back (soon)
 wordpress_id: 1820

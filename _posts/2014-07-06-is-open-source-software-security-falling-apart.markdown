@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2014-07-06 01:21:17+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2014/07/is-open-source-software-security-falling-apart/
+permalink: /blog/2014/07/is-open-source-software-security-falling-apart/
 slug: is-open-source-software-security-falling-apart
 title: Is Open Source software security falling apart?
 wordpress_id: 3163

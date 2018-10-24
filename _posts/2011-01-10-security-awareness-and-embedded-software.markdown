@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-01-10 00:12:46+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/01/security-awareness-and-embedded-software/
+permalink: /blog/2011/01/security-awareness-and-embedded-software/
 slug: security-awareness-and-embedded-software
 title: Security Awareness and Embedded Software
 wordpress_id: 1148

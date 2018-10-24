@@ -8,7 +8,7 @@ excerpt: 'Sun to early spring
 
   unexpected joy'
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/07/a-glimmer-of-hope-on-comp-std-c/
+permalink: /blog/2009/07/a-glimmer-of-hope-on-comp-std-c/
 slug: a-glimmer-of-hope-on-comp-std-c
 title: A glimmer of hope on comp.std.c++
 wordpress_id: 87

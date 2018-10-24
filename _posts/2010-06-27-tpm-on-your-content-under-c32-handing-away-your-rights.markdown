@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-27 02:52:20+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/tpm-on-your-content-under-c32-handing-away-your-rights/
+permalink: /blog/2010/06/tpm-on-your-content-under-c32-handing-away-your-rights/
 slug: tpm-on-your-content-under-c32-handing-away-your-rights
 title: 'TPM on your content under #c32 - handing away your rights?'
 wordpress_id: 799

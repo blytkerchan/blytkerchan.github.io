@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2012-12-21 00:41:51+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2012/12/even-in-quebec-winter-is-not-the-only-season/
+permalink: /blog/2012/12/even-in-quebec-winter-is-not-the-only-season/
 slug: even-in-quebec-winter-is-not-the-only-season
 title: Even in Quebec, Winter is not the only season
 wordpress_id: 1999

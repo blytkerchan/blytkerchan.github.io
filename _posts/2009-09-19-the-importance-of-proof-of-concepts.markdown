@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-09-19 01:18:00+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/09/the-importance-of-proof-of-concepts/
+permalink: /blog/2009/09/the-importance-of-proof-of-concepts/
 slug: the-importance-of-proof-of-concepts
 title: The Importance of Proof-Of-Concepts
 wordpress_id: 194

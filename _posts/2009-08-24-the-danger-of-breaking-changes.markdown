@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-08-24 19:39:57+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/08/the-danger-of-breaking-changes/
+permalink: /blog/2009/08/the-danger-of-breaking-changes/
 slug: the-danger-of-breaking-changes
 title: The Danger of Breaking Changes
 wordpress_id: 175

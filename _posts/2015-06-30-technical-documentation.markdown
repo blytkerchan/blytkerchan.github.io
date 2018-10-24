@@ -3,7 +3,7 @@ author: rlc
 comments: false
 date: 2015-06-30 01:49:30+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/06/technical-documentation/
+permalink: /blog/2015/06/technical-documentation/
 slug: technical-documentation
 title: Technical documentation
 wordpress_id: 3431

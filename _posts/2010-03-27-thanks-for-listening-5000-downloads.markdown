@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-03-27 22:28:44+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/03/thanks-for-listening-5000-downloads/
+permalink: /blog/2010/03/thanks-for-listening-5000-downloads/
 slug: thanks-for-listening-5000-downloads
 title: Thanks for listening - 5000+ downloads
 wordpress_id: 526

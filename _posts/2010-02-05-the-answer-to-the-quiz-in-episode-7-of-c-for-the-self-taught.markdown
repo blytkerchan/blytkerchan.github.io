@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-02-05 03:02:28+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/02/the-answer-to-the-quiz-in-episode-7-of-c-for-the-self-taught/
+permalink: /blog/2010/02/the-answer-to-the-quiz-in-episode-7-of-c-for-the-self-taught/
 slug: the-answer-to-the-quiz-in-episode-7-of-c-for-the-self-taught
 title: The answer to the quiz in episode 7 of C++ for the self-taught
 wordpress_id: 463

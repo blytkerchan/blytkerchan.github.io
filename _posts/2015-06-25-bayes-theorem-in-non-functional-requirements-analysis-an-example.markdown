@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2015-06-25 10:17:41+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2015/06/bayes-theorem-in-non-functional-requirements-analysis-an-example/
+permalink: /blog/2015/06/bayes-theorem-in-non-functional-requirements-analysis-an-example/
 slug: bayes-theorem-in-non-functional-requirements-analysis-an-example
 title: Bayes' theorem in non-functional requirements analysis -- an example
 wordpress_id: 3540

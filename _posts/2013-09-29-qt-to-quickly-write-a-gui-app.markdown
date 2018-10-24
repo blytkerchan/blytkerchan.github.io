@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-09-29 03:14:51+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/09/qt-to-quickly-write-a-gui-app/
+permalink: /blog/2013/09/qt-to-quickly-write-a-gui-app/
 slug: qt-to-quickly-write-a-gui-app
 title: Qt to quickly write a GUI app
 wordpress_id: 2393

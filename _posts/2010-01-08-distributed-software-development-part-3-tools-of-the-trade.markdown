@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-01-08 04:24:21+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/01/distributed-software-development-part-3-tools-of-the-trade/
+permalink: /blog/2010/01/distributed-software-development-part-3-tools-of-the-trade/
 slug: distributed-software-development-part-3-tools-of-the-trade
 title: 'Distributed Software Development Part 3: Tools Of The Trade'
 wordpress_id: 439

@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2010-06-24 21:25:31+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2010/06/feedback-on-c32-constructive-destructive-or-pointless/
+permalink: /blog/2010/06/feedback-on-c32-constructive-destructive-or-pointless/
 slug: feedback-on-c32-constructive-destructive-or-pointless
 title: 'Feedback on #C32: Constructive, Destructive or Pointless?'
 wordpress_id: 783

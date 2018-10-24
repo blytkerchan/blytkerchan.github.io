@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2011-08-12 00:32:06+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2011/08/moving-to-github/
+permalink: /blog/2011/08/moving-to-github/
 slug: moving-to-github
 title: Moving to GitHub
 wordpress_id: 1635

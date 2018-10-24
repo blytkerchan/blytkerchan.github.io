@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2009-11-21 20:42:51+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2009/11/microsoft-team-foundation-server-vs-git/
+permalink: /blog/2009/11/microsoft-team-foundation-server-vs-git/
 slug: microsoft-team-foundation-server-vs-git
 title: Microsoft Team Foundation Server vs Git
 wordpress_id: 381

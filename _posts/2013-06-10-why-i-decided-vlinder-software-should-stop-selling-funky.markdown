@@ -3,7 +3,7 @@ author: rlc
 comments: true
 date: 2013-06-10 17:00:46+00:00
 layout: post
-link: http://rlc.vlinder.ca/blog/2013/06/why-i-decided-vlinder-software-should-stop-selling-funky/
+permalink: /blog/2013/06/why-i-decided-vlinder-software-should-stop-selling-funky/
 slug: why-i-decided-vlinder-software-should-stop-selling-funky
 title: Why I decided Vlinder Software should stop selling Funky
 wordpress_id: 2324
