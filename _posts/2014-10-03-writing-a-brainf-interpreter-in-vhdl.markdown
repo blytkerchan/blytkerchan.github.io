@@ -787,7 +787,7 @@ Here's the code for the test bench: [aside type="code" status="closed"]
 [/aside]
 And this is what it looked like in ModelSim:
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/09/wave-300x125.png" caption="Waveform for the BrainF interpreter interpreting 'Hello world!'" %}
+{% include image.html url="/assets//2014/09/wave-300x125.png" caption="Waveform for the BrainF interpreter interpreting 'Hello world!'" %}
 
 One thing you can see clearly in the waveform is that there's room for optimization: there's a large amount of time where the interterpreter's `ptr` register doesn't move, but the interpreter seems pretty busy. This is when it's executing these instructions: `[-]` -- that is: setting the current memory cell value to 0. Doing a bit more look-ahead to detect `[-]` and replacing it with an instruction setting the current cell to 0 as a one-shot deal would probably save quite a bit of time running the "Hello world" test case.
 

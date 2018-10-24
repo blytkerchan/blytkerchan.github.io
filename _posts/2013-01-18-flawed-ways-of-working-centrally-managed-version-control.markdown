@@ -42,7 +42,7 @@ Clearly, something is wrong with this picture:
   3. every development branch is created directly from the trunk (because it is difficult to track development otherwise).
 
 
-In case it's not clear _what_ is wrong with this picture: let me make a sketch:[![20130118-121940.jpg](http://rlc.vlinder.ca/wp-content/uploads/2013/01/20130118-121940.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2013/01/20130118-121940.jpg)
+In case it's not clear _what_ is wrong with this picture: let me make a sketch:[![20130118-121940.jpg](/assets//2013/01/20130118-121940.jpg)](/assets//2013/01/20130118-121940.jpg)
 
 The important bit of this sketch is the arrow on the right, that says "integrate trunk back into branch" and the dashed line from the discovery of the bug to that "forward integration": from the point where the bug is discovered until the point that the development branch is re-synchronized with the now-fixed trunk, development in the branch is at a stand-still.
 
@@ -59,7 +59,7 @@ The point is, though, that centrally-managed source control systems just aren't 
 Now, let's look at the alternative. Like I said, I don't have any problem with a single version of the software being dubbed the "master", "canonical", or "trunk" branch which is where all "official" versions come from, but with a distributed versioning system such as Git, that doesn't have to mean that every fix has to go through that branch to be useful to others on the team and keep track of its history. In the situation I described above, there are two alternative stories that could have happened: either I fixed the bug in my branch, had the fix peer-reviewed and got permission to merge the fix, and only the fix, into the trunk, which would have meant a cherry-pick from my branch into the trunk by some-one who has the power to push into the trunk (which could very well be me, but wouldn't necessarily be me), or the bug got fixed in a separate branch, and cherry-picked into mine without having to wait for approval to go through the trunk.
 
 Here's another sketch with those two scenarios:
-[![20130119-105102.jpg](http://rlc.vlinder.ca/wp-content/uploads/2013/01/20130119-105102.jpg)](http://rlc.vlinder.ca/wp-content/uploads/2013/01/20130119-105102.jpg)
+[![20130119-105102.jpg](/assets//2013/01/20130119-105102.jpg)](/assets//2013/01/20130119-105102.jpg)
 
 The thing you should understand is that neither of these two scenarios would require waiting for approval to do anything -- which entails a costly context switch to get the developer to work on something else or manually merging the fix into the development branch, which is also costly and can lead to conflicts down the road.
 

@@ -34,7 +34,7 @@ While you get many customers, you're not getting the Geeks-in-a-hurry crowd you 
 
 Fig. 1 shows the interaction needed to get a cup of coffee: the customer requests a coffee, the barista gets a cup, fills it, asks for money and gives the coffee to the customer. The whole exchange might take all of one minute in the average case -- you're keeping your promise, so why won't the Geeks-in-a-hurry come?
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/04/File-2016-04-19-19-56-47-1024x771.jpeg" caption="Fig. 2: Coffee not ready" %}
+{% include image.html url="/assets//2016/04/File-2016-04-19-19-56-47-1024x771.jpeg" caption="Fig. 2: Coffee not ready" %}
 
 The problem happens when the coffee still needs to be brewed when the customer gets there: the barista happily accepts the order, starts brewing the coffee and asks the customer to pay. The customer, now expecting his coffee to arrive "any moment now" ends up waiting a full fifteen minutes for his coffee, misses his plane, train or automobile and is righteously pissed off ((Pardon my french)).
 
@@ -45,7 +45,7 @@ The Geeks, of course, know a real-time system when they see one, and can smell a
 ## "Warn" if not ready -- non-blocking state test
 
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/04/File-2016-04-19-20-15-13-1024x753.jpeg" caption="Fig. 3: Warn if not brewed" %}
+{% include image.html url="/assets//2016/04/File-2016-04-19-20-15-13-1024x753.jpeg" caption="Fig. 3: Warn if not brewed" %}
 
 After being yelled at a few times, the barista has decided to warn the customer. This allows the customer to evaluate whether they will meet their deadline if they wait for coffee ((In code, this would be a `tryAcquire` function that returns `true` if the resource is acquired and `false` if not.)).
 
@@ -58,7 +58,7 @@ Now, some Geeks have started coming, but none of them are in both thirsty and in
 ## Redundancy
 
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/04/File-2016-04-19-20-55-40-1024x644.jpeg" caption="Fig. 4: Hopefully avoidable scenario" %}
+{% include image.html url="/assets//2016/04/File-2016-04-19-20-55-40-1024x644.jpeg" caption="Fig. 4: Hopefully avoidable scenario" %}
 
 After observing the Geeks that are in a hurry but not all that thirsty for a while, you notice that some of them, when warned, go to one of your competitors to get their coffee. The coffee at your competitor is slightly more expensive, but Geeks-who-need-caffeine don't seem to mind. After reading up on the subject a bit, you note that what they're doing is implementing redundancy -- which is something you could do yourself.
 

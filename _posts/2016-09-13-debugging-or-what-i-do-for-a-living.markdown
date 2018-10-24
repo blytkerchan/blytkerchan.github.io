@@ -17,13 +17,13 @@ I am often asked by friends and acquaintances of various backgrounds, what I do 
 <!--more-->
 My beautiful wife sometimes tells people I'm a software engineer. There are two problems with that answer: first, while I do have the job of a software/firmware engineer, I don't have the title -- I don't have an engineering degree and I'm not a member of the Quebec Order of Engineers. Second, there are many different types of software engineers who do a variety of things, including designing web applications. Most people's experience with software boils down to web apps, phone apps and desktop applications. I don't do any of those things: I stay away from GUI design if I can, and generally avoid writing software that interacts with humans.
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/09/image-1-778x1024.jpeg" caption="Self portrait as an inventor (cartoonish rendition" %}
+{% include image.html url="/assets//2016/09/image-1-778x1024.jpeg" caption="Self portrait as an inventor (cartoonish rendition" %}
 
 My son tells people I'm an inventor. I've worked on several patent applications lately, have one patent to my name already, and generally work with devices that do _things you didn't know needed doing in ways you don't understand_. Obviously, I like this description of my job, but it over glorifies the process a bit: the somewhat cartoonish idea people have of inventors doesn't quite do justice to my _métier_ but the rendering is fearfully close to reality sometimes. Still, I don't just have ideas pop into my head and then, with the pressing of a few buttons, apparently materialize out of thin air.
 
 So, what _do_ I do for a living? Well, lately, I've been spending a lot of time here:
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2016/09/image-1024x840.jpeg" caption="The lab, a.k.a. the torture chamber" %}
+{% include image.html url="/assets//2016/09/image-1024x840.jpeg" caption="The lab, a.k.a. the torture chamber" %}
 
 This place is the "lab". This is where we torture devices until they break -- and devices torture us by breaking when we don't intend them to. The devices are hung in racks and connected to each other by (electrical) wires. When I spend my time here, it usually means something is wrong with the way they handle those connections -- and usually, that "something" has something to do with time synchronization.
 

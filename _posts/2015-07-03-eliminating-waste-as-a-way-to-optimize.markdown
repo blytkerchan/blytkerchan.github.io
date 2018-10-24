@@ -18,7 +18,7 @@ I recently had a chance to work on an implementation of an Arachnida-based web s
 
 Arachnida itself is pretty lean and comes with a number of tools to help build web services in industrial devices, but it is not an "app in a box": some assembly is required and you have to make some of the parts yourself.
 <!--more-->
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2015/06/arachnida-based-web-server.png" caption="Structure of a typical Arachnida-based web server" %}
+{% include image.html url="/assets//2015/06/arachnida-based-web-server.png" caption="Structure of a typical Arachnida-based web server" %}
 In most cases, the resulting web server looks a lot like one of the examples: there's a `Server` class that contains the `Listener` instance, `HTTPRequestHandler` and a bunch of objects that implement services using a `Service` interface. Each service implements a part of the web application and is responsible for responding to its requests. To dispatch between different services, usually, some part of the request URI is used.
 
 This scheme works very well: it allows you to separate the responsibilities of each service neatly into classes. It sometimes comes with a bit of a trade-off, though: you often end up duplicating information in different services, unless you go ahead and implement a full-fledged MVP, which most people don't.

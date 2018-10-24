@@ -43,6 +43,6 @@ And that's where CMMI comes in: while iterative and incremental design and devel
 
 In order for a process to become more mature, it has to progressively add and follow-up on configuration management, process and product quality assurance, planning of all kinds, etc. etc. (actually, that's mostly level 2):
 
-![Capability_Maturity_Model](http://rlc.vlinder.ca/wp-content/uploads/2009/09/Capability_Maturity_Model.jpg)
+![Capability_Maturity_Model](/assets//2009/09/Capability_Maturity_Model.jpg)
 
 So merging CMMI and Agile really comes down to one thing: doing all that, in small steps, for every iteration. That's really all there is to it!

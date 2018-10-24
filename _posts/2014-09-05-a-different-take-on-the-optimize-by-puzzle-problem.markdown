@@ -41,6 +41,6 @@ Obviously, the child whose name you have to know in advance is the one who doesn
 
 The third set (the `results` set) really only exists to make getting the "right" part of the set. As shown in the Venn chart below, the set of kids remaining to be checked is the difference between the result set and the (entirely overlapping) set of kids we checked with.
 
-{% include image.html url="http://rlc.vlinder.ca/wp-content/uploads/2014/09/IMG_1202.png" caption="Venn chart of the sets" %}
+{% include image.html url="/assets//2014/09/IMG_1202.png" caption="Venn chart of the sets" %}
 
 And that's exactly what the algorithm does.

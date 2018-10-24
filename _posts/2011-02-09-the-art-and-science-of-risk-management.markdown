@@ -212,7 +212,7 @@ I therefore propose a different approach, weighing the impact _exponentially_ he
 
 
 
-[![](http://rlc.vlinder.ca/wp-content/uploads/2011/02/PvsI.png)](http://rlc.vlinder.ca/wp-content/uploads/2011/02/PvsI.png)  
+[![](/assets//2011/02/PvsI.png)](/assets//2011/02/PvsI.png)  
 Figure 2: Severity in relation to Probability and Impact
 
 As shown in figure 2, using this method allows for a perhaps more intuitive approach to severity: small losses and small gains are considered far less interesting than large losses or large gains, even if they have a high probability of occurring (in this graph, I ranges from 0 to 1,000,000). Of course, the severity values to be considered "very high", "high", "medium", "low" or "very low" are somewhat subjective and may vary from project to project.

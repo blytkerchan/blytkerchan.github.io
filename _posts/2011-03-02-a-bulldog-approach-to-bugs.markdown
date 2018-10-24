@@ -22,8 +22,8 @@ For the next few weeks, I will be exploring the art of bug-hunting on this blog 
 
 I also made a few wallpapers to go with the theme:
 
-one wide screen: [![](http://rlc.vlinder.ca/wp-content/uploads/2011/03/march-wallpaper.png)](http://rlc.vlinder.ca/wp-content/uploads/2011/03/march-wallpaper.png)
+one wide screen: [![](/assets//2011/03/march-wallpaper.png)](/assets//2011/03/march-wallpaper.png)
 
-and one not-so-wide screen: [![](http://rlc.vlinder.ca/wp-content/uploads/2011/03/march-wallpaper-small.png)](http://rlc.vlinder.ca/wp-content/uploads/2011/03/march-wallpaper-small.png)
+and one not-so-wide screen: [![](/assets//2011/03/march-wallpaper-small.png)](/assets//2011/03/march-wallpaper-small.png)
 
 Have fun - and feel free to let me know about your debugging stories.

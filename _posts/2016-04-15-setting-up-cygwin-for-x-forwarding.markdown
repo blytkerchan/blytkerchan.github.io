@@ -41,7 +41,7 @@ I already had Cygwin installed when I started, but you might not, so here's what
  	
   2. Run the installer. It'll pop up a welcome screen that should look a lot like this:  
 
-[![Screenshot of Cygwin installer welcome screen](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot.png)](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot.png)
+[![Screenshot of Cygwin installer welcome screen](/assets//2016/04/screenshot.png)](/assets//2016/04/screenshot.png)
 
  	
   3. Click "Next" a few times (Install from Internet; choose the root directory; etc. I recommend you change the download directory to something other than the default, because I don't much like the default setting (you'll see why) -- but it's a free country, as they say). At some point, you'll git the package selection window.
@@ -185,14 +185,14 @@ We're all done on the Linux side: assuming you have something that uses X on the
 We'll start by making sure the X server starts when you log in: create a shortcut with the following target:
 `C:\cygwin64\bin\run.exe -p /usr/X11R6/bin XWin -listen tcp -multiwindow -clipboard -silent-dup-error`
 and put it in the Startup folder of your start menu.
-[![Properties of the shortcut](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot-1.png)](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot-1.png)
+[![Properties of the shortcut](/assets//2016/04/screenshot-1.png)](/assets//2016/04/screenshot-1.png)
 
 Run it. You should get a little X logo in the system bar.
 
 Now, we'll need a `DISPLAY` environment variable to point to our X server, which we can add by right-clicking on "Computer", selecting "Properties", "Advanced system settings" and pressing the button "Environment Variables...". Add it to your user variables can give it the value `:0`. This will tell SSH (and, ultimately, the Linux box) where your X server is.
 
 Finally, create a second shortcut, targeted at `C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -e /usr/bin/ssh -Y me@192.168.0.80`
-[![Second shortcut](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot-2.png)](http://rlc.vlinder.ca/wp-content/uploads/2016/04/screenshot-2.png)
+[![Second shortcut](/assets//2016/04/screenshot-2.png)](/assets//2016/04/screenshot-2.png)
 
 Run it, and you should be back on your Linux box. Run `xterm&` on that box and you should get an X-hosted xterm window, on your Windows box.
 
