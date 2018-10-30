@@ -81,15 +81,15 @@ There are fiveimportant events the slave has to handle:
 
 
 
-{% include image.html url="/assets//2014/10/select-1-300x90.png" caption="Selection just before a SPI clock rising edge" %}
+{% include image.html url="/assets/2014/10/select-1-300x90.png" caption="Selection just before a SPI clock rising edge" %}
 
-{% include image.html url="/assets//2014/10/select-3-300x90.png" caption="Selection just before a SPI clock falling edge" %}
+{% include image.html url="/assets/2014/10/select-3-300x90.png" caption="Selection just before a SPI clock falling edge" %}
 
 **Being selected** means the master is now talking to us, which means we should start sending it data if we have any and we should read the data it sends us. The question is when the select becomes effective: my implementation needs at least a clock tick between the falling edge of the select# signal and the first rising edge of the SPI clock, and will ignore a falling edge in the SPI clock if it occurs before that first rising edge.
 
-{% include image.html url="/assets//2014/10/select-2-300x90.png" caption="Delesection - first case" %}
+{% include image.html url="/assets/2014/10/select-2-300x90.png" caption="Delesection - first case" %}
 
-{% include image.html url="/assets//2014/10/select-4-300x90.png" caption="Delesection - second case" %}
+{% include image.html url="/assets/2014/10/select-4-300x90.png" caption="Delesection - second case" %}
 
 **Being deselected** means we should stop driving the MISO output immediately, and should stop reading the MOSI input. This can occur at any time, so we need to make sure that we align the 8-bit byte boundary for the next time we're selected.
 

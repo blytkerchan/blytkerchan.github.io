@@ -21,7 +21,7 @@ tags:
 ---
 
 {% include shadowbox.html text="<b>The TL;DR:</b>" open_only=true %}
-{% include image.html url="/assets//2017/09/img_7368-141x300.jpg" caption="TL;DR mindmap" %}
+{% include image.html url="/assets/2017/09/img_7368-141x300.jpg" caption="TL;DR mindmap" %}
 </div>
 <!--more-->
 
@@ -86,7 +86,7 @@ I would expect each of the following:
 # Conclusion
 
 
-{% include image.html url="/assets//2017/09/img_7371-150x150.jpg" caption="Equifax dip after announcing breach" %}
+{% include image.html url="/assets/2017/09/img_7371-150x150.jpg" caption="Equifax dip after announcing breach" %}
 
 **We're all screwed.** The only sure way to prevent this from happening again is to seriously revise the financial system's way of dealing with their customers' personal information, which would come at significant cost and while Equifax lost a bit over 10% in market capitalisation over the last few days, analysts are already saying to ["buy the dip"](http://www.seekingalpha.com/news/3294739) and, taking into account how ingrained Equifax is in consumer credit, they'd be foolish not to.
 

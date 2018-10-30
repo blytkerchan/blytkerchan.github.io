@@ -13,7 +13,7 @@ tags:
 - politics
 ---
 
-[![20130913-211324.jpg](/assets//2013/09/20130913-211324.jpg)](/assets//2013/09/20130913-211324.jpg)
+[![20130913-211324.jpg](/assets/2013/09/20130913-211324.jpg)](/assets/2013/09/20130913-211324.jpg)
 
 Four of these need not apply for a government job in Quebec if the new PQ charter of values becomes law. Can you pick the one that might still get the job?
 

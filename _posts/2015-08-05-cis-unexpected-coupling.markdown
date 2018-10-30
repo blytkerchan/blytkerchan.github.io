@@ -34,4 +34,4 @@ Coupling isn't necessarily evil, but it should be explicit if at all possible.
 
 
 **PS**: The first draft of this post used the example of an array of potato launchers that, though independent, were coupled by a targeting controller. I even made a drawing of such a launcher (though not the entire array). While the text of that draft would need an awful lot of work, I thought I'd at least share the drawing:
-{% include image.html url="/assets//2014/08/Potato-launcher-300x185.png" caption="Potato launcher" %}
+{% include image.html url="/assets/2014/08/Potato-launcher-300x185.png" caption="Potato launcher" %}

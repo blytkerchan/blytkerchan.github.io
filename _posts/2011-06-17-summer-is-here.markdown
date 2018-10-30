@@ -17,6 +17,6 @@ This wallpaper of course has the Vlinder logo and the url of this website but, m
 <!--more-->
 Links to download the wallpaper are wrapped around the image. There are two sizes: 1680*1050 and 1024*768.
 
-[![](/assets//2011/06/summer-wallpaper.png)](/assets//2011/06/summer-wallpaper.png)[![](/assets//2011/06/summer-wallpaper-small.png)](/assets//2011/06/summer-wallpaper-small.png)
+[![](/assets/2011/06/summer-wallpaper.png)](/assets/2011/06/summer-wallpaper.png)[![](/assets/2011/06/summer-wallpaper-small.png)](/assets/2011/06/summer-wallpaper-small.png)
 
 The photo on which the flower image is based was found on a site for architecture ideas called thisarchitecture.com.

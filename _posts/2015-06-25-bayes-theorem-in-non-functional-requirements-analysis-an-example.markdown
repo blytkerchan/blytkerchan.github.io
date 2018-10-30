@@ -20,13 +20,13 @@ tags:
 - requirements analysis
 ---
 
-{% include image.html url="/assets//2015/06/BayesTheorem.png" caption="Bayes' theorem" %}
+{% include image.html url="/assets/2015/06/BayesTheorem.png" caption="Bayes' theorem" %}
 
 I am not a mathematician, but I do like Bayes' theorem for non-functional requirements analysis -- and I'd like to present an example of its application. ((I was actually going to give a _theoretical_ example of availability requirements, but then a real example popped up...))
 <!--more-->
 Recently, a question was brought to the DNP technical committee about the application of a part of section 13 of IEEE Standard 1815-2012 (the standard that defines DNP). Section 13 explains how to use DNP over TCP/IP, as it was originally designed to be used over serial links. It basically says "pretend it's a serial link", and "here's how you do TCP networking".
 
-{% include image.html url="/assets//2015/06/Network-diagram-—-Bayes-New-Page-1-1024x645.png" caption="Network diagram of the use-case" %}
+{% include image.html url="/assets/2015/06/Network-diagram-—-Bayes-New-Page-1-1024x645.png" caption="Network diagram of the use-case" %}
 
 The use-case in question involved a master device talking to several oustation devices over a single TCP connection. The TCP connection in question really connected to a port server, which transformed the TCP connection into several serial connections.
 
@@ -50,13 +50,13 @@ So, if you don't decide to cut the TCP connection as soon as you see a DNP link 
 
 The issue with this question is that, while as long as there is only one link for any connection we can think in terms of "good" and "bad" links, as soon as we have more than one link we have to add the notion of an "unknown" state and a "device failure" state.
 
-{% include image.html url="/assets//2015/06/link-status-OK1-1024x352.png" caption="Flow chart indicating what is done when a message is received re: the link and connection statuses" %}
+{% include image.html url="/assets/2015/06/link-status-OK1-1024x352.png" caption="Flow chart indicating what is done when a message is received re: the link and connection statuses" %}
 
 If any message is received from any device whatsoever, it is clear that the TCP connection is still alive and that any device link that is down at the moment is due to a device failure.
 
 That means that in any assessment of the likely state of the TCP connection, any devices that were previously marked as having a "bad" link status are no longer relevant: they most likely failed because of a device failure.
 
-{% include image.html url="/assets//2015/06/Link-status-request-time-out-1024x649.png" caption="Link status request time-out" %}
+{% include image.html url="/assets/2015/06/Link-status-request-time-out-1024x649.png" caption="Link status request time-out" %}
 
 So, when a link status request times out, we really only know that the link status of the device for which it timed out is "bad", and that we can no longer assume that the devices for which it was "good", it still is "good". This is the moment where we should assess whether the TCP connection is at fault -- in which case it should be closed -- or whether something else is wrong. What we need to know is [latex]P(tcp|dnp_i)[/latex].
 

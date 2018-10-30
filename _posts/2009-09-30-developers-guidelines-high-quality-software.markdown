@@ -31,7 +31,7 @@ A (more-or-less) recent survey, [published on Dr Dobb's](http://www.ddj.com/deve
 
 
 Let's take a look at what that means:
-![247-pie](/assets//2009/09/247-pie.png)while a small majority has standards in place, an appalling number of businesses and developer teams still don't - and some don't know, which means that if there are any, they are not being followed. Let's take another quote (from the same parahraph):
+![247-pie](/assets/2009/09/247-pie.png)while a small majority has standards in place, an appalling number of businesses and developer teams still don't - and some don't know, which means that if there are any, they are not being followed. Let's take another quote (from the same parahraph):
 
 
 

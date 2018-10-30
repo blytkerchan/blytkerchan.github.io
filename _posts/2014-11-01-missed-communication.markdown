@@ -13,5 +13,5 @@ tags:
 - communication
 ---
 
-{% include image.html url="/assets//2014/10/IMG_1303-1024x279.png" caption="Miss(ed) Communication" %}
+{% include image.html url="/assets/2014/10/IMG_1303-1024x279.png" caption="Miss(ed) Communication" %}
 
