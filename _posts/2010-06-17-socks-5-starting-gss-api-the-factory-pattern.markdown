@@ -25,7 +25,7 @@ The two commits that follow, moving the code and renaming the include guards, sh
 
 You can have a look at both of these commits and see that they're pretty trivial, so we'll skip an in-depth analysis for now.
 
-Talking about in-depth analyses: I've analysed the Binary Search algorithm and put a [post](http://landheer-cieslak.com/binary-search/) on the site if you want to take a look at it. It explains quite a few interesting things, such as the O notation (including its formal definition); why binary search is efficient; when it is more efficient to sort and then search, and why, etc. Have a look, leave a comment, etc.
+Talking about in-depth analyses: I've analysed the Binary Search algorithm and put a [post](/assets/2010/06/binary-search/) on the site if you want to take a look at it. It explains quite a few interesting things, such as the O notation (including its formal definition); why binary search is efficient; when it is more efficient to sort and then search, and why, etc. Have a look, leave a comment, etc.
 
 Another commit sets up Windows projects for our new libcore and librfc1961 libraries. We'll be building on from here for our next libraries as well.
 

@@ -16,7 +16,7 @@ tags:
 
 I'm pretty sure that I'm not the first one to run into this, so I thought I'd blog how this works.
 
-As I said [earlier](http://landheer-cieslak.com/?p=197), one of my clients uses CentOS 5.2 in their production environment, so I need a CentOS 5.2 development server set up. I use [Git](http://git.or.cz) for all projects I can use it on so I needed to install Git on CentOS 5.2. There is no RPM package for CentOS 5.2 for Git (the RPM package at kernel.org is for Fedora) so I had to build from source. Here's how I did it:
+As I said [earlier](/blog/2009/09/running-a-lamp-debian-vs-centos/), one of my clients uses CentOS 5.2 in their production environment, so I need a CentOS 5.2 development server set up. I use [Git](http://git.or.cz) for all projects I can use it on so I needed to install Git on CentOS 5.2. There is no RPM package for CentOS 5.2 for Git (the RPM package at kernel.org is for Fedora) so I had to build from source. Here's how I did it:
 
 
 

@@ -16,7 +16,7 @@ tags:
 - software
 ---
 
-As I said in [a previous post](http://landheer-cieslak.com/?p=422), the new economic realities that come with peak oil and climate change will change the way we work and the way the computing industry is run. One of those changes will be limiting unnecessary costs related to moving people around - something we already do for goods.
+As I said in [a previous post](/blog/2009/12/staring-into-the-depths-of-the-yet-unwritten), the new economic realities that come with peak oil and climate change will change the way we work and the way the computing industry is run. One of those changes will be limiting unnecessary costs related to moving people around - something we already do for goods.
 <!--more-->
 The industry has seen a boom, lately, in distributed software development: people from all over the globe collaborating on a single project. Of course, out-sourcing to India is part of the trends that drive this boom (as is out-sourcing to Canada, by the way). The distributed development model of the Linux kernel and other, often smaller, open-source projects is another driver. Regardless of the drivers, however, the trends are there and the boom is happening. Now the question isn't "what are we going to do about it?" but is rather "how are we going to profit from it?"
 

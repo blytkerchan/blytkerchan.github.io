@@ -237,7 +237,7 @@ From top to bottom, what this code does is create a socket
     else
     { /* all is well */ }
 
-and give ownership of it to an [RAII object](http://landheer-cieslak.com/3-resource-allocation-and-raii/)
+and give ownership of it to an [RAII object](/blog/2010/01/3-resource-allocation-and-raii/)
     
     struct SocketGuard
     {

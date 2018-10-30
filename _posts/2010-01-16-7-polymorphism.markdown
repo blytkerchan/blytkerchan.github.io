@@ -33,7 +33,7 @@ The C++ programming language will not _enforce_ the "is-a" relationship: you can
 
 
 Let's get back to our ducks, birds and animals, and make the hierarchy of classes a bit larger (this is our first UML diagram!):
-![](http://landheer-cieslak.com/images/diagram.png)
+![](/assets/diagram.png)
 I'll leave making code out of this little class diagram up to you. You'll note, though, that the `Animal` class now has two derived classes: `Bird` and `Dog` and that both of them have two subclasses as well. That means that while any `Duck` is still a `Bird`, a `Bird` might or might not be a `Duck`. In the case of an `Animal`, you now have four possibilities: `Duck`, `Chicken`, `Fox` and `Hound`. This is the difference between what is, and what might be: for any given duck, you know that it is an animal - but for any given animal, it might or might not be a duck.
 
 Sometimes, when writing the code, you want to treat ducks, chickens, hounds and foxes differently. I.e. you could reasonably put ducks, chickens and hounds in the same yard: the hound won't eat the chicken or the duck, and the chicken and the duck will probably just ignore each other. If you put a fox in the same mix, however, you may have a very serious problem - although you can put a few foxes together without problems either. Let's take a look at a bit of code: 

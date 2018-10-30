@@ -71,7 +71,7 @@ The negotiation that takes place between the client and the server in order to o
 
 The same is not true for credentials: if the mechanism can't create the credentials requested, there can only be very few reasons why that might be so and, although we don't handle those reasons at the moment, handling them will be significantly easier than handling the reasons for failing to create a context.
 
-In [one of my previous posts](http://landheer-cieslak.com/error-handling-in-c/) I explain what's needed to handle an error correctly (in C, in this case): the calling code needs to know: 
+In [one of my previous posts](/blog/2010/01/error-handling-in-c) I explain what's needed to handle an error correctly (in C, in this case): the calling code needs to know: 
 
 
 

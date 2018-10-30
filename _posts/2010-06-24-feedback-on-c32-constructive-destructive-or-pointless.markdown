@@ -43,7 +43,7 @@ Now, let's see some of the arguments against this (from [A Canadian author's per
 
 
 
-In my opinion, this is all the more reason to make breaking the locks illegal. I'll go back to my example from my [previous post on this subject](http://landheer-cieslak.com/bill-c-32/): just because it's really easy to pick a lock on a door (and believe me, it is really easy) doesn't mean it should be legal. If that argument would hold, breaking and entering would be legal just because lock-picking is easy!
+In my opinion, this is all the more reason to make breaking the locks illegal. I'll go back to my example from my [previous post on this subject](/blog/2010/06/bill-c-32/): just because it's really easy to pick a lock on a door (and believe me, it is really easy) doesn't mean it should be legal. If that argument would hold, breaking and entering would be legal just because lock-picking is easy!
 
 
 
