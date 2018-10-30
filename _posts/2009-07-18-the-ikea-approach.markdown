@@ -43,26 +43,24 @@ That's how software should be. Of course, most software can't be completely pict
 
 The following are a few applications that I think are good examples on the _deployment_ side
 
-
-
-[![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)](http://www.joomla.org/)[**Joomla!**](http://www.joomla.org/)
+- [![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)](http://www.joomla.org/)[**Joomla!**](http://www.joomla.org/)
     is relatively easy to install, is based on Mambo and has extentions that allow you to extend almost any part of the CMS and customize it. The reason why I give it only a four-star rating is that it needs a bit more documentation.
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[**WordPress**](http://www.wordpress.org/)
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[**WordPress**](http://www.wordpress.org/)
     is very easy to install and lets you download and add plugins, themes, etc. from inside the installed application (something Joomla doesn't do)
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)**[Debian GNU/Linux](http://debian.org)**
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)**[Debian GNU/Linux](http://debian.org)**
     Debian comes with an excellent installer that allows you to install the OS on practically any system. It also comes with an excellent package manager - apt - that tracks package dependencies very well and is very stable. IMHO, it's the best Linux distro around.
+
 Notice that I didn't put any of my own software in here: in my first post, I promised not to do any gratuitous publicity on this blog :)
 
 On the "under the hood" side of things, though, I can't get around using the examples I know best, which evidently include my own software.
 
-
-
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png) [**Funky**](http://funky.vlinder.ca), for example
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png) [**Funky**](http://funky.vlinder.ca), for example
     embeds the interpreter as a single class but uses quite a few classes behind the scenes. Each function has well-defined behavior and does only what you would expect it to do. The one bug that got shipped, _ever_ was an assertion failure when your script had a valid, but unexpected, layout. Removing the assertion fixed the problem.
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)Another example is [**Joomla**](http://joomla.org), again
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)Another example is [**Joomla**](http://joomla.org), again
     the people who designed Joomla have evidently understood the Model-View-Controller design pattern very well, and have made an excellent implementation of a CMS using it. I have used Joomla's code to explain the MVC design pattern on several occasions, as it is without a doubt the clearest example of it that I have seen so far.
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[Qt](https://web.archive.org/web/20170808091903/https://www.qt.io/developers/) is another excellent example
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[Qt](https://web.archive.org/web/20170808091903/https://www.qt.io/developers/) is another excellent example
     originally created by TrollTech, then Qt Software, now Nokia, Qt is an excellent C++ framework for GUI design and implementation that is cross-platform, stable and pretty efficient for something that portable. [KDE](http://kde.org) is based on Qt, as are most of the interfaces of C++ programs we write at [Vlinder Software](http://vlinder.ca) today. Qt comes with excellent documentation, a predictable design and a full set of features for cross-platform development.
-![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)**[theÂ Linux kernel](http://kernel.org)**
+- ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)**[theÂ Linux kernel](http://kernel.org)**
     started out as a monolithic kernel, but has become more and more modular ever since and is now a very flexible kernel with a pretty good design where the internal APIs are concerned.
+
 Each of these follow the basic rule of good design: being **predictable** and making simple blocks that fit together but do not depend on eachother. Just like a screwdriver doesn't depend on a particular screw and a screw doesn't depend on a particular screwdriver.
