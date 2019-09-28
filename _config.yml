@@ -44,6 +44,9 @@ plugins:
 excerpt_separator: <!--more-->
 show_excerpts: true
 
+gist:
+  noscript: false
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
