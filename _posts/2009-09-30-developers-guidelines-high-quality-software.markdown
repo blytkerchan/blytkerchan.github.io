@@ -40,7 +40,7 @@ Let's take a look at what that means:
 
 
 Let's take a look at what that means:
-![247-pie-2](/assets/247-pie-2.png)now, the part of developers that actually follow enterprise-level standards is reduced to about 18% and 52% is not using any standards (but some of those are hoping that standards might come one day). On the bright side, at least about two-thirds of developers seem to understand the importance of shared standards and are either applying them, applying them but badly managed, or hoping they'll come one day.
+![247-pie-2](/assets/2009/09/247-pie-2.png)now, the part of developers that actually follow enterprise-level standards is reduced to about 18% and 52% is not using any standards (but some of those are hoping that standards might come one day). On the bright side, at least about two-thirds of developers seem to understand the importance of shared standards and are either applying them, applying them but badly managed, or hoping they'll come one day.
 
 I see two major problems in this: first, I see a lack of enterprise-level comprehension of the importance of shared standards, meaning that if there are different development teams, those teams are likely to not have the same standards. In "low" times, this may not be a problem, but it reduces the mobility of your programmers between your teams (i.e. if one team needs help, a programmer from another team will have more trouble integrating with the team to help them out). This also means that higher levels of management won't necessarily understand the reason for being for any standards that do exist, and will pressure development teams to "just hurry up", which, in the long run, is a counter-productive pressure.
 
