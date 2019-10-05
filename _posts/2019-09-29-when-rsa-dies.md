@@ -51,17 +51,40 @@ Note the caveat for Authentication and Integrity: *in order to implement these w
 
 Quantum resistance is a property of an algorithm that makes it *not significantly less difficult* to break with a quantum computer than it is to break the same with a classical computer. This all hinges on the word "significant": it *may* be less difficult to break the algorithm with a quantum computer (or with the help of a quantum computer), but not usefully so.
 
-A good example is symmetric cryptography: Grover's algorithm allows a quantum computer to find symmetric keys with a certain probability, depending on the key's size. It effectively cuts the effective size of the key in half: a 128-bit symmetric key is only as strong with a quantum computer, as a 64-bit symmetric key is without one. With a fairly run-of-the-mill computer, it would take about two days to do that using a brute-force attack. 256-bit symmetric keys are generally considered "safe" from classical computers. Adding a quantum computer implementing Grover's algorithm to the mix, 512-bit symmetric keys are just as safe in ten years as 256-bit symmetric keys are today.
+A good example is symmetric cryptography: Grover's algorithm allows a quantum computer to find symmetric keys with a certain probability, depending on the key's size. It effectively cuts the effective size of the key in half: a 128-bit symmetric key is only as strong with a quantum computer, as a 64-bit symmetric key is without one. With a fairly run-of-the-mill computer, it would take about two days to guess such a key using a brute-force attack. 256-bit symmetric keys are generally considered "safe" from classical computers. Adding a quantum computer implementing Grover's algorithm to the mix, 512-bit symmetric keys are just as safe in ten years as 256-bit symmetric keys are today.
 
 That is, essentially, what quantum resistance is about: we need to reach a way to implement these use-cases in such a way that we have a workable work-around for when quantum computers become widely available to the "bad guys".
 
-Among quantum-resistant asymmetric algorithms, we currently have the Supersingular Isogeny Diffie-Hellman key exchange, SIDH. It's a bit different from classic Diffie-Hellman (DH) and Elliptic Curve Diffie-Hellman (ECDH) in that the parties basically generate public keys which they need to exchange along with the message
+### Quantum-resistant Diffie-Hellman
 
-* what we have: (SIDH)
-* the search for a quantum-resistant RSA alternative
+Among quantum-resistant asymmetric algorithms, we currently have the Supersingular Isogeny Diffie-Hellman key exchange, SIDH. SIDH is different from regular Diffie-Hellman and from Elliptic Curve Diffie-Hellman in several ways.
+
+**You can skip the next four paragraphs without losing anything important**
+
+In Diffie-Hellman, the public parameters of the exchange are a modulus **p** and a generator **g**, and the public key is **g** raised to some (secret) power, modulo **p**. These are all numbers. The generator can be small, but **p** and the secret exponent are usually big numbers. Diffie-Hellman depends on the fact that computers have a hard time finding the power to which you raised something, especially if the value is modulo some large prime (the *discrete logarithm problem*).
+
+Elliptic Curve Diffie-Hellman is very similar: Alice and Bob agree on a curve to use. Each chooses a random point on that curve as their private key, and a public point on the curve that is the private point multiplied by some public multiplier. Finding the shared secret relies on the commutative property of multiplication: if I have a secret value **a** and you have a secret value **b**, and we share a public value **c**, the I can give you **a * c** and you can give me **b * c** and we can come up with the same shared secret (**a * (b * c) == (a * c) * b**). The security of this scheme relies on the fact that it's much harder to divide than it is to multiply.
+
+In both cases, the exchange uses what's called a *trapdoor function*: it's harder to find a discrete logarithm than it is to raise something to the power of something else in a finite field, and it's harder to multiply than it is to divide. For classical computers, it's a *hard problem* to get out of those trapdoors. These particular trapdoors, however, are something that quantum computers are very good at getting out of
+
+SIDH is different in that it relies on the fact that functions can be composed, and it's harder to decompose functions than it is to compose them. The function in question is the isogeny: it's a function that maps every point on a given elliptic curve to another elliptic curve. In SIDH, the curve itself is the public key, while the (random) isogeny is the private key. For the key exchange to work, Alice and Bob need to exchange their public elliptic curves, and two points that are the result of applying the random, secret isogeny function to two points on the curve. Bob does the same thing: he sends Alice his public curve and two transformed points. Both Alice and Bob then construct new isogenies from the isogenies, curves and points they now have, use that isogeny to map the elliptic curves they now have to new elliptic curves and find the j-invariant of of those curves. Those j-invariants will be the same for both Alice and Bob, and are the shared secret.
+
+**Continue reading here**
+
+The important thing is that this allows you to have the same number of messages for a SIDH key exchange as you had for a DH or an ECDH key exchange. However, astute readers (the ones that didn't skip the last four paragraphs and actually understood what they were about) will notice that SIDH doesn't really allow for static public keys: to work correctly, both Alice and Bob need to choose a random nonce value that becomes part of the private key (the isogeny, the function that maps between curves). That means that the use-cases where static Diffie-Hellman keys were used don't work with SIDH. Researches at the Florida Atlantic University and the University of Waterloo [have shown](http://www.site.uottawa.ca/~cadams/papers/prepro/paper_31.pdf), however, that if you do a large number of these simultaneously (8,464 times, to be exact) you can thwart an attacker under some conditions. Finding a good quantum-resistant RSA alternative to sign the public keys with is probably a better avenue, though.
+
+### Quantum-resistant RSA alternatives
+
+There are currently no viable quantum-resistant alternatives for RSA. While [one paper](https://link.springer.com/chapter/10.1007/978-3-319-59879-6_18) argues that it's possible to use RSA with carefully chosen parameters such that cracking it remains more expensive than legitimate use, 1-Terabyte keys are hardly viable.
+
+[The search is on](https://csrc.nist.gov/projects/post-quantum-cryptography/round-2-submissions), however: the first round of NIST's Post-Quantum-Cryptography project closed with its [final report](https://doi.org/10.6028/NIST.IR.8240) in January of this year, and kicked off the second round at the same time. The secind NIST PQC Standardization Conference took place in Santa Barbara last August, and they're still hoping to reach a viable solution (with 26 remaining candidates for algorithms divided among each of the three categories) by 2022. That's down from 69 candidates for the first round (out of 82 submissions, five of which withdrew, with the other eight being rejected).
+
+Some of these algorithms have significant drawbacks, ranging from enormous keys to hard-to-prove security. As Vadim Lyubashevsky pointed out (according to Jeremy Hsu in [his Spectrum post](https://spectrum.ieee.org/tech-talk/telecom/how-the-us-is-preparing-for-quantum-computings-threat-to-end-secrecy)), "The problem with cryptography in heneral is that cryptanalysis is an unrewarding process". Aiming for viable quantum-resistant alternatives for RSA by 2022 is, to say the least, ambitious.
 
 ## What we can build on DH
 
+
+* Elgamal
 * one-to-one encryption using SIDH + HKDF + AEAD AES
 * one-to-one signing using SIDH + HKDF + HMAC
 
