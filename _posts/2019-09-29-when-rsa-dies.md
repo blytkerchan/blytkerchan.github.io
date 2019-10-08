@@ -6,7 +6,7 @@ layout: post
 slug: when-rsa-dies
 title: When RSA dies
 ---
-IBM will [soon launch](https://techcrunch.com/2019/09/18/ibm-will-soon-launch-a-53-qubit-quantum-computer/) a 53-qubut quantum computer available as a cloud service, alongside five 20-qubit quantum computers. Google already has a number of quantum computers that they've been using in AI research. Their [publication database](https://ai.google/research/pubs/) has such gems as [A 28nm Bulk-CMOS 4-to-8GHz \<2mW Cryogenic Pulse Modulator for Scalable Quantum Computing](https://ai.google/research/pubs/pub47965), which describes an integrated circuit used to control qubits (which operate at extremely low temperatures, which comes with its own challenges. The goal here is to reduce the number of qubits required for error correction by improving the classic components of the quantum computer that control the qubits).
+IBM will [soon launch](https://techcrunch.com/2019/09/18/ibm-will-soon-launch-a-53-qubit-quantum-computer/) a 53-qubit quantum computer available as a cloud service, alongside five 20-qubit quantum computers. Google already has a number of quantum computers that they've been using in AI research. Their [publication database](https://ai.google/research/pubs/) has such gems as "*[A 28nm Bulk-CMOS 4-to-8GHz \<2mW Cryogenic Pulse Modulator for Scalable Quantum Computing](https://ai.google/research/pubs/pub47965)*", which describes an integrated circuit used to control qubits (which operate at extremely low temperatures, which comes with its own challenges. The goal here is to reduce the number of qubits required for error correction by improving the classic components of the quantum computer that control the qubits).
 
 Quantum computing technologies are advancing by leaps and bounds (or at least, they seem to be). This has led some to [speculate](https://quantumcomputingreport.com/our-take/applying-moores-law-to-quantum-qubits/) that we may be able to apply Moore's law to quantum computing, as we've done for classical computing. If that is the case, and provided we (humanity) find a way to:
 
@@ -29,6 +29,8 @@ There are basically two types of asymmetric cryptography, which covers three dis
 4. Bob can verify that the message arrives to him unaltered (Integrity), and
 5. Alice can't deny she sent the message (Non-Repudiation)
 
+**Note** that these are *extremely* narrow definitions of Confidentiality, Integrity, Availability, Authentication, Authorization and Non-Repudiation, but within the scope of this post, they will do.
+
 RSA implements these as follows:
 
 1. if Alice encrypts the message using Bob's public key, only Bob can read the message (Confidentiality, Authorization)
@@ -39,19 +41,31 @@ RSA implements these as follows:
 
 DH implements these as follows:
 
-1. Alice uses her own private key and Bob's public key to generate a shared symmetric key, which she uses to encrypt the message. She can still decrypt the message herself, but other than her, only Bob can decrypt it by generating the same shared symmetric key using Alice's public key and his own private key. The Confidentiality and Authorization guarantees are weaker, because they now include Alice, but not significantly so (because Alice already had access to the cleartext message).
+1. Alice uses her own private key and Bob's public key to generate a shared symmetric key, which she uses to encrypt the message. She can still decrypt the message herself, but other than her, only Bob can decrypt it by generating the same shared symmetric key using Alice's public key and his own private key. The Confidentiality and Authorization guarantees are weaker, because they now include Alice, but not significantly so, because Alice already had access to the cleartext message.
 2. Alice uses either an authenticating symmetric cipher (e.g. an AEAD-mode AES cipher) or generates an HMAC using a second shared key. Bob can verify this either by successfully decrypting the message using the authenticating cipher, or by generating the same HMAC. The Authentication guarantee is essentially the same as it was with RSA, although Alice now needs Bob's public key to implement it (which she didn't need before).
-3. as with RSA, Bob only needs his own private key and Alice's public key to decrypt and verify the message. Availability is uaranteed at the same level as with RSA.
+3. as with RSA, Bob only needs his own private key and Alice's public key to decrypt and verify the message. Availability is guaranteed at the same level as with RSA.
 4. as with RSA, the Authentication method used guarantees Integrity as well. The guarantee is the same as with RSA, although Alice now needs Bob's public key to implement it (which she didn't need before).
 5. While only Alice has her private key, and only Bob has his private key, the keys used for both encryption and verification are symmetric: anyone who has those keys can perform those operations, including Bob. If Bob is malicious, he can therefore perform the actions of encrypting and signing the message while pretending to be Alice. Alice has no way of repudiating this without blaming Bob, and vice-versa. The Non-Repudiation guarantee is inherently weaker than it is with RSA.
 
 Note the caveat for Authentication and Integrity: *in order to implement these with DH, the signer of the message (or object) needs the verifier's public key*. We'll get back to this caveat shortly: it's important.
 
+Building on DH, we can also implement ElGamal encryption. This uses an ephemeral public key and the underlying math for the Diffie-Hellman scheme to create a one-way encryption for a message. In that case:
+
+1. Using the ElGamal encryption scheme, Alice can encrypt the message such that only Bob can read it (Confidentiality, Authorization). The guarantees, in this case, are the same as they were for RSA, provided Alice discards the private key after use.
+2. Using the ElGamal signature scheme, Alice can sign the message to Bob. The Authentication guarantees are now essentially the same as they were for RSA, but Alice needs to do more to protect her private key: the siganture scheme requires a random number that may only be used once. Using it more than once exposes Alice's private key.
+3. the Availability guarantees are the same as for the other two schemes. There is some extra overhead, but once Bob has received the message, he automatically has everything he needs to decrypt it.
+4. As with the other two schemes, Authentication provides for Integrity as well.
+5. Non-Repudiation relies on Authentication in this case, and is this basically the same as with RSA.
+
+Now, this depends on ElGamal encryption and signaturen schemes existing, derived from the type of Diffie-Hellman scheme we're discussing. The original ElGamal schemes were derived from classic Diffie-Hellman. An ElGamal encryption scheme isn't difficult to derive from ECDH. An ElGamal signature scheme is a bit trickier, mainly because the classic ElGamal signature scheme is a bit tricker than the encryption scheme is, but according to [this paper](http://www.docsdrive.com/pdfs/ansinet/itj/2005/299-306.pdf) it is possible.
+
+Note the caveat in each case: ElGamal encryption uses an ephemeral public key for the sender, and sends that public key along with the ecrypted message. If you have the cleartext message, the signature and the public key, it is trivial to find the private key that corresponds to the ephemeral public key (which is why the public key has to be ephemeral). The ElGamal signature scheme relies on a random coprime of the prime that defines the field over which the keys are defined, and that random coprime needs to be different for every signature. Re-using the same coprime twice exposes your private key. So, using a combination of ElGamal encryption and signature schemes requires quite a bit of entropy and may require non-volatile storage to keep track of the parameters you've used.
+
 ## Quantum resistance
 
-Quantum resistance is a property of an algorithm that makes it *not significantly less difficult* to break with a quantum computer than it is to break the same with a classical computer. This all hinges on the word "significant": it *may* be less difficult to break the algorithm with a quantum computer (or with the help of a quantum computer), but not usefully so.
+Quantum resistance is the property of an algorithm that makes it *not significantly less difficult* to break with a quantum computer than it is to break the same with a classical computer. This all hinges on the word "significant": it *may* be less difficult to break the algorithm with a quantum computer (or with the help of a quantum computer), but not usefully so.
 
-A good example is symmetric cryptography: Grover's algorithm allows a quantum computer to find symmetric keys with a certain probability, depending on the key's size. It effectively cuts the effective size of the key in half: a 128-bit symmetric key is only as strong with a quantum computer, as a 64-bit symmetric key is without one. With a fairly run-of-the-mill computer, it would take about two days to guess such a key using a brute-force attack. 256-bit symmetric keys are generally considered "safe" from classical computers. Adding a quantum computer implementing Grover's algorithm to the mix, 512-bit symmetric keys are just as safe in ten years as 256-bit symmetric keys are today.
+A good example is symmetric cryptography: Grover's algorithm allows a quantum computer to find symmetric keys with a certain probability, depending on the key's size. It effectively cuts the effective size of the key in half: a 128-bit symmetric key is only as strong with a quantum computer, as a 64-bit symmetric key is without one. With a fairly run-of-the-mill computer, it would take about two days to guess such a key using a brute-force attack. 256-bit symmetric keys are generally considered "safe" from classical computers. Adding a quantum computer implementing Grover's algorithm to the mix, 512-bit symmetric keys are just as safe after quantum computers become generally available as 256-bit symmetric keys are today.
 
 That is, essentially, what quantum resistance is about: we need to reach a way to implement these use-cases in such a way that we have a workable work-around for when quantum computers become widely available to the "bad guys".
 
@@ -63,9 +77,9 @@ Among quantum-resistant asymmetric algorithms, we currently have the Supersingul
 
 In Diffie-Hellman, the public parameters of the exchange are a modulus **p** and a generator **g**, and the public key is **g** raised to some (secret) power, modulo **p**. These are all numbers. The generator can be small, but **p** and the secret exponent are usually big numbers. Diffie-Hellman depends on the fact that computers have a hard time finding the power to which you raised something, especially if the value is modulo some large prime (the *discrete logarithm problem*).
 
-Elliptic Curve Diffie-Hellman is very similar: Alice and Bob agree on a curve to use. Each chooses a random point on that curve as their private key, and a public point on the curve that is the private point multiplied by some public multiplier. Finding the shared secret relies on the commutative property of multiplication: if I have a secret value **a** and you have a secret value **b**, and we share a public value **c**, the I can give you **a * c** and you can give me **b * c** and we can come up with the same shared secret (**a * (b * c) == (a * c) * b**). The security of this scheme relies on the fact that it's much harder to divide than it is to multiply.
+Elliptic Curve Diffie-Hellman is very similar: Alice and Bob agree on a curve to use. Each chooses a random point on that curve as their private key, and a public point on the curve that is the private point multiplied by some shared, public multiplier. Finding the shared secret relies on the commutative property of multiplication: if I have a secret value **a** and you have a secret value **b**, and we share a public value **c**, then I can give you **a * c** and you can give me **b * c** and we can come up with the same shared secret (**a * (b * c) == (a * c) * b**). The security of this scheme relies on the fact that it's much harder to divide than it is to multiply (especially for elliptic curve math).
 
-In both cases, the exchange uses what's called a *trapdoor function*: it's harder to find a discrete logarithm than it is to raise something to the power of something else in a finite field, and it's harder to multiply than it is to divide. For classical computers, it's a *hard problem* to get out of those trapdoors. These particular trapdoors, however, are something that quantum computers are very good at getting out of
+In both cases, the exchange uses what's called a *trapdoor function*: it's harder to find a discrete logarithm than it is to raise something to the power of something else in a finite field, and it's harder to divide than it is to multiply. For classical computers, it's a *hard problem* to get out of those trapdoors. These particular trapdoors, however, are something that quantum computers are very good at getting out of.
 
 SIDH is different in that it relies on the fact that functions can be composed, and it's harder to decompose functions than it is to compose them. The function in question is the isogeny: it's a function that maps every point on a given elliptic curve to another elliptic curve. In SIDH, the curve itself is the public key, while the (random) isogeny is the private key. For the key exchange to work, Alice and Bob need to exchange their public elliptic curves, and two points that are the result of applying the random, secret isogeny function to two points on the curve. Bob does the same thing: he sends Alice his public curve and two transformed points. Both Alice and Bob then construct new isogenies from the isogenies, curves and points they now have, use that isogeny to map the elliptic curves they now have to new elliptic curves and find the j-invariant of of those curves. Those j-invariants will be the same for both Alice and Bob, and are the shared secret.
 
@@ -75,20 +89,30 @@ The important thing is that this allows you to have the same number of messages 
 
 ### Quantum-resistant RSA alternatives
 
-There are currently no viable quantum-resistant alternatives for RSA. While [one paper](https://link.springer.com/chapter/10.1007/978-3-319-59879-6_18) argues that it's possible to use RSA with carefully chosen parameters such that cracking it remains more expensive than legitimate use, 1-Terabyte keys are hardly viable.
+There are currently no viable quantum-resistant alternatives for RSA.
+
+While [one paper](https://link.springer.com/chapter/10.1007/978-3-319-59879-6_18) argues that it's possible to use RSA with carefully chosen parameters such that cracking it remains more expensive than legitimate use, 1-Terabyte keys are hardly viable.
 
 [The search is on](https://csrc.nist.gov/projects/post-quantum-cryptography/round-2-submissions), however: the first round of NIST's Post-Quantum-Cryptography project closed with its [final report](https://doi.org/10.6028/NIST.IR.8240) in January of this year, and kicked off the second round at the same time. The secind NIST PQC Standardization Conference took place in Santa Barbara last August, and they're still hoping to reach a viable solution (with 26 remaining candidates for algorithms divided among each of the three categories) by 2022. That's down from 69 candidates for the first round (out of 82 submissions, five of which withdrew, with the other eight being rejected).
 
-Some of these algorithms have significant drawbacks, ranging from enormous keys to hard-to-prove security. As Vadim Lyubashevsky pointed out (according to Jeremy Hsu in [his Spectrum post](https://spectrum.ieee.org/tech-talk/telecom/how-the-us-is-preparing-for-quantum-computings-threat-to-end-secrecy)), "The problem with cryptography in heneral is that cryptanalysis is an unrewarding process". Aiming for viable quantum-resistant alternatives for RSA by 2022 is, to say the least, ambitious.
+Some of these algorithms have significant drawbacks, ranging from enormous keys to hard-to-prove security, and as Vadim Lyubashevsky pointed out (according to Jeremy Hsu in [his Spectrum post](https://spectrum.ieee.org/tech-talk/telecom/how-the-us-is-preparing-for-quantum-computings-threat-to-end-secrecy)), "The problem with cryptography in heneral is that cryptanalysis is an unrewarding process". Aiming for viable quantum-resistant alternatives for RSA by 2022 is, to say the least, ambitious.
 
-## What we can build on DH
+But we do have at least one quantum-resistant asymmetric algorithm: SIDH. How much can we build on that?
 
+## What we can build on SIDH
 
-* Elgamal
-* one-to-one encryption using SIDH + HKDF + AEAD AES
-* one-to-one signing using SIDH + HKDF + HMAC
+As discussed above, SIDH can be used to generate a shared secret over a public channel. Once Alice and Bob have done their SIDH handshake, they share a secret key that they can use for any of the symmetric crypto algorithms, including AES for encrypting and decrypting, and an HMAC for authentication. Using an HKDF, the SIDH output (a shared secret) can be used to generate several keys, so a typical protocol might look like this:
 
-## What we can't build on DH: PKI
+1. Alice and Bob exchange their public keys. If they're not ephemeral SIDH public keys, they will also exchange nonces.
+2. Alice and Bob each calculate the shared secret using the requisite math of the SIDH protocol.
+3. If nonces are involved, and HKDF must be used to generate the shared key. If nonces are not involved, it may still be used to generate keys more suitable for the symmetric algorithms to be used.
+4. Alice and Bob now have shared symmetric keys to use with, e.g., an AEAD AES, an HMAC, and HMAC + AES, etc. Combinations of these provide for confidentiality, integrity, authentication, authorization, availability, and non-repudiation within the limits discussed above.
+
+This gives us Confidentiality and Integrity, but it doesn't give us Authentication, Authorization or Non-Repudiation, nor does it give us Availability in the sense that RSA, DH, and ElGamal give us. So, can we build ElGamal on top of SIDH?
+
+The ElGamal encryption scheme relies on a reversible function that maps the message *M* into the domain used by the Diffie-Hellman (-derived) algorithm, and then applies a transformation on that mapped message that can only be undone with the appropriate key. In classic ElGamal, this relies on both parties using the same cyclic group, of the same order, with the same generator. In Elliptic Curve ElGamal (for as far as such a thing exists) this relies on both parties using the same mapping function, and the same curve parameters. If we were to try to apply the same principles to SIDH, we would need to have some common *thing* between the sender and the receiver. The problem with Supersingular Isogeny Diffie-Hellman, is that the two parties don't have to agree on any particular *thing*: each side can use a different set of elliptic curves and different isogenies, as long as those elliptic curves are in a class of elliptic curves that is suitable for the protocol. The key exchange only guarantees that both sides end up with elliptic curves that have the same j-invariant, and that j-invariant is the shared secret. As all the ingredients in the exchange are ephemeral, and none of them are shared directly between the parties except the final j-invariant, there is nothing to map into that we can use. The only thing we can do, finally, is to use the j-invariant to compose a mapping function -- which is exactly what we end up doing when we use it as a key with a cipher or a hash.
+
+## What we can't build on SIDH: PKI
 
 * explain how PKI works
 * explain that you only need the CA's public key, **and they don't need yours**
