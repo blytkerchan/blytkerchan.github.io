@@ -6,6 +6,21 @@ layout: post
 slug: when-rsa-dies
 title: When RSA dies
 ---
+{% include shadowbox.html text="<b>The TL;DR:</b>" open_only=true %}
+<p>Below, I explain (as best I can):
+<ul>
+<li>why the end of RSA is nigh</li>
+<li>why ephemeral Diffie-Hellman will survive</li>
+<li>what we can and cannot build on top of ephemeral Diffie-Hellman</li>
+<li>what this means for post-quantum PKI</li>
+<li>why we need a quantum-resistant digital signature algorithm</li>
+</ul></p>
+<p>All of this is both complex and complicated. It is hard to write about this with any level of accuracy and still be readable for someone who hasn't spent an unreasonable amount of time steeped in articles about abstract math.</p>
+<p>I gloss over a lot of details trying to keep it reasonably understandable, and I hope I haven't dumbed everything down too much. I apologize in advance both for the bits that are too hard to understand, and the bits that may seem too obvious. It's hard to find a middle ground.</p>
+</div>
+<!--more-->
+## Some background
+
 IBM will [soon launch](https://techcrunch.com/2019/09/18/ibm-will-soon-launch-a-53-qubit-quantum-computer/) a 53-qubit quantum computer available as a cloud service, alongside five 20-qubit quantum computers. Google already has a number of quantum computers that they've been using in AI research. Their [publication database](https://ai.google/research/pubs/) has such gems as "*[A 28nm Bulk-CMOS 4-to-8GHz \<2mW Cryogenic Pulse Modulator for Scalable Quantum Computing](https://ai.google/research/pubs/pub47965)*", which describes an integrated circuit used to control qubits (which operate at extremely low temperatures, which comes with its own challenges. The goal here is to reduce the number of qubits required for error correction by improving the classic components of the quantum computer that control the qubits).
 
 Quantum computing technologies are advancing by leaps and bounds (or at least, they seem to be). This has led some to [speculate](https://quantumcomputingreport.com/our-take/applying-moores-law-to-quantum-qubits/) that we may be able to apply Moore's law to quantum computing, as we've done for classical computing. If that is the case, and provided we (humanity) find a way to:
@@ -18,7 +33,7 @@ Quantum computing technologies are advancing by leaps and bounds (or at least, t
 RSA will be dead.
 
 The question then becomes: "what are the consequences when RSA dies?"
-<!--more-->
+
 ## Asymmetric Cryptography and its use-cases
 
 There are basically two types of asymmetric cryptography, which covers three distinct use-cases. In each case, Alice wants to send a message to Bob and wants to make sure that:
@@ -114,12 +129,20 @@ The ElGamal encryption scheme relies on a reversible function that maps the mess
 
 ## What we can't build on SIDH: PKI
 
-* explain how PKI works
-* explain that you only need the CA's public key, **and they don't need yours**
-* explain the banking use-case
+The Public Key Infrastructure is what your web browser uses to know it is connecting to your bank's website: the website presents a certificate that is signed by a Certication Authority, which your browser trusts because it knows that CA's public key. There may be several intermediate signers between your bank's certificate and the CA, but as long as that *chain of trust* is intact, your browser will merrily show you your bank's website.
 
-## Conclusion: we need a quantum-resistant DSA
+This works because of the way RSA works: the RSA signature only requires you to know the CA's public key. Your own keys are not involved in the process in any way. This relies on two things:
 
-* what it is
-* what it is
+1. the CA's public key is static
+2. the CA doesn't need your public key to sign anything.
+
+Provided we have a signature algorithm that allows for static keys to be safely used several hundreds of times to sign different objects, this scheme works wonders. The entire security infrastructure of the Internet, as well as for the West's Critical Infrastructure is based on this premise.
+
+With the death of RSA, that is what dies.
+
+As pointed out above, the only viable quantum-resistant asymmetric cryptography algorithm we have is Supersingular Isogeny Diffie-Hellman. It inherently uses ephemeral keys and *cannot* securely use static keys. We therefore cannot build a signing scheme on top of it that has the same, or even compatible, usage constrains as RSA does.
+
+## Conclusion
+
+We need a quantum-resistant digital signature algorithm that allows for static keys and does not require a CA to have an individual's public key. NIST is leading the search and hopeful that one will be available by 2022. By 2030, RSA will be dead, and eight years is a very short time to replace PKI with something else.
 
