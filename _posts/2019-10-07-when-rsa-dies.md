@@ -1,7 +1,7 @@
 ---
 author: rlc
 comments: true
-date: 2019-09-29 12:32:00-04:00
+date: 2019-10-07 12:32:00-04:00
 layout: post
 slug: when-rsa-dies
 title: When RSA dies
