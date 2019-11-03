@@ -1,7 +1,7 @@
 ---
 author: rlc
 comments: true
-date: TBD
+date: 2019-11-03
 layout: post
 slug: why-quantum-exponential
 title: Why classical computers need exponentially more time and memory to simulate quantum computers
