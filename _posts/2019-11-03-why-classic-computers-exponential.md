@@ -11,3 +11,5 @@ If you're a bit like me, you get annoyed by the over-simplified explanations of 
 I should point out that this means either math or meth will be involved in understanding what I'm about to write. The second option being temporary for understanding and permanent for negative effects, I recommend the first.
 <!--more-->
 In order to explain why classical computers need exponentially more time and memory to simulate quantum computers according to the size of the quantum computer being simulated, I need to explain a few things about quantum computers and how they work. Now, because there's linear algebra involved and because it's a lot easier to write linear algebra in Latex than it is in markdown, you're going to have to [download this post in PDF format to read it](/assets/2019/11/quantum-exponential.pdf).
+
+**2019-11-11 Update:** I've updated the PDF to clarify a few things, following comments by my lovely wife.
