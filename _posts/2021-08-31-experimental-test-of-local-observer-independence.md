@@ -15,7 +15,7 @@ Both interpretations, as well as a bunch of others, correspond to observable rea
 
 The question of whether an observer is independent of the thing being locally observed, though, is crucial in both interpretations: both ask what happens if a quantum state is "observed". Specifically, they don’t ask what happens "when a local observer becomes entangled with a quantum state". 
 
-Wigner’s Friend experiment hints at this: imagine you have Schrödinger’s cat in a box, in a superposition of alive and dead, unobserved and unperturbed. The Friend goes ahead and observes the state of the cat, but doesn’t tell Wigner what the state is. From Wigner’s point of view, the cat not only remains in a state of a superposition between alive and dead, but the Cat-Friend system is in a superposition of "cat dead, friend saw it dead | cat alive friend saw it alive" until the Friend tells Wigner what the observation was. 
+Wigner’s Friend experiment hints at this: imagine you have Schrödinger’s cat in a box, in a superposition of alive and dead, unobserved and unperturbed. The Friend goes ahead and observes the state of the cat, but doesn’t tell Wigner what the state is. From Wigner’s point of view, the cat not only remains in a state of a superposition between alive and dead, but the Cat-Friend system is in a superposition of "cat dead, friend saw it dead ; cat alive, friend saw it alive" until the Friend tells Wigner what the observation was. 
 
 In the Copenhagen interpretation, the question is when the cat’s superposition collapsed. In the many worlds interpretation, the question is how many worlds there are now, and when that happened. 
 
