@@ -50,3 +50,7 @@ For the use-case in question, there is definitely more information here than nee
 
 ### Can this be fixed?
 These vaccine passports are software-based and the software needs to be updated regularly so yes, it can be. All that's needed is for the app, at its next update, to request a new QR code that encodes the name and birth decade of the person, rather than the entire COVID-related medical record. The verification app, at its next update (which should precede the customer update) should accept both QR codes for a month or so.
+
+***This post was cross-posted from [applied-paranoia.com](https://applied-paranoia.com/2021/09/06/vaxicode-tmi.html)***
+
+***This post was updated on 2021-09-07 to add more details***
