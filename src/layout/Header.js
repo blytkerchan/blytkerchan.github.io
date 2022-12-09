@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import menu from "../menu";
 
 const Header = (props) => {
   return (
@@ -6,7 +7,7 @@ const Header = (props) => {
       <header className="py-3 mb-3 border-bottom">
         <div
           className="container-fluid d-grid gap-3 align-items-center"
-          style={{gridTemplateColumns: "1fr 2fr"}}
+          style={{ gridTemplateColumns: "1fr 2fr" }}
         >
           <div className="dropdown vln-smallscreen-block">
             <Link
@@ -20,39 +21,15 @@ const Header = (props) => {
               <strong>Vlinder Software</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow">
-              <li>
-                <Link className="dropdown-item active" to="/overview" aria-current="page">
-                  Overview
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/inventory">
-                  Inventory
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/customers">
-                  Customers
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/products">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/reports">
-                  Reports
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="/analytics">
-                  Analytics
-                </Link>
-              </li>
+              {menu.map((menuItem, index) => {
+                return (
+                  <li key={index}>
+                    <NavLink className="dropdown-item" to={menuItem.path}>
+                      {menuItem.title}
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
