@@ -22,40 +22,52 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <Layout><Error /></Layout>,
+    errorElement: (
+      <Layout>
+        <Error />
+      </Layout>
+    ),
     children: [
       {
         path: "",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "customers",
-        element: <Customers />
+        element: <Customers />,
       },
       {
         path: "dashboard",
-        element: <Dashboard />
+        element: <Dashboard />,
       },
       {
         path: "orders",
-        element: <Orders />
+        element: <Orders />,
       },
       {
         path: "products",
-        element: <Products />
+        element: <Products />,
       },
     ],
   },
 ]);
 
-const App = (props) => {
-  return(
-    <RouterProvider router={router} />
-  );
+class App extends React.Component {
+  componentDidMount() {
+    import("./pages/About");
+    import("./pages/Customers");
+    import("./pages/Dashboard");
+    import("./pages/Orders");
+    import("./pages/Products");
+  }
+
+  render(props) {
+    return <RouterProvider router={router} />;
+  }
 }
 
 export default App;
