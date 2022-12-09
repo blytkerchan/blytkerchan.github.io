@@ -1,4 +1,4 @@
-const menu = [
+const mainMenu = [
     {
         path: "/",
         title: "Home",
@@ -26,4 +26,4 @@ const menu = [
     },
 ];
 
-export default menu;
+export default mainMenu;

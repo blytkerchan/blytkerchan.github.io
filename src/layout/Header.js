@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Header = (props) => {
-  const menu = props.menu;
+  const mainMenu = props.mainMenu;
   return (
     <>
       <header className="py-3 mb-3 border-bottom">
@@ -21,7 +21,7 @@ const Header = (props) => {
               <strong id="titleLabel">Vlinder Software</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow" id="menuItems">
-              {menu.map((menuItem, index) => {
+              {mainMenu.map((menuItem, index) => {
                 return (
                   <li key={index}>
                     <NavLink className="dropdown-item" to={menuItem.path}>

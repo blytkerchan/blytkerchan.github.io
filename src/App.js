@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
-import menu from './menu';
+import mainMenu from './mainMenu';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -23,9 +23,9 @@ const Products = React.lazy(() => import("./pages/Products"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout menu={menu} />,
+    element: <Layout mainMenu={mainMenu} />,
     errorElement: (
-      <Layout menu={menu}>
+      <Layout mainMenu={mainMenu}>
         <Error />
       </Layout>
     ),

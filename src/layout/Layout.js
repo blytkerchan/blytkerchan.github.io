@@ -7,14 +7,14 @@ import Sidebar from "./Sidebar";
 import Spinner from "./Spinner";
 
 const Layout = (props) => {
-  const menu = props.menu;
+  const mainMenu = props.mainMenu;
   return (
     <div>
-      <Header name="Vlinder Software" logoLocation="/logo.svg" menu={menu} />
+      <Header name="Vlinder Software" logoLocation="/logo.svg" mainMenu={mainMenu} />
       <div className="d-flex" style={{ marginBottom: 55 }}>
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
-            <Sidebar menu={menu} />
+            <Sidebar menu={mainMenu} />
           </div>
         </div>
         <div className="p-2 w-100 vln-scroll-box">
