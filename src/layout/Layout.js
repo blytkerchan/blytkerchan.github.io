@@ -1,8 +1,10 @@
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-import Footer from "./Footer";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Footer from './Footer';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Spinner from './Spinner';
 
 const Layout = (props) => {
   return (
@@ -19,7 +21,9 @@ const Layout = (props) => {
             <div className="container-fluid pb-3">
               <div className="bg-light border rounded-3">
                 <div className="p-2" style={{ minHeight: "80vh" }}>
-                  <Outlet />
+                  <React.Suspense fallback=<Spinner />>
+                    <Outlet />
+                  </React.Suspense>
                   {props.children}
                 </div>
               </div>

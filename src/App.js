@@ -1,19 +1,22 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import './App.css';
+import React from "react";
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./App.css";
 
-import About from './pages/About';
-import Customers from './pages/Customers';
-import Dashboard from './pages/Dashboard';
-import Error from './pages/Error';
-import Home from './pages/Home';
-import Orders from './pages/Orders';
-import Products from './pages/Products';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Layout from './layout/Layout';
+import Error from "./pages/Error";
+import Home from "./pages/Home";
+
+import Layout from "./layout/Layout";
+
+const About = React.lazy(() => import("./pages/About"));
+const Customers = React.lazy(() => import("./pages/Customers"));
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const Orders = React.lazy(() => import("./pages/Orders"));
+const Products = React.lazy(() => import("./pages/Products"));
 
 const router = createBrowserRouter([
   {
