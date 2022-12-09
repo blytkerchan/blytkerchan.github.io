@@ -14,11 +14,11 @@ const Layout = (props) => {
             <Sidebar />
           </div>
         </div>
-        <div className="p-2 w-100">
+        <div className="p-2 w-100 vln-scroll-box">
           <div className="container-fluid">
             <div className="container-fluid pb-3">
               <div className="bg-light border rounded-3">
-                <div className="p-2 h-100" style={{ minHeight: "80vh" }}>
+                <div className="p-2" style={{ minHeight: "80vh" }}>
                   <Outlet />
                   {props.children}
                 </div>

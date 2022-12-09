@@ -47,3 +47,8 @@ em {
     display: inline;
   }
 }
+
+.vln-scroll-box {
+  height: calc(100vh - 145px);
+  overflow-y: auto;
+}
