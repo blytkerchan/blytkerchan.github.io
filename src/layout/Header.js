@@ -17,7 +17,7 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <span className="vln-fullscreen-inline">Vlinder Software</span>
+              <span className="vln-fullscreen-inline"><strong>Vlinder Software</strong></span>
             </Link>
             <ul className="dropdown-menu text-small shadow">
               <li>
