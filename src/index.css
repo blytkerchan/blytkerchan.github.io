@@ -46,7 +46,7 @@ em {
 .vln-smallscreen-block {
   display: none;
 }
-@media(max-width: 576px) {
+@media(max-width: 575px) {
   .vln-smallscreen-block {
     display: block;
   }
@@ -55,7 +55,7 @@ em {
 .vln-smallscreen-inline {
   display: none;
 }
-@media(max-width: 576px) {
+@media(max-width: 575px) {
   .vln-smallscreen-inline {
     display: inline;
   }
