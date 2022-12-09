@@ -9,7 +9,7 @@ import Spinner from './Spinner';
 const Layout = (props) => {
   return (
     <div>
-      <Header name="Vlinder Software" logoLocation="/logo.png" />
+      <Header name="Vlinder Software" logoLocation="/logo.svg" />
       <div className="d-flex" style={{ marginBottom: 55 }}>
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
