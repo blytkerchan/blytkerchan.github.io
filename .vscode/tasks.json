@@ -10,6 +10,13 @@
     },
     {
       "type": "npm",
+      "script": "lint",
+      "problemMatcher": ["$eslint-compact"],
+      "label": "npm: lint",
+      "detail": "eslint"
+    },
+    {
+      "type": "npm",
       "script": "serve",
       "presentation": {
         "focus": true,

@@ -32,9 +32,11 @@ const router = (menu) =>
 
 const checkMenuItem = (li, index, menu) => {
   expect(li.nodeName).toEqual("LI");
+  // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   const a = li.querySelector("a");
   const href = a.getAttributeNode("href");
   expect(href.value).toEqual(menu[index].path);
+  // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   const i = li.querySelector("i");
   const clazz = i.getAttributeNode("class");
   expect(clazz.value).toEqual(menu[index].icon);
@@ -46,9 +48,10 @@ describe("Sidebar renders the menu passed to it, including icons", () => {
   test("empty menu == empty sidebar", () => {
     const menu = [];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);
@@ -64,9 +67,10 @@ describe("Sidebar renders the menu passed to it, including icons", () => {
       },
     ];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);
@@ -102,9 +106,10 @@ describe("Sidebar renders the menu passed to it, including icons", () => {
       },
     ];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);

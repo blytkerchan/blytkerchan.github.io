@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-  render,
-  queryByAttribute,
-} from "@testing-library/react";
+import { render, queryByAttribute } from "@testing-library/react";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./Header";
@@ -32,20 +29,22 @@ const router = (menu) =>
 
 const checkMenuItem = (li, index, menu) => {
   expect(li.nodeName).toEqual("LI");
+  // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   const a = li.querySelector("a");
   const href = a.getAttributeNode("href");
   expect(href.value).toEqual(menu[index].path);
   const re = new RegExp(`^${menu[index].title}$`);
   expect(li.textContent).toMatch(re);
-}
+};
 
 describe("Header renders the menu passed to it, excluding icons", () => {
   test("empty menu == empty sidebar", () => {
     const menu = [];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);
@@ -61,9 +60,10 @@ describe("Header renders the menu passed to it, excluding icons", () => {
       },
     ];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);
@@ -99,9 +99,10 @@ describe("Header renders the menu passed to it, excluding icons", () => {
       },
     ];
 
-    const dom = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu)} />);
 
-    const ul = getById(dom.container, "menuItems");
+    const ul = getById(view.container, "menuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu);
