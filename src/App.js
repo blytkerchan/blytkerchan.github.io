@@ -6,6 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
 import mainMenu from './mainMenu';
+import userMenu from './userMenu';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -23,9 +24,9 @@ const Products = React.lazy(() => import("./pages/Products"));
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout mainMenu={mainMenu} />,
+    element: <Layout mainMenu={mainMenu} userMenu={userMenu} />,
     errorElement: (
-      <Layout mainMenu={mainMenu}>
+      <Layout mainMenu={mainMenu} userMenu={userMenu}>
         <Error />
       </Layout>
     ),

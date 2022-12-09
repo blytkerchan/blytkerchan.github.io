@@ -10,7 +10,7 @@ const getById = queryByAttribute.bind(null, "id");
 const Layout = (props) => {
   return (
     <>
-      <Header menu={props.menu} />
+      <Header mainMenu={props.mainMenu} userMenu={props.userMenu} />
       <Outlet />
     </>
   );
@@ -18,11 +18,11 @@ const Layout = (props) => {
 const Error = (props) => {
   return <></>;
 };
-const router = (menu) =>
+const router = (mainMenu, userMenu) =>
   createBrowserRouter([
     {
       path: "/",
-      element: <Layout menu={menu} />,
+      element: <Layout mainMenu={mainMenu} userMenu={userMenu} />,
       errorElement: <Error />,
     },
   ]);
@@ -38,12 +38,12 @@ const checkMenuItem = (li, index, menu) => {
 };
 
 describe("Header renders the menu passed to it, excluding icons", () => {
-  test("empty menu == empty sidebar", () => {
+  test("empty menu == empty menu", () => {
     const menu = [];
 
-    const view = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu, [])} />);
 
-    const ul = getById(view.container, "menuItems");
+    const ul = getById(view.container, "mainMenuItems");
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
@@ -60,9 +60,9 @@ describe("Header renders the menu passed to it, excluding icons", () => {
       },
     ];
 
-    const view = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu, [])} />);
 
-    const ul = getById(view.container, "menuItems");
+    const ul = getById(view.container, "mainMenuItems");
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
@@ -99,9 +99,82 @@ describe("Header renders the menu passed to it, excluding icons", () => {
       },
     ];
 
-    const view = render(<RouterProvider router={router(menu)} />);
+    const view = render(<RouterProvider router={router(menu, [])} />);
 
-    const ul = getById(view.container, "menuItems");
+    const ul = getById(view.container, "mainMenuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
+    expect(ul.childElementCount).toEqual(menu.length);
+    ul.childNodes.forEach((li, index) => {
+      checkMenuItem(li, index, menu);
+    });
+  });
+});
+
+describe("Header renders the user menu passed to it, excluding icons", () => {
+  test("empty menu == empty menu", () => {
+    const menu = [];
+
+    const view = render(<RouterProvider router={router([], menu)} />);
+
+    const ul = getById(view.container, "userMenuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
+    expect(ul.childElementCount).toEqual(menu.length);
+    ul.childNodes.forEach((li, index) => {
+      checkMenuItem(li, index, menu);
+    });
+  });
+
+  test("1 menu item", () => {
+    const menu = [
+      {
+        path: "/",
+        title: "Home",
+        icon: "bi-home",
+      },
+    ];
+
+    const view = render(<RouterProvider router={router([], menu)} />);
+
+    const ul = getById(view.container, "userMenuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
+    expect(ul.childElementCount).toEqual(menu.length);
+    ul.childNodes.forEach((li, index) => {
+      checkMenuItem(li, index, menu);
+    });
+  });
+
+  test("5 menu item", () => {
+    const menu = [
+      {
+        path: "/",
+        title: "Home",
+        icon: "bi-house",
+      },
+      {
+        path: "/dashboard",
+        title: "Dashboard",
+        icon: "bi-speedometer",
+      },
+      {
+        path: "/orders",
+        title: "Orders",
+        icon: "bi-table",
+      },
+      {
+        path: "/products",
+        title: "Products",
+        icon: "bi-grid",
+      },
+      {
+        path: "/customers",
+        title: "Customers",
+        icon: "bi-people",
+      },
+    ];
+
+    const view = render(<RouterProvider router={router([], menu)} />);
+
+    const ul = getById(view.container, "userMenuItems");
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {

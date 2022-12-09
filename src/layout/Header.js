@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = (props) => {
   const mainMenu = props.mainMenu;
+  const userMenu = props.userMenu;
   return (
     <>
       <header className="py-3 mb-3 border-bottom">
@@ -20,7 +21,7 @@ const Header = (props) => {
               &nbsp;
               <strong id="titleLabel">Vlinder Software</strong>
             </Link>
-            <ul className="dropdown-menu text-small shadow" id="menuItems">
+            <ul className="dropdown-menu text-small shadow" id="mainMenuItems">
               {mainMenu.map((menuItem, index) => {
                 return (
                   <li key={index}>
@@ -60,30 +61,16 @@ const Header = (props) => {
                   alt="blytkerchan"
                 />
               </Link>
-              <ul className="dropdown-menu text-small shadow">
-                <li>
-                  <Link className="dropdown-item" to="/newproject">
-                    New project...
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/settings">
-                    Settings
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/profile">
-                    Profile
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="/signout">
-                    Sign out
-                  </Link>
-                </li>
+              <ul className="dropdown-menu text-small shadow" id="userMenuItems">
+                {userMenu.map((menuItem, index) => {
+                  return (
+                    <li key={index}>
+                      <NavLink className="dropdown-item" to={menuItem.path}>
+                        {menuItem.title}
+                      </NavLink>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

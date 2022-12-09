@@ -8,9 +8,10 @@ import Spinner from "./Spinner";
 
 const Layout = (props) => {
   const mainMenu = props.mainMenu;
+  const userMenu = props.userMenu;
   return (
     <div>
-      <Header name="Vlinder Software" logoLocation="/logo.svg" mainMenu={mainMenu} />
+      <Header name="Vlinder Software" logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
       <div className="d-flex" style={{ marginBottom: 55 }}>
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
