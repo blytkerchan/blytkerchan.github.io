@@ -5,7 +5,7 @@ const Header = (props) => {
   const userMenu = props.userMenu;
   return (
     <>
-      <header className="py-3 mb-3 border-bottom">
+      <header className="py-3 border-bottom">
         <div
           className="container-fluid d-grid gap-3 align-items-center"
           style={{ gridTemplateColumns: "1fr 2fr" }}

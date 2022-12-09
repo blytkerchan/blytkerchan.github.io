@@ -62,6 +62,6 @@ em {
 }
 
 .vln-scroll-box {
-  height: calc(100vh - 145px);
+  height: calc(100vh - 93px);
   overflow-y: auto;
 }
