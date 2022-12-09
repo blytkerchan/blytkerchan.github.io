@@ -16,7 +16,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
     "lint": "eslint -f compact src/**/*.js"
   },
   "eslintConfig": {

@@ -1,6 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The layout of the directories
+
+This project was bootstrapped with the usual React thing, so `public/` contains the usual HTML assets and `src/` contains the code. The `.vscode/` directory contains some useful artifacts if you're me, but in the unlikely event you are not be, you may want to flush it and put your own VS Code configurations in there -- or get rid of it altogether.
+
+Assuming you're future me, most of the following will be reminders.
+
+Under `src/`, you'll find a few files that may or may not be of interest to you. Most of them you'll almost never need to touch, but the routing code for the app is in `App.js`. If you need to add new components to the app, and those components are rendered as pages, you'll need to add them there as well. Note that everyhing except `Home` is lazy-loaded, but also delay-loaded. This means that while they're only loaded when they're needed, they will also start loading as soon as the main application has rendered for the first time. This happens in parallel with downloading images, most of which are very small, so it's mostly imperceptible, but it actually speeds up UX a bit because the lazy loading isn't as visible. There are comments in the code to point you to where these need be added (and because I'm sparse with my comments, that should be enough to find them).
+
+Aside from the few top-level files in `src/` there are a few directories.
+- The `src/layout/` directory contains layouting components that basically set up the application's framework. If you want to change the layout, this is where you go.
+- The `src/pages/` directory contains the pages users will interact with. These should all be referenced in the router (otherwise, how will you navigate to them?).
+- The `src/config/` directory contains the application's configuration, including menu contents.
 
 ## Available Scripts
 
@@ -16,8 +27,8 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the unit test runner in the interactive watch mode.\
+If running in CI, it will just run the test runner.
 
 ### `npm run build`
 
@@ -29,25 +40,13 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Runs the linter on the application. Should not cause any errors.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Some useful references
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I kept these from the template because they're useful references.
 
 ### Analyzing the Bundle Size
 
@@ -61,10 +60,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

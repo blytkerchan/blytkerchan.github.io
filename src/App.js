@@ -5,8 +5,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
-import mainMenu from './mainMenu';
-import userMenu from './userMenu';
+import mainMenu from './config/mainMenu';
+import userMenu from './config/userMenu';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -15,6 +15,7 @@ import Home from "./pages/Home";
 
 import Layout from "./layout/Layout";
 
+// Pages to lazy-load
 const About = React.lazy(() => import("./pages/About"));
 const Customers = React.lazy(() => import("./pages/Customers"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
@@ -61,6 +62,7 @@ const router = createBrowserRouter([
 
 class App extends React.Component {
   componentDidMount() {
+    // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/About");
     import("./pages/Customers");
     import("./pages/Dashboard");
