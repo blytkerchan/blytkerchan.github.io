@@ -8,7 +8,7 @@ const Header = (props) => {
           className="container-fluid d-grid gap-3 align-items-center"
           style={{gridTemplateColumns: "1fr 2fr"}}
         >
-          <div className="dropdown">
+          <div className="dropdown vln-smallscreen-block">
             <Link
               to="/"
               className="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
@@ -17,7 +17,7 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <span className="vln-fullscreen-inline"><strong>Vlinder Software</strong></span>
+              <strong>Vlinder Software</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow">
               <li>
@@ -56,16 +56,18 @@ const Header = (props) => {
             </ul>
           </div>
 
-          <div className="d-flex align-items-center">
-            <form className="w-100 me-3" role="search">
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Search..."
-                aria-label="Search"
-              />
-            </form>
+          <div className="dropdown vln-fullscreen-block">
+            <Link
+              to="/"
+              className="d-flex align-items-center link-dark text-decoration-none"
+            >
+              <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
+              &nbsp;
+              <strong>Vlinder Software</strong>
+            </Link>
+          </div>
 
+          <div className="d-flex flex-row-reverse align-items-center">
             <div className="flex-shrink-0 dropdown">
               <Link
                 to="/user"
