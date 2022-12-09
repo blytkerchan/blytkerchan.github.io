@@ -1,19 +1,20 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
 
-import Footer from './Footer';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Spinner from './Spinner';
+import Footer from "./Footer";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Spinner from "./Spinner";
 
 const Layout = (props) => {
+  const menu = props.menu;
   return (
     <div>
-      <Header name="Vlinder Software" logoLocation="/logo.svg" />
+      <Header name="Vlinder Software" logoLocation="/logo.svg" menu={menu} />
       <div className="d-flex" style={{ marginBottom: 55 }}>
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
-            <Sidebar />
+            <Sidebar menu={menu} />
           </div>
         </div>
         <div className="p-2 w-100 vln-scroll-box">

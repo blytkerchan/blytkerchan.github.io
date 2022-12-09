@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import menu from "../menu";
 
 const Header = (props) => {
+  const menu = props.menu;
   return (
     <>
       <header className="py-3 mb-3 border-bottom">
@@ -18,9 +18,9 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong>Vlinder Software</strong>
+              <strong id="titleLabel">Vlinder Software</strong>
             </Link>
-            <ul className="dropdown-menu text-small shadow">
+            <ul className="dropdown-menu text-small shadow" id="menuItems">
               {menu.map((menuItem, index) => {
                 return (
                   <li key={index}>
