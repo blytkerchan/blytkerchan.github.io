@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-  render,
-  queryByAttribute,
-} from "@testing-library/react";
+import { render, queryByAttribute } from "@testing-library/react";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
@@ -42,7 +39,7 @@ const checkMenuItem = (li, index, menu) => {
   expect(clazz.value).toEqual(menu[index].icon);
   const re = new RegExp(`^\\s+${menu[index].title}$`);
   expect(li.textContent).toMatch(re);
-}
+};
 
 describe("Sidebar renders the menu passed to it, including icons", () => {
   test("empty menu == empty sidebar", () => {

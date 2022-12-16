@@ -5,8 +5,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
-import mainMenu from './config/mainMenu';
-import userMenu from './config/userMenu';
+import mainMenu from "./config/mainMenu";
+import userMenu from "./config/userMenu";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

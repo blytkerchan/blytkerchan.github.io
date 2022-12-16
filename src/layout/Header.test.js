@@ -39,8 +39,7 @@ const checkMenuItem = (li, index, menu, expectIcon) => {
     ul.childNodes.forEach((innerLi, innerIndex) => {
       checkMenuItem(innerLi, innerIndex, menu[index].children, true);
     });
-  }
-  else {
+  } else {
     expect(href.value).toEqual(menu[index].path);
     if (expectIcon) {
       // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
@@ -49,8 +48,7 @@ const checkMenuItem = (li, index, menu, expectIcon) => {
       expect(clazz.value).toEqual(menu[index].icon);
       const re = new RegExp(`^\\s+${menu[index].title}$`);
       expect(li.textContent).toMatch(re);
-    }
-    else {
+    } else {
       const re = new RegExp(`^${menu[index].title}$`);
       expect(li.textContent).toMatch(re);
     }
@@ -202,7 +200,7 @@ describe("Header renders the user menu passed to it, including icons", () => {
     });
   });
 
-  test('Three items, one of which with two children', () => {
+  test("Three items, one of which with two children", () => {
     const menu = [
       {
         path: "/",
@@ -222,8 +220,8 @@ describe("Header renders the user menu passed to it, including icons", () => {
             path: "/products",
             title: "Products",
             icon: "bi-grid",
-          }    
-        ]
+          },
+        ],
       },
       {
         path: "/customers",
@@ -240,5 +238,5 @@ describe("Header renders the user menu passed to it, including icons", () => {
     ul.childNodes.forEach((li, index) => {
       checkMenuItem(li, index, menu, true);
     });
-  })
+  });
 });

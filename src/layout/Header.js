@@ -1,8 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Header = (props) => {
   const mainMenu = props.mainMenu;
   const userMenu = props.userMenu;
+  const { t } = useTranslation();
   return (
     <>
       <header className="py-3 border-bottom">
@@ -19,14 +21,14 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong id="titleLabel">Vlinder Software</strong>
+              <strong id="titleLabel">{t("title")}</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow" id="mainMenuItems">
               {mainMenu.map((menuItem, index) => {
                 return (
                   <li key={index}>
                     <NavLink className="dropdown-item" to={menuItem.path}>
-                      {menuItem.title}
+                      {t(menuItem.title)}
                     </NavLink>
                   </li>
                 );
@@ -41,7 +43,7 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong>Vlinder Software</strong>
+              <strong>{t("title")}</strong>
             </Link>
           </div>
 
@@ -72,7 +74,7 @@ const Header = (props) => {
                       <li key={index}>
                         <Link className="dropdown-item" to={menuItem.path}>
                           <i className={menuItem.icon}></i>&nbsp;
-                          {menuItem.title}
+                          {t(menuItem.title)}
                         </Link>
                       </li>
                     );
@@ -95,7 +97,7 @@ const Header = (props) => {
                               style={{ padding: "4px 16px" }}
                             >
                               <i className={menuItem.icon}></i>&nbsp;
-                              {menuItem.title}&nbsp;
+                              {t(menuItem.title)}&nbsp;
                             </div>
                           </span>
                           <div
@@ -122,7 +124,7 @@ const Header = (props) => {
                                       >
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <i className={child.icon}></i>&nbsp;
-                                        {child.title}
+                                        {t(child.title)}
                                       </Link>
                                     </li>
                                   );

@@ -11,12 +11,12 @@ const userMenu = [
       {
         path: "/terms/user-agreement",
         title: "User agreement",
-        icon: "bi-file-earmark-text"
+        icon: "bi-file-earmark-text",
       },
       {
         path: "/terms/privacy-policy",
         title: "Privacy policy",
-        icon: "bi-file-earmark-text"
+        icon: "bi-file-earmark-text",
       },
     ],
   },
