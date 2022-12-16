@@ -70,7 +70,7 @@ describe("Header renders the menu passed to it, excluding icons", () => {
     });
   });
 
-  test("5 menu item", () => {
+  test("5 menu items", () => {
     const menu = [
       {
         path: "/",
@@ -143,7 +143,7 @@ describe("Header renders the user menu passed to it, excluding icons", () => {
     });
   });
 
-  test("5 menu item", () => {
+  test("5 menu items", () => {
     const menu = [
       {
         path: "/",
