@@ -32,11 +32,14 @@ const checkMenuItem = (li, index, menu, expectIcon) => {
   // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   const a = li.querySelector("a");
   const href = a.getAttributeNode("href");
+  // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   if (menu[index].children?.length) {
-    // if the item has children, I should be able to get its list of children and check them individually as menu items
+    // eslint-disable-next-line testing-library/prefer-screen-queries -- if the item has children, I should be able to get its list of children and check them individually as menu items
     const ul = getByTestId(li, "childMenu");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu[index].children.length);
     ul.childNodes.forEach((innerLi, innerIndex) => {
+      // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
       checkMenuItem(innerLi, innerIndex, menu[index].children, true);
     });
   } else {
