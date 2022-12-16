@@ -1,6 +1,6 @@
 import React from "react";
 
-import { render, queryByAttribute } from "@testing-library/react";
+import { render, queryByAttribute, getByTestId } from "@testing-library/react";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./Header";
@@ -27,14 +27,34 @@ const router = (mainMenu, userMenu) =>
     },
   ]);
 
-const checkMenuItem = (li, index, menu) => {
+const checkMenuItem = (li, index, menu, expectIcon) => {
   expect(li.nodeName).toEqual("LI");
   // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
   const a = li.querySelector("a");
   const href = a.getAttributeNode("href");
-  expect(href.value).toEqual(menu[index].path);
-  const re = new RegExp(`^${menu[index].title}$`);
-  expect(li.textContent).toMatch(re);
+  if (menu[index].children?.length) {
+    // if the item has children, I should be able to get its list of children and check them individually as menu items
+    const ul = getByTestId(li, "childMenu");
+    expect(ul.childElementCount).toEqual(menu[index].children.length);
+    ul.childNodes.forEach((innerLi, innerIndex) => {
+      checkMenuItem(innerLi, innerIndex, menu[index].children, true);
+    });
+  }
+  else {
+    expect(href.value).toEqual(menu[index].path);
+    if (expectIcon) {
+      // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
+      const i = li.querySelector("i");
+      const clazz = i.getAttributeNode("class");
+      expect(clazz.value).toEqual(menu[index].icon);
+      const re = new RegExp(`^\\s+${menu[index].title}$`);
+      expect(li.textContent).toMatch(re);
+    }
+    else {
+      const re = new RegExp(`^${menu[index].title}$`);
+      expect(li.textContent).toMatch(re);
+    }
+  }
 };
 
 describe("Header renders the menu passed to it, excluding icons", () => {
@@ -47,7 +67,7 @@ describe("Header renders the menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, false);
     });
   });
 
@@ -66,7 +86,7 @@ describe("Header renders the menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, false);
     });
   });
 
@@ -105,12 +125,12 @@ describe("Header renders the menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, false);
     });
   });
 });
 
-describe("Header renders the user menu passed to it, excluding icons", () => {
+describe("Header renders the user menu passed to it, including icons", () => {
   test("empty menu == empty menu", () => {
     const menu = [];
 
@@ -120,7 +140,7 @@ describe("Header renders the user menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, true);
     });
   });
 
@@ -139,7 +159,7 @@ describe("Header renders the user menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, true);
     });
   });
 
@@ -178,7 +198,47 @@ describe("Header renders the user menu passed to it, excluding icons", () => {
     // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
     expect(ul.childElementCount).toEqual(menu.length);
     ul.childNodes.forEach((li, index) => {
-      checkMenuItem(li, index, menu);
+      checkMenuItem(li, index, menu, true);
     });
   });
+
+  test('Three items, one of which with two children', () => {
+    const menu = [
+      {
+        path: "/",
+        title: "Home",
+        icon: "bi-house",
+      },
+      {
+        title: "Dashboard",
+        icon: "bi-speedometer",
+        children: [
+          {
+            path: "/orders",
+            title: "Orders",
+            icon: "bi-table",
+          },
+          {
+            path: "/products",
+            title: "Products",
+            icon: "bi-grid",
+          }    
+        ]
+      },
+      {
+        path: "/customers",
+        title: "Customers",
+        icon: "bi-people",
+      },
+    ];
+
+    const view = render(<RouterProvider router={router([], menu)} />);
+
+    const ul = getById(view.container, "userMenuItems");
+    // eslint-disable-next-line testing-library/no-node-access -- we really do want to check the structure here
+    expect(ul.childElementCount).toEqual(menu.length);
+    ul.childNodes.forEach((li, index) => {
+      checkMenuItem(li, index, menu, true);
+    });
+  })
 });

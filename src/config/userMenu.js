@@ -1,29 +1,25 @@
 const userMenu = [
-    {
-        path: "/",
-        title: "Home",
-        icon: "bi-house"
-    },
-    {
-        path: "/dashboard",
-        title: "Dashboard",
-        icon: "bi-speedometer"
-    },
-    {
-        path: "/orders",
-        title: "Orders",
-        icon: "bi-table"
-    },
-    {
-        path: "/products",
-        title: "Products",
-        icon: "bi-grid"
-    },
-    {
-        path: "/customers",
-        title: "Customers",
-        icon: "bi-people"
-    },
+  {
+    path: "/help",
+    title: "Help",
+    icon: "bi-question-circle",
+  },
+  {
+    title: "Terms & Policies",
+    icon: "bi-file-earmark-text",
+    children: [
+      {
+        path: "/terms/user-agreement",
+        title: "User agreement",
+        icon: "bi-file-earmark-text"
+      },
+      {
+        path: "/terms/privacy-policy",
+        title: "Privacy policy",
+        icon: "bi-file-earmark-text"
+      },
+    ],
+  },
 ];
 
 export default userMenu;
