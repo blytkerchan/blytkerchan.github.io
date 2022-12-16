@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import environment from './config/environment';
 
-import App from './App';
+import "./i18n";
 
 import reportWebVitals from './reportWebVitals';
 

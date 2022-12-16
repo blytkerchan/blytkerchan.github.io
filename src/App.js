@@ -16,10 +16,10 @@ import Home from "./pages/Home";
 import Layout from "./layout/Layout";
 
 // Pages to lazy-load
-const About = React.lazy(() => import("./pages/About"));
 const Customers = React.lazy(() => import("./pages/Customers"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
+const Page = React.lazy(() => import("./pages/Page"));
 const Products = React.lazy(() => import("./pages/Products"));
 
 const router = createBrowserRouter([
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <About />,
+        element: <Page name="about" />,
       },
       {
         path: "customers",
@@ -63,10 +63,10 @@ const router = createBrowserRouter([
 class App extends React.Component {
   componentDidMount() {
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
-    import("./pages/About");
     import("./pages/Customers");
     import("./pages/Dashboard");
     import("./pages/Orders");
+    import("./pages/Page");
     import("./pages/Products");
   }
 

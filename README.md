@@ -10,8 +10,12 @@ Under `src/`, you'll find a few files that may or may not be of interest to you.
 
 Aside from the few top-level files in `src/` there are a few directories.
 - The `src/layout/` directory contains layouting components that basically set up the application's framework. If you want to change the layout, this is where you go.
-- The `src/pages/` directory contains the pages users will interact with. These should all be referenced in the router (otherwise, how will you navigate to them?).
+- The `src/pages/` directory contains the pages users will interact with. These should all be referenced in the router (otherwise, how will you navigate to them?). There is one component just called `Page` in there. You can use that for generic pages that you have just text in. The text will be loaded from the i18n `pages` namespace.
 - The `src/config/` directory contains the application's configuration, including menu contents.
+
+## Internationalization (i18n)
+
+All texts should be translated to whichever languages you know. You can do that by adding the appropriate translations to the `public/locale/*` directories. The `app` namespace (found in the app.json file) is for application-specific texts, `common` for common stuff, `pages` for text pages, and `translation` for translated phrases. Note that the i18n mechanism *will not* fall back on the `pages` namespace, but will fall back on the other ones.
 
 ## Available Scripts
 
