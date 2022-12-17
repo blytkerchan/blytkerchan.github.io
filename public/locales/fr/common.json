@@ -1,6 +1,8 @@
 {
-    "error": {
-      "404": "404: Élément non trouvé"
-    }
+  "boilerplate": {
+    "login-agreement": "En vous connectant, vous acceptez les [conditions d'utilisation](/terms/user-agreement) et la [politique de confidentialité](/terms/privacy-policy)."
+  },
+  "error": {
+    "404": "404: Élément non trouvé"
   }
-  
+}

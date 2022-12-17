@@ -21,7 +21,7 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong id="titleLabel">{t("title")}</strong>
+              <strong id="titleLabel">{t("app:title")}</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow" id="mainMenuItems">
               {mainMenu.map((menuItem, index) => {
@@ -43,7 +43,7 @@ const Header = (props) => {
             >
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong>{t("title")}</strong>
+              <strong>{t("app:title")}</strong>
             </Link>
           </div>
 

@@ -1,4 +1,7 @@
 {
+  "boilerplate": {
+    "login-agreement": "By logging in, you agree to the [user agreement](/terms/user-agreement) and the [privacy policy](/terns/privacy-policy)."
+  },
   "error": {
     "404": "404: Not found"
   }

@@ -1,4 +1,5 @@
 {
+  "title": "Phoenix",
   "Customers": "Customers",
   "Dashboard": "Dashboard",
   "Help": "Help",
@@ -7,6 +8,5 @@
   "Privacy policy": "Privacy policy",
   "Products": "Products",
   "Terms & Policies": "Terms & Policies",
-  "User agreement": "User agreement",
-  "title": "Phoenix"
+  "User agreement": "User agreement"
 }

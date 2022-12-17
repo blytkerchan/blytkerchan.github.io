@@ -22,6 +22,8 @@ const Orders = React.lazy(() => import("./pages/Orders"));
 const Page = React.lazy(() => import("./pages/Page"));
 const Products = React.lazy(() => import("./pages/Products"));
 
+const UserInfo = React.lazy(() => import("./components/signup/userInfo"));
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+
+      {
+        path: "info",
+        element: <UserInfo />
       },
     ],
   },

@@ -1,13 +1,12 @@
 {
-    "Customers": "Clients",
-    "Dashboard": "Tableau de bord",
-    "Help": "Aide",
-    "Home": "Acceuil",
-    "Orders": "Commandes",
-    "Privacy policy": "Politique de protection de vie privé",
-    "Products": "Produits",
-    "Terms & Policies": "Termes et conditions",
-    "User agreement": "Conditions d'utilisation",
-    "title": "Phoenix"
-  }
-  
+  "title": "Phoenix",
+  "Customers": "Clients",
+  "Dashboard": "Tableau de bord",
+  "Help": "Aide",
+  "Home": "Acceuil",
+  "Orders": "Commandes",
+  "Privacy policy": "Politique de confidentialité",
+  "Products": "Produits",
+  "Terms & Policies": "Termes et conditions",
+  "User agreement": "Conditions d'utilisation"
+}

@@ -16,11 +16,12 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "build": "react-scripts build",
+    "i18n": "i18next",
+    "lint": "eslint -f compact src/**/*.js",
     "serve": "BROWSER=none react-scripts start",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
-    "lint": "eslint -f compact src/**/*.js"
+    "test": "react-scripts test --coverage"
   },
   "eslintConfig": {
     "extends": [

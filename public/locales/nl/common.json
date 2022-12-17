@@ -1,4 +1,7 @@
 {
+  "boilerplate": {
+    "login-agreement": "Door in te loggen ga je akkoord met de [gebruikersovereenkomst](/terms/user-agreement) en het [privacybeleid](/terms/privacy-policy)."
+  },
   "error": {
     "404": "404: Niet gevonden"
   }

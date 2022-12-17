@@ -17,6 +17,8 @@ Aside from the few top-level files in `src/` there are a few directories.
 
 All texts should be translated to whichever languages you know. You can do that by adding the appropriate translations to the `public/locale/*` directories. The `app` namespace (found in the app.json file) is for application-specific texts, `common` for common stuff, `pages` for text pages, and `translation` for translated phrases. Note that the i18n mechanism *will not* fall back on the `pages` namespace, but will fall back on the other ones.
 
+To be able to run the `i18n` npm script (i.e. `npm run i18n`) you need to install `npm install -g i18next-parser`. Running the script will generate the translation files for any missing translations. You should make sure it makes no changes (i.e. `git status` shouldn't see anything after `npm run i18n`) before committing.
+
 ## Available Scripts
 
 In the project directory, you can run:
