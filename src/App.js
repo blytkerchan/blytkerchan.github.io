@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -15,6 +15,8 @@ import Home from "./pages/Home";
 
 import Layout from "./layout/Layout";
 
+import Login from "./components/Login";
+
 // Pages to lazy-load
 const Customers = React.lazy(() => import("./pages/Customers"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
@@ -22,7 +24,6 @@ const Orders = React.lazy(() => import("./pages/Orders"));
 const Page = React.lazy(() => import("./pages/Page"));
 const Products = React.lazy(() => import("./pages/Products"));
 
-const UserInfo = React.lazy(() => import("./components/signup/userInfo"));
 
 const router = createBrowserRouter([
   {
@@ -51,17 +52,16 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
+        path: "login",
+        element: <Login />,
+      },
+      {
         path: "orders",
         element: <Orders />,
       },
       {
         path: "products",
         element: <Products />,
-      },
-
-      {
-        path: "info",
-        element: <UserInfo />
       },
     ],
   },
