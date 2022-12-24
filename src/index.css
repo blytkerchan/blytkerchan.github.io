@@ -66,3 +66,7 @@ em {
   height: calc(100vh - 93px);
   overflow-y: auto;
 }
+
+.text-muted {
+  color: #1b1d1f!important
+}

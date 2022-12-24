@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 
@@ -23,7 +22,6 @@ const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
 const Page = React.lazy(() => import("./pages/Page"));
 const Products = React.lazy(() => import("./pages/Products"));
-
 
 const router = createBrowserRouter([
   {
@@ -67,19 +65,17 @@ const router = createBrowserRouter([
   },
 ]);
 
-class App extends React.Component {
-  componentDidMount() {
+const App = (props) => {
+  useEffect(() => {
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/Customers");
     import("./pages/Dashboard");
     import("./pages/Orders");
     import("./pages/Page");
     import("./pages/Products");
-  }
+  }, []);
 
-  render(props) {
-    return <RouterProvider router={router} />;
-  }
-}
+  return <RouterProvider router={router} />;
+};
 
 export default App;

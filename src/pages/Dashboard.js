@@ -1,7 +1,19 @@
-import { Navigate } from 'react-router-dom'
+import useToken from "../useToken";
+import Login from "../components/Login";
 
 const Dashboard = (props) => {
-  return <Navigate to="/login" />;
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return (
+      <>
+        <Login setToken={setToken} />
+        You need to log in to see this ¯\_(ツ)_/¯
+      </>
+    );
+  } else {
+    return <>Dashboard</>;
+  }
 };
 
 export default Dashboard;
