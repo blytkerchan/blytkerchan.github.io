@@ -12,8 +12,8 @@ config = createConfig({env});
 
 async function insertUser(username, hash) {
   try {
-    const user = new config.schemas.User({ username, hash });
-    await user.save();
+    const credentials = new config.schemas.Credentials({ username, hash });
+    await credentials.save();
   } catch (err) {
     console.log(`[ERROR]: ${err.message}`);
   }

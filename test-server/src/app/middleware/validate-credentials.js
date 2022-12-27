@@ -9,7 +9,7 @@ function validateCredentials({ env, queries }) {
       !req.body.username.match(re)
     ) {
       queries
-        .getUserAsync(req.body.username)
+        .getCredentialsAsync(req.body.username)
         .then((record) => {
           if (record) {
             req.context.record = record;

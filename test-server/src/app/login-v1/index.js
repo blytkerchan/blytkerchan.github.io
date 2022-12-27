@@ -1,17 +1,17 @@
 const express = require("express");
 const createHandlers = require("./create-handlers");
 
-function createQueries({ User }) {
-  async function getUserAsync(username) {
-    const user = await User.findOne({username});
+function createQueries({ Credentials }) {
+  async function getCredentialsAsync(username) {
+    const user = await Credentials.findOne({username});
     return user;
   }
 
-  return { getUserAsync };
+  return { getCredentialsAsync };
 }
 
-function createLoginApi({ env, User }) {
-  const queries = createQueries({ User });
+function createLoginApi({ env, Credentials }) {
+  const queries = createQueries({ Credentials });
   const handlers = createHandlers({ env, queries });
   const router = express.Router();
 

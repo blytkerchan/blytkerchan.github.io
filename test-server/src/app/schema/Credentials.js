@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-function User({ env }) {
+function Credentials({ env }) {
   const retval = new mongoose.Schema(
     {
       username: {
@@ -22,4 +22,4 @@ function User({ env }) {
 
 
 
-module.exports = User;
+module.exports = Credentials;

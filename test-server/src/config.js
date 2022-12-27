@@ -25,10 +25,10 @@ function connectToDatabase(_databaseConnection) {
 }
 
 function getSchemas(env, db) {
-  function getUserSchema() {
+  function getCredentialsSchema() {
     const collection = db.collection(
       "credentials",
-      require("./app/schema/User")({ env }),
+      require("./app/schema/Credentials")({ env }),
       "credentials"
     );
     return collection;
@@ -42,7 +42,7 @@ function getSchemas(env, db) {
     return collection;
   }
   return {
-    User: getUserSchema(),
+    Credentials: getCredentialsSchema(),
     Trace: getTraceSchema(),
   };
 }
@@ -61,7 +61,7 @@ function createConfig({ env }) {
     { path: "/api/v1/version", router: createVersionApi({ env }).router },
     {
       path: "/api/v1/login",
-      router: createLoginApi({ env, User: schemas.User }).router,
+      router: createLoginApi({ env, Credentials: schemas.Credentials }).router,
     },
   ];
 
