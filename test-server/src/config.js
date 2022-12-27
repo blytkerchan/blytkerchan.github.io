@@ -1,0 +1,45 @@
+// connectors to databases, buses, etc. go here
+const createMongoClient = require("./lib/mongodb");
+
+// aggregators
+// components
+// apis
+const createVersionApi = require("./app/version-v1");
+const createLoginApi = require("./app/login-v1");
+
+function connectToDatabase(_databaseConnection) {
+  databaseConnection = JSON.parse(_databaseConnection);
+  if (
+    Object.keys(databaseConnection).includes("url") &&
+    databaseConnection.url.startsWith("mongodb://")
+  ) {
+    return createMongoClient(databaseConnection);
+  }
+  console.error(
+    `[WARNING]: didn't recognize scheme for database connection ${JSON.stringify(
+      databaseConnection
+    )} -- not connecting`
+  );
+  return null;
+}
+
+function createConfig({ env }) {
+  const db = connectToDatabase(env.db);
+
+  const aggregators = [];
+  const components = [];
+  const apis = [
+    // expects entries in the form of { path: '/', router: ... }
+    { path: "/api/v1/version", router: createVersionApi({ env }).router },
+    { path: "/api/v1/login", router: createLoginApi({ env, db }).router },
+  ];
+
+  return {
+    env,
+    aggregators,
+    components,
+    apis,
+  };
+}
+
+module.exports = createConfig;

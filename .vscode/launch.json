@@ -17,6 +17,13 @@
       "type": "msedge",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}",
+    },
+    {
+      "name": "Start dev back-end",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run start-dev-server"
     }
   ]
 }
