@@ -14,7 +14,11 @@ async function loginUser(credentials) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
-  }).then((data) => data.json());
+  })
+  .then((data) => data.json())
+  .catch(err => {
+    console.log(err);
+  });
 }
 
 const Login = ({ setToken }) => {
@@ -22,10 +26,14 @@ const Login = ({ setToken }) => {
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [remember, setRemember] = useState(false);
+
+  const [cursor, setCursor] = useState("auto");
 
   const [show, setShow] = useState(true);
 
   const handleSubmit = async (e) => {
+    setCursor("progress");
     e.preventDefault();
     const token = await loginUser({
       username,
@@ -37,12 +45,12 @@ const Login = ({ setToken }) => {
 
   const handleClose = (e) => {
     setShow(false);
-  }
+  };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Modal show={show} centered>
+        <Modal show={show} centered style={{ cursor: cursor }}>
           <Modal.Header closeButton>
             <Modal.Title>{t("Log in")}</Modal.Title>
           </Modal.Header>
@@ -80,6 +88,7 @@ const Login = ({ setToken }) => {
                   type="password"
                   className="form-control"
                   id="passwordInput"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="mb-3 form-check">
@@ -87,7 +96,7 @@ const Login = ({ setToken }) => {
                   type="checkbox"
                   className="form-check-input"
                   id="rememberMeCheckbox"
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setRemember(e.target.value)}
                 />
                 <label
                   className="form-check-label"
@@ -99,24 +108,15 @@ const Login = ({ setToken }) => {
             </fieldset>
           </Modal.Body>
           <Modal.Footer>
-            <Button
-              variant="secondary"
-              onClick={handleClose}
-            >
+            <Button variant="secondary" onClick={handleClose}>
               Cancel
             </Button>
-            <Button
-              variant="primary"
-              onClick={handleSubmit}
-            >
+            <Button variant="primary" onClick={handleSubmit}>
               Submit
             </Button>
           </Modal.Footer>
         </Modal>
       </form>
-      {/* <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-          <Login setToken={setToken} />
-        </div> */}
     </>
   );
 };
