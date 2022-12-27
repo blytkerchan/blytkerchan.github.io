@@ -3,7 +3,15 @@ const initialState = { error: { show: false } };
 const { useGlobalState, getGlobalState, setGlobalState, subscribe } =
   createGlobalState(initialState);
 
-const errorTitles = {};
+const errorTitles = {
+  AuthenticationError: "Authentication error",
+  EvalError: "Internal error",
+  RangeError: "Internal error",
+  ReferenceError: "Internal error",
+  SyntaxError: "Internal error",
+  TypeError: "Internal error",
+  URIError: "Internal error",
+};
 
 export default function useError() {
   const [error, setError] = useGlobalState("error");
@@ -14,10 +22,10 @@ export default function useError() {
         if (!Object.keys(errorTitles).includes(error.name)) {
           error.title = "Error";
         } else {
-          error.title = errorTitles[error.title];
+          error.title = errorTitles[error.name];
         }
       }
-      setError({ ...error, show: true });
+      setError({ title: error.title, message: error.message, show: true });
     }
   };
 
