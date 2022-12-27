@@ -2,7 +2,7 @@ import useError from "../lib/useError";
 import Toast from "react-bootstrap/Toast";
 
 const Toaster = (props) => {
-  const {setError, error, clearError} = useError();
+  const {error, clearError} = useError();
 
   return (
     <>

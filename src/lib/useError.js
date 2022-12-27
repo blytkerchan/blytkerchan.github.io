@@ -1,6 +1,6 @@
 import { createGlobalState } from "react-hooks-global-state";
 const initialState = { error: { show: false } };
-const { useGlobalState, getGlobalState, setGlobalState, subscribe } =
+const { useGlobalState } =
   createGlobalState(initialState);
 
 const errorTitles = {
