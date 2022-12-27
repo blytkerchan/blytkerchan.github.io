@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
-import "./Login.css";
 import PropTypes from "prop-types";
 import env from "../config/environment";
 import { Modal, Button } from "react-bootstrap";
