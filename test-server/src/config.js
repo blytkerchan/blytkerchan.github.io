@@ -6,10 +6,11 @@ const createMongoClient = require("./lib/mongodb");
 // apis
 const createVersionApi = require("./app/version-v1");
 const createLoginApi = require("./app/login-v1");
+const createApiDocs = require("./app/api-docs");
 const createTelemetry = require("./lib/telemetry");
 
 function connectToDatabase(_databaseConnection) {
-  databaseConnection = JSON.parse(_databaseConnection);
+  const databaseConnection = JSON.parse(_databaseConnection);
   if (
     Object.keys(databaseConnection).includes("url") &&
     databaseConnection.url.startsWith("mongodb://")
@@ -63,6 +64,10 @@ function createConfig({ env }) {
       path: "/api/v1/login",
       router: createLoginApi({ env, Credentials: schemas.Credentials }).router,
     },
+    {
+      path: "/",
+      router: createApiDocs({env})
+    }
   ];
 
   return {
