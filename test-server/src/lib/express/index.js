@@ -8,8 +8,8 @@ function createExpressApp({ config, env }) {
   const app = express();
 
   app.use(cors());
-  mountMiddleware(app, env);
-  mountRoutes(app, config);
+  mountMiddleware({app, env, config});
+  mountRoutes({app, config});
 
   return app;
 }

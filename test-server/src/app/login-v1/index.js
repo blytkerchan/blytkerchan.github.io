@@ -3,8 +3,6 @@ const uuid = require("uuid").v4;
 const bodyParser = require("body-parser");
 
 function createQueries({ db }) {
-  const credentialsCollection = db.collection("credentials");
-
   function getUser(username) {
     const query = { username };
     const options = {
@@ -17,7 +15,7 @@ function createQueries({ db }) {
         algorithm: 1,
       },
     };
-    return credentialsCollection.findOne(query, options);
+    return db.findOne(query, options);
   }
 
   return { getUser };
