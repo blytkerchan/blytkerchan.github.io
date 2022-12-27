@@ -6,17 +6,29 @@ import PropTypes from "prop-types";
 import env from "../config/environment";
 import { Modal, Button } from "react-bootstrap";
 
-async function loginUser(credentials) {
-  return fetch(env.loginEndpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  })
-  .then((data) => data.json())
-  .catch(err => {
-    console.log(err);
+function loginUser(credentials) {
+  return new Promise((resolve, reject) => {
+    fetch(env.loginEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    })
+      .then((result) => {
+        if (result.ok) {
+          result.json().then((resultAsJson) => {
+            resolve(resultAsJson);
+          });
+        } else {
+          return result.json().then((resultAsJson) => {
+            reject(resultAsJson);
+          });
+        }
+      })
+      .catch((err) => {
+        reject(err);
+      });
   });
 }
 
@@ -32,13 +44,15 @@ const Login = ({ setToken }) => {
   const [show, setShow] = useState(true);
 
   const handleSubmit = async (e) => {
-    setCursor("progress");
-    e.preventDefault();
-    const token = await loginUser({
-      username,
-      password,
-    });
-    setToken(token);
+    try {
+      setCursor("progress");
+      e.preventDefault();
+      const token = await loginUser({
+        username,
+        password,
+      });
+      setToken({ token, remember });
+    } catch (err) {}
     setShow(false);
   };
 
