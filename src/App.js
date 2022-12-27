@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 import "./App.css";
 
 import mainMenu from "./config/mainMenu";
@@ -15,7 +16,7 @@ import Home from "./pages/Home";
 
 import Layout from "./layout/Layout";
 
-import Login from "./components/Login";
+import Toaster from "./components/Toaster";
 
 // Pages to lazy-load
 const Customers = React.lazy(() => import("./pages/Customers"));
@@ -51,10 +52,6 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
         path: "orders",
         element: <Orders />,
       },
@@ -76,7 +73,10 @@ const App = (props) => {
     import("./pages/Products");
   }, []);
 
-  return <RouterProvider router={router} />;
+  return <>
+    <Toaster />
+    <RouterProvider router={router} />
+  </>;
 };
 
 export default App;

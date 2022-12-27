@@ -6,6 +6,8 @@ import PropTypes from "prop-types";
 import env from "../config/environment";
 import { Modal, Button } from "react-bootstrap";
 
+import useError from "../lib/useError";
+
 function loginUser(credentials) {
   return new Promise((resolve, reject) => {
     fetch(env.loginEndpoint, {
@@ -39,6 +41,8 @@ const Login = ({ setToken }) => {
   const [password, setPassword] = useState();
   const [remember, setRemember] = useState(false);
 
+  const {setError} = useError();
+
   const [cursor, setCursor] = useState("auto");
 
   const [show, setShow] = useState(true);
@@ -52,7 +56,9 @@ const Login = ({ setToken }) => {
         password,
       });
       setToken({ token, remember });
-    } catch (err) {}
+    } catch (err) {
+      setError(err);
+    }
     setShow(false);
   };
 
@@ -62,8 +68,8 @@ const Login = ({ setToken }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <Modal show={show} centered style={{ cursor: cursor }}>
+      <Modal show={show} centered style={{ cursor: cursor }}>
+        <form onSubmit={handleSubmit}>
           <Modal.Header closeButton>
             <Modal.Title>{t("Log in")}</Modal.Title>
           </Modal.Header>
@@ -128,8 +134,8 @@ const Login = ({ setToken }) => {
               Submit
             </Button>
           </Modal.Footer>
-        </Modal>
-      </form>
+        </form>
+      </Modal>
     </>
   );
 };
