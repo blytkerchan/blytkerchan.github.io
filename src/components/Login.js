@@ -41,7 +41,7 @@ const Login = ({ setToken }) => {
   const [password, setPassword] = useState();
   const [remember, setRemember] = useState(false);
 
-  const {setError} = useError();
+  const { setError } = useError();
 
   const [cursor, setCursor] = useState("auto");
 
@@ -94,6 +94,7 @@ const Login = ({ setToken }) => {
                   id="emailInput"
                   aria-describedby="emailHelp"
                   onChange={(e) => setUserName(e.target.value)}
+                  tabIndex={1}
                 />
                 <div id="emailHelp" className="form-text">
                   {t("We'll never share your email with anyone else.")}
@@ -108,6 +109,8 @@ const Login = ({ setToken }) => {
                   className="form-control"
                   id="passwordInput"
                   onChange={(e) => setPassword(e.target.value)}
+                  tabIndex={2}
+                  autoFocus
                 />
               </div>
               <div className="mb-3 form-check">
@@ -116,6 +119,7 @@ const Login = ({ setToken }) => {
                   className="form-check-input"
                   id="rememberMeCheckbox"
                   onChange={(e) => setRemember(e.target.value)}
+                  tabIndex={3}
                 />
                 <label
                   className="form-check-label"
@@ -127,10 +131,15 @@ const Login = ({ setToken }) => {
             </fieldset>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="secondary" onClick={handleClose} tabIndex={5}>
               Cancel
             </Button>
-            <Button variant="primary" onClick={handleSubmit}>
+            <Button
+              variant="primary"
+              type="submit"
+              onClick={handleSubmit}
+              tabIndex={4}
+            >
               Submit
             </Button>
           </Modal.Footer>
