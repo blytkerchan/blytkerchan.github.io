@@ -24,10 +24,10 @@ function connectToDatabase(_databaseConnection) {
   return null;
 }
 
-function getCollections(db) {
+function getCollections(env, db) {
   function getCredentialsCollection() {
     const collection = db.collection("credentials");
-    collection.createIndex({ username: 1 }, { unique: true });
+    collection.createIndex({ username: 1 }, { unique: true, collation: {locale: `${env.locale}`, strength: 2} });
     return collection;
   }
   function getTelemetryCollection() {
@@ -43,7 +43,7 @@ function getCollections(db) {
 function createConfig({ env }) {
   const db = connectToDatabase(env.db);
 
-  const collections = getCollections(db);
+  const collections = getCollections(env, db);
 
   const telemetry = createTelemetry({ env, db: collections.telemetry });
 

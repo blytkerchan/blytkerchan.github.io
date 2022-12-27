@@ -27,5 +27,7 @@ module.exports = {
   env: requireFromEnv("NODE_ENV"),
   port: parseInt(requireFromEnv("PORT"), 10),
   version: packageJson.version,
-  db: requireFromEnv("DATABASE_CONNECTION"),
+  db: requireFromEnv("PHOENIX_DATABASE_CONNECTION"),
+  locale: requireFromEnv("PHOENIX_LOCALE"),
+  rootUser: { username: requireFromEnv("PHOENIX_ROOT_USER"), hash: requireFromEnv("PHOENIX_ROOT_PASSWORDHASH") }
 };

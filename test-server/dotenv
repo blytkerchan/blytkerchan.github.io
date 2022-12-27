@@ -1,4 +1,8 @@
 APP_NAME=phoenix
 NODE_ENV=development
 PORT=8419
-DATABASE_CONNECTION={"url":"mongodb://root:example@localhost:27017","db":"phoenix"}
+PHOENIX_DATABASE_CONNECTION={"url":"mongodb://root:example@localhost:27017","db":"phoenix"}
+PHOENIX_LOCALE=en
+PHOENIX_ROOT_USER=me@example.com
+# VeryComplexPassword
+PHOENIX_ROOT_PASSWORDHASH=$2b$10$bKh/Oq3Kq70f6sJ9JD8tseUz1N/OsqPEhh1wkOQfDFadMwuSxFQwq
