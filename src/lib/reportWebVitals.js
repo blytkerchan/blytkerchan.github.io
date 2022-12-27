@@ -1,4 +1,4 @@
-import environment from "./config/environment";
+import environment from "../config/environment";
 
 let reportWebVitals;
 if (environment.env !== "production") {

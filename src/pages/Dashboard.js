@@ -1,4 +1,4 @@
-import useToken from "../useToken";
+import useToken from "../lib/useToken";
 import Login from "../components/Login";
 
 const Dashboard = (props) => {

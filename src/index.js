@@ -8,7 +8,7 @@ import App from "./App";
 
 import "./i18n";
 
-import reportWebVitals from "./reportWebVitals";
+import reportWebVitals from "./lib/reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
