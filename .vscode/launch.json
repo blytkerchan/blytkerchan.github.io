@@ -30,7 +30,7 @@
       "request": "launch",
       "type": "node-terminal",
       "cwd": "${workspaceFolder}/test-server",
-      "command": "npm run insert-user Me@example.com VeryComplexPassword"
+      "command": "npm run insert-user me@example.com VeryComplexPassword"
     }
   ]
 }
