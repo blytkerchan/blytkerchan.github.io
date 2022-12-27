@@ -24,35 +24,45 @@ function connectToDatabase(_databaseConnection) {
   return null;
 }
 
-function getCollections(env, db) {
-  function getCredentialsCollection() {
-    const collection = db.collection("credentials");
-    collection.createIndex({ username: 1 }, { unique: true, collation: {locale: `${env.locale}`, strength: 2} });
+function getSchemas(env, db) {
+  function getUserSchema() {
+    const collection = db.collection(
+      "credentials",
+      require("./app/schema/User")({ env }),
+      "credentials"
+    );
     return collection;
   }
-  function getTelemetryCollection() {
-    const collection = db.collection("telemetry");
+  function getTraceSchema() {
+    const collection = db.collection(
+      "telemetry",
+      require("./lib/schema/Trace")({ env }),
+      "telemetry"
+    );
     return collection;
   }
   return {
-    credentials: getCredentialsCollection(),
-    telemetry: getTelemetryCollection(),
+    User: getUserSchema(),
+    Trace: getTraceSchema(),
   };
 }
 
 function createConfig({ env }) {
   const db = connectToDatabase(env.db);
 
-  const collections = getCollections(env, db);
+  const schemas = getSchemas(env, db);
 
-  const telemetry = createTelemetry({ env, db: collections.telemetry });
+  const telemetry = createTelemetry({ env, Trace: schemas.Trace });
 
   const aggregators = [];
   const components = [];
   const apis = [
     // expects entries in the form of { path: '/', router: ... }
     { path: "/api/v1/version", router: createVersionApi({ env }).router },
-    { path: "/api/v1/login", router: createLoginApi({ env, db: collections.credentials }).router },
+    {
+      path: "/api/v1/login",
+      router: createLoginApi({ env, User: schemas.User }).router,
+    },
   ];
 
   return {
@@ -61,6 +71,7 @@ function createConfig({ env }) {
     components,
     apis,
     telemetry,
+    schemas
   };
 }
 

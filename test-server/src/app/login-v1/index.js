@@ -1,24 +1,17 @@
 const express = require("express");
 const createHandlers = require("./create-handlers");
 
-function createQueries({ db }) {
-  function getUser(username) {
-    const query = { username };
-    const options = {
-      projection: {
-        _id: 0,
-        username: 1,
-        hash: 1,
-      },
-    };
-    return db.findOne(query, options);
+function createQueries({ User }) {
+  async function getUserAsync(username) {
+    const user = await User.findOne({username});
+    return user;
   }
 
-  return { getUser };
+  return { getUserAsync };
 }
 
-function createLoginApi({ env, db }) {
-  const queries = createQueries({ db });
+function createLoginApi({ env, User }) {
+  const queries = createQueries({ User });
   const handlers = createHandlers({ env, queries });
   const router = express.Router();
 

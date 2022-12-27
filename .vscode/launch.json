@@ -24,6 +24,13 @@
       "type": "node-terminal",
       "cwd": "${workspaceFolder}/test-server",
       "command": "npm run start-dev-server"
+    },
+    {
+      "name": "Insert user",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run insert-user Me@example.com VeryComplexPassword"
     }
   ]
 }

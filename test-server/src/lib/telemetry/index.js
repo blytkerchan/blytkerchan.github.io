@@ -1,9 +1,10 @@
 const { inspect } = require("util");
 
-function createTelemetry({ env, db }) {
-  async function traceAsync(message, severity, timestamp, ...data) {
+function createTelemetry({ env, Trace }) {
+  async function traceAsync(traceId, message, severity, timestamp, ...data) {
     try {
-      await db.insertOne({
+      const trace = new Trace({
+        traceId,
         message,
         severity,
         timestamp,
@@ -11,12 +12,13 @@ function createTelemetry({ env, db }) {
           return acc + inspect(curr) + ","
         }, "")}]`,
       });
+      await trace.save();
     } catch (err) {
       console.error(`[ERROR] ${err.message}`);
     }
   }
-  function trace(message, severity, ...data) {
-    traceAsync(message, severity, Date.now(), ...data);
+  function trace(traceId, message, severity, ...data) {
+    traceAsync(traceId, message, severity, Date.now(), ...data);
   }
 
   return { trace };

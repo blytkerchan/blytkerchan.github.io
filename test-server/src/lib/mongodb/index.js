@@ -1,14 +1,14 @@
 const { depromisify } = require("depromisify");
-const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
 
 async function createMongoClientAsync(databaseConnection) {
-  const client = new MongoClient(databaseConnection.url);
-  await client.connect();
-  const db = client.db(databaseConnection.db);
-
+  mongoose.set("strictQuery", true);
+  const client = await mongoose.connect(databaseConnection.url, {
+    dbName: databaseConnection.db,
+  });
   return {
-    collection: (collectionName) => {
-      return db.collection(collectionName);
+    collection: (modelName, schema, collectionName) => {
+      return client.model(modelName, schema, collectionName);
     },
   };
 }

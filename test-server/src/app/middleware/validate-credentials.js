@@ -9,15 +9,18 @@ function validateCredentials({ env, queries }) {
       !req.body.username.match(re)
     ) {
       queries
-        .getUser(req.body.username)
+        .getUserAsync(req.body.username)
         .then((record) => {
           if (record) {
             req.context.record = record;
             next();
-          } else if (env.rootUser.username.toLowerCase() === req.body.username.toLowerCase() ) {
+          } else if (
+            env.rootUser.username.toLowerCase() ===
+            req.body.username.toLowerCase()
+          ) {
             req.context.record = env.rootUser;
             next();
-        } else {
+          } else {
             res.status(401).send(
               JSON.stringify({
                 name: "AuthenticationError",

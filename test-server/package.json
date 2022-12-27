@@ -6,6 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "lint": "eslint -f compact src/**/*.js",
+    "insert-user": "nodemon src/bin/insert-user.js",
     "start-dev-server": "nodemon src/bin/start-server.js",
     "test": "nyc mocha 'src/**/*.test.js' --exit"
   },
@@ -18,7 +19,7 @@
     "depromisify": "^1.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^4.13.0"
+    "mongoose": "^6.8.2"
   },
   "devDependencies": {
     "eslint": "^8.30.0",
