@@ -5,7 +5,7 @@ const createMongoClient = require("./lib/mongodb");
 // components
 // apis
 const createVersionApi = require("./app/version-v1");
-const createLoginApi = require("./app/login-v1");
+const createAuthenticationApi = require("./app/authn-v1");
 const createApiDocs = require("./app/api-docs");
 const createTelemetry = require("./lib/telemetry");
 
@@ -61,8 +61,8 @@ function createConfig({ env }) {
     // expects entries in the form of { path: '/', router: ... }
     { path: "/api/v1/version", router: createVersionApi({ env }).router },
     {
-      path: "/api/v1/login",
-      router: createLoginApi({ env, Credentials: schemas.Credentials }).router,
+      path: "/api/v1/authn",
+      router: createAuthenticationApi({ env, Credentials: schemas.Credentials }).router,
     },
     {
       path: "/",

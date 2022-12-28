@@ -5,12 +5,11 @@ info:
 servers:
   - url: http://127.0.0.1:8419/api/v1
 paths:
-  /login:
+  /authn:
     post:
       summary: Log in
       tags:
-        - login
-        - session
+        - Authentication
       requestBody:
         description: credentials of the user to log in
         required: true

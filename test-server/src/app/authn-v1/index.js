@@ -10,7 +10,7 @@ function createQueries({ Credentials }) {
   return { getCredentialsAsync };
 }
 
-function createLoginApi({ env, Credentials }) {
+function createAuthenticationApi({ env, Credentials }) {
   const queries = createQueries({ Credentials });
   const handlers = createHandlers({ env, queries });
   const router = express.Router();
@@ -20,4 +20,4 @@ function createLoginApi({ env, Credentials }) {
   return { router };
 }
 
-module.exports = createLoginApi;
+module.exports = createAuthenticationApi;
