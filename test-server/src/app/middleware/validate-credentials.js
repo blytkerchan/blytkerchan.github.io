@@ -1,4 +1,4 @@
-function validateCredentials({ env, queries }) {
+function validateCredentials({ env, queries, log }) {
   return (req, res, next) => {
     const re = /\s/;
     if (
@@ -21,6 +21,12 @@ function validateCredentials({ env, queries }) {
             req.context.record = env.rootUser;
             next();
           } else {
+            log.trace(
+              req.context.traceId,
+              "Authentication failure",
+              "Warning",
+              Date.now()
+            );
             res.status(401).send(
               JSON.stringify({
                 name: "AuthenticationError",
@@ -30,7 +36,13 @@ function validateCredentials({ env, queries }) {
           }
         })
         .catch((err) => {
-          //TODO check the error
+          log.trace(
+            req.context.traceId,
+            "Internal error during authentication",
+            "Error",
+            Date.now(),
+            err
+          );
           res.status(500).send(
             JSON.stringify({
               name: "InternalAuthenticationError",
@@ -39,6 +51,12 @@ function validateCredentials({ env, queries }) {
           );
         });
     } else {
+      log.trace(
+        req.context.traceId,
+        "Authentication failure",
+        "Warning",
+        Date.now()
+      );
       res.status(401).send(
         JSON.stringify({
           name: "AuthenticationError",

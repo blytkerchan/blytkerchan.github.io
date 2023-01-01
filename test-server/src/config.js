@@ -66,6 +66,7 @@ function createConfig({ env }) {
       router: createAuthenticationApi({
         env,
         Credentials: schemas.Credentials,
+        log: telemetry,
         preprocessPassword,
       }).router,
     },
