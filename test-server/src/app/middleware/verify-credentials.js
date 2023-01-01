@@ -1,11 +1,11 @@
 const bcrypt = require("bcrypt");
 
-function verifyCredentials() {
+function verifyCredentials({ preprocessPassword }) {
   return (req, res, next) => {
     const credentials = req.body;
     const userRecord = req.context.record;
     bcrypt.compare(
-      credentials.password,
+      preprocessPassword(credentials.password),
       userRecord.hash,
       function (err, result) {
         if (result) {

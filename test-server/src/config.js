@@ -1,5 +1,6 @@
 // connectors to databases, buses, etc. go here
 const createMongoClient = require("./lib/mongodb");
+const preprocessPassword = require("./lib/preprocess-password");
 
 // aggregators
 // components
@@ -62,7 +63,12 @@ function createConfig({ env }) {
     { path: "/api/v1/version", router: createVersionApi({ env }).router },
     {
       path: "/api/v1/authn",
-      router: createAuthenticationApi({ env, Credentials: schemas.Credentials }).router,
+      router: createAuthenticationApi({
+        env,
+        Credentials: schemas.Credentials,
+        preprocessPassword,
+      }).router,
+    },
     },
     {
       path: "/",

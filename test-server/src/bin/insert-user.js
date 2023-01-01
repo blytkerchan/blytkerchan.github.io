@@ -3,6 +3,7 @@ const { depromisify } = require("depromisify");
 
 const createConfig = require("../config");
 const env = require("../env");
+const preprocessPassword = require("../lib/preprocess-password");
 
 const saltRounds = 10;
 
@@ -21,7 +22,7 @@ async function insertUser(username, hash) {
 
 function main() {
   depromisify(bcrypt
-    .hash(password, saltRounds)
+    .hash(preprocessPassword(password), saltRounds)
     .then((result) => {
       return insertUser(username, result);
     })

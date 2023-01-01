@@ -10,9 +10,9 @@ function createQueries({ Credentials }) {
   return { getCredentialsAsync };
 }
 
-function createAuthenticationApi({ env, Credentials }) {
+function createAuthenticationApi({ env, Credentials, preprocessPassword }) {
   const queries = createQueries({ Credentials });
-  const handlers = createHandlers({ env, queries });
+  const handlers = createHandlers({ env, queries, preprocessPassword });
   const router = express.Router();
 
   router.route("/").post(handlers.postLogin);

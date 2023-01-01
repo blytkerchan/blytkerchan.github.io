@@ -3,12 +3,12 @@ const validateCredentials = require("../middleware/validate-credentials");
 const verifyCredentials = require("../middleware/verify-credentials.js");
 const bodyParser = require("body-parser");
 
-function createHandlers({ env, queries }) {
+function createHandlers({ env, queries, preprocessPassword }) {
   return {
     postLogin: [
       bodyParser.json(),
       validateCredentials({ env, queries }),
-      verifyCredentials({ env, queries }),
+      verifyCredentials({ env, queries, preprocessPassword }),
       generateSession({ env, queries }),
       (req, res, next) => {
         res.status(200).send(JSON.stringify(req.context.session));
