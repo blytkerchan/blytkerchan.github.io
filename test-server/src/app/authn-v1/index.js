@@ -1,13 +1,11 @@
 const express = require("express");
 const createHandlers = require("./create-handlers");
+const getCredentialsQueries = require("../queries/credentials");
 
 function createQueries({ Credentials }) {
-  async function getCredentialsAsync(username) {
-    const user = await Credentials.findOne({username});
-    return user;
-  }
-
-  return { getCredentialsAsync };
+  return {
+    getCredentials: getCredentialsQueries({ Credentials }).find,
+  };
 }
 
 function createAuthenticationApi({ env, Credentials, log, preprocessPassword }) {
