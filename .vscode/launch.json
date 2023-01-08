@@ -26,7 +26,14 @@
       "command": "npm run start-dev-server"
     },
     {
-      "name": "Insert user",
+      "name": "Backend: run tests",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run test"
+    },
+    {
+      "name": "Backend: insert user",
       "request": "launch",
       "type": "node-terminal",
       "cwd": "${workspaceFolder}/test-server",
