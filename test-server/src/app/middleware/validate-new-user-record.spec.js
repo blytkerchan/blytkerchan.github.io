@@ -2,6 +2,7 @@ const validateNewUserRecord = require("./validate-new-user-record");
 const chai = require("chai");
 const spies = require("chai-spies");
 const uuid = require("uuid").v4;
+const bcrypt = require("bcrypt");
 
 chai.use(spies);
 
@@ -65,6 +66,7 @@ describe("validateNewUserRecord", () => {
       validatePassword,
       preprocessPassword,
       log,
+      bcrypt,
     });
     middleware(req, res, next);
     chai.expect(logSpy).to.have.been.called();

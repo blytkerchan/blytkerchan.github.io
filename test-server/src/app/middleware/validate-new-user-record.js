@@ -8,8 +8,9 @@ function validateNewUserRecord({
   validatePassword,
   preprocessPassword,
   log,
+  bcrypt,
 }) {
-  return (req, res, next) => {
+  return async (req, res, next) => {
     // we assume the username uniqueness has already been validated by this
     // point. We only look at whether all the necessary fields are set, the
     // E-mail address looks OK, and the password survives a basic dictionary
