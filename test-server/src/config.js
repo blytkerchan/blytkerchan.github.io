@@ -43,9 +43,18 @@ function getSchemas(env, db) {
     );
     return collection;
   }
+  function getUserSchema() {
+    const collection = db.collection(
+      "users",
+      require("./app/schema/User")({ env }),
+      "users"
+    );
+    return collection;
+  }
   return {
     Credentials: getCredentialsSchema(),
     Trace: getTraceSchema(),
+    User: getUserSchema(),
   };
 }
 
