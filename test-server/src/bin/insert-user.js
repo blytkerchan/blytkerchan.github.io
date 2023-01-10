@@ -8,7 +8,7 @@ const preprocessPassword = require("../lib/preprocess-password");
 
 const username = process.argv[2];
 const password = process.argv[3];
-const config = createConfig({env});
+const config = createConfig({ env });
 
 async function insertUser(username, hash) {
   try {
@@ -20,14 +20,16 @@ async function insertUser(username, hash) {
 }
 
 function main() {
-  depromisify(bcrypt
-    .hash(preprocessPassword(password), env.saltRounds)
-    .then((result) => {
-      return insertUser(username, result);
-    })
-    .then(() => {
-      console.log("done");
-    }));
+  depromisify(
+    bcrypt
+      .hash(preprocessPassword(password), env.saltRounds)
+      .then((result) => {
+        return insertUser(username, result);
+      })
+      .then(() => {
+        console.log("done");
+      })
+  );
 }
 
 main();

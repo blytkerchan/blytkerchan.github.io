@@ -2,7 +2,7 @@ import useError from "../lib/useError";
 import Toast from "react-bootstrap/Toast";
 
 const Toaster = (props) => {
-  const {error, clearError} = useError();
+  const { error, clearError } = useError();
 
   return (
     <>
@@ -16,7 +16,7 @@ const Toaster = (props) => {
         autohide
       >
         <Toast.Header>
-          <span style={{marginRight: "auto", fontWeight: "bold"}}>{error.title}</span>
+          <span style={{ marginRight: "auto", fontWeight: "bold" }}>{error.title}</span>
         </Toast.Header>
         <Toast.Body>{error.message}</Toast.Body>
       </Toast>

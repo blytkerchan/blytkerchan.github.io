@@ -6,9 +6,7 @@ const envResult = dotenv.config();
 
 if (envResult.error) {
   // eslint-disable-next-line no-console
-  console.error(
-    `[ERROR] env failed to load: ${envResult.error}`
-  );
+  console.error(`[ERROR] env failed to load: ${envResult.error}`);
 
   process.exit(1);
 }

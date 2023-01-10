@@ -121,10 +121,7 @@ const Login = ({ setToken }) => {
                   onChange={(e) => setRemember(e.target.value)}
                   tabIndex={3}
                 />
-                <label
-                  className="form-check-label"
-                  htmlFor="rememberMeCheckbox"
-                >
+                <label className="form-check-label" htmlFor="rememberMeCheckbox">
                   {t("Remember be")}
                 </label>
               </div>
@@ -134,12 +131,7 @@ const Login = ({ setToken }) => {
             <Button variant="secondary" onClick={handleClose} tabIndex={5}>
               Cancel
             </Button>
-            <Button
-              variant="primary"
-              type="submit"
-              onClick={handleSubmit}
-              tabIndex={4}
-            >
+            <Button variant="primary" type="submit" onClick={handleSubmit} tabIndex={4}>
               Submit
             </Button>
           </Modal.Footer>

@@ -12,43 +12,26 @@ const createTelemetry = require("./lib/telemetry");
 
 function connectToDatabase(_databaseConnection) {
   const databaseConnection = JSON.parse(_databaseConnection);
-  if (
-    Object.keys(databaseConnection).includes("url") &&
-    databaseConnection.url.startsWith("mongodb://")
-  ) {
+  if (Object.keys(databaseConnection).includes("url") && databaseConnection.url.startsWith("mongodb://")) {
     return createMongoClient(databaseConnection);
   }
   console.error(
-    `[WARNING]: didn't recognize scheme for database connection ${JSON.stringify(
-      databaseConnection
-    )} -- not connecting`
+    `[WARNING]: didn't recognize scheme for database connection ${JSON.stringify(databaseConnection)} -- not connecting`
   );
   return null;
 }
 
 function getSchemas(env, db) {
   function getCredentialsSchema() {
-    const collection = db.collection(
-      "credentials",
-      require("./app/schema/Credentials")({ env }),
-      "credentials"
-    );
+    const collection = db.collection("credentials", require("./app/schema/Credentials")({ env }), "credentials");
     return collection;
   }
   function getTraceSchema() {
-    const collection = db.collection(
-      "telemetry",
-      require("./lib/schema/Trace")({ env }),
-      "telemetry"
-    );
+    const collection = db.collection("telemetry", require("./lib/schema/Trace")({ env }), "telemetry");
     return collection;
   }
   function getUserSchema() {
-    const collection = db.collection(
-      "users",
-      require("./app/schema/User")({ env }),
-      "users"
-    );
+    const collection = db.collection("users", require("./app/schema/User")({ env }), "users");
     return collection;
   }
   return {
@@ -79,11 +62,10 @@ function createConfig({ env }) {
         preprocessPassword,
       }).router,
     },
-    },
     {
       path: "/",
-      router: createApiDocs({env})
-    }
+      router: createApiDocs({ env }),
+    },
   ];
 
   return {
@@ -92,7 +74,7 @@ function createConfig({ env }) {
     components,
     apis,
     telemetry,
-    schemas
+    schemas,
   };
 }
 

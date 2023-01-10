@@ -11,12 +11,7 @@ const Layout = (props) => {
   const userMenu = props.userMenu;
   return (
     <>
-      <Header
-        name="Vlinder Software"
-        logoLocation="/logo.svg"
-        mainMenu={mainMenu}
-        userMenu={userMenu}
-      />
+      <Header name="Vlinder Software" logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
       <div className="d-flex">
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">

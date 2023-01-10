@@ -73,10 +73,12 @@ const App = (props) => {
     import("./pages/Products");
   }, []);
 
-  return <>
-    <Toaster />
-    <RouterProvider router={router} />
-  </>;
+  return (
+    <>
+      <Toaster />
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;

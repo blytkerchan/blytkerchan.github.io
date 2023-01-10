@@ -1,7 +1,6 @@
 import { createGlobalState } from "react-hooks-global-state";
 const initialState = { error: { show: false } };
-const { useGlobalState } =
-  createGlobalState(initialState);
+const { useGlobalState } = createGlobalState(initialState);
 
 const errorTitles = {
   AuthenticationError: "Authentication error",

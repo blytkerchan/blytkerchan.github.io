@@ -8,10 +8,7 @@ const Header = (props) => {
   return (
     <>
       <header className="py-3 border-bottom">
-        <div
-          className="container-fluid d-grid gap-3 align-items-center"
-          style={{ gridTemplateColumns: "1fr 2fr" }}
-        >
+        <div className="container-fluid d-grid gap-3 align-items-center" style={{ gridTemplateColumns: "1fr 2fr" }}>
           <div className="dropdown vln-smallscreen-block">
             <Link
               to="/"
@@ -37,10 +34,7 @@ const Header = (props) => {
           </div>
 
           <div className="dropdown vln-fullscreen-block">
-            <Link
-              to="/"
-              className="d-flex align-items-center link-dark text-decoration-none"
-            >
+            <Link to="/" className="d-flex align-items-center link-dark text-decoration-none">
               <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
               <strong>{t("app:title")}</strong>
@@ -64,10 +58,7 @@ const Header = (props) => {
                   alt="blytkerchan"
                 />
               </Link>
-              <ul
-                className="dropdown-menu text-small shadow accordion"
-                id="userMenuItems"
-              >
+              <ul className="dropdown-menu text-small shadow accordion" id="userMenuItems">
                 {userMenu.map((menuItem, index) => {
                   if (typeof menuItem.children === "undefined") {
                     return (
@@ -81,14 +72,8 @@ const Header = (props) => {
                   } else {
                     return (
                       <li key={index}>
-                        <div
-                          className="accordion-item"
-                          style={{ whiteSpace: "nowrap", border: "none" }}
-                        >
-                          <span
-                            className="accordion-header"
-                            id={"heading" + index}
-                          >
+                        <div className="accordion-item" style={{ whiteSpace: "nowrap", border: "none" }}>
+                          <span className="accordion-header" id={"heading" + index}>
                             <div
                               className="accordion-button collapsed"
                               data-bs-toggle="collapse"
@@ -118,10 +103,7 @@ const Header = (props) => {
                                 {menuItem.children.map((child, childIndex) => {
                                   return (
                                     <li key={childIndex}>
-                                      <Link
-                                        className="dropdown-item"
-                                        to={child.path}
-                                      >
+                                      <Link className="dropdown-item" to={child.path}>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                         <i className={child.icon}></i>&nbsp;
                                         {t(child.title)}
