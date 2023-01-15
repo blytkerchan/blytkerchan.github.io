@@ -3,14 +3,14 @@ import React from "react";
 import { render, queryByAttribute } from "@testing-library/react";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
+import { Sidebar } from "./Sidebar";
 
 const getById = queryByAttribute.bind(null, "id");
 
 const Layout = (props) => {
   return (
     <>
-      <Sidebar menu={props.menu} />
+      <Sidebar menu={props.menu} t={key => key} />
       <Outlet />
     </>
   );

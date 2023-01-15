@@ -1,10 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
-const Header = (props) => {
-  const mainMenu = props.mainMenu;
-  const userMenu = props.userMenu;
-  const { t } = useTranslation();
+export const Header = ({ mainMenu, userMenu, t, logoLocation }) => {
   return (
     <>
       <header className="py-3 border-bottom">
@@ -16,7 +13,7 @@ const Header = (props) => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
+              <img src={logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
               <strong id="titleLabel">{t("app:title")}</strong>
             </Link>
@@ -35,7 +32,7 @@ const Header = (props) => {
 
           <div className="dropdown vln-fullscreen-block">
             <Link to="/" className="d-flex align-items-center link-dark text-decoration-none">
-              <img src={props.logoLocation} style={{ height: 36 }} alt="logo" />
+              <img src={logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
               <strong>{t("app:title")}</strong>
             </Link>
@@ -128,4 +125,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default withTranslation()(Header);

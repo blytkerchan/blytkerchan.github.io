@@ -3,14 +3,14 @@ import React from "react";
 import { render, queryByAttribute, getByTestId } from "@testing-library/react";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Header from "./Header";
+import { Header } from "./Header";
 
 const getById = queryByAttribute.bind(null, "id");
 
 const Layout = (props) => {
   return (
     <>
-      <Header mainMenu={props.mainMenu} userMenu={props.userMenu} />
+      <Header mainMenu={props.mainMenu} userMenu={props.userMenu} t={key => key} />
       <Outlet />
     </>
   );

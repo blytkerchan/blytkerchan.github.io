@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
-const Sidebar = (props) => {
-  const menu = props.menu;
-  const { t } = useTranslation();
+export const Sidebar = ({ t, menu }) => {
   return (
     <div className="d-flex flex-column flex-shrink-0" style={{ width: 286 }}>
       <ul className="nav nav-pills flex-column mb-auto" id="menuItems">
@@ -21,4 +19,4 @@ const Sidebar = (props) => {
   );
 };
 
-export default Sidebar;
+export default withTranslation()(Sidebar);
