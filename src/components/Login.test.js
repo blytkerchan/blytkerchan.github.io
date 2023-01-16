@@ -344,6 +344,7 @@ describe("Login component", () => {
     );
     const markdown = await screen.findByTestId("theMarkdown");
     await waitFor(() => {
+      // eslint-disable-next-line testing-library/no-node-access -- really need it this time
       const a = markdown.querySelector("a");
       expect(a).toHaveAttribute("href", "/key");
     });
