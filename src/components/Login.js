@@ -1,42 +1,14 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import env from "../config/environment";
 import { Modal, Button } from "react-bootstrap";
-
+import { withLoginUser } from "../lib/loginUser";
 import useError from "../lib/useError";
 
-function loginUser(credentials) {
-  return new Promise((resolve, reject) => {
-    fetch(env.loginEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(credentials),
-    })
-      .then((result) => {
-        if (result.ok) {
-          result.json().then((resultAsJson) => {
-            resolve(resultAsJson);
-          });
-        } else {
-          return result.json().then((resultAsJson) => {
-            reject(resultAsJson);
-          });
-        }
-      })
-      .catch((err) => {
-        reject(err);
-      });
-  });
-}
-
-const Login = ({ setToken }) => {
-  const { t } = useTranslation();
-
+export const Login = ({ setToken, t, loginUser, env, useError }) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [remember, setRemember] = useState(false);
@@ -52,11 +24,15 @@ const Login = ({ setToken }) => {
       setCursor("progress");
       e.preventDefault();
       const token = await loginUser({
-        username,
-        password,
+        credentials: {
+          username,
+          password,
+        },
+        env,
       });
       setToken({ token, remember });
     } catch (err) {
+      //TODO don't put this in the toaster
       setError(err);
     }
     setShow(false);
@@ -71,9 +47,10 @@ const Login = ({ setToken }) => {
       <Modal show={show} centered style={{ cursor: cursor }}>
         <form onSubmit={handleSubmit}>
           <Modal.Header closeButton>
-            <Modal.Title>{t("Log in")}</Modal.Title>
+            <Modal.Title><span data-testid="theLoginForm">{t("Log in")}</span></Modal.Title>
           </Modal.Header>
           <Modal.Body>
+          <span data-testid="theMarkdown">
             <Markdown
               components={{
                 a: (props) => <Link to={props.href}>{props.children}</Link>,
@@ -83,6 +60,7 @@ const Login = ({ setToken }) => {
                 applicationName: t("app:title"),
               })}
             </Markdown>
+            </span>
             <fieldset>
               <div className="mb-3">
                 <label htmlFor="emailInput" className="form-label">
@@ -108,6 +86,7 @@ const Login = ({ setToken }) => {
                   type="password"
                   className="form-control"
                   id="passwordInput"
+                  data-testid="passwordInput"
                   onChange={(e) => setPassword(e.target.value)}
                   tabIndex={2}
                   autoFocus
@@ -118,7 +97,7 @@ const Login = ({ setToken }) => {
                   type="checkbox"
                   className="form-check-input"
                   id="rememberMeCheckbox"
-                  onChange={(e) => setRemember(e.target.value)}
+                  onChange={(e) => setRemember(e.target.checked)}
                   tabIndex={3}
                 />
                 <label className="form-check-label" htmlFor="rememberMeCheckbox">
@@ -129,10 +108,10 @@ const Login = ({ setToken }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose} tabIndex={5}>
-              Cancel
+              {t("Cancel")}
             </Button>
             <Button variant="primary" type="submit" onClick={handleSubmit} tabIndex={4}>
-              Submit
+              {t("Submit")}
             </Button>
           </Modal.Footer>
         </form>
@@ -145,4 +124,4 @@ Login.propTypes = {
   setToken: PropTypes.func.isRequired,
 };
 
-export default Login;
+export default withTranslation()(withLoginUser(Login, {env, useError}));
