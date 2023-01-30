@@ -14,29 +14,23 @@ tags:
 - DNP3
 ---
 
-In [July last year](http://rlc.vlinder.ca/blog/2014/07/ics-security-current-and-future-focus/), I discussed why Adam Crain and Chris Sistrunk fuzzed DNP3 stacks in devices from various vendors, finding many issues along the way (see [project Robus](https://automatak.com/robus/)). This time, I'll provide a bit of an overview of what has happened since.
+In [July last year](/blog/2014/07/ics-security-current-and-future-focus/), I discussed why Adam Crain and Chris Sistrunk fuzzed DNP3 stacks in devices from various vendors, finding many issues along the way (see [project Robus](https://automatak.com/robus/)). This time, I'll provide a bit of an overview of what has happened since.
 <!--more-->
 In a nutshell:
 
+* [EPRI](http://epri.com), the Electric Power Research Institute, held a DNP3 Secure Authentication interoperability event to demonstrate the interoperability of various devices that implement DNP3 Secure Authentication
 
 
-	
-  * [EPRI](http://epri.com), the Electric Power Research Institute, held a DNP3 Secure Authentication interoperability event to demonstrate the interoperability of various devices that implement DNP3 Secure Authentication
-
-	
-  * Development of the DNP3 Key Management Protocol (DKMP) was started
-
-	
-  * The DNP3 Technical Committee held a face-to-face meeting during which security was a recurring subject
-
-	
-  * Project Robus expanded to test (at least one) Modbus implementation
-
-	
-  * TLS and Secure Authentication support is being added to [OpenDNP3](https://github.com/automatak/dnp3), the only F/OSS implementation of DNP3
+* Development of the DNP3 Key Management Protocol (DKMP) was started
 
 
+* The DNP3 Technical Committee held a face-to-face meeting during which security was a recurring subject
 
+
+* Project Robus expanded to test (at least one) Modbus implementation
+
+
+* TLS and Secure Authentication support is being added to [OpenDNP3](https://github.com/automatak/dnp3), the only F/OSS implementation of DNP3
 
 ## EPRI DNP3 Secure Authentication interoperability event
 
@@ -48,14 +42,12 @@ There is much to be said about the merits of Secure Authentication, and the EPRI
 One thing that was clearly missing -- and pretty much kicked off on the spot -- was a protocol to manage Update Keys.
 
 
-
 ## The start of DKMP, the DNP3 Key Management Protocol
 
 
 
 
 <blockquote>Cryptographic key management was a particular challenge because the interface between some of the components has not yet been designed. This project performed much of that design and laid the groundwork for standardizing the interface. -- DNP3 (IEEE Std 1815™) Secure Authentication: Implementation and Migration Guide and Demonstration Report</blockquote>
-
 
 
 DNP3 is a SCADA protocol. As such, it is not geared towards key management and large parts of the behind-the-scenes stuff that is needed to bootstrap Secure Authentication is largely unspecified.

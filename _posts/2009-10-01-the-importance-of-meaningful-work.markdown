@@ -13,8 +13,8 @@ categories:
 tags:
 - Posts that need to be re-tagged (WIP)
 ---
-
-<blockquote>"_Autonomy, complexity and a connection between effort and reward are the three qualities that work as to have if it is to be satisfying. It's not how much money we make that ultimately makes us happy between nine and five - it's whether our work fulfills us. (...) Work that fulfills those three criteria is meaningful. Hard work is a prison sentence only if it does not have meaning. Once it does, it becomes the kind of thing that makes you grab your wife around the waist and dance a jig. (...) If you work hard enough, and assert yourself, and use your mind and imagination, you can shape the world to your desires._" - Malcolm Gladwell, _Outliers_</blockquote>
+<!--more-->
+<blockquote>"_Autonomy, complexity and a connection between effort and reward are the three qualities that work as to have if it is to be satisfying. It's not how much money we make that ultimately makes us happy between nine and five - it's whether our work fulfills us. (...) Work that fulfills those three criteria is meaningful. Hard work is a prison sentence only if it does not have meaning. Once it does, it becomes the kind of thing that makes you grab your wife around the waist and dance a jig. (...) If you work hard enough, and assert yourself, and use your mind and imagination, you can shape the world to your desires._" - Malcolm Gladwell, <i>Outliers</i></blockquote>
 
 
 

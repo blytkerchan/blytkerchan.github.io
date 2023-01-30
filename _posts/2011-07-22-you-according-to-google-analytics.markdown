@@ -15,8 +15,8 @@ tags:
 
 This blog uses Google Analytics, which provides a treasure-trove of information about the site's visitors. To use that information to improve the site, it has to be parsed.
 
-Here's a sketch of what a typical user may look like - and what that tells me about what I should do with the site.
-<!--more-->
+Here's a sketch of what a typical user may look like - and what that tells me about what I should do with the site.<!--more-->
+
 **You are from one of 122 countries** but are most likely to be in North America, South Asia (India, mostly) or Europe.
 
 **45% of you live in North America**, most of whom live in the US. By contrast, only **1.2% of you live in Africa**, of which 48% are in South Africa.

@@ -16,7 +16,7 @@ tags:
 - ICS security
 ---
 
-[Automatak will be releasing](http://automatak.net/wordpress/?p=482) the Aegis fuzzing tool publicly and for free for the first time in a few days. Like I said yesterday:
+[Automatak will be releasing](https://web.archive.org/web/20150308032035/http://automatak.net/wordpress/?p=482) the Aegis fuzzing tool publicly and for free for the first time in a few days. Like I said yesterday:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Can hardly wait:  &quot;2 weeks until Aegis™ release&quot; <a href="http://t.co/KrQkrbb9a9">http://t.co/KrQkrbb9a9</a></p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/439582028259147777?ref_src=twsrc%5Etfw">March 1, 2014</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -30,12 +30,15 @@ I don't think the industry is ready -- and here's why.
 
 <!--more-->
 
-Most vendors, including the one I work for ((Vlinder Software does not currently have any products related to DNP3, but I also work as a senior developer for Eaton's Cooper Power Systems and am a member, on their behalf, of the DNP3 Technical Committee.  
-I am writing this post on my own behalf. Any opinions expressed herein are entirely my own and do not reflect Eaton's or Cooper Power Systems' policies or opinions in any way.)), have released fixes for the vulnerabilities that have been exposed so far using this tool and have made their customer base aware of the problems and the scope of those problems. Some vendors regrettably have been far less pro-active than others, but I'd like to believe most vendors have made fixes available to their customers, even if they haven't been public about it ((I have no way of knowing that, of course, but it is the only way to account for the apparent silence on the part of some vendors and still have some faith in the quality of their products and the way they handle security issues)).
+Most vendors, including the one I work for, have released fixes for the vulnerabilities that have been exposed so far using this tool and have made their customer base aware of the problems and the scope of those problems. Some vendors regrettably have been far less pro-active than others, but I'd like to believe most vendors have made fixes available to their customers, even if they haven't been public about it[^1].
+
+[^1]: I have no way of knowing that, of course, but it is the only way to account for the apparent silence on the part of some vendors and still have some faith in the quality of their products and the way they handle security issues.
 
 Fixes have been available to utilities for a few months now, but utilities are very slow in upgrading their device firmware: before they accept a firmware upgrade, they go through a battery of tests to make sure the firmware still meets interoperability requirements (so everything in the system can continue to communicate and existing configurations still work) and some will ask their vendors for special versions, fixing only the specific problem in older the versions of the firmware they're using. This is usually must easier said than done, which adds to the time before an upgrade can be done.
 
-Upgrading firmware on a large number of devices requires those devices to be restarted, which means parts of the network have to be turned off for (hopefully small) periods of time. While that doesn't necessarily mean anyone will be without power for any period of time ((it will mean exactly that for parts of the network where there's no redundancy available)) it does mean that the network's capacity for taking power from the production site to the consumption site (your home or business) will be reduced for the time the upgrade is going on.
+Upgrading firmware on a large number of devices requires those devices to be restarted, which means parts of the network have to be turned off for (hopefully small) periods of time. While that doesn't necessarily mean anyone will be without power for any period of time[^2] it does mean that the network's capacity for taking power from the production site to the consumption site (your home or business) will be reduced for the time the upgrade is going on.
+
+[^2]: It will mean exactly that for parts of the network where there's no redundancy available).
 
 Winter and summer are bad times for planned outages: the grid is stressed by the extra power consumption that comes with the necessary temperature control -- necessary because warm-blooded though we are, we do like our houses and offices to be warm in the winter and not too hot in the summer -- so for as far as there's a "right" time to upgrade firmware and install these fixes, that time would be in about a month or two, a month or two after Aegis is released to the public.
 

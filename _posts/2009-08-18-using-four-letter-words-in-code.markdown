@@ -15,7 +15,7 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-When writing firmware and device drivers, it is useful, sometimes, to have human-readable integer values - i.e. integer values that, when you read them in a debugger, mean something distinctive. This is different from using integers that have a distinctive bit pattern so you can read them on a scope (ex. 0xABABABAB, which is 10101011 repeated four times). So, when generating a new magic number, I usually use od, like this
+When writing firmware and device drivers, it is useful, sometimes, to have human-readable integer values - i.e. integer values that, when you read them in a debugger, mean something distinctive.<!--more--> This is different from using integers that have a distinctive bit pattern so you can read them on a scope (ex. 0xABABABAB, which is 10101011 repeated four times). So, when generating a new magic number, I usually use od, like this
 
     
     $ echo -n {FOUR-LETTER-WORD} | od -t x1

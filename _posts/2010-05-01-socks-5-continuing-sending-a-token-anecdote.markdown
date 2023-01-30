@@ -14,8 +14,6 @@ tags:
 - SOCKS
 ---
 
-[donate]
-
 Recording the latest episode of the podcast reminded me of a story that I'd like to tell you: a few years ago, I started working as a programmer on a project in which there was a policy to include the definitions of the classes used in a header - by including the headers that defined those classes - rather than what I recommended in the podcast: to use forward declarations. They also had a policy to use only the name of the file to include rather than the complete path (e.g. `#include "MyClass.h"` rather than `#include "path/to/MyClass.h"`). The reason for this was convenience: the preprocessor, when told where to look, would find the proper files and including them in the class' header meant you didn't have to use dynamic allocation (of which there was still a lot going on in the project) but you could use the objects directly, rather than references and pointers.
 <!--more-->
 It took me a while to realize how mis-guided this quest for convenience was: the project had grown rather big - and had remained monolithic - when I arrived and we were busily adding more code to it, so compile times could go into multiple hours (up to four hours when I decided to fix the problem, but too long for a lunch break already when I arrived) which meant we wanted to avoid recompiling "the planet" as much as possible. When it couldn't be avoided, we tried to start the build before leaving and running it during the night, it hopefully having finished when we got back to work in the morning. Of course, that wasn't always possible, so overtime was often necessary.

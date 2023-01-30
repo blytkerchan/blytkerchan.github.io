@@ -15,6 +15,7 @@ tags:
 ---
 
 When writing library code, one of the snares to watch out for is _binary compatibility_. I have already [talked about the dangers](/blog/2009/08/the-danger-of-breaking-changes/) of breaking binary - and API - compatibility but I had neither defined what binary compatibility is, now how to prevent breaking it. In this post, I will do both - and I will explain how, at Vlinder Software, we go about managing incompatible changes.
+<!--more-->
 
 ## What is "compatibility"?
 

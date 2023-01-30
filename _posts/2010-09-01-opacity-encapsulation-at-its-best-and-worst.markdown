@@ -14,8 +14,6 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 One thing you may have noticed when looking at the code of our abstract factory, is that the base classes (interfaces) of each of our abstract objects don't have much to tell their users: there are hardly any accessors or mutators to be found. This is an attribute of encapsulation called _opacity_ and in this installment, we'll explore its advantages and disadvantages.
 <!--more-->
 Let's look at the `Mechanism` class: the base class says very little about the mechanism itself: it doesn't even allow you to get its name. It currently only allows you to get credentials from the current mechanism and will eventually serve as the primary interface to interact with the mechanism. It will not, however, allow you any knowledge as to what that mechanism is. That knowledge, once it is handed to the `MechanismFactory`, is lost (unless you keep it around elsewhere).

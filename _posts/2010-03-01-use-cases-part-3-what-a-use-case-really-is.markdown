@@ -14,8 +14,6 @@ tags:
 - use-cases
 ---
 
-[donate]
-
 Before we start using use-cases in the description of the functional requirements we want to meet in our project, we need to understand what a use-case really is and how to go about writing one. In this installment I will attempt to answer both those questions. However, this series is called "C++ for the self-taught" for a reason: I will include references for all of the material I have cited in this installment, and I hope you will take it upon yourself to go out and look a bit yourself as well.
 <!--more-->
 
@@ -45,119 +43,41 @@ We will leave this question open for the moment, and see how the prose that desc
 Actors have goals, stakeholders have interests. Use-cases talk about actors, not about stakeholders. If you start by establishing what the goals of your actors are (that is before you start thinking about how they might achieve those goals) and listing those goals, you've taken your first steps. Make sure you are sufficiently, but not overly, precise when defining your goals. I'll quote Ellen Gottesdiener again:
 
 
-<blockquote>
-
-> 
-> 
-
->   * Name your [goals] using this format: verb + [qualified] object.
-> 
-
->   * Use active (not passive) verbs.
-> 
-
->   * Avoid vague verbs such as do or process.
-> 
-
->   * Avoid low-level, database-oriented verbs such as create, read,
-update, delete [...], get, or
-insert.
-> 
-
->   * The "object" part of the use-case name can be a noun (such as
-inventory) or a qualified noun (such as in-stock inventory).
-> 
-
->   * Make sure that the project Glossary defines each object in the usecase
-name.
-> 
-
->   * Add each object to the domain model (as a class, entity, or
-attribute).
-> 
-
-</blockquote>
-
+* Name your [goals] using this format: verb + [qualified] object.
+* Use active (not passive) verbs.
+* Avoid vague verbs such as do or process.
+* Avoid low-level, database-oriented verbs such as create, read, update, delete [...], get, or insert.
+* The "object" part of the use-case name can be a noun (such as inventory) or a qualified noun (such as in-stock inventory).
+* Make sure that the project Glossary defines each object in the usecase name.
+* Add each object to the domain model (as a class, entity, or attribute).
 
 
 Ellen Gottesdiener also provides a nice list of verbs that can be used to effectively identify use-cases (goals):
 
-
-<blockquote>
-<table >
-
 Example Verbs to Use in Use-Case Names
 
-<tbody >
-<tr >Informative Use CasesPerformative Use Cases
-<tr >
+| Informative Use Cases | Performative Use Cases  |
+| --------------------- | ----------------------- |
+| Analyze               | Achieve                 |
+| Discover              | Allow                   |
+| Find                  | Arrange                 |
+| Identify              | Change                  |
+| Inform                | Classify                |
+| Monitor               | Define                  |
+| Notify                | Deliver                 |
+| Query                 | Design                  |
+| Request               | Ensure                  |
+| Search                | Establish               |
+| Select                | Evaluate                |
+| State                 | Issue                   |
+|                       | Make                    |
+|                       | Perform                 |
+|                       | Provide                 |
+|                       | Replenish               |
+|                       | Request                 |
+|                       | Set up                  |
+|                       | Specify                 |
 
-> <td >
-Analyze  
-
-Discover  
-
-Find  
-
-Identify  
-
-Inform  
-
-Monitor  
-
-Notify  
-
-Query  
-
-Request  
-
-Search  
-
-Select  
-
-State  
-
-View
-> </td>
-> <td >Achieve  
-
-Allow  
-
-Arrange  
-
-Change  
-
-Classify  
-
-Define  
-
-Deliver  
-
-Design  
-
-Ensure  
-
-Establish  
-
-Evaluate  
-
-Issue  
-
-Make  
-
-Perform  
-
-Provide  
-
-Replenish  
-
-Request  
-
-Set up  
-
-Specify
-> </td></tr></tbody></table>
-</blockquote>
 
 
 

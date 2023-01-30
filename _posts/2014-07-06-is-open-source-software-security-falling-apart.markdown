@@ -25,7 +25,7 @@ So, is there a systemic problem with Open Source software? Does proprietary soft
 
 <!--more-->
 
-Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost[^2] and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where [latex]0 \le M \le cN[/latex].
+Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost[^2] and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where $0 \le M \le cN$.
 
 [^2]: Truecrypt gave up the ghost in May of this year, ostensibly because modern OSs come with their own disk encryption options. This does not reflect the quality of Truecrypt -- just that it is no longer maintained.
 

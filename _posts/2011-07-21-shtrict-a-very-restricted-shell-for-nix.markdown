@@ -21,5 +21,3 @@ It allows you to define a number of commands, which are the only commands that y
 An Ubuntu Natty package is available [here](/assets/2011/07/shtrict-1.0.00.zip), rolled together in a ZIP (the DEB is inside).
 
 Sources are available [here](/assets/2011/07/shtrict_1.0.00.tar.gz).
-
-On Gitorious, the code is here

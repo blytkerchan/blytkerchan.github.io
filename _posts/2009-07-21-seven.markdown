@@ -24,7 +24,7 @@ I got a private comment asking me about the "seven years of experience" I talked
 
 
 	
-  * I _**do** _count the time I worked for MiniSAT, now defunct, in France, as _Directeur des Systemes d'information_ - a title far more pompous than the work I did, which was that of a network admin and team lead for a small team of Perl and PHP programmers;
+  * I _**do**_ count the time I worked for MiniSAT, now defunct, in France, as _Directeur des Systemes d'information_ - a title far more pompous than the work I did, which was that of a network admin and team lead for a small team of Perl and PHP programmers;
 
 	
   * I _**do**_ count the time I worked for [Harvest](http://harvest.fr), in France, as _Ingenieur de Developpement C++_, where my job was to maintain a modular framework for their calculation engine while writing a new one and helping the rest of the team out with their C++ questions

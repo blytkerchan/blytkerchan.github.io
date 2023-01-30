@@ -15,24 +15,16 @@ tags:
 - optimization
 ---
 
-I explained the problem I presented in my [previous post](http://rlc.vlinder.ca/blog/2014/09/optimization-by-puzzle/) to my wife overt dinner yesterday. She's a professor at law and a very intelligent person, but has no notion of set theory, graph theory, or algorithms. I'm sure many of my colleagues run into similar problems, so I thought I'd share the analogies I used to explain the problem, and the solution. I didn't get to explaining how to arrive at computational complexity, though.
+I explained the problem I presented in my [previous post](/blog/2014/09/optimization-by-puzzle/) to my wife overt dinner yesterday. She's a professor at law and a very intelligent person, but has no notion of set theory, graph theory, or algorithms. I'm sure many of my colleagues run into similar problems, so I thought I'd share the analogies I used to explain the problem, and the solution. I didn't get to explaining how to arrive at computational complexity, though.
 
 <!--more-->
 
 Say you have a class full of third-grade children. Their instructions are simple: 
 
   1. They cannot tell you their own names -- if you ask, they have permission to kick you in the shins.
-
-
   2. Each child has their hands on the shoulder of zero  one or two other children.
-
-
   3. All the children are facing in the same direction.
-
-
   4. Only one child has no hands on their shoulder.
-
-
   5. You can ask each child the names of the children whose shoulders they have their hands on, but they will only tell you once -- ask again, they'll kick you in the shins -- and you have to address them by their names.
 
 You are told the name of one child. How do you get the names of all the children without getting kicked in the shins and which child do you have to get the name of?

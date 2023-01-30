@@ -16,7 +16,7 @@ tags:
 - ranges
 ---
 
-[audio src="http://vlinder.ca/podcasts/30-functional.mp3"]C++ is a very versatile language. Among other things, you can do generic meta-programming and functional programming in C++, as well as the better-known facilities for procedural and object-oriented programming. In this installment, we will look at the functional programming facilities in the now-current C++ standard (C++03) as well as the upcoming C++0x standard. We will look at what a _closure_ is and how to apply one to a range, but we will first look at some simpler uses of ranges -- to warm up.
+C++ is a very versatile language. Among other things, you can do generic meta-programming and functional programming in C++, as well as the better-known facilities for procedural and object-oriented programming. In this installment, we will look at the functional programming facilities in the now-current C++ standard (C++03) as well as the upcoming C++0x standard. We will look at what a _closure_ is and how to apply one to a range, but we will first look at some simpler uses of ranges -- to warm up.
 <!--more-->
 If you look at the current version of Chausette, in the code for episode 28, you will find this: 
     
@@ -35,9 +35,13 @@ If you look at the current version of Chausette, in the code for episode 28, you
     	}
     }
 
-On line 4 of this listing, you can see our first use of a range: using `copy`, we copy the range of arguments passed to the application into the `arguments` vector. ((Note that this is not functional programming (yet), but in order to understand how functional programming is thought of in (current) C++, it is important to understand how ranges work.)) The range that contains all the arguments is `argc` in size (which is why the vector is initialized to contain `argc` elements) and starts at `argv`. This same approach to ranges works for all C-style arrays: the `begin`ning of the range points at the first element, the `end` of the range points one past the last element. We note a range like this: `[begin, end)`. Using `begin` and `end` in this manner works for STL containers as well, and is the basic premise for all STL algorithms.
+On line 4 of this listing, you can see our first use of a range: using `copy`, we copy the range of arguments passed to the application into the `arguments` vector [^1]. The range that contains all the arguments is `argc` in size (which is why the vector is initialized to contain `argc` elements) and starts at `argv`. This same approach to ranges works for all C-style arrays: the `begin`ning of the range points at the first element, the `end` of the range points one past the last element. We note a range like this: `[begin, end)`. Using `begin` and `end` in this manner works for STL containers as well, and is the basic premise for all STL algorithms.
 
-If you look at the code for `std::copy` you'll find something like this ((The real code will likely be more complicated because of some optimizations the implementation may do, but the general idea is the same.)):
+[^1]: Note that this is not functional programming (yet), but in order to understand how functional programming is thought of in (current) C++, it is important to understand how ranges work.
+
+If you look at the code for `std::copy` you'll find something like this[^2]:
+
+[^2]: The real code will likely be more complicated because of some optimizations the implementation may do, but the general idea is the same.
     
     template < typename InIter, typename OutIter >
     OutIter copy(InIter begin, InIter end, OutIter result)
@@ -91,7 +95,11 @@ Let's go a bit further in the code and see what happens in `Server::update`:
     	sockets_.begin(), sockets_.end(),
     	Functor(read_fds, &Socket;::read_avail_, highest_fd));
 
-In lines 41 through 64, we define the class `Functor`. This class models a function object (a.k.a. a functor) which, once constructed, behaves exactly like a function would, thanks to the overloaded `operator()` -- the function-call operator. ((Of course, I would not ordinarily call this functor `Functor`, but I had a point to make. Do not, however, call all your functors by the kind of thing they are -- name them according to their functionality, as you would (should) any other chunk of code.)) In line 137 ((135 in the actual code in Git)), the function-object is constructed and is subsequently called for each object in the `sockets_` list, meaning that for each of those objects, the function-call operator of the `Functor` class is called.
+In lines 41 through 64, we define the class `Functor`. This class models a function object (a.k.a. a functor) which, once constructed, behaves exactly like a function would, thanks to the overloaded `operator()` -- the function-call operator[^3]. In line 137[^4], the function-object is constructed and is subsequently called for each object in the `sockets_` list, meaning that for each of those objects, the function-call operator of the `Functor` class is called.
+
+[^3]: Of course, I would not ordinarily call this functor `Functor`, but I had a point to make. Do not, however, call all your functors by the kind of thing they are -- name them according to their functionality, as you would (should) any other chunk of code.
+
+[^4]: 135 in the actual code in Git
 
 This is functional programming, as allowed by C++03 -- the current standard for C++.
 
@@ -116,7 +124,9 @@ These three, together, produce a _closure_ which, if you're not used to it, look
     	for_each(a, a + 5, [](int i){ cout << i << endl; });
     }
 
-In this case, the lambda expression is `[](int i){ cout << i << endl; }`: it doesn't capture anything (`[]` is an empty capture set ((I should note that the term "capture set" is not mentioned anywhere in the draft standard. I take it to mean the set of actually captured variables, which is the result of the _lambda-capture_ being applied))), takes an integer `i` as parameter and outputs that integer to `cout`.
+In this case, the lambda expression is `[](int i){ cout << i << endl; }`: it doesn't capture anything (`[]` is an empty capture set[^5]), takes an integer `i` as parameter and outputs that integer to `cout`.
+
+[^5]: I should note that the term "capture set" is not mentioned anywhere in the draft standard. I take it to mean the set of actually captured variables, which is the result of the _lambda-capture_ being applied.
 
 Now, the lambda expression in this code doesn't actually capture anything. To show how that works, let's capture the array that we loop over: 
     
@@ -149,7 +159,7 @@ There are three versions of this example that you can play with at ideone.com:
 	
   2. [a modified version of the example code](http://ideone.com/v8Wsr), in which there is another enclosed lamda expression
 	
-  3. [another modified version of the example code](http://ideone.com/cMwCa), in which the enclosed lambda expression is returned immediatele
+  3. [another modified version of the example code](http://ideone.com/cMwCa), in which the enclosed lambda expression is returned immediately
 
 
 If you have any questions about what you find when you play with that code, feel free to ask.

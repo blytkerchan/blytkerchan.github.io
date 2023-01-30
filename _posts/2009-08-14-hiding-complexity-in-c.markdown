@@ -15,6 +15,7 @@ tags:
 ---
 
 C++ is a programming language that, aside from staying as close to the machine as possible (but no closer) and as close to C as possible (but no closer), allows the programmer to express abstraction if a few very elegant constructs. That is probably the one thing I like best about C++.
+<!--more-->
 
 This morning, while coding on a product for Vlinder Software, I had a function to write that was to handle at least ten different scenarios, which first had to be identified, and had subtle and not-so-subtle consequences, including, but not limited to, four scenarios in which the function had to recurse up the directory tree. The calling code is ignorant to these scenarios - and should be, for it doesn't need to know about them. I didn't want to expose the existence of these scenarios any more than strictly necessary, but I did want readable code. I.e., at the calling point, I just wanted this:
     

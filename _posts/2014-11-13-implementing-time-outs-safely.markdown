@@ -60,7 +60,7 @@ Now that you have your target time, you ask to be called back `target_time - cur
   1. is the current time greater than the target time? If so, time-out!
 
 	
-  2. is the difference between the target time and the current time greater than half the capacity of the counter (i.e. is $latex target\_time - curr\_time > \frac{\max_{time}}{2}$) - that's a sure sign it's overflowed, in which case you can also see it as a time-out (unless your time-out is more than half the capacity of the counter, in which case you need a better counter)
+  2. is the difference between the target time and the current time greater than half the capacity of the counter (i.e. is $targettime - currtime > \frac{\max_{time}}{2}$) - that's a sure sign it's overflowed, in which case you can also see it as a time-out (unless your time-out is more than half the capacity of the counter, in which case you need a better counter)
 
 
 You don't need to check for overflows in most cases, because in most cases, your counter will never overflow: a 64-bit counter at 50 MHz -- which is fairly typical in some embedded systems -- will overflow in over 11,000 years; a 64-bit counter at 1 GHz will still take decades to overflow; 32-bit counters are far more prone to overflow: anything above 49 KHz will overflow in a day, but there are tricks to make a 32-bit counter into a 64-bit counter without too much effort.

@@ -14,7 +14,7 @@ tags:
 ---
 
 By the end of the next decade, there will be no oil left for consumers such as myself and we'll have reached peak oil.
-By the end of the decade after that, the last wild polar bear will have drowned because there will be [no polar ice left for it to walk on](http://arctic.atmos.uiuc.edu/cryosphere/), it will have been shot by some-one up North as it entered a home looking for food, or it will have died of starvation after eating the last of its cubs.
+By the end of the decade after that, the last wild polar bear will have drowned because there will be [no polar ice left for it to walk on](https://web.archive.org/web/20091202152216/http://arctic.atmos.uiuc.edu/cryosphere/), it will have been shot by some-one up North as it entered a home looking for food, or it will have died of starvation after eating the last of its cubs.
 By the end of my expected natural life-span, there will be no edible fish left in the ocean.
 
 These statements, which are corroborated by leading economist and, for the one about the polar ice cap, meteorologists rather than environmentalists, have a profound impact on the way we work and on the computing industry in general.

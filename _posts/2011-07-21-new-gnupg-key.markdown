@@ -22,7 +22,7 @@ For those who want to be able to verify .deb packages I make: I have a new GnuPG
     	 Fingerprint=9DAC FA3D D7A5 001F A0B2  DA59 5E0C 4AF1 6D3C D07B 
 
 
-You can download it from [keys.gnupg.net](http://http-keys.gnupg.net/pks/lookup?op=get&search=0x5E0C4AF16D3CD07B)
+You can download it from keys.gnupg.net
 <!--more-->
 Or you can copy-paste it here:
 

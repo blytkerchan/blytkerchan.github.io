@@ -16,18 +16,22 @@ tags:
 - ways of working
 - workflow
 ---
-
+<!--more-->
 [![](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef017c330f2ae8970b-pi)](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef017c330f2ae8970b-pi)Imagine, just for a moment (it would be painful to do this longer than just a moment) that Linus, when he decided to leave BitKeeper behind, switched to Subversion in stead of developing Git and that for any commit into the master branch of that repository, you'd need his approval. While you're imagining that, just a few microseconds more, imagine he stuck to his guns.
 
 Either Linux would no longer exist or Linus would have been declared mad, and Linux would have moved on without him.
 
 [![](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef0134849ab5bb970c-pi)](http://geekandpoke.typepad.com/geekandpoke/2010/06/real-coders-help-each-other.html)Centrally managed version control systems are fundamentally flawed and impede productivity. Any project with more than a handful of developers/programmers using a centrally managed version control system will either lose control over the quality of the product, or bring productivity to a grinding halt.
 
-<!--more-->
+There are several popular centrally managed SCMs Out There: Microsoft has TFS, many open source and commercial projects use Subversion -- some people even still use CVS[^1]. I've personally worked with TFS, SVN, CVS and MKS -- I've even used RCS, though that is arguably the first distributed version manager[^2].
 
-There are several popular centrally managed SCMs Out There: Microsoft has TFS, many open source and commercial projects use Subversion -- some people even still use CVS ((no, really, I mean it!)). I've personally worked with TFS, SVN, CVS and MKS -- I've even used RCS, though that is arguably the first distributed version manager ((Again, I mean it, really!)).
+[^1]: No, really, I mean it!
 
-CVS is, of course, fundamentally flawed because it not only doesn't guarantee that what you get out is what you put in, but it practically guarantees the reverse: what you put in will be modified in various subtle and not-so-subtle ways, so you will never see it again. So we won't discuss CVS any further, nor will we discuss RCS, which underpins CVS and has the same fundamental flaw w.r.t. what's put in and what you get out. The same goes for MKS, which is basically CVS with a few extra flaws ((The place I used MKS at made significant progress when they moved to CVS, partly due to a push in that direction on my part -- yes, really, I actually influenced a whole team of developers to start using CVS. In my defense, this was before Git existed, before Subversion was anywhere near being stable, and CVS really is a lot less bad than MKS.)).
+[^2]: Again, I mean it, really!
+
+CVS is, of course, fundamentally flawed because it not only doesn't guarantee that what you get out is what you put in, but it practically guarantees the reverse: what you put in will be modified in various subtle and not-so-subtle ways, so you will never see it again. So we won't discuss CVS any further, nor will we discuss RCS, which underpins CVS and has the same fundamental flaw w.r.t. what's put in and what you get out. The same goes for MKS, which is basically CVS with a few extra flaws[^3].
+
+[^3]: The place I used MKS at made significant progress when they moved to CVS, partly due to a push in that direction on my part -- yes, really, I actually influenced a whole team of developers to start using CVS. In my defense, this was before Git existed, before Subversion was anywhere near being stable, and CVS really is a lot less bad than MKS..
 
 I will argue, however, that all centrally managed version control systems are fundamentally flawed: they impede cooperative development, they diminish productivity and they introduce unnecessary bottlenecks in the development process -- even if there is only one "canonical" version of the software.
 

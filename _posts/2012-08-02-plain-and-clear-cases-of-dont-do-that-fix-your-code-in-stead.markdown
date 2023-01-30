@@ -22,8 +22,9 @@ SIGSEGV is the POSIX way of saying "Access Violation": it means the program trie
 
 It's a bug.
 
-In the OP's ((OP = Original Poster - the person who started the discussion)) case, the bug was a clear case of programmer laziness:
+In the OP's[^1] case, the bug was a clear case of programmer laziness:
 
+[^1]: OP = Original Poster - the person who started the discussion
 
 
 <blockquote>My code has a certain pointer that sometimes unexpectedly becomes null. 

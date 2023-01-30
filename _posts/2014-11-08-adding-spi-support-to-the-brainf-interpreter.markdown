@@ -15,13 +15,17 @@ tags:
 - VHDL
 ---
 
-While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is ((Apparently, power outlets at Chicago O'Hare are a rare commodity, to the point that their internal website points you to "Power stations" of which there were three in my vacinity, but all of them were fully -- ehm.. -- used. I finally found an outlet in the foodcourt with a gentleman standing next to it, but only using one socket, so I connected my laptop the the other so socket and a small constellation of devices to the various USB ports on my laptop...)). My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.
+While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is[^1]. My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.
+
+[^1]: Apparently, power outlets at Chicago O'Hare are a rare commodity, to the point that their internal website points you to "Power stations" of which there were three in my vacinity, but all of them were fully -- ehm.. -- used. I finally found an outlet in the foodcourt with a gentleman standing next to it, but only using one socket, so I connected my laptop the the other so socket and a small constellation of devices to the various USB ports on my laptop...
 
 <!--more-->
 
 I like SPI for a number of reasons. First, it's a full-duplex bus: both sides (master and slave) talk at the same time, at the same rate. It is also astoundingly simple: the master drives a clock -- which can be as fast as it can bang bits -- and selects the slave to talk to with a dedicated `slave_select#` signal, one for each slave. There are two other signals which are shared by all of the slaves: MOSI, for master-out-slave-in, and MISO, for (you guessed it) master-in-slave-out. When a slave is not selected, it sets its MISO output to high-impedance (tristate) so the selected slave can talk. When it is selected, common convention is to drive it low when you have nothing to say, or drive it to whatever your bit value is when you do.
 
-As you're reading and writing at the same time, you need to be kind to your master, and hope he's kind with you as well. Common convention ((it's not like this thing is over-specified!)) is to read on the falling edge of the clock, and write on the rising edge. Usually, these clocks are at about 100 KHz, which means you can go at 100 Kbps, though in theory, you could reach speeds into the realm of MHz -- the only _real_ limit, again, is how fast you can bang your bits and, at some point, how much noise you can tolerate.
+As you're reading and writing at the same time, you need to be kind to your master, and hope he's kind with you as well. Common convention[^2] is to read on the falling edge of the clock, and write on the rising edge. Usually, these clocks are at about 100 KHz, which means you can go at 100 Kbps, though in theory, you could reach speeds into the realm of MHz -- the only _real_ limit, again, is how fast you can bang your bits and, at some point, how much noise you can tolerate.
+
+[^2]: It's not like this thing is over-specified!
 
 Now, I just mentioned noise: these inputs are going to have to be debounced, which means they are going to be at least a bit desynchronized. But for the BrainF interpreter, we can pretend we're living in a noise-free world for now, and forget about debouncing for a bit -- I'll add one of those later.
 

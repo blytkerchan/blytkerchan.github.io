@@ -20,6 +20,7 @@ tags:
 ---
 
 Any problem is an invitation to find a solution.
+<!--more-->
 
 Any solution - at least in my line of work - is an amalgam of concrete
 implementations of abstract concepts. Each of those implementations

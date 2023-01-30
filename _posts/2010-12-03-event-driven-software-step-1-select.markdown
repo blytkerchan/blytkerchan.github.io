@@ -15,7 +15,6 @@ tags:
 - software
 ---
 
-[donate]
 
 In this installment, we will look at the basic networking functions and start looking at event-driven software design. Starring in this installment will be the `select` function.
 <!--more-->

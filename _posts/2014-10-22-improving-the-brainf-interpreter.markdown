@@ -15,7 +15,7 @@ tags:
 - VHDL
 ---
 
-As I wrote in a [previous post](http://rlc.vlinder.ca/blog/2014/10/writing-a-brainf-interpreter-in-vhdl/), I wrote a BrainF interpreter in VHDL over a week-end. I decided to improve it a bit.
+As I wrote in a [previous post](/blog/2014/10/writing-a-brainf-interpreter-in-vhdl/), I wrote a BrainF interpreter in VHDL over a week-end. I decided to improve it a bit.
 <!--more-->
 The first think was to add `nop` and `halt` instructions. The `halt` instruction, with which the program buffer is filled by default, halts interpretation and can be put in the BrainF code as a `#` sign. As this is a "normal" instruction, it can be skipped using an "if"-like loop `[#]` which might come in handy for assertions and somesuch. To really be useful I'd have to expose some debug registers -- e.g. with the values of the memory pointer and the instruction pointer, but that'll come later.
 

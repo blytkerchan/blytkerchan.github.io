@@ -16,7 +16,7 @@ tags:
 - programming language design
 ---
 
-Dennis Ritchie is the inventor of the C programming language, which is the ancestor of a whole family of programming languages that includes C++, Java and C# -- probably the three most popular programming languages today -- as well as D and Objective-C, which are less popular but significant nonetheless.
+Dennis Ritchie is the inventor of the C programming language, which is the ancestor of a whole family of programming languages that includes C++, Java and C# -- probably the three most popular programming languages today -- as well as D and Objective-C, which are less popular but significant nonetheless.<!--more-->
 
 
 

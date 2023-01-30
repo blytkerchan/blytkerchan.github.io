@@ -38,47 +38,32 @@ Now, I don't want to come over as a know-it-all, nor do I want to judge the way 
 
 ## Anecdote #1: Purdy Please?!
 
-
-
-
-<blockquote>
 This was about a year ago. I'd put a notice up on this site that I was available for a new contract and got a phone call a few days later, if I would accept a two-week contract to interface an existing system to a brand-new web service for it to obtain geo-location data. The contract was to be done post-haste, so the person searching for a developer was in a hurry.
 
 I have a list of developers that I can call if I have a contract that is too big for me to handle by myself, or if I don't have time to do the contract myself. These are all people I've worked with before and for whom I can vouch in terms of their being good programmers. When I had put the notice up on my site that I was available, I didn't expect to get calls quite that quickly, so with the deadline as close as it was, there was no way I could accept the contract myself. When pushed a bit (the guy was 300 km away from his client and needed to get a developer _right now_) I took out my list and made a few calls. I found a suitable developer, and earned a commission for the referral.
 
-Crisis averted, and everybody happy: the programmer that got to do the job, the HR person looking for a programmer, the client and me all got what we wanted, and three out of four were a bit richer after the deal - the fourth had his product, so will be a bit richer by now as well.</blockquote>
-
-
-
-
+Crisis averted, and everybody happy: the programmer that got to do the job, the HR person looking for a programmer, the client and me all got what we wanted, and three out of four were a bit richer after the deal - the fourth had his product, so will be a bit richer by now as well.
 
 ## Anecdote #2: What do you mean: "what do you need?"?
 
 
-
-
-<blockquote>A few months ago, I got a call asking me to develop the firmware for a new product. The call lasted about thirty minutes and ended with me asking for some material to at least give me a feel of what was needed - something I could base a draft architecture on.
+A few months ago, I got a call asking me to develop the firmware for a new product. The call lasted about thirty minutes and ended with me asking for some material to at least give me a feel of what was needed - something I could base a draft architecture on.
 
 They didn't have any such documentation - actually wanted me to come up with some. Naturally, I can't do that: I don't know the market for the device, nor do I know enough about marketing to come up with that kind of material. All I could do is give them a few pointers, and tell them to come back to me when they had some more information.
 
 Now, this is a case in which no money exchanged hands and the amount of work on my part was really minimal: they basically got an expert opinion on a few questions they had and were happy with the answers they got. They also knew they had a bit more homework to do. Me accepting the contract without that homework being done first would be a waste of my time and theirs - and as my time is their money, they understood that I was saving them money with my questions.
 
-When their homework is done and they do come back to me, the time I spent will have been a good investment on my part. If they don't do their home work or they don't come back to me, it will still have been a good investment on my part, but it will not have had the hoped-for return.</blockquote>
-
-
+When their homework is done and they do come back to me, the time I spent will have been a good investment on my part. If they don't do their home work or they don't come back to me, it will still have been a good investment on my part, but it will not have had the hoped-for return.
 
 
 
 ## Anecdote #3: Questions, questions...
 
+There are few clients that like your work enough to pay you in advance for time they might not even use - just so they can call you any time during the day and ask a few questions. One such client wanted me to write a specification from a set of PowerPoint slides. Happy to oblige, I went through the PowerPoint slides and came up with a long list of questions. My continuing the work on the specification depends on getting the answers to those questions.
 
+Now, these questions aren't technical in nature, but PowerPoint slides have a tendency to be vague and technical specifications can't really have that luxury, so choices have to be made at some point. E.g., when defining a security profile of a new device, do you want to emphasize confidentiality, integrity, authentication or non-repudiation? In embedded devices, you usually don't have enough space to have them all and I can't make such decisions on behalf of my clients - nor can I describe all options and have the development team make the choices (although I can describe and explain alternatives).
 
-
-<blockquote>There are few clients that like your work enough to pay you in advance for time they might not even use - just so they can call you any time during the day and ask a few questions. One such client wanted me to write a specification from a set of PowerPoint slides. Happy to oblige, I went through the PowerPoint slides and came up with a long list of questions. My continuing the work on the specification depends on getting the answers to those questions.
-
-Now, these questions aren't technical in nature, but PowerPoint slides have a tendency to be vague and technical specifications can't really have that luxury, so choices have to be made at some point. E.g., when defining a security profile of a new device, do you want to emphasize confidentiality, integrity, authentication or non-repudiation? In embedded devices, you usually don't have enough space to have them all and I can't make such decisions on behalf of my clients - nor can I describe all options and have the development team make the choices (although I can describe and explain alternatives).</blockquote>
-
-
+<hr/>
 
 Now, does this mean that every time a client comes up with a vague question, I tell them to do their homework and go on my merry way? No. I am not _that_ financially independent. It does mean, though, that creating software-intensive systems requires real input from the system's stakeholders. I'm happy to work with stakeholders and think different scenarios through with them, and I'm very happy to explain alternatives to them, to analyse possible repercussions of different choices, etc. but I cannot, and will not, take their decisions for them.
 

@@ -16,6 +16,7 @@ tags:
 ---
 
 One of my clients uses CentOS for the production platform of their (web) application (written in PHP). They've asked me to take over the development and maintenance of their web application, so, naturally, I set up a new server with CentOS 5.2, rather than the Debian installation I would normally use.
+<!--more-->
 
 I like Debian for a lot of reasons: it is generally a stable system that is well-documented, secure and easy to handle. The "easy to handle" part is, of course, because I happen to know my way around a Debian system. When I started out, seven years ago, professionally working on Linux systems, I started out on the then-current RedHat distro.
 

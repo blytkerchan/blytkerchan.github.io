@@ -15,7 +15,7 @@ tags:
 - time synchronization
 ---
 
-This is a quick summary of the [ComSoc webinar on Synchronization in Next-Generation Telecom Networks](http://bit.ly/QwFi3n)
+This is a quick summary of the [ComSoc webinar on Synchronization in Next-Generation Telecom Networks](https://web.archive.org/web/20160620200541/http://webcast.you-niversity.com/youtools/companies/viewarchives.asp?account=395247&affiliateId=99&routing=b2d50ec7&stm=PDKIKX0D)
 
 Over the last few years, communications networks have changed radically: their use has gone from predominantly voice to predominantly data and they have themselves gone from predominantly synchronous networks to predominantly packet networks.
 

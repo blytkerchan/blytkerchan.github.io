@@ -15,8 +15,6 @@ tags:
 - Windows
 ---
 
-[donate]
-
 In this installment, we will continue our implementation of GSSAPI/SSPI, this time on Windows, where we'll try to get some credentials.
 
 We will look at two topics this time: first, we'll look at data encapsulation, after which we'll look at when RAII is a bit too much, and how to handle that.

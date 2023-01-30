@@ -19,7 +19,7 @@ While going through my reading list, I came across the following news brief:
 
 
 
-<blockquote>Security researchers have found a vulnerability within Microsoft’s ASP.NET Web-application-development framework that could let hackers get information useful for deciphering encrypted data. By default, ASP.NET provides detailed error messages when a system doesn’t properly decrypt ciphertext. Using this feedback, an attacker could learn enough to decrypt the ciphertext, which could potentially expose passwords and other sensitive information. The attack works equally well against both the Advanced Encryption Standard and the Triple Data Encryption Standard. Microsoft advised organizations to enable ASP.NET custom error codes to generate a response without detailed information for all failed decryption. -- G. Lawton; _News briefs_; IEEE Security & Privacy Vol. 8 No. 6; Nov/Dec 2010</blockquote>
+<blockquote>Security researchers have found a vulnerability within Microsoft’s ASP.NET Web-application-development framework that could let hackers get information useful for deciphering encrypted data. By default, ASP.NET provides detailed error messages when a system doesn’t properly decrypt ciphertext. Using this feedback, an attacker could learn enough to decrypt the ciphertext, which could potentially expose passwords and other sensitive information. The attack works equally well against both the Advanced Encryption Standard and the Triple Data Encryption Standard. Microsoft advised organizations to enable ASP.NET custom error codes to generate a response without detailed information for all failed decryption. -- G. Lawton; News briefs; IEEE Security & Privacy Vol. 8 No. 6; Nov/Dec 2010</blockquote>
 
 
 

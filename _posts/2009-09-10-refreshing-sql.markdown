@@ -14,6 +14,7 @@ tags:
 ---
 
 I first started working with SQL several years ago: MySQL was still in the 3.x versions, so I didnt use any stored procs, transactions, etc. Most of the business logic around the data was written in Perl. Though it was a fun time in many respects, I dont miss the limitations of MySQL one bit.
+<!--more-->
 
 Since then, a lot has changed in SQL: stored procedures have evolved a lot, including, as of MySQL 5.4.14, an error signalling system (the `SIGNAL` statement) that is much like an exception mechanism. This brings MySQL (finally) to the level where it can be used for serious business logic, moving that logic into the database, where (if it applies to the data) it belongs.
 

@@ -14,7 +14,7 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-In a recent article [on ZDNet](http://www.zdnet.com/blog/service-oriented/gartner-soas-next-step-is-managing-events/5972), Joe McKendrick writes that Roy Schulte, the Gartner analyst who helped define the SOA space more than a decade ago, says as SOA becomes embedded into the digital enterprise realm, organizations are moving services to support event-driven interactions, versus request/reply interactions.
+In a recent article [on ZDNet](https://web.archive.org/web/20201205153641/https://www.zdnet.com/article/gartner-soas-next-step-is-managing-events/), Joe McKendrick writes that Roy Schulte, the Gartner analyst who helped define the SOA space more than a decade ago, says as SOA becomes embedded into the digital enterprise realm, organizations are moving services to support event-driven interactions, versus request/reply interactions.
 
 This, of course, is old news...
 <!--more-->

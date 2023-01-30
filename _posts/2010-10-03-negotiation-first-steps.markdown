@@ -13,8 +13,6 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 As discussed [last month](/blog/2010/09/opacity-encapsulation-at-its-best-and-worst), the requirement for encapsulation pushes us towards allowing the user to know that there's a negotiation between the two peers, and does not alleviate the requirement that the user understand the errors. So in this installment, we will start using the new implementation of exceptions we worked out in the previous installment, and start on the negotiation mechanism from two installments ago.
 <!--more-->
 The new `Negotiation` class will have to carry everything needed during a negotiation - such as the context handle, a buffer to store the token data in, etc. and will have to be passed to the `Mechanism` to be worked on. That means that anything that may need to be passed to the `InitializeSecurityContext` SSPI function will need to be in there. The class itself doesn't really matter much, then, as long as it takes care of the resources of anything it carries around. The code of the new class can, of course, be found in the Git repository

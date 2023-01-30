@@ -16,6 +16,7 @@ tags:
 ---
 
 I just read a [blog by Michel Fortin](http://web.archive.org/web/20111208114024/http://michelf.com/weblog/2009/hungarian-notation-the-original/), where he quotes [Joel On Software](http://www.joelonsoftware.com/articles/Wrong.html) regarding [Hungarian notation](http://en.wikipedia.org/wiki/Hungarian_notation), or rather, [Hungarian WartHogs](http://www.ddj.com/cpp/184403804). Naming a variable for its type, or a type for its location or namespace, is a mistake.
+<!--more-->
 
 I agree with Joel on his introduction: there are different levels of programmers and, at some point, your nose simply starts to itch when you see code that looks OK, but really isn't. More than once (and I have witnesses to this fact) I have repaired bugs that we knew existed, but didn't know where they were, simply by fixing a piece of code that didn't "feel" right. For a few months that was a full-time job for me, in fact: I was to look over the shoulders of programmers debugging things and fix their bugs for them. Though I was really good at it, it's not a great job to have to do every day.
 

@@ -14,8 +14,6 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 In this last installment before we start our development project (and yes, there is a development project coming) we will talk a bit about the C++ type system, how to use it, how it ties in with object-oriented programming and how it ties in with what we've discussed earlier. We will see what the `virtual` keyword is all about, and how "a duck is a bird, is an animal" and "a table and a chair are both pieces of furniture" comes into play, and is expressed in C++. Once we've gone through that, you'll be sufficiently equipped for object-oriented programming in C++.
 <!--more-->
 

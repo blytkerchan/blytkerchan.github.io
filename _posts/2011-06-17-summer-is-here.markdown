@@ -15,7 +15,7 @@ tags:
 
 This wallpaper of course has the Vlinder logo and the url of this website but, more prominently, it has a lily flower - which also figures prominently (but stylized) on the flag of the Canadian province I live in.
 <!--more-->
-Links to download the wallpaper are wrapped around the image. There are two sizes: 1680*1050 and 1024*768.
+Links to download the wallpaper are wrapped around the image. There are two sizes: 1680x1050 and 1024x768.
 
 [![](/assets/2011/06/summer-wallpaper.png)](/assets/2011/06/summer-wallpaper.png)[![](/assets/2011/06/summer-wallpaper-small.png)](/assets/2011/06/summer-wallpaper-small.png)
 

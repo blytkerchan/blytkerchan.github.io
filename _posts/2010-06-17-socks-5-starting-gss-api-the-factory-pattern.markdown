@@ -15,8 +15,6 @@ tags:
 - SOCKS
 ---
 
-[donate]
-
 In this installment, we'll be doing a final bit of clean-up and starting to implement a GSS-API/SSPI client program, while focusing on the _Abstract Factory Pattern_
 <!--more-->
 The first set of changes we'll discuss in this installment prepares our code for use with IPv6. It's pretty cheap to do that at this stage and would be far more costly to do later. In fact, the only thing we need to do in order to allow his is to use the `sockaddr_storage` structure wherever we pass addresses around. TCP and UDP ports are the same between IPv4 and IPv6 - mainly because they are built on top of IP - so the only thing that really changes is the size of the address. There are a few caveats that we might want to work out later, but as long as we keep in mind that we want our code to work both with IPv4 and IPv6 networks, we'll be OK for now.
@@ -25,7 +23,7 @@ The two commits that follow, moving the code and renaming the include guards, sh
 
 You can have a look at both of these commits and see that they're pretty trivial, so we'll skip an in-depth analysis for now.
 
-Talking about in-depth analyses: I've analysed the Binary Search algorithm and put a [post](/assets/2010/06/binary-search/) on the site if you want to take a look at it. It explains quite a few interesting things, such as the O notation (including its formal definition); why binary search is efficient; when it is more efficient to sort and then search, and why, etc. Have a look, leave a comment, etc.
+Talking about in-depth analyses: I've analysed the Binary Search algorithm and put a [post](/blog/2010/06/binary-search/) on the site if you want to take a look at it. It explains quite a few interesting things, such as the O notation (including its formal definition); why binary search is efficient; when it is more efficient to sort and then search, and why, etc. Have a look, leave a comment, etc.
 
 Another commit sets up Windows projects for our new libcore and librfc1961 libraries. We'll be building on from here for our next libraries as well.
 
@@ -50,7 +48,9 @@ The same goes for SSPI, which is Microsoft's equivalent of GSS-API and which is 
 
 We will be implementing two distinct libraries, which we will call libgss and libsspi, but both of which will perform the same functionalities. Those functionalities will be described by interfaces which we will suit to our use-cases. As an interface is an abstract description of the functionality it represents, we cannot create an instance of an interface, but we can create an instance of a class that implements that interface. Where that class comes from and what class that will be will depend on a number of things, including the operating system we will be running on. Each of the interfaces will be defined in a third library called libsecurity. That library will also define how the instances of the classes that implement those interfaces are created. This is where the factory pattern comes in.
 
-[![](http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Abstract_factory.svg/200px-Abstract_factory.svg.png)](http://en.wikipedia.org/wiki/File:Abstract_factory.svg)The factory pattern I am talking about is more formally known as the _Abstract Factory Pattern_. I think the best diagram I have seen so far of this pattern is the one on Wikipedia, which is on the right (click on the image to enlarge): an abstract version of the factory - i.e. an interface for the factory - is defined and shared between implementations. Each implementation comes with an implementation not only of the diverse interfaces to be implemented by the class instances created by the factory, but with a factory as well. We will be using a textbook example of this pattern to create everything from security contexts to tokens.
+[![](http://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Abstract_factory.svg/200px-Abstract_factory.svg.png)](http://en.wikipedia.org/wiki/File:Abstract_factory.svg)
+
+The factory pattern I am talking about is more formally known as the _Abstract Factory Pattern_. I think the best diagram I have seen so far of this pattern is the one on Wikipedia, which is on the right (click on the image to enlarge): an abstract version of the factory - i.e. an interface for the factory - is defined and shared between implementations. Each implementation comes with an implementation not only of the diverse interfaces to be implemented by the class instances created by the factory, but with a factory as well. We will be using a textbook example of this pattern to create everything from security contexts to tokens.
 
 For example: both GSS-API and SSPI support different security mechanisms. In GSS-API, they are called mechnisms; in SSPI they are called Security Support Providers (SSPs). We'll follow the GSS-API naming in this case, and call them Mechanisms. For now, we just need to know that they exist, that a default mechanism is available in both GSS-API and in SSPI, and that we need to be able to get a handle on that mechanism - which in our case means creating an instance of the mechanism. Let's take a look at what that would be like in code. Let's first take a look at what a mechanism interface looks like in C++: 
     

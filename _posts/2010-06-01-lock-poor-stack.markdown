@@ -14,8 +14,6 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 The following is the complete code of a lock-poor stack in C/C++: it's mostly C but it uses Relacy for testing, so the atomics are implemented in C++. With a little work, you can turn this into a complete C implementation without depending on relacy. I wrote in while writing an article that will soon appear on this blog.
 
 The stack is not completely lock-free because it needs a lock to make sure it doesn't need any memory management solution for its reference to the top node during popping or reading the top node.

@@ -22,21 +22,11 @@ The Obama administration hosted a workshop on the importance of the adoption and
 
 
 <blockquote>The Federal government must transition to IPv6 in order to:
-
-> 
-> 
-	
->   * Enable the successful deployment and expansion of key Federal information technology (IT) modernization initiatives, such as Cloud Computing, Broadband, and SmartGrid, which rely on robust, scalable Internet networks;
-> 
-	
->   * Reduce complexity and increase transparency of Internet services by eliminating the architectural need to rely on Network Address Translation (NAT) technologies;
-> 
-	
->   * Enable ubiquitous security services for end-to-end network communications that will serve as the foundation for securing future Federal IT systems; and,
-> 
-	
->   * Enable the Internet to continue to operate efficiently through an integrated, well-architected networking platform and accommodate the future expansion of Internet-based services.
-> 
+<ul><li>Enable the successful deployment and expansion of key Federal information technology (IT) modernization initiatives, such as Cloud Computing, Broadband, and SmartGrid, which rely on robust, scalable Internet networks;</li>
+<li>Reduce complexity and increase transparency of Internet services by eliminating the architectural need to rely on Network Address Translation (NAT) technologies;</li>
+<li>Enable ubiquitous security services for end-to-end network communications that will serve as the foundation for securing future Federal IT systems; and,</li>
+<li>Enable the Internet to continue to operate efficiently through an integrated, well-architected networking platform and accommodate the future expansion of Internet-based services.
+</li></ul> 
 
 </blockquote>
 

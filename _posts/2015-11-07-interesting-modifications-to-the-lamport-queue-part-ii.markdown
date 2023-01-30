@@ -16,7 +16,7 @@ tags:
 - lock-free
 ---
 
-In the [previous installment](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue/), on this subject, I described a few modifications to the Lamport queue introduced by Nhat Minh Le _et al._ to relax operations on shared state as much as possible, while maintaining correctness.
+In the [previous installment](/blog/2015/11/05/interesting-modifications-to-the-lamport-queue), on this subject, I described a few modifications to the Lamport queue introduced by Nhat Minh Le _et al._ to relax operations on shared state as much as possible, while maintaining correctness.
 
 In this article, I will discuss the further optimizations to reduce the number of operations on shared state, thus eliminating the need for memory barriers completely in many cases.
 <!--more-->
@@ -24,7 +24,7 @@ In this article, I will discuss the further optimizations to reduce the number o
 <b><i>The TL;DR:</i></b> I
 
 <ul>
-<li>briefly recap the [previous article](http://rlc.vlinder.ca/blog/2015/11/interesting-modifications-to-the-lamport-queue/)</li>
+<li>briefly recap the <a href="/blog/2015/11/05/interesting-modifications-to-the-lamport-queue">previous article</a></li>
 <li>explain the cost of synchronization</li>
 <li>show a way to get around that cost most of the time</li>
 </ul>
@@ -32,18 +32,15 @@ In this article, I will discuss the further optimizations to reduce the number o
 
 A quick recap:
 
-	
-  * The C11 memory model is largely undefined, but it at least defines a happens-before relationship for operations on shared state, and a sequenced-before relationship for operations on any state ((this is a rather crude simplification, but it works for the context we're working in))
+* The C11 memory model is largely undefined, but it at least defines a happens-before relationship for operations on shared state, and a sequenced-before relationship for operations on any state[^1]
+* there are four memory ordering some that are interesting to us: sequentially-consistent, acquire, release and relaxed
+* we ended up with an implementation of the Lamport queue that had memory ordering on its shared state that was as-relaxed-as-possible, but no more.
 
-	
-  * there are four memory ordering some that are interesting to us: sequentially-consistent, acquire, release and relaxed
+[^1]: This is a rather crude simplification, but it works for the context we're working in.
 
-	
-  * we ended up with an implementation of the Lamport queue that had memory ordering on its shared state that was as-relaxed-as-possible, but no more.
+This time, we will introduce a novel[^2] optimization to the queue, which reduces the number of operations necessary on shared state, in the general case.
 
-
-
-This time, we will introduce a novel ((well, it was novel when Nhat Minh Le wrote it's)) optimization to the queue, which reduces the number of operations necessary on shared state, in the general case.
+[^2]: Well, it was novel when Nhat Minh Le wrote it's.
 
 The code we had at the end of the previous installment looks like this:
 
@@ -157,7 +154,7 @@ From the name of the new member variables, it should already be clear what we ar
 
 As indicated in the comment, the reason this works is rather straight-forward: both `back_` and `front_` advance in the same direction, so the amount of space available between two calls to `push` can never decrease and the number of items available between two calls to `pop` can never decrease either. Hence, even if the value we're looking at is stale, it can never give us a better picture of the queue than reality: from the point of view of the function we're in, reality can only be better.
 
-This means that for pushing into the queue, the front of the queue is only read once, on the first push, and then only again when the queue has been completely filled (regardless of how many items have been removed from the queue in the mean time). After that, it will be read every [latex]N[/latex] times, where [latex]N[/latex] is the number of pops since the last time the shared value was read.
+This means that for pushing into the queue, the front of the queue is only read once, on the first push, and then only again when the queue has been completely filled (regardless of how many items have been removed from the queue in the mean time). After that, it will be read every $N$ times, where $N$ is the number of pops since the last time the shared value was read.
 
 For popping, the optimization is slightly less effective, as the first few pops are likely to occur after only a few pushes, so the number of values available when the first pop occurs is likely to be fairly small.
 

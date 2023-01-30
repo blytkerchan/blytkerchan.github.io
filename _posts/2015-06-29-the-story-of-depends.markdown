@@ -14,6 +14,7 @@ categories:
 
 Today, I announced on behalf of my company, Vlinder Software, that we would no longer be supporting "Depends", the dependency tracker. I think it may be worthwhile to tell you a by about the history of Depends, how it became a product of Vlinder Software, and why it no longer is one.
 <!--more-->
+
 Depends was first written as part of Jail, an experiment I was working on in 2007. Some of the code from the Jail project was never made public but the parts that were were often interesting: there's an implementation of Maged M. Michael's Safe Memory Reclamation algorithm (SMR)[^1], for example, that has some useless sorting added to it bug is otherwise interesting to look at. I was playing a lot with lock-free code back then -- it's gotten a bit more serious since -- and tried out several algorithms of which SMR is probably the most elegant.
 
 [^1]: A patent application was filed under the title "Method for efficient implementation of dynamic lock-free data structures with safe memory reclamation" in 2002, but was never granted so AFAICT (but IANAL) the algorithm is in the public domain, but I've posted a question about it [here](http://patents.stackexchange.com/questions/13107/what-is-the-legal-status-of-safe-memory-a-reclamation).
@@ -25,9 +26,9 @@ At about the same time, I also wrote [an article in Dr Dobbs's](http://www.drdob
 Depends was not born out of necessity, but out of curiosity: as I stated in its documentation:
 
 
-<blockquote>As professional software developers we use programs that include dependency trackers nearly every day: we basically can't do our work without them, unless we start tracking dependencies by hand.
-The trackers we use on a daily basis are integrated into such fine tools as GNU Make, Microsoft Visual Studio, etc.: dependency trackers are the behind-the-scenes magic that make tools like these work. They help us track the dependencies between our source files to determine the order in which they need to be compiled and which files need compiling. They make our jobs a whole lot easier, if not just plainly possible.
-
+<blockquote>As professional software developers we use programs that include dependency trackers nearly every day: we basically can't do our work without them, unless we start tracking dependencies by hand.<br/>
+The trackers we use on a daily basis are integrated into such fine tools as GNU Make, Microsoft Visual Studio, etc.: dependency trackers are the behind-the-scenes magic that make tools like these work. They help us track the dependencies between our source files to determine the order in which they need to be compiled and which files need compiling. They make our jobs a whole lot easier, if not just plainly possible.<br/>
+<br/>
 Dependency trackers further help in such diverse applications as banking (inside the calculation engine of one of France's most wide-spread fiscal applications is a dependency tracker that tracks the dependencies of the calculation engine's modules); OS kernels (using a dependency tracker to know which modules to load and in what order); etc.</blockquote>
 
 

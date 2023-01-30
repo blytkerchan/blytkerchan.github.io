@@ -28,7 +28,6 @@ Almost ten years ago, I wrote the Funky interpreter (for a lispy functional lang
 While I've written parsers and interpreters without sleeping children in my arms, and I've had sleeping children in my arms without writing interpreters, there still seems to be a link between the two: at some point, singing a lullaby takes the form of writing an interpreter -- this time for BrainF, in VHDL and on my iPad, with my youngest son sleeping in my arms...
 
 My first draft had a few syntax errors and typos -- I don't have a VHDL compiler on my iPad -- but the general idea was there:
-[aside type="code" status="closed"]
 
     
     -- BrainF* interpreter
@@ -288,8 +287,6 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
         end process;
     end behavior;
 
-[/aside]
-
 There's a `pipe` of instructions: `pipe(0)` contains the instruction currently being interpreted by the `p_interpret` process, and `pipe(1)` contains the next instruction. The `p_interpret` process interprets the opcode and works on the memory array (`mem`) at the location pointed to by its pointer (`ptr`). Two instructions manipulate the pointer (`advance` and `back_up`) and two instructions manipulate the byte being pointed at (`minus` and `plus`). The two looping instructions, `begin_loop` and `end_loop`, are mainly handled by the p_fetch process, which manipulates the instruction pointer, `iptr`, with the `p_interpreter` process indicating only whether it wants to (re-)execute the loop's body -- determined of course by the value of whatever byte `ptr` is pointing at.
 
 The `p_fetch` process fills the pipe, shifts it, and handles the instruction pointer, `iptr` including looping logic. This turned out to be the most challenging part, because this is where you have to wrap your head around inter-process synchronization in VHDL -- which isn't new (at least not completely new) to me, but is quite different than in C++ and takes a bit of thinking when the synchronization has to go both ways between two processes.
@@ -345,7 +342,7 @@ When it's done looping, the `p_interpret` process drops the `stalled` signal but
 
 so the `p_fetch` process counts on the `p_interpret` process to do "the right thing" -- even if it's not visible yet.
 
-Running the code, which now looks like this: [aside status="closed" type="code"]
+Running the code, which now looks like this:
     
     -- BrainF* interpreter
     -- Version: 20140929
@@ -637,13 +634,13 @@ Running the code, which now looks like this: [aside status="closed" type="code"]
         end process;
     end behavior;
 
-[/aside] requires a _test bench_: a chunk of code used to exercise the component that's intended for synthesis. The test bench itself is not intended for synthesis, so it can do lots of things that you shouldn't do in code you want to synthesize (such as `after` and `wait` statements).
+requires a _test bench_: a chunk of code used to exercise the component that's intended for synthesis. The test bench itself is not intended for synthesis, so it can do lots of things that you shouldn't do in code you want to synthesize (such as `after` and `wait` statements).
 
 I tend to put assertions in code intended for synthesis as well as in the test bench, even if it has no effect when synthesized: I find they document the code as much as they help during testing, validating assumptions. I also try to write assertive test benches, so I can automate running them -- say by simulating a given time so that if it hasn't failed by then, it is unlikely (or impossible) to fail afterwards.
 
 The test bench I wrote for this interpreter isn't quite complete yet: it doesn't fetch the altered memory from the interpreter to check what happened, nor does it take output from the interpreter during its runs (unlike regular BrainF, the `dot` opcode is implemented as a no-op, not as an output), but for a week-end pet project, I think it turned out pretty nice.
 
-Here's the code for the test bench: [aside type="code" status="closed"]
+Here's the code for the test bench:
     
     -- BrainF* interpreter - testbench
     -- Version: 20140929
@@ -784,7 +781,6 @@ Here's the code for the test bench: [aside type="code" status="closed"]
         end process;    
     end behavior;
 
-[/aside]
 And this is what it looked like in ModelSim:
 
 {% include image.html url="/assets/2014/09/wave-300x125.png" caption="Waveform for the BrainF interpreter interpreting 'Hello world!'" %}

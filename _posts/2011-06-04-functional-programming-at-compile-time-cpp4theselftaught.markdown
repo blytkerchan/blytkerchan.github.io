@@ -15,7 +15,7 @@ tags:
 - programming
 ---
 
-[audio src="http://vlinder.ca/podcasts/31-compile-time-fp.mp3"]In the [previous installment](http://rlc.vlinder.ca/blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/) I talked about functional programming a bit, introducing the idea of _functors_ and _lambda expressions_. This time, we will look at another type of functional programming: a type that is done at compile-time.
+In the [previous installment](/blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/) I talked about functional programming a bit, introducing the idea of _functors_ and _lambda expressions_. This time, we will look at another type of functional programming: a type that is done at compile-time.
 <!--more-->
 
 
@@ -70,7 +70,7 @@ As you can see, the meta-function is a class (or `struct` in this case), with an
 
 In this case, we have two specializations of our class template: one in which `n__` is 1, and one in which `n__` is 0. We need those because for those two values, the resulting value is pre-defined - not calculated. For all other values of `n__`, the resulting value is calculated at compile-time by recursively specializing the class template with smaller and smaller values of `n__`, until we run into 0 and 1.
 
-Compilers are smart: while at run-time, a similar approach would require [latex]2^n[/latex] function calls, the compiler need only specialize a class template once to know what the value is going to be, so we don't have to worry about optimizing this implementation to make it one of linear complexity -- it already is!
+Compilers are smart: while at run-time, a similar approach would require $2^n$ function calls, the compiler need only specialize a class template once to know what the value is going to be, so we don't have to worry about optimizing this implementation to make it one of linear complexity -- it already is!
 
 
 

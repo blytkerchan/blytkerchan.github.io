@@ -13,8 +13,6 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 Before we delve into the realm of object-oriented programming (which we will get into in the next post), there is a notion that is so basic, and so important to any type of programming, that we have to treat it in order to make the whole notion of object-oriented-programming comprehensible.
 <!--more-->
 Programming is all about treating data (sometimes from the implementation's environment, sometimes from somewhere else). That data usually represents something - which is where the notion of object-oriented programming comes from. In order to be able to treat that data, it has to be structured in some way.

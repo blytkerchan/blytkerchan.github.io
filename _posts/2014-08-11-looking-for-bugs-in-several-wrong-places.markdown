@@ -18,11 +18,13 @@ tags:
 
 I recently went on a bug-hunt in a huge system that I knew next to nothing about. The reason _I_ went on this bug-hunt was because, although I didn't know the system itself, I knew what the system was supposed to do, and I can read and write all the programming languages involved in developing the system (C++, C and VHDL). I'm also very familiar with the protocol of which the implementation was buggy, so not knowing the system was a minor inconvenience.
 
-These are some notes I took during the bug-hunt, some of which intentionally kept vague so as to protect the [guilty](http://rlc.vlinder.ca/guilty.html).
+These are some notes I took during the bug-hunt, some of which intentionally kept vague so as to protect the guilty.
 
 <!--more-->
 
-The first thing I did, of course, was confirm the bug's presence in the latest version of the system, with a minimal configuration. The minimal configuration necessary turned out to be fairly minimal, and using the default settings of the system, so this was easier than I expected: it just took two systems (one doing the talking, one doing the bugging), a few wires and an oscilloscope -- all of which I had on or around my desk ((I try to walk at least 10,000 paces a day, but this bug wasn't going to get me away from my desk a lot...)).
+The first thing I did, of course, was confirm the bug's presence in the latest version of the system, with a minimal configuration. The minimal configuration necessary turned out to be fairly minimal, and using the default settings of the system, so this was easier than I expected: it just took two systems (one doing the talking, one doing the bugging), a few wires and an oscilloscope -- all of which I had on or around my desk[^1].
+
+[^1]: I try to walk at least 10,000 paces a day, but this bug wasn't going to get me away from my desk a lot...
 
 I also confirmed that an older version of the system did not have the bug, thus verifying both my method of testing for the bug and the assumption that the bug was, in fact, new. That having been verified, I made my first mistake.
 
@@ -75,7 +77,11 @@ This approach, although tedious and best left to an intern if you happen to have
   * the knowledge that Version 1 works, Version N doesn't.
 
 
-Following the basic principles of a binary search and Dijkstra's search algorithm ((the one where you have marbles of three colors: red, white and blue, and you need to put them in order looking at each only once)) I set out to test whether Version [latex]\frac{1}{2}N[/latex] worked -- it did not. I then tested version [latex]\frac{1}{4}N[/latex], version [latex]\frac{3}{8}N[/latex], etc. until I had identified the last version that worked and the first version that didn't. As there were ten versions to pick from, I ran the tests on versions 5, 3 and 4 to find out that the bug had been introduced between versions 4 and 5 ((Had I done a linear search, I would have tested five versions to get the same information, so I saved myself two tests)).
+Following the basic principles of a binary search and Dijkstra's search algorithm[^2] I set out to test whether Version $\frac{1}{2}N$ worked -- it did not. I then tested version $\frac{1}{4}N$, version $\frac{3}{8}N$, etc. until I had identified the last version that worked and the first version that didn't. As there were ten versions to pick from, I ran the tests on versions 5, 3 and 4 to find out that the bug had been introduced between versions 4 and 5[^3].
+
+[^2]: The one where you have marbles of three colors: red, white and blue, and you need to put them in order looking at each only once.
+
+[^3]:  Had I done a linear search, I would have tested five versions to get the same information, so I saved myself two tests.
 
 Having put all my options back on the table w.r.t. the components of the system that might have introduced the bug, I proceeded to eliminating those that were not configured in the system I was using, but keeping those that I had considered candidates before and eliminated with some other filter. The premise was that, while I had mistakenly discarded candidates before, software that is not installed on the system, neither when it has the problem nor when it does not, cannot cause the system to change its behavior.
 
@@ -90,4 +96,6 @@ And that's where I found the bug, hiding in plain sight: a change in the configu
 
 While I ended up with a better understanding of how the system works, that was not what I set out to do: I set out to find and kill a bug and, while I did that, I also ended up wasting time on a wild goose chase because I dismissed the location of the bug as a candidate when the setting I was looking at was reported correctly.
 
-Had I started out with a black box approach, searching for the first version of the system with the bug and opening the box only then to see the difference between the last version that worked and the first one that didn't, I would probably have found the bug quicker ((We'll see how that works out the next time I have a bug to hunt in a complex system I don't know.)).
+Had I started out with a black box approach, searching for the first version of the system with the bug and opening the box only then to see the difference between the last version that worked and the first one that didn't, I would probably have found the bug quicker[^4].
+
+[^4]: We'll see how that works out the next time I have a bug to hunt in a complex system I don't know.

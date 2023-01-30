@@ -16,7 +16,7 @@ tags:
 - padding
 ---
 
-In my [previous post](http://rlc.vlinder.ca/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/) on the subject, I talked about using magic numbers and versions, alignment, and later added a note about endianness after a suggestion from Michel Fortin. This time, I'll talk about padding, how the sizeof operator can be misleading and how to debug padding and alignment errors.
+In my [previous post](/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/) on the subject, I talked about using magic numbers and versions, alignment, and later added a note about endianness after a suggestion from Michel Fortin. This time, I'll talk about padding, how the sizeof operator can be misleading and how to debug padding and alignment errors.
 
 <!--more-->
 

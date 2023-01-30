@@ -16,7 +16,7 @@ tags:
 - ICS security
 ---
 
-In the two previous posts, I've shown that industrial control systems -- ICSs -- [are becoming more pervasive](http://rlc.vlinder.ca/blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/), and that they [rely on security through obscurity](http://rlc.vlinder.ca/blog/2013/12/the-importance-of-ics-security-ics-communications/).
+In the two previous posts, I've shown that industrial control systems -- ICSs -- [are becoming more pervasive](/blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/), and that they [rely on security through obscurity](/blog/2013/12/the-importance-of-ics-security-ics-communications/).
 
 Now, let's make the link with current events.
 
@@ -24,7 +24,7 @@ Now, let's make the link with current events.
 
 This is where the Crain-Sistrunk vulnerabilities come in: Adam Crain and Chris Sistrunk have discovered vulnerabilities in the vast majority of ICSs that implement DNP3.
 
-The relevance of these vulnerabilities, which are documented as part of [Project Robus](http://www.automatak.com/robus/), is in the fact that they have exposed three things that were not known (or acknowledged) before: 
+The relevance of these vulnerabilities, which are documented as part of [Project Robus](https://web.archive.org/web/20141117212310/http://automatak.com/robus/), is in the fact that they have exposed three things that were not known (or acknowledged) before: 
 
   1. serial communications are a viable attack vector to knock out a master device
   2. the vast majority of devices implementing DNP3 are vulnerable to attack, _regardless of whether they implement DNP3 Secure Authentication_

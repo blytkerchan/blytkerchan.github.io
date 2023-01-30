@@ -16,7 +16,7 @@ tags:
 - software
 ---
 
-Yesterday, I was asked what I saw as the most important factors to ensure the development of quality software. What I cited was good design, good implementation following good standards, and good testing. On the testing end, I have a rule-of-thumb that says that at least 85% of the code should be covered with unit tests - and for the parts that aren't there should be a clear reason/rationale for it not being covered. Unit tests aren't enough, however: you also need functional tests, regression tests, etc. IMO, pre-production testing should be an important focus for any software-centric development team. But the subject of this post isn't testing - it's developer's guidelines.
+Yesterday, I was asked what I saw as the most important factors to ensure the development of quality software. What I cited was good design, good implementation following good standards, and good testing.<!--more--> On the testing end, I have a rule-of-thumb that says that at least 85% of the code should be covered with unit tests - and for the parts that aren't there should be a clear reason/rationale for it not being covered. Unit tests aren't enough, however: you also need functional tests, regression tests, etc. IMO, pre-production testing should be an important focus for any software-centric development team. But the subject of this post isn't testing - it's developer's guidelines.
 
 
 
@@ -31,7 +31,9 @@ A (more-or-less) recent survey, [published on Dr Dobb's](http://www.ddj.com/deve
 
 
 Let's take a look at what that means:
-![247-pie](/assets/2009/09/247-pie.png)while a small majority has standards in place, an appalling number of businesses and developer teams still don't - and some don't know, which means that if there are any, they are not being followed. Let's take another quote (from the same parahraph):
+![247-pie](/assets/2009/09/247-pie.png)
+
+while a small majority has standards in place, an appalling number of businesses and developer teams still don't - and some don't know, which means that if there are any, they are not being followed. Let's take another quote (from the same parahraph):
 
 
 
@@ -40,7 +42,10 @@ Let's take a look at what that means:
 
 
 Let's take a look at what that means:
-![247-pie-2](/assets/2009/09/247-pie-2.png)now, the part of developers that actually follow enterprise-level standards is reduced to about 18% and 52% is not using any standards (but some of those are hoping that standards might come one day). On the bright side, at least about two-thirds of developers seem to understand the importance of shared standards and are either applying them, applying them but badly managed, or hoping they'll come one day.
+
+![247-pie-2](/assets/2009/09/247-pie-2.png)
+
+now, the part of developers that actually follow enterprise-level standards is reduced to about 18% and 52% is not using any standards (but some of those are hoping that standards might come one day). On the bright side, at least about two-thirds of developers seem to understand the importance of shared standards and are either applying them, applying them but badly managed, or hoping they'll come one day.
 
 I see two major problems in this: first, I see a lack of enterprise-level comprehension of the importance of shared standards, meaning that if there are different development teams, those teams are likely to not have the same standards. In "low" times, this may not be a problem, but it reduces the mobility of your programmers between your teams (i.e. if one team needs help, a programmer from another team will have more trouble integrating with the team to help them out). This also means that higher levels of management won't necessarily understand the reason for being for any standards that do exist, and will pressure development teams to "just hurry up", which, in the long run, is a counter-productive pressure.
 

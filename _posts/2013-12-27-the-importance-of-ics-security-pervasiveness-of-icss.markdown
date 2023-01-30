@@ -24,7 +24,9 @@ For this article, and for the following articles in the series of which this wil
 * * *
 
 
-The metering device at your home, which measures how much electricity you use, can also measure when you use that electricity -- to a point where a utility can see, from your usage data, when you get up and whether you like your bread toasted or not (if you do, your toaster will cause a spike in your energy usage every morning) ((The spike in my household is a bit bigger because I don't toast my bread -- I make my own, which means baking it.)).
+The metering device at your home, which measures how much electricity you use, can also measure when you use that electricity -- to a point where a utility can see, from your usage data, when you get up and whether you like your bread toasted or not (if you do, your toaster will cause a spike in your energy usage every morning)[^1].
+
+[^1]: The spike in my household is a bit bigger because I don't toast my bread -- I make my own, which means baking it.
 
 Smart metering devices, such as the at your home (or coming soon if not already there) are part of a larger "smart grid" which adds resilience to the electricity grid, as well as making it more energy efficient. This relies on the adoption, by utilities, of intelligent electronic devices (IEDs -- not to be confused with improvised explosive devices, which are also IEDs) or, more generally, industrial control systems. 
 

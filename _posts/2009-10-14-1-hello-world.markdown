@@ -12,9 +12,6 @@ categories:
 tags:
 - Posts that need to be re-tagged (WIP)
 ---
-
-[donate]
-
 This is the first post in the "C++ for the self-taught" series - the second if you count the introduction. We will take a look at how to create your first C++ application.
 <!--more-->
 In order to create an application in C++, you need a _compiler_: unlike some _interpreted languages_ such as Perl, Python and PHP, C++ is first compiled into machine code, and then executed. For brevity, we won't go into that process, which actually involves several more steps than compiling, now, but we'll dive directly into the code and see the machinery at work.
@@ -80,41 +77,36 @@ On the very first line, we use the fact that C++ is a preprocessed language. As 
 
 
 
-<blockquote>
+#### Translation unit
 
-> 
-> #### Translation unit
-> 
-> 
 A translation unit consists of one source file and all of the files included, using _#include directive_s by that file. In our example, the `main.cpp` file includes a file called `iostream`, which will in turn include other files. All those files, concatenated together, form a translation unit.
 
 Some people, and some literature, call these _compilation units_. It is the same thing.
 
 A program, in C++, can consist of many translation units. In the case of our example, there is only one translation unit that we provide to the compiler. However, behind the scenes, we are using functions that are provided to us by the implementation - by the _run-time library_ which, itself, consists of many translation units. These translation units, once compiled, are linked together to form the executable.
 
-It is important to understand that the compiler can only see what's in the translation unit it is compiling. It will not magically start reading another C++ file without you telling it to. That is what _#include directive_s are for.</blockquote>
+It is important to understand that the compiler can only see what's in the translation unit it is compiling. It will not magically start reading another C++ file without you telling it to. That is what _#include directive_s are for.
 
 
 
 
 
-<blockquote>#### #include directive
-> 
-> 
+
+#### #include directive
+
 C++ is a pre-processed language. That means that before the compiler tries to translate your code into something the computer will understand, it pre-processes your code looking for _directives_ on what to do with it. One of those directives tells the pre-processor (the program the compiler uses for pre-processing) to start reading another file and pretend that it's part of the same file. That directive is the _#include directive_.
 
 There are two syntaxes for the #include directive: 
->     
->     #include <system-header>
-> 
-> and 
->     
->     #include "other-header.h"
-> 
-> . The former is used to include files that are installed on the system - such as those that come with the compiler and are part of the language, or those that come with libraries that you can use to extend your program's functionality and not have to write everything yourself. The latter is used to include files that you write yourself.
+     
+     #include <system-header>
+ 
+and 
+     
+     #include "other-header.h"
+ 
+The former is used to include files that are installed on the system - such as those that come with the compiler and are part of the language, or those that come with libraries that you can use to extend your program's functionality and not have to write everything yourself. The latter is used to include files that you write yourself.
 
-Files that are meant to be included like this are called _header files_. Files that contain source code that isn't meant to be included like this are called _source files_. Header files usually have the `.h` or `.hpp` extension whereas source files usually have the `.cpp` or `.cc` extension. C source files usually have a `.c` extension.</blockquote>
-
+Files that are meant to be included like this are called _header files_. Files that contain source code that isn't meant to be included like this are called _source files_. Header files usually have the `.h` or `.hpp` extension whereas source files usually have the `.cpp` or `.cc` extension. C source files usually have a `.c` extension.
 
 
 
@@ -158,11 +150,10 @@ You may have noted the way I quoted the standard: `**[basic.start.main]**`. I do
 
 
 
-<blockquote>#### Implementation
-> 
-> 
-When the standard that defines C++ talks about an implementation, it means the same thing as we generally mean by a combination of the pre-processor, the compiler and the rest of the building machinery, the standard library and the services provided by the run-time library and operating system.</blockquote>
-
+#### Implementation
+ 
+ 
+When the standard that defines C++ talks about an implementation, it means the same thing as we generally mean by a combination of the pre-processor, the compiler and the rest of the building machinery, the standard library and the services provided by the run-time library and operating system.
 
 
 
@@ -174,15 +165,11 @@ On line 7 of our example, we do the actual work of this program: we output a tex
 
 
 
-<blockquote>#### overloading
-> 
-> 
+#### overloading
+
 C++ allow you to define more than one version of almost any function, based on the types of its arguments. It allows this for _member functions_ (functions that are part of a class, also called _methods_) as well as _non-member functions_ (functions that are not part of a class) and _operators_. An operator is a special kind of function that is called by using one of the math symbols (such as less-than `<`, greater-than `>`, plus `+`, minus `-`, etc.) or one of the words reserved for that purpose (such as `new` and `delete`). In this case we used operator `<<`
 
-Overloading is an important feature of C++, as is operator overloading. It allows you to write code that is much more readable than it might be if this were not possible (such as in C).</blockquote>
-
-
-
+Overloading is an important feature of C++, as is operator overloading. It allows you to write code that is much more readable than it might be if this were not possible (such as in C).
 
 
 ## Conclusion

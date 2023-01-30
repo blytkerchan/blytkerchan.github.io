@@ -30,13 +30,13 @@ While you get many customers, you're not getting the Geeks-in-a-hurry crowd you 
 ## Average-case vs. worst-case timing
 
 
-{% include image.html url="/assets/img/2016/04/e1461091049572.jpg" caption="Fig. 1: Ordering coffee" %}
+{% include image.html url="/assets/2016/04/IMG_07981-e1461091049572-768x531.jpg" caption="Fig. 1: Ordering coffee" %}
 
 Fig. 1 shows the interaction needed to get a cup of coffee: the customer requests a coffee, the barista gets a cup, fills it, asks for money and gives the coffee to the customer. The whole exchange might take all of one minute in the average case -- you're keeping your promise, so why won't the Geeks-in-a-hurry come?
 
 {% include image.html url="/assets/2016/04/File-2016-04-19-19-56-47-1024x771.jpeg" caption="Fig. 2: Coffee not ready" %}
 
-The problem happens when the coffee still needs to be brewed when the customer gets there: the barista happily accepts the order, starts brewing the coffee and asks the customer to pay. The customer, now expecting his coffee to arrive "any moment now" ends up waiting a full fifteen minutes for his coffee, misses his plane, train or automobile and is righteously pissed off ((Pardon my french)).
+The problem happens when the coffee still needs to be brewed when the customer gets there: the barista happily accepts the order, starts brewing the coffee and asks the customer to pay. The customer, now expecting his coffee to arrive "any moment now" ends up waiting a full fifteen minutes for his coffee, misses his plane, train or automobile and is righteously pissed off (Pardon my French).
 
 The Geeks, of course, know a real-time system when they see one, and can smell a "soft" system from a mile away. In your case, with your promise of an average-case serving time of one minute, they knew something was wrong when they saw the promise -- whether you keep it or not.
 
@@ -47,7 +47,9 @@ The Geeks, of course, know a real-time system when they see one, and can smell a
 
 {% include image.html url="/assets/2016/04/File-2016-04-19-20-15-13-1024x753.jpeg" caption="Fig. 3: Warn if not brewed" %}
 
-After being yelled at a few times, the barista has decided to warn the customer. This allows the customer to evaluate whether they will meet their deadline if they wait for coffee ((In code, this would be a `tryAcquire` function that returns `true` if the resource is acquired and `false` if not.)).
+After being yelled at a few times, the barista has decided to warn the customer. This allows the customer to evaluate whether they will meet their deadline if they wait for coffee[^1].
+
+[^1]: In code, this would be a `tryAcquire` function that returns `true` if the resource is acquired and `false` if not.
 
 In general, your customers are now fairly happy: the try to obtain a coffee and will be warned if they cannot be immediately served so they can go catch their plane, train or automobile, or do whatever else they want to do while waiting.
 

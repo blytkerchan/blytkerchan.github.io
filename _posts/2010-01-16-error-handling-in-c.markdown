@@ -96,136 +96,132 @@ When I started programming C (after I'd done some Basic, some Pascal and some as
 
 Like I said, I was young and naive (I will let you guess how young) at the time and there are a few things I would do differently, but thinking back to my old model I see the beginnings of a state machine, and I see something that I've seen over and over again going through other people's code: a global state variable indicating the system's health. (Come to think of it, the C programming language works in much the same way: the `errno` variable is, in many ways, a "run control" variable - except that nothing is defined to not work if errno isn't 0.)
 
+Real state machines aren't just for error handling, of course: they are designed to handle triggers in such a way that those triggers may or may not provoke state transitions which, in turn, make the state machine react differently to subsequent triggers. Let's take a look at what a simple but real state machine written in C might look like (generic implementation):
 
-
-<blockquote>Real state machines aren't just for error handling, of course: they are designed to handle triggers in such a way that those triggers may or may not provoke state transitions which, in turn, make the state machine react differently to subsequent triggers. Let's take a look at what a simple but real state machine written in C might look like (generic implementation):
-
->     
->     // StateMachine.h
->     #ifndef STATEMACHINE_H
->     #define STATEMACHINE_H
->     
->     #define STATEMACHINE_OK							0
->     #define STATEMACHINE_PRECOND_FAILED				0x80000000
->     #define STATEMACHINE_NO_HANDLER_FOR_CURR_STATE	0x80000001
->     /* any value from STATEMACHINE_USER_ERROR up is reserved for use by
->      * user-defined trigger handlers */
->     #define STATEMACHINE_USER_ERROR					0x80010000
->     
->     #define STATEMACHINE_ISERROR(s)					((s) & 0x80000000)
->     
->     typedef unsigned int StateMachineError;
->     
->     #define StateMachine_stateCount__ 10
->     typedef struct StateMachine_tag StateMachine;
->     typedef StateMachineError (*StateMachine_triggerHandler)(
->     	StateMachine * handle, unsigned int trigger);
->     
->     StateMachineError StateMachine_init(StateMachine * handle);
->     void StateMachine_fini(StateMachine * handle);
->     StateMachineError StateMachine_trigger(
->     	StateMachine * handle,
->     	unsigned int trigger);
->     StateMachineError StateMachine_setState(
->     	StateMachine * handle,
->     	unsigned int state);
->     StateMachineError StateMachine_setTriggerHandler(
->     	StateMachine * handle,
->     	unsigned int state,
->     	StateMachine_triggerHandler handler);
->     
->     #endif
-> 
-> 
-
->     
->     // StateMachine.c
->     #include "StateMachine.h"
->     
->     struct StateMachine_tag
->     {
->     	unsigned int state_;
->     	StateMachine_triggerHandler handler_[StateMachine_stateCount__];
->     };
->     
->     StateMachineError StateMachine_init(StateMachine * handle)
->     {
->     	memset(handle, 0, sizeof(StateMachine));
->     	handle->state_ = 0;
->     	return 0;
->     }
->     
->     void StateMachine_fini(StateMachine * handle)
->     {
->     	/* no-op */
->     }
->     
->     StateMachineError StateMachine_trigger(
->     	StateMachine * handle,
->     	unsigned int trigger)
->     {
->     	StateMachineError result = STATEMACHINE_OK;
->     	if (handle == 0)
->     	{
->     		result = STATEMACHINE_PRECOND_FAILED;
->     		goto end;
->     	}
->     	else
->     	{ /* all is well so far */ }
->     	if ((handle->state_ <= StateMachine_stateCount__) &&
->     		handle->handler_[handle->state_])
->     	{
->     		result = (handle->handler_[handle->state_])(handle, trigger);
->     	}
->     	else
->     	{
->     		result = STATEMACHINE_NO_HANDLER_FOR_CURR_STATE;
->     	}
->     
->     end:
->     	return result;
->     }
->     
->     StateMachineError StateMachine_setState(
->     	StateMachine * handle,
->     	unsigned int state)
->     {
->     	StateMachineError result = STATEMACHINE_OK;
->     	if (handle == 0)
->     	{
->     		result = STATEMACHINE_PRECOND_FAILED;
->     		goto end;
->     	}
->     	else
->     	{ /* all is well so far */ }
->     	handle->state_ = state;
->     
->     end:
->     	return result;
->     }
->     
->     StateMachineError StateMachine_setTriggerHandler(
->     	StateMachine * handle,
->     	unsigned int state,
->     	StateMachine_triggerHandler handler)
->     {
->     	StateMachineError result = STATEMACHINE_OK;
->     	if (handle == 0 || state >= StateMachine_stateCount__)
->     	{
->     		result = STATEMACHINE_PRECOND_FAILED;
->     		goto end;
->     	}
->     	else
->     	{ /* all is well so far */ }
->     	handle->handler_[state] = handler;
->     
->     end:
->     	return result;
->     }
-> 
-> 
+     
+     // StateMachine.h
+     #ifndef STATEMACHINE_H
+     #define STATEMACHINE_H
+     
+     #define STATEMACHINE_OK							0
+     #define STATEMACHINE_PRECOND_FAILED				0x80000000
+     #define STATEMACHINE_NO_HANDLER_FOR_CURR_STATE	0x80000001
+     /* any value from STATEMACHINE_USER_ERROR up is reserved for use by
+      * user-defined trigger handlers */
+     #define STATEMACHINE_USER_ERROR					0x80010000
+     
+     #define STATEMACHINE_ISERROR(s)					((s) & 0x80000000)
+     
+     typedef unsigned int StateMachineError;
+     
+     #define StateMachine_stateCount__ 10
+     typedef struct StateMachine_tag StateMachine;
+     typedef StateMachineError (*StateMachine_triggerHandler)(
+     	StateMachine * handle, unsigned int trigger);
+     
+     StateMachineError StateMachine_init(StateMachine * handle);
+     void StateMachine_fini(StateMachine * handle);
+     StateMachineError StateMachine_trigger(
+     	StateMachine * handle,
+     	unsigned int trigger);
+     StateMachineError StateMachine_setState(
+     	StateMachine * handle,
+     	unsigned int state);
+     StateMachineError StateMachine_setTriggerHandler(
+     	StateMachine * handle,
+     	unsigned int state,
+     	StateMachine_triggerHandler handler);
+     
+     #endif
+ 
+ 
+     
+     // StateMachine.c
+     #include "StateMachine.h"
+     
+     struct StateMachine_tag
+     {
+     	unsigned int state_;
+     	StateMachine_triggerHandler handler_[StateMachine_stateCount__];
+     };
+     
+     StateMachineError StateMachine_init(StateMachine * handle)
+     {
+     	memset(handle, 0, sizeof(StateMachine));
+     	handle->state_ = 0;
+     	return 0;
+     }
+     
+     void StateMachine_fini(StateMachine * handle)
+     {
+     	/* no-op */
+     }
+     
+     StateMachineError StateMachine_trigger(
+     	StateMachine * handle,
+     	unsigned int trigger)
+     {
+     	StateMachineError result = STATEMACHINE_OK;
+     	if (handle == 0)
+     	{
+     		result = STATEMACHINE_PRECOND_FAILED;
+     		goto end;
+     	}
+     	else
+     	{ /* all is well so far */ }
+     	if ((handle->state_ <= StateMachine_stateCount__) &&
+     		handle->handler_[handle->state_])
+     	{
+     		result = (handle->handler_[handle->state_])(handle, trigger);
+     	}
+     	else
+     	{
+     		result = STATEMACHINE_NO_HANDLER_FOR_CURR_STATE;
+     	}
+     
+     end:
+     	return result;
+     }
+     
+     StateMachineError StateMachine_setState(
+     	StateMachine * handle,
+     	unsigned int state)
+     {
+     	StateMachineError result = STATEMACHINE_OK;
+     	if (handle == 0)
+     	{
+     		result = STATEMACHINE_PRECOND_FAILED;
+     		goto end;
+     	}
+     	else
+     	{ /* all is well so far */ }
+     	handle->state_ = state;
+     
+     end:
+     	return result;
+     }
+     
+     StateMachineError StateMachine_setTriggerHandler(
+     	StateMachine * handle,
+     	unsigned int state,
+     	StateMachine_triggerHandler handler)
+     {
+     	StateMachineError result = STATEMACHINE_OK;
+     	if (handle == 0 || state >= StateMachine_stateCount__)
+     	{
+     		result = STATEMACHINE_PRECOND_FAILED;
+     		goto end;
+     	}
+     	else
+     	{ /* all is well so far */ }
+     	handle->handler_[state] = handler;
+     
+     end:
+     	return result;
+     }
+ 
+ 
 If you want to use this code, go ahead. All you have to do to change the number of available states is change `StateMachine_stateCount__`. Note that this code hasn't been properly tested yet - feel free to post corrections.
-</blockquote>
 
 
 State machines aren't designed to do error handling, and the state shouldn't normally be used to indicate what kind of error occured most recently.

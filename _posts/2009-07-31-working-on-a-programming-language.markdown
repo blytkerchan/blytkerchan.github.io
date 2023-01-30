@@ -22,11 +22,11 @@ tags:
 - programming language design
 ---
 
-A few years ago, I started on the design and development of a new programming language, called [Jail](http://jail-ust.sf.net). The goal was to create an easy-to-learn, Object-Oriented programming language that could run on a VM as well as natively, on embedded devices, had support for threads, networking, etc.
+A few years ago, I started on the design and development of a new programming language, called Jail. The goal was to create an easy-to-learn, Object-Oriented programming language that could run on a VM as well as natively, on embedded devices, had support for threads, networking, etc.
 
 The language run-time was to be implemented in C, which gave rise to _libmemory_, a free SMR implementation and _libcontain_, a library of lock-free abstract data types implemented in C. The language was discussed on a now-idle mailing list called jail-ust-lang and a few attempts at a parser were written in Yacc/Bison. The GCC front-end was never finished, however, and development on the language was eventually abandoned.
 
-The goal of designing and implementing an easy-to-learn programming language was _not_ abandoned, however: while I was still musing about Jail, I took some time, one evening, to write [Funky](http://funky.vlinder.ca), an embeddable functional programming language that is now being used world-wide, though (for the moment) in a small niche market.
+The goal of designing and implementing an easy-to-learn programming language was _not_ abandoned, however: while I was still musing about Jail, I took some time, one evening, to write Funky, an embeddable functional programming language that is now being used world-wide, though (for the moment) in a small niche market.
 
 I only decided to stop working on Jail when it became apparent that I had already reached my original goal: I'd been able to teach Funky to non-programmers in less than 15 minutes, which IMHO qualifies it as "easy to learn". I had the beginnings of the language I was looking for.
 

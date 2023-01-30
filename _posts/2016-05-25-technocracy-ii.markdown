@@ -13,7 +13,7 @@ tags:
 - technocracy
 ---
 
-In my [previous post](http://rlc.vlinder.ca/blog/2016/05/technocracy/), I described technocracy as something that is positive in project and product management, and in team organization. In this post, to supply a boundary to my previous text, I will make the case for the opposite.
+In my [previous post](/blog/2016/05/technocracy/), I described technocracy as something that is positive in project and product management, and in team organization. In this post, to supply a boundary to my previous text, I will make the case for the opposite.
 <!--more-->
 Technocracy is government by technical experts. Such technical experts may be engineers or medical doctors for example. Technical experts, engineers, medical doctors, and other such technocrats are notoriously blind to the limits of their expertise. It is due to that blindness that during the second world war an expert in logistics could play a pivotal role in the deportation of millions of Jews to the German death camps.
 

@@ -22,7 +22,9 @@ Especially if you're a compiler...
 
 Today, I spent a good part of the day first trying to figure out what was wrong with my code -- why it crashed -- and then trying to figure out how to get the compiler to behave.
 
-A chunk of application-layer code I wrote was calling a driver I also wrote to get a notification payload from a queue. This is on an embedded Windows device (Windows Embedded Compact 7, to be precise), so the compiler of choice is the C++ compiler that comes with Microsoft Visual Studio 2008, and we're targeting a 32-bit platform ((These details are important because the problem would not have occurred with another compiler, or if I had targeted a 64-bit platform)).
+A chunk of application-layer code I wrote was calling a driver I also wrote to get a notification payload from a queue. This is on an embedded Windows device (Windows Embedded Compact 7, to be precise), so the compiler of choice is the C++ compiler that comes with Microsoft Visual Studio 2008, and we're targeting a 32-bit platform[^1].
+
+[^1]: These details are important because the problem would not have occurred with another compiler, or if I had targeted a 64-bit platform.
 
 The code looks roughly like this:
 

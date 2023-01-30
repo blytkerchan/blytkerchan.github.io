@@ -14,9 +14,7 @@ tags:
 - SOCKS
 ---
 
-[donate]
-
-With a few minor adjustments to the existing `Token` class, we can finish the first part of our implementation of RFC 1961 for now - we will hook it into an implementation of the GSS API later. Before we do that, though, we'll create a new directory in our project called lib/rfc1961 and move our files there: it seems more appropriate that way, as we will have a lot more code to write. We will also move our implementation into its own namespace, which will be `Vlinder::Chausette::RFC1961`. In the first part of this installment, we will look at the changes necessary to do that and we will discuss the importance of namespaces.
+With a few minor adjustments to the existing `Token` class, we can finish the first part of our implementation of RFC 1961 for now - we will hook it into an implementation of the GSS API later.<!--more--> Before we do that, though, we'll create a new directory in our project called lib/rfc1961 and move our files there: it seems more appropriate that way, as we will have a lot more code to write. We will also move our implementation into its own namespace, which will be `Vlinder::Chausette::RFC1961`. In the first part of this installment, we will look at the changes necessary to do that and we will discuss the importance of namespaces.
 
 In the second part of this installment, we will start implementing a simple program to send a GSSAPI token from a client to a server. As we will see, this isn't as simple as it might seem at first glance. We will build upon this example in the following installments to finish the implementation of RFC 1961.
 <!--more-->

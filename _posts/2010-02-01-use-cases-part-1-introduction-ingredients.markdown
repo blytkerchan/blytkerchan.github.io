@@ -17,8 +17,6 @@ tags:
 - use-cases
 ---
 
-[donate]
-
 In the "C++ for the self-taught" series, we're about to embark on a new project. In order to describe that project and in order to figure out what we want the result of that project will be, we will be using a tool called the use-case. So, I think an intermezzo on use-cases is in order.
 <!--more-->
 In the series on use-cases, we will discuss:

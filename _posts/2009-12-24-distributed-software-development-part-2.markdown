@@ -23,10 +23,6 @@ This gets less disconcerting for the manager - and arguably a bit more for the t
 
 I am advocating a system in which a larger part of the team member's earnings are based on the goals that the team member is willing to commit to in some sort of negotiation. Here's why: as I said in [a previous post](/blog/2009/12/staring-into-the-depths-of-the-yet-unwritten), it doesn't make much sense for developers, managers, etc. to spend most of their time behind a desk in an office when that same person can do the same job, at less cost to the business, from a home office. When working from a home office, however, you can no longer pay for presence nor can you hope to verify presence in any meaningful way. You can, however, continue to verify that deadlines are being met. This gets easier as chunks get smaller: more deadlines, in this case, means more control.
 
-
-
-<blockquote>As a side-note: proof that using the office less is a money-saver is already [Out There](https://web.archive.org/web/20141003161725/http://www.macleans.ca/economy/business/thank-god-its-thursday/).</blockquote>
-
-
+As a side-note: proof that using the office less is a money-saver is already [Out There](https://web.archive.org/web/20141003161725/http://www.macleans.ca/economy/business/thank-god-its-thursday/).
 
 Managers will need tools to measure the progress of their projects accurately and some of those tools will either have to be re-invented or very deeply adjusted to work with a more distributed, more flexible team structure...

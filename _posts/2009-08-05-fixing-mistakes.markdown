@@ -14,6 +14,7 @@ tags:
 ---
 
 I just finished debugging a very, very nasty problem, which took me the better part of two hours to find and, once found, only a few minutes to fix. In this case, I have no one to blame but myself, so I really shouldn't complain too loudly, but I thought it was worth mentioning anyway, to show what can happen if you break the One Definition Rule.
+<!--more-->
 
 Let's get a bit of context first: I am currently writing a piece of firmware and the simulator that goes with it - the simulator allows me, and will later allow other programmers, to test the software that talks to the firmware without having the hardware that goes with it. As many firmwares are, this one is written in a mixture of C and C++ - mostly C - and uses a bunch of structures and unions. The firmware and the simulator, though they use the same source code, do not use the same compiler: the simulator uses [Microsoft Visual Studio](http://www.microsoft.com/visualstudio)'s compiler whereas the firmware uses the [GNU Compiler Collection](http://gcc.gnu.org/) with a few settings that, among other things, make sure that unions work correctly. On Microsoft's compiler, the code uses #pragma pack to make sure unions are aligned correctly. This is where the trouble begins.
 

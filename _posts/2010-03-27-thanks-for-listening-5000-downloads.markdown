@@ -10,7 +10,7 @@ wordpress_id: 526
 tags:
 - Posts that need to be re-tagged (WIP)
 ---
-
+<!--more-->
 Hello everyone,
 
 I just checked the podcast's statistics and noticed we passed the 5000 downloads mark this week. At the rate the podcast is now being downloaded, we'll have doubled that in another few weeks: each episode got downloaded, on average, almost 500 times!

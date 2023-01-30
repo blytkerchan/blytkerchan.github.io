@@ -11,7 +11,7 @@ categories:
 - This blog
 ---
 
-Due to some technical difficulties I was having with the previous installation of the software running this site, I decided to re-install the software from scratch and, while at it, change the address from landheer-cieslak.com to rlc.vlinder.ca. The look has been updated a bit and some further improvements will take place over the next few weeks.
+Due to some technical difficulties I was having with the previous installation of the software running this site, I decided to re-install the software from scratch and, while at it, change the address from landheer-cieslak.com to rlc.vlinder.ca. The look has been updated a bit and some further improvements will take place over the next few weeks.<!--more-->
 
 I've tried to make sure that all links to landheer-cieslak.com redirect correctly to vlinder.ca, so any existing (recent) permalink will continue to work. If any links have been seriously broken due to this move, please let me know.
 

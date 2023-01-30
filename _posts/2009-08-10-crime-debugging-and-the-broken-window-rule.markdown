@@ -15,6 +15,7 @@ tags:
 ---
 
 In the late 1980s New York City was cleaned up from under the ground up: from 1984 to 1990, the New York subway was cleaned of its grafiti, then of its non-paying passengers. After that, when the chief of tge New York transit police became the chief of the New York city police, the city was cleaned up in the same way, and crime rates dropped dramatically.
+<!--more-->
 
 The people responsible for this clean-up believed that taking care of the details - the petty crimes and broken windows - would dissuade the (potential) criminals from criminal behavior and, apparently, they were right.
 

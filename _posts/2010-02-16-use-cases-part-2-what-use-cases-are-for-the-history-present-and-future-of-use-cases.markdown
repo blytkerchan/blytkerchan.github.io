@@ -17,10 +17,9 @@ tags:
 - use-cases
 ---
 
-[donate]
-
 In the late 1980s and early 1990s, the "waterfall" software development model, which had been around (with that name) since the 1970s (see, for example, Boehm, B.W. Software engineering. IEEE 7~ans Comput. C-25, (1976), 1226-1241) was starting to be progressively "refined". When that happens, it usually means that there are problems with the model that need to be addressed - or the model will crumble and fall. Object-oriented programming was becoming more or less main-stream and early versions of C++ were cropping up. "Good practice" documents for programming on non-OO languages started to stress the use of OO-like APIs and soon enough, object-oriented programming would no longer be a mere buzzword.
 <!--more-->
+
 One article from that time, now two decades years old, was published in the Communications of the ACM journal: "The object-oriented systems life cycle" ([Volume 33, Issue 9  (September 1990), Pages: 142 - 159](http://portal.acm.org/citation.cfm?id=83880.84529&jmp=cit&coll=ACM&dl=ACM&CFID=1154054&CFTOKEN=24694148#CIT)). Though this article very clearly describes a waterfall process, it also very clearly states that the user of the final solution has something to say: "The analysis phase
 covers from the initiation of the project, through to users-needs analysis and feasibility study (...) In general, the problem is first defined and an analysis of the requirements of current and future users undertaken, usually by direct and indirect questioning and iterative discussion. (...) The users requirements
 definition is _in the language of the users_ so that this can be agreed upon by both the software engineer and the software user." This goes to show that the discussion between analyst/programmer and end-user is not new to iterative, "agile" programming schemes. The authors (Brian Henderson-Sellers and Julian M. Edwards, both from the University of New South Wales, Kensington, N.S.W., Australia) stress the point that this part of the life-cycle is still well-grounded in the "problem space": "At this requirements stage, however, the domain of interest is still very much that of the problem space. Not until we move from (real-world) systems analysis to (software) systems design do we move from the problem space to the solution space".
@@ -38,20 +37,19 @@ Use-cases, and their application, were developed throughout the 1990s and the fi
 Let's take a look at the [Agile Manifesto](http://agilemanifesto.org/):
 
 
-<blockquote>## Manifesto for Agile Software Development
-> 
-> 
-We are uncovering better ways of developing
-software by doing it and helping others do it.
-Through this work we have come to value:
-
-**Individuals and interactions** over processes and tools
-**Working software** over comprehensive documentation
-**Customer collaboration** over contract negotiation
-**Responding to change** over following a plan
-That is, while there is value in the items on
-the right, we value the items on the left more.
-
+<blockquote>
+<h2>Manifesto for Agile Software Development</h2>
+We are uncovering better ways of developing<br/>
+software by doing it and helping others do it.<br/>
+Through this work we have come to value:<br/>
+<br/>
+<b>Individuals and interactions</b> over processes and tools<br/>
+<b>Working software</b> over comprehensive documentation<br/>
+<b>Customer collaboration</b> over contract negotiation<br/>
+<b>Responding to change</b> over following a plan<br/>
+That is, while there is value in the items on<br/>
+the right, we value the items on the left more.<br/>
+<br/>
 Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, Dave Thomas</blockquote>
 
 

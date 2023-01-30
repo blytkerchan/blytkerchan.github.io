@@ -26,23 +26,12 @@ I'm running a Xubuntu-based laptop to do this, so I first had to install usb-cre
 
 ## Create a USB stick with Xubuntu
 
-
-
-
-
-	
   * Download the minimal CD image from [here](https://help.ubuntu.com/community/Installation/MinimalCD)
-
-	
-  * run `usb-creator-gtk` and install the mini.iso file to your USB drive ((I'm using a 2 GiB USB pendrive to do this -- bigger should be fine, smaller might not be)).
-
-	
+  * run `usb-creator-gtk` and install the mini.iso file to your USB drive[^1].
   * Install the Xubuntu as proposed in the target computer.
-
-	
   * When asked what software to install, select **Manual package selection**, **standard system utilities**, **Xubuntu minimal installation** and **OpenSSH server** (to allow remote access into the kiosk), then press the **Continue** button.
 
-
+[^1]: I'm using a 2 GiB USB pendrive to do this -- bigger should be fine, smaller might not be.
 
 
 Keeping everything else to defaults should install a basic system. When it's done installing, it will want to reboot.

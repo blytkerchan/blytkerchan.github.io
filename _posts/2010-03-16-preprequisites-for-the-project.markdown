@@ -13,14 +13,11 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-[donate]
-
 In this installment, we'll get you set up to compile everything that needs compiling in our project. We'll try to keep it short and sweet and you'll be able to download most of what you need just by following the links on this page.
 <!--more-->
 
 
 ## Prerequisites
-
 
 I'll be doing most of the development on a PC running Windows, but if you're running something else, rest assured you can still participate in the project without any problems: _all_ of the software we'll be using is portable except for the compiler itself, but a portable equivalent of the compiler exists for any system you might be working on. The code will be set up such that it will compile with any standards-compliant C++ compiler. The tools and libraries we'll be using will all be available for free, though in some cases they may nor be Free/Libre Open Source Software - but we'll try to avoid those cases as much as possible.
 
@@ -37,44 +34,3 @@ If you go to the public Git server, there's two things you can do there already:
 If you want to use an IDE, you can use [Microsoft Visual Studio Express Edition for C++](http://www.microsoft.com/express/Downloads/#2008-Visual-CPP). You can use it with [Git Extensions](http://code.google.com/p/gitextensions/) to integrate Git in Visual Studio (I actually haven't tried this, so YMMV). If you do choose to use MSVS Express Edition, install it _before_ you install the SDK: installing the SDK will point MSVS to the proper compiler etc. which will save you headaches later.
 
 If you'd prefer using free software (free as in speech: MSVS Express Edition is free as in beer) you can use [Eclipse](http://www.eclipse.org/downloads/moreinfo/c.php), but you'll have to recompile the SDK sources using MinGW. If you do, feel free to contribute the compiled binaries by uploading them to Git!
-
-
-
-## Download links:
-
-
-
-
-
-	
-  * [Windows SDK](http://www.microsoft.com/downloads/details.aspx?FamilyID=c17ba869-9671-4330-a63e-1fd44e0e2505&displaylang=en)
-
-	
-  * [Tortoise Git](http://code.google.com/p/tortoisegit/) **or** [Git](http://git-scm.com/) (for power users)
-
-
-
-
-
-## Other links:
-
-
-
-
-
-	
-  * Vlinder Software's public Git server
-
-	
-  * [7-Zip](http://www.7-zip.org/)
-
-	
-  * [Microsoft Visual Studio Express Edition for C++](http://www.microsoft.com/express/Downloads/#2008-Visual-CPP)
-
-	
-  * [Git Extensions](http://code.google.com/p/gitextensions/)
-
-	
-  * [Eclipse](http://www.eclipse.org/downloads/moreinfo/c.php)
-
-

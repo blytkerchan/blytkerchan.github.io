@@ -13,7 +13,7 @@ tags:
 - Posts that need to be re-tagged (WIP)
 ---
 
-Sometimes, techies and marketers - and especially people who are both - can get very out-of-touch with the real world and start spewing out nonsense like this: 
+Sometimes, techies and marketers - and especially people who are both - can get very out-of-touch with the real world and start spewing out nonsense<!--more--> like this: 
 
 <blockquote>The web has dramatically changed the software industry over the past 15 years. Today it’s hard to imagine business without the web. Nearly all businesses have or are creating a presence on the web to promote or sell their products and services, find new customers, or support existing ones. At the same time, the web has spawned a massive new ecosystem of web professionals – developers and designers who are focused on helping these businesses thrive.  
 From: [Somasegars weblog](http://blogs.msdn.com/somasegar/archive/2009/09/24/announcing-websitespark.aspx)</blockquote>

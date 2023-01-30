@@ -14,6 +14,7 @@ tags:
 ---
 
 One of the most ubiquitous problems in software design is to get data from one place to another. When some-one starts coding code that does that, you seem to inevitably end up with spaghetti code that mixes the higher-level code, the content and the transport together in an awful mix that looks like a cheap weeks-old spaghetti that was left half-eaten and abandoned next to a couch somewhere. Now, I have never seen what that actually looks like, but I have a rather vivid imagination - and I'll bet you have too.
+<!--more-->
 
 In my opinion, there is a right way to do it - and there are many, many wrong ways. The _right_ way is trying to chop your data into messages and building a transport layer that is compeltely ignorant of those messages. The GS1 EPCGlobal standards, with which I have worked for the last few years, up until a few months ago, got this exactly right and since I first read their model in 2007, I have applied it in numerous occasions and have started to advocate it whenever there was a reason to do so. I have since refined a few aspects of it to better suit my purposes, so I think it's about time I did some explaining.
 
@@ -47,13 +48,13 @@ The first method sends a message and returns the resulting response; the second 
 
 These five methods constitute the "low-level API" of the message-transport binder. This API is considered low-level because the Appplication Layer, in order to use this API, needs to know the Message Layer, because it needs to create its own messages. The MTB may also expose a higher-level API, for which the Application Layer need not know the Message Layer at all (because it would be used behind the scenes) but which would be specific to the application in question.
 
-The Message Layer
+## The Message Layer
 
 Completely oblivious to the business logic of the Application Layer and as ignorant about the way the messages will be transported - which is the domain of the Transport Layer - the Message Layer is concerned with wrapping contents into a message that can be understood on both ends of the communication channels. It provides the tools to create a Message object that allows the Application Layer to extract the contents from the message and/or to wrap the contents into a message, and to serialize and deserialize a message, which allows the Message-transport Binder to pass the message onto the Transport Layer without the Transport Layer knowing anything about messages, and vice-versa.
 
 The API consists of any number of overloads of a _getMessage_ function, each of which returns an opaque Message object with the contents neatly tucked into it. Other than that, the Message Layer API consists of the Message type itself, a way to create association and validation masks for messages (for asynchonous message validation - see below) and a way to serialize/deserialize messages into a memory buffer. Hence, the Message Layer is partly aware of the higher-level communications protocol: it knows how a message is formatted (serialized), how a response is associated with a query and what query corresponds to what message. What it does not know is what those queries/messages mean, semantically (that's what the Application Layer is about) nor how they are transported from one Application Layer to another (that's what the Transport Layer is about).
 
-The Transport Layer
+## The Transport Layer
 
 This is where we see our three channels again, though this time, the code in question doesn't know, semantically, what those channels are about. The Transport Layer is completely oblivious to the contents, format and semantics of the messages it transports: it sees it simply as data that may be provided with a little bit of meta-data to allow it to perform some actions asynchronously - namely associating and validating response messages.
 
@@ -82,7 +83,7 @@ The third message goes a step further than the first: it will not only associate
 
 The fourth and fifth methods are exactly the same as they were for the Message-Transport Binder.
 
-Conclusions
+# Conclusions
 
 This way of splitting the application (business) logic from the message layer and transport layer, the barrier in between being the Message-Transport Binder, allows for any type of message to be transported over any type of transport, the message having any type of meaning without _any_ of the components being dependant on the other two: chaning the transport affects only the Transport Layer and (very minimally) the Message-Transport Binder (which has to be linked to a new Transport Layer, with the same old API). Adding messages to the protocol affects the Message Layer and the little bit of code that actually uses the new message - which might be in the MTB or in the Application Layer. Changing the message format affects only the Message Layer - so going from, e.g., XML to a binary format is now a matter of hours (i.e. re-writing the serialize/deserialize fucntions), not days or weeks.
 

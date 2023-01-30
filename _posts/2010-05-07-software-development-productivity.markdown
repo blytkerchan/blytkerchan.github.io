@@ -22,7 +22,7 @@ In the latest installment of my podcast, I asserted that "all software productiv
 
 <!--more-->
 
-Increasing productivity means reducing waste. Lack of productivity means there is too much waste. Productivity and waste and each others [antinomes](http://education.yahoo.com/reference/dictionary/entry/antinome). In software development, waste can be measured - measuring productivity itself is a lot harder.
+Increasing productivity means reducing waste. Lack of productivity means there is too much waste. Productivity and waste and each others antinomes. In software development, waste can be measured - measuring productivity itself is a lot harder.
 
 
 

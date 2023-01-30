@@ -26,7 +26,7 @@ If the question is whether, if you buy a CD, you buy the right to do what you wa
 
 People who want to be able to use the work contained on the disc as they please - as sound tracks for their own movies, ads or other works, don't want copyright _reform_ - they just don't want copyright _at all_.
 
-As argues by [James Gannon](http://jamesgannon.ca/) in the [Toronto Star](http://www.thestar.com/opinion/editorialopinion/article/856210--bill-c-32-copyright-and-digital-locks): "TPMs were developed as a response to this. As more technologies were developed that allowed people to copy works on a massive scale, publishers, large and small, started coming out with TPMs to protect their artists’ works and prevent unauthorized uses of their art." Of course, most of those measures have since been broken and legal measures have become necessary to protect the measures that had become necessary to protect the works when the legal measures to protect the works no longer worked.
+As argues by [James Gannon](https://web.archive.org/web/20101029204205/http://jamesgannon.ca/) in the [Toronto Star](http://www.thestar.com/opinion/editorialopinion/article/856210--bill-c-32-copyright-and-digital-locks): "TPMs were developed as a response to this. As more technologies were developed that allowed people to copy works on a massive scale, publishers, large and small, started coming out with TPMs to protect their artists’ works and prevent unauthorized uses of their art." Of course, most of those measures have since been broken and legal measures have become necessary to protect the measures that had become necessary to protect the works when the legal measures to protect the works no longer worked.
 
 
 
@@ -35,27 +35,26 @@ As argues by [James Gannon](http://jamesgannon.ca/) in the [Toronto Star](http:/
 
 The Canadian Copyright Act that is currently in force, defines copyright as: 
 
-<blockquote>the sole right to produce or reproduce the work or any substantial part thereof in any material form whatever, to perform the work or any substantial part thereof in public or, if the work is unpublished, to publish the work or any substantial part thereof, and includes the sole right
-(a) to produce, reproduce, perform or publish any translation of the work,
-(b) in the case of a dramatic work, to convert it into a novel or other non-dramatic work,
-(c) in the case of a novel or other non-dramatic work, or of an artistic work, to convert it into a dramatic work, by way of performance in public or otherwise,
-(d) in the case of a literary, dramatic or musical work, to make any sound recording, cinematograph film or other contrivance by means of which the work may be mechanically reproduced or performed,
-(e) in the case of any literary, dramatic, musical or artistic work, to reproduce, adapt and publicly present the work as a cinematographic work,
-(f) in the case of any literary, dramatic, musical or artistic work, to communicate the work to the public by telecommunication,
-(g) to present at a public exhibition, for a purpose other than sale or hire, an artistic work created after June 7, 1988, other than a map, chart or plan,
-(h) in the case of a computer program that can be reproduced in the ordinary course of its use, other than by a reproduction during its execution in conjunction with a machine, device or computer, to rent out the computer program, and
-(i) in the case of a musical work, to rent out a sound recording in which the work is embodied,
+<blockquote>the sole right to produce or reproduce the work or any substantial part thereof in any material form whatever, to perform the work or any substantial part thereof in public or, if the work is unpublished, to publish the work or any substantial part thereof, and includes the sole right<br/>
+(a) to produce, reproduce, perform or publish any translation of the work,<br/>
+(b) in the case of a dramatic work, to convert it into a novel or other non-dramatic work,<br/>
+(c) in the case of a novel or other non-dramatic work, or of an artistic work, to convert it into a dramatic work, by way of performance in public or otherwise,<br/>
+(d) in the case of a literary, dramatic or musical work, to make any sound recording, cinematograph film or other contrivance by means of which the work may be mechanically reproduced or performed,<br/>
+(e) in the case of any literary, dramatic, musical or artistic work, to reproduce, adapt and publicly present the work as a cinematographic work,<br/>
+(f) in the case of any literary, dramatic, musical or artistic work, to communicate the work to the public by telecommunication,<br/>
+(g) to present at a public exhibition, for a purpose other than sale or hire, an artistic work created after June 7, 1988, other than a map, chart or plan,<br/>
+(h) in the case of a computer program that can be reproduced in the ordinary course of its use, other than by a reproduction during its execution in conjunction with a machine, device or computer, to rent out the computer program, and<br/>
+(i) in the case of a musical work, to rent out a sound recording in which the work is embodied,<br/>
 and to authorize any such acts.
 </blockquote>
 
 
 but that doesn't tell us what copyright is for. The Supreme Court of Canada has done that, however, as noted by Daniel J Gervais in the [University of Ottawa **Law & Technology Journal**](http://www.uoltj.ca/): 
 
-<blockquote>In three recent cases, the Supreme Court of Canada provided several pieces of the Canadian copyright policy puzzle. We now know that the economic purpose of copyright law is instrumentalist in nature, namely, **to ensure the orderly production and distribution of, and access to, works of art and intellect**. The Court added that copyright can not enter carelessly into the private sphere of individual users. By targeting end-users in recent lawsuits, copyright holders have also found out that it is difficult to enforce a right that has not been properly internalized. After reviewing the Supreme Court trilogy of cases, [the paper](http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf) explores the importance of the moral imperative and the almost nonexistent role of Parliament in setting policy at the macro level. In Part 3, the paper proposes two concrete ways to align copyright law with its underlying purpose, especially on the internet. The first is to make existing rights easier to manage by facilitating collective management using the Extended Repertoire (or extended collective licensing system). A compatibility analysis with applicable international norms is provided. The second is a recasting of the copyright rights based on the effect of the use made of the work, not its technical nature.
-> 
-> ["The Purpose of Copyright Law in Canada", D.J. Gervais; UOLTJ Vol 2 issue 2, 2005; pp. 315-56](http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf)
-> 
-> </blockquote>
+<blockquote>In three recent cases, the Supreme Court of Canada provided several pieces of the Canadian copyright policy puzzle. We now know that the economic purpose of copyright law is instrumentalist in nature, namely, **to ensure the orderly production and distribution of, and access to, works of art and intellect**. The Court added that copyright can not enter carelessly into the private sphere of individual users. By targeting end-users in recent lawsuits, copyright holders have also found out that it is difficult to enforce a right that has not been properly internalized. After reviewing the Supreme Court trilogy of cases, <a href="https://web.archive.org/web/20081226222458/http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf">the paper</a> explores the importance of the moral imperative and the almost nonexistent role of Parliament in setting policy at the macro level. In Part 3, the paper proposes two concrete ways to align copyright law with its underlying purpose, especially on the internet. The first is to make existing rights easier to manage by facilitating collective management using the Extended Repertoire (or extended collective licensing system). A compatibility analysis with applicable international norms is provided. The second is a recasting of the copyright rights based on the effect of the use made of the work, not its technical nature.<br/>
+<br/>
+<a href="https://web.archive.org/web/20081226222458/http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf">"The Purpose of Copyright Law in Canada"</a>
+</blockquote>
 
 
 
@@ -63,11 +62,9 @@ If the purpose of copyright is economical, that means that copyrighted material 
 
 There are limits to those rights, however, which are due to the economic nature of the rights and the balance that must be made with the interests of the public: 
 
-<blockquote>Excessive control by holders of copyrights and other forms of intellectual property may unduly limit the ability of the public domain to incorporate and embellish creative innovation in the long-term interests of society as a whole, or create practical obstacles to proper utilization. This is reflected in the exceptions to copyright infringement enumerated in ss. 29 to 32.2, which seek to protect the public domain in traditional ways such as fair dealing for the purpose of criticism or review and to add new protections to reflect new technology, such as limited computer program reproduction and “ephemeral recordings” in connection with live performances.
-> 
-> [Théberge v. Galerie d’Art du Petit Champlain inc., 2002 SCC 34, as cited in "The Purpose of Copyright Law in Canada", D.J. Gervais; UOLTJ Vol 2 issue 2, 2005; pp. 315-56](http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf)
-> 
-> </blockquote>
+<blockquote>Excessive control by holders of copyrights and other forms of intellectual property may unduly limit the ability of the public domain to incorporate and embellish creative innovation in the long-term interests of society as a whole, or create practical obstacles to proper utilization. This is reflected in the exceptions to copyright infringement enumerated in ss. 29 to 32.2, which seek to protect the public domain in traditional ways such as fair dealing for the purpose of criticism or review and to add new protections to reflect new technology, such as limited computer program reproduction and “ephemeral recordings” in connection with live performances.<br/>
+<br/>
+<a href="https://web.archive.org/web/20081226222458/http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf">Théberge v. Galerie d’Art du Petit Champlain inc., 2002 SCC 34, as cited in "The Purpose of Copyright Law in Canada", D.J. Gervais; UOLTJ Vol 2 issue 2, 2005; pp. 315-56</a></blockquote>
 
 
 
@@ -75,11 +72,9 @@ As Gervais notes, "[the] Court tells us that users, who are also very often “o
 
 Where the balance lies relies on the nature of the work as well: 
 
-<blockquote>“This exercise of skill and judgment will necessarily involve intellectual effort. The exercise of skill and judgment required to produce the work must not be so trivial that it could be characterized as a purely mechanical exercise.”
-> 
-> [CCH Canadian Ltd. v. Law Society of Upper Canada, 2004 SCC 13, as cited in "The Purpose of Copyright Law in Canada", D.J. Gervais; UOLTJ Vol 2 issue 2, 2005; pp. 315-56](http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf)
-> 
-> </blockquote>
+<blockquote>“This exercise of skill and judgment will necessarily involve intellectual effort. The exercise of skill and judgment required to produce the work must not be so trivial that it could be characterized as a purely mechanical exercise.”<br/>
+<br/>
+<a href="https://web.archive.org/web/20081226222458/http://www.uoltj.ca/articles/vol2.2/2005.2.2.uoltj.Gervais.315-356.pdf">CCH Canadian Ltd. v. Law Society of Upper Canada, 2004 SCC 13, as cited in "The Purpose of Copyright Law in Canada", D.J. Gervais; UOLTJ Vol 2 issue 2, 2005; pp. 315-56</a></blockquote>
 
 
 

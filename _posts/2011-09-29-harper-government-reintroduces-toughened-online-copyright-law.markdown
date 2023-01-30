@@ -19,4 +19,4 @@ In the Vancouver Sun: bill C-32 from last session has been re-introduced (probab
 
 
 
-**Update Oct 8, 2008:** the re-introduced Copyright Modernization Act is numbered C-11, and is available [here](http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?Language=E&Mode=1&billId=5134851).
+**Update Oct 8, 2008:** the re-introduced Copyright Modernization Act is numbered C-11, and is available [here](https://web.archive.org/web/20111221034832/http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?billId=5134851&Language=E&Mode=1).

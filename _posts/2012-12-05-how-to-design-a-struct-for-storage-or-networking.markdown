@@ -27,10 +27,9 @@ Note that I am by no means advocating anything more than a few simple rules to f
 ## Necessary parts
 
 
-There are two things that any structure that is communicated ((and I include writing to persistent storage and reading it back later in "communication" because that's what it is: the software reading the data may very well be different from the software writing it -- be it different versions of the same software, or different software altogether)) in binary form should have:
+There are two things that any structure that is communicated[^1] in binary form should have:
 
-
-
+[^1]: and I include writing to persistent storage and reading it back later in "communication" because that's what it is: the software reading the data may very well be different from the software writing it -- be it different versions of the same software, or different software altogether
 	
   1. a **magic number**, preferably one that is at exactly four bytes in length and one that is chosen to be human-readable, either when displayed as HEX or when displayed as "deciphered" ASCII  
 Good examples are `0xdeadbeef`; `0x_N_badf00d` in which _N_ is replaced by a hexadecimal value that might mean something -- you have 16 options, and you can put the N at the end, so you really now have 32 options!!; `'CODE'` (or `0x434f4445` in this case) in which CODE is replaced by something descriptive for the structure's content. For example, if it contains a config for a potato peeler, `'PCFG'` (or `0x50434647`) would do just fine. The idea is to have some magic number that's easy to recognize when displayed by a memory debugger or when dumped by a run-of-the-mill binary editor/viewer.
@@ -75,7 +74,9 @@ With just these two in place on every persisted structure, I would have saved ho
         uint32_t magic_;
         uint32_t version_;
 
-or, if we want the code above to compile ((There is some religious debate over whether or not to do `typedef struct Version_struct Version;` in C headers, so I left that out, though I usually would have included it for convenience.)): 
+or, if we want the code above to compile[^2]:
+
+[^2]: There is some religious debate over whether or not to do `typedef struct Version_struct Version;` in C headers, so I left that out, though I usually would have included it for convenience.
     
     struct Version_struct
     {
@@ -105,11 +106,15 @@ What's wrong with this picture:
 
 Hint: it's not the Hungarian notation!
 
-There's an invisible hole in this structure ((At least, there is on the vast majority of platforms)). Between `ucThingy` and `usThingy` there is a one-byte hole due to the structure's members' alignment.
+There's an invisible hole in this structure[^3]. Between `ucThingy` and `usThingy` there is a one-byte hole due to the structure's members' alignment.
+
+[^3]: At least, there is on the vast majority of platforms.
 
 The vast majority of compilers will insert a hole into the structure to make sure the `usThingy` member is aligned on a "natural" two-byte boundary. _That is the right thing to do_, because many hardware platforms will be _very_ picky on mis-aligned data. ARM, for example, will throw a 'data abort' at you whereas x86 will simply slow down to a crawl.
 
-**Please don't make the mistake of using `#pragma pack` for this**: use `#pragma pack` only if you _know_ it has no effect, and then only if you have a whole bunch of `assert`ions in your unit tests, which are run every night, checking that the `#pragma pack` has no effect on any of the platforms you target ((In other words: just don't use it -- it's useless.)). Using `#pragma pack` otherwise can cause mis-alignment of the contents of the structure which on some platforms (like ARM) can cause crashes.
+**Please don't make the mistake of using `#pragma pack` for this**: use `#pragma pack` only if you _know_ it has no effect, and then only if you have a whole bunch of `assert`ions in your unit tests, which are run every night, checking that the `#pragma pack` has no effect on any of the platforms you target[^4]. Using `#pragma pack` otherwise can cause mis-alignment of the contents of the structure which on some platforms (like ARM) can cause crashes.
+
+[^4]: In other words: just don't use it -- it's useless.
 
 _Do_ use filler variables to fill the holes, like this: 
     

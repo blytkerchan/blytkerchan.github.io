@@ -49,27 +49,14 @@ I already had Cygwin installed when I started, but you might not, so here's what
 
   4. Select each of the following packages:
 
-    * xorg-server
-
-
-    * xinit
-
-
-    * xauth
-
-
-    * openssh
-
-
-    * vim (because really, _can_ you live without Vim?)
-
-
-    * mintty (if you're on 32-bit, I recommend rxvt in stead)
-
+* xorg-server
+* xinit
+* xauth
+* openssh
+* vim (because really, _can_ you live without Vim?)
+* mintty (if you're on 32-bit, I recommend rxvt in stead)
 
 The easiest way to do this is to type the package name in the Search box, and click on the word "Skip" until it says "7.5-2" or somesuch (whatever the current version is -- just click on "Skip" and it'll work
-
-
 
   5. Hit "Next", accept the suggestion to download and install the dependencies, let the installer run for awhile and grab a coffee
 
@@ -185,6 +172,7 @@ We're all done on the Linux side: assuming you have something that uses X on the
 We'll start by making sure the X server starts when you log in: create a shortcut with the following target:
 `C:\cygwin64\bin\run.exe -p /usr/X11R6/bin XWin -listen tcp -multiwindow -clipboard -silent-dup-error`
 and put it in the Startup folder of your start menu.
+
 [![Properties of the shortcut](/assets/2016/04/screenshot-1.png)](/assets/2016/04/screenshot-1.png)
 
 Run it. You should get a little X logo in the system bar.
@@ -192,6 +180,7 @@ Run it. You should get a little X logo in the system bar.
 Now, we'll need a `DISPLAY` environment variable to point to our X server, which we can add by right-clicking on "Computer", selecting "Properties", "Advanced system settings" and pressing the button "Environment Variables...". Add it to your user variables can give it the value `:0`. This will tell SSH (and, ultimately, the Linux box) where your X server is.
 
 Finally, create a second shortcut, targeted at `C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -e /usr/bin/ssh -Y me@192.168.0.80`
+
 [![Second shortcut](/assets/2016/04/screenshot-2.png)](/assets/2016/04/screenshot-2.png)
 
 Run it, and you should be back on your Linux box. Run `xterm&` on that box and you should get an X-hosted xterm window, on your Windows box.
