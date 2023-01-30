@@ -27,12 +27,12 @@ From their post on this subject:
 But let's see what bill C32 has to say about this:
 
 
-<blockquote>“technological protection measure”
-« mesure technique de protection »
+<blockquote>“technological protection measure”<br/>
+« mesure technique de protection »<br/>
 
-“technological protection measure” means any effective technology, device or component that, in the ordinary course of its operation,
+“technological protection measure” means any effective technology, device or component that, in the ordinary course of its operation,<br/>
 
-(a) controls access to a work, to a performer’s performance fixed in a sound recording or to a sound recording and whose use is authorized by the copyright owner; or
+(a) controls access to a work, to a performer’s performance fixed in a sound recording or to a sound recording and whose use is authorized by the copyright owner; or<br/>
 
 (b) restricts the doing — with respect to a work, to a performer’s performance fixed in a sound recording or to a sound recording — of any act referred to in section 3, 15 or 18 and any act for which remuneration is payable under section 19.</blockquote>
 

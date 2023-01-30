@@ -39,13 +39,13 @@ Let's look at these three points, one by one:
 
 Industry standards generally focus on TCP/IP communications for as far as they are concerned with security. In the context of smart grids, the [NERC (North American Electric Reliability Corporation) Critical Infrastructure Protection](http://web.archive.org/web/20151019112638/http://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx) standards are a good example: CIP-005-3a, the electronic security perimeter standard, includes dial-up and non-routable protocols as entry points to the electronic perimeter (section B, requirement R1.1) but electronic access control is only required "where technically feasible" and only if access is interactive: 
 
-<blockquote>**CIP-005-3a. Section B. Requirement R2.4**: Where external interactive access into the Electronic Security Perimeter has been enabled, the Responsible Entity shall implement strong procedural or technical controls at the access points to ensure authenticity of the accessing party, where technically feasible.</blockquote>
+<blockquote><b>CIP-005-3a. Section B. Requirement R2.4</b>: Where external interactive access into the Electronic Security Perimeter has been enabled, the Responsible Entity shall implement strong procedural or technical controls at the access points to ensure authenticity of the accessing party, where technically feasible.</blockquote>
 
 
 
 Monitoring electronic access is for dial-up and non-routable protocols is only required where technically feasible as well: 
 
-<blockquote>**CIP-005-3a. Section B. Requirement R3.1**For dial-up accessible Critical Cyber Assets that use non-routable protocols, the Responsible Entity shall implement and document monitoring process(es) at each access point to the dial-up device, where technically feasible.</blockquote>
+<blockquote><b>CIP-005-3a. Section B. Requirement R3.1</b> For dial-up accessible Critical Cyber Assets that use non-routable protocols, the Responsible Entity shall implement and document monitoring process(es) at each access point to the dial-up device, where technically feasible.</blockquote>
 
 
 
