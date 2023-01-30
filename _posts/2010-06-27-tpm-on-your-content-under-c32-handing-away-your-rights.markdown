@@ -25,13 +25,13 @@ In neither of these cases would you be circumventing a TPM: in the first case - 
 
 
 
-<blockquote>“circumvent” means,
+<blockquote>“circumvent” means,<br/>
 
-(a) in respect of a technological protection measure within the meaning of paragraph (a) of the definition “technological protection measure”, to descramble a scrambled work or decrypt an encrypted work or to otherwise avoid, bypass, remove, deactivate or impair the technological protection measure, **unless it is done with the authority of the copyright owner**;
+(a) in respect of a technological protection measure within the meaning of paragraph (a) of the definition “technological protection measure”, to descramble a scrambled work or decrypt an encrypted work or to otherwise avoid, bypass, remove, deactivate or impair the technological protection measure, <b>unless it is done with the authority of the copyright owner</b>;<br/>
 
-“technological protection measure” means any effective technology, device or component that, in the ordinary course of its operation,
+“technological protection measure” means any effective technology, device or component that, in the ordinary course of its operation,<br/>
 
-(a) controls access to a work, to a perform- er’s performance fixed in a sound recording or to a sound recording **and whose use is authorized by the copyright owner**;</blockquote>
+(a) controls access to a work, to a perform- er’s performance fixed in a sound recording or to a sound recording <b>and whose use is authorized by the copyright owner</b>;</blockquote>
 
 
 

@@ -14,49 +14,40 @@ tags:
 ---
 
 A [recent report from the SEI](http://www.sei.cmu.edu/library/abstracts/reports/09tr010.cfm) confirms once more what I have been saying for a few years now: security is a design-time concern as much as it is a concern at any other time during the application life-cycle. The very architecture of the application should take security into account from the outset, and that concern should be followed through down to implementation and deployment.
+<!--more-->
 
 The cost of defects, especially security defects, is (or can be) a lot higher once the application is deployed than before deployment - defects are usually especially cheap if caught at early design phases. This is true regardless of whether the application is built using agile practices or not - being agile doesn't mean not thinking ahead. The report acknowledges this and focuses on a few patterns, which are divided into three categories:
 
 
 
 <blockquote>Three general classes of patterns are presented in this document:
-> 
-> 
-	
->   * Architectural-level patterns. Architectural-level patterns focus on the high-level allocation of responsibilities between different components of the system and define the interaction be-tween those high-level components. The architectural-level patterns defined in this document are
->     * Distrustful Decomposition
-> 
+<ul>
+<li>Architectural-level patterns. Architectural-level patterns focus on the high-level allocation of responsibilities between different components of the system and define the interaction be-tween those high-level components. The architectural-level patterns defined in this document are
+<ul>
+<li>Distrustful Decomposition</li>
+<li>PrivSep (Privilege Separation)</li>
+<li>Defer to Kernel</li>
+</ul>
+</li>
 
->     * PrivSep (Privilege Separation)
-> 
+<li>Design-level patterns. Design-level patterns describe how to design and implement pieces of a high-level system component, that is, they address problems in the internal design of a single high-level component, not the definition and interaction of high-level components themselves. The design-level patterns defined in this document are
+<ul>
+<li>Secure State Machine</li>
 
->     * Defer to Kernel
-> 
 
->   * Design-level patterns. Design-level patterns describe how to design and implement pieces of a high-level system component, that is, they address problems in the internal design of a single high-level component, not the definition and interaction of high-level components themselves. The design-level patterns defined in this document are
+<li>Secure Visitor</li>
+</ul>
+</li>
 
->     * Secure State Machine
-> 
-
->     * Secure Visitor
-> 
-
->   * Implementation-level patterns. Implementation-level patterns address low-level security issues. Patterns in this class are usually applicable to the implementation of specific functions or methods in the system. Implementation-level patterns address the same problem set addressed by the CERT Secure Coding Standards and are often linked to a corresponding secure coding guideline. Implementation-level patterns defined in this document are: 
-
->     * Secure Directory
-> 
-
->     * Pathname Canonicalization
-> 
-
->     * Input Validation
-> 
-
->     * Runtime Acquisition Is Initialization
-> 
-
-> 
-
+<li>Implementation-level patterns. Implementation-level patterns address low-level security issues. Patterns in this class are usually applicable to the implementation of specific functions or methods in the system. Implementation-level patterns address the same problem set addressed by the CERT Secure Coding Standards and are often linked to a corresponding secure coding guideline. Implementation-level patterns defined in this document are: 
+<ul>
+<li>Secure Directory</li>
+<li>Pathname Canonicalization</li>
+<li>Input Validation</li>
+<li>Runtime Acquisition Is Initialization</li>
+</ul>
+</li>
+</ul>
 This report does not provide a complete secure design pattern catalog. In the creation of this report, some, but by no means all, best practices used in the creation of secure software were analyzed and generalized. Future work will extend the catalog of secure design patterns.</blockquote>
 
 

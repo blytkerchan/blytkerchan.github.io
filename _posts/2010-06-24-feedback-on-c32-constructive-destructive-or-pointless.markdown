@@ -63,13 +63,13 @@ That really depends on the contract that the person who created the work has wit
 
 
 
-<blockquote>41.1 (1) No person shall
+<blockquote>41.1 (1) No person shall<br/>
 
-(a) circumvent a technological protection measure (...);
+(a) circumvent a technological protection measure (...);<br/>
 
-(b) offer services to the public or provide services (...)
+(b) offer services to the public or provide services (...)<br/>
 
-(c) manufacture, import, distribute, offer for sale or rental(...)
+(c) manufacture, import, distribute, offer for sale or rental(...)<br/>
 
 (2) The owner of the copyright in a work, (...) has been contravened is (...) entitled to all remedies (...) that are or may be conferred by law for the infringement of copyright against the person who contravened that paragraph.</blockquote>
 
@@ -88,9 +88,9 @@ I must hand it to Michael Geist: his first response to C-32 was to propose [amen
 
 Even though I support the bill in general, including the provisions banning the breaking of the digital locks, I would tend to agree that the ban on the tools should be dropped. The bill bans the tools if 
 
-<blockquote>(i) the technology, device or component is designed or produced primarily for the purposes of circumventing a technological protection measure,
+<blockquote>(i) the technology, device or component is designed or produced primarily for the purposes of circumventing a technological protection measure,<br/>
 
-(ii) the uses or purposes of the technology, device or component are not commercially significant other than when it is used for the purposes of circumventing a technolog- ical protection measure, or
+(ii) the uses or purposes of the technology, device or component are not commercially significant other than when it is used for the purposes of circumventing a technolog- ical protection measure, or<br/>
 
 (iii) the person markets the technology, device or component as being for the purposes of circumventing a technological protection measure or acts in concert with another person in order to market the technology, device or component as being for those purposes.</blockquote>
 

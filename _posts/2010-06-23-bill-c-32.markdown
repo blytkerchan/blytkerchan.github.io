@@ -26,23 +26,23 @@ I can provide my content under a given licence (such as this blog, which is publ
 This means that such locks are a means for copyright holders to protect themselves against what's now called "piracy". Let's have a look at the bill's wording, though:
 
 
-<blockquote>41.1 (1) No person shall
+<blockquote>41.1 (1) No person shall<br/>
 
-(a) circumvent a technological protection measure within the meaning of paragraph (a) of the definition “technological protection measure” in section 41;
+(a) circumvent a technological protection measure within the meaning of paragraph (a) of the definition “technological protection measure” in section 41;<br/>
 
-(b) offer services to the public or provide services if
+(b) offer services to the public or provide services if<br/>
 
-(i) the services are offered or provided primarily for the purposes of circumventing a technological protection measure,
+(i) the services are offered or provided primarily for the purposes of circumventing a technological protection measure,<br/>
 
-(ii) the uses or purposes of those services are not commercially significant other than when they are offered or provided for the purposes of circumventing a technological protection measure, or
+(ii) the uses or purposes of those services are not commercially significant other than when they are offered or provided for the purposes of circumventing a technological protection measure, or<br/>
 
-(iii) the person markets those services as being for the purposes of circumventing a technological protection measure or acts in concert with another person in order to market those services as being for those purposes; or
+(iii) the person markets those services as being for the purposes of circumventing a technological protection measure or acts in concert with another person in order to market those services as being for those purposes; or<br/>
 
-(c) manufacture, import, distribute, offer for sale or rental or provide — including by selling or renting — any technology, device or component if
+(c) manufacture, import, distribute, offer for sale or rental or provide — including by selling or renting — any technology, device or component if<br/>
 
-(i) the technology, device or component is designed or produced primarily for the purposes of circumventing a technological protection measure,
+(i) the technology, device or component is designed or produced primarily for the purposes of circumventing a technological protection measure,<br/>
 
-(ii) the uses or purposes of the technology, device or component are not commercially significant other than when it is used for the purposes of circumventing a technological protection measure, or
+(ii) the uses or purposes of the technology, device or component are not commercially significant other than when it is used for the purposes of circumventing a technological protection measure, or<br/>
 
 (iii) the person markets the technology, device or component as being for the purposes of circumventing a technological protection measure or acts in concert with another person in order to market the technology, device or component as being for those purposes.</blockquote>
 

@@ -17,17 +17,17 @@ It's been argued that TPM and bill C-32 are bad for Free/Libre Open Source Softw
 <!--more-->
 Let's first have a look at what you can legally do under C-32: 
 
-<blockquote>30.6 It is not an infringement of copyright in a computer program for a person who owns a copy of the computer program that is authorized by the owner of the copyright, or has a licence to use a copy of the computer program, to
+<blockquote>30.6 It is not an infringement of copyright in a computer program for a person who owns a copy of the computer program that is authorized by the owner of the copyright, or has a licence to use a copy of the computer program, to<br/>
 
-(a) reproduce the copy by adapting, modifying or converting it, or translating it into another computer language, if the person proves that the reproduced copy
+(a) reproduce the copy by adapting, modifying or converting it, or translating it into another computer language, if the person proves that the reproduced copy<br/>
 
-(i) is essential for the compatibility of the computer program with a particular computer,
+(i) is essential for the compatibility of the computer program with a particular computer,<br/>
 
-(ii) is solely for the person’s own use, and
+(ii) is solely for the person’s own use, and<br/>
 
-(iii) was destroyed immediately after the person ceased to be the owner of the copy of the computer program or to have a licence to use it; or
+(iii) was destroyed immediately after the person ceased to be the owner of the copy of the computer program or to have a licence to use it; or<br/>
 
-(b) reproduce for backup purposes the copy or a reproduced copy referred to in paragraph (a) if the person proves that the reproduction for backup purposes was destroyed immediately after the person ceased to be the owner of the copy of the computer program or to have a licence to use it.
+(b) reproduce for backup purposes the copy or a reproduced copy referred to in paragraph (a) if the person proves that the reproduction for backup purposes was destroyed immediately after the person ceased to be the owner of the copy of the computer program or to have a licence to use it.<br/>
 
 30.61 It is not an infringement of copyright in a computer program for a person who owns a copy of the computer program that is authorized by the owner of the copyright, or has a licence to use a copy of the computer program, to reproduce the copy for the sole purpose of obtaining information that would allow the person to make the program and any other computer program interoperable.
 </blockquote>
@@ -38,21 +38,21 @@ Now, I am not a lawyer, but when I read this, I take it to mean that, under sect
 
 
 
-<blockquote>41.12 (1) Paragraph 41.1(1)(a) does not apply to a person who owns a computer program or a copy of one, or has a licence to use the program or copy, and who circumvents a technological protection measure that protects that program or copy for the sole purpose of obtaining information that would allow the person to make the program and any other computer program interoperable.
+<blockquote>41.12 (1) Paragraph 41.1(1)(a) does not apply to a person who owns a computer program or a copy of one, or has a licence to use the program or copy, and who circumvents a technological protection measure that protects that program or copy for the sole purpose of obtaining information that would allow the person to make the program and any other computer program interoperable.<br/>
 
-(2) Paragraph 41.1(1)(b) does not apply to a person who offers services to the public or provides services for the purposes of circumventing a technological protection measure if the person does so for the purpose of making the computer program and any other computer program interoperable.
+(2) Paragraph 41.1(1)(b) does not apply to a person who offers services to the public or provides services for the purposes of circumventing a technological protection measure if the person does so for the purpose of making the computer program and any other computer program interoperable.<br/>
 
-(3) Paragraph 41.1(1)(c) does not apply to a person who manufactures, imports or provides a technology, device or component for the purposes of circumventing a technological protection measure if the person does so for the purpose of making the computer program and any other computer program interoperable and
+(3) Paragraph 41.1(1)(c) does not apply to a person who manufactures, imports or provides a technology, device or component for the purposes of circumventing a technological protection measure if the person does so for the purpose of making the computer program and any other computer program interoperable and<br/>
 
-(a) uses that technology, device or component only for that purpose; or
+(a) uses that technology, device or component only for that purpose; or<br/>
 
-(b) provides that technology, device or component to another person only for that purpose.
+(b) provides that technology, device or component to another person only for that purpose.<br/>
 
-(4) A person referred to in subsection (1) may communicate the information obtained under that subsection to another person for the purposes of allowing that person to make the computer program and any other computer program interoperable.
+(4) A person referred to in subsection (1) may communicate the information obtained under that subsection to another person for the purposes of allowing that person to make the computer program and any other computer program interoperable.<br/>
 
-(5) A person to whom the technology, device or component referred to in subsection (3) is provided or to whom the information referred to in subsection (4) is communicated may use it only for the purpose of making the computer program and any other computer program interoperable.
+(5) A person to whom the technology, device or component referred to in subsection (3) is provided or to whom the information referred to in subsection (4) is communicated may use it only for the purpose of making the computer program and any other computer program interoperable.<br/>
 
-(6) However, a person is not entitled to benefit from the exceptions under subsections (1) to (3) or (5) if, for the purposes of making the computer program and any other computer program interoperable, the person does an act that constitutes an infringement of copyright
+(6) However, a person is not entitled to benefit from the exceptions under subsections (1) to (3) or (5) if, for the purposes of making the computer program and any other computer program interoperable, the person does an act that constitutes an infringement of copyright<br/>
 
 (7) Furthermore, a person is not entitled to benefit from the exception under subsection (4) if, for the purposes of making the computer program and any other computer program interoperable, the person does an act that constitutes an infringement of copyright or an act that contravenes any Act of Parliament or any Act of the legislature of a province.</blockquote>
 

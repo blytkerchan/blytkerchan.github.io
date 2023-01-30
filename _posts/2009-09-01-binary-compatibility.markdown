@@ -19,7 +19,7 @@ When writing library code, one of the snares to watch out for is _binary compati
 
 ## What is "compatibility"?
 
-<blockquote>compatible: _ Capable of orderly, efficient integration and operation with other elements in a system with no modification or conversion required_ [[Free Dictionary](http://www.thefreedictionary.com/compatibility)]</blockquote>
+<blockquote>compatible: <i>Capable of orderly, efficient integration and operation with other elements in a system with no modification or conversion required</i> [<a href="http://www.thefreedictionary.com/compatibility">Free Dictionary</a>]</blockquote>
 
 
 That about sums it up: a library is "_backward compatible_" is you can drop it in the place of an older version of the same library (or an older, but different library the new one aims to replace) without having to change anything else, and without breaking anything. _Forward compatibility_ - the ability to gracefully accept input destined for later versions of itself, does not apply in this context and is beyond the scope of this post.
@@ -33,7 +33,7 @@ We will distinguish two types of (backward) compatibility: **API** compatibility
 
 
 
-<blockquote>Library _**N**_ is said to be _Binary Compatible_ with library _**O**_ if it possible to replace an instance of library _**O**_ with an instance of library _**N**_ without making any changes to software that uses library _**O**_.</blockquote>
+<blockquote>Library <i><b>N</b></i> is said to be <i>Binary Compatible</i> with library <i><b>O</b></i> if it possible to replace an instance of library <i><b>O</b></i> with an instance of library <i><b>N</b></i> without making any changes to software that uses library <i><b>O</b></i>.</blockquote>
 
 
 
@@ -46,7 +46,7 @@ There is one obvious restriction to binary compatibility: it only applies to sha
 
 
 
-<blockquote>Library **_N_**is said to be _API compatible_ with library _**O**_ if it is possible to recompile the software using library _**O**_ and link it against library _**N**_ without making any other changes to that software</blockquote>
+<blockquote>Library <i><b>N</b></i> is said to be <i>API compatible</i> with library <i><b>O</b></i> if it is possible to recompile the software using library <i><b>O</b></i> and link it against library <i><b>N</b></i> without making any other changes to that software</blockquote>
 
 
 
