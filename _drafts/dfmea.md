@@ -2,9 +2,10 @@
 author: rlc
 layout: post
 excerpt: How to "easily" identify failure modes, and how to address them
-title: DFMEA: Design Failure Mode and Effect Analysis
+title: DFMEA- Design Failure Mode and Effect Analysis
 ---
-<img src="/assets/2023/02/cat.jpg" width="300px" align="right"a/>Design Failure Mode and Effect Analysis (DFMEA) is a software engineering technique that can help validate design decisions or improve upon them. It takes your existing design and puts eaach component and link under a magnifying glass, running it through a what-if scenario. In this post, I will walk through a DFMEA of a fictional website and on-line store for a fictional florist. If you read my other blog, [Applied Paranoia](https://applied-paranoia.com) you may already be familiar with that application.
+
+<img src="/assets/2023/02/cat.jpg" width="300px" align="right" alt="I wrote this by hand before typing it up, and drew a cat. This is the cat." />Design Failure Mode and Effect Analysis (DFMEA) is a software engineering technique that can help validate design decisions or improve upon them. It takes your existing design and puts eaach component and link under a magnifying glass, running it through a what-if scenario. In this post, I will walk through a DFMEA of a fictional website and on-line store for a fictional florist. If you read my other blog, [Applied Paranoia](https://applied-paranoia.com) you may already be familiar with that application.
 
 The Crassula application uses a static website generated with Jekyll, and an Angular app embedded in that website for the purchasing workflow. The static front-end and angular app are served out of an S3 bucket behind a CloudFront proxy, the back-end for the store uses some serverless functions (lambdas), and S3 bucket to download invoices from, and a NoSQL database. The whole thing is tied together using AWS' Simple Queue Service and deployed using CloudFormation.
 
