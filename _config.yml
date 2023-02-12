@@ -16,18 +16,8 @@
 title: Making Life Easier
 email: rlc@vlinder.ca
 description: >- # this means to ignore newlines until "baseurl:"
-    The blog of a vereran C++ developer working in SCADA and industrial embedded devices, focusing 
-    on security and communications.
-#    Ronald Landheer-Cieslak is the founder of Vlinder Software and co-founder of Optimus Analysis.
-#    He is a veteran developer in C++ and has worked in SCADA systems for the last decade.
-#    Specializing in communications and security, his research and development activities focus on
-#    industrial embedded devices. He has lead development teams in developing several products, 
-#    providing both technical guidance and managing the technical aspects of those projects.
-#    
-#    Ronald is a member of the IEEE, the ACM and the IANA. He is active in standards development 
-#    through the IEEE PES and Standards Society and through IEC TC57.
-#    
-#    This is his blog.
+    Blog about software engineering, and how it makes life easier.
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blytkerchan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: blytkerchan
