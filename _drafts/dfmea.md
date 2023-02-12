@@ -11,3 +11,24 @@ The Crassula application uses a static website generated with Jekyll, and an Ang
 
 The S3 bucket that contains the front-end (static site and Angular app) is the first point of entry for any customer. The Angular app calls out to the API and implements the workflows, including downloading invoices from the second S3 bucket using SAS URIs, but unlike the static app it can handle temporary failures of the API or the S3 bucket with a modicum of grace.
 
+To do a DFMEA on this application we go through three high-level steps, some of which have sub-steps. Before we start doing that, though, we should set a goal. For purposes of this analysis, we'll set a goal of 99.5% uptime. I've taken this number more or less arbitrarily, and getting to such a number is outside the scope of this post[^1], but it will be needed later on.
+
+[^1]: The number defines a monthly "downtime budget". In this case, we're going for a "two nines" availability. As a rule of thumb, you can assume that every time you add a nine (e.g. 99.9 is three nines, 99.99 is four nines, etc.) you multiply the cost of your solution by ten. A 99.5% uptime objective gives you a downtime budget of 3:36 hours per month. There is no such thing as 100% uptime.
+
+The steps are:
+
+1. list all the components in the solution
+2. create a diagram of the components and how they relate to each other
+3. for each component and communications link, determine what failure looks like
+
+The intent is to answer the question "How does this fail?" This is the first of three questions we will need to ask[^2]:
+
+- How does it fail?
+- How do I know it failed?
+- What do I do when I know it failed?
+
+[^2]: I shamelessly stole these questions from [Google's excellent resources on SRE](https://sre.google).
+
+## Listing the components
+
+The first step is to list all the components. 
