@@ -13,7 +13,7 @@ The S3 bucket that contains the front-end (static site and Angular app) is the f
 
 To do a DFMEA on this application we go through three high-level steps, some of which have sub-steps. Before we start doing that, though, we should set a goal. For purposes of this analysis, we'll set a goal of 99.5% uptime. I've taken this number more or less arbitrarily, and getting to such a number is outside the scope of this post[^1], but it will be needed later on.
 
-[^1]: The number defines a monthly "downtime budget". In this case, we're going for a "two nines" availability. As a rule of thumb, you can assume that every time you add a nine (e.g. 99.9 is three nines, 99.99 is four nines, etc.) you multiply the cost of your solution by ten. A 99.5% uptime objective gives you a downtime budget of 3:36 hours per month. There is no such thing as 100% uptime.
+[^1]: The number defines a monthly "downtime budget". In this case, we're going for a "two nines" availability. As a rule of thumb, you can assume that every time you add a nine (e.g. 99.9% is three nines, 99.99% is four nines, etc.) you multiply the cost of your solution by ten. A 99.5% uptime objective gives you a downtime budget of 3:36 hours per month. There is no such thing as 100% uptime.
 
 The steps are:
 
@@ -27,8 +27,24 @@ The intent is to answer the question "How does this fail?" This is the first of 
 - How do I know it failed?
 - What do I do when I know it failed?
 
-[^2]: I shamelessly stole these questions from [Google's excellent resources on SRE](https://sre.google).
+[^2]: I shamelessly stole these questions from <a href="https://sre.google" target="_blank">Google's excellent resources on SRE</a>.
 
 ## Listing the components
 
-The first step is to list all the components. 
+The first step is to list all the components. In the case of this particular application, there are actually quite a few:
+
+* **AWS CloudFront** is used as a content delivery network and caching reverse proxy. It has a cache, so most hits on the website will not hit the underlying S3 bucket.
+* An **S3 bucket** is used to store the Jekyll-generated static site and the Angular-generated one-page store front-end as well as the associated static resources (such as images, style sheets, etc.).
+* **AWS' DNS service** is used for the domain and sub-domains.
+* **AWS' PKI** is used to secure the site. This is implemented using AWS Certificate Manager
+* An **API Gateway** is used to serve the store application's API
+* A second **S3 bucket** is used to share confidential files (invoices etc.) with the user.
+* Several **Lambda functions**, all written in Node.js, are used. One of these is an identity-aware proxy, the others are business logic micro-services, and interface micro-services to third-party services.
+* The **Amazon Simple Queue Service** is used to allow the micro-services to communicate with each other.
+* Two services use a **DocumentDB** to store information about transactions etc.
+* **AWS Cognito** is used for identity management.
+* A third-party payment service is used to process payments.
+
+
+
+<hr/>
