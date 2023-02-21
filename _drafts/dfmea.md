@@ -19,15 +19,25 @@ The steps are:
 
 1. list all the components in the solution
 2. create a diagram of the components and how they relate to each other
-3. for each component and communications link, determine what failure looks like
-
-The intent is to answer the question "How does this fail?" This is the first of three questions we will need to ask[^2]:
+3. for each component and communications link, determine what failure looks like:
+   1. determine how likely it is to fail, and exclude anything that is too unlikely to be worth our time
+   2. determine what the failure mode is
+   3. determine what the user-visible effect or business impact of failure is
+   4. determine how that failure can be detected
+   5. determine how the failure can be mitigated
+      1. within the design
+      2. outside of the system
+   6. determine how the failure can be remediated
+   
+The intent is to answer the three questions[^2]:
 
 - How does it fail?
 - How do I know it failed?
 - What do I do when I know it failed?
 
 [^2]: I shamelessly stole these questions from <a href="https://sre.google" target="_blank">Google's excellent resources on SRE</a>.
+
+We want to be methodic in this approach, but we also want to quickly exclude anything we can exclude, so anything we deem isn't worth our time will be excluded from the analysis as soon as we can do so. We can always come back to it later.
 
 ## Listing the components
 
@@ -47,18 +57,143 @@ The first step is to list all the components. In the case of this particular app
 
 The DevOps components are out of scope for this analysis because if they fail, it prevents the site from being updated for the duration of the failure, but the site is not operationally affected.
 
-Some other components can be removed from the analysis as well: components that are extremely unlikely to fail because they have fail-safes, redundancy, or other high-availability measured built in. Int this case, that excludes CloudFront, which has an uptime guarantee of 99.9% and has more than 400 edge end points. Likewise, the DNS system, which by design is a globally distributed, caching database with redundant masters, is excluded as well.
-
 Having now identified the components to include in the analysis, we can go on to the next step: creating a diagram of the architecture.
 
 ## Creating an architecture diagram
 
 <img src="/assets/2023/02/step1.svg" width="300px" align="right" />We start this step by just placing all the components we just identified on a diagram. It’s usually a good idea to use some type of light-weight software for this, such as <a href="https://draw.io" target="_blank">draw.io</a> or <a href="https://lucidchart.com" target="_blank">Lucid Chart</a>. Things may need to move around a bit, so don't worry about putting things "in the right place" just yet.
 
-<img src="/assets/2023/02/diagram.svg" width="300px" align="right" />Next, we'll add communications links to the diagram. To complete that picture, we need to add the client application as well as functional dependencies. Because this this application is built using a micro-service atchitecture in which individual micro-services are de-coupled from each other using an event bus (SQS in this case), you'll see there are actually very few direct dependencies and even fewer direct communications lines. For example, any API call from the client (shown in blue in the diagram)goes intothe API gateway, which calls into the identity-aware proxy. That proxy, assuming authentication passes muster, will send a message onto the SQS bus for any POST or PUT request. For GET requests, it will fetch data from the associated DocumentDB, kept up-to-date by the aggregator service. If an entry is not found in the database but is expected to exist, the proxy will send a request onto the SQS bus and return a 503 error (in which case the front-end will retry, giving the services some time to respond and the aggregator to update the database).
+<img src="/assets/2023/02/step2.svg" width="300px" align="right" />Next, we'll add communications links to the diagram. To complete that picture, we need to add the client application as well as functional dependencies. Because this this application is built using a micro-service atchitecture in which individual micro-services are de-coupled from each other using an event bus (SQS in this case), you'll see there are actually very few direct dependencies and even fewer direct communications lines. For example, any API call from the client (shown in blue in the diagram)goes intothe API gateway, which calls into the identity-aware proxy. That proxy, assuming authentication passes muster, will send a message onto the SQS bus for any POST or PUT request. For GET requests, it will fetch data from the associated DocumentDB, kept up-to-date by the aggregator service. If an entry is not found in the database but is expected to exist, the proxy will send a request onto the SQS bus and return a 503 error (in which case the front-end will retry, giving the services some time to respond and the aggregator to update the database).
 
 As shown in the diagram, all lambda services in the application depend on the SQS service, which all services directly communicate with. Because of this, and because of the de-coupled nature of the application, we don't really need to look at other types of dependencies for the lambda functions. They do warrant mentioning though (the application isn't just lambda functions talking to each other over SQS after all) and there is at least one example of each in the diagram. The first is data flow: from the user's perspective, the three components they need to exchange data with are the DNS, CloudFront, and the API Gateway. DNS doesn't really depend on anything outside of itself, but CloudFront depends on the S3 buckets to get its data, and on the certificate management system to implement PKI. For those dependencies, the data flow is actually in the other direction, but I prefer highlighting functional dependencies over highlighting data flow in such cases.
 
+The other flow we need to highlight, and the only dependency that gets two arrows in the diagram, is a control flow dependency: the identity-aware proxy depends on the Cognito identity management system and, at least for some workflows, calls into that service are functionally synchronous (that is: a call into the proxy will fail if a call into Cognito times out or fails). In the type of architecture we're looking at here, such tight cooupling is rare -- as it should be. That is why those dependencies are highlighted with extra arrows.
+
+Now that we have all the dependencies in our diagram, we can proceed to the next step.
+
+## Exclude things too unlikely to fail
+
+We will look at each component in the system design, see how likely it is to fail, and determine whether we should take a closer look at the failure modes. As we're building the service on AWS, this mostly means looking at SLAs. We'll exclude anything from our analysis that has an availability that is significantly higher than our 99.5% objective, or for which a failure would be effectively invisible to our users. Once we're done with this step, we will update our diagram to match. Let's treat the components in order, starting with CloudFront.
+
+<dl>
+    <dt>CloudFront</dt>
+<dd>According to the <a href="https://aws.amazon.com/cloudfront/sla" target="_blank">Amazon CloudFront Service Level Agreement</a> AWS guarantees 99.9% average monthly uptime. CloudFront has more than 400 edge locations that, together, constitute a caching content delivery network.
+
+Because of the way CloudFront is set up, and because we essentially only use it to deliver static content (we're not using the edge lambda feature nor any of the other more advanced features of CloudFront), CloudFront can be excluded from further analysis.</dd>
+
+<dt>S3</dt>
+<dd>According to the <a href="https://aws.amazon.com/s3/sla" target="_blank">Amazon S3 Service Level Agreement</a>, the uptime guarantee offered by AWS depends on the service tier used. Failure of the S3 service can manifest in the following ways:
+
+* A user trying to download the front-end application and hitting a cache miss in CloudFront also hits a failure in the S3 bucket, resulting in a partial or complete failure to load. This is very unlikely, as it requires both a cache miss and a failure, but the effect is visible.
+* A user trying to download an invoice gets an error and has to retry. This is the most likely visible effect as these files will not be cached by CloudFront.
+* The invoicing lambda fails to store a generated invoice PDF in the bucket. This is high-impact and would possibly require human intervention to manually retry the PDF generation and upload.
+
+So, we need to keep S3 in the analysis.</dd>
+<dt>DNS</dt>
+<dd>AWS' Route53 has a 99.99% <a href="https://aws.amazon.com/route53/sla" target="_blank">SLA</a>. Additionally, DNS is a globally-distributed, caching database with redundant masters, so its failure is excluded from further analysis because it is just too unlikely.</dd>
+
+<dt>AWS Certificate Manager (PKI)</dt>
+<dd>CloudFront only needs access to the `us-east-1` instance of the AWS Certificate Manager at configuration, do a deployment of the stadck will fail if the certificate manager is not available, but there is no operational impact in that case. As we're not concerned with deployment failures for this analysis, we can therefore exclude the certificate manager.</dd>
+
+<dt>AWS API Gateway</dt>
+<dd>The AWS API Gateway has an <a href="https://aws.amazon.com/api-gateway/sla" target="_blank">SLA</a> of 99.95%. If it does fail, the front-end (website and application) is still available and can therefore retry calls into the API if such calls time out or result in an HTTP 5xx error, indicating a failure in the back-end. That does require some foresight on our part, so we will need to include it in the analysis, even if the expected availability is very high.</dd>
+
+<dt>Lambda functions</dt>
+
+<dd>The lambda functions are much more likely to fail due to our own code misbehaving than they are due to some failure on Amazon's part, so regardless of the SLA Amazon offers, they need to be included in our analysis.</dd>
+
+<dt>Simple Queue Service</dt>
+
+<dd>The SQS bus is the glue that binds all the functions together. It is essential to the functioning of the application, so any failure of the service needs to be mitigated despite its 99.9% <a href="https://aws.amazon.com/messaging/sla" target="_blank">SLA</a>.</dd>
+
+<dt>DocumentDB</dt>
+<dd>The application stores all of its data in DocumentDB. The service has a <a href="https://aws.amazon.com/documentdb/sla" target="_blank">99.9% SLA</a> for availability, and backup capabilities with restore-from-snapshot functions. It maintains <a href="https://aws.amazon.com/documentdb/faqs" target="_blank">six copies</a> of the data and allows you to control creating more copies and backups.
+
+As we use ot to store all the data, we will include it in our analysis. As we're not talking about disaster recovery right now, we'll leave the backup capability out of scope, though, and concentrate only on availability issues.</dd>
+
+<dt>Cognito</dt>
+<dd><a href="https://aws.amazon.com/cognito/sla" target="_blank">99.9% SLA</a>
+    
+    
+</dd>
+<dt>Third-party payment service</dt>
+<dd></dd>
+</dl>
+
+## Update the diagram
+
+## Determine the failure mode
+
+### S3
+### AWS API Gateway
+### Lambda functions
+#### Identity-aware proxy
+#### Aggregator
+#### Invoicing
+#### Inventory
+#### Profiles
+#### Payment front-end
+### Simple Queue Service
+### DocumentDB
+
+## Determine what the user-visible effect or business impact of failure is
+
+### S3
+### AWS API Gateway
+### Lambda functions
+#### Identity-aware proxy
+#### Aggregator
+#### Invoicing
+#### Inventory
+#### Profiles
+#### Payment front-end
+### Simple Queue Service
+### DocumentDB
+
+## Detecting failure
+
+### S3
+### AWS API Gateway
+### Lambda functions
+#### Identity-aware proxy
+#### Aggregator
+#### Invoicing
+#### Inventory
+#### Profiles
+#### Payment front-end
+### Simple Queue Service
+### DocumentDB
+
+## Mitigating failure
+
+1. within the design
+2. outside of the system
+
+### S3
+### AWS API Gateway
+### Lambda functions
+#### Identity-aware proxy
+#### Aggregator
+#### Invoicing
+#### Inventory
+#### Profiles
+#### Payment front-end
+### Simple Queue Service
+### DocumentDB
+
+## Remediating failure
+
+### S3
+### AWS API Gateway
+### Lambda functions
+#### Identity-aware proxy
+#### Aggregator
+#### Invoicing
+#### Inventory
+#### Profiles
+#### Payment front-end
+### Simple Queue Service
+### DocumentDB
 
 
 <hr/>
