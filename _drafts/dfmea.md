@@ -28,7 +28,7 @@ The steps are:
       1. within the design
       2. outside of the system
    6. determine how the failure can be remediated
-   
+
 The intent is to answer the three questions[^2]:
 
 - How does it fail?
@@ -43,17 +43,17 @@ We want to be methodic in this approach, but we also want to quickly exclude any
 
 The first step is to list all the components. In the case of this particular application, there are actually quite a few:
 
-* **AWS CloudFront** is used as a content delivery network and caching reverse proxy. It has a cache, so most hits on the website will not hit the underlying S3 bucket.
-* An **S3 bucket** is used to store the Jekyll-generated static site and the Angular-generated one-page store front-end as well as the associated static resources (such as images, style sheets, etc.).
-* **AWS' DNS service** is used for the domain and sub-domains.
-* **AWS' PKI** is used to secure the site. This is implemented using AWS Certificate Manager
-* An **API Gateway** is used to serve the store application's API
-* A second **S3 bucket** is used to share confidential files (invoices etc.) with the user.
-* Several **Lambda functions**, all written in Node.js, are used. One of these is an identity-aware proxy, the others are business logic micro-services, and interface micro-services to third-party services.
-* The **Amazon Simple Queue Service** is used to allow the micro-services to communicate with each other.
-* Two services use a **DocumentDB** to store information about transactions etc.
-* **AWS Cognito** is used for identity management.
-* A third-party payment service is used to process payments.
+- **AWS CloudFront** is used as a content delivery network and caching reverse proxy. It has a cache, so most hits on the website will not hit the underlying S3 bucket.
+- An **S3 bucket** is used to store the Jekyll-generated static site and the Angular-generated one-page store front-end as well as the associated static resources (such as images, style sheets, etc.).
+- **AWS' DNS service** is used for the domain and sub-domains.
+- **AWS' PKI** is used to secure the site. This is implemented using AWS Certificate Manager
+- An **API Gateway** is used to serve the store application's API
+- A second **S3 bucket** is used to share confidential files (invoices etc.) with the user.
+- Several **Lambda functions**, all written in Node.js, are used. One of these is an identity-aware proxy, the others are business logic micro-services, and interface micro-services to third-party services.
+- The **Amazon Simple Queue Service** is used to allow the micro-services to communicate with each other.
+- Two services use a **DocumentDB** to store information about transactions etc.
+- **AWS Cognito** is used for identity management.
+- A third-party payment service is used to process payments.
 
 The DevOps components are out of scope for this analysis because if they fail, it prevents the site from being updated for the duration of the failure, but the site is not operationally affected.
 
