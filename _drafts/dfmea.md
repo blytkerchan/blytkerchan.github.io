@@ -61,11 +61,11 @@ Having now identified the components to include in the analysis, we can go on to
 
 ## Creating an architecture diagram
 
-<img src="/assets/2023/02/step1.svg" width="300px" align="right" />We start this step by just placing all the components we just identified on a diagram. It’s usually a good idea to use some type of light-weight software for this, such as <a href="https://draw.io" target="_blank">draw.io</a> or <a href="https://lucidchart.com" target="_blank">Lucid Chart</a>. Things may need to move around a bit, so don't worry about putting things "in the right place" just yet.
+<a href="/assets/2023/02/step1.svg"><img src="/assets/2023/02/step1.svg" width="200px" align="right" /></a>We start this step by just placing all the components we just identified on a diagram. It’s usually a good idea to use some type of light-weight software for this, such as <a href="https://draw.io" target="_blank">draw.io</a> or <a href="https://lucidchart.com" target="_blank">Lucid Chart</a>. Things may need to move around a bit, so don't worry about putting things "in the right place" just yet.
 
-<img src="/assets/2023/02/step2.svg" width="300px" align="right" />Next, we'll add communications links to the diagram. To complete that picture, we need to add the client application as well as functional dependencies. Because this this application is built using a micro-service atchitecture in which individual micro-services are de-coupled from each other using an event bus (SQS in this case), you'll see there are actually very few direct dependencies and even fewer direct communications lines. For example, any API call from the client (shown in blue in the diagram)goes intothe API gateway, which calls into the identity-aware proxy. That proxy, assuming authentication passes muster, will send a message onto the SQS bus for any POST or PUT request. For GET requests, it will fetch data from the associated DocumentDB, kept up-to-date by the aggregator service. If an entry is not found in the database but is expected to exist, the proxy will send a request onto the SQS bus and return a 503 error (in which case the front-end will retry, giving the services some time to respond and the aggregator to update the database).
+Next, we'll add communications links to the diagram. To complete that picture, we need to add the client application as well as functional dependencies. Because this this application is built using a micro-service architecture in which individual micro-services are de-coupled from each other using an event bus (SQS in this case), you'll see there are actually very few direct dependencies and even fewer direct communications lines. For example, any API call from the client (shown in blue in the diagram) goes into the API gateway, which calls into the identity-aware proxy. That proxy, assuming authentication passes muster, will send a message onto the SQS bus for any POST or PUT request. For GET requests, it will fetch data from the associated DocumentDB, kept up-to-date by the aggregator service. If an entry is not found in the database but is expected to exist, the proxy will send a request onto the SQS bus and return a 503 error (in which case the front-end will retry, giving the services some time to respond and the aggregator to update the database).
 
-As shown in the diagram, all lambda services in the application depend on the SQS service, which all services directly communicate with. Because of this, and because of the de-coupled nature of the application, we don't really need to look at other types of dependencies for the lambda functions. They do warrant mentioning though (the application isn't just lambda functions talking to each other over SQS after all) and there is at least one example of each in the diagram. The first is data flow: from the user's perspective, the three components they need to exchange data with are the DNS, CloudFront, and the API Gateway. DNS doesn't really depend on anything outside of itself, but CloudFront depends on the S3 buckets to get its data, and on the certificate management system to implement PKI. For those dependencies, the data flow is actually in the other direction, but I prefer highlighting functional dependencies over highlighting data flow in such cases.
+<a href="/assets/2023/02/step2.svg"><img src="/assets/2023/02/step2.svg" width="200px" align="right" /></a>As shown in the diagram, all lambda services in the application depend on the SQS service, which all services directly communicate with. Because of this, and because of the de-coupled nature of the application, we don't really need to look at other types of dependencies for the lambda functions. They do warrant mentioning though (the application isn't just lambda functions talking to each other over SQS after all) and there is at least one example of each in the diagram. The first is data flow: from the user's perspective, the three components they need to exchange data with are the DNS, CloudFront, and the API Gateway. DNS doesn't really depend on anything outside of itself, but CloudFront depends on the S3 buckets to get its data, and on the certificate management system to implement PKI. For those dependencies, the data flow is actually in the other direction, but I prefer highlighting functional dependencies over highlighting data flow in such cases.
 
 The other flow we need to highlight, and the only dependency that gets two arrows in the diagram, is a control flow dependency: the identity-aware proxy depends on the Cognito identity management system and, at least for some workflows, calls into that service are functionally synchronous (that is: a call into the proxy will fail if a call into Cognito times out or fails). In the type of architecture we're looking at here, such tight cooupling is rare -- as it should be. That is why those dependencies are highlighted with extra arrows.
 
@@ -75,6 +75,18 @@ Now that we have all the dependencies in our diagram, we can proceed to the next
 
 We will look at each component in the system design, see how likely it is to fail, and determine whether we should take a closer look at the failure modes. As we're building the service on AWS, this mostly means looking at SLAs. We'll exclude anything from our analysis that has an availability that is significantly higher than our 99.5% objective, or for which a failure would be effectively invisible to our users. Once we're done with this step, we will update our diagram to match. Let's treat the components in order, starting with CloudFront.
 
+<style type="text/css">
+  dt {
+    font-weight: bold;
+    //display: inline;
+  }
+  dd {
+    //display: inline;
+    padding-left: 3em;
+    //text-indent: 3em;
+  }
+</style>
+
 <dl>
     <dt>CloudFront</dt>
 <dd>According to the <a href="https://aws.amazon.com/cloudfront/sla" target="_blank">Amazon CloudFront Service Level Agreement</a> AWS guarantees 99.9% average monthly uptime. CloudFront has more than 400 edge locations that, together, constitute a caching content delivery network.
@@ -83,11 +95,11 @@ Because of the way CloudFront is set up, and because we essentially only use it 
 
 <dt>S3</dt>
 <dd>According to the <a href="https://aws.amazon.com/s3/sla" target="_blank">Amazon S3 Service Level Agreement</a>, the uptime guarantee offered by AWS depends on the service tier used. Failure of the S3 service can manifest in the following ways:
-
-* A user trying to download the front-end application and hitting a cache miss in CloudFront also hits a failure in the S3 bucket, resulting in a partial or complete failure to load. This is very unlikely, as it requires both a cache miss and a failure, but the effect is visible.
-* A user trying to download an invoice gets an error and has to retry. This is the most likely visible effect as these files will not be cached by CloudFront.
-* The invoicing lambda fails to store a generated invoice PDF in the bucket. This is high-impact and would possibly require human intervention to manually retry the PDF generation and upload.
-
+<ul>
+<li>A user trying to download the front-end application and hitting a cache miss in CloudFront also hits a failure in the S3 bucket, resulting in a partial or complete failure to load. This is very unlikely, as it requires both a cache miss and a failure, but the effect is visible.</li>
+<li>A user trying to download an invoice gets an error and has to retry. This is the most likely visible effect as these files will not be cached by CloudFront.</li>
+<li>The invoicing lambda fails to store a generated invoice PDF in the bucket. This is high-impact and would possibly require human intervention to manually retry the PDF generation and upload.</li>
+</ul>
 So, we need to keep S3 in the analysis.</dd>
 <dt>DNS</dt>
 <dd>AWS' Route53 has a 99.99% <a href="https://aws.amazon.com/route53/sla" target="_blank">SLA</a>. Additionally, DNS is a globally-distributed, caching database with redundant masters, so its failure is excluded from further analysis because it is just too unlikely.</dd>
