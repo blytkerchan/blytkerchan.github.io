@@ -105,7 +105,7 @@ So, we need to keep S3 in the analysis.</dd>
 <dd>AWS' Route53 has a 99.99% <a href="https://aws.amazon.com/route53/sla" target="_blank">SLA</a>. Additionally, DNS is a globally-distributed, caching database with redundant masters, so its failure is excluded from further analysis because it is just too unlikely.</dd>
 
 <dt>AWS Certificate Manager (PKI)</dt>
-<dd>CloudFront only needs access to the `us-east-1` instance of the AWS Certificate Manager at configuration, do a deployment of the stadck will fail if the certificate manager is not available, but there is no operational impact in that case. As we're not concerned with deployment failures for this analysis, we can therefore exclude the certificate manager.</dd>
+<dd>CloudFront only needs access to the `us-east-1` instance of the AWS Certificate Manager at configuration, do a deployment of the stack will fail if the certificate manager is not available, but there is no operational impact in that case. As we're not concerned with deployment failures for this analysis, we can therefore exclude the certificate manager.</dd>
 
 <dt>AWS API Gateway</dt>
 <dd>The AWS API Gateway has an <a href="https://aws.amazon.com/api-gateway/sla" target="_blank">SLA</a> of 99.95%. If it does fail, the front-end (website and application) is still available and can therefore retry calls into the API if such calls time out or result in an HTTP 5xx error, indicating a failure in the back-end. That does require some foresight on our part, so we will need to include it in the analysis, even if the expected availability is very high.</dd>
@@ -121,20 +121,45 @@ So, we need to keep S3 in the analysis.</dd>
 <dt>DocumentDB</dt>
 <dd>The application stores all of its data in DocumentDB. The service has a <a href="https://aws.amazon.com/documentdb/sla" target="_blank">99.9% SLA</a> for availability, and backup capabilities with restore-from-snapshot functions. It maintains <a href="https://aws.amazon.com/documentdb/faqs" target="_blank">six copies</a> of the data and allows you to control creating more copies and backups.
 
-As we use ot to store all the data, we will include it in our analysis. As we're not talking about disaster recovery right now, we'll leave the backup capability out of scope, though, and concentrate only on availability issues.</dd>
+As we use to to store all the data, we will include it in our analysis. As we're not talking about disaster recovery right now, we'll leave the backup capability out of scope, though, and concentrate only on availability issues.</dd>
 
 <dt>Cognito</dt>
-<dd><a href="https://aws.amazon.com/cognito/sla" target="_blank">99.9% SLA</a>
-    
-    
-</dd>
+<dd>Cognito is used to for Identity and Access Management for the application and is used whenever a user logs in. It has a <a href="https://aws.amazon.com/cognito/sla" target="_blank">99.9% SLA</a>. As it is on the critical path for anything that requires authentication (which is basically everything), we will incude it in our analysis.</dd>
+
 <dt>Third-party payment service</dt>
-<dd></dd>
+<dd>In this hypothetical application, let's assume we use a third-party payment service that provides a 99.5% SLA. We will include it in our DFMEA because payment is critical to the business.</dd>
 </dl>
 
-## Update the diagram
+### Update the diagram -- concluding the first step
+<a href="/assets/2023/02/diagram.svg"><img src="/assets/2023/02/diagram.svg" width="200px" align="right" /></a>With this in mind, we can now update the diagram and indicate what is, and what isn't, included in our analysis. The nice thing about this type of diagram is that you can use the same diagram, and much of the same approach, for things like thread modeling and architecture review as well. We obviously won't do that right now, but it's good to keep in minde that the diagram we just created will be an asset for that type of analysis.
+
+What we've just done is set the *service level expectations* for each of the services we depend on. We can also represent this as a table (usually a spreadsheet) and show what we intend to exclude from further analysis.
+
+| Component | Group | Type | Description | SLE | Exclude |
+| --- | :-: | --- | --- | --: | :-: |
+| CloudFront | infra | CDN | CDN used by the application front-end, and for SAS URIs | 99.9% | x |
+| AWS API Gateway | infra | API Gateway | API Gateway used for API management | 99.95% | |
+| Identity-aware proxy | compute | Lambda | Authenticating entry-point and policy enforcement point | 99.5% | |
+| Aggregator | compute | Lambda | Micro-service for front-end optimization | 99.5% | |
+| Invoicing | compute | Lambda | Micro-service for invoice generation | 99.5% | |
+| Inventory | compute | Lambda | Micro-service for inventory management | 99.5% | |
+| Profiles | compute | Lambda | Micro-service for customer management | 99.5% | |
+| Payment | compute | Lambda | Micro-service front-end to third-party payment service | 99.5% | |
+| Simple Queue Service | infra | Bus | Bus used by micro-services to communicate with each other | 99.9% | |
+| Data cache | data | DocumentDB | Cache used by aggregator and front-end for optimization | 99.9% | |
+| Database | data | DocumentDB | Database used to store all business data | 99.9% | |
+| Cognito | infra | IAM | Identity management service | 99.9% | |
+| Payment service | N/A | Service | Third-party service used to process credit card payments | 99.5% | |
+| Front-end bucket | data | S3 | Data store used to host the front-end | 99.9% | |
+| Invoice bucket | data | S3 | Data store used to host invoice PDFs | 99.9% | |
+| Route53 | infra | DNS | DNS service | 99.99% | x |
+| Certificate Manager | infra | PKI | Certificate management service | 99.9% | x |
+
+Our next step in the analysis is to determine the failure mode for the services that remain in-scope for the analysis.
 
 ## Determine the failure mode
+
+
 
 ### S3
 ### AWS API Gateway
@@ -147,6 +172,8 @@ As we use ot to store all the data, we will include it in our analysis. As we're
 #### Payment front-end
 ### Simple Queue Service
 ### DocumentDB
+### Cognito
+### Third-party payment service
 
 ## Determine what the user-visible effect or business impact of failure is
 
@@ -161,6 +188,8 @@ As we use ot to store all the data, we will include it in our analysis. As we're
 #### Payment front-end
 ### Simple Queue Service
 ### DocumentDB
+### Cognito
+### Third-party payment service
 
 ## Detecting failure
 
@@ -175,6 +204,8 @@ As we use ot to store all the data, we will include it in our analysis. As we're
 #### Payment front-end
 ### Simple Queue Service
 ### DocumentDB
+### Cognito
+### Third-party payment service
 
 ## Mitigating failure
 
@@ -192,6 +223,8 @@ As we use ot to store all the data, we will include it in our analysis. As we're
 #### Payment front-end
 ### Simple Queue Service
 ### DocumentDB
+### Cognito
+### Third-party payment service
 
 ## Remediating failure
 
@@ -206,6 +239,8 @@ As we use ot to store all the data, we will include it in our analysis. As we're
 #### Payment front-end
 ### Simple Queue Service
 ### DocumentDB
+### Cognito
+### Third-party payment service
 
 
 <hr/>
