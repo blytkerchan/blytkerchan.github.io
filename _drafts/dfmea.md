@@ -21,13 +21,14 @@ The steps are:
 2. create a diagram of the components and how they relate to each other
 3. for each component and communications link, determine what failure looks like:
    1. determine how likely it is to fail, and exclude anything that is too unlikely to be worth our time
-   2. determine what the failure mode is
-   3. determine what the user-visible effect or business impact of failure is
-   4. determine how that failure can be detected
-   5. determine how the failure can be mitigated
+   2. determine which remaining services are on the critical path for any service that has availability requirements, and exclude anything that isn't
+   3. determine what the failure mode is
+   4. determine what the user-visible effect or business impact of failure is
+   5. determine how that failure can be detected
+   6. determine how the failure can be mitigated
       1. within the design
       2. outside of the system
-   6. determine how the failure can be remediated
+   7. determine how the failure can be remediated
 
 The intent is to answer the three questions[^2]:
 
@@ -156,6 +157,26 @@ What we've just done is set the *service level expectations* for each of the ser
 | Certificate Manager | infra | PKI | Certificate management service | 99.9% | x |
 
 Our next step in the analysis is to determine the failure mode for the services that remain in-scope for the analysis.
+
+## Validate critical paths
+
+| Component | On critical path for purchase | On critical path for invoicing | On critical path for inventory | On critical path for payment | Critical |
+| --- | :-: | :-: | :-: | :-: | :-: |
+| AWS API Gateway | x | x | x | x | TRUE |
+| Identity-aware proxy | x |  |  | x | TRUE |
+| Aggregator | x |  |  |  | TRUE |
+| Invoicing |  | x |  |  | TRUE |
+| Inventory |  |  | x |  | TRUE |
+| Profiles | x | x |  | x | TRUE |
+| Payment |  |  |  | x | TRUE |
+| Simple Queue Service | x | x | x | x | TRUE |
+| Data cache | x |  |  |  | TRUE |
+| Database | x | x | x | x | TRUE |
+| Cognito | x |  |  | x | TRUE |
+| Payment service |  |  |  | x | TRUE |
+| Front-end bucket |  |  |  |  | FALSE |
+| Invoice bucket |  | x |  |  | TRUE | 
+
 
 ## Determine the failure mode
 
