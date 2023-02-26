@@ -136,46 +136,67 @@ As we use to to store all the data, we will include it in our analysis. As we're
 
 What we've just done is set the *service level expectations* for each of the services we depend on. We can also represent this as a table (usually a spreadsheet) and show what we intend to exclude from further analysis.
 
-| Component | Group | Type | Description | SLE | Exclude |
-| --- | :-: | --- | --- | --: | :-: |
-| CloudFront | infra | CDN | CDN used by the application front-end, and for SAS URIs | 99.9% | x |
-| AWS API Gateway | infra | API Gateway | API Gateway used for API management | 99.95% | |
-| Identity-aware proxy | compute | Lambda | Authenticating entry-point and policy enforcement point | 99.5% | |
-| Aggregator | compute | Lambda | Micro-service for front-end optimization | 99.5% | |
-| Invoicing | compute | Lambda | Micro-service for invoice generation | 99.5% | |
-| Inventory | compute | Lambda | Micro-service for inventory management | 99.5% | |
-| Profiles | compute | Lambda | Micro-service for customer management | 99.5% | |
-| Payment | compute | Lambda | Micro-service front-end to third-party payment service | 99.5% | |
-| Simple Queue Service | infra | Bus | Bus used by micro-services to communicate with each other | 99.9% | |
-| Data cache | data | DocumentDB | Cache used by aggregator and front-end for optimization | 99.9% | |
-| Database | data | DocumentDB | Database used to store all business data | 99.9% | |
-| Cognito | infra | IAM | Identity management service | 99.9% | |
-| Payment service | N/A | Service | Third-party service used to process credit card payments | 99.5% | |
-| Front-end bucket | data | S3 | Data store used to host the front-end | 99.9% | |
-| Invoice bucket | data | S3 | Data store used to host invoice PDFs | 99.9% | |
-| Route53 | infra | DNS | DNS service | 99.99% | x |
-| Certificate Manager | infra | PKI | Certificate management service | 99.9% | x |
-
-Our next step in the analysis is to determine the failure mode for the services that remain in-scope for the analysis.
+| Component            | Group   | Type        | Description                                               | SLE    | Exclude |
+| ---                  | :-:     | ---         | ---                                                       | --:    | :-:     |
+| CloudFront           | infra   | CDN         | CDN used by the application front-end, and for SAS URIs   | 99.9%  | x       |
+| AWS API Gateway      | infra   | API Gateway | API Gateway used for API management                       | 99.95% |         |
+| Identity-aware proxy | compute | Lambda      | Authenticating entry-point and policy enforcement point   | 99.5%  |         |
+| Aggregator           | compute | Lambda      | Micro-service for front-end optimization                  | 99.5%  |         |
+| Invoicing            | compute | Lambda      | Micro-service for invoice generation                      | 99.5%  |         |
+| Inventory            | compute | Lambda      | Micro-service for inventory management                    | 99.5%  |         |
+| Profiles             | compute | Lambda      | Micro-service for customer management                     | 99.5%  |         |
+| Payment              | compute | Lambda      | Micro-service front-end to third-party payment service    | 99.5%  |         |
+| Simple Queue Service | infra   | Bus         | Bus used by micro-services to communicate with each other | 99.9%  |         |
+| Data cache           | data    | DocumentDB  | Cache used by aggregator and front-end for optimization   | 99.9%  |         |
+| Database             | data    | DocumentDB  | Database used to store all business data                  | 99.9%  |         |
+| Cognito              | infra   | IAM         | Identity management service                               | 99.9%  |         |
+| Payment service      | N/A     | Service     | Third-party service used to process credit card payments  | 99.5%  |         |
+| Front-end bucket     | data    | S3          | Data store used to host the front-end                     | 99.9%  |         |
+| Invoice bucket       | data    | S3          | Data store used to host invoice PDFs                      | 99.9%  |         |
+| Route53              | infra   | DNS         | DNS service                                               | 99.99% | x       |
+| Certificate Manager  | infra   | PKI         | Certificate management service                            | 99.9%  | x       |
 
 ## Validate critical paths
 
+Our next step in the analysis is to determine which of the remaining components are on the critical path of a service that has high availability requirements. In our example, there are four services that we want high availability for: purchasing flowers, invoicing those flowers, updating the inventory, and the payment processing service for flowers purchases.
+
+<dl>
+<dt>AWS API Gateway</dt><dd><p>The API gateway is used, from a user's perspective, to request a purchase, and to authorize a payment. In both cases, the user uses the front-end, which calls the API to request the purchase and to authorize the payment. The user is not directly involved in inventory management (which will restrict the flowers available for purchase and update the inventory when a purchase is requested, the latter being a side-effect of the request) or invoicing (which is a side-effect of the payment request, but does not have direct user interaction through the API).</p>
+
+<p>In any case, the API Gateway is on a critical path and therefore has to remain in-scope for the analysis.</p></dd>
+<dt>Identity-aware proxy</dt><dd>The identity-aware proxy gives the user access to everything behind the APIs, and is therefore on the same critical paths as the API gateway itself.</dd>
+<dt>Aggregator</dt><dd>The aggregator is only used as an optimization to prepare the presentation shown by the front-end application. It never interacts directly with the user nor is it used by any of our four services. It can be excluded from further analysis.</dd>
+<dt>Invoicing</dt><dd>The invoicing service receives a purchase request and an authorization, both of which will contain enough information to generate an invoice PDF and a message sent back to SQS. This is essentially what our customers want from the invoicing service, which places this micro-service on the critical path for that service.</dd>
+<dt>Inventory</dt><dd>&nbsp;</dd>
+<dt>Profiles</dt><dd>&nbsp;</dd>
+<dt>Payment</dt><dd>&nbsp;</dd>
+<dt>Simple Queue Service</dt><dd>&nbsp;</dd>
+<dt>Data cache</dt><dd>&nbsp;</dd>
+<dt>Database</dt><dd>&nbsp;</dd>
+<dt>Cognito</dt><dd>&nbsp;</dd>
+<dt>Payment service</dt><dd>&nbsp;</dd>
+<dt>Front-end bucket</dt><dd>&nbsp;</dd>
+<dt>Invoice bucket</dt><dd>&nbsp;</dd>
+</dl>
+
+Note that we didn't put retrieving the results of the aggregator service through the API (including the list of available invoices and the list of available flowers) on the critical path. This is debatable, 
+
 | Component | On critical path for purchase | On critical path for invoicing | On critical path for inventory | On critical path for payment | Critical |
-| --- | :-: | :-: | :-: | :-: | :-: |
-| AWS API Gateway | x | x | x | x | TRUE |
-| Identity-aware proxy | x |  |  | x | TRUE |
-| Aggregator | x |  |  |  | TRUE |
-| Invoicing |  | x |  |  | TRUE |
-| Inventory |  |  | x |  | TRUE |
-| Profiles | x | x |  | x | TRUE |
-| Payment |  |  |  | x | TRUE |
-| Simple Queue Service | x | x | x | x | TRUE |
-| Data cache | x |  |  |  | TRUE |
-| Database | x | x | x | x | TRUE |
-| Cognito | x |  |  | x | TRUE |
-| Payment service |  |  |  | x | TRUE |
-| Front-end bucket |  |  |  |  | FALSE |
-| Invoice bucket |  | x |  |  | TRUE | 
+| ---                  | :-: | :-: | :-: | :-: | :-:   |
+| AWS API Gateway      | x   |     |     | x   | TRUE  |
+| Identity-aware proxy | x   |     |     | x   | TRUE  |
+| Aggregator           |     |     |     |     | FALSE |
+| Invoicing            |     | x   |     |     | TRUE  |
+| Inventory            |     |     | x   |     | TRUE  |
+| Profiles             | x   | x   |     | x   | TRUE  |
+| Payment              |     |     |     | x   | TRUE  |
+| Simple Queue Service | x   | x   | x   | x   | TRUE  |
+| Data cache           | x   |     |     |     | TRUE  |
+| Database             | x   | x   | x   | x   | TRUE  |
+| Cognito              | x   |     |     | x   | TRUE  |
+| Payment service      |     |     |     | x   | TRUE  |
+| Front-end bucket     |     |     |     |     | FALSE |
+| Invoice bucket       |     | x   |     |     | TRUE  | 
 
 
 ## Determine the failure mode
