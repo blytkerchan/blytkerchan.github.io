@@ -38,6 +38,13 @@
       "type": "node-terminal",
       "cwd": "${workspaceFolder}/test-server",
       "command": "npm run insert-user me@example.com VeryComplexPassword"
+    },
+    {
+      "name": "Front-end: run integration tests",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-frontend",
+      "command": "npm run test"
     }
   ]
 }

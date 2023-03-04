@@ -1,0 +1,23 @@
+{
+  "name": "test-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint -f compact **/*.js",
+    "test": "PATH=$PATH:./chromedriver/stable/ cucumber-js"
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.10.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.35.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "selenium-webdriver": "^4.7.1",
+    "tmp": "^0.2.1"
+  }
+}
