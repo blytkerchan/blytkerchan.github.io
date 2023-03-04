@@ -7,8 +7,8 @@ Feature: Is it Friday yet?
     Then I should be told "<answer>"
     Then we Google webdriver
 
-  Examples:
-    | day            | answer |
-    | Friday         | TGIF   |
-    | Sunday         | Nope   |
-    | anything else! | Nope   |
+    Examples:
+      | day            | answer |
+      | Friday         | TGIF   |
+      | Sunday         | Nope   |
+      | anything else! | Nope   |

@@ -4,7 +4,7 @@ function traceAllRequests({ env, config }) {
     res.status = (code) => {
       config.telemetry.trace(req.context.traceId, `Request ${req.context.traceId} return status ${code}`, "Info");
       return res.oldStatus(code);
-    }
+    };
 
     config.telemetry.trace(
       req.context.traceId,

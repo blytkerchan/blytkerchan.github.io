@@ -12,7 +12,7 @@ function Credentials({ env }) {
         required: true,
       },
       hash: { type: String, required: true },
-      uid: { type: String, required: true, unique: true }
+      uid: { type: String, required: true, unique: true },
     },
     { timestamps: true, strict: true, strictQuery: true }
   );

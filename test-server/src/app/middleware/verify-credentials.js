@@ -3,19 +3,11 @@ function verifyCredentials({ log, preprocessPassword, bcrypt }) {
     const credentials = req.body;
     const userRecord = req.context.record;
     try {
-      const result = await bcrypt.compare(
-        preprocessPassword(credentials.password),
-        userRecord.hash
-      );
+      const result = await bcrypt.compare(preprocessPassword(credentials.password), userRecord.hash);
       if (result) {
         next();
       } else {
-        log.trace(
-          req.context.traceId,
-          "Authentication failure",
-          "Error",
-          Date.now()
-        );
+        log.trace(req.context.traceId, "Authentication failure", "Error", Date.now());
         const authError = {
           name: "AuthenticationError",
           message: "Authentication failed",
@@ -24,13 +16,7 @@ function verifyCredentials({ log, preprocessPassword, bcrypt }) {
         next(authError);
       }
     } catch (err) {
-      log.trace(
-        req.context.traceId,
-        "Authentication failure",
-        "Error",
-        Date.now(),
-        err
-      );
+      log.trace(req.context.traceId, "Authentication failure", "Error", Date.now(), err);
       const authError = {
         name: "InternalAuthenticationError",
         message: "Authentication failed",

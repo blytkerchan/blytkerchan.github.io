@@ -5,7 +5,7 @@ const getCredentialsQueries = require("../queries/credentials");
 function createQueries({ Credentials, User }) {
   return {
     getCredentials: getCredentialsQueries({ Credentials }).find,
-    insertCredentials: getCredentialsQueries({ Credentials }).insert
+    insertCredentials: getCredentialsQueries({ Credentials }).insert,
   };
 }
 

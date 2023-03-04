@@ -13,5 +13,4 @@ async function createMongoClientAsync(databaseConnection) {
   };
 }
 
-module.exports = (databaseConnection) =>
-  depromisify(createMongoClientAsync(databaseConnection));
+module.exports = (databaseConnection) => depromisify(createMongoClientAsync(databaseConnection));

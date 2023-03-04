@@ -13,18 +13,13 @@ function promisifyDatabase(db) {
     },
     update: (query, update, options) => {
       return new Promise((resolve, reject) => {
-        db.update(
-          query,
-          update,
-          options,
-          (err, numAffected, affectedDocuments, upsert) => {
-            if (err) {
-              reject(err);
-            } else {
-              resolve({ numAffected, affectedDocuments, upsert });
-            }
+        db.update(query, update, options, (err, numAffected, affectedDocuments, upsert) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve({ numAffected, affectedDocuments, upsert });
           }
-        );
+        });
       });
     },
     find: (query) => {

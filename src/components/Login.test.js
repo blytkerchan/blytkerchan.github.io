@@ -332,14 +332,14 @@ describe("Login component", () => {
     const loginUserSpy = jest.fn(loginUser);
     render(
       <StaticRouter>
-      <Login
-        t={(key) => `[${key}](/key)`}
-        setToken={setTokenSpy}
-        loginUser={loginUserSpy}
-        useError={() => {
-          return { setError: setErrorSpy };
-        }}
-      />
+        <Login
+          t={(key) => `[${key}](/key)`}
+          setToken={setTokenSpy}
+          loginUser={loginUserSpy}
+          useError={() => {
+            return { setError: setErrorSpy };
+          }}
+        />
       </StaticRouter>
     );
     const markdown = await screen.findByTestId("theMarkdown");

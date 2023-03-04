@@ -10,7 +10,7 @@ const getById = queryByAttribute.bind(null, "id");
 const Layout = (props) => {
   return (
     <>
-      <Header mainMenu={props.mainMenu} userMenu={props.userMenu} t={key => key} />
+      <Header mainMenu={props.mainMenu} userMenu={props.userMenu} t={(key) => key} />
       <Outlet />
     </>
   );

@@ -65,4 +65,3 @@ components:
       type: http
       scheme: bearer
       description: The token returned by the `login` API
-    

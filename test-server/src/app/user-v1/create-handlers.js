@@ -11,13 +11,7 @@ function saveUserRecord({ env, log }) {
       await req.context.context.save();
       next();
     } catch (err) {
-      log.trace(
-        req.context.traceId,
-        "Error while saving user and credentials",
-        "Error",
-        Date.now(),
-        err
-      );
+      log.trace(req.context.traceId, "Error while saving user and credentials", "Error", Date.now(), err);
       res.status(500).send(
         JSON.stringify({
           name: "InternalError",
@@ -28,15 +22,7 @@ function saveUserRecord({ env, log }) {
   };
 }
 
-function createHandlers({
-  env,
-  queries,
-  log,
-  User,
-  Credentials,
-  validatePassword,
-  preprocessPassword,
-}) {
+function createHandlers({ env, queries, log, User, Credentials, validatePassword, preprocessPassword }) {
   return {
     postRegisterUser: [
       bodyParser.json(),

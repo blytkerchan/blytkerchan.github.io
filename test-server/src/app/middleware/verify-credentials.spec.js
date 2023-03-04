@@ -74,10 +74,7 @@ describe("verifyCredentials", () => {
     chai.expect(next).to.have.been.called();
   });
   it("succeeds with the right password", async () => {
-    req.context.record.hash = await bcrypt.hash(
-      preprocessPassword(req.body.password),
-      10
-    );
+    req.context.record.hash = await bcrypt.hash(preprocessPassword(req.body.password), 10);
 
     const preprocessPasswordSpy = chai.spy(preprocessPassword);
 

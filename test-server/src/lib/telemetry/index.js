@@ -9,7 +9,7 @@ function createTelemetry({ env, Trace }) {
         severity,
         timestamp,
         data: `[${data.reduce((acc, curr) => {
-          return acc + inspect(curr) + ","
+          return acc + inspect(curr) + ",";
         }, "")}]`,
       });
       await trace.save();

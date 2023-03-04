@@ -13,19 +13,11 @@ function validateCredentials({ env, queries, log, requireExists }) {
         if (record) {
           req.context.record = record;
           next();
-        } else if (
-          env.rootUser.username.toLowerCase() ===
-          req.body.username.toLowerCase()
-        ) {
+        } else if (env.rootUser.username.toLowerCase() === req.body.username.toLowerCase()) {
           req.context.record = env.rootUser;
           next();
         } else if (requireExists) {
-          log.trace(
-            req.context.traceId,
-            "Authentication failure",
-            "Warning",
-            Date.now()
-          );
+          log.trace(req.context.traceId, "Authentication failure", "Warning", Date.now());
           const err = {
             name: "AuthenticationError",
             message: "Authentication failed",
@@ -36,13 +28,7 @@ function validateCredentials({ env, queries, log, requireExists }) {
           next();
         }
       } catch (err) {
-        log.trace(
-          req.context.traceId,
-          "Internal error during authentication",
-          "Error",
-          Date.now(),
-          err
-        );
+        log.trace(req.context.traceId, "Internal error during authentication", "Error", Date.now(), err);
         res.status(500).send(
           JSON.stringify({
             name: "InternalAuthenticationError",
@@ -52,12 +38,7 @@ function validateCredentials({ env, queries, log, requireExists }) {
         next(err);
       }
     } else {
-      log.trace(
-        req.context.traceId,
-        "Authentication failure",
-        "Warning",
-        Date.now()
-      );
+      log.trace(req.context.traceId, "Authentication failure", "Warning", Date.now());
       const err = {
         name: "AuthenticationError",
         message: "Authentication failed",

@@ -47,19 +47,21 @@ export const Login = ({ setToken, t, loginUser, env, useError }) => {
       <Modal show={show} centered style={{ cursor: cursor }}>
         <form onSubmit={handleSubmit}>
           <Modal.Header closeButton>
-            <Modal.Title><span data-testid="theLoginForm">{t("Log in")}</span></Modal.Title>
+            <Modal.Title>
+              <span data-testid="theLoginForm">{t("Log in")}</span>
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <span data-testid="theMarkdown">
-            <Markdown
-              components={{
-                a: (props) => <Link to={props.href}>{props.children}</Link>,
-              }}
-            >
-              {t("common:boilerplate.login-agreement", {
-                applicationName: t("app:title"),
-              })}
-            </Markdown>
+            <span data-testid="theMarkdown">
+              <Markdown
+                components={{
+                  a: (props) => <Link to={props.href}>{props.children}</Link>,
+                }}
+              >
+                {t("common:boilerplate.login-agreement", {
+                  applicationName: t("app:title"),
+                })}
+              </Markdown>
             </span>
             <fieldset>
               <div className="mb-3">
@@ -124,4 +126,4 @@ Login.propTypes = {
   setToken: PropTypes.func.isRequired,
 };
 
-export default withTranslation()(withLoginUser(Login, {env, useError}));
+export default withTranslation()(withLoginUser(Login, { env, useError }));

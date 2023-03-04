@@ -12,7 +12,7 @@ describe("Toaster component", () => {
       error.show = false;
     }
     function useError() {
-      return {error, clearError};
+      return { error, clearError };
     }
 
     render(<Toaster useError={useError} />);
@@ -32,7 +32,7 @@ describe("Toaster component", () => {
       error.show = false;
     }
     function useError() {
-      return {error, clearError};
+      return { error, clearError };
     }
     render(<Toaster useError={useError} />);
     const titleSpan = screen.queryByTestId("toasterTitle");

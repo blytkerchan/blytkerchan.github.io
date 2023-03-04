@@ -16,9 +16,13 @@ export const Toaster = ({ useError }) => {
         autohide
       >
         <Toast.Header>
-          <span data-testid="toasterTitle" style={{ marginRight: "auto", fontWeight: "bold" }}>{error.title}</span>
+          <span data-testid="toasterTitle" style={{ marginRight: "auto", fontWeight: "bold" }}>
+            {error.title}
+          </span>
         </Toast.Header>
-        <Toast.Body><span data-testid="toasterMessage">{error.message}</span></Toast.Body>
+        <Toast.Body>
+          <span data-testid="toasterMessage">{error.message}</span>
+        </Toast.Body>
       </Toast>
     </>
   );
