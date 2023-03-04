@@ -28,6 +28,7 @@ function main() {
       })
       .then(() => {
         console.log("done");
+        process.exit(0);
       })
   );
 }

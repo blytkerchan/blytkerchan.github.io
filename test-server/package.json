@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "lint": "eslint -f compact src/**/*.js",
-    "insert-user": "nodemon src/bin/insert-user.js",
+    "insert-user": "node src/bin/insert-user.js",
     "start-dev-server": "nodemon src/bin/start-server.js",
     "test": "nyc mocha 'src/**/*.spec.js' --exit"
   },
