@@ -233,15 +233,16 @@ Aside from logging, there are other tools you can employ to make sure your appli
 
 Regardless of how failures are detected (application logs, resource logs, synthetic transactions, availability probes, etc.), there are two things you will want to monitor: you'll want to be sure that you are notified if (and only if) human intervention is needed, and you'll want to be able to see, at a glance, whether your system looks healthy. If you see a trend of certain types of failures that may lead to your online shop going down, you'll want to know about it before any significant events (Valentine's day, Christmas, etc.) occur.
 
-## Mitigating failure
+## Mitigation, remediation, restoration
 
+Once you've figured out how things can fail and how you know they failed, you need to decide what to do when you know they failed. There are three categories of things you can do: you can limit the fall-out, accepting that things can and will fail and actively limiting the impact of such failures; you can try to make sure it never happens again, completely eliminating the threat of that particular failure mode; or you can accept that the failures will happen with the impact they have, and fix whatever impact that is when it happens. These three categories are *mitigation*, *remediation*, and *restoration*.
 
+When you're looking for mitigation strategies, 
 
 1. within the design
 2. outside of the system
 
 
-## Remediating failure
 
 ### S3
 ### AWS API Gateway
