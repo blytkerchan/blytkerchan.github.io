@@ -5,7 +5,7 @@ excerpt: How to "easily" identify failure modes, and how to address them
 title: DFMEA- Design Failure Mode and Effect Analysis
 ---
 
-<img src="/assets/2023/02/cat.jpg" width="300px" align="right" alt="I wrote this by hand before typing it up, and drew a cat. This is the cat." />Design Failure Mode and Effect Analysis (DFMEA) is a software engineering technique that can help validate design decisions or improve upon them. It takes your existing design and puts eaach component and link under a magnifying glass, running it through a what-if scenario. In this post, I will walk through a DFMEA of a fictional website and on-line store for a fictional florist. If you read my other blog, [Applied Paranoia](https://applied-paranoia.com) you may already be familiar with that application.
+<img src="/assets/2023/02/cat.jpg" width="300px" align="right" alt="I wrote this by hand before typing it up, and drew a cat. This is the cat." />Design Failure Mode and Effect Analysis (DFMEA) is a software engineering technique that can help validate design decisions or improve upon them. It takes your existing design and puts each component and link under a magnifying glass, running it through a what-if scenario. In this post, I will walk through a DFMEA of a fictional website and on-line store for a fictional florist. If you read my other blog, [Applied Paranoia](https://applied-paranoia.com) you may already be familiar with that application.
 
 The Crassula application uses a static website generated with Jekyll, and an Angular app embedded in that website for the purchasing workflow. The static front-end and angular app are served out of an S3 bucket behind a CloudFront proxy, the back-end for the store uses some serverless functions (lambdas), and S3 bucket to download invoices from, and a NoSQL database. The whole thing is tied together using AWS' Simple Queue Service and deployed using CloudFormation.
 
@@ -201,72 +201,45 @@ Note that we didn't put retrieving the results of the aggregator service through
 
 ## Determine the failure mode
 
+The next step in the analysis is to determine the failure mode of each identified component. For SaaS, PaaS, and IaaS components, this requires some analysis of the component’s documentation which will tell you, for example, that storage failure may result in storage becoming temporarily read-only, or becoming significantly slower than normal. I will not go into the details of each service the Crassula application uses, because that is not the focus of this post. What I will point out, though, is that those documented failure modes should inform your code’s design.
 
+For example, storage temporarily becoming read-only may result in write operations to that storage failing. When that happens, depending on which part of the application you’re in and the code for that particular micro-service, that could result in any one of three things: either the operation fails, failure is reported into some logging mechanism, and human intervention is needed to retry the operation; the operation fails but is kept alive and retried until it succeeds; or the operation is canceled, the message the micro-service was acting on is either never consumed or put back on the queue, and it will eventually be tried again.
 
-### S3
-### AWS API Gateway
-### Lambda functions
-#### Identity-aware proxy
-#### Aggregator
-#### Invoicing
-#### Inventory
-#### Profiles
-#### Payment front-end
-### Simple Queue Service
-### DocumentDB
-### Cognito
-### Third-party payment service
+Depending on the application and the use-case, any one, or all three, of these options may be acceptable, or human intervention may never be acceptable. It really depends on what the business impact of failure is -- which will be our next question.
+
+The same goes for failures of the API Gateway, any of the Lambda functions, the Simple Queue Service, the DocumentDB, Cognito, and the third-party payment service: their documentation will tell you how they can fail, and how to detect such failures. Your architecture and your code will tell you how failures are handled, and whether there’s a trace of failure in your logs (which allows you to monitor the health of the system), whether a human needs to be made aware of the failure, etc.
 
 ## Determine what the user-visible effect or business impact of failure is
 
-### S3
-### AWS API Gateway
-### Lambda functions
-#### Identity-aware proxy
-#### Aggregator
-#### Invoicing
-#### Inventory
-#### Profiles
-#### Payment front-end
-### Simple Queue Service
-### DocumentDB
-### Cognito
-### Third-party payment service
+If at all possible, when a user has submitted their request to buy a beautiful flower and the website has accepted that request, the user should be confident that the beautiful flower they chose to buy will be delivered to them (or their sweetheart) in due time. They will be charged for that service, but their job is done at that point.
+
+Of course, we know that once every 2000-or-so orders, something may go wrong: the invoice may not have been generated even though the order went through, was paid for, and the flowers were delivered, there may have been a behind-the-scenes intervention by a human to get the payment settled, etc. This may not really be a problem: perhaps most of our customers never look at their invoices anyway. It may also be a huge problem if that error happens when a wedding planner can’t get their invoice for the thousands of flowers they bought for the royal wedding, and because of that can’t get paid for their own services or fail an audit.
+
+This part of the analysis, then, is to determine two things: for each of the failure modes identified, how would a user, a paying customer, the person we don’t want to piss off, be impacted; and what is the business impact on our company? Essentially, this tells us the cost of failure.
+
+Again, I won’t go through the entire application step-by-step for this post, but you are probably familiar with the “as a ... I want to ... because ...” formulation of use-cases. This analysis requires a bit more than that: it requires you to step through the workflows for each of those use-cases, determine whether the failure modes you’ve identified affect those use-cases or that workflow, and decide how bad that would be for your user, and for the company.
 
 ## Detecting failure
 
-### S3
-### AWS API Gateway
-### Lambda functions
-#### Identity-aware proxy
-#### Aggregator
-#### Invoicing
-#### Inventory
-#### Profiles
-#### Payment front-end
-### Simple Queue Service
-### DocumentDB
-### Cognito
-### Third-party payment service
+Any error or failure that is not handled in the application in such a way that there is no impact to the end-user (e.g. by successful retries) should be logged with sufficient information for the effects to be mitigated or, if there is an underlying bug, for that bug to be found and fixed. Those logs should contain enough information for customer complaints to be traced back to original failure, and should be machine-readable as well as human-readable.
+
+This is both harder and easier than it seems: it is not that hard to catch every error and log it, it is also not that hard to assign a correlation ID, or a tracking ID, to every request and include it in every log pertaining to that request. Technically, this is all feasible and fairly straight-forward. Where it becomes more complicated is when you're not in control of all of the software you're using in your application -- and you almost never are. Software tends to hide failures, and hide pertinent information about failures. Some errors are ignored by default, especially if they don't result in exceptions, and many errors are explicitly ignored by a "catch all" construct that will simply pretend nothing happened.
+
+Failure detection is also hard to test, because most failures are unexpected. If you haven't done the failure mode analysis up-front and are doing it after the fact, you are likle to have missed failure modes in your unit tests, code reviews, etc.
+
+Many IaaS, PaaS, and SaaS services generate their own logs as you use them, so outside of your application code there may be a treasure trove of logs with detectable errors that you can tie back to your own failure logs with those same, system-generated, correlation IDs. There are also log analysis tools like CloudWatch, as well as third-party tools, that can be part of a monitoring solution.
+
+Aside from logging, there are other tools you can employ to make sure your application is still running. You could, for example, set up availability probes to make sure your micro-services are still all healthy by having them all report the version of the running software and the health of the underlying resources. You could also implement regular "synthetic transactions": real transactions that just won't end up with a flower being delivered because the delivery address is the shop's own address and your employees know what to do with those particular orders. Depending on how "deep" you go with synthetic transactions, how much work is actually done for each of them, there may be a cost that may make it prohibitive for automation. For example, if your synthetic transaction really charges $100 to your company credit card and you therefore still have the third-party payment service's service charge to pay, you may only want to do it if you have a doubt about some part of the system working correctly.
+
+Regardless of how failures are detected (application logs, resource logs, synthetic transactions, availability probes, etc.), there are two things you will want to monitor: you'll want to be sure that you are notified if (and only if) human intervention is needed, and you'll want to be able to see, at a glance, whether your system looks healthy. If you see a trend of certain types of failures that may lead to your online shop going down, you'll want to know about it before any significant events (Valentine's day, Christmas, etc.) occur.
 
 ## Mitigating failure
+
+
 
 1. within the design
 2. outside of the system
 
-### S3
-### AWS API Gateway
-### Lambda functions
-#### Identity-aware proxy
-#### Aggregator
-#### Invoicing
-#### Inventory
-#### Profiles
-#### Payment front-end
-### Simple Queue Service
-### DocumentDB
-### Cognito
-### Third-party payment service
 
 ## Remediating failure
 
