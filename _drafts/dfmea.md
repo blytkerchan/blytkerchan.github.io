@@ -237,7 +237,7 @@ Regardless of how failures are detected (application logs, resource logs, synthe
 
 Once you've figured out how things can fail and how you know they failed, you need to decide what to do when you know they failed. There are three categories of things you can do: you can limit the fall-out, accepting that things can and will fail and actively limiting the impact of such failures; you can try to make sure it never happens again, completely eliminating the threat of that particular failure mode; or you can accept that the failures will happen with the impact they have, and fix whatever impact that is when it happens. These three categories are *mitigation*, *remediation*, and *restoration*.
 
-When you're looking for mitigation strategies, 
+When you're looking for mitigation strategies, the low-hanging fruit is usually bunched up inside the application: error handling, retries, 
 
 1. within the design
 2. outside of the system
