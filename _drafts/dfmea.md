@@ -1,11 +1,12 @@
 ---
 author: rlc
 layout: post
-excerpt: How to "easily" identify failure modes, and how to address them
+date: 2023-05-13
 title: DFMEA- Design Failure Mode and Effect Analysis
 ---
 
 <img src="/assets/2023/02/cat.jpg" width="300px" align="right" alt="I wrote this by hand before typing it up, and drew a cat. This is the cat." />Design Failure Mode and Effect Analysis (DFMEA) is a software engineering technique that can help validate design decisions or improve upon them. It takes your existing design and puts each component and link under a magnifying glass, running it through a what-if scenario. In this post, I will walk through a DFMEA of a fictional website and on-line store for a fictional florist. If you read my other blog, [Applied Paranoia](https://applied-paranoia.com) you may already be familiar with that application.
+<!--more-->
 
 The Crassula application uses a static website generated with Jekyll, and an Angular app embedded in that website for the purchasing workflow. The static front-end and angular app are served out of an S3 bucket behind a CloudFront proxy, the back-end for the store uses some serverless functions (lambdas), and S3 bucket to download invoices from, and a NoSQL database. The whole thing is tied together using AWS' Simple Queue Service and deployed using CloudFormation.
 
@@ -107,7 +108,7 @@ S3 has a 99.9% SLA, which is significantly higher than our target, but with thes
 <dd>AWS' Route53 has a 99.99% <a href="https://aws.amazon.com/route53/sla" target="_blank">SLA</a>. Additionally, DNS is a globally-distributed, caching database with redundant masters, so its failure is excluded from further analysis because it is just too unlikely.</dd>
 
 <dt>AWS Certificate Manager (PKI)</dt>
-<dd>CloudFront only needs access to the `us-east-1` instance of the AWS Certificate Manager at configuration, do a deployment of the stack will fail if the certificate manager is not available, but there is no operational impact in that case. As we're not concerned with deployment failures for this analysis, we can therefore exclude the certificate manager.</dd>
+<dd>CloudFront only needs access to the <tt>us-east-1</tt> instance of the AWS Certificate Manager at configuration, do a deployment of the stack will fail if the certificate manager is not available, but there is no operational impact in that case. As we're not concerned with deployment failures for this analysis, we can therefore exclude the certificate manager.</dd>
 
 <dt>AWS API Gateway</dt>
 <dd>The AWS API Gateway has an <a href="https://aws.amazon.com/api-gateway/sla" target="_blank">SLA</a> of 99.95%. If it does fail, the front-end (website and application) is still available and can therefore retry calls into the API if such calls time out or result in an HTTP 5xx error, indicating a failure in the back-end. That does require some foresight on our part, so we will need to include it in the analysis, even if the expected availability is very high.</dd>
@@ -162,7 +163,22 @@ What we've just done is set the *service level expectations* for each of the ser
 
 Our next step in the analysis is to determine which of the remaining components are on the critical path of a service that has high availability requirements. In our example, there are four services that we want high availability for: purchasing flowers, invoicing those flowers, updating the inventory, and the payment processing service for flowers purchases.
 
+At this point, we should look at what our PO has documented as user stories for these four services. Let's take a quick look at a partial list:
 
+* "As a customer, I want to purchase a bouquet of flowers"
+  * "As a customer, I want to browse the gallery of different types of flowers so I can choose which ones I want"
+  * "As a customer, I want to choose which flowers I want in my bouquet"
+  * "As a customer, I want to buy flowers for a specific event such as a wedding"
+  * ...
+* "As a customer, I want to update my profile"
+  * "As a customer, I want to store my credit card information so I don't have to enter it every time I buy flowers"
+  * "As a customer, I want to change my E-mail address"
+* "As a wedding planner, I want to see my previous orders so I can update my bookkeeping"
+* "As a customer, I want to order the same bouquet I did a month ago"
+* "As a business, I want to make sure we get paid for the flowers we shipped"
+* ...
+
+As we run through the various user stories, we encounter our services:
 
 <dl>
 <dt>AWS API Gateway</dt><dd><p>The API gateway is used, from a user's perspective, to check inventory, to filter what's shown, to request a purchase, and to authorize a payment. In each case, the user uses the front-end, which calls the API to request the purchase and to authorize the payment. The user is not directly involved in inventory management (which will restrict the flowers available for purchase and update the inventory when a purchase is requested, the latter being a side-effect of the request) or invoicing (which is a side-effect of the payment request, but does not have direct user interaction through the API).</p>
@@ -171,35 +187,37 @@ Our next step in the analysis is to determine which of the remaining components 
 
 <dt>Identity-aware proxy</dt><dd>The identity-aware proxy gives the user access to everything behind the APIs, and is therefore on the same critical paths as the API gateway itself.</dd>
 
-<dt>Aggregator</dt><dd>The aggregator is only used as an optimization to prepare the presentation shown by the front-end application. It never interacts directly with the user nor is it used in any of our scenarios.</dd>
+<dt>Aggregator</dt><dd>The aggregator is only used as an optimization to prepare the presentation shown by the front-end application. It never interacts directly with the user nor is it used in any of our scenarios.
+
+If it fails, either one of two things can happen: a call into the data cache DocumentDB mauy miss, resulting in a 503 error from the proxy amd a "kick" over the SQS bus to update the cache, or a hit on the cache may give stale data. The latter case is manageable by adding a time-out to how long data stays in the cache, which may result in more 503 errors but also more consistency. This essentially becomes a note for the development team but is not an issue for this DFMEA. The aggregator can therefore be excluded from futher analysis.</dd>
 
 <dt>Invoicing</dt><dd>The invoicing service receives a purchase request and an authorization, both of which will contain enough information to generate an invoice PDF and a message sent back to SQS. This is essentially what our customers want from the invoicing service, which places this micro-service on the critical path for that service.</dd>
 
-<dt>Inventory</dt><dd>&nbsp;</dd>
+<dt>Inventory</dt><dd>The inventory service is not directly addressed by the front-end for customers: it will publish updates on the bus picked up by the Aggregator to be put in the data cache. This way of working removes it from the critical path in every case except updating the inventory, which is still enough to keep it in-scope for our analysis.</dd>
 
-<dt>Profiles</dt><dd>&nbsp;</dd>
+<dt>Profiles</dt><dd>Whenever something is purchased and whenever someone is invoiced, the database containing user profiles is accessed, but the profile micro-service, which owns the data and is the only one to write to it, is not required for read-only access and therefore has no role in those transactions. It is therefore not on the critical path for our critical functions, from which profile updates are conspicuously missing. So, we can exclude it from further analysis at least until our PO asks us to include profile updates in the critical scenarios.</dd>
 
-<dt>Payment</dt><dd>&nbsp;</dd>
+<dt>Payment</dt><dd>The payment micro-service is a front-end to a third party service that does the actual payment processing. When it receives an order from the bus it will request payment and post the receipt back on the bus. As such, it is critical for payments to be processed, but it is not critical in any user flow (that is: payment has to be processed before the flowers are shipped, but the order will be accepted pending payment). Regardless of this caveat, it remains in-scope for the analysis.</dd>
 
-<dt>Simple Queue Service</dt><dd>&nbsp;</dd>
+<dt>Order</dt><dd>When a customer decides to order something, a message is sent over SQS, which is received by the order micro-service. This micro-service has read-only access to the inventory and profile databases, and triggers a number of transactions, all of which must eventually succeed for the right flowers to be delivered to the right place, at the right time: it enters the order in its own <tt>orders</tt> database, it sends a message over the SQS bus for the invoice to be generated, for payment to be processed, and for inventory to be reserved. This may all be the same message, announcing the new order to the world. Each of the services concerned with that event will know what to do with it. In any case, this puts the order micro-service squarely on the critical path.</dd>
 
-<dt>Data cache</dt><dd>&nbsp;</dd>
+<dt>Simple Queue Service</dt><dd>SQS is the glue that holds the application together: aside from a <tt>GET</tt> request that can be serviced directly from the data cache, everything goes through SQS one way or another.</dd>
 
-<dt>Database</dt><dd>&nbsp;</dd>
+<dt>Data cache</dt><dd>The data cache is an optimization mechanism, but it is also on the path for any user interactions. While any good optimization mechanism should be optional to the application and any failure of such a mechanism should be no more than a temporary nuisance, we need to include it in the analysis to make sure this is the case.</dd>
 
-<dt>Cognito</dt><dd>&nbsp;</dd>
+<dt>Database</dt><dd>The database we're referring to here contains three tables: <tt>profiles</tt>. <tt>orders</tt>, and <tt>inventory</tt>. The <tt>orders</tt> table is written to for purchasing, the <tt>inventory</tt> table is written to for any change in inventory. and the <tt>profiles</tt> table, while never written to in any of our critical scenarios, is still accessed in each one of them.</dd>
 
-<dt>Payment service</dt><dd>&nbsp;</dd>
+<dt>Cognito</dt><dd>Cognito is the AWS service we use for authentication and authorization, leveraging Cognito's User Pools and potentially third-party identity providers such as Google, Facebook, etc. It is used whenever a user logs in, and to authenticate the user-provided bearer token on every API call. Because of this, it is on the critical path for everything a user is involved in (purchasing and payment authorization), but not invoice generation. The pre-signed URI used for incoice delivery is generated by S3, not using Cognito, so in that particular workflow Cognito is also "off the hook".</dd>
 
-<dt>Order service</dt><dd>&nbsp;</dd>
+<dt>Payment service</dt><dd>The external payment service is clearly critical because that is how we make money. It also has the added complexity of being an external service with only a front-end micro-service internal to our application.</dd>
 
-<dt>Front-end bucket</dt><dd>&nbsp;</dd>
+<dt>Front-end bucket</dt><dd>In the majority of cases, CloudFront will not reach out to the front-end S3 bucket to service the static site or front-end application: it will almost always serve from its own cache. That means that the front-end bucket may be temporarily down without ever being noticed. Nothing in the application ever writes to the bucket, so as long as CloudFront can access it "occasionally" we can ignore this bucket for the remainder of the analysis.</dd>
 
-<dt>Invoice bucket</dt><dd>&nbsp;</dd>
-
+<dt>Invoice bucket</dt><dd>The invoicing micro-service writes to this bucket to deposit invoices. The proxy service can then generate pre-signed URIs for those invoices when requested, with which the front-end can download those invoices. These pre-signed URIs are not directly made visible to users: they are redirected to from the APIs. This puts the bucket on the critical path for one of the four scenarios.</dd>
 </dl>
 
-Note that we didn't put retrieving the results of the aggregator service through the API (including the list of available invoices and the list of available flowers) on the critical path. This is debatable, 
+This leads us to the table below:
+
 
 | Component | On critical path for purchase | On critical path for invoicing | On critical path for inventory | On critical path for payment | Critical |
 | ---                  | :-: | :-: | :-: | :-: | :-:   |
@@ -213,21 +231,24 @@ Note that we didn't put retrieving the results of the aggregator service through
 | Simple Queue Service | x   | x   | x   | x   | TRUE  |
 | Data cache           | x   |     |     |     | TRUE  |
 | Database             | x   | x   | x   | x   | TRUE  |
-| Cognito              | x   |     |     | x   | TRUE  |
+| Cognito              | x   |     | x   | x   | TRUE  |
 | Payment service      |     |     |     | x   | TRUE  |
 | Front-end bucket     |     |     |     |     | FALSE |
 | Invoice bucket       |     | x   |     |     | TRUE  | 
 
+These is no hard-and-fast rule on whether to exclude a service from further analysis: some of these are debatable. In this case, I've mostly looked at whether a user interacts with the service (directly or indirectly) when interacting with the application in one of the critical scenarios, but which scenarios are considered critical is more or less arbitrary (e.g. profile editing is excluded for some reason) and failure may well affect the application in these scenarios even when the user doesn't directly interact with them. In this case, however, we're considering a context in which we've never done a DFMEA for this particular application before, and we need to do one in a reasonable amount of time. We're effectively waterlining our analysis and including only things that are "above the waterline" knowing full well that the things we exclude for now may bob the heads above the water sooner or later.
 
 ## Determine the failure mode
 
 The next step in the analysis is to determine the failure mode of each identified component. For SaaS, PaaS, and IaaS components, this requires some analysis of the component’s documentation which will tell you, for example, that storage failure may result in storage becoming temporarily read-only, or becoming significantly slower than normal. I will not go into the details of each service the Crassula application uses, because that is not the focus of this post. What I will point out, though, is that those documented failure modes should inform your code’s design.
 
-For example, storage temporarily becoming read-only may result in write operations to that storage failing. When that happens, depending on which part of the application you’re in and the code for that particular micro-service, that could result in any one of three things: either the operation fails, failure is reported into some logging mechanism, and human intervention is needed to retry the operation; the operation fails but is kept alive and retried until it succeeds; or the operation is canceled, the message the micro-service was acting on is either never consumed or put back on the queue, and it will eventually be tried again.
+For example, storage temporarily becoming read-only may result in write operations to that storage failing. When that happens, depending on which part of the application you’re in and the code for that particular micro-service, that could result in any number of things: either the operation fails, failure is reported into some logging mechanism, and human intervention is needed to retry the operation; the operation fails but is kept alive and retried until it succeeds; the operation is canceled, the message the micro-service was acting on is either never consumed or put back on the queue, and it will eventually be tried again; or some other combination of retries, notifications, ignored errors, etc.
 
-Depending on the application and the use-case, any one, or all three, of these options may be acceptable, or human intervention may never be acceptable. It really depends on what the business impact of failure is -- which will be our next question.
+Depending on the application and the use-case, any one, of these options may be acceptable, or human intervention may never be acceptable. It really depends on what the business impact of failure is -- which will be our next question.
 
 The same goes for failures of the API Gateway, any of the Lambda functions, the Simple Queue Service, the DocumentDB, Cognito, and the third-party payment service: their documentation will tell you how they can fail, and how to detect such failures. Your architecture and your code will tell you how failures are handled, and whether there’s a trace of failure in your logs (which allows you to monitor the health of the system), whether a human needs to be made aware of the failure, etc.
+
+As you're reviewing the documentation of each of these services, you'll likely want to capture some testable functional requirements around error handling and you may find you want to use some libraries to wrap the service APIs to encapsulate that error handling. This is one of the reasons why doing this analysis relatively early in the development process, if possible, is beneficial.
 
 ## Determine what the user-visible effect or business impact of failure is
 
@@ -237,7 +258,9 @@ Of course, we know that once every 2000-or-so orders, something may go wrong: th
 
 This part of the analysis, then, is to determine two things: for each of the failure modes identified, how would a user, a paying customer, the person we don’t want to piss off, be impacted; and what is the business impact on our company? Essentially, this tells us the cost of failure.
 
-Again, I won’t go through the entire application step-by-step for this post, but you are probably familiar with the “as a ... I want to ... because ...” formulation of use-cases. This analysis requires a bit more than that: it requires you to step through the workflows for each of those use-cases, determine whether the failure modes you’ve identified affect those use-cases or that workflow, and decide how bad that would be for your user, and for the company.
+Again, I won’t go through the entire application step-by-step for this post, but we've already seen the partial list of use-cases from our PO. This analysis requires a bit of a deeper dive: it requires you to step through the workflows for each of those use-cases, determine whether the failure modes you’ve identified affect those use-cases or that workflow, and decide how bad that would be for your user, and for the company.
+
+We'll also findm, through these scenarios, that our application's observability may become very important: failures that require human intervention may require a human being notified, getting an SMS or a push notification.
 
 ## Detecting failure
 
@@ -245,7 +268,7 @@ Any error or failure that is not handled in the application in such a way that t
 
 This is both harder and easier than it seems: it is not that hard to catch every error and log it, it is also not that hard to assign a correlation ID, or a tracking ID, to every request and include it in every log pertaining to that request. Technically, this is all feasible and fairly straight-forward. Where it becomes more complicated is when you're not in control of all of the software you're using in your application -- and you almost never are. Software tends to hide failures, and hide pertinent information about failures. Some errors are ignored by default, especially if they don't result in exceptions, and many errors are explicitly ignored by a "catch all" construct that will simply pretend nothing happened.
 
-Failure detection is also hard to test, because most failures are unexpected. If you haven't done the failure mode analysis up-front and are doing it after the fact, you are likle to have missed failure modes in your unit tests, code reviews, etc.
+Failure detection is also hard to test, because most failures are unexpected. If you haven't done the failure mode analysis up-front and are doing it after the fact, you are likely to have missed failure modes in your unit tests, code reviews, etc.
 
 Many IaaS, PaaS, and SaaS services generate their own logs as you use them, so outside of your application code there may be a treasure trove of logs with detectable errors that you can tie back to your own failure logs with those same, system-generated, correlation IDs. There are also log analysis tools like CloudWatch, as well as third-party tools, that can be part of a monitoring solution.
 
@@ -257,26 +280,22 @@ Regardless of how failures are detected (application logs, resource logs, synthe
 
 Once you've figured out how things can fail and how you know they failed, you need to decide what to do when you know they failed. There are three categories of things you can do: you can limit the fall-out, accepting that things can and will fail and actively limiting the impact of such failures; you can try to make sure it never happens again, completely eliminating the threat of that particular failure mode; or you can accept that the failures will happen with the impact they have, and fix whatever impact that is when it happens. These three categories are *mitigation*, *remediation*, and *restoration*.
 
-When you're looking for mitigation strategies, the low-hanging fruit is usually bunched up inside the application: error handling, retries, 
+When you're looking for mitigation strategies, the low-hanging fruit is usually bunched up inside the application: you're looking to reduce the severity or impact of a failure. The most obvious approach to this is to retry. This is easiest to do if the action is idempotent: if doing something twice does not cause the effect twice, you can retry as often as you like.
 
-1. within the design
-2. outside of the system
+Idempotent actions are actions that have no more effect the second time they are performed. For example, emptying a coffee cup into a sink is idempotent, because if you do it a second (or third) time, the cup is already empty so no coffee is actually moved into the sink but the operation is still successful. Taking a sip of coffee, on the other hand, is not idempotent because at some point you will run out of coffee and the operation will fail. Retrying it in that case will result in the same failure, again and again (so failure is idempotent whereas success is not).
 
+In software things are sometimes a bit more complicated: whether or not an operation is idempotent often depends more on which effects you care about than on the actual effects. Touching a file, for example, will create it if it didn't exist and update its last-modified timestamp if it did. If you only care whether the file exists, touching it is idempotent. If you care about the timestamp, it is not.
 
+Still, idempotent or not, very often, the side-effects of retrying a partially-successful action are often less undesirable than the effect of partial failure. When that is the case, retry.
 
-### S3
-### AWS API Gateway
-### Lambda functions
-#### Identity-aware proxy
-#### Aggregator
-#### Invoicing
-#### Inventory
-#### Profiles
-#### Payment front-end
-### Simple Queue Service
-### DocumentDB
-### Cognito
-### Third-party payment service
+There are, of course, mitigation strategies other than retrying and retrying too often is the definition of insanity. In the Crassula application, however, we don't have any services that need a "plan B" as mitigation: if an order fails to be put in the database, don't consume the message from SQS. If the proxy fails to send a message, retry or return the condition to the caller. Similar mitigation tactics throughout the application sum up to the same mitigation strategy for the application: retry, then gracefully fail and report failure.
 
+Remediation is different from mitigation in two respects: the first is its objective, the second is how it is implemented. The objective of remediation is to undo the effects of faults that could not be mitigated, and to try to make sure they don't happen again. As such, within the application there is only so much we can do: if the fault is the failure to meet a performance requirement this may be remediated by deploying additional resources, adding scalability and elasticity to the application, but that has so far been outside the scope of this analysis and will, for this post, remain so. For other tpes of failures, the application is generally limited to producing an accurate and complete account of the error it detected: what it was doing, why it was doing it, when the incident occurred, and how it failed. Once all of that ha been accounted for (logged), a human can pick up the pieces, determine if this failure was due to a bug and, if so, repair it; and manually perform whatever action failed.
+
+This last bit is close to, but still different from, restoration. Restoration is the process of returning a system to a previous functional state. Effective restoration requires the DevOps team to take a step back, see that the application is crumbling, determine why that is, and act. This means they need to look not only at the current errors, but at the trend. This requires a level of observabiity for the application that many lack. Is there an unusually high load because Valentine's Day is just around the corner? Is there a recent change that introduced a new bug? Would rolling back yesterday's Friday afternoon deploy break more than it fixes? Did those idiots really deploy on a Friday afternoon ahead of a long weekend without telling me? I had plans, dammit!
+
+# Conclusion
+
+A design failure mode and effect analysis allows us to answer the question "How does it fail?" and highlights the importance of the question "How do I know it failed?" It emphasizes the importance of observability, which is needed whenever remediation of restoration is needed (which is whenever mitigation fails or is inadequate). It also highlights mitigation, which is turn is something you can look for in code reviews and test for in unit tests and integration tests. They do take time and effort, require insight into the application achitecture and, to an extent, its code, and may lead to code changes, process changes, etc. That is not a reason not to do it, but it is a reason to plan for it.
 
 <hr/>
