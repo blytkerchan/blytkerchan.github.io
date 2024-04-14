@@ -23,6 +23,7 @@
     "lint": "eslint -f compact src/**/*.js",
     "serve": "BROWSER=none react-scripts start",
     "start": "react-scripts start",
+    "eject": "react-scripts eject",
     "test": "react-scripts test --coverage"
   },
   "eslintConfig": {
