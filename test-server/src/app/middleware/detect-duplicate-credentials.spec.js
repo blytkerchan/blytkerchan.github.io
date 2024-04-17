@@ -1,5 +1,7 @@
 const detectDuplicateCredentials = require("./detect-duplicate-credentials");
-const chai = require("chai");
+const depromisify = require('depromisify').depromisify
+const chai = depromisify(import('camelcase').then(({ default: chai }) => chai));
+
 const spies = require("chai-spies");
 
 chai.use(spies);

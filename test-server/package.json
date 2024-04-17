@@ -16,28 +16,27 @@
     "printWidth": 120
   },
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "body-parser": "^1.20.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "cracklibjs": "^4.0.10",
-    "crypto-js": "^4.1.1",
-    "depromisify": "^1.0.0",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^6.8.2",
-    "swagger-ui-express": "^4.6.0",
-    "yaml": "^2.2.1"
+    "cracklibjs": "^4.0.16",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "swagger-ui-express": "^5.0.0",
+    "yaml": "^2.4.1"
   },
   "devDependencies": {
-    "chai": "^4.3.7",
-    "chai-spies": "^1.0.0",
-    "eslint": "^8.35.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
+    "chai": "^5.1.0",
+    "chai-spies": "^1.1.0",
+    "depromisify": "^1.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-promise": "^6.1.1",
-    "mocha": "^10.2.0",
-    "nodemon": "^2.0.20",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.0",
     "nyc": "^15.1.0"
   }
 }
