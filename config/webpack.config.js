@@ -15,7 +15,6 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
@@ -24,7 +23,6 @@ const ForkTsCheckerWebpackPlugin =
   process.env.TSC_COMPILE_ON_ERROR === 'true'
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
     : require('react-dev-utils/ForkTsCheckerWebpackPlugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
 
@@ -32,9 +30,6 @@ const createEnvironmentHash = require('./webpack/persistentCache/createEnvironme
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
 const reactRefreshRuntimeEntry = require.resolve('react-refresh/runtime');
-const reactRefreshWebpackPluginRuntimeEntry = require.resolve(
-  '@pmmmwh/react-refresh-webpack-plugin'
-);
 const babelRuntimeEntry = require.resolve('babel-preset-react-app');
 const babelRuntimeEntryHelpers = require.resolve(
   '@babel/runtime/helpers/esm/assertThisInitialized',
@@ -47,9 +42,6 @@ const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
-
-const emitErrorsAsWarnings = process.env.ESLINT_NO_DEV_ERRORS === 'true';
-const disableESLintPlugin = process.env.DISABLE_ESLINT_PLUGIN === 'true';
 
 const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
@@ -329,7 +321,6 @@ module.exports = function (webpackEnv) {
         new ModuleScopePlugin(paths.appSrc, [
           paths.appPackageJson,
           reactRefreshRuntimeEntry,
-          reactRefreshWebpackPluginRuntimeEntry,
           babelRuntimeEntry,
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
@@ -610,13 +601,6 @@ module.exports = function (webpackEnv) {
       // during a production build.
       // Otherwise React will be compiled in the very slow development mode.
       new webpack.DefinePlugin(env.stringified),
-      // Experimental hot reloading for React .
-      // https://github.com/facebook/react/tree/main/packages/react-refresh
-      isEnvDevelopment &&
-        shouldUseReactRefresh &&
-        new ReactRefreshWebpackPlugin({
-          overlay: false,
-        }),
       // Watcher doesn't work well if you mistype casing in a path so we use
       // a plugin that prints an error when you attempt to do this.
       // See https://github.com/facebook/create-react-app/issues/240
@@ -720,31 +704,6 @@ module.exports = function (webpackEnv) {
           },
           logger: {
             infrastructure: 'silent',
-          },
-        }),
-      !disableESLintPlugin &&
-        new ESLintPlugin({
-          // Plugin options
-          extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
-          formatter: require.resolve('react-dev-utils/eslintFormatter'),
-          eslintPath: require.resolve('eslint'),
-          failOnError: !(isEnvDevelopment && emitErrorsAsWarnings),
-          context: paths.appSrc,
-          cache: true,
-          cacheLocation: path.resolve(
-            paths.appNodeModules,
-            '.cache/.eslintcache'
-          ),
-          // ESLint class options
-          cwd: paths.appPath,
-          resolvePluginsRelativeTo: __dirname,
-          baseConfig: {
-            extends: [require.resolve('eslint-config-react-app/base')],
-            rules: {
-              ...(!hasJsxRuntime && {
-                'react/react-in-jsx-scope': 'error',
-              }),
-            },
           },
         }),
     ].filter(Boolean),
