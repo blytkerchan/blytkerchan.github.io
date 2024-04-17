@@ -69,6 +69,7 @@
     "cors": "^2.8.5",
     "css-loader": "^7.1.1",
     "css-minimizer-webpack-plugin": "^6.0.0",
+    "depromisify": "^1.0.0",
     "dotenv": "^16.4.5",
     "dotenv-expand": "^11.0.6",
     "eslint": "^9.0.0",

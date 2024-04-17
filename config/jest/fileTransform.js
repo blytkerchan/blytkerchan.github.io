@@ -1,7 +1,8 @@
 'use strict';
 
 const path = require('path');
-const camelcase = require('camelcase');
+const depromisify = require('depromisify').depromisify
+const camelcase = (...args) => depromisify(import('camelcase').then(({ default: camelcase }) => camelcase(...args)));
 
 // This is a custom Jest transformer turning file imports into filenames.
 // http://facebook.github.io/jest/docs/en/webpack.html
