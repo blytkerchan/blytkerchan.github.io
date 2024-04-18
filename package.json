@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "i18n": "i18next",
+    "i18n": "node node_modules/i18next",
     "lint": "NODE_ENV=development eslint -f compact src/**/*.js",
     "serve": "BROWSER=none node scripts/start.js",
     "start": "node scripts/start.js",
