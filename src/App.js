@@ -9,7 +9,7 @@ import "./App.css";
 import mainMenu from "./config/mainMenu";
 import userMenu from "./config/userMenu";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import Error from "./pages/Error";
 import Home from "./pages/Home";
@@ -25,7 +25,7 @@ const Orders = React.lazy(() => import("./pages/Orders"));
 const Page = React.lazy(() => import("./pages/Page"));
 const Products = React.lazy(() => import("./pages/Products"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout mainMenu={mainMenu} userMenu={userMenu} />,
