@@ -727,7 +727,7 @@ module.exports = function (webpackEnv) {
         ]
       }),
       new BuildPosts({
-        posts: '_posts'
+        paths: paths,
       })
     ].filter(Boolean),
     // Turn off performance processing because we utilize

@@ -24,3 +24,6 @@ yarn-error.log*
 
 .*
 test-frontend/chromedriver/
+
+# temporary
+_posts/
