@@ -24,7 +24,6 @@ const ForkTsCheckerWebpackPlugin =
     ? require('react-dev-utils/ForkTsCheckerWarningWebpackPlugin')
     : require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
 const { BuildPosts } = require('./webpack/BuildPosts')
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
@@ -720,13 +719,9 @@ module.exports = function (webpackEnv) {
             infrastructure: 'silent',
           },
         }),
-      // Copy the posts to the target directory
-      new CopyPlugin({
-        patterns: [
-          { from: "_posts", to: "_posts" },
-        ]
-      }),
       new BuildPosts({
+        from: '_posts',
+        to: '_posts',
         paths: paths,
       })
     ].filter(Boolean),
