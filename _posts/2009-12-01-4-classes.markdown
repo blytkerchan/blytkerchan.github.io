@@ -1,0 +1,102 @@
+---
+author: rlc
+comments: true
+date: 2009-12-01 22:37:17+00:00
+layout: post
+permalink: /blog/2009/12/4-classes/
+slug: 4-classes
+title: 4- Classes
+wordpress_id: 351
+categories:
+- C++ for the self-taught
+tags:
+- Posts that need to be re-tagged (WIP)
+---
+
+In any language that supports object-oriented programming, the class is a, if not the, basic building block. In this post, we'll take a closer look at what a class is, and how that ties in with what we've seen in the previous post, data structures, and in the two next posts: pointers, references, objects and RAII.
+<!--more-->
+A class can be thought of as a collection of objects and functions that, together, implement a functionality. In any given class, you'll find whatever you need to implement its functionality both in terms of data and in terms of logic, and you should find no more than that. For example, in a class that implements a smart pointer, you should find a pointer, perhaps a reference counter, and the logic needed to manage the life-time of the object to which it points. A well-designed class is minimal but complete: it has everything it needs to perform its duty, but no more. (This is an important rule when designing a class!)
+
+You can also think of a class as a description of what an object of a given type (the type of the class) should look and behave like. From this point of view, the class doesn't necessarily have a specific function, but has a more organic reason of being. I don't always like this approach myself, but it is popular and legitimate (at least in some cases).
+
+Finally, you can see a class as the description of a category of objects, in the same sense as nouns are descriptions of categories of objects, with the verbs that apply to those nouns being the member functions of the class. This model goes a long way toward explaining one of the basic features of object-oriented design: inheritance.
+
+This is where the confusion tends to start: inheritance, in object-oriented programming, has a very different meaning than it would in every-day life: where in real life a duck would inherit its traits from two other ducks, mixing their traits to form its own, in object-oriented programming, the duck would inherit its traits not from other ducks, but from birds in general, which would in turn inherit their traits from animals, etc. In object-oriented design, inheritance models an is-a relationship. While I am neither my father nor my mother, I am human being, so in object-oriented design, I don't inherit from my father and my mother, but rather from humanity.
+
+Let's take a look at the duck, and create a few classes that model this type of inheritance: 
+    
+    class Animal
+    {
+    public :
+        virtual void eat(std::auto_ptr< Food > food) = 0;
+        virtual void move(int dx, int dy, int dz) = 0;
+    };
+    
+    class Bird : public Animal
+    {
+    public :
+        void move(int dx, int dy, int dz);
+    };
+    
+    class Duck : public Bird
+    {
+        void eat(std::auto_ptr< Food > food);
+    };
+
+Ducks are birds, which are animals. Any animal can ingest food - and usually digest it, but we'll forego the details on digestion for now - and move either by reflex or in controlled motion. Our _base class_ therefore declares two functions: `eat` and `move`. Both of them are virtual, in that they're not necessarily implemented in the base class itself (i.e. a reference or a pointer to the type of the base class may be _polymorphic_) and, in this case, both of them are _abstract_ as well, signified by the `= 0` at the end of the function declarations. Birds have a special way of moving: they swim, they fly and/or they walk. All of them do at least a subset of the combination of these three. Ducks happen to do all three, so in this case, we'll pretend the default implementation of `move` for birds is sufficient for ducks. The `eat` function, however, will have to be implemented specifically for ducks.
+
+If you would try to create an instance of an animal like this: `Animal animal;`, that would not work. The reason for that is that `Animal` is an abstract type. The following code, however, would work: `Animal * duck(new Duck);`. This is because a duck is an animal, as Duck derives from Bird, which derives from Animal. That means that a pointer that points to a Duck, also points to an Animal. This is called _polymorphism_.
+
+Now, let's take a closer look at the example we had in our previous installment: the table. Last time, I said, I would show you the proper way of initializing an object's members in object-oriented programming. The time has come to keep that promise, so here's our new table: 
+    
+    class Leg
+    {
+    public :
+        Leg() : height_(120) { /* no-op */ }
+    
+        unsigned int getHeight() const { return height_; }
+        void setHeight(unsigned int height) { height_ = height; }
+    
+    private:
+        unsigned int height_;
+    };
+    
+    class Table
+    {
+    public :
+        Table()
+            : length_(220)
+            , width_(140)
+        { /* no-op */ }
+    
+        bool isLevel() const
+        {
+            unsigned int height(legs_[0].height_);
+            for (unsigned int i(1); i < 4; ++i)
+            {
+                if (legs_[i].height_ != height)
+                    return false;
+                else
+                { /* same height as first leg - level til now */ }
+            }
+            return true;
+        }
+    
+        /* getters and setters for width, length and height are up to you to write */
+    
+    private :
+        unsigned int length_;
+        unsigned int width_;
+        Leg legs_[4];
+    };
+
+As you can see, our structures have become classes. Each of them has a constructor (the function with the same name as the class that doesn't return anything) and initializes its members (note that Table doesn't initialize the legs - the legs now do that on their own). Writing getter and setter functions for the dimensions of the table is an exercise for you.
+
+
+
+## Conclusion
+
+
+We've now touched upon a few very important notions: inheritance, constructors and member functions. We haven't really combined them very well, however, but if you made the furniture set as an exercise in the last installment, you now have an opportunity to do so: think of things you can do with any piece of furniture and create a Furniture base class for your table and (if you made them) your chairs. Transform your structures from the previous installment into classes: add getter and setter methods (functions) to each of them for the important things you need to know about your pieces of furniture. Don't add any more than you need to - be minimalist (minimal but complete is the mantra here).
+
+Have fun. Next time we'll take a look at pointers, references and objects and then it's on to RAII - the one thing any C++ programmer should know about and keep in mind at all times.
