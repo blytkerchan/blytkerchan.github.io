@@ -5,20 +5,21 @@ date: 2011-10-09 03:15:33+00:00
 layout: post
 permalink: /blog/2011/10/making-the-enabling-of-online-copyright-infringement-itself-an-infringement-of-copyright/
 slug: making-the-enabling-of-online-copyright-infringement-itself-an-infringement-of-copyright
-title: Making the enabling of online copyright infringement itself an infringement
-  of copyright
+title: Making the enabling of online copyright infringement itself an infringement of copyright
 wordpress_id: 1697
 categories:
-- Opinions
+  - Opinions
 tags:
-- copyright
+  - copyright
 ---
 
 [Bill C-11](https://web.archive.org/web/20111221034832/http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?billId=5134851&Language=E&Mode=1) amends the Copyright Act in several different ways. One of the states purposes of those amendments is to "make the enabling of online copyright infringement itself an infringement of copyright". While I can understand that this adds significant new protections to copyrighted materials, I think this may quickly become either unenforceable, or introduce serious new restrictions on how communications over the Internet can legally take place. It all hinges on the definition of "enabling", however.
+
 <!--more-->
+
 Enabling copyright infringement under bill C-11 is enabling an infringement of the right as defined in subsection 3(1), as amended.
 
-Subsection 3(1), as amended, reads: 
+Subsection 3(1), as amended, reads:
 
 <blockquote>3. (1) For the purposes of this Act, “copyright”, in relation to a work, means the sole right to produce or reproduce the work or any substantial part thereof in any material form whatever, to perform the work or any substantial part thereof in public or, if the work is unpublished, to publish the work or any substantial part thereof, and includes the sole right<br/>
 (a) to produce, reproduce, perform or publish any translation of the work,<br/>
@@ -34,7 +35,7 @@ Subsection 3(1), as amended, reads:
 <br/>
 and to authorize any such acts</blockquote>
 
-Copyright in performer's performances, sound recordings and communication signals is defined  in section 15 of the act (as amended).
+Copyright in performer's performances, sound recordings and communication signals is defined in section 15 of the act (as amended).
 
 [aside status="closed" type="Subsection 15(1) as amended" hide="To hide %s, click here" show="To show %s, click here"]
 

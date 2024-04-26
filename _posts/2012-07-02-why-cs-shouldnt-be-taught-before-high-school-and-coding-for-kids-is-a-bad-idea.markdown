@@ -5,18 +5,17 @@ date: 2012-07-02 00:35:10+00:00
 layout: post
 permalink: /blog/2012/07/why-cs-shouldnt-be-taught-before-high-school-and-coding-for-kids-is-a-bad-idea/
 slug: why-cs-shouldnt-be-taught-before-high-school-and-coding-for-kids-is-a-bad-idea
-title: Why CS shouldn't be taught before high school (and coding for kids is a bad
-  idea)
+title: Why CS shouldn't be taught before high school (and coding for kids is a bad idea)
 wordpress_id: 1891
 categories:
-- Education
+  - Education
 tags:
-- education
+  - education
 ---
 
 An introduction to computer science was part of my high school curriculum. I was about 16 years old at the time and had been coding in Basic and Pascal for a few years already - I was just getting started with C. This part of the curriculum was a complete waste of time. Not because I had books that taught me better than my teacher ever could, but because, in order to make it easier for us, the programming language we had to use was a version of Pascal ... translated to Dutch.<!--more-->
 
-It made no sense to me, and honestly still doesn't, to translate a programming language. How is code that says `afdrukken` any clearer than the same code that says `print`? I didn't get the point and I was one of those kids that, if they didn't see the point in learning something, refused to learn it. For that same reason, I refused to learn French and German  (and had to redo my second year of high school because of it)[^1].
+It made no sense to me, and honestly still doesn't, to translate a programming language. How is code that says `afdrukken` any clearer than the same code that says `print`? I didn't get the point and I was one of those kids that, if they didn't see the point in learning something, refused to learn it. For that same reason, I refused to learn French and German (and had to redo my second year of high school because of it)[^1].
 
 [^1]: The irony, of course, is in the fact that I make a living doing what I refused to learn, that my wife is French and we speak French at home (and my children speak French as well) and my dad's girlfriend is German.
 
@@ -24,13 +23,10 @@ Still, [teaching computer science before high school](https://web.archive.org/we
 
 Now, don't get me wrong: I was writing code well before the age of twelve and I don't regret it. However, at twelve, I also possessed three of the four skills mentioned above. Exceptions will exist and some kids will learn how to code, but coding isn't the goal in software engineering or (more generally) in computer science: it's solving problems (or, as I like to call it, "Making Life Easier"). Coding is only a small part of that and isn't even a skill you need to solve problems in CS or SE, though it is sometimes helpful.
 
-
-
-* * *
-
+---
 
 **Update** is the education system ready to teach CS to kids?
-Read these: 
+Read these:
 
-  * ["If you want to teach kids CS first teach the adults"](https://web.archive.org/web/20150119195219/http://m.cacm.acm.org/blogs/blog-cacm/176696-if-you-want-to-teach-kids-cs-first-teach-the-adults/fulltext)
-  * ["Why the US is not ready for mandatory CS education"](https://web.archive.org/web/20200803095432/https://cacm.acm.org/magazines/2014/8/177020-why-the-u-s-is-not-ready-for-mandatory-cs-education/fulltext)
+- ["If you want to teach kids CS first teach the adults"](https://web.archive.org/web/20150119195219/http://m.cacm.acm.org/blogs/blog-cacm/176696-if-you-want-to-teach-kids-cs-first-teach-the-adults/fulltext)
+- ["Why the US is not ready for mandatory CS education"](https://web.archive.org/web/20200803095432/https://cacm.acm.org/magazines/2014/8/177020-why-the-u-s-is-not-ready-for-mandatory-cs-education/fulltext)
