@@ -21,7 +21,7 @@ class BuildPosts {
 
   constructor(options = {}) {
     this.options = { ...BuildPosts.defaultOptions, ...options };
-    this.posts = [];
+    this.posts = {};
   }
 
   fromMarkdown(markdown) {
@@ -258,7 +258,7 @@ class BuildPosts {
           filenames.forEach((filename) => {
             const post = this.parseInputMarkdown(filename);
             if (post) {
-              this.posts.push(post);
+              this.posts[post["filename"]] = post;
               compilation.emitAsset(
                 `${this.options.to}${this.options.to[this.options.to.length - 1] === "/" ? "" : "/"}${
                   post["filename"]
@@ -281,7 +281,7 @@ class BuildPosts {
         },
         (assets) => {
           var posts = [];
-          this.posts.forEach((post) => {
+          Object.values(this.posts).forEach((post) => {
             posts.push(this.removeBody(post));
           });
           posts = posts.sort((lhs, rhs) => {
@@ -303,7 +303,7 @@ class BuildPosts {
         },
         (assets) => {
           var posts = [];
-          this.posts.forEach((post) => {
+          Object.values(this.posts).forEach((post) => {
             posts.push(this.removeBody(post));
           });
           posts = posts.sort((lhs, rhs) => {
