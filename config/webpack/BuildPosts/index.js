@@ -1,14 +1,215 @@
-const { Readable } = require('node:stream');
+const fs = require("fs");
+const marked = require("marked");
+
+const { globSync } = require("glob");
+const URL = require("url").URL;
+
+function removePrefix(str, prefix) {
+  if (str.startsWith(prefix)) {
+    return str.slice(prefix.length);
+  } else {
+    return str;
+  }
+}
 
 class BuildPosts {
   static defaultOptions = {
-    posts: '_posts',
-    indexFile: '_posts/index.json',
-    feedFile: 'feed.xml',
+    indexFile: "_posts/index.json",
+    feedFile: "feed.xml",
+    configFile: "blog.json",
   };
 
   constructor(options = {}) {
     this.options = { ...BuildPosts.defaultOptions, ...options };
+    this.posts = [];
+  }
+
+  fromMarkdown(markdown) {
+    const html = marked.parse(markdown);
+    return html;
+  }
+
+  parseInputMarkdown(filename) {
+    const fileContents = fs.readFileSync(filename);
+    const fileContentsStr = fileContents.toString();
+    const fileLines = fileContentsStr.split("\n");
+
+    const ParserState = Object.freeze({
+      INITIAL: 0,
+      PARSING_METADATA: 1,
+      PARSING_MULTI_LINE_VALUE: 2,
+      PARSING_ARRAY: 3,
+      PARSING_BODY: 4,
+      DONE: 5,
+      ERROR: 6,
+    });
+    var nonEmptyLineSeen = false;
+    var parserState = ParserState.INITIAL;
+    var parsingValueName = "";
+    var parsingValue;
+    var post = {};
+    var moreMarkerFound = false;
+
+    fileLines.forEach((line) => {
+      if (parserState == ParserState.PARSING_BODY || line.length > 0) {
+        const startsWithWhiteSpace = line !== line.trimStart();
+        if (!startsWithWhiteSpace && parserState == ParserState.PARSING_MULTI_LINE_VALUE) {
+          post[parsingValueName] = parsingValue.join("\n");
+          parserState = ParserState.PARSING_METADATA;
+        } else if (!line.startsWith("- ") && parserState == ParserState.PARSING_ARRAY) {
+          post[parsingValueName] = parsingValue;
+          parserState = ParserState.PARSING_METADATA;
+        }
+        switch (parserState) {
+          case ParserState.INITIAL:
+            if (!nonEmptyLineSeen && line.trimEnd() === "---") {
+              parserState = ParserState.PARSING_METADATA;
+            }
+            break;
+          case ParserState.PARSING_METADATA:
+            if (line.trimEnd() === "---") {
+              parserState = ParserState.PARSING_BODY;
+            } else if (!startsWithWhiteSpace) {
+              const colonIndex = line.indexOf(":");
+              if (colonIndex < 0) {
+                parserState = ParserState.ERROR;
+              } else {
+                parsingValueName = line.slice(0, colonIndex).trim();
+                parsingValue = line.slice(colonIndex + 1).trim();
+                if (parsingValue === "|") {
+                  parserState = ParserState.PARSING_MULTI_LINE_VALUE;
+                  parsingValue = [];
+                } else if (parsingValue.length === 0) {
+                  parserState = ParserState.PARSING_ARRAY;
+                  parsingValue = [];
+                } else {
+                  post[parsingValueName] = parsingValue;
+                }
+              }
+            } else {
+              parserState = ParserState.ERROR;
+            }
+            break;
+          case ParserState.PARSING_MULTI_LINE_VALUE:
+            line = line.trim();
+            parsingValue.push(line);
+            break;
+          case ParserState.PARSING_ARRAY:
+            line = line.slice(2);
+            line = line.trim();
+            parsingValue.push(line);
+            break;
+          case ParserState.PARSING_BODY:
+            if (!Object.keys(post).includes("body")) {
+              post["body"] = [];
+            }
+            if (line.includes("<!--more-->") && !Object.keys(post).includes("excerpt") && !moreMarkerFound) {
+              const finalLine = line.slice(0, line.indexOf("<!--more-->"));
+              post["excerpt"] = post["body"].join("\n") + finalLine;
+              moreMarkerFound = true;
+            }
+            post["body"].push(line);
+        }
+        nonEmptyLineSeen = true;
+      }
+    });
+    if (parserState != ParserState.ERROR) {
+      let fromDirName = this.options.from;
+      if (fromDirName[0] !== "/") {
+        fromDirName =
+          this.options.paths.appPath +
+          (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
+          fromDirName;
+      }
+      if (fromDirName[fromDirName.length - 1] !== "/") {
+        fromDirName += "/";
+      }
+      post["filename"] = removePrefix(filename, fromDirName);
+      if (!Object.keys(post).includes["date"]) {
+        const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+        const found = post["filename"].match(re);
+        post["date"] = new Date(Date.parse(`${found[1]}-${found[2]}-${found[3]}`)).toISOString();
+      }
+      if (!Object.keys(post).includes("slug")) {
+        post["slug"] = removePrefix(post["filename"], `${post["date"]}-`).toLowerCase();
+        post["slug"] = post["slug"].slice(0, post["slug"].indexOf("."));
+      }
+      post["body"] = post["body"].join("\n");
+      if (!Object.keys(post).includes("excerpt")) {
+        post["excerpt"] = post["body"];
+      }
+      return post;
+    } else {
+      console.error(`Failed to parse markdown header for ${filename}`);
+      return null;
+    }
+  }
+
+  removeBody(_post) {
+    let post = JSON.parse(JSON.stringify(_post));
+    delete post["body"];
+    return post;
+  }
+
+  generateIndexJson(RawSource, compilation, posts) {
+    const indexContent = JSON.stringify(posts);
+    compilation.emitAsset(this.options.indexFile, new RawSource(indexContent));
+  }
+
+  generateFeedXml(RawSource, compilation, posts) {
+    let configFileName = this.options.configFile;
+    if (configFileName[0] !== "/") {
+      configFileName =
+        this.options.paths.appPath +
+        (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
+        configFileName;
+    }
+    const config = JSON.parse(fs.readFileSync(configFileName));
+
+    var publicUrl = this.options.paths.publicUrlOrPath;
+    if (Object.hasOwn(config, "baseUrl")) {
+      publicUrl = config.baseUrl;
+    } else {
+      if (!URL.canParse(publicUrl)) {
+        console.error(
+          `Can't find base URL. Set 'baseUrl' in the config JSON (${configFileName}) -- Not generating feed XML`
+        );
+        return;
+      }
+    }
+
+    var feedContent = '<feed xmlns="http://www.w3.org/2005/Atom">';
+    feedContent += '<generator uri="https://github.com/VlinderSoftware/phoenix.ui">Phoenix.ui</generator>';
+    feedContent += `<link href="${publicUrl}${
+      publicUrl[publicUrl.length - 1] === "/" ? "" : "/"
+    }feed.xml" rel="self" type="application/atom+xml"/>`;
+    feedContent += `<link href="${publicUrl}" rel="alternate" type="text/html"/>`;
+    feedContent += `<updated>${new Date().toISOString()}</updated>`;
+    feedContent += `<id>${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}${this.options.feedFile}</id>`;
+    feedContent += `<title type="html">${config.title}</title>`;
+    feedContent += `<subtitle>${config.subtitle}</subtitle>`;
+
+    for (const post of posts) {
+      feedContent += `<entry>`;
+      feedContent += `<title type="html">${post["title"]}</title>`;
+      const permalink = Object.keys(post).includes("permalink")
+        ? post["permalink"]
+        : `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}blog/${post["date"].replaceAll("-", "/")}/${
+            post["slug"]
+          }`;
+      feedContent += `<link href="${permalink}"></link>`;
+      feedContent += `<published>${new Date(Date.parse(post["date"])).toISOString()}</published>`;
+      feedContent += `<updated>${new Date(Date.parse(post["date"])).toISOString()}</updated>`;
+      feedContent += `<id>${permalink}</id>`;
+      feedContent += `<content type="html" xml:base="${permalink}"><![CDATA[ ${this.fromMarkdown(
+        post["excerpt"]
+      )} ]]></content>`;
+      feedContent += `</entry>`;
+    }
+
+    feedContent += `</feed>`;
+
+    compilation.emitAsset(this.options.feedFile, new RawSource(feedContent));
   }
 
   apply(compiler) {
@@ -28,7 +229,48 @@ class BuildPosts {
     // Tapping to the "thisCompilation" hook in order to further tap
     // to the compilation process on an earlier stage.
     compiler.hooks.thisCompilation.tap(pluginName, (compilation) => {
-      // Tapping to the assets processing pipeline on a specific stage.
+      // parse the input markdown and generate the asset versions
+      compilation.hooks.processAssets.tap(
+        {
+          name: pluginName,
+          stage: Compilation.PROCESS_ASSETS_STAGE_ADDITIONAL,
+        },
+        (assets) => {
+          // fetch all the markdown files in the input directory
+          // make sure it's a directory
+
+          let fromDirName = this.options.from;
+          if (fromDirName[0] !== "/") {
+            fromDirName =
+              this.options.paths.appPath +
+              (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
+              fromDirName;
+          }
+          if (!fs.statSync(fromDirName).isDirectory()) {
+            console.error(`${this.options.from} is not a directory`);
+            throw new Error(`${this.options.from} is not a directory`);
+          }
+          if (fromDirName[fromDirName.length - 1] !== "/") {
+            fromDirName += "/";
+          }
+
+          const filenames = globSync(`${fromDirName}*.{md,markdown}`);
+          filenames.forEach((filename) => {
+            const post = this.parseInputMarkdown(filename);
+            if (post) {
+              this.posts.push(post);
+              compilation.emitAsset(
+                `${this.options.to}${this.options.to[this.options.to.length - 1] === "/" ? "" : "/"}${
+                  post["filename"]
+                }`,
+                new RawSource(post["body"])
+              );
+            }
+          });
+        }
+      );
+
+      // create the index
       compilation.hooks.processAssets.tap(
         {
           name: pluginName,
@@ -39,100 +281,36 @@ class BuildPosts {
         },
         (assets) => {
           var posts = [];
-          
-          Object.keys(assets).forEach((assetName) => {
-            if (assetName.startsWith(this.options.posts)) {
-              const asset = assets[assetName];
-              const buffer = asset.buffer();
-              const str = buffer.toString();
-              const lines = str.split('\n');
-
-              const ParserState = Object.freeze({
-                INITIAL: 0,
-                PARSING_METADATA: 1,
-                PARSING_MULTI_LINE_VALUE : 2,
-                PARSING_ARRAY: 3,
-                DONE: 4,
-                ERROR: 5,
-              });
-              var nonEmptyLineSeen = false;
-              var parserState = ParserState.INITIAL;
-              var parsingValueName = '';
-              var parsingValue;
-              var parsing = {}
-
-              lines.forEach((line) => {
-                if (line.length > 0) {
-                  const startsWithWhiteSpace = line !== line.trimStart();
-                  if (!startsWithWhiteSpace && parserState == ParserState.PARSING_MULTI_LINE_VALUE) {
-                    parsing[parsingValueName] = parsingValue.join('\n');
-                    parserState = ParserState.PARSING_METADATA;
-                  }
-                  else if (!line.startsWith('- ') && parserState == ParserState.PARSING_ARRAY) {
-                    parsing[parsingValueName] = parsingValue;
-                    parserState = ParserState.PARSING_METADATA;
-                  }
-                  switch (parserState) {
-                    case ParserState.INITIAL:
-                      if (!nonEmptyLineSeen && (line.trimEnd() === '---')) {
-                        parserState = ParserState.PARSING_METADATA;
-                      }
-                      break;
-                    case ParserState.PARSING_METADATA :
-                      if (line.trimEnd() === '---') {
-                        parserState = ParserState.DONE;
-                      }
-                      else if (!startsWithWhiteSpace) {
-                        const colonIndex = line.indexOf(':');
-                        if (colonIndex < 0) {
-                          parserState = ParserState.ERROR;
-                        }
-                        else {
-                          parsingValueName = line.slice(0, colonIndex).trim();
-                          parsingValue = line.slice(colonIndex + 1).trim();
-                          if (parsingValue === '|') {
-                            parserState = ParserState.PARSING_MULTI_LINE_VALUE;
-                            parsingValue = [];
-                          }
-                          else if (parsingValue.length === 0) {
-                            parserState = ParserState.PARSING_ARRAY;
-                            parsingValue = [];
-                          }
-                          else {
-                            parsing[parsingValueName] = parsingValue;
-                          }
-                        }
-                      }
-                      else {
-                        parserState = ParserState.ERROR;
-                      }
-                      break;
-                    case ParserState.PARSING_MULTI_LINE_VALUE :
-                      line = line.trim();
-                      parsingValue.push(line);
-                      break;
-                    case ParserState.PARSING_ARRAY :
-                      line = line.slice(2);
-                      line = line.trim();
-                      parsingValue.push(line);
-                      break;
-                    }
-                  nonEmptyLineSeen = true;
-                }
-              });
-              parsing['filename'] = assetName;
-              posts.push(parsing);
-            }
+          this.posts.forEach((post) => {
+            posts.push(this.removeBody(post));
+          });
+          posts = posts.sort((lhs, rhs) => {
+            return rhs["filename"].localeCompare(lhs["filename"]);
           });
 
-          const indexContent = JSON.stringify(posts);
+          this.generateIndexJson(RawSource, compilation, posts);
+        }
+      );
 
-          // Adding new asset to the compilation, so it would be automatically
-          // generated by the webpack in the output directory.
-          compilation.emitAsset(
-            this.options.indexFile,
-            new RawSource(indexContent)
-          );
+      // create the feed XML
+      compilation.hooks.processAssets.tap(
+        {
+          name: pluginName,
+
+          // Using one of the later asset processing stages to ensure
+          // that all assets were already added to the compilation by other plugins.
+          stage: Compilation.PROCESS_ASSETS_STAGE_SUMMARIZE,
+        },
+        (assets) => {
+          var posts = [];
+          this.posts.forEach((post) => {
+            posts.push(this.removeBody(post));
+          });
+          posts = posts.sort((lhs, rhs) => {
+            return rhs["filename"].localeCompare(lhs["filename"]);
+          });
+
+          return this.generateFeedXml(RawSource, compilation, posts);
         }
       );
     });
