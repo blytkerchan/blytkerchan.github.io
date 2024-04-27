@@ -22,6 +22,15 @@ class BuildPosts {
   constructor(options = {}) {
     this.options = { ...BuildPosts.defaultOptions, ...options };
     this.posts = {};
+
+    let configFileName = this.options.configFile;
+    if (configFileName[0] !== "/") {
+      configFileName =
+        this.options.paths.appPath +
+        (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
+        configFileName;
+    }
+    this.config = JSON.parse(fs.readFileSync(configFileName));
   }
 
   fromMarkdown(markdown) {
@@ -126,17 +135,31 @@ class BuildPosts {
       }
       post["filename"] = removePrefix(filename, fromDirName);
       if (!Object.keys(post).includes["date"]) {
-        const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+        const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
         const found = post["filename"].match(re);
         post["date"] = new Date(Date.parse(`${found[1]}-${found[2]}-${found[3]}`)).toISOString();
       }
       if (!Object.keys(post).includes("slug")) {
-        post["slug"] = removePrefix(post["filename"], `${post["date"]}-`).toLowerCase();
+        const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+        const found = post["filename"].match(re);
+        post["slug"] = removePrefix(post["filename"], `${found[0]}-`).toLowerCase();
         post["slug"] = post["slug"].slice(0, post["slug"].indexOf("."));
       }
       post["body"] = post["body"].join("\n");
       if (!Object.keys(post).includes("excerpt")) {
         post["excerpt"] = post["body"];
+      }
+      if (!Object.keys(post).includes("permalink")) {
+        const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+        const found = post["filename"].match(re);
+        var publicUrl = this.getPublicUrl();
+        post["permalink"] = `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}blog/${found[1]}/${
+          found[2]
+        }/${found[3]}/${post["slug"]}`;
+        post["locallink"] = `/blog/${found[1]}/${found[2]}/${found[3]}/${post["slug"]}`;
+      } else {
+        console.warn(`${filename} contained a permalink - YMMV`);
+        post["locallink"] = post["permalink"];
       }
       return post;
     } else {
@@ -156,27 +179,22 @@ class BuildPosts {
     compilation.emitAsset(this.options.indexFile, new RawSource(indexContent));
   }
 
-  generateFeedXml(RawSource, compilation, posts) {
-    let configFileName = this.options.configFile;
-    if (configFileName[0] !== "/") {
-      configFileName =
-        this.options.paths.appPath +
-        (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
-        configFileName;
-    }
-    const config = JSON.parse(fs.readFileSync(configFileName));
-
+  getPublicUrl() {
     var publicUrl = this.options.paths.publicUrlOrPath;
-    if (Object.hasOwn(config, "baseUrl")) {
-      publicUrl = config.baseUrl;
+    if (Object.hasOwn(this.config, "baseUrl")) {
+      publicUrl = this.config.baseUrl;
     } else {
       if (!URL.canParse(publicUrl)) {
         console.error(
-          `Can't find base URL. Set 'baseUrl' in the config JSON (${configFileName}) -- Not generating feed XML`
+          `Can't find base URL. Set 'baseUrl' in the config JSON (${this.options.configFile}) -- Not generating feed XML`
         );
         return;
       }
     }
+    return publicUrl;
+  }
+  generateFeedXml(RawSource, compilation, posts) {
+    var publicUrl = this.getPublicUrl();
 
     var feedContent = '<feed xmlns="http://www.w3.org/2005/Atom">';
     feedContent += '<generator uri="https://github.com/VlinderSoftware/phoenix.ui">Phoenix.ui</generator>';
@@ -186,8 +204,8 @@ class BuildPosts {
     feedContent += `<link href="${publicUrl}" rel="alternate" type="text/html"/>`;
     feedContent += `<updated>${new Date().toISOString()}</updated>`;
     feedContent += `<id>${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}${this.options.feedFile}</id>`;
-    feedContent += `<title type="html">${config.title}</title>`;
-    feedContent += `<subtitle>${config.subtitle}</subtitle>`;
+    feedContent += `<title type="html">${this.config.title}</title>`;
+    feedContent += `<subtitle>${this.config.subtitle}</subtitle>`;
 
     for (const post of posts) {
       feedContent += `<entry>`;
