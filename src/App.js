@@ -13,6 +13,8 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import Error from "./pages/Error";
 import Home from "./pages/Home";
+import Posts from "./services/Posts";
+import environment from "./config/environment";
 
 import Layout from "./layout/Layout";
 
@@ -37,7 +39,7 @@ const router = createHashRouter([
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <Posts env={environment} />,
       },
       {
         path: "about",
