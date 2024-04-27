@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { RouterProvider } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -6,64 +7,11 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "./App.css";
 
-import mainMenu from "./config/mainMenu";
-import userMenu from "./config/userMenu";
-
-import { createHashRouter, RouterProvider } from "react-router-dom";
-
-import Error from "./pages/Error";
-import Home from "./pages/Home";
-import Posts from "./services/Posts";
 import environment from "./config/environment";
-
-import Layout from "./layout/Layout";
 
 import Toaster from "./components/Toaster";
 
-// Pages to lazy-load
-const Customers = React.lazy(() => import("./pages/Customers"));
-const Dashboard = React.lazy(() => import("./pages/Dashboard"));
-const Orders = React.lazy(() => import("./pages/Orders"));
-const Page = React.lazy(() => import("./pages/Page"));
-const Products = React.lazy(() => import("./pages/Products"));
-
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <Layout mainMenu={mainMenu} userMenu={userMenu} />,
-    errorElement: (
-      <Layout mainMenu={mainMenu} userMenu={userMenu}>
-        <Error />
-      </Layout>
-    ),
-    children: [
-      {
-        path: "",
-        element: <Posts env={environment} />,
-      },
-      {
-        path: "about",
-        element: <Page name="about" />,
-      },
-      {
-        path: "customers",
-        element: <Customers />,
-      },
-      {
-        path: "dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "orders",
-        element: <Orders />,
-      },
-      {
-        path: "products",
-        element: <Products />,
-      },
-    ],
-  },
-]);
+import router from "./lib/router";
 
 const App = (props) => {
   useEffect(() => {
@@ -78,7 +26,7 @@ const App = (props) => {
   return (
     <>
       <Toaster />
-      <RouterProvider router={router} />
+      <RouterProvider router={router(environment)} />
     </>
   );
 };

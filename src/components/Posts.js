@@ -1,11 +1,21 @@
+import React, { useEffect, useState } from "react";
+
 const { t } = require("i18next");
 
-const PostList = (props) => {
+const Posts = ({ env }) => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch(env.indexEndpoint)
+      .then((res) => res.json())
+      .then((posts) => setPosts(posts));
+  }, [env.indexEndpoint]);
+
   return (
     <>
       <h2 className="post-list-heading">{t("Posts")}</h2>
       <ul className="post-list">
-        {props.posts.map(({ title, permalink, locallink, excerpt, date }) => (
+        {posts.map(({ title, permalink, locallink, excerpt, date }) => (
           <li key={permalink}>
             <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
             <h3>
@@ -21,4 +31,4 @@ const PostList = (props) => {
   );
 };
 
-export default PostList;
+export default Posts;
