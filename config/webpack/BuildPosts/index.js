@@ -16,7 +16,7 @@ class BuildPosts {
   static defaultOptions = {
     indexFile: "_posts/index.json",
     feedFile: "feed.xml",
-    configFile: "blog.json",
+    configFile: "package.json",
   };
 
   constructor(options = {}) {
@@ -30,7 +30,10 @@ class BuildPosts {
         (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
         configFileName;
     }
-    this.config = JSON.parse(fs.readFileSync(configFileName));
+    this.config = JSON.parse(fs.readFileSync(configFileName))["blog"];
+    if (!Object.keys(this.config).includes("useHashRouting")) {
+      this.config["useHashRouting"] = false;
+    }
   }
 
   fromMarkdown(markdown) {
@@ -60,16 +63,17 @@ class BuildPosts {
     var moreMarkerFound = false;
 
     fileLines.forEach((line) => {
-      if (parserState == ParserState.PARSING_BODY || line.length > 0) {
+      if (parserState === ParserState.PARSING_BODY || line.length > 0) {
         const startsWithWhiteSpace = line !== line.trimStart();
-        if (!startsWithWhiteSpace && parserState == ParserState.PARSING_MULTI_LINE_VALUE) {
+        if (!startsWithWhiteSpace && parserState === ParserState.PARSING_MULTI_LINE_VALUE) {
           post[parsingValueName] = parsingValue.join("\n");
           parserState = ParserState.PARSING_METADATA;
-        } else if (!line.startsWith("- ") && parserState == ParserState.PARSING_ARRAY) {
+        } else if (!line.startsWith("- ") && parserState === ParserState.PARSING_ARRAY) {
           post[parsingValueName] = parsingValue;
           parserState = ParserState.PARSING_METADATA;
         }
         switch (parserState) {
+          default:
           case ParserState.INITIAL:
             if (!nonEmptyLineSeen && line.trimEnd() === "---") {
               parserState = ParserState.PARSING_METADATA;
@@ -122,7 +126,7 @@ class BuildPosts {
         nonEmptyLineSeen = true;
       }
     });
-    if (parserState != ParserState.ERROR) {
+    if (parserState !== ParserState.ERROR) {
       let fromDirName = this.options.from;
       if (fromDirName[0] !== "/") {
         fromDirName =
@@ -153,10 +157,12 @@ class BuildPosts {
         const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
         const found = post["filename"].match(re);
         var publicUrl = this.getPublicUrl();
-        post["permalink"] = `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}blog/${found[1]}/${
-          found[2]
-        }/${found[3]}/${post["slug"]}`;
-        post["locallink"] = `/blog/${found[1]}/${found[2]}/${found[3]}/${post["slug"]}`;
+        post["permalink"] = `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}${
+          this.config["useHashRouting"] ? "#/" : ""
+        }blog/${found[1]}/${found[2]}/${found[3]}/${post["slug"]}`;
+        post["locallink"] = `${this.config["useHashRouting"] ? "#/" : ""}/blog/${found[1]}/${found[2]}/${found[3]}/${
+          post["slug"]
+        }`;
       } else {
         console.warn(`${filename} contained a permalink - YMMV`);
         post["locallink"] = post["permalink"];
