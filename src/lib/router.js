@@ -6,7 +6,7 @@ import userMenu from "../config/userMenu";
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 import Error from "../pages/Error";
-import Posts from "../components/Posts";
+import Posts from "../pages/Posts";
 
 import Layout from "../layout/Layout";
 // Pages to lazy-load

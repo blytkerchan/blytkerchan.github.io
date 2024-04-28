@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Markdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 const { t } = require("i18next");
 
@@ -6,6 +8,8 @@ const Posts = ({ env }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    document.title = env.title;
+
     fetch(env.indexEndpoint)
       .then((res) => res.json())
       .then((posts) => setPosts(posts));
@@ -19,11 +23,18 @@ const Posts = ({ env }) => {
           <li key={permalink}>
             <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
             <h3>
-              <a className="post-link" href={locallink}>
+              <Link className="post-link" to={locallink}>
                 {title}
-              </a>
+              </Link>
             </h3>
-            {excerpt}
+
+            <Markdown
+              components={{
+                a: (props) => <Link to={props.href}>{props.children}</Link>,
+              }}
+            >
+              {excerpt}
+            </Markdown>
           </li>
         ))}
       </ul>
