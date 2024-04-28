@@ -11,6 +11,7 @@ tags:
   - brainf---
   - SPI
   - VHDL
+excerpt: While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is. My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.
 ---
 
 While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is[^1]. My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.

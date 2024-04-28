@@ -11,6 +11,12 @@ categories:
   - Software Testing
 tags:
   - open source
+excerpt: |
+  There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug.
+
+  Then there's the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in the Linux kernel.
+
+  So, is there a systemic problem with Open Source software? Does proprietary software have the same problem?
 ---
 
 There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug[^1].
@@ -20,8 +26,6 @@ There have been a number of well-publicized security flaws in open source softwa
 Then there's the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in the Linux kernel.
 
 So, is there a systemic problem with Open Source software? Does proprietary software have the same problem?
-
-<!--more-->
 
 Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost[^2] and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where $0 \le M \le cN$.
 
@@ -42,6 +46,7 @@ In recent years, with the advent of the Internet and with Open Source code becom
 The fact that Open Source software is Open Source software means that if problems are found in the software, those problems are not hidden.
 
 Let's have a look at all unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014 so far (there aren't that many):
+
 <table >
 CVE entries for unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014
 
@@ -52,7 +57,6 @@ CVE entries for unknown vulnerabilities with unknown impacts and/or unknown atta
 
          <tbody >
             <tr >
-
 
 <td width="150" >
                   [CVE-2014-0462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0462)

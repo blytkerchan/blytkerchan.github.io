@@ -24,13 +24,10 @@ Given a `query` routine that takes a name and may return several, write a routin
 
 You may assume the following:
 
-1. Calls to `query` are idempotent[^1].
+1. Calls to `query` are idempotent (So you really do need to call them only once).
 2. There is a finite number of values for names.
 3. Names are less-than-comparable value-types (i.e. you can store them in an `std::set`) and are not expensive to copy
-4. `query` results never contain their argument[^2].
-
-[^1]: So you really do need to call them only once.
-[^2]: I.e. for the case at hand, we're querying a directed acyclic graph, so our first argument will never be seen in any of the `query` results, although any given value may appear more than once in `query` results.
+4. `query` results never contain their argument (I.e. for the case at hand, we're querying a directed acyclic graph, so our first argument will never be seen in any of the `query` results, although any given value may appear more than once in `query` results).
 
 <!--more-->
 

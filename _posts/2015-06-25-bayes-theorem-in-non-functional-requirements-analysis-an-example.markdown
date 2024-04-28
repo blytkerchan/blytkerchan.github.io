@@ -16,6 +16,7 @@ tags:
   - Bayes' theorem
   - non-functional requirements
   - requirements analysis
+excerpt: I am not a mathematician, but I do like Bayes' theorem for non-functional requirements analysis -- and I'd like to present an example of its application
 ---
 
 <img src="/assets/2015/06/BayesTheorem.png" alt="Bayes' theorem">
@@ -23,8 +24,6 @@ tags:
 I am not a mathematician, but I do like Bayes' theorem for non-functional requirements analysis -- and I'd like to present an example of its application[^1].
 
 [^1]: I was actually going to give a _theoretical_ example of availability requirements, but then a real example popped up...
-
-<!--more-->
 
 Recently, a question was brought to the DNP technical committee about the application of a part of section 13 of IEEE Standard 1815-2012 (the standard that defines DNP). Section 13 explains how to use DNP over TCP/IP, as it was originally designed to be used over serial links. It basically says "pretend it's a serial link", and "here's how you do TCP networking".
 
