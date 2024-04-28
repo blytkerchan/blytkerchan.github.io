@@ -3,20 +3,20 @@ author: rlc
 comments: true
 date: 2010-07-21 02:49:41+00:00
 layout: post
-permalink: /blog/2010/07/on-the-importance-of-coverage-profiling/
-slug: on-the-importance-of-coverage-profiling
 title: On the Importance of Coverage Profiling
 wordpress_id: 844
 categories:
-- Opinions
-- Software Development
+  - Opinions
+  - Software Development
 tags:
-- Posts that need to be re-tagged (WIP)
-- profiling
+  - Posts that need to be re-tagged (WIP)
+  - profiling
 ---
 
 Coverage profiling allows you to see which parts of the code have been run and are especially useful when unit-testing. Here's an anecdote to show just how important they can be.
+
 <!--more-->
+
 Today, I've finished writing another generic implementation of an abstract data type. The type in question allowed for a lot of corner-cases because of the fact that the data stored in it could be of variable size, so there was really no way to predict some of the states of the ADT from one operation to another.
 
 Those of you who are familiar with my coding style know that I tend to be rigorous when considering the cases that can be handled by my code. One of the rules I've adopted from a colleague of mine ([Marc Bouthot](http://www.facebook.com/marc.bouthot), an excellent C++ programmer) is that every `if` should have an `else` which should at least contain a comment if it doesn't do anything. This forces the programmer to give at least some thought to the possible states of the program and the possible values of the things he's looking at. It doesn't automatigically make all bugs disappear, though, so you still need tests.

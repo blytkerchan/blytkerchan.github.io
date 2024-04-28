@@ -3,17 +3,15 @@ author: rlc
 comments: true
 date: 2013-09-05 02:34:41+00:00
 layout: post
-permalink: /blog/2013/09/sometimes-your-right-hand-should-know-what-your-left-hand-is-doing/
-slug: sometimes-your-right-hand-should-know-what-your-left-hand-is-doing
 title: Sometimes, your right hand should know what your left hand is doing
 wordpress_id: 2349
 categories:
-- C &amp; C++
-- Software Development
+  - C &amp; C++
+  - Software Development
 tags:
-- alignment
-- code annotation
-- compiler bugs
+  - alignment
+  - code annotation
+  - compiler bugs
 ---
 
 Especially if you're a compiler...
@@ -28,7 +26,6 @@ A chunk of application-layer code I wrote was calling a driver I also wrote to g
 
 The code looks roughly like this:
 
-    
     Notification Blah_getNotification(HANDLE h)
     {
         Notification notification;
@@ -38,34 +35,23 @@ The code looks roughly like this:
         return notification;
     }
 
-
-
 This function was called from two different call sites. The first one didn't pose a problem the second one, however, crashed due to what appeared to be a corrupted stack.
 
 Here's what I checked, in order:
 
+1. still crashed when the call to `DeviceIoControl` was commented out  
+   would have been surprising to see the driver corrupt memory from user land, but stranger things have happened...
 
+2. all headers were up-to-date -- same between OS and user land
 
-	
-  1. still crashed when the call to `DeviceIoControl` was commented out  
-would have been surprising to see the driver corrupt memory from user land, but stranger things have happened...
+3. structure was properly packed: compiler had no choice w.r.t. alignment or padding  
+   this line of thought got me on the right track
 
-	
-  2. all headers were up-to-date -- same between OS and user land
+4. in disassembly, the amount of stack allocated corresponded to the size of the structure in both the calling function and the wrapper around `DeviceIoControl` (above)
 
-	
-  3. structure was properly packed: compiler had no choice w.r.t. alignment or padding  
-this line of thought got me on the right track
+5. the `return` statement translated to a `rep movs` instruction that had it repeat `0x68` times -- corresponding to the size of the structure divided by 4, which was right
 
-	
-  4. in disassembly, the amount of stack allocated corresponded to the size of the structure in both the calling function and the wrapper around `DeviceIoControl` (above)
-
-	
-  5. the `return` statement translated to a `rep movs` instruction that had it repeat `0x68` times -- corresponding to the size of the structure divided by 4, which was right
-
-	
-  6. the stack was being crushed by exactly four bytes and the first four bytes of the structure in the calling function were left untouched
-
+6. the stack was being crushed by exactly four bytes and the first four bytes of the structure in the calling function were left untouched
 
 **_Aha!_**
 

@@ -3,23 +3,22 @@ author: rlc
 comments: true
 date: 2009-09-19 01:18:00+00:00
 layout: post
-permalink: /blog/2009/09/the-importance-of-proof-of-concepts/
-slug: the-importance-of-proof-of-concepts
 title: The Importance of Proof-Of-Concepts
 wordpress_id: 194
 categories:
-- Business
-- C &amp; C++
-- Opinions
-- Reasons
-- Software
-- Software Design
-- Technology
+  - Business
+  - C &amp; C++
+  - Opinions
+  - Reasons
+  - Software
+  - Software Design
+  - Technology
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 Any problem is an invitation to find a solution.
+
 <!--more-->
 
 Any solution - at least in my line of work - is an amalgam of concrete
@@ -28,20 +27,14 @@ may or may not meet the requirements just like any of those concepts may
 or may not be the right one for the situation at hand. You therefore need
 to prove two things:
 
+1. the solution proposed is the solution to the right problem
 
-
-  1. the solution proposed is the solution to the right problem
-
-
-  2. the solution proposed solves the problem
+2. the solution proposed solves the problem
 
 The solution being a concrete implementation of an abstract concept, needs
 to be _proven_. Hence, you need a **Proof of Concept**.
 
-
-
 ## Why? When? What? How? Who?
-
 
 These are the five basic questions you need to have answered before being
 convinced of _anything_ - at least, I need to have answers to these
@@ -50,10 +43,7 @@ answers to each of these whenever I try to convince someone of anything. So,
 I will now try to answer each of these questions to convince you of the
 importance of proofs of concepts.
 
-
-
 ### Why?
-
 
 Ultimately, a proof of concept saves you money: it saves time because you don't
 spend more time than necessary on a concept that you can't prove; it saves more
@@ -84,10 +74,7 @@ problem at hand. It should, however, be significantly less expensive to
 develop than the solution itself, lest it not serve its purpose as a time and
 money saver.
 
-
-
 ### When?
-
 
 "Before it's too late, but no earlier".
 
@@ -101,19 +88,13 @@ prove the obvious).
 
 "When in doubt, prove it!"
 
-
-
 ### What?
-
 
 Some things are not concepts and should not be treated as such; a thing does
 not become a concept just by sticking "conceptually" before it; and negatives
 cannot be proven.
 
-
-
 ### How?
-
 
 Say you want to use MySQL in a project written in C++, but you want the project
 to be closed-source and you don't want to pay a license to MySQL AB (or Sun
@@ -135,22 +116,18 @@ object". Call the closed-source object "Manager" and the open-source object
 
 You now have the following assertions:
 
+- "ODBC allows us to perform SQL queries from within the C++ code on a MySQL
+  database"
 
+- "ODBC meets the performance requirements for our solution"
 
-  * "ODBC allows us to perform SQL queries from within the C++ code on a MySQL
-database"
-
-
-  * "ODBC meets the performance requirements for our solution"
-
-
-  * "Using ODBC allows us to use the MySQL database without rendering our own
-source code GPL and without paying for a license"
-Each of these
-assertions is actually a _hypothesis_ and each of these hypotheses can
-be tested.. In order for a hypothesis to be tested, you need to be unable to
-falsify it - i.e. you need to try and fail at falsifying it; and you need to
-prove it practically feasible.
+- "Using ODBC allows us to use the MySQL database without rendering our own
+  source code GPL and without paying for a license"
+  Each of these
+  assertions is actually a _hypothesis_ and each of these hypotheses can
+  be tested.. In order for a hypothesis to be tested, you need to be unable to
+  falsify it - i.e. you need to try and fail at falsifying it; and you need to
+  prove it practically feasible.
 
 Our first assertions, "ODBC allows us to perform SQL queries from within the
 C++ code on a MySQL database" is one that can only be falsified by trying to
@@ -178,35 +155,25 @@ developed using the same standards as production code and should be conserved
 in a working form - i.e. it should, during the development of the production
 code, serve as your first tests.
 
-So, for a more concise answer to "How?": 
+So, for a more concise answer to "How?":
 
+1. Analyse your requirements
 
+2. Produce a set of assertions that are testable as hypotheses and of which
+   proof will be sufficient evidence that the proposed solution is valid for the
+   problem at hand
 
-  1. Analyse your requirements
+3. Find a solution that you think will meet the requirements
 
+4. Conceive of tests to test each assertion (and make sure all stakeholders
+   agree that the tests test the assertions adequately)
 
-  2. Produce a set of assertions that are testable as hypotheses and of which
-proof will be sufficient evidence that the proposed solution is valid for the
-problem at hand
-
-
-  3. Find a solution that you think will meet the requirements
-
-
-  4. Conceive of tests to test each assertion (and make sure all stakeholders
-agree that the tests test the assertions adequately)
-
-
-  5. Develop and perform the tests, stopping as soon as one of your assertions
-fail.
-
+5. Develop and perform the tests, stopping as soon as one of your assertions
+   fail.
 
 You should test the assertion most likely to fail first: you should _**Fail Fast**_.
 
-
-
 ### Who?
-
 
 The answer to this really depends on how you manage your human resources: as a
 software analyst, I'd say my responsibility is to come up with solutions to
@@ -227,10 +194,7 @@ usually win, as it should. Which allows for a shorter time to market depends
 on the complexity and risk of the concept: higher-risk or more complex concepts
 usually require more involvement from the analyst.
 
-
-
 ## Conclusions
-
 
 Proofs of concepts are important: they save time, they save money and they
 allow you to build your products on a solid foundation, with a better

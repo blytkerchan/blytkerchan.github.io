@@ -7,18 +7,16 @@ excerpt: |
   to where winter must come forth
   spring awaits summer
 layout: post
-permalink: /blog/2009/07/culture-and-working-internationally/
-slug: culture-and-working-internationally
 title: Culture and working internationally
 wordpress_id: 110
 categories:
-- Business
-- Opinions
+  - Business
+  - Opinions
 tags:
-- culture
-- emigration
-- travel
-- working internationally
+  - culture
+  - emigration
+  - travel
+  - working internationally
 ---
 
 Parts of culture are measurable: psychologists (mostly [Geert Hofstede](http://geert-hofstede.com/)) have come up with different indices to measure the behavior of peoples. These indices include the "Power Distance Index" (PDI), the "Individualism" index (IDV), the "Masculinity" index (MAS), the "Uncertainty Avoidance Index" (UAI) and the "Long Term Orientation" index (LTO).

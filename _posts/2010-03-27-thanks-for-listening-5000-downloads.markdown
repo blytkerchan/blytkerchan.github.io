@@ -3,14 +3,14 @@ author: rlc
 comments: true
 date: 2010-03-27 22:28:44+00:00
 layout: post
-permalink: /blog/2010/03/thanks-for-listening-5000-downloads/
-slug: thanks-for-listening-5000-downloads
 title: Thanks for listening - 5000+ downloads
 wordpress_id: 526
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
+
 <!--more-->
+
 Hello everyone,
 
 I just checked the podcast's statistics and noticed we passed the 5000 downloads mark this week. At the rate the podcast is now being downloaded, we'll have doubled that in another few weeks: each episode got downloaded, on average, almost 500 times!

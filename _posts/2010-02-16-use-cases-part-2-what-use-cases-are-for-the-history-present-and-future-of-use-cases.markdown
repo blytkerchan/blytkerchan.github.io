@@ -3,23 +3,22 @@ author: rlc
 comments: true
 date: 2010-02-16 21:40:09+00:00
 layout: post
-permalink: /blog/2010/02/use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases/
-slug: use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases
-title: 'Use-Cases Part 2: What Use-Cases Are For (The history, present and future of use-cases)'
+title: "Use-Cases Part 2: What Use-Cases Are For (The history, present and future of use-cases)"
 wordpress_id: 388
 categories:
-- C++ for the self-taught
-- Software Development
-- Use-Cases
+  - C++ for the self-taught
+  - Software Development
+  - Use-Cases
 tags:
-- Posts that need to be re-tagged (WIP)
-- use-cases
+  - Posts that need to be re-tagged (WIP)
+  - use-cases
 ---
 
 In the late 1980s and early 1990s, the "waterfall" software development model, which had been around (with that name) since the 1970s (see, for example, Boehm, B.W. Software engineering. IEEE 7~ans Comput. C-25, (1976), 1226-1241) was starting to be progressively "refined". When that happens, it usually means that there are problems with the model that need to be addressed - or the model will crumble and fall. Object-oriented programming was becoming more or less main-stream and early versions of C++ were cropping up. "Good practice" documents for programming on non-OO languages started to stress the use of OO-like APIs and soon enough, object-oriented programming would no longer be a mere buzzword.
+
 <!--more-->
 
-One article from that time, now two decades years old, was published in the Communications of the ACM journal: "The object-oriented systems life cycle" ([Volume 33, Issue 9  (September 1990), Pages: 142 - 159](http://portal.acm.org/citation.cfm?id=83880.84529&jmp=cit&coll=ACM&dl=ACM&CFID=1154054&CFTOKEN=24694148#CIT)). Though this article very clearly describes a waterfall process, it also very clearly states that the user of the final solution has something to say: "The analysis phase
+One article from that time, now two decades years old, was published in the Communications of the ACM journal: "The object-oriented systems life cycle" ([Volume 33, Issue 9 (September 1990), Pages: 142 - 159](http://portal.acm.org/citation.cfm?id=83880.84529&jmp=cit&coll=ACM&dl=ACM&CFID=1154054&CFTOKEN=24694148#CIT)). Though this article very clearly describes a waterfall process, it also very clearly states that the user of the final solution has something to say: "The analysis phase
 covers from the initiation of the project, through to users-needs analysis and feasibility study (...) In general, the problem is first defined and an analysis of the requirements of current and future users undertaken, usually by direct and indirect questioning and iterative discussion. (...) The users requirements
 definition is _in the language of the users_ so that this can be agreed upon by both the software engineer and the software user." This goes to show that the discussion between analyst/programmer and end-user is not new to iterative, "agile" programming schemes. The authors (Brian Henderson-Sellers and Julian M. Edwards, both from the University of New South Wales, Kensington, N.S.W., Australia) stress the point that this part of the life-cycle is still well-grounded in the "problem space": "At this requirements stage, however, the domain of interest is still very much that of the problem space. Not until we move from (real-world) systems analysis to (software) systems design do we move from the problem space to the solution space".
 
@@ -35,7 +34,6 @@ Use-cases, and their application, were developed throughout the 1990s and the fi
 
 Let's take a look at the [Agile Manifesto](http://agilemanifesto.org/):
 
-
 <blockquote>
 <h2>Manifesto for Agile Software Development</h2>
 We are uncovering better ways of developing<br/>
@@ -50,8 +48,6 @@ That is, while there is value in the items on<br/>
 the right, we value the items on the left more.<br/>
 <br/>
 Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, Dave Thomas</blockquote>
-
-
 
 While the Agile Manifesto could have been just another bold statement by a group of frustrated individuals, this bold statement started a (tranquil, velvet) revolution in the software development community. As agile development methods were developed, the focus shifted from managed teams to self-managed teams; from projects that were chronically late and never came out as the customer expected to projects that were developed with constant customer input. The customer was no longer kept in the dark but became, aside from a stakeholder of the process, an important source of information for the developers who, at first much to the dislike and the fear of management, had a chance to directly interact with the customers. This empowers both the customer and the developer - but takes quite a bit out of the hands of management until management embraces the idea and learns how to deal with it.
 

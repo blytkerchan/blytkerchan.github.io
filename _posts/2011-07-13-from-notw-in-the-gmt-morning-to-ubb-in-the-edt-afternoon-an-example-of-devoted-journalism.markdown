@@ -3,8 +3,6 @@ author: rlc
 comments: true
 date: 2011-07-13 01:17:42+00:00
 layout: post
-permalink: /blog/2011/07/from-notw-in-the-gmt-morning-to-ubb-in-the-edt-afternoon-an-example-of-devoted-journalism/
-slug: from-notw-in-the-gmt-morning-to-ubb-in-the-edt-afternoon-an-example-of-devoted-journalism
 title: "From #NotW in the GMT morning to #UBB in the EDT afternoon -- an example of devoted journalism"
 wordpress_id: 1570
 categories:

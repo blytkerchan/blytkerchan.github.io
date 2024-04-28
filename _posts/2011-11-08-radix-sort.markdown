@@ -3,20 +3,19 @@ author: rlc
 comments: true
 date: 2011-11-08 00:25:20+00:00
 layout: post
-permalink: /blog/2011/11/radix-sort/
-slug: radix-sort
 title: Radix Sort
 wordpress_id: 1714
 categories:
-- Interesting stuff
+  - Interesting stuff
 tags:
-- algorithms
-- sorting
+  - algorithms
+  - sorting
 ---
 
 ![image](/assets/2011/11/wpid-IMG_20111107_191330.jpg)
 
 The Radix Sort algorithm is a stable sorting algorithm that allows you to sort a series of numerical values in linear time. What amazed me, however, is that it is also a natural approach to sorting: this is a picture of my daughter applying a radix sort to her homework (without knowing it's a radix sort, of course, but after explaining the algorithm perfectly)!
+
 <!--more-->
 
 Radix sort is actually non-trivial to implement correctly, but apparently trivial enough to understand for an eight-year-old to describe correctly and implement on a piece of paper.

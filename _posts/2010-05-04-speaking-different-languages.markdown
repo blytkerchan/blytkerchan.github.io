@@ -3,16 +3,16 @@ author: rlc
 comments: true
 date: 2010-05-04 00:06:43+00:00
 layout: post
-permalink: /blog/2010/05/speaking-different-languages/
-slug: speaking-different-languages
 title: Speaking different languages
 wordpress_id: 590
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 As a dutchman living in Quebec, Canada - one of those parts of the world where francophones (french-speaking people) are surrounded by anglophones (english-speaking people) and yet thrive speaking french almost exclusively - I sometimes run into the "corner cases" of language related coding standards - e.g. the language comments are supposed to be written in.
+
 <!--more-->
+
 In the computing industry, english is the de-facto language of choice for correspondence and documentation. Maybe in some more-or-less-distant future that will be mandarin, but I kinda doubt it. Most source files are presented to the compiler in ASCII, a 7-bit encoding that encodes most of the Latin alphabet - i.e. the subset used in english - and is sufficient to encode all of the C and C++ language's operators, functions, keywords, etc. That, of course, should come as no surprise.
 
 What might come as a surprise to some is that the french language cannot be encoded in ASCII: french uses a lot of Latin letters - or glyphs I believe they're called - that are no available in ASCII because they have something added to them w.r.t. the ASCII equivalent. For example, "how are you", which the French literally ask as "how it goes", is written, in french, as "comment ça va?". "That won't work" translates to "ça ne marchera pas", etc. In "extended ASCII" - an 8-bit variant of ASCII, the C-cedil (ç) is character number 135.

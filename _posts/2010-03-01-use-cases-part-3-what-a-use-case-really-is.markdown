@@ -3,23 +3,20 @@ author: rlc
 comments: true
 date: 2010-03-01 21:41:25+00:00
 layout: post
-permalink: /blog/2010/03/use-cases-part-3-what-a-use-case-really-is/
-slug: use-cases-part-3-what-a-use-case-really-is
-title: 'Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases'
+title: "Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases"
 wordpress_id: 391
 categories:
-- C++ for the self-taught
+  - C++ for the self-taught
 tags:
-- Posts that need to be re-tagged (WIP)
-- use-cases
+  - Posts that need to be re-tagged (WIP)
+  - use-cases
 ---
 
 Before we start using use-cases in the description of the functional requirements we want to meet in our project, we need to understand what a use-case really is and how to go about writing one. In this installment I will attempt to answer both those questions. However, this series is called "C++ for the self-taught" for a reason: I will include references for all of the material I have cited in this installment, and I hope you will take it upon yourself to go out and look a bit yourself as well.
+
 <!--more-->
 
-
 ## what use-cases are(n't)
-
 
 In the [June 2002](http://www.ibm.com/developerworks/rational/library/content/RationalEdge/jun02/MisuseUseCasesJun02.pdf) and [July 2002](http://www.ibm.com/developerworks/rational/library/content/RationalEdge/jul02/TopTenWaysJul02.pdf) issues of the Rational Edge, there is a rather succinct description of how use-cases are abused on a daily basis. They are perhaps the most popular way to capture user requirements - and they are very good at that - but they are not the be-all and end-all of requirements specifications. I'll quote Ellen Gottesdiener in explaining why: "From the point of view of a person or system interacting with your software, a use case nicely describes an aspect of its behavior. But no single user requirements model can fully express all of the software's functional requirements: its behavior, structure, dynamics, and control mechanisms."
 
@@ -35,51 +32,43 @@ Similarly, use-cases do nor support "alternate endings", at least not in their c
 
 We will leave this question open for the moment, and see how the prose that describes the use-cases is best written.
 
-
-
 ## How to write effective use-cases
-
 
 Actors have goals, stakeholders have interests. Use-cases talk about actors, not about stakeholders. If you start by establishing what the goals of your actors are (that is before you start thinking about how they might achieve those goals) and listing those goals, you've taken your first steps. Make sure you are sufficiently, but not overly, precise when defining your goals. I'll quote Ellen Gottesdiener again:
 
-
-* Name your [goals] using this format: verb + [qualified] object.
-* Use active (not passive) verbs.
-* Avoid vague verbs such as do or process.
-* Avoid low-level, database-oriented verbs such as create, read, update, delete [...], get, or insert.
-* The "object" part of the use-case name can be a noun (such as inventory) or a qualified noun (such as in-stock inventory).
-* Make sure that the project Glossary defines each object in the usecase name.
-* Add each object to the domain model (as a class, entity, or attribute).
-
+- Name your [goals] using this format: verb + [qualified] object.
+- Use active (not passive) verbs.
+- Avoid vague verbs such as do or process.
+- Avoid low-level, database-oriented verbs such as create, read, update, delete [...], get, or insert.
+- The "object" part of the use-case name can be a noun (such as inventory) or a qualified noun (such as in-stock inventory).
+- Make sure that the project Glossary defines each object in the usecase name.
+- Add each object to the domain model (as a class, entity, or attribute).
 
 Ellen Gottesdiener also provides a nice list of verbs that can be used to effectively identify use-cases (goals):
 
 Example Verbs to Use in Use-Case Names
 
-| Informative Use Cases | Performative Use Cases  |
-| --------------------- | ----------------------- |
-| Analyze               | Achieve                 |
-| Discover              | Allow                   |
-| Find                  | Arrange                 |
-| Identify              | Change                  |
-| Inform                | Classify                |
-| Monitor               | Define                  |
-| Notify                | Deliver                 |
-| Query                 | Design                  |
-| Request               | Ensure                  |
-| Search                | Establish               |
-| Select                | Evaluate                |
-| State                 | Issue                   |
-|                       | Make                    |
-|                       | Perform                 |
-|                       | Provide                 |
-|                       | Replenish               |
-|                       | Request                 |
-|                       | Set up                  |
-|                       | Specify                 |
-
-
-
+| Informative Use Cases | Performative Use Cases |
+| --------------------- | ---------------------- |
+| Analyze               | Achieve                |
+| Discover              | Allow                  |
+| Find                  | Arrange                |
+| Identify              | Change                 |
+| Inform                | Classify               |
+| Monitor               | Define                 |
+| Notify                | Deliver                |
+| Query                 | Design                 |
+| Request               | Ensure                 |
+| Search                | Establish              |
+| Select                | Evaluate               |
+| State                 | Issue                  |
+|                       | Make                   |
+|                       | Perform                |
+|                       | Provide                |
+|                       | Replenish              |
+|                       | Request                |
+|                       | Set up                 |
+|                       | Specify                |
 
 Once you've done that, you'll have to decide which of those goals you will actually want the actors to reach. That's where the stakeholder's interests come in and that's also when you can start thinking about which actors should be able to reach which goals. Remember that there may be goals that no-one should be able to reach. For example: an actor may want to access your bank account to withdraw all of your money without leaving a trace (other than your money being gone). That is something you might not want that actor to be able to do.
 
@@ -89,9 +78,6 @@ As mentioned earlier, error handling is an issue when defining use-cases. But be
 
 Your first iterations will give you what is commonly called the "main success scenario". Alternate endings, alternate routes to the same (or different) endings, conditional sub-use-cases, etc. will appear in subsequent iterations of the same process, in which the use-cases and the captured requirements will tend to become more complex. To counter this tendency, complex use-cases can be split (in which case a "super" use-case can include the sub-use-cases) and small use-cases can often be merged. Note, though, that use-cases are still intended only for capturing requirements: although, as stated above, there has been (and still is) some debate as to what a use-case is, use-cases are "neither forward nor backward engineerable" - i.e. you can't derive (or generate) code from a use-case, and you can't derive use-cases from code.
 
-
-
 ## Conclusion
-
 
 You'll have noted that I have left the question of what a use-case really is a bit open. Personally, I conceive of use-cases as a succinct way to capture functional requirements, and user stories as a way to put those requirements into prose. Use-cases and user-stories should be relatively easy to read and understand - whether they be presented in the form of a diagram or in the form of text. What should or should not go into a use-case, how they should be modeled and what the semantics of those models ought to be is open for debate. Let us stick, therefore, to the greatest common denominator when it comes to defining use-cases and let's try to make the as concise and understandable as possible, all the while remaining convinced that they cannot be the only way to document the requirements and design of our project.

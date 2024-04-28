@@ -3,8 +3,6 @@ author: rlc
 comments: true
 date: 2011-10-09 03:15:33+00:00
 layout: post
-permalink: /blog/2011/10/making-the-enabling-of-online-copyright-infringement-itself-an-infringement-of-copyright/
-slug: making-the-enabling-of-online-copyright-infringement-itself-an-infringement-of-copyright
 title: Making the enabling of online copyright infringement itself an infringement of copyright
 wordpress_id: 1697
 categories:

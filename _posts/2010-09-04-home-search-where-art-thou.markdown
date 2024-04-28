@@ -3,25 +3,22 @@ author: rlc
 comments: true
 date: 2010-09-04 00:51:43+00:00
 layout: post
-permalink: /blog/2010/09/home-search-where-art-thou/
-slug: home-search-where-art-thou
 title: Home Search, Where Art Thou?
 wordpress_id: 892
 categories:
-- Opinions
-- Technology
+  - Opinions
+  - Technology
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 In my day to day life, there are few things I truly dislike doing: I'm a pretty happy person. There is one thing, though, that I really don't like - at all - and that strikes me as a truly pointless exercise in futility: searching. Shouldn't we have a solution for that by now?
 
 It strikes me we already have all of the necessary technology to come up with a viable solution: I've worked with most of them! Let's have a look what this might look like.
+
 <!--more-->
 
-
 ## How It Would Work
-
 
 Let's say you've misplaced you pen: you whip out the portable device of your choice (in my case, my iPod Touch), launch the search app and type "pen". This would either access a local index over the network, or an index on the web, and would start looking where an item that matches "pen" was last seen. Say you have seven pens at your home: one in the bedroom, three in your home office, two in the living room (of which one in the couch, between the cushions) and one in the laundry room.
 
@@ -37,27 +34,18 @@ This takes care of half of our first problem: items that already have an RFID ta
 
 The answer is: we don't. The tags I'm thinking of are _passive_ tasks, so they wouldn't normally be very chatty: they only talk when talked to (and get the energy to talk from the antenna, so there's no batteries required). Antennas would be strategically placed around the house, where it makes sense. In my case, I'd put one at the top of the stairs, at each doorpost (on the inside of each room) etc. That way, an tagged object in my house would be "seen" by those readers at those strategic places. It would be practicallty impossible for my pen to end up in the laundry room without going, one morning, from the master bedroom down the stairs and through the door of the laundry room. Even if one of the readers doesn't pick it up (e.g. the one in the laundry room) I can follow its trajectory down the stairs and have a good guess where it might end up if, say, the laundry basket took the same route at the same time.
 
-
-
 ## Security
-
 
 So, we now have a basic solution. I think the use-cases are obvious (they are to me, at least). What about abuse cases? Say I tagged a diamond necklace, which I would happen to have laying about the house. A thief coming into the house and whipping out his iPad could do a quick inventory of the place, know exactly where everything is and clean me out in no time, right?
 
 That's what you need security for: you don't want any-one to have an idea of the inventory of your home, so if at all possible, the information should stay in your home - which means this becomes a localized solution. The database and software could easily be housed in a little box that could be installed next to your home router, and to which the various RFID readers would send their info through wireless LAN or through a home-area network (they wouldn't have to be on-line all the time, either: battery-powered RFID readers would only need a simple motion sensor to turn themselves on, perform a reading, send the result and go back to sleep). The other bit of security - not allowing the burglar to read the data - is a question of securing your network and putting a password on the server. Of course, the readings being sent would have to be secured as well: both sides would have an X.509 certificate identifying themselves and thus allowing them to communicate.
 
-
-
 ## Roaming
-
 
 So, let's say all of your friends have tagged their iPods, iPads, iMacs, laptops, pens, secret diaries, jewelery, family heirlooms, etc. as have you. You go to a party at one of your friends' and fall asleep on the couch. When you wake up, you want to check the time on your tagged thingamajig and find it missing. What do you do?
 
 Well, because your friend conveniently places a reader at the front door, his system picked up a "foreign object" belonging to user ID 12345 (part of the tag you put on it). Your friend whips out his Android phone, fires up the app and instructs it to tell it where anything belonging to user 12345 is. Most of it, being on your person, is reported as being in the living room but, somehow, your thingamajig left a few hours ago. At about the same time, a whole bunch of stuff belonging to user 23456 left as well. User 23456 being your girlfriend, you rest assured and hope she isn't too mad at you for falling asleep on the couch (while she was talking to you).
 
-
-
 ## Conclusion
-
 
 Our time of searching for stuff should be over! If some-one would be willing to come up with the venture capital, I'll be happy to make a product out of this idea. I already know everything I need to know to get the ball rolling and I can come up with a pretty good sketch of what both the software and hardware should look like pretty quickly.

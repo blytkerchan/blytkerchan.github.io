@@ -3,21 +3,20 @@ author: rlc
 comments: true
 date: 2017-07-22 02:20:14+00:00
 layout: post
-permalink: /blog/2017/07/the-problem-with-making-things-too-easy/
-slug: the-problem-with-making-things-too-easy
 title: The problem with making things too easy
 wordpress_id: 4185
 categories:
-- Anecdotes
-- Software Development
-- Software Engineering
+  - Anecdotes
+  - Software Development
+  - Software Engineering
 tags:
-- engineering
-- rant
+  - engineering
+  - rant
 ---
 
 {% include shadowbox.html open_only=true %}
 <b><i>The TL;DR:</i></b><br/>
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The thing with making things easier is that it makes mediocre people seem competent and incompetent people seem mediocre...</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/888378949683773440?ref_src=twsrc%5Etfw">July 21, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
@@ -40,8 +39,8 @@ For example: many compilers now perform static analysis on the code they compile
 
 In the code I'm thinking of, there were two f{r,l}agrant examples of unintentional shared state: one was in a server application that was, in deed, only able to serve a single client at a time (if two clients queried it simultaneously, it would mix up its responses); another was a static index variable in a function shared by **_eight_** threads[^3].
 
-[^3]:
-    Of course, part of the problem here was unnecessary multi-threading.
+[^3]: Of course, part of the problem here was unnecessary multi-threading.
+
     <blockquote class="reddit-card" data-card-created="1537640697"><a href="https://www.reddit.com/r/ProgrammerHumor/comments/63kko1/unnecessary_multi_threading/">Unnecessary multi threading.</a> from <a href="http://www.reddit.com/r/ProgrammerHumor">r/ProgrammerHumor</a></blockquote><script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 
 Embedded devices are getting better CPUs, more memory, hard disks, etc. They are being connected to the Internet and are being called "IoT devices". Everyone and their grandmother can develop apps for phones, connected devices, and any type of widget you can think of. This is fun, and fun is good. However, that also means that people who claim to have experience with embedded devices are becoming more common, and device failures will, _on average_ become less critical. A security breach in a router running Linux in a home somewhere will generally not be a huge problem. Stopping production in your local cookie factory can be a nuisance, but is hardly critical. Turning the lights off on an entire country is a different matter.

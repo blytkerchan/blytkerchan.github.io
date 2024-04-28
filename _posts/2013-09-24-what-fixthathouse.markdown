@@ -3,18 +3,18 @@ author: rlc
 comments: true
 date: 2013-09-24 00:36:51+00:00
 layout: post
-permalink: /blog/2013/09/what-fixthathouse/
-slug: what-fixthathouse
-title: 'Why #fixthathouse?'
+title: "Why #fixthathouse?"
 wordpress_id: 2382
 categories:
-- Opinions
+  - Opinions
 tags:
-- politics
+  - politics
 ---
 
 Those of you who follow me on Twitter might wonder why, all of a sudden, I started tweeting assertions with the #fixthathouse hashtag. The reason is simple, [CBC The House](http://cbc.ca/thehouse) made me do it.
+
 <!--more-->
+
 The Canadian parliament is having a rough decade. The things I tweeted are ideas to revitalize an re-engineer the system.
 
 Some might recognize some (most?) of the things I tweeted as aspects of the Dutch system. You'd be right. The Netherlands has one of the oldest democratic systems with a parliamentary democracy and a constitutional monarchy. It also started out as a federal republic, and has quite a few remnants of those days still. It is remarkably stable and has democratic institutions that pre-date the parliamentary system that are still functioning today -- notably the system that manages the dykes.
@@ -36,6 +36,7 @@ Proportional representation also means that some fringe parties get seats -- suc
 The Canadian system lacks transparency: the prime minister is the leader of the party that has the most seats and, in the case of a majority, does not have much of an opposition to contend with. It is a strong-man's system. This is in contrast with Canadian culture, which is not a strong-man's culture.
 
 Each of the things I tweeted would take power away from the government:
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/fixthathouse?src=hash&amp;ref_src=twsrc%5Etfw">#fixthathouse</a> proportional representation: each party presents a country-wide list of people to vote for -- most votes gets a seat</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/381908075961397248?ref_src=twsrc%5Etfw">September 22, 2013</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 takes power away from the party leader: if the party convention chooses who the candidates are, the political leader can only keep that position if he/she at least gets enough votes to get into parliament. Voters can very well choose to vote for someone else (in the same party), if they want to.

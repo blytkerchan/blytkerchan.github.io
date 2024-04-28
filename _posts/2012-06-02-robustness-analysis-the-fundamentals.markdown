@@ -3,15 +3,13 @@ author: rlc
 comments: true
 date: 2012-06-02 13:45:11+00:00
 layout: post
-permalink: /blog/2012/06/robustness-analysis-the-fundamentals/
-slug: robustness-analysis-the-fundamentals
-title: 'Robustness analysis: the fundamentals'
+title: "Robustness analysis: the fundamentals"
 wordpress_id: 1840
 categories:
-- Software Engineering
+  - Software Engineering
 tags:
-- requirements analysis
-- robustness analysis
+  - requirements analysis
+  - robustness analysis
 ---
 
 Up until 2008, the global economy was humming along on what seemed like smooth sailing, doing a nice twenty knots on clear waters, with only an occasional radio message saying there were icebergs up ahead. Surely none of that was anything to be worried about: this new economy was well-designed, after all. Redundant and unnecessary checks had been removed but, in order for the economy to be robust, the engineers of the economy had made sure that at least two whole compartments could be flooded before anything really nasty would happen.
@@ -30,21 +28,13 @@ Robustness analysis does not have to be an expensive, lengthy exercise: in some 
 
 [![](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef01676627bd06970b-pi)](http://geekandpoke.typepad.com/geekandpoke/2012/05/simply-explained-wtf.html)Fundamentally, a project outcome is determined by the people working on the project, and how they do their job. To find out how they do their job, you can look at a few things:
 
+1. What are the analysis and development processes?
 
+2. How mindful are developers of robustness issues?
 
+3. What are the high-level deliverables for the project?
 
-  1. What are the analysis and development processes?
-
-
-  2. How mindful are developers of robustness issues?
-
-
-  3. What are the high-level deliverables for the project?
-
-
-  4. How are common robustness issues addressed in system development?
-
-
+4. How are common robustness issues addressed in system development?
 
 The robustness of the project is a factor of the process through which the project is developed and the people developing it. If all the proper checks and balances (design reviews, code reviews, etc.) are in place, the robustness of the project's deliverables becomes a question of the mindfulness of the people working on the project and the measure in which the processes in place help them to transform that mindfulness into activity.
 

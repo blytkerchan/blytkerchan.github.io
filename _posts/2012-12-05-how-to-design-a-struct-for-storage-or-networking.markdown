@@ -3,17 +3,15 @@ author: rlc
 comments: true
 date: 2012-12-05 02:21:06+00:00
 layout: post
-permalink: /blog/2012/12/how-to-design-a-struct-for-storage-or-networking/
-slug: how-to-design-a-struct-for-storage-or-networking
 title: How to design a struct for storage or communicating
 wordpress_id: 1966
 categories:
-- C &amp; C++
-- C++ for the self-taught
-- Embedded software development
-- Software Design
+  - C &amp; C++
+  - C++ for the self-taught
+  - Embedded software development
+  - Software Design
 tags:
-- struct design
+  - struct design
 ---
 
 One of the most common ways of "persisting" or communicating data in an embedded device is to just dump it into persistent storage or onto the wire: rather than generating XML, JSON or some other format which would later have to be parsed and which takes a lot of resources both ways, both in terms of CPU time to generate and parse and in terms of storage overhead, dumping binary data into storage or onto the wire has only the -- inevitable -- overhead of accessing storage/the wire itself. There are, however, several caveats to this, some of which I run into on a more-or-less regular basis when trying to decipher some of that data, so in stead of just being frustrated with hard-to-decipher data, I choose to describe how it should be done in stead.
@@ -22,21 +20,18 @@ Note that I am by no means advocating anything more than a few simple rules to f
 
 <!--more-->
 
-
-
 ## Necessary parts
-
 
 There are two things that any structure that is communicated[^1] in binary form should have:
 
 [^1]: and I include writing to persistent storage and reading it back later in "communication" because that's what it is: the software reading the data may very well be different from the software writing it -- be it different versions of the same software, or different software altogether
-	
-  1. a **magic number**, preferably one that is at exactly four bytes in length and one that is chosen to be human-readable, either when displayed as HEX or when displayed as "deciphered" ASCII  
-Good examples are `0xdeadbeef`; `0x_N_badf00d` in which _N_ is replaced by a hexadecimal value that might mean something -- you have 16 options, and you can put the N at the end, so you really now have 32 options!!; `'CODE'` (or `0x434f4445` in this case) in which CODE is replaced by something descriptive for the structure's content. For example, if it contains a config for a potato peeler, `'PCFG'` (or `0x50434647`) would do just fine. The idea is to have some magic number that's easy to recognize when displayed by a memory debugger or when dumped by a run-of-the-mill binary editor/viewer.
 
-	
-  2. the **version** of the structure. This can be a simple incremental counter -- it can even be part of the magic number of you don't want to "waste" bytes, but it really should be in there. Ideally, it should consist of at least two parts: "current" and "age", the idea being that you increment both "current" and "age" if you add something, and that you increment "current" and set "age" to 0 if you remove something or change the meaning of some part in a way no longer compatible with previous versions. That way, any-one who reads the structure can very easily see if they can _understand_ the structure: 
-    
+1. a **magic number**, preferably one that is at exactly four bytes in length and one that is chosen to be human-readable, either when displayed as HEX or when displayed as "deciphered" ASCII  
+   Good examples are `0xdeadbeef`; `0x_N_badf00d` in which _N_ is replaced by a hexadecimal value that might mean something -- you have 16 options, and you can put the N at the end, so you really now have 32 options!!; `'CODE'` (or `0x434f4445` in this case) in which CODE is replaced by something descriptive for the structure's content. For example, if it contains a config for a potato peeler, `'PCFG'` (or `0x50434647`) would do just fine. The idea is to have some magic number that's easy to recognize when displayed by a memory debugger or when dumped by a run-of-the-mill binary editor/viewer.
+
+2. the **version** of the structure. This can be a simple incremental counter -- it can even be part of the magic number of you don't want to "waste" bytes, but it really should be in there. Ideally, it should consist of at least two parts: "current" and "age", the idea being that you increment both "current" and "age" if you add something, and that you increment "current" and set "age" to 0 if you remove something or change the meaning of some part in a way no longer compatible with previous versions. That way, any-one who reads the structure can very easily see if they can _understand_ the structure:
+
+
     if (data.magic_ == POTATO_PEELER_CONFIG_MAGIC)
     {
         if ((data.version_.current_ - data.version_.age_) == (POTATO_PEELER_CONFIG_CURRENT - POTATO_PEELER_CONFIG_AGE))
@@ -65,10 +60,8 @@ Good examples are `0xdeadbeef`; `0x_N_badf00d` in which _N_ is replaced by a hex
     else
     { /* not something we understand - wrong magic number */ }
 
+With just these two in place on every persisted structure, I would have saved hours of futile staring at memory dumps and binary dumps of files from legacy (and current) systems that I was asked to debug. Basically, every persisted structure should begin like this:
 
-
-With just these two in place on every persisted structure, I would have saved hours of futile staring at memory dumps and binary dumps of files from legacy (and current) systems that I was asked to debug. Basically, every persisted structure should begin like this: 
-    
     struct PotatoPeelerConfiguration_struct
     {
         uint32_t magic_;
@@ -76,27 +69,23 @@ With just these two in place on every persisted structure, I would have saved ho
 
 or, if we want the code above to compile[^2]:
 
-[^2]: There is some religious debate over whether or not to do `typedef struct Version_struct Version;` in C headers, so I left that out, though I usually would have included it for convenience.
-    
-    struct Version_struct
+[^2]:
+    There is some religious debate over whether or not to do `typedef struct Version_struct Version;` in C headers, so I left that out, though I usually would have included it for convenience.
+
+    struct Version*struct
     {
-        uint16_t current_;
-        uint16_t age_;
+    uint16_t current*;
+    uint16*t age*;
     };
-    struct PotatoPeelerConfiguration_struct
+    struct PotatoPeelerConfiguration*struct
     {
-        uint32_t magic_;
-        struct Version_struct version_;
-
-
-
-
+    uint32_t magic*;
+    struct Version*struct version*;
 
 ## The structure's structure
 
+What's wrong with this picture:
 
-What's wrong with this picture: 
-    
     struct Blah
     {
         uint32_t ulThingy;
@@ -116,8 +105,8 @@ The vast majority of compilers will insert a hole into the structure to make sur
 
 [^4]: In other words: just don't use it -- it's useless.
 
-_Do_ use filler variables to fill the holes, like this: 
-    
+_Do_ use filler variables to fill the holes, like this:
+
     struct Blah
     {
         uint32_t magic;
@@ -127,8 +116,6 @@ _Do_ use filler variables to fill the holes, like this:
         uint8_t reserved;
         uint16_t usThingy;
     };
-
-
 
 Note the magic number and version as well, which should _of course_ be at the start of the structure.
 
@@ -140,12 +127,9 @@ If you're adding to a collection of objects (as described above) the same applie
 
 If you're designing a structure that is going to be part of a collection of structures communicated somewhere, make sure its size is a multiple of the largest primitive normally used -- e.g. a multiple of eight bytes, or four bytes if you don't go larger than 32-bit integers. This allows the structures, once read into appropriately-aligned memory, to be automatically appropriately aligned when accessed in that appropriately-aligned memory. Because most functions that dump data to the medium don't pad structures (as the compiler does when you create an array of objects that don't follow this rule) you won't be able to count on alignment otherwise.
 
-
-
 ## Other bits[^1]
 
 [^1]: I was going to call this section "Optional bits" but it's not really optional any more than the text itself implies -- I don't want you to skip over this section just because I said it was optional
-
 
 If the data you are dumping is somehow variable-sized (i.e. it's the header of something), _please include the size_ so we know how much data to skip. If need be the size can be used in _lieu_ of a version (as one Redmond-based company often does).
 
@@ -155,15 +139,12 @@ Don't use already-common magic numbers, such as `0xfeeefeee` or `0xcccccccc` etc
 
 If your structure contains strings, try to zero-terminate them if at all possible. Many, many programmers forget to check for zero-termination when they output something from the struct, which causes many, many crashes or other random behaviors.
 
-
-
 ## Reading and writing
-
 
 Writing is the easy part, so let's start with that.
 
-If you have a structure in memory, writing it somewhere is simply a case of calling the appropriate `write()` function passing it a pointer to your structure and the size, like this: 
-    
+If you have a structure in memory, writing it somewhere is simply a case of calling the appropriate `write()` function passing it a pointer to your structure and the size, like this:
+
     retval = write(&data;, sizeof(data));
 
 You don't have to worry too much about issues such as alignment, because the write function will ready the thing byte by byte if need be.

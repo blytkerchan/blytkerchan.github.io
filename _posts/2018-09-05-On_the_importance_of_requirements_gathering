@@ -3,13 +3,11 @@ author: rlc
 comments: true
 date: 2018-09-05 00:00:00+00:00
 layout: post
-permalink: /?p=4140
 published: false
-slug: On the importance of requirements gathering
 title: On the importance of requirements gathering
 wordpress_id: 4140
 categories:
-- Software Engineering
+  - Software Engineering
 ---
 
 Requirements analysis is a three-step, cyclical process. The steps are: **Requirements Gathering**, **Requirements Documentation** and **Requirements Validation**. These three steps aren't just repeated over and over during a project's development: they are progressively _refined_ as requirements evolve and the project progresses.
@@ -29,18 +27,14 @@ This post is about the first part: requirements gathering.
 </div>
 
 <!--more-->
+
 The first step in requirements gathering is getting a hold on the scope of the project. In the beginning, this may be a daunting task as most stakeholders will have only a vague idea of what they really want and you might not have access to all the stakeholders (i.e. you are usually not in direct contact with the end user). This introduces three kinds of errors into your requirements definition: _scope creep_, which is an effect of ever-moving requirements caused by assumptions (usually about the market) that turn out to be wrong; _scope skew_, which is the wrongful assignment of weight to certain requirements relative to others, usually caused by wrong assumptions and too-strong convictions; and _unwarranted requirements complexity_, which is a result trying to reconcile contradictory requirements. Each of these problems can be avoided up to a point.
 
-
-
 ### Avoiding Scope Creep
-
 
 In order to avoid scope creep, you have to understand (from the outset, if possible) what the over-arching goal of the project is. Try to get the stakeholders to agree on that one point, and go back to that point every time it goes out of focus.
 
 This over-arching goal has to be something relatively concrete. It's a vision of what the future should bring, and what the role of this project is in bringing that future. It becomes the **_vision statement_**, once it is sufficiently distilled and refined.
-
-
 
 <blockquote>Creating an effective project vision requires excellent communication skills and a deep understanding of both organisational culture and the history and trigger mechanisms that create underlying assumptions of individuals and groups comprising project teams. A project vision can be an artefact that defines the project’s soul so that it anchors project participants through their core values to a project outcome that all can relate to. Clearly, this is a difficult task requiring intelligence, wisdom and insightfulness on the part of project leaders. Crafting a vision requires insights into the underlying assumptions that determine values and to create artefacts that can be accepted and internalised[^1].</blockquote>
 
@@ -54,10 +48,7 @@ Once you have a good grasp of the scope in the form of a vision statement, any n
 
 Note that this is different from defining a _minimal viable product_: a minimal viable product, or MVP, is defined by how far you need to go toward the product vision to have something you can put on the market and sell. It determines the amount of resources (time, money) you need to invest in the project before the result of the project can start making money (and eventually start paying for its own improvements, and making profit).
 
-
-
 ### Avoiding Scope Skew
-
 
 Once you've defined a vision (and general scope) for the project, you can start determining what features the project should have, and what the functional requirements for each of those features are. Each feature is more or less important to drive toward the vision, so each feature needs to be weighted to determine in what order and to what extent each of them should be implemented.
 
@@ -67,11 +58,8 @@ For example: if you have to implement the logic for a coffee maker. One of the r
 
 Expertise becomes especially important if the customer (the stakeholder who is requesting the development of the project) has none, or very little. In that case, the customer is effectively buying expertise as well as product. Imagine the person who wants you to develop the coffee machine firmware never drinks coffee. You'd have to tell them coffee needs to be hot, but not too hot. Espresso is different from "_cafe filtre_", which is different from American-style coffee, etc. What kind of coffee do they want their coffeemaker to brew?
 
-
-
 ### Avoiding Unwarranted Requirement Complexity
-
 
 Requirements become more complex as they start "bumping into each other". For example, for our coffee maker, if the customer doesn't understand that espresso really is different from filtered coffee, he might want the machine to make both. Imagine a coffee maker that makes both espresso and filtered coffee and you'll see how much more complex that coffeemaker is than a coffeemaker that does either one, but not both.
 
-If at all possible, contradictory requirement should be identified as such and should be factored out as much as possible. _Keep it simple, stupid_ is, in this case, a mantra to live by. Again, weighing the requirements w.r.t. the project vision and prioritizing them will help. 
+If at all possible, contradictory requirement should be identified as such and should be factored out as much as possible. _Keep it simple, stupid_ is, in this case, a mantra to live by. Again, weighing the requirements w.r.t. the project vision and prioritizing them will help.

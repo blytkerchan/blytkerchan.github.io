@@ -3,16 +3,16 @@ author: rlc
 comments: true
 date: 2010-04-20 04:09:47+00:00
 layout: post
-permalink: /blog/2010/04/did-i-say-5000-make-that-14000/
-slug: did-i-say-5000-make-that-14000
 title: Did I say 5000? Make that 14000(!)
 wordpress_id: 563
 categories:
-- C++ for the self-taught
+  - C++ for the self-taught
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
+
 <!--more-->
+
 Wow.
 
 What else can I say? Two weeks ago, I said "thanks for listening" because there'd been 5000 downloads of the Podcast. Apparently, you went ahead and told all your friends and colleagues, so now the podcast has been downloaded another 9000 times - getting us from 5000 to 14000 in two weeks!

@@ -3,23 +3,23 @@ author: rlc
 comments: true
 date: 2017-03-04 20:26:12+00:00
 layout: post
-permalink: /blog/2017/03/writing-unmaintainable-code-in-five-easy-steps/
-slug: writing-unmaintainable-code-in-five-easy-steps
 title: Writing unmaintainable code in five easy steps
 wordpress_id: 4154
 categories:
-- Anecdotes
+  - Anecdotes
 tags:
-- design patterns
-- maintainability
-- programming
-- rants
+  - design patterns
+  - maintainability
+  - programming
+  - rants
 ---
 
 I have recently had to modify some code that, to say the least, was very hard to maintain -- or refactor, for that matter.
 
 The following are a few, firmly tongue-in-cheek, steps to make sure your code is thoroughly frustrating to whoever needs to maintain it after you.
+
 <!--more-->
+
 **Step 1: unpredictability**
 Above all else, be impossible to predict.
 

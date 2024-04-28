@@ -3,28 +3,27 @@ author: rlc
 comments: true
 date: 2010-06-23 03:10:20+00:00
 layout: post
-permalink: /blog/2010/06/bill-c-32/
-slug: bill-c-32
 title: Bill C-32
 wordpress_id: 771
 categories:
-- Opinions
+  - Opinions
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 A few days ago, I was listening to the podcast for the CBC program [Spark](http://www.cbc.ca/spark/2010/06/spark-116-june-6-8-2010/), in which they mentioned a new bill, bill C-32. They had a person on the show, whose name I do not remember, who said it was a very "balanced" bill. That peaked my interest, so I decided to read the bill myself.
+
 <!--more-->
+
 Before writing the bill, the law-makers asked Canadian citizens their opinion on copyright. One of the points that was brought forward was that users of copyright did not want stringent locks on the copyrighted material: they wanted to be able to legally create back-ups of their content and to convert it to different formats for their listening and viewing pleasure. On first sight, the bill did not respect that particular wish. In fact, it says so right in the preamble: "Whereas the Government of Canada is committed to enhancing the protection of copyright works or other subject-matter, **including through the recognition of technological protection measures**, in a manner that promotes culture and innovation, competition and investment in the Canadian economy;" (emphasis mine).
 
 Personally, I think that if a copyright holder puts a lock on something, it should not be legal to break that lock. I'll give you a dumb analog: if you put a lock on your door, breaking that lock or picking that lock would be illegal. You'd want _that_ to be illegal because you've invested in that lock, you've put it on your door and your protecting your house with it - you would not want anyone to enter your house without your knowledge or without your permission. If I put a lock on my software or content, I similarly do not want it to be "okay" for you to break that lock and do whatever you like with that content.
 
 On the consumer end of things, I think I have a minority position on that. The reason why I think those locks should be legally recognized, however, is because I see copyright law as a framework for negotiation: as a copyright owner I am in a position of being the author or creator of software, this blog, a podcast, etc. I am therefore a copyright holder and have certain rights on what I produce. I may choose to share my work and give you certain rights on that work. If I do that, the bill/law provides for certain rights to you, the user of the content, and to me, the copyright holder.
 
-I can provide my content under a given licence (such as this blog, which is published under a Creative Commons licence) which may differ on some points from the law and allow you certain rights that you would not otherwise have.  If you want to be able to do something that you cannot do according to the law, you have to obtain an additional licence on the content, but in order to do that, you have to negotiate with me. That means you would have to contact me, tell me what you need, etc. I would tell you what conditions you would have to meet in order to obtain those rights - e.g. pay me - and, once those conditions are met, would provide you with an appropriate licence. We would thus have entered into a duly negotiated contract.
+I can provide my content under a given licence (such as this blog, which is published under a Creative Commons licence) which may differ on some points from the law and allow you certain rights that you would not otherwise have. If you want to be able to do something that you cannot do according to the law, you have to obtain an additional licence on the content, but in order to do that, you have to negotiate with me. That means you would have to contact me, tell me what you need, etc. I would tell you what conditions you would have to meet in order to obtain those rights - e.g. pay me - and, once those conditions are met, would provide you with an appropriate licence. We would thus have entered into a duly negotiated contract.
 
 This means that such locks are a means for copyright holders to protect themselves against what's now called "piracy". Let's have a look at the bill's wording, though:
-
 
 <blockquote>41.1 (1) No person shall<br/>
 
@@ -46,13 +45,11 @@ This means that such locks are a means for copyright holders to protect themselv
 
 (iii) the person markets the technology, device or component as being for the purposes of circumventing a technological protection measure or acts in concert with another person in order to market the technology, device or component as being for those purposes.</blockquote>
 
-
-
-This leaves plenty of room for legally developing tools and offering services that happen to break locks as a side-effect... but that's not all. I.e., even though "(2) The owner of the copyright in a work, a performer’s performance fixed in a sound recording or a sound recording in respect of which paragraph (1)(a) has been contravened is (...) entitled to all remedies (...) that are or may be conferred by law for the infringement of copyright against the person who contravened that paragraph." the bill also says that "(3) The owner of the copyright in a work (...) may not elect (...) to recover statutory damages from an individual who contravened that paragraph only for his or her own private purposes." - i.e. if a copyright holder's DRM is broken, that may well be illegal but, if done only for personal use, cannot warrant damages to be awarded to the copyright holder. Also - and I really like this clause: 
+This leaves plenty of room for legally developing tools and offering services that happen to break locks as a side-effect... but that's not all. I.e., even though "(2) The owner of the copyright in a work, a performer’s performance fixed in a sound recording or a sound recording in respect of which paragraph (1)(a) has been contravened is (...) entitled to all remedies (...) that are or may be conferred by law for the infringement of copyright against the person who contravened that paragraph." the bill also says that "(3) The owner of the copyright in a work (...) may not elect (...) to recover statutory damages from an individual who contravened that paragraph only for his or her own private purposes." - i.e. if a copyright holder's DRM is broken, that may well be illegal but, if done only for personal use, cannot warrant damages to be awarded to the copyright holder. Also - and I really like this clause:
 
 <blockquote>(1) Paragraph 41.1(1)(a) does not apply to a person who owns a computer program or a copy of one, or has a licence to use the program or copy, and who circumvents a technological protection measure that protects that program or copy for the sole purpose of obtaining information that would allow the person to make the program and any other computer program interoperable.</blockquote>
 
-- i.e. you can break the lock if it is for the sole purpose of making software the user owns inter-operable with other software (e.g. to read DRM-enabled music files in open source software). The list of such exemptions goes on a bit: protection of private data, correcting security vulnerabilities, circumvention to make the contents available to a handicapped person, etc. However: 
+- i.e. you can break the lock if it is for the sole purpose of making software the user owns inter-operable with other software (e.g. to read DRM-enabled music files in open source software). The list of such exemptions goes on a bit: protection of private data, correcting security vulnerabilities, circumvention to make the contents available to a handicapped person, etc. However:
 
 <blockquote>41.22 (1) No person shall knowingly remove or alter any rights management information in electronic form without the consent of the owner of the copyright in the work, the performer’s performance or the sound recording, if the person knows or should have known that the removal or alteration will facilitate or conceal any infringement of the owner’s copyright or adversely affect the owner’s right to remuneration under section 19.</blockquote>
 

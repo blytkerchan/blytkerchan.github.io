@@ -3,14 +3,12 @@ author: rlc
 comments: true
 date: 2011-07-22 03:28:31+00:00
 layout: post
-permalink: /blog/2011/07/you-according-to-google-analytics/
-slug: you-according-to-google-analytics
 title: You, according to Google Analytics
 wordpress_id: 1590
 categories:
-- This blog
+  - This blog
 tags:
-- analytics
+  - analytics
 ---
 
 This blog uses Google Analytics, which provides a treasure-trove of information about the site's visitors. To use that information to improve the site, it has to be parsed.

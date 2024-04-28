@@ -3,20 +3,20 @@ author: rlc
 comments: true
 date: 2013-01-18 14:27:05+00:00
 layout: post
-permalink: /blog/2013/01/flawed-ways-of-working-centrally-managed-version-control/
-slug: flawed-ways-of-working-centrally-managed-version-control
-title: 'Flawed ways of working: centrally managed version control'
+title: "Flawed ways of working: centrally managed version control"
 wordpress_id: 2019
 categories:
-- Software Development
-- Software Engineering
+  - Software Development
+  - Software Engineering
 tags:
-- git
-- version control
-- ways of working
-- workflow
+  - git
+  - version control
+  - ways of working
+  - workflow
 ---
+
 <!--more-->
+
 [![](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef017c330f2ae8970b-pi)](http://geekandpoke.typepad.com/.a/6a00d8341d3df553ef017c330f2ae8970b-pi)Imagine, just for a moment (it would be painful to do this longer than just a moment) that Linus, when he decided to leave BitKeeper behind, switched to Subversion in stead of developing Git and that for any commit into the master branch of that repository, you'd need his approval. While you're imagining that, just a few microseconds more, imagine he stuck to his guns.
 
 Either Linux would no longer exist or Linus would have been declared mad, and Linux would have moved on without him.
@@ -26,7 +26,6 @@ Either Linux would no longer exist or Linus would have been declared mad, and Li
 There are several popular centrally managed SCMs Out There: Microsoft has TFS, many open source and commercial projects use Subversion -- some people even still use CVS[^1]. I've personally worked with TFS, SVN, CVS and MKS -- I've even used RCS, though that is arguably the first distributed version manager[^2].
 
 [^1]: No, really, I mean it!
-
 [^2]: Again, I mean it, really!
 
 CVS is, of course, fundamentally flawed because it not only doesn't guarantee that what you get out is what you put in, but it practically guarantees the reverse: what you put in will be modified in various subtle and not-so-subtle ways, so you will never see it again. So we won't discuss CVS any further, nor will we discuss RCS, which underpins CVS and has the same fundamental flaw w.r.t. what's put in and what you get out. The same goes for MKS, which is basically CVS with a few extra flaws[^3].
@@ -39,12 +38,11 @@ The basic premise of a centrally managed version control system is that only one
 
 For example: when testing an application that represents the user-space part of a functionality I've designed and implemented for an industrial embedded device, I found a design flaw in a different part of the device's software that made my test fail. I analyzed the problem, came up with a solution, and discussed it with the company's lead analyst. We agreed on the solution and I created the branch (in TFS) to fix the problem, fixed it and had it peer-reviewed. That part of the process took about an hour, a significant part of which was creating the branch in TFS (which took about five minutes -- so 10% of the total time to fix the bug) -- another significant part was the administrative overhead of creating the work item etc., but I have no problem with that part of the procedure. The bug, which had to be fixed in a separate branch due to the "one item one branch" mantra, is now waiting for approval to be checked into the trunk -- and has been for several hours.
 
-Clearly, something is wrong with this picture: 
+Clearly, something is wrong with this picture:
 
-  1. fixing a bug on which the test results of an important feature depends needs to be done in a separate branch so it remains trackable: each work item corresponds to a single commit in the trunk, so it's easy to find the change set that implements a specific fix;
-  2. every feature or bugfix must be developed in its own branch, so check-ins into the trunk really only touch one thing (probably the most-broken rule in this type of practice)
-  3. every development branch is created directly from the trunk (because it is difficult to track development otherwise).
-
+1. fixing a bug on which the test results of an important feature depends needs to be done in a separate branch so it remains trackable: each work item corresponds to a single commit in the trunk, so it's easy to find the change set that implements a specific fix;
+2. every feature or bugfix must be developed in its own branch, so check-ins into the trunk really only touch one thing (probably the most-broken rule in this type of practice)
+3. every development branch is created directly from the trunk (because it is difficult to track development otherwise).
 
 In case it's not clear _what_ is wrong with this picture: let me make a sketch:[![20130118-121940.jpg](/assets/2013/01/20130118-121940.jpg)](/assets/2013/01/20130118-121940.jpg)
 

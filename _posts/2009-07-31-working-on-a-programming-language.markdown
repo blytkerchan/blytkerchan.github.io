@@ -7,18 +7,16 @@ excerpt: |
   writing is to summer's dawn
   as language to dusk
 layout: post
-permalink: /blog/2009/07/working-on-a-programming-language/
-slug: working-on-a-programming-language
 title: Working on a programming language
 wordpress_id: 117
 categories:
-- C &amp; C++
-- Opinions
-- Software Design
-- Technology
+  - C &amp; C++
+  - Opinions
+  - Software Design
+  - Technology
 tags:
-- programming
-- programming language design
+  - programming
+  - programming language design
 ---
 
 A few years ago, I started on the design and development of a new programming language, called Jail. The goal was to create an easy-to-learn, Object-Oriented programming language that could run on a VM as well as natively, on embedded devices, had support for threads, networking, etc.
@@ -35,62 +33,44 @@ One recent extention to Funky, created for version 1.3.00, was the possibility t
 
 I said Funky is very easy to learn, but let's try that out: a statement is an opening bracket, the name of the function to call, followed by a comma-separated list of arguments, in which those arguments can be a statement, a literal, an argument reference or (since version 1.3.00) an inline function definition. That means a simple script looks like this:
 
-    
     (add, 1, 2)
-
 
 for which the interpreter will return 3.
 
 A function definition looks like this:
 
-    
     (!sub-2, (add, @0, (neg, @1)))
-
 
 which defines a function **(!** called **sub**, which takes two arguments **-2**, and calls **add** with the first argument **@0**, and a negation of the second argument **(neg, @1)**. Since version 1.3.00, you can also pass an anonymous function to a function:
 
-    
     (!foo, (@0, @1, @2))(foo, ((add, @0, @1)), 1, 2)
-
 
 Here, **foo** calls its first argument as a function, passing its second and third arguments to it. The first argument is a statement with an extra pair of brackets: **((add, @0, @1))**, which defines our anonymous function.
 
 You can also have the interpreter optimize recursions if you know how many there will be (as of version 1.3.00, again). This looks a lot like the anonymous functions:
 
-    
     ((add, @0, @1), 3, 1, 2)
-
 
 This code will call **add** recursively three times, and is therefore equivalent to:
 
-    
     (add, (add, (add, 1, 2), 2), 2)
-
 
 because add only returns one value. Some functions may return more than one value, however, so the ruls is that returned values overwrite the arguments passed to the auto-recursing statement. Hence, a function that looks like this:
 
-    
     ((div, @0, @1), 2, 5, 4)
-
 
 is equivalent to
 
-    
     (div, (div, 5, 4))
-
 
 because div (at least in its integer incantation) returns the divider and the remainder. Note that (div, 5, 4) will return (1, 1); (div, 1, 1) will return (1, 0), and (div, 1, 0) would be undefined, so ((div, @0, @1), 3, 5, 4) is not valid!
 
 As of version 1.4.00, Funky also supports more explicit loops, like this:
 
-    
     (while, (pred), (body), (control))
-
 
 in which case the interpreter will execute **body** until **pred** returns _false_ (tested with the test built-in). **control** is a bit special in that it edits the arguments passed to the function with while, rather than the return value of the function. This means that the following code will call **ping** ten times:
 
-    
     (!sub, (add, @0, (neg, @1)))(!goForIt, (while, @0, (ping), (sub, @0, 1)))(goForIt, 10)
-
 
 Now, if you'll follow the podcast on the Funky website you'll write a stand-alone interpreter for Funky pretty quickly (assuming you know a wee bit of C++ _or_ just copy what I do in the podcast) and you can try this out for yourself - and tell me how you've fared.

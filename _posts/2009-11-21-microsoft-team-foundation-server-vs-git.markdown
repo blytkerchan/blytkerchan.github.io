@@ -3,20 +3,19 @@ author: rlc
 comments: true
 date: 2009-11-21 20:42:51+00:00
 layout: post
-permalink: /blog/2009/11/microsoft-team-foundation-server-vs-git/
-slug: microsoft-team-foundation-server-vs-git
 title: Microsoft Team Foundation Server vs Git
-wordpress_id: 381
 categories:
-- Opinions
-- Software Development
-- Technology
+  - Opinions
+  - Software Development
+  - Technology
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 For the last few weeks, and in the coming months, I've had to (and will have to) work with Microsoft's Team Foundation Server (TFS).
+
 <!--more-->
+
 I have a habit of working on more than one thing at the same time - call it sustained partial attention or multi-tasking, but I try to optimize the use of my time. E.g. when my computer is compiling one project, I can usually work on another project while it's doing that: as long as I have stuff to do, I can keep working even if my computer is working on other stuff. There is a limit to the number of projects I can work on in parallel, however, just like there's a limit to the amount of (real) work the computer can do in parallel. My limit is usually lower than the computer's limit: computers do unintelligent things really fast while humans (such as myself) do intelligent things really slowly. That means that by the time I have another "dumb job" for the computer, it's usually finished the one I gave it earlier so I can pick up where I left off. That way, I don't spend too much time waiting for my computer.
 
 That whole idea is out the window when using TFS: ever since I stopped using CVS a few years ago, I had stopped waiting for my computer for any significant amount of time - but now, those days are back with a vengeance!

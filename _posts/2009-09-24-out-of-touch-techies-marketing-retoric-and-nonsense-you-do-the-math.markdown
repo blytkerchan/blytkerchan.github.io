@@ -3,17 +3,15 @@ author: rlc
 comments: true
 date: 2009-09-24 22:28:46+00:00
 layout: post
-permalink: /blog/2009/09/out-of-touch-techies-marketing-retoric-and-nonsense-you-do-the-math/
-slug: out-of-touch-techies-marketing-retoric-and-nonsense-you-do-the-math
 title: Out-of-touch techies, marketing retoric, and nonsense. You do the math.
 wordpress_id: 213
 categories:
-- Opinions
+  - Opinions
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
-Sometimes, techies and marketers - and especially people who are both - can get very out-of-touch with the real world and start spewing out nonsense<!--more--> like this: 
+Sometimes, techies and marketers - and especially people who are both - can get very out-of-touch with the real world and start spewing out nonsense<!--more--> like this:
 
 <blockquote>The web has dramatically changed the software industry over the past 15 years. Today it’s hard to imagine business without the web. Nearly all businesses have or are creating a presence on the web to promote or sell their products and services, find new customers, or support existing ones. At the same time, the web has spawned a massive new ecosystem of web professionals – developers and designers who are focused on helping these businesses thrive.  
 From: <a href="http://blogs.msdn.com/somasegar/archive/2009/09/24/announcing-websitespark.aspx">Somasegars weblog</a></blockquote>

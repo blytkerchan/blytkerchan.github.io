@@ -3,16 +3,14 @@ author: rlc
 comments: true
 date: 2013-06-10 17:00:46+00:00
 layout: post
-permalink: /blog/2013/06/why-i-decided-vlinder-software-should-stop-selling-funky/
-slug: why-i-decided-vlinder-software-should-stop-selling-funky
 title: Why I decided Vlinder Software should stop selling Funky
 wordpress_id: 2324
 categories:
-- Reasons
-- Vlinder Software
+  - Reasons
+  - Vlinder Software
 tags:
-- business decisions
-- Vlinder Software
+  - business decisions
+  - Vlinder Software
 ---
 
 If you follow the News feed from [Vlinder Software's site](http://vlinder.ca) you know that I've posted an announcement saying Funky is now in its end-of-life cycle. This is our first product to enter end-of-life, but what it basically means is that we won't actively work on improving the software anymore.

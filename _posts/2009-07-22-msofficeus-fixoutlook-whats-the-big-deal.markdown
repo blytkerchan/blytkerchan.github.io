@@ -7,16 +7,14 @@ excerpt: |
   long for winter in summer?
   perhaps just autumn
 layout: post
-permalink: /blog/2009/07/msofficeus-fixoutlook-whats-the-big-deal/
-slug: msofficeus-fixoutlook-whats-the-big-deal
-title: '@msofficeus @fixoutlook - what''s the big deal?'
+title: "@msofficeus @fixoutlook - what's the big deal?"
 wordpress_id: 44
 categories:
-- Opinions
+  - Opinions
 tags:
-- Microsoft
-- social media
-- standards compliance
+  - Microsoft
+  - social media
+  - standards compliance
 ---
 
 At fixoutlook.org, they've started a Twitter campaign to ask Microsoft to fix Outlook's standards compliance w.r.t., HTML and standards compliance. Even my brother, [Jeroen](http://www.jeroenlandheer.com), who is usually a big Microsoft fan, got in in it - which is how I got to know about it.

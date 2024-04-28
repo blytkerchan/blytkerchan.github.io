@@ -3,18 +3,17 @@ author: rlc
 comments: true
 date: 2009-08-10 01:42:40+00:00
 layout: post
-permalink: /blog/2009/08/crime-debugging-and-the-broken-window-rule/
-slug: crime-debugging-and-the-broken-window-rule
 title: Crime, Debugging and the Broken Window Rule
 wordpress_id: 147
 categories:
-- Software Design
+  - Software Design
 tags:
-- debugging
-- Posts that need to be re-tagged (WIP)
+  - debugging
+  - Posts that need to be re-tagged (WIP)
 ---
 
 In the late 1980s New York City was cleaned up from under the ground up: from 1984 to 1990, the New York subway was cleaned of its grafiti, then of its non-paying passengers. After that, when the chief of tge New York transit police became the chief of the New York city police, the city was cleaned up in the same way, and crime rates dropped dramatically.
+
 <!--more-->
 
 The people responsible for this clean-up believed that taking care of the details - the petty crimes and broken windows - would dissuade the (potential) criminals from criminal behavior and, apparently, they were right.
@@ -27,15 +26,14 @@ I believe that code should be readable, structured and neat. Neat meaning someth
 
 Readable code, finally, doesn't mean it should be littered with comments: code should _definitely not_ try to chronicle its own history, as some "good practices" would have us do: there are tools to do that, such as Git, Subversion, CVS. MKS, SourceSafe, Bazaar, etc. Even using RCS directly is better than trying to do it in the code itself. Comments also have a tendency to lie about the code, so they should not be allowed to describe the code in any way, shape or form. No function should look like this:
 
-    
     void foo(struct X x)
     {
     }
-    
+
     void baz(struct X x)
     {
     }
-    
+
     void bar(int m)
     {
         // create a VLA of Xs
@@ -47,7 +45,6 @@ Readable code, finally, doesn't mean it should be littered with comments: code s
             baz(xs[n]);
         }
     }
-
 
 Not only do the comments not add anything that is actually useful, but they lie: if you look closely, on line 17 of the example, baz is called, while on line 14, the comment said we'd call foo. In this case, the comment and the code were far enough from each other that the programmer who made the change changed the code, but not the comment.
 

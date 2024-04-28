@@ -3,22 +3,22 @@ author: rlc
 comments: true
 date: 2010-11-19 04:23:03+00:00
 layout: post
-permalink: /blog/2010/11/more-than-the-absence-of-problems/
-slug: more-than-the-absence-of-problems
 title: More than the absence of problems
 wordpress_id: 1133
 categories:
-- Software Design
-- Software Development
-- Software Engineering
+  - Software Design
+  - Software Development
+  - Software Engineering
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 Quality can be defined in many ways: ISO defines quality relative to requirements as a measure of how well the object's characteristics meet those requirements. Those requirements can be specified (documented) or implied (customary). This has the advantage of making quality more or less measurable, but it has the disadvantage of making it harder to justify improving the product if the (minimum) requirements are met.
 
 In my view, quality is a measure of excellence: it is more than the absence of problems and aims towards the prevention of problems.
+
 <!--more-->
+
 For example: although it may not be a _requirement_ for my laptop to run 24/7 the software on my laptop should not require me to reboot my laptop every few hours lest my windows stop having borders and my icons no longer show. In practice, however, I do have to reboot this laptop every few hours or my windows will really stop having borders and my icons will really stop showing. That is not true for my other laptop, which runs a different operating system on very similar hardware. Hence, although it may not be a requirement, it is a quality issue in my view.
 
 I usually work on systems that have to be able to run 24/7, have to perform their tasks the same way every time, with real-time constraints and without every failing due to the software. Sometimes, hardware imposes serious constraints on the software (or firmware) as well, making it more challenging -- and therefore more interesting -- to find a satisfactory, high quality solution.

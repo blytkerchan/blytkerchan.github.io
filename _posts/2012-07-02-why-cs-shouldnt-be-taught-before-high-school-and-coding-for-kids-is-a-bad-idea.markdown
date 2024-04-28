@@ -3,8 +3,6 @@ author: rlc
 comments: true
 date: 2012-07-02 00:35:10+00:00
 layout: post
-permalink: /blog/2012/07/why-cs-shouldnt-be-taught-before-high-school-and-coding-for-kids-is-a-bad-idea/
-slug: why-cs-shouldnt-be-taught-before-high-school-and-coding-for-kids-is-a-bad-idea
 title: Why CS shouldn't be taught before high school (and coding for kids is a bad idea)
 wordpress_id: 1891
 categories:

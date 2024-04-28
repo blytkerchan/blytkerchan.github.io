@@ -3,21 +3,21 @@ author: rlc
 comments: false
 date: 2015-06-30 01:49:30+00:00
 layout: post
-permalink: /blog/2015/06/technical-documentation/
-slug: technical-documentation
 title: Technical documentation
 wordpress_id: 3431
 categories:
-- Opinions
-- Quality
-- Software Engineering
+  - Opinions
+  - Quality
+  - Software Engineering
 tags:
-- documentation
-- technical documentation
+  - documentation
+  - technical documentation
 ---
 
 Developers tend to have a very low opinion of technical documentation: it is often wrong, partial, unclear and not worth the trouble of reading. This is, in part, a self-fulfilling prophecy: such low opinions of technical documentation results in them not being read, and not being invested in.
+
 <!--more-->
+
 I have no easy solution for this: technical documentation is an art and a science, and not everyone is good at it. It's all about communication and, while communication is the first thing we start learning, as soon as -- and perhaps before -- we are born, it is also something we never stop learning and refining.
 
 The solution I do have is not easy: good documentation requires a consistent, considerable, continuous investment both pecuniary and of effort. Good documentation requires time, tools and tenacity -- all of which cost money.

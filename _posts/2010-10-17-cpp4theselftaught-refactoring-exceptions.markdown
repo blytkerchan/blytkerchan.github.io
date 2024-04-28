@@ -3,21 +3,21 @@ author: rlc
 comments: true
 date: 2010-10-17 00:31:06+00:00
 layout: post
-permalink: /blog/2010/10/cpp4theselftaught-refactoring-exceptions/
-slug: cpp4theselftaught-refactoring-exceptions
 title: Refactoring Exceptions
 wordpress_id: 982
 categories:
-- C++ for the self-taught
+  - C++ for the self-taught
 tags:
-- Posts that need to be re-tagged (WIP)
-- refactoring
+  - Posts that need to be re-tagged (WIP)
+  - refactoring
 ---
 
 As I mentioned in the [previous installment](/blog/2010/10/negotiation-first-steps), our current way of handling exceptions leaves a few things to be desired. In this installment, we will fix that problem.
+
 <!--more-->
-Always, one of the most effective ways of going about refactoring (which is what we are doing now) is to make cleanly breaking changes. Let's take a look at this change, for example: 
-    
+
+Always, one of the most effective ways of going about refactoring (which is what we are doing now) is to make cleanly breaking changes. Let's take a look at this change, for example:
+
     @@ -10,10 +10,29 @@
      namespace Vlinder { namespace Chausette { namespace SSPI {
      	class VLINDER_CHAUSETTE_SSPI_API Mechanism
@@ -45,13 +45,12 @@ Always, one of the most effective ways of going about refactoring (which is what
     +
      		Mechanism(const std::string & package_name);
      		virtual ~Mechanism();
-    
+
      		virtual std::auto_ptr< Security::Details::Negotiation > startNegotiation()/* = 0*/;
      		virtual std::auto_ptr< Security::Credentials > getCredentials(const std::string & principal, int flags)/* = 0*/;
-    
 
-We'll look at the new `Exception` class in a moment, but the first thing you should notice is that our code will no longer compile: 
-    
+We'll look at the new `Exception` class in a moment, but the first thing you should notice is that our code will no longer compile:
+
     1>------ Build started: Project: libsspi, Configuration: Debug Win32 ------
     1>Compiling...
     1>Context.cpp
@@ -66,14 +65,11 @@ We'll look at the new `Exception` class in a moment, but the first thing you sho
     1>Build log was saved at "file://c:\Documents and Settings\Ronald\Desktop\Chausette\projects\msvc8\libsspi\Debug\BuildLog.htm"
     1>libsspi - 3 error(s), 0 warning(s)
     ========== Build: 0 succeeded, 1 failed, 7 up-to-date, 0 skipped ==========
-    
-
 
 This is what I mean by a "clean break": the compiler finds the errors for you and lets you know what to do (as if you didn't already know), so now we can make the changes without wondering where they should be.
 
 2 files changed, 22 insertions, 3 deletions, the other file, of course, being this:
 
-    
     @@ -106,7 +106,7 @@ namespace Vlinder { namespace Chausette { namespace SSPI {
      			if (!SUCCEEDED(complete_status))
      			{
@@ -101,18 +97,15 @@ This is what I mean by a "clean break": the compiler finds the errors for you an
      		case SEC_I_COMPLETE_NEEDED :
      			/* The client must finish building the message and then call the
      			 * CompleteAuthToken function. */
-    
 
+If that were all I had to say for this installment, it would be the shortest one yet. There are, however, a few things I would like to note: the `Exception` class carries information with it that, without knowing the exact type of the exception object, is not accessible. An appropriate implementation of `what` could handle this, but `what` is more difficult to implement than you might think. An obvious, **but wrong** implementation would look like this:
 
-If that were all I had to say for this installment, it would be the shortest one yet. There are, however, a few things I would like to note: the `Exception` class carries information with it that, without knowing the exact type of the exception object, is not accessible. An appropriate implementation of `what` could handle this, but `what` is more difficult to implement than you might think. An obvious, **but wrong** implementation would look like this: 
-    
     const char * what() const
     {
     	std::stringstream ss;
     	ss << filename_ << "(" << line_ << "): error: " << Base::what() << " [" << code_ << "]";
     	return ss.str().c_str();
     }
-
 
 For one thing, this version can throw an exception, which isn't worth much if you want to know what the error was in the first place. For another, the pointer it returns points to the innards of a temporary object (with automatic storage duration) and is therefore pretty certain to be worthless once you get around to using it.
 
@@ -128,8 +121,8 @@ The second option is just silly: as I said before we will return `Base::what()` 
 
 The third option is, of course, the right one. It comes with the added advantage that if the exception is thrown, caught, interrogated, re-thrown, re-caught and interrogated again, only one of the interrogations need format the string.
 
-This brings us to this version of our new `Exception` class: 
-    
+This brings us to this version of our new `Exception` class:
+
     template < typename Base >
     struct Exception : Base
     {
@@ -140,7 +133,7 @@ This brings us to this version of our new `Exception` class:
     		, code_(code)
     		, what_called_(false)
     	{ /* no-op */ }
-    
+
     	const char * what() const
     	{
     		if (what_called_)
@@ -171,7 +164,7 @@ This brings us to this version of our new `Exception` class:
     			}
     		}
     	}
-    
+
     	const char *filename_;
     	int line_;
     	unsigned long code_;
@@ -179,7 +172,6 @@ This brings us to this version of our new `Exception` class:
     	mutable char what_[120];
     	mutable bool what_called_;
     };
-
 
 This version provides the no-fail guarantee (and falls back on `Base::what()` if it fails internally), provides the information in a human-readable form and has a consistent interface.
 

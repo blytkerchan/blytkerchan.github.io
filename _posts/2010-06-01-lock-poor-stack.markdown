@@ -3,49 +3,48 @@ author: rlc
 comments: true
 date: 2010-06-01 23:26:58+00:00
 layout: post
-permalink: /blog/2010/06/lock-poor-stack/
-slug: lock-poor-stack
 title: Lock-Poor Stack
 wordpress_id: 713
 categories:
-- C &amp; C++
+  - C &amp; C++
 tags:
-- lock-poor
-- Posts that need to be re-tagged (WIP)
+  - lock-poor
+  - Posts that need to be re-tagged (WIP)
 ---
 
 The following is the complete code of a lock-poor stack in C/C++: it's mostly C but it uses Relacy for testing, so the atomics are implemented in C++. With a little work, you can turn this into a complete C implementation without depending on relacy. I wrote in while writing an article that will soon appear on this blog.
 
 The stack is not completely lock-free because it needs a lock to make sure it doesn't need any memory management solution for its reference to the top node during popping or reading the top node.
+
 <!--more-->
+
 The code is covered by the [GNU General Public License, version 3](http://www.gnu.org/licenses/gpl-3.0.txt)
 
-    
     #define RL_MSVC_OUTPUT
     #include "relacy/relacy_std.hpp"
-    
+
     enum StackResult {
     	STACK_RESULT_OK,
     	STACK_RESULT_E_BAD_ALLOC,	// allocation failed
     	STACK_RESULT_E_PRECOND,		// pre-condition failed
     	STACK_RESULT_E_EMPTY,
     };
-    
+
     typedef unsigned int uint32_t;
-    
+
     unsigned const thread_count__ = 3;
-    
+
     struct StackNode_struct
     {
     	struct StackNode_struct * next_;
     	void * value_;
     };
-    
+
     #define StackNode_setABACounter(p, a)					\
     	((StackNode*)((((uint32_t)(p)) & 0xFFFFFFF0) | ((a) & 0x0000000F)))
     #define StackNode_getABACounter(p) (((uint32_t)(p)) & 0x0000000F)
     #define StackNode_getPointer(p) ((StackNode*)(((uint32_t)(p) & 0xFFFFFFF0)))
-    
+
     static StackNode * StackNode_new()
     {
     	// when we allocate a node, we actually allocate enough space for the node to
@@ -57,16 +56,16 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     	if ((((uint32_t)retval) - buffer) < 4) retval += 16;
     	void ** p = (void**)(retval - 4);
     	*p = (void*)buffer;
-    
+
     	return (StackNode*)retval;
     }
-    
+
     static void StackNode_delete(StackNode * node)
     {
     	void ** p = (void**)(((char*)StackNode_getPointer(node)) - 4);
     	free(*p);
     }
-    
+
     struct Stack_struct
     {
     	Stack_struct()
@@ -75,7 +74,7 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     		if (pthread_mutex_init(&lock;_, 0) != 0)
     			throw std::bad_alloc();
     	}
-    
+
     	~Stack_struct()
     	{
     		StackNode * node = StackNode_getPointer(top_($).load());
@@ -88,15 +87,15 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     		}
     		pthread_mutex_destroy(&lock;_);
     	}
-    
+
     	std::atomic< StackNode * > top_;
     	pthread_mutex_t lock_;
     };
-    
+
     Stack * Stack_new()
     {
     	Stack * stack = 0;
-    
+
     	try
     	{
     		stack = new Stack_struct;
@@ -105,19 +104,19 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     	{
     		stack = 0;
     	}
-    
+
     	return stack;
     }
-    
+
     void Stack_delete(Stack * stack)
     {
     	delete stack;
     }
-    
+
     int Stack_push(Stack * stack, void * value)
     {
     	int retval = STACK_RESULT_OK;
-    
+
     	if (stack)
     	{
     		StackNode * node = StackNode_new();
@@ -133,18 +132,18 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     		else retval = STACK_RESULT_E_BAD_ALLOC;
     	}
     	else retval = STACK_RESULT_E_PRECOND;
-    
+
     	return retval;
     }
-    
+
     int Stack_top(Stack * stack, void ** value)
     {
     	int retval = STACK_RESULT_OK;
-    
+
     	if (stack && value)
     	{
     		StackNode top;
-    
+
     		pthread_mutex_lock(&stack-;>lock_);
     		if (stack->top_($))
     		{
@@ -156,20 +155,20 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     	}
     	else
     		retval = STACK_RESULT_E_PRECOND;
-    
+
     	return retval;
     }
-    
+
     int Stack_pop(Stack * stack, void ** value)
     {
     	int retval = STACK_RESULT_OK;
-    
+
     	if (stack && value)
     	{
     		StackNode top;
     		StackNode * top_ptr = 0;
     		int done = 0;
-    
+
     		do
     		{
     			pthread_mutex_lock(&stack-;>lock_);
@@ -193,15 +192,15 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     	}
     	else
     		retval = STACK_RESULT_E_PRECOND;
-    
+
     	return retval;
     }
-    
+
     int Stack_empty(Stack * stack)
     {
     	return (stack && (StackNode_getPointer(stack->top_($).load()) == 0));
     }
-    
+
     struct StackTest : rl::test_suite< StackTest, thread_count__ >
     {
     	void before()
@@ -214,7 +213,7 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
             }
     		stack_ = Stack_new();
     	}
-    
+
     	void thread(unsigned index)
     	{
     		int numbers[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
@@ -230,7 +229,7 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
     			++pop_counts_[(int)p]($);
     		}
     	}
-    
+
     	void after()
     	{
     		RL_ASSERT(Stack_empty(stack_));
@@ -241,13 +240,13 @@ The code is covered by the [GNU General Public License, version 3](http://www.gn
                 RL_ASSERT(pop_counts_[i]($) == 3);
             }
     	}
-    
+
     	Stack * stack_;
     	std::atomic< int > push_counts_[16];
     	std::atomic< int > top_counts_[16];
     	std::atomic< int > pop_counts_[16];
     };
-    
+
     int main()
     {
     	rl::test_params p;

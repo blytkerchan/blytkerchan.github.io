@@ -7,15 +7,13 @@ excerpt: |
   on coding and on code, yet...
   expertise attained?
 layout: post
-permalink: /blog/2009/07/how-to-become-an-expert/
-slug: how-to-become-an-expert
 title: How to become an expert
 wordpress_id: 36
 categories:
-- Opinions
+  - Opinions
 tags:
-- experience
-- expertise
+  - experience
+  - expertise
 ---
 
 More than once, I have met people who have claimed to be experts in their fields and defined their fields very, very broadly: they were experts in C++, C, Java, PHP, HTML, SQL, Pascal, Delphi, ASP, .NET, you name it! If you dig a bit deeper, their "expertise" often came from "technology romanticism", school projects, classes or having read a website on the subject.

@@ -3,17 +3,15 @@ author: rlc
 comments: true
 date: 2014-02-01 21:09:52+00:00
 layout: post
-permalink: /blog/2014/02/a-functional-version-of-the-kmp-algorithm/
-slug: a-functional-version-of-the-kmp-algorithm
 title: A functional version of the KMP algorithm
 wordpress_id: 2527
 categories:
-- C &amp; C++
-- Software Development
+  - C &amp; C++
+  - Software Development
 tags:
-- functional programming
-- Haskell
-- meta-programming
+  - functional programming
+  - Haskell
+  - meta-programming
 ---
 
 For one of the projects I'm working on, I needed a compile-time version of the KMP algorithm in C++. I started by making the algorithm functional.
@@ -30,7 +28,6 @@ When I want to implement something that was originally written in something othe
 
 Here's the code:
 
-    
     -- KMP algorithm
     kmp_table w =
         build w initial_t initial_pos initial_cnd
@@ -38,7 +35,7 @@ Here's the code:
             initial_t = [-1, 0]
             initial_pos = 2
             initial_cnd = 0
-            build w t pos cnd = 
+            build w t pos cnd =
                 if pos >= length w
                 then t
                 else
@@ -47,7 +44,5 @@ Here's the code:
                     else if cnd > 0
                          then build w t pos (t!!cnd)
                          else build w (t ++ [0]) (pos + 1) cnd
-
-
 
 Translating this to a C++ template is a simple question of creating a meta-function for each `if`, and using `enable_if` for each `else` branch.

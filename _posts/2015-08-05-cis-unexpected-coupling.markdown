@@ -3,18 +3,18 @@ author: rlc
 comments: true
 date: 2015-08-05 23:12:10+00:00
 layout: post
-permalink: /blog/2015/08/cis-unexpected-coupling/
-slug: cis-unexpected-coupling
-title: 'CIS: Unexpected Coupling'
+title: "CIS: Unexpected Coupling"
 wordpress_id: 3266
 categories:
-- Common Issues with Synchronization
+  - Common Issues with Synchronization
 tags:
-- coupling
+  - coupling
 ---
 
 One of the most common problems with synchronization occurs when things need each other that you didn't expect to need each other.
+
 <!--more-->
+
 Consider, for example, a server application where the client establishes a connection to the server and, after some hand-shaking and polling, expects to be notified if "anything of interest" occurs. The server has a database (e.g. it might be a financial system and "something of interest" might be a transaction on a specific account). The database is set up in such a way that a write to a specific table, when it meets specific requirements, triggers an event message to be written to the connection.
 
 This is all fine, as long as it's implemented correctly: as anyone who has worked with databases will tell you, triggers are tricky: they can't be rolled back, so if the transaction fails the message will still have been sent but when the client comes to check on the table, the value hasn't changed (time stamps are still the same, etc.) -- has the transaction not finished yet, or has it failed?
@@ -29,9 +29,8 @@ Of course, there are subtler retro-actions than a confirmation message as well: 
 
 Coupling isn't necessarily evil, but it should be explicit if at all possible.
 
-
-* * *
-
+---
 
 **PS**: The first draft of this post used the example of an array of potato launchers that, though independent, were coupled by a targeting controller. I even made a drawing of such a launcher (though not the entire array). While the text of that draft would need an awful lot of work, I thought I'd at least share the drawing:
-{% include image.html url="/assets/2014/08/Potato-launcher-300x185.png" caption="Potato launcher" %}
+
+<img src="/assets/2014/08/Potato-launcher-300x185.png" alt="Potato launcher">

@@ -3,17 +3,16 @@ author: rlc
 comments: true
 date: 2015-07-20 10:16:10+00:00
 layout: post
-permalink: /blog/2015/07/git-demystification/
-slug: git-demystification
 title: Git demystification
 wordpress_id: 3662
 categories:
-- Opinions
+  - Opinions
 tags:
-- git
+  - git
 ---
 
 There are a few misconceptions I hear about Git that I find should be cleared up a bit, so here goes:
+
 <!--more-->
 
 **"To use Git you need to use the command-line"**
@@ -58,6 +57,5 @@ Rebasing doesn't lose history, though: it re-writes it on top of a different ver
 **"Git discourages continuous integration"**
 
 No, it doesn't. While you certainly _can_ work in isolation, continuous integration is not a question of everybody hacking on the master/current/root/main branch and inflicting their code on everyone else: it's a question of integrating changes continuously, which pulling and good support for merging makes fairly easy.
-
 
 Just give it a try, eh?

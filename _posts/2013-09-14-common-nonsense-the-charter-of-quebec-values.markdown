@@ -3,14 +3,12 @@ author: rlc
 comments: true
 date: 2013-09-14 02:15:32+00:00
 layout: post
-permalink: /blog/2013/09/common-nonsense-the-charter-of-quebec-values/
-slug: common-nonsense-the-charter-of-quebec-values
-title: 'Common nonsense: the charter of Quebec Values'
+title: "Common nonsense: the charter of Quebec Values"
 wordpress_id: 2358
 categories:
-- Opinions
+  - Opinions
 tags:
-- politics
+  - politics
 ---
 
 [![20130913-211324.jpg](/assets/2013/09/20130913-211324.jpg)](/assets/2013/09/20130913-211324.jpg)
@@ -34,18 +32,14 @@ Promoting the religious neutrality of the state is a good thing: I like the idea
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Pinned this on the office whiteboard re: QC values charter<br>(Pic from the local newspaper Le Soleil) <a href="http://t.co/ylUXjXHsn2">pic.twitter.com/ylUXjXHsn2</a></p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/378544383722655744?ref_src=twsrc%5Etfw">September 13, 2013</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-But if the goal is to preserve the religious neutrality of the state -- which, like i said, in itself is a laudable goal -- then judging people by their appearance seems to me a counterproductive move: an inclusive society with a neutral state and a multi-ethnic population will have people who look different from one another -- even if, as the PQ would like, that society is not multi-cultural. Again: a government of, for and by the people is a government that reflects the people's diversity, including in the way they dress. 
+But if the goal is to preserve the religious neutrality of the state -- which, like i said, in itself is a laudable goal -- then judging people by their appearance seems to me a counterproductive move: an inclusive society with a neutral state and a multi-ethnic population will have people who look different from one another -- even if, as the PQ would like, that society is not multi-cultural. Again: a government of, for and by the people is a government that reflects the people's diversity, including in the way they dress.
 
 There are, of course, practical considerations as well: a Sikh without his turban would likely not be able to do his job: his hair would get in the way (they don't cut it). That's why he wears the turban.
 
-Then there are the inconsistencies: crucifixes on public buildings, including secular, public primary schools an the National Assembly, stay. So do X-mas trees (see C.S. Lewis about the difference between X-mas and Christmas), "because they are part of our culture" -- which is where Quebec not being multi-cultural comes in. Little crosses, Stars of David an half-moons are OK, big ones aren't. Who's going to measure them? I'm going to bet that a fleur-de-lis of any size, even if [pinned in a poppy](https://www.therecord.com/news/canada/2012/11/02/complaints-prompt-quebec-premier-to-remove-fleur-de-lis-pin-from-poppy.html), is going to be OK. 
+Then there are the inconsistencies: crucifixes on public buildings, including secular, public primary schools an the National Assembly, stay. So do X-mas trees (see C.S. Lewis about the difference between X-mas and Christmas), "because they are part of our culture" -- which is where Quebec not being multi-cultural comes in. Little crosses, Stars of David an half-moons are OK, big ones aren't. Who's going to measure them? I'm going to bet that a fleur-de-lis of any size, even if [pinned in a poppy](https://www.therecord.com/news/canada/2012/11/02/complaints-prompt-quebec-premier-to-remove-fleur-de-lis-pin-from-poppy.html), is going to be OK.
 
 Of course, I don't mind the separatist party blowing up the separatist movement -- I don't much like separatism -- but I do mind xenophobia, and this reeks of it.
 
+---
 
-
-* * *
-
-
-
-A few things I should say as closing remarks: I am an immigrant. I am not, nor have I ever been, nor do I aspire to be, a government employee. These opinions are my own and as such necessarily do not reflect those of others. My faith is not part of my clothing, nor vice-versa, so I would not personally be affected by his charter, other than through revulsion  at the idea of it.
+A few things I should say as closing remarks: I am an immigrant. I am not, nor have I ever been, nor do I aspire to be, a government employee. These opinions are my own and as such necessarily do not reflect those of others. My faith is not part of my clothing, nor vice-versa, so I would not personally be affected by his charter, other than through revulsion at the idea of it.

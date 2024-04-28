@@ -3,15 +3,13 @@ author: rlc
 comments: true
 date: 2010-09-21 22:26:44+00:00
 layout: post
-permalink: /blog/2010/09/not-so-permanent-permalinks-all-permalinks-changed/
-slug: not-so-permanent-permalinks-all-permalinks-changed
-title: 'Updated: Not-so-permanent permalinks (all permalinks changed)'
+title: "Updated: Not-so-permanent permalinks (all permalinks changed)"
 wordpress_id: 948
 categories:
-- C++ for the self-taught
-- This blog
+  - C++ for the self-taught
+  - This blog
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 Due to the addition of an important feature on the site, all permalinks for all posts have changed. Following the old links will send you to an error page where the the proposed options should include the page you're looking for.

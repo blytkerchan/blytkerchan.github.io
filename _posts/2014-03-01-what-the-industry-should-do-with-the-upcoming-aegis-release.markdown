@@ -3,17 +3,15 @@ author: rlc
 comments: true
 date: 2014-03-01 14:59:43+00:00
 layout: post
-permalink: /blog/2014/03/what-the-industry-should-do-with-the-upcoming-aegis-release/
-slug: what-the-industry-should-do-with-the-upcoming-aegis-release
 title: What the industry should do with the upcoming Aegis release
 wordpress_id: 3074
 categories:
-- DNP3
-- Industrial Automation
-- Smart Grid
+  - DNP3
+  - Industrial Automation
+  - Smart Grid
 tags:
-- Aegis
-- ICS security
+  - Aegis
+  - ICS security
 ---
 
 [Automatak will be releasing](https://web.archive.org/web/20150308032035/http://automatak.net/wordpress/?p=482) the Aegis fuzzing tool publicly and for free for the first time in a few days. Like I said yesterday:
@@ -52,7 +50,7 @@ So, while utilities have a head start, they need to hit the ground running if th
 
 Vendors need to do the same: they cannot just download the tool, run a few scripts and think they're done. They need to harness the knowledge they have of their own products and try to find ways to exploit their weaknesses -- and then fix those weaknesses. Again, they do have a head start, but they need to hit the ground running.
 
-Automatak is mounting a "consortium" that would allow just this, but access to which is not free. In my opinion, they should consider tiered membership to his "club of insiders", as vendors will not be willing to cough up the money to pay for membership in a club their own vendors should be members of: a large part of the industry uses the same software stack for the DNP3 protocol and vendors will reason -- and rightly so -- that they're already paying good money for a product, they shouldn't have to pay for the tool that breaks the product as well. Still, many vendors will be willing to participate in strengthening the protocol implementations (they have a vested interest in doing so), but contributing time and the by-product of internal research will often be easier than contributing money. 
+Automatak is mounting a "consortium" that would allow just this, but access to which is not free. In my opinion, they should consider tiered membership to his "club of insiders", as vendors will not be willing to cough up the money to pay for membership in a club their own vendors should be members of: a large part of the industry uses the same software stack for the DNP3 protocol and vendors will reason -- and rightly so -- that they're already paying good money for a product, they shouldn't have to pay for the tool that breaks the product as well. Still, many vendors will be willing to participate in strengthening the protocol implementations (they have a vested interest in doing so), but contributing time and the by-product of internal research will often be easier than contributing money.
 
 I do not think we'll see a sudden surge in cyberterrorist attacks on the smart grid: effectively attacking the grid remains a difficult proposition that takes planning and know-how and, therefore, fairly large amounts of money. The risk of getting caught is far from negligible as someone suddenly starting to buy all the equipment needed to mount an attack is sure to raise a few red flags and organizing an attack with several people involved would likely raise a few eyebrows along the way as well -- judicious use of tools and technologies such as Tor and steganography notwithstanding. That means that when an attack does come, either law enforcement will have seen it coming and hopefully coordinated with utilities to thwart it, or it will be big.
 

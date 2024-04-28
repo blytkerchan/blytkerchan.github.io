@@ -7,31 +7,21 @@ excerpt: |
   or is't autumn in disguise?
   spring doth promise much!
 layout: post
-permalink: /blog/2009/07/google-chrome-os-promising-but-promising-what-exactly/
-slug: google-chrome-os-promising-but-promising-what-exactly
-title: 'Google Chrome OS: Promising - but promising what, exactly?'
+title: "Google Chrome OS: Promising - but promising what, exactly?"
 wordpress_id: 106
 categories:
-- Business
-- Technology
+  - Business
+  - Technology
 tags:
-- Chrome OS
-- standards compliance
+  - Chrome OS
+  - standards compliance
 ---
 
 In his article "[Five Reasons Google Chrome OS Will Fail](http://www.pcworld.com/businesscenter/article/168058/five_reasons_google_chrome_os_will_fail.html)", David Coursey argues that Microsoft is simply too powerful in the OS market for any new OS to succeed. His collegue, Jared Newman, argues in "[Five Reasons Google Chrome OS Will Succeed](http://www.pcworld.com/article/182743/five_reasons_google_chrome_os_will_succeed.html)" that Google is so well-known and well-loved that it will surely succeed, and will help (if not cause) a market shift, moving a large part of the PC-owning population to Netbooks. Neither of them look at what [Google promises with Google Chrome OS](http://googleblog.blogspot.com/2009/07/introducing-google-chrome-os.html):
 
-
-	
-  * speed
-
-	
-  * reliability
-
-	
-  * low-cost
-
-
+- speed
+- reliability
+- low-cost
 
 None of these are good enough reasons to move to a different OS, for most of us: most of us do not work on the web on a day-to-day basis. I know _you_ are probably currently on the web (how else would you be reading my blog) as am _I_ (how else would I be writing it - actually, any number of ways, but that's beside the point). Desktop systems are used all around the world for a large number of things, including, _**but certainly not limited to**_ web browsing and using on-line applications.
 

@@ -7,15 +7,13 @@ excerpt: |
   is like snow is to autumn:
   unexpected joy
 layout: post
-permalink: /blog/2009/07/a-glimmer-of-hope-on-comp-std-c/
-slug: a-glimmer-of-hope-on-comp-std-c
 title: A glimmer of hope on comp.std.c++
 wordpress_id: 87
 categories:
-- C &amp; C++
+  - C &amp; C++
 tags:
-- C++0x
-- functional programming
+  - C++0x
+  - functional programming
 ---
 
 Since concepts got "yanked" from C++0x (see [my post on the subject](/blog/2009/07/no-concepts-in-c0x/)) I've been keeping a closer watch on comp.std.c++ than I usually do.

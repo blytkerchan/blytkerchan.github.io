@@ -3,19 +3,17 @@ author: rlc
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
-permalink: /blog/2010/03/preprequisites-for-the-project/
-slug: preprequisites-for-the-project
 title: Preprequisites for the project
 wordpress_id: 481
 categories:
-- C++ for the self-taught
+  - C++ for the self-taught
 tags:
-- Posts that need to be re-tagged (WIP)
+  - Posts that need to be re-tagged (WIP)
 ---
 
 In this installment, we'll get you set up to compile everything that needs compiling in our project. We'll try to keep it short and sweet and you'll be able to download most of what you need just by following the links on this page.
-<!--more-->
 
+<!--more-->
 
 ## Prerequisites
 
