@@ -20,7 +20,7 @@ function router(env) {
   const routingConfig = [
     {
       path: "/",
-      element: <Layout mainMenu={mainMenu} userMenu={userMenu} />,
+      element: <Layout mainMenu={mainMenu} userMenu={userMenu} env={env} />,
       errorElement: (
         <Layout mainMenu={mainMenu} userMenu={userMenu}>
           <Error />

@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
-export const Header = ({ mainMenu, userMenu, t, logoLocation }) => {
+export const Header = ({ name, mainMenu, userMenu, t, logoLocation }) => {
   return (
     <>
       <header className="py-3 border-bottom">
@@ -15,7 +15,7 @@ export const Header = ({ mainMenu, userMenu, t, logoLocation }) => {
             >
               <img src={logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong id="titleLabel">{t("app:title")}</strong>
+              <strong id="titleLabel">{name}</strong>
             </Link>
             <ul className="dropdown-menu text-small shadow" id="mainMenuItems">
               {mainMenu.map((menuItem, index) => {
@@ -34,7 +34,7 @@ export const Header = ({ mainMenu, userMenu, t, logoLocation }) => {
             <Link to="/" className="d-flex align-items-center link-dark text-decoration-none">
               <img src={logoLocation} style={{ height: 36 }} alt="logo" />
               &nbsp;
-              <strong>{t("app:title")}</strong>
+              <strong>{name}</strong>
             </Link>
           </div>
 

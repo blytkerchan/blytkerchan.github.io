@@ -5,13 +5,14 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Spinner from "./Spinner";
+import environment from "../config/environment";
 
 const Layout = (props) => {
   const mainMenu = props.mainMenu;
   const userMenu = props.userMenu;
   return (
     <>
-      <Header name="Vlinder Software" logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
+      <Header name={environment.title} logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
       <div className="d-flex">
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
