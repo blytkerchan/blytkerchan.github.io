@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 
+import rehypeRaw from "rehype-raw";
+
 const { t } = require("i18next");
 
 const Posts = ({ env }) => {
@@ -13,7 +15,7 @@ const Posts = ({ env }) => {
     fetch(env.indexEndpoint)
       .then((res) => res.json())
       .then((posts) => setPosts(posts));
-  }, [env.indexEndpoint]);
+  }, [env.indexEndpoint, env.title]);
 
   return (
     <>
@@ -29,6 +31,7 @@ const Posts = ({ env }) => {
             </h3>
 
             <Markdown
+              rehypePlugins={[rehypeRaw]}
               components={{
                 a: (props) => <Link to={props.href}>{props.children}</Link>,
               }}
