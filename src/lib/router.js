@@ -5,6 +5,7 @@ import userMenu from "../config/userMenu";
 
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
+import Blog from "../pages/Blog";
 import Error from "../pages/Error";
 import Posts from "../pages/Posts";
 
@@ -30,6 +31,10 @@ function router(env) {
         {
           path: "about",
           element: <Page name="about" />,
+        },
+        {
+          path: "blog/*",
+          element: <Blog env={env} />,
         },
       ],
     },

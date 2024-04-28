@@ -2,20 +2,23 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 
+import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import remarkMath from "remark-math";
+
+import usePosts from "../lib/usePosts";
 
 const { t } = require("i18next");
 
 const Posts = ({ env }) => {
   const [posts, setPosts] = useState([]);
 
+  const the_posts = usePosts();
+
   useEffect(() => {
     document.title = env.title;
-
-    fetch(env.indexEndpoint)
-      .then((res) => res.json())
-      .then((posts) => setPosts(posts));
-  }, [env.indexEndpoint, env.title]);
+    setPosts(the_posts.listPosts());
+  }, [the_posts, env, env.title]);
 
   return (
     <>
@@ -31,6 +34,7 @@ const Posts = ({ env }) => {
             </h3>
 
             <Markdown
+              remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeRaw]}
               components={{
                 a: (props) => <Link to={props.href}>{props.children}</Link>,
