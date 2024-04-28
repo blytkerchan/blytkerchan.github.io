@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>The web server running is currently unable</title>
+<link href="http://www.canadianwebhosting.com/styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#9a0000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table align="center" width="700" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="3"><img src="images/errorpage-top-503.gif" width="700" height="159" alt=""></td>
+	</tr>
+	<tr>
+		<td><img src="images/errorpage-leftbg.gif" width="33" height="155" alt=""></td>
+		<td bgcolor="white" width="631" class="bodytext">
+		<div width="550" style="padding:20px;" align="justify">
+		<h4 style="line-height:20px;">The web server running is currently unable to handle any additional <br>HTTP requests because this website has reached the limit of resources which have been set.</h4> 
+Once the website has reached the limits of CPU, memory or hard disk
+i/o,  users will receive this message because this website has
+exceeded its resource allocation and has stopped working to protect
+the other tenants on the server. <br> <br>
+<strong>What to Do: </strong><br> <br>
+We anticipate that this outage may be temporary and refreshing the screen may resolve the issue. <br><br>
+
+
+
+If you continue to receive this error, the website owner needs to contact Canadian Web Hosting to discuss options to upgrade the hosting plan.
+<ul>
+<li>Call Sales at 888-821-7888
+<li>Upgrade the existing Web hosting plan
+<ul><li><a href="http://www.canadianwebhosting.com/vps.asp">http://www.canadianwebhosting.com/vps.asp</a>
+    <li><a href="http://www.canadianwebhosting.com/dedicated_hosting.asp">http://www.canadianwebhosting.com/dedicated_hosting.asp</a></ul></div>
+
+</td>
+		<td><img src="images/errorpage-rightbg.gif" width="36" height="155" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="images/errorpage-bottom.gif" width="700" height="70" alt=""></td>
+	</tr>
+</table>
+
+</body>
+</html>
