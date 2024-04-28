@@ -7,6 +7,7 @@ const environment = {
   indexEndpoint: "/_posts/index.json",
   useHashRouting: Object.keys(packageJson.blog).includes("useHashRouting") ? packageJson.blog["useHashRouting"] : false,
   title: packageJson.blog.title,
+  pageSize: Object.keys(packageJson.blog).includes("pageSize") ? packageJson.blog.pageSize : 50,
 };
 
 export default environment;

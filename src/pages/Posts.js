@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 
+import { Button } from "react-bootstrap";
+
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
 import remarkMath from "remark-math";
@@ -9,21 +11,41 @@ import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
 
 import usePosts from "../lib/usePosts";
-
-const { t } = require("i18next");
+import { useTranslation } from "react-i18next";
 
 const Posts = ({ env }) => {
+  const { t } = useTranslation();
   const [posts, setPosts] = useState([]);
+  const [currentPage, setCurrentPage] = useState({ page: 0, pagePosts: [] });
 
   const the_posts = usePosts();
 
   useEffect(() => {
     document.title = env.title;
-    setPosts(the_posts.listPosts());
-  }, [the_posts, env, env.title]);
+    if (currentPage.pagePosts.length === 0) {
+      const posts = the_posts.listPosts();
+      currentPage.pagePosts = posts.slice(
+        currentPage.page * env.pageSize,
+        currentPage.page * env.pageSize + env.pageSize
+      );
+    }
+
+    setPosts(currentPage.pagePosts);
+    //window.scrollTo(0, 0);
+    console.log("Scrolling!");
+    document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, hehavior: "smooth" });
+  }, [currentPage, the_posts, env, env.title]);
+
+  const handleOlder = (e) => {
+    setCurrentPage({ page: currentPage.page + 1, pagePosts: [] });
+  };
+  const handleNewer = (e) => {
+    setCurrentPage({ page: currentPage.page - 1, pagePosts: [] });
+  };
 
   return (
-    <>
+    <div id="posts">
       <h2 className="post-list-heading">{t("Posts")}</h2>
       <ul className="post-list">
         {posts.map(({ title, permalink, locallink, excerpt, date }) => (
@@ -47,7 +69,17 @@ const Posts = ({ env }) => {
           </li>
         ))}
       </ul>
-    </>
+      <Button
+        variant="secondary"
+        onClick={handleOlder}
+        disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
+      >
+        {t("Older")}
+      </Button>
+      <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
+        {t("Newer")}
+      </Button>
+    </div>
   );
 };
 

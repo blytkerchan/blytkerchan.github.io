@@ -19,7 +19,7 @@ const Layout = (props) => {
             <Sidebar menu={mainMenu} />
           </div>
         </div>
-        <div className="p-2 w-100 vln-scroll-box">
+        <div className="p-2 w-100 vln-scroll-box" id="scrollBox">
           <div className="container-fluid pb-3">
             <div className="bg-light border rounded-3">
               <div className="p-2" style={{ minHeight: "80vh" }}>
