@@ -4,8 +4,9 @@ import usePosts from "../lib/usePosts";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
-import rehypeRaw from "rehype-raw";
 import remarkMath from "remark-math";
+import rehypeRaw from "rehype-raw";
+import rehypeKatex from "rehype-katex";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -34,7 +35,7 @@ const Page = ({ env }) => {
   return (
     <Markdown
       remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
-      rehypePlugins={[rehypeRaw]}
+      rehypePlugins={[rehypeRaw, rehypeKatex]}
       components={{
         a: (props) => <Link to={props.href}>{props.children}</Link>,
       }}
