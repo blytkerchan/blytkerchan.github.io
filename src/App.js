@@ -18,11 +18,7 @@ const App = (props) => {
     document.title = environment.title;
 
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
-    import("./pages/Customers");
-    import("./pages/Dashboard");
-    import("./pages/Orders");
     import("./pages/Page");
-    import("./pages/Products");
   }, []);
 
   return (

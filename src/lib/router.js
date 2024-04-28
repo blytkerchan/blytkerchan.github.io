@@ -10,11 +10,7 @@ import Posts from "../pages/Posts";
 
 import Layout from "../layout/Layout";
 // Pages to lazy-load
-const Customers = React.lazy(() => import("../pages/Customers"));
-const Dashboard = React.lazy(() => import("../pages/Dashboard"));
-const Orders = React.lazy(() => import("../pages/Orders"));
 const Page = React.lazy(() => import("../pages/Page"));
-const Products = React.lazy(() => import("../pages/Products"));
 
 function router(env) {
   const routingConfig = [
@@ -34,22 +30,6 @@ function router(env) {
         {
           path: "about",
           element: <Page name="about" />,
-        },
-        {
-          path: "customers",
-          element: <Customers />,
-        },
-        {
-          path: "dashboard",
-          element: <Dashboard />,
-        },
-        {
-          path: "orders",
-          element: <Orders />,
-        },
-        {
-          path: "products",
-          element: <Products />,
         },
       ],
     },
