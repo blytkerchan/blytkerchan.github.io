@@ -167,6 +167,11 @@ class BuildPosts {
         console.warn(`${filename} contained a permalink - YMMV`);
         post["locallink"] = post["permalink"];
       }
+      if (!Object.keys(post).includes("published")) {
+        post["published"] = true;
+      } else {
+        post["published"] = post["published"] !== "false";
+      }
       return post;
     } else {
       console.error(`Failed to parse markdown header for ${filename}`);
@@ -281,7 +286,7 @@ class BuildPosts {
           const filenames = globSync(`${fromDirName}*.{md,markdown}`);
           filenames.forEach((filename) => {
             const post = this.parseInputMarkdown(filename);
-            if (post) {
+            if (post && post["published"]) {
               this.posts[post["filename"]] = post;
               compilation.emitAsset(
                 `${this.options.to}${this.options.to[this.options.to.length - 1] === "/" ? "" : "/"}${
@@ -289,6 +294,8 @@ class BuildPosts {
                 }`,
                 new RawSource(post["body"])
               );
+            } else if (post && !post["published"]) {
+              console.warn(`Not publishing post ${post["filename"]}`);
             }
           });
         }
