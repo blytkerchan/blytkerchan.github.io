@@ -15,6 +15,8 @@ import router from "./lib/router";
 
 const App = (props) => {
   useEffect(() => {
+    document.title = environment.title;
+
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/Customers");
     import("./pages/Dashboard");
