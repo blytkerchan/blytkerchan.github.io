@@ -68,7 +68,7 @@ class BuildPosts {
         if (!startsWithWhiteSpace && parserState === ParserState.PARSING_MULTI_LINE_VALUE) {
           post[parsingValueName] = parsingValue.join("\n");
           parserState = ParserState.PARSING_METADATA;
-        } else if (!line.startsWith("- ") && parserState === ParserState.PARSING_ARRAY) {
+        } else if (!line.trimStart().startsWith("- ") && parserState === ParserState.PARSING_ARRAY) {
           post[parsingValueName] = parsingValue;
           parserState = ParserState.PARSING_METADATA;
         }
@@ -108,7 +108,7 @@ class BuildPosts {
             parsingValue.push(line);
             break;
           case ParserState.PARSING_ARRAY:
-            line = line.slice(2);
+            line = line.trimStart().slice(2);
             line = line.trim();
             parsingValue.push(line);
             break;
