@@ -64,6 +64,11 @@ const Posts = ({ env }) => {
             >
               {excerpt}
             </Markdown>
+            <span className="post-more-link">
+              <Link className="post-more-link" to={locallink}>
+                {t("more...")}
+              </Link>
+            </span>
           </li>
         ))}
       </ul>

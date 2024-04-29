@@ -16,6 +16,12 @@
   display: block;
   font-size: 24px;
 }
+
+.post-more-link {
+  font-size: 14px;
+  float: right;
+}
+
 .post-header {
   margin-bottom: 30px;
 }
