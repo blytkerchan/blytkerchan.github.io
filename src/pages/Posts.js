@@ -31,10 +31,8 @@ const Posts = ({ env }) => {
     }
 
     setPosts(currentPage.pagePosts);
-    //window.scrollTo(0, 0);
     console.log("Scrolling!");
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
-    // window.scrollTo({ top: 0, hehavior: "smooth" });
   }, [currentPage, the_posts, env, env.title]);
 
   const handleOlder = (e) => {
