@@ -12,12 +12,9 @@ tags:
   - real-time
 ---
 
-{% include shadowbox.html open_only=true %}
 <b><i>The TL;DR:</i></b><br/>
 
 In this post, I show using a fictitious example why real-time systems are defined by their worst-case timing rather than their average-case timing.
-
-</div>
 
 Imagine you're running a coffee shop -- not the kind you find in Amsterdam, but one where they actually serve coffee. Your customers are generally in a hurry, so they just want to get a cup of coffee, pay and leave to catch their plane, train or automobile. To attract more customers and appeal to the Geek crowd, you name your coffee shop "Real-Time Thirsty" and promise an "Average case serving within one minute!".
 

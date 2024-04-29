@@ -18,10 +18,7 @@ tags:
   - security
 ---
 
-{% include shadowbox.html text="<b>The TL;DR:</b>" open_only=true %}
-
 <img src="/assets/2017/09/img_7368-141x300.jpg" alt="TL;DR mindmap">
-</div>
 <!--more-->
 
 ## What we know from Equifax

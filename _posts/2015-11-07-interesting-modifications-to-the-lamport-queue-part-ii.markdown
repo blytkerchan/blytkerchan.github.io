@@ -20,7 +20,6 @@ In this article, I will discuss the further optimizations to reduce the number o
 
 <!--more-->
 
-{% include shadowbox.html open_only=true %}
 <b><i>The TL;DR:</i></b> I
 
 <ul>
@@ -28,7 +27,6 @@ In this article, I will discuss the further optimizations to reduce the number o
 <li>explain the cost of synchronization</li>
 <li>show a way to get around that cost most of the time</li>
 </ul>
-</div>
 
 A quick recap:
 
