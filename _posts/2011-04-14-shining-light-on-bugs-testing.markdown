@@ -5,8 +5,6 @@ date: 2011-04-14 01:16:17+00:00
 layout: post
 title: "Shining light on bugs: testing"
 wordpress_id: 1357
-categories:
-  - Software Engineering
 tags:
   - testing
 ---

@@ -1,5 +1,9 @@
 ---
 author: rlc
+categories:
+- Journalism
+- Astronomy
+- Science
 comments: true
 date: 2019-12-24
 layout: post

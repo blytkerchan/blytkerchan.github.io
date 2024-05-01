@@ -1,17 +1,19 @@
 ---
 author: rlc
+categories:
+- Programming
+- Algorithms
+- Functional Programming
+- C++
 comments: true
 date: 2014-02-01 21:09:52+00:00
 layout: post
+tags:
+- functional programming
+- Haskell
+- meta-programming
 title: A functional version of the KMP algorithm
 wordpress_id: 2527
-categories:
-  - C &amp; C++
-  - Software Development
-tags:
-  - functional programming
-  - Haskell
-  - meta-programming
 ---
 
 For one of the projects I'm working on, I needed a compile-time version of the KMP algorithm in C++. I started by making the algorithm functional.

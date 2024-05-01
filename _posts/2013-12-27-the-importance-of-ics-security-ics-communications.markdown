@@ -5,9 +5,6 @@ date: 2013-12-27 01:40:12+00:00
 layout: post
 title: "The importance of ICS security: ICS communications"
 wordpress_id: 2456
-categories:
-  - Industrial Automation
-  - Software Engineering
 tags:
   - ICS communications
   - ICS security

@@ -1,14 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- System Analysis
+- Robustness Analysis
+- Error Handling
+- Resource Management
+- Concurrency
+- Security
 comments: true
 date: 2012-03-25 18:16:34+00:00
 layout: post
-title: "Robustness analysis: finding fault(s)"
-wordpress_id: 1823
-categories:
-  - Software Engineering
 tags:
-  - robustness analysis
+- robustness analysis
+title: 'Robustness analysis: finding fault(s)'
+wordpress_id: 1823
 ---
 
 When working on a large project, implementing a system that has to run 24/7 and handle significant peak loads of communication, at some point, you have to ask yourself how robust your solution really is. You have to ascertain that it meets the goals you have set out and will consistently do so. There are diverse ways of doing this. Some are more efficient than others. In this article, I will discuss some of the methods I have found useful in the past.

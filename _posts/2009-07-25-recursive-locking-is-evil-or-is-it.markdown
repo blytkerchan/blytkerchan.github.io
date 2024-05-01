@@ -1,19 +1,24 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Software Development
+- Computer Science
 comments: true
 date: 2009-07-25 00:07:38+00:00
-excerpt: |
-  recursive locking:
-  winter''s way of saying "yes",
-  to summer''s loud "no"
+excerpt: 'recursive locking:
+
+  winter''''s way of saying "yes",
+
+  to summer''''s loud "no"
+
+  '
 layout: post
+tags:
+- locking
 title: Recursive Locking Is Evil, or is it?
 wordpress_id: 57
-categories:
-  - Opinions
-  - Software Design
-tags:
-  - locking
 ---
 
 while perusing my different RSS streams today, I came across a discussion on [comp.programming.threads](http://groups.google.ca/group/comp.programming.threads/topics) - a group that is way too active for me to be able to participate in it anymore, but I still try to follow the discussions a bit through Google Group's RSS streams. The original discussion was on a book on POSIX threads, but it pointed to [a discussion on the use of recursive locks](http://groups.google.ca/group/comp.programming.threads/browse_thread/thread/05208d3770bd543e), and why it's an "evil" practice. [One message in particular](http://groups.google.com/group/comp.programming.threads/msg/990c60898cbc684f) struck me as very well-written, as it explains why we should use locks, and in what kind of cases.

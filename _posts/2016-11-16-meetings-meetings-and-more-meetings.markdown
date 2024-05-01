@@ -1,12 +1,12 @@
 ---
 author: rlc
+categories:
+- Project Management
 comments: true
 date: 2016-11-16 12:08:33+00:00
 layout: post
 title: Meetings, meetings, and more meetings
 wordpress_id: 4126
-categories:
-  - Opinions
 ---
 
 Recently, I spent a significant part of the day in a meeting reviewing the year's progress on several projects, including the introduction of an agile methodology -- Scrum. The approach in the meeting was simple: write on a sticky note what we did well, and on another what we should not repeat or how we should improve. The subject was "Scrum/agile". I only wrote one sticky note: "get rid of Scrum".

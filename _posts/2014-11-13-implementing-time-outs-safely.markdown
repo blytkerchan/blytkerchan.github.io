@@ -5,9 +5,6 @@ date: 2014-11-13 11:19:06+00:00
 layout: post
 title: Implementing time-outs (safely)
 wordpress_id: 3423
-categories:
-  - C &amp; C++
-  - Software Development
 tags:
   - real-time
   - time-outs

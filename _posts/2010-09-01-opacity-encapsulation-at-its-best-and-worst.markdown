@@ -5,8 +5,6 @@ date: 2010-09-01 12:00:20+00:00
 layout: post
 title: "Opacity: Encapsulation at its best (and worst)"
 wordpress_id: 891
-categories:
-  - C++ for the self-taught
 tags:
   - encapsulation
   - Posts that need to be re-tagged (WIP)
@@ -96,8 +94,6 @@ The easiest way to resolve this is to add an accessor to the base class, like th
      	protected :
 
      		Context();
-
-
 
 Although that doesn't tell the user _why_ a context is not ok to be used, it does give her an indication that such is the case.
 

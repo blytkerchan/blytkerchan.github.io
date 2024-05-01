@@ -1,14 +1,17 @@
 ---
 author: rlc
+categories:
+- Database Management
+- Software Development
+- Programming
+- Data Management
 comments: true
 date: 2009-09-10 13:01:57+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Refreshing SQL
 wordpress_id: 189
-categories:
-  - Software
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I first started working with SQL several years ago: MySQL was still in the 3.x versions, so I didnt use any stored procs, transactions, etc. Most of the business logic around the data was written in Perl. Though it was a fun time in many respects, I dont miss the limitations of MySQL one bit.

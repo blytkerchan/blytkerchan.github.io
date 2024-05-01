@@ -5,10 +5,6 @@ date: 2009-11-17 20:59:37+00:00
 layout: post
 title: Implicit, Contextual Requirements
 wordpress_id: 379
-categories:
-  - Opinions
-  - Software Design
-  - Software Development
 tags:
   - Posts that need to be re-tagged (WIP)
   - requirements

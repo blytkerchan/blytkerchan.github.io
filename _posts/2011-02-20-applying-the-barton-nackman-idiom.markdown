@@ -1,14 +1,14 @@
 ---
 author: rlc
+categories:
+- Programming
 comments: true
 date: 2011-02-20 01:18:43+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Applying the Barton-Nackman idiom
 wordpress_id: 1264
-categories:
-  - C &amp; C++
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 It is amazing how much code you can cram into a single line, and how much magic happens behind the scenes when you do.

@@ -1,13 +1,16 @@
 ---
 author: rlc
+categories:
+- Web Development
+- Software Development
+- Memory Optimization
+- Server Implementation
+- Performance Optimization
 comments: true
 date: 2015-07-03 12:40:18+00:00
 layout: post
-categories:
-  - Anecdotes
-  - Software Design
 tags:
-  - optimization
+- optimization
 ---
 
 I recently had a chance to work on an implementation of an Arachnida-based web server that had started using a lot of memory as new features were being added.

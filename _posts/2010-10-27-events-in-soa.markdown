@@ -1,15 +1,16 @@
 ---
 author: rlc
+categories:
+- Technology
+- Business Analysis
+- Service-Oriented Architecture (SOA)
 comments: true
 date: 2010-10-27 02:48:23+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Events in SOA
 wordpress_id: 1103
-categories:
-  - Business
-  - Software
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In a recent article [on ZDNet](https://web.archive.org/web/20201205153641/https://www.zdnet.com/article/gartner-soas-next-step-is-managing-events/), Joe McKendrick writes that Roy Schulte, the Gartner analyst who helped define the SOA space more than a decade ago, says as SOA becomes embedded into the digital enterprise realm, organizations are moving services to support event-driven interactions, versus request/reply interactions.

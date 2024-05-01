@@ -1,17 +1,20 @@
 ---
 author: rlc
+categories:
+- Technology
+- Economics
+- Business
+- Software Development
+- Globalization
+- Communication
 comments: true
 date: 2009-12-24 01:48:17+00:00
 layout: post
-title: "Distributed Software Development Part 1: The Safe Boom"
-wordpress_id: 431
-categories:
-  - Business
-  - Opinions
-  - Software Development
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - software
+- Posts that need to be re-tagged (WIP)
+- software
+title: 'Distributed Software Development Part 1: The Safe Boom'
+wordpress_id: 431
 ---
 
 As I said in [a previous post](/blog/2009/12/staring-into-the-depths-of-the-yet-unwritten), the new economic realities that come with peak oil and climate change will change the way we work and the way the computing industry is run. One of those changes will be limiting unnecessary costs related to moving people around - something we already do for goods.

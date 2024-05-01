@@ -5,8 +5,6 @@ date: 2014-11-08 20:42:38+00:00
 layout: post
 title: Adding SPI support to the BrainF interpreter
 wordpress_id: 3359
-categories:
-  - VHDL
 tags:
   - brainf---
   - SPI

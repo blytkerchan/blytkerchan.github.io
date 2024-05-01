@@ -1,18 +1,21 @@
 ---
 author: rlc
+categories:
+- Industrial espionage
+- Trade secrets
+- Economic espionage
+- Intellectual property theft
+- Technology security
 comments: true
 date: 2015-05-24 20:48:03+00:00
 layout: post
-title: "Globe and Mail: Canada lacks law that defines, protects trade secrets"
-wordpress_id: 3507
-categories:
-  - Business
-  - Opinions
 tags:
-  - canadian law
-  - intellectual property
-  - law
-  - trade secrets
+- canadian law
+- intellectual property
+- law
+- trade secrets
+title: 'Globe and Mail: Canada lacks law that defines, protects trade secrets'
+wordpress_id: 3507
 ---
 
 According to the Globe and Mail (Iain Marlow, 20 May 2015) the 32-count indictment against six Chinese nationals who allegedly used their positions to obtain intellectual property from universities and businesses in the U.S. and then take that knowledge home to China, would not be possible here: "Canadian observers say the 32 count indictment, which was unsealed late on Monday, highlights the prevalence and severity of industrial espionage in North America, and underscores the need for Canada to adopt more stringent laws. Canada has no dedicated act on trade secrets and economic espionage and has not successfully prosecuted a similar case, experts say."

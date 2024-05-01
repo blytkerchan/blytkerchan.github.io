@@ -5,10 +5,6 @@ date: 2015-11-07 20:10:47+00:00
 layout: post
 title: Interesting modifications to the Lamport queue, part II
 wordpress_id: 3763
-categories:
-  - Algorithms
-  - C &amp; C++
-  - Interesting stuff
 tags:
   - Lamport queue
   - lock-free

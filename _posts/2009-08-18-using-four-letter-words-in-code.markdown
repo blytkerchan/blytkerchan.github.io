@@ -5,9 +5,6 @@ date: 2009-08-18 15:33:41+00:00
 layout: post
 title: Using Four-Letter Words In Code
 wordpress_id: 169
-categories:
-  - C &amp; C++
-  - Software Design
 tags:
   - code
   - Posts that need to be re-tagged (WIP)

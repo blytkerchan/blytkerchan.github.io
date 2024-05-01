@@ -1,16 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- History
+- Computers
+- Programming
 comments: true
 date: 2011-06-21 16:23:14+00:00
 layout: post
+tags:
+- history
 title: The Manchester Baby is 63 years old today
 wordpress_id: 1533
-categories:
-  - Interesting stuff
-  - Software Engineering
-  - Technology
-tags:
-  - history
 ---
 
 The first "modern" programmable computer with 32 words of memory, is 63 years old today.

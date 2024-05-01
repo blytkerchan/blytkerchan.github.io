@@ -1,16 +1,19 @@
 ---
 author: rlc
+categories:
+- Politics
+- Legislation
+- Copyright
+- News
 comments: true
 date: 2011-09-29 22:37:45+00:00
 layout: post
+tags:
+- copyright
+- in the news
+- politics
 title: Harper government reintroduces toughened online copyright law
 wordpress_id: 1692
-categories:
-  - Opinions
-tags:
-  - copyright
-  - in the news
-  - politics
 ---
 
 In the Vancouver Sun: bill C-32 from last session has been re-introduced (probably with some modification -- I haven't had a chance to read the bill yet) and is far more likely to pass, now that there's a conservative majority in Parliament.

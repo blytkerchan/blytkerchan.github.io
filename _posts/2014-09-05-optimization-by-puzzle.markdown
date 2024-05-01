@@ -1,19 +1,16 @@
 ---
 author: rlc
+categories:
+- Programming
+- Algorithms
+- Data Structures
 comments: true
 date: 2014-09-05 02:17:43+00:00
 layout: post
+tags:
+- optimization
 title: Optimization by puzzle
 wordpress_id: 3274
-categories:
-  - Algorithms
-  - C &amp; C++
-  - C++ for the self-taught
-  - Software Design
-  - Software Development
-  - Software Engineering
-tags:
-  - optimization
 ---
 
 Given a `query` routine that takes a name and may return several, write a routine that takes a single name and returns a set of names for which each of the following is true:

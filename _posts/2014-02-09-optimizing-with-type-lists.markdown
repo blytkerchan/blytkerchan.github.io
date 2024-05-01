@@ -5,8 +5,6 @@ date: 2014-02-09 17:27:27+00:00
 layout: post
 title: Optimizing with type lists
 wordpress_id: 2563
-categories:
-  - C &amp; C++
 tags:
   - meta-programming
   - optimization

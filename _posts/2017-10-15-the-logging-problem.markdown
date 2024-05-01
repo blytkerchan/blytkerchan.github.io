@@ -5,11 +5,6 @@ date: 2017-10-15 17:14:46+00:00
 layout: post
 title: The Logging "problem"
 wordpress_id: 3457
-categories:
-  - Embedded software development
-  - Industrial Automation
-  - Software Design
-  - Software Development
 ---
 
 A recurring problem in real-time industrial devices is logging: you want to log all the information you need to diagnose a problem, but you don't want to slow down your system and miss timing constraints, or unnecessarily burden your system when there are no problems. On the other hand, you often don't know that there is a problem to be diagnosed (and therefore logged) before there is an actual problem, in which case you may be too late to start your logs.

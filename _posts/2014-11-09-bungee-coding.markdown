@@ -1,16 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-11-09 02:15:19+00:00
 layout: post
+tags:
+- bungee coding
 title: Bungee coding
 wordpress_id: 3158
-categories:
-  - Embedded software development
-  - Software Development
-  - Software Engineering
-tags:
-  - bungee coding
 ---
 
 For the last few weeks, I've been doing what you might call _bungee coding_: going from high-level to low-level code and back. This week, a whole team is doing it -- fun!

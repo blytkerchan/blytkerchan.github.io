@@ -1,13 +1,17 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software development
+- Compiler errors
 comments: true
 date: 2010-01-19 01:53:31+00:00
 layout: post
+tags:
+- compiler
+- Posts that need to be re-tagged (WIP)
 title: Confusing the compiler
 wordpress_id: 454
-tags:
-  - compiler
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Sometimes it's real fun to see how easily you can confuse the compiler. In the error below, `function` is a macro that takes three parameters:

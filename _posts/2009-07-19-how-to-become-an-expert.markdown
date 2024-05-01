@@ -1,19 +1,22 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Expertise
+- Job Interviews
+- Technical Skills
 comments: true
 date: 2009-07-19 20:20:01+00:00
-excerpt: |
-  Many summers spent
+excerpt: 'Many summers spent
+
   on coding and on code, yet...
+
   expertise attained?
+
+  '
 layout: post
 title: How to become an expert
 wordpress_id: 36
-categories:
-  - Opinions
-tags:
-  - experience
-  - expertise
 ---
 
 More than once, I have met people who have claimed to be experts in their fields and defined their fields very, very broadly: they were experts in C++, C, Java, PHP, HTML, SQL, Pascal, Delphi, ASP, .NET, you name it! If you dig a bit deeper, their "expertise" often came from "technology romanticism", school projects, classes or having read a website on the subject.

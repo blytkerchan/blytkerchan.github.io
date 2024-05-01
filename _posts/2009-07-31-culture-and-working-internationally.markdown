@@ -9,9 +9,6 @@ excerpt: |
 layout: post
 title: Culture and working internationally
 wordpress_id: 110
-categories:
-  - Business
-  - Opinions
 tags:
   - culture
   - emigration

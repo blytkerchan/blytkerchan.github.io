@@ -5,8 +5,6 @@ date: 2016-04-15 16:52:52+00:00
 layout: post
 title: Setting up Cygwin for X forwarding
 wordpress_id: 3816
-categories:
-  - HOWTO
 tags:
   - Cygwin
   - HOWTO

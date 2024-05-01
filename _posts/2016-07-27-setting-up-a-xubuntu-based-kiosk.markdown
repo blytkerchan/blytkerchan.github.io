@@ -1,12 +1,25 @@
 ---
 author: rlc
+categories:
+- Technology
+- How-to
+- Parenting
+- Software Installation
+- Network Configuration
+- Web Browsing
+- Chrome Configuration
+- Screen Saver Configuration
+- Guest Session Configuration
+- LightDM Configuration
+- Child Safety
+- Public Kiosk Setup
+- Virtual Machine Setup
+- Security Hardening
 comments: true
 date: 2016-07-27 11:16:52+00:00
 layout: post
 title: Setting up a Xubuntu-based kiosk
 wordpress_id: 4060
-categories:
-  - HOWTO
 ---
 
 This is another "HOWTO" post -- setting up a Xubuntu-based kiosk, which I did to make a new "TV" for my kids.

@@ -1,14 +1,19 @@
 ---
 author: rlc
+categories:
+- Object-Oriented Programming
+- Data Structures
+- Pointers
+- References
+- Objects
+- RAII
 comments: true
 date: 2009-12-01 22:37:17+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: 4- Classes
 wordpress_id: 351
-categories:
-  - C++ for the self-taught
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In any language that supports object-oriented programming, the class is a, if not the, basic building block. In this post, we'll take a closer look at what a class is, and how that ties in with what we've seen in the previous post, data structures, and in the two next posts: pointers, references, objects and RAII.

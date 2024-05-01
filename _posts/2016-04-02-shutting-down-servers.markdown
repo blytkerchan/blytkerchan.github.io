@@ -5,10 +5,6 @@ date: 2016-04-02 19:16:09+00:00
 layout: post
 title: Shutting down servers
 wordpress_id: 3810
-categories:
-  - Continuous Integration
-  - Software Development
-  - Software Engineering
 tags:
   - cloud services
   - SaaS

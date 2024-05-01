@@ -5,10 +5,6 @@ date: 2013-09-25 16:36:23+00:00
 layout: post
 title: The benefits of formal, executable specifications
 wordpress_id: 2387
-categories:
-  - Software Development
-  - Software Engineering
-  - Software Testing
 tags:
   - executable specifications
   - formal specifications

@@ -5,8 +5,6 @@ date: 2011-02-17 03:53:07+00:00
 layout: post
 title: A "brilliant" idea (?)
 wordpress_id: 1210
-categories:
-  - Business
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

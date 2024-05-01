@@ -5,8 +5,6 @@ date: 2011-05-08 00:35:32+00:00
 layout: post
 title: Starting Python - 99 bottles of beer
 wordpress_id: 1384
-categories:
-  - Python
 tags:
   - programming
   - Python

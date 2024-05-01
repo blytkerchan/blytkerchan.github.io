@@ -1,19 +1,16 @@
 ---
 author: rlc
+categories:
+- Project Management
 comments: true
 date: 2010-05-07 23:02:05+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- productivity
+- software
 title: Software development productivity
 wordpress_id: 621
-categories:
-  - Business
-  - Opinions
-  - Software
-  - Software Development
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - productivity
-  - software
 ---
 
 In the latest installment of my podcast, I asserted that "all software productivity problems are project management problems". In this post, I will explain why I believe that to be the case and how I think those problems can be resolved.

@@ -5,8 +5,6 @@ date: 2009-12-16 22:45:44+00:00
 layout: post
 title: 5- Objects, References and Pointers
 wordpress_id: 326
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

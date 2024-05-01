@@ -5,8 +5,6 @@ date: 2009-09-22 02:35:32+00:00
 layout: post
 title: "Running a LAMP: Debian vs. CentOS"
 wordpress_id: 197
-categories:
-  - GNU/Linux (OS)
 tags:
   - CentOS
   - Debian

@@ -5,8 +5,6 @@ date: 2009-10-14 18:53:41+00:00
 layout: post
 title: "C++ for the self-taught: Introduction"
 wordpress_id: 268
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

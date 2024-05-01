@@ -1,17 +1,19 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Technology
+- SCADA
+- Industrial Control Systems
 comments: true
 date: 2014-01-03 00:25:38+00:00
 layout: post
+tags:
+- Crain-Sistrunk
+- DNP3
+- ICS security
 title: The Crain-Sistrunk vulnerabilities
 wordpress_id: 2427
-categories:
-  - Industrial Automation
-  - Software Engineering
-tags:
-  - Crain-Sistrunk
-  - DNP3
-  - ICS security
 ---
 
 In the two previous posts, I've shown that industrial control systems -- ICSs -- [are becoming more pervasive](/blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/), and that they [rely on security through obscurity](/blog/2013/12/the-importance-of-ics-security-ics-communications/).

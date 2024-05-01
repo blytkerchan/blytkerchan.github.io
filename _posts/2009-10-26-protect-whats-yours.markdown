@@ -1,15 +1,17 @@
 ---
 author: rlc
+categories:
+- Intellectual Property
+- Copyrights
+- Free Software
+- Legal Agreements
 comments: true
 date: 2009-10-26 03:33:18+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Protect what's yours
 wordpress_id: 322
-categories:
-  - Business
-  - Opinions
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I've drawn up a list of my intellectual property yesterday. It's about four pages long and contains libraries, applications, web apps, training material, etc. Only one thing that I've ever created and published is in the public domain - the rest has copyrights attached to it. That doesn't necessarily mean that you can't use it, or even that you have to pay me to be allowed to use it: it just means that it's mine and that I decide what kind of rights you have over it.

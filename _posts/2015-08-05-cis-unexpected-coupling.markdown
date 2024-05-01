@@ -5,8 +5,6 @@ date: 2015-08-05 23:12:10+00:00
 layout: post
 title: "CIS: Unexpected Coupling"
 wordpress_id: 3266
-categories:
-  - Common Issues with Synchronization
 tags:
   - coupling
 ---

@@ -5,8 +5,6 @@ date: 2009-11-17 00:25:08+00:00
 layout: post
 title: A Day In The Life Of A C++ Analyst/Programmer
 wordpress_id: 375
-categories:
-  - Opinions
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

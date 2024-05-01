@@ -10,10 +10,7 @@ layout: post
 title: No Concepts in C++0x
 wordpress_id: 54
 categories:
-  - Opinions
-  - Software Design
-tags:
-  - C++0x
+  - Programming
 ---
 
 The _**one feature**_ I had really been looking forward to in C++0x, generic programming concepts, have been scrapped from C++0x by the standards committee. In my opinion, this it was sad day indeed for C++. Bjarne Stroustrup explains why [here](http://www.ddj.com/architect/218600111). In short, it was a cautious attempt to prevent catastrophy by letting concepts into the language without being ready.

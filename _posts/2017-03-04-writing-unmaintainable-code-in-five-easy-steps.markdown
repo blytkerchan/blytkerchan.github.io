@@ -5,8 +5,6 @@ date: 2017-03-04 20:26:12+00:00
 layout: post
 title: Writing unmaintainable code in five easy steps
 wordpress_id: 4154
-categories:
-  - Anecdotes
 tags:
   - design patterns
   - maintainability

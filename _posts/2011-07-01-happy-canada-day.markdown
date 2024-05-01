@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Holidays
+- Wallpapers
+- Canada
+- Autumn
 comments: true
 date: 2011-07-01 04:00:48+00:00
 layout: post
+tags:
+- Canada
 title: Happy Canada Day
 wordpress_id: 1553
-tags:
-  - Canada
 ---
 
 On the occasion of Canada day, I thought I'd put up the Canada-themed autumn wallpapers I'd prepared.

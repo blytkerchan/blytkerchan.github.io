@@ -1,12 +1,12 @@
 ---
 author: rlc
+categories:
+- Politics
 comments: true
 date: 2017-05-06 09:30:25+00:00
 layout: post
 title: To those of you who don't speak French and follow me on Twitter
 wordpress_id: 4174
-categories:
-  - Opinions
 ---
 
 As may know, France is going to the polls tomorrow to elect a new president. They have a choice between an unaffiliated centrist, Emmanuel Macron, and an unavowed fascist, Marine le Pen.

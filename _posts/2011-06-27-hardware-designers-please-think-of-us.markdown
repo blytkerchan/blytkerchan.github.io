@@ -1,15 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Embedded Systems
+- Hardware Design
+- Debugging
+- Real-time Systems
 comments: true
 date: 2011-06-27 21:11:38+00:00
 layout: post
+tags:
+- debugging
+- hardware design
 title: Hardware designers, please, think of us!
 wordpress_id: 1551
-categories:
-  - Hardware
-tags:
-  - debugging
-  - hardware design
 ---
 
 One of the most time-consuming tasks in embedded software development can be device driver debugging. Especially if that debugging has to be done in a real-time system without disturbing its real-time characteristics. This usually amounts to producing an output signal on a pin of the CPU and probing the output to see what's going on. In order to be able to do that, the people who design the hardware have to keep in mind that the people who design the software will have some debugging to do on the final hardware -- even if it's just to make sure everything is working OK.

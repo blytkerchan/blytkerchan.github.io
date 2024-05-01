@@ -1,16 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Embedded Systems
+- Error Handling
+- Exception Handling
+- Bug Fixing
 comments: true
 date: 2012-11-08 23:35:44+00:00
 layout: post
+tags:
+- embedded
+- error handling
 title: Exceptions and Embedded Devices
 wordpress_id: 1938
-categories:
-  - C &amp; C++
-  - Embedded software development
-tags:
-  - embedded
-  - error handling
 ---
 
 Lately, I've had a number of discussions on this subject, in which the same questions cropped up again and again:

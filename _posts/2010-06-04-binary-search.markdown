@@ -1,18 +1,18 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Algorithms
+- Computational Complexity
+- Data Structures
+- Software Development
 comments: true
 date: 2010-06-04 22:54:47+00:00
 layout: post
-wordpress_id: 730
-categories:
-  - C &amp; C++
-  - C++ for the self-taught
-  - Science
-  - Software
-  - Software Design
-  - Software Development
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+wordpress_id: 730
 ---
 
 While going through some old code, for another article I'm writing that will come up on the blog, I came across an implementation of binary search in C. While the implementation itself was certainly OK, it wasn't exactly a general-purpose implementation, so I thought I'd write one and put it on the C++ for the self-taught side of my blog. While I was at it, I also analyzed

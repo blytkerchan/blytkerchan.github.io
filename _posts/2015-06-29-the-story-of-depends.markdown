@@ -1,13 +1,16 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Technology
+- Business
+- Programming
+- Open Source Software
 comments: true
 date: 2015-06-29 03:01:17+00:00
 layout: post
 title: The story of "Depends"
 wordpress_id: 3647
-categories:
-  - Anecdotes
-  - Software Development
 ---
 
 Today, I announced on behalf of my company, Vlinder Software, that we would no longer be supporting "Depends", the dependency tracker. I think it may be worthwhile to tell you a by about the history of Depends, how it became a product of Vlinder Software, and why it no longer is one.

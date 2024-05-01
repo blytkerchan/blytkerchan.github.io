@@ -1,15 +1,17 @@
 ---
 author: rlc
+categories:
+- Programming Language
+- Software Development
+- Mobile Development
+- Technology Trends
 comments: true
 date: 2009-08-07 22:24:50+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Google releases new dialect of Basic
 wordpress_id: 144
-categories:
-  - Business
-  - Software
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 And here I though Basic was on its way out: Microsoft has been touting the advantages of C# and .NET in general far more than they have the advantages of Visual Basic (I remember when it became "visual": it used to be "quick" and that never said anything about run time); and Google _seemed_ to be much more interested in Python and Java than they were in the whole Basic scene. In the circles I've frequented for the last several years, Basic was used only in ASP applications and then only if, for some reason, using C# was out of the question. Basic was basically legacy code that hadn't been replaced yet.

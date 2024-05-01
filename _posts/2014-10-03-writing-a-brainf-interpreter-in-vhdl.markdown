@@ -1,17 +1,31 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Interpreters
+- Parsers
+- VHDL
+- Design Patterns
+- State Machines
+- AST (Abstract Syntax Tree)
+- Coding Style
+- Signal Processing
+- Simulation
+- Testing
+- Optimization
+- Assertions
+- Test Bench
+- ModelSim
 comments: true
 date: 2014-10-03 20:00:42+00:00
 layout: post
 slug: writing-a-brainf-interpreter-in-vhdl
+tags:
+- brainf---
+- VHDL
 title: Writing a BrainF interpreter ... in VHDL
 wordpress_id: 3303
-categories:
-  - Software Development
-  - VHDL
-tags:
-  - brainf---
-  - VHDL
 ---
 
 I've written parsers and interpreters before, but usually in C++ or, if I was feeling like doing _all_ of the hard work myself, in C.

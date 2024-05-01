@@ -1,11 +1,18 @@
 ---
 author: rlc
+categories:
+- Quantum Computing
+- Teleportation
+- Star Trek
+- Physics
+- Sci-fi
 comments: true
 date: 2019-11-12
 layout: post
 slug: quantum-teleportation
 title: Quantum teleportation
 ---
+
 A bit more fun with quantum computing...
 
 Quantum teleportation is one of those things that Star Trek fans (like myself) like to believe is a dream come true: if it's possible to teleport qubits, surely it may be possible to teleport real-world things some day?

@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Productivity
+- Communication
+- Email Management
 comments: true
 date: 2014-07-15 02:31:30+00:00
 layout: post
-title: "Re: E-mail"
-wordpress_id: 3217
-categories:
-  - Opinions
 tags:
-  - e-mail
+- e-mail
+title: 'Re: E-mail'
+wordpress_id: 3217
 ---
 
 The Globe&Mail; dedicated half a page of the Report on Business section to managing your inbox today. People who work with me know that

@@ -1,15 +1,28 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Networking
+- Programming
+- Namespace
+- RAII
+- State Machine
+- Serialization
+- Deserialization
+- BSD Sockets
+- TCP Protocol
+- Multithreading
+- Code Review
+- Error Handling
+- Porting to Windows
 comments: true
 date: 2010-04-16 12:00:54+00:00
 layout: post
-title: "SOCKS 5 Step 2: exchanging a token"
-wordpress_id: 534
-categories:
-  - C++ for the self-taught
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - SOCKS
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+title: 'SOCKS 5 Step 2: exchanging a token'
+wordpress_id: 534
 ---
 
 With a few minor adjustments to the existing `Token` class, we can finish the first part of our implementation of RFC 1961 for now - we will hook it into an implementation of the GSS API later.<!--more--> Before we do that, though, we'll create a new directory in our project called lib/rfc1961 and move our files there: it seems more appropriate that way, as we will have a lot more code to write. We will also move our implementation into its own namespace, which will be `Vlinder::Chausette::RFC1961`. In the first part of this installment, we will look at the changes necessary to do that and we will discuss the importance of namespaces.

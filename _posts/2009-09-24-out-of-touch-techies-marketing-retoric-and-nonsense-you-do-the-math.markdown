@@ -5,8 +5,6 @@ date: 2009-09-24 22:28:46+00:00
 layout: post
 title: Out-of-touch techies, marketing retoric, and nonsense. You do the math.
 wordpress_id: 213
-categories:
-  - Opinions
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

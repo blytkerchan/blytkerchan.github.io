@@ -1,14 +1,19 @@
 ---
 author: rlc
+categories:
+- Programming
+- Object-oriented programming
+- Data structures
+- C++ programming language
+- Structures
+- Functions
 comments: true
 date: 2009-11-16 16:09:13+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: 3- Data Structures
 wordpress_id: 340
-categories:
-  - C++ for the self-taught
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Before we delve into the realm of object-oriented programming (which we will get into in the next post), there is a notion that is so basic, and so important to any type of programming, that we have to treat it in order to make the whole notion of object-oriented-programming comprehensible.

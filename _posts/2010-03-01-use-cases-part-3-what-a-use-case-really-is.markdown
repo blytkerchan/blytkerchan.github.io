@@ -1,15 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Requirements Engineering
+- Use Cases
+- Functional Requirements
 comments: true
 date: 2010-03-01 21:41:25+00:00
 layout: post
-title: "Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases"
-wordpress_id: 391
-categories:
-  - C++ for the self-taught
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - use-cases
+- Posts that need to be re-tagged (WIP)
+- use-cases
+title: 'Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases'
+wordpress_id: 391
 ---
 
 Before we start using use-cases in the description of the functional requirements we want to meet in our project, we need to understand what a use-case really is and how to go about writing one. In this installment I will attempt to answer both those questions. However, this series is called "C++ for the self-taught" for a reason: I will include references for all of the material I have cited in this installment, and I hope you will take it upon yourself to go out and look a bit yourself as well.

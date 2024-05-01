@@ -1,16 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Design Patterns
 comments: true
 date: 2010-06-17 03:42:22+00:00
 layout: post
-title: "Socks 5: Starting GSS-API - The Factory Pattern"
-wordpress_id: 746
-categories:
-  - C++ for the self-taught
-  - Software Design
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - SOCKS
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+title: 'Socks 5: Starting GSS-API - The Factory Pattern'
+wordpress_id: 746
 ---
 
 In this installment, we'll be doing a final bit of clean-up and starting to implement a GSS-API/SSPI client program, while focusing on the _Abstract Factory Pattern_

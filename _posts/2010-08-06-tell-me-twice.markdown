@@ -1,18 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Mathematics
+- Communication
+- Error Detection
 comments: true
 date: 2010-08-06 02:09:49+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Tell me twice
 wordpress_id: 865
-categories:
-  - Reasons
-  - Software
-  - Software Design
-  - Software Development
-  - Technology
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 A few days ago, I explained to a colleague why certain communications protocols have a "tell me twice" policy - i.e. to allow for any command to have any effect, the same command - or a command to the same effect - has to be received twice (from the same master). In human parlance, this would be the equivalent of Jean-Luc Picard saying "ensign, I'm about to tell you to lower the shields" ... "ensign, shields down!" in which the ensign (Wesley Crusher?) wouldn't be allowed to obey the second command unless he had heard, understood and acknowledged (HUA!) the first. Now for the math..

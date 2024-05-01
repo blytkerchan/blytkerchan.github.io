@@ -1,5 +1,11 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Quantum Computing
+- Asymmetric Cryptography
+- Post-Quantum Cryptography
+- Digital Signature Algorithm
 comments: true
 date: 2019-10-07 12:32:00-04:00
 layout: post

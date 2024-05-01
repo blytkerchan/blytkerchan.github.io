@@ -1,14 +1,18 @@
 ---
 author: rlc
+categories:
+- Copyright
+- Intellectual Property
+- Ethics
+- Technology
+- Law & Legislation
 comments: true
 date: 2010-09-14 00:55:12+00:00
 layout: post
-title: "Bill #c32 seems to be getting less controversial"
-wordpress_id: 912
-categories:
-  - Opinions
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: 'Bill #c32 seems to be getting less controversial'
+wordpress_id: 912
 ---
 
 Copyright is an important part of my work: every time I sign a work-related contract, I have to make sure that I don't sign away the rights of previous works to which I retain the rights, nor the rights to work that I do outside the scope of the contract I am signing at that point. I spend a significant amount of time and energy creating copyrighted material and some of that material has to remain mine. Like any copyright bill would, bill C-32 provides a framework to fall back on when cases aren't covered by contract and now, it looks like it's on its way to be passed.

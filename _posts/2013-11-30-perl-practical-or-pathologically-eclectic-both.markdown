@@ -5,8 +5,6 @@ date: 2013-11-30 20:11:40+00:00
 layout: post
 title: "Perl: Practical or Pathologically Eclectic? Both?"
 wordpress_id: 2415
-categories:
-  - Opinions
 tags:
   - perl
 ---

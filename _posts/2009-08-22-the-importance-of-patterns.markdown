@@ -5,9 +5,6 @@ date: 2009-08-22 20:08:52+00:00
 layout: post
 title: The Importance of Patterns
 wordpress_id: 173
-categories:
-  - Software Design
-  - Technology
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

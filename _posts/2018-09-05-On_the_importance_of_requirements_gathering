@@ -6,8 +6,6 @@ layout: post
 published: false
 title: On the importance of requirements gathering
 wordpress_id: 4140
-categories:
-  - Software Engineering
 ---
 
 Requirements analysis is a three-step, cyclical process. The steps are: **Requirements Gathering**, **Requirements Documentation** and **Requirements Validation**. These three steps aren't just repeated over and over during a project's development: they are progressively _refined_ as requirements evolve and the project progresses.

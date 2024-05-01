@@ -1,16 +1,19 @@
 ---
 author: rlc
+categories:
+- History
+- Technology
+- Engineering
+- Gender Studies
 comments: true
 date: 2011-03-08 13:44:47+00:00
 layout: post
-title: "Geek Mythology: Women and the Start of Software Engineering"
-wordpress_id: 1280
-categories:
-  - Software Engineering
 tags:
-  - engineering
-  - history
-  - software
+- engineering
+- history
+- software
+title: 'Geek Mythology: Women and the Start of Software Engineering'
+wordpress_id: 1280
 ---
 
 According to Geek mythology, when Charles Babbage had invented the Analytical Engine, he sat back and said: "Behold! I have created the first pocket calculator!". Of course, he hadn't actually built the thing yet, and lacket the practical skill to do so. When it finally was built, there wasn't a pocket large enough on Earth to put it in. Thus was the inception of the hardware engineering discipline.

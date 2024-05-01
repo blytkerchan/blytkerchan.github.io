@@ -1,14 +1,14 @@
 ---
 author: rlc
+categories:
+- Copyright Law
 comments: true
 date: 2010-06-27 02:52:20+00:00
 layout: post
-title: "TPM on your content under #c32 - handing away your rights?"
-wordpress_id: 799
-categories:
-  - Opinions
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: 'TPM on your content under #c32 - handing away your rights?'
+wordpress_id: 799
 ---
 
 Under bill C-32 it would be illegal to remove TPM under by far most circumstances. Does that mean that, if you decide to publish software you create with TPM, you're handing away the rights of your software to the TPM manufacturer? No, it doesn't.

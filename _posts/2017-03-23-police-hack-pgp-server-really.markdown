@@ -5,11 +5,6 @@ date: 2017-03-23 22:19:45+00:00
 layout: post
 title: '"Police hack PGP server" -- really?'
 wordpress_id: 4162
-categories:
-  - Computers and Society
-  - In the news
-  - Interesting stuff
-  - Opinions
 tags:
   - encryption
   - in the news

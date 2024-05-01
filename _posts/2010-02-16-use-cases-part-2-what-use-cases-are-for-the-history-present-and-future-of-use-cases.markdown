@@ -5,10 +5,6 @@ date: 2010-02-16 21:40:09+00:00
 layout: post
 title: "Use-Cases Part 2: What Use-Cases Are For (The history, present and future of use-cases)"
 wordpress_id: 388
-categories:
-  - C++ for the self-taught
-  - Software Development
-  - Use-Cases
 tags:
   - Posts that need to be re-tagged (WIP)
   - use-cases

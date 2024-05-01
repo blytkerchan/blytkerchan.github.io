@@ -1,5 +1,9 @@
 ---
 author: rlc
+categories:
+- Social Media
+- Pets
+- Photography
 date: 2016-09-10 22:17:27+00:00
 layout: post
 title: Really, Twitterverse?

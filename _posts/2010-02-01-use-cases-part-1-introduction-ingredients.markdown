@@ -1,18 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Agile Development
+- User Stories
+- Use Cases
+- UML Diagrams
 comments: true
 date: 2010-02-01 17:00:06+00:00
 layout: post
-title: "Use-Cases Part 1: Introduction & Ingredients"
-wordpress_id: 383
-categories:
-  - C++ for the self-taught
-  - Software Design
-  - Software Development
-  - Use-Cases
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - use-cases
+- Posts that need to be re-tagged (WIP)
+- use-cases
+title: 'Use-Cases Part 1: Introduction & Ingredients'
+wordpress_id: 383
 ---
 
 In the "C++ for the self-taught" series, we're about to embark on a new project. In order to describe that project and in order to figure out what we want the result of that project will be, we will be using a tool called the use-case. So, I think an intermezzo on use-cases is in order.

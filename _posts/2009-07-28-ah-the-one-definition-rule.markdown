@@ -1,15 +1,12 @@
 ---
 author: rlc
+categories:
+- Programming Language Theory
 comments: true
 date: 2009-07-28 03:59:36+00:00
 layout: post
 title: Ah - The One Definition Rule
 wordpress_id: 81
-categories:
-  - C &amp; C++
-  - Software Design
-tags:
-  - C++
 ---
 
 In response to Scott Meyers' [question on non-inline non-template functions and the one-definition rule](http://groups.google.com/group/comp.std.c++/msg/863b3f502efae0e0), Francis Glassborow replied with a very interesting example of two _lexically_ identical functions that weren't _actually_ identical. <!--more-->

@@ -5,8 +5,6 @@ date: 2010-10-17 00:31:06+00:00
 layout: post
 title: Refactoring Exceptions
 wordpress_id: 982
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
   - refactoring

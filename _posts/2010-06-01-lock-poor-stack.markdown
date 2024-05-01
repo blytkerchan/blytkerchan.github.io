@@ -5,8 +5,6 @@ date: 2010-06-01 23:26:58+00:00
 layout: post
 title: Lock-Poor Stack
 wordpress_id: 713
-categories:
-  - C &amp; C++
 tags:
   - lock-poor
   - Posts that need to be re-tagged (WIP)

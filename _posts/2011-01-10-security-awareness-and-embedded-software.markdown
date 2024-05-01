@@ -1,14 +1,29 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Technology
+- National Security
+- Software Development
+- Embedded Systems
+- Network Security
+- Denial of Service Attacks
+- Critical Infrastructure
+- Programming Languages
+- Systems Programming
+- Industry Standards
+- Awareness Campaigns
+- Public Policy
+- Regulation
 comments: true
 date: 2011-01-10 00:12:46+00:00
 layout: post
+tags:
+- embedded
+- security
+- software
 title: Security Awareness and Embedded Software
 wordpress_id: 1148
-tags:
-  - embedded
-  - security
-  - software
 ---
 
 In a recent interview with Ivan Arce of Core Security Technologies by Gary McGraw of Cigital, Arce made the point that embedded systems are becoming a security issue. At about the same time, US Army General Keith B. Alexander, director of the US National Security Agency, said that a separate secure network needs to be created for critical civilian infrastructure. They are probably both right.

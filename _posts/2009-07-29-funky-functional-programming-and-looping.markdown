@@ -1,20 +1,25 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- Scripting Languages
+- Functional Programming
 comments: true
 date: 2009-07-29 15:57:04+00:00
-excerpt: |
-  functional combines
+excerpt: 'functional combines
+
   programming summers into
+
   sheerly fun coding
+
+  '
 layout: post
+tags:
+- functional programming
+- programming
 title: Funky, functional programming and looping
 wordpress_id: 103
-categories:
-  - C &amp; C++
-  - Software Design
-tags:
-  - functional programming
-  - programming
 ---
 
 I'm currently working on a scriptable simulator for a firmware. At first, I was going to script it using Pything: a nice, object-oriented language that can be embedded into C++ using [Boost.Python](http://www.boost.org/doc/libs/release/libs/python/doc/index.html). I soon (well, soon... after a morning of trying) found out that it was not going to be as easy as I though, though, because the version of Boost I have to work (1.33.1) with wasn't going to be of much help so, after coming to the conclusion that if I was going to do this in the time I'd planned for it, I'd have to change my strategy.

@@ -5,11 +5,6 @@ date: 2014-08-11 20:30:11+00:00
 layout: post
 title: Looking for bugs (in several wrong places)
 wordpress_id: 3254
-categories:
-  - Anecdotes
-  - Software Development
-  - Software Engineering
-  - Software Testing
 tags:
   - debugging
 ---

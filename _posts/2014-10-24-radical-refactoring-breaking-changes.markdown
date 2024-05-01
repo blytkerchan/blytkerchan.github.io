@@ -5,12 +5,6 @@ date: 2014-10-24 20:36:11+00:00
 layout: post
 title: "Radical Refactoring: Breaking Changes"
 wordpress_id: 3349
-categories:
-  - Anecdotes
-  - C &amp; C++
-  - C++ for the self-taught
-  - Embedded software development
-  - Radical Refactoring
 tags:
   - breaking changes
   - radical refactoring

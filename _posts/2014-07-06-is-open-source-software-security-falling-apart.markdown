@@ -1,22 +1,30 @@
 ---
 author: rlc
+categories:
+- Open Source Software
+- Software Security
+- Vulnerabilities
+- Proprietary Software
 comments: true
 date: 2014-07-06 01:21:17+00:00
+excerpt: 'There have been a number of well-publicized security flaws in open source
+  software lately -- the most well-publicized of course being the OpenSSL Heartbleed
+  bug.
+
+
+  Then there''s the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in
+  the Linux kernel.
+
+
+  So, is there a systemic problem with Open Source software? Does proprietary software
+  have the same problem?
+
+  '
 layout: post
+tags:
+- open source
 title: Is Open Source software security falling apart?
 wordpress_id: 3163
-categories:
-  - Opinions
-  - Software Development
-  - Software Testing
-tags:
-  - open source
-excerpt: |
-  There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug.
-
-  Then there's the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in the Linux kernel.
-
-  So, is there a systemic problem with Open Source software? Does proprietary software have the same problem?
 ---
 
 There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug[^1].

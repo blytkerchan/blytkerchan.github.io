@@ -5,8 +5,6 @@ date: 2011-06-27 00:19:15+00:00
 layout: post
 title: Canada Post Labor Dispute -- Resolved?
 wordpress_id: 1549
-categories:
-  - Opinions
 tags:
   - Canada
   - organized labor

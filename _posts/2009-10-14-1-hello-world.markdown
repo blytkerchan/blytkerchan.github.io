@@ -1,14 +1,15 @@
 ---
 author: rlc
+categories:
+- Programming
+- C++
 comments: true
 date: 2009-10-14 19:17:37+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: 1- "Hello, world!"
 wordpress_id: 273
-categories:
-  - C++ for the self-taught
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 This is the first post in the "C++ for the self-taught" series - the second if you count the introduction. We will take a look at how to create your first C++ application.

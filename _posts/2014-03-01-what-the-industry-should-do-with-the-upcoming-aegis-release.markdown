@@ -1,17 +1,29 @@
 ---
 author: rlc
+categories:
+- Technology
+- Cybersecurity
+- Utilities
+- Software
+- Networks
+- Firmware
+- Exploits
+- Vulnerabilities
+- Risk Analysis
+- Attack Vectors
+- GPLv3
+- Consortium
+- Cyberterrorism
+- Smart Grid
+- Law Enforcement
 comments: true
 date: 2014-03-01 14:59:43+00:00
 layout: post
+tags:
+- Aegis
+- ICS security
 title: What the industry should do with the upcoming Aegis release
 wordpress_id: 3074
-categories:
-  - DNP3
-  - Industrial Automation
-  - Smart Grid
-tags:
-  - Aegis
-  - ICS security
 ---
 
 [Automatak will be releasing](https://web.archive.org/web/20150308032035/http://automatak.net/wordpress/?p=482) the Aegis fuzzing tool publicly and for free for the first time in a few days. Like I said yesterday:

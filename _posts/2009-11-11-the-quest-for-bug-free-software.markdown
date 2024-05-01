@@ -5,9 +5,6 @@ date: 2009-11-11 02:00:37+00:00
 layout: post
 title: The Quest For Bug-Free Software
 wordpress_id: 370
-categories:
-  - Opinions
-  - Software Design
 tags:
   - Posts that need to be re-tagged (WIP)
   - software

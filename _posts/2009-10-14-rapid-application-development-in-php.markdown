@@ -5,9 +5,6 @@ date: 2009-10-14 16:40:54+00:00
 layout: post
 title: Rapid application development in PHP
 wordpress_id: 264
-categories:
-  - PHP
-  - Software Development
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

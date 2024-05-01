@@ -5,10 +5,6 @@ date: 2016-09-13 01:20:13+00:00
 layout: post
 title: "Debugging — or: what I do for a living"
 wordpress_id: 4100
-categories:
-  - Scribbles
-  - Software Development
-  - Software Engineering
 ---
 
 I am often asked by friends and acquaintances of various backgrounds, what I do for a living. Depending on my mood at the time, I can answer in any number of ways, but invariably my answers are met with blank stares, questions that clearly demonstrate that I have once again failed to make myself understood and an eventual change of subject.

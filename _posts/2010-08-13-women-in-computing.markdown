@@ -5,9 +5,6 @@ date: 2010-08-13 02:18:06+00:00
 layout: post
 title: Women in computing
 wordpress_id: 872
-categories:
-  - Opinions
-  - Software Development
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

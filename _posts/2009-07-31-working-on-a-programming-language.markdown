@@ -9,11 +9,6 @@ excerpt: |
 layout: post
 title: Working on a programming language
 wordpress_id: 117
-categories:
-  - C &amp; C++
-  - Opinions
-  - Software Design
-  - Technology
 tags:
   - programming
   - programming language design

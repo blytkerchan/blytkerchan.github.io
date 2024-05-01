@@ -5,9 +5,6 @@ date: 2015-10-01 15:36:04+00:00
 layout: post
 title: Progress in DNP3 security
 wordpress_id: 3733
-categories:
-  - DNP3
-  - Smart Grid
 tags:
   - DNP3
 ---

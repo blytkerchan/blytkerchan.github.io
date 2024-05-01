@@ -7,11 +7,6 @@ permanent link: /blog/2015/11/interesting-modifications-to-the-lamport-queue/
 slug: interesting-modifications-to-the-lamport-queue
 title: Interesting modifications to the Lamport queue
 wordpress_id: 3679
-categories:
-  - Algorithms
-  - C &amp; C++
-  - C++ for the self-taught
-  - Interesting stuff
 tags:
   - Lamport queue
   - lock-free

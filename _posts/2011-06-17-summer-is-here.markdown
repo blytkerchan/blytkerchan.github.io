@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Seasonal content
+- Website design
+- Wallpaper
+- Lily flower
+- Canadian province flag
+- Image download
+- Architecture ideas
 comments: true
 date: 2011-06-17 18:05:53+00:00
 layout: post
+tags:
+- wallpapers
 title: Summer is here
 wordpress_id: 1505
-tags:
-  - wallpapers
 ---
 
 [Summer is here](http://en.wikipedia.org/wiki/Summer#Timing), so it's time to update desktop backgrounds and site headers with something a bit more summery.

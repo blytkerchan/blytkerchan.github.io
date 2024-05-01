@@ -1,17 +1,20 @@
 ---
 author: rlc
+categories:
+- Programming
+- Object-Oriented Programming
+- Error Handling
+- Exception Handling
+- Contract Theory
+- Resource Management
+- C++ Language
 comments: true
 date: 2010-09-17 01:52:01+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Error handling in C++
 wordpress_id: 939
-categories:
-  - C &amp; C++
-  - C++ for the self-taught
-  - Software Design
-  - Software Development
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 As far as error handling is concerned, C++ has all of the features and capabilities of C, but they are wholly inadequate in an object-oriented language. One very evident way in which C-style error handling is inadequate in an object-oriented language is in the implementation of a constructor of any non-trivial class, but this only becomes evident when we've analyzed two things: the guarantees that any method (including special methods such as constructors and destructors) can give, and the _minimal_ guarantees that each of these special methods _must_ give.

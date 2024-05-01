@@ -5,8 +5,6 @@ date: 2011-07-21 02:47:08+00:00
 layout: post
 title: "shtrict: a very restricted shell for *nix"
 wordpress_id: 1571
-categories:
-  - Software
 tags:
   - software
   - tools

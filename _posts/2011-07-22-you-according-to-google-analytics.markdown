@@ -1,14 +1,23 @@
 ---
 author: rlc
+categories:
+- Website Analytics
+- User Demographics
+- Language Preferences
+- Browser Usage
+- Visitor Behavior
+- Operating System Preferences
+- Search Engine Optimization
+- Content Preferences
+- Geographic Diversity
+- User Engagement
 comments: true
 date: 2011-07-22 03:28:31+00:00
 layout: post
+tags:
+- analytics
 title: You, according to Google Analytics
 wordpress_id: 1590
-categories:
-  - This blog
-tags:
-  - analytics
 ---
 
 This blog uses Google Analytics, which provides a treasure-trove of information about the site's visitors. To use that information to improve the site, it has to be parsed.

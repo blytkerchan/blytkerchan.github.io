@@ -1,17 +1,19 @@
 ---
 author: rlc
+categories:
+- Technology
+- Internet
+- Networking
+- Security
+- Government
+- Economy
 comments: true
 date: 2010-10-23 03:36:16+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Why IPv6 Matters
 wordpress_id: 1082
-categories:
-  - Business
-  - Computers and Society
-  - Opinions
-  - Technology
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Given the rapid growth of the Internet, and the number of Internet-enabled devices, we are running out of IPv4 addresses - fast. This is a problem mostly for ISPs and large businesses who allocate their own public IP addresses from pools of addresses and sell or sub-let those addresses to .. us. When _they_ run out of addresses, as with any finite resource, the _haves_ will once again be pitted against the _have-nots_ and the Internet will become less egalitarian. But that is not the only reason why you should be interested in IPv6: more important than the 340 trillion, trillion, trillion addresses that the 128-bit address space of IPv6 allows (as opposed to the "mere" four billion of IPv4) are IPv6's _other_ features.

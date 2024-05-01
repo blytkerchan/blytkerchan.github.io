@@ -5,11 +5,6 @@ date: 2014-07-10 20:16:48+00:00
 layout: post
 title: "ICS Security: Current and Future Focus"
 wordpress_id: 2576
-categories:
-  - DNP3
-  - Industrial Automation
-  - Smart Grid
-tags:
   - ICS security
 ---
 

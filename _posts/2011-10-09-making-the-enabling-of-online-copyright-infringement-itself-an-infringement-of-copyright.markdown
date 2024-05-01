@@ -5,8 +5,6 @@ date: 2011-10-09 03:15:33+00:00
 layout: post
 title: Making the enabling of online copyright infringement itself an infringement of copyright
 wordpress_id: 1697
-categories:
-  - Opinions
 tags:
   - copyright
 ---

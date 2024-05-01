@@ -1,16 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-10-22 01:38:53+00:00
 layout: post
+tags:
+- brainf---
+- VHDL
 title: Improving the BrainF interpreter
 wordpress_id: 3338
-categories:
-  - Software Development
-  - VHDL
-tags:
-  - brainf---
-  - VHDL
 ---
 
 As I wrote in a [previous post](/blog/2014/10/writing-a-brainf-interpreter-in-vhdl/), I wrote a BrainF interpreter in VHDL over a week-end. I decided to improve it a bit.

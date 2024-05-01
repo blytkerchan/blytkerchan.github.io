@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Physics
+- Technology
+- Science
+- Quantum Teleportation
+- TCP/IP
+- Networking
 comments: true
 date: 2010-05-26 23:08:22+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Quantum teleportation achieved over 16 km
 wordpress_id: 661
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Recently, in [this report](http://www.physorg.com/news193551675.html), it's been reported that a physics laboratory in China achieved a new distance record in quantum teleportation: 16 km. That's quite a feat, considering that up until now, the max. distance had been a few hundred meters.

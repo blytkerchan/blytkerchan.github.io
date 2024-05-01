@@ -1,16 +1,24 @@
 ---
 author: rlc
+categories:
+- Programming
+- Error Handling
+- Software Development
+- C++
+- C
+- Exception Handling
+- State Machines
+- C Libraries
+- Debugging
+- Resource Management
+- Exception Handling in C
 comments: true
 date: 2010-01-16 04:42:32+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Error handling in C
 wordpress_id: 441
-categories:
-  - C &amp; C++
-  - Software Design
-  - Software Development
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 One of the things I do as a analyst-programmer is write software - that would be the "programmer" part. I usually do that in C++ but, sometimes, when the facilities of C++ aren't available (e.g. no exception handling and no RTTI) C becomes a more obvious choice. When that happens, RTTI is not the thing I miss the most - you can get around that using magic numbers if you need to. Exceptions, on the other hand, become a very painful absence when you're used to using them.

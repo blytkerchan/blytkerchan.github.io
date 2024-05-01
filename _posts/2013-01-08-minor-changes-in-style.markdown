@@ -5,9 +5,6 @@ date: 2013-01-08 23:20:06+00:00
 layout: post
 title: Minor changes in style
 wordpress_id: 2010
-categories:
-  - C &amp; C++
-  - Software Development
 ---
 
 I am not usually one to make much of a fuss about coding style: as long as the code is easily readable, I don't much care whether you use tabs or spaces to indent, how you align your curly quotes, etc. There's really only two things I do care about when reading new code:

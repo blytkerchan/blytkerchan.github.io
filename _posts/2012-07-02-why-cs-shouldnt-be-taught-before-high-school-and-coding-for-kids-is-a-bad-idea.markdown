@@ -1,14 +1,20 @@
 ---
 author: rlc
+categories:
+- Education
+- Computer Science
+- Language Learning
+- Child Development
+- Problem Solving
+- Software Engineering
 comments: true
 date: 2012-07-02 00:35:10+00:00
 layout: post
-title: Why CS shouldn't be taught before high school (and coding for kids is a bad idea)
-wordpress_id: 1891
-categories:
-  - Education
 tags:
-  - education
+- education
+title: Why CS shouldn't be taught before high school (and coding for kids is a bad
+  idea)
+wordpress_id: 1891
 ---
 
 An introduction to computer science was part of my high school curriculum. I was about 16 years old at the time and had been coding in Basic and Pascal for a few years already - I was just getting started with C. This part of the curriculum was a complete waste of time. Not because I had books that taught me better than my teacher ever could, but because, in order to make it easier for us, the programming language we had to use was a version of Pascal ... translated to Dutch.<!--more-->

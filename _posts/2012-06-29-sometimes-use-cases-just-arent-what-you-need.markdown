@@ -5,9 +5,6 @@ date: 2012-06-29 03:50:47+00:00
 layout: post
 title: Sometimes, use-cases just aren't what you need
 wordpress_id: 1878
-categories:
-  - Software Engineering
-  - Use-Cases
 tags:
   - requirements
   - requirements analysis

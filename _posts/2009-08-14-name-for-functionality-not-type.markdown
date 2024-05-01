@@ -5,10 +5,6 @@ date: 2009-08-14 16:12:15+00:00
 layout: post
 title: Name For Functionality, Not Type
 wordpress_id: 158
-categories:
-  - Opinions
-  - Software
-  - Software Design
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

@@ -5,11 +5,6 @@ date: 2009-12-24 02:20:04+00:00
 layout: post
 title: "Distributed Software Development Part 2: Management Challenges"
 wordpress_id: 434
-categories:
-  - Business
-  - Opinions
-  - Software Development
-  - Technology
 tags:
   - Posts that need to be re-tagged (WIP)
   - software

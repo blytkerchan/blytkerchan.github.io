@@ -1,13 +1,14 @@
 ---
 author: rlc
+categories:
+- Open source
+- Version control
+- Issue tracking
 comments: true
 date: 2011-08-12 00:32:06+00:00
 layout: post
 title: Moving to GitHub
 wordpress_id: 1635
-categories:
-  - Software
-  - Software Development
 ---
 
 I will be moving my open source projects (yes, all of them) to GitHub.

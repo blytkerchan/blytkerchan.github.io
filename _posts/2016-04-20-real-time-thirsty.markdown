@@ -1,15 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2016-04-20 02:45:44+00:00
 layout: post
+tags:
+- real-time
 title: Real-time thirsty
 wordpress_id: 3843
-categories:
-  - Algorithms
-  - Software Engineering
-tags:
-  - real-time
 ---
 
 <b><i>The TL;DR:</i></b><br/>

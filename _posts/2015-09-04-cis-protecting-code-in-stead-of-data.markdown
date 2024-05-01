@@ -1,15 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2015-09-04 01:08:33+00:00
 layout: post
+tags:
+- locking
+- synchronization
 title: 'CIS: "Protecting" code in stead of data'
 wordpress_id: 3236
-categories:
-  - Common Issues with Synchronization
-tags:
-  - locking
-  - synchronization
 ---
 
 The Windows API contains a synchronization primitive that _is_ a mutual exclusion device, but is also a colossal misnomer. I mean, of course, the `CRITICAL_SECTION`.

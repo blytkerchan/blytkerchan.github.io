@@ -1,13 +1,16 @@
 ---
 author: rlc
+categories:
+- Technology
+- Security
 comments: true
 date: 2011-07-21 02:36:44+00:00
 layout: post
+tags:
+- gnupg key
+- security
 title: New GnuPG key
 wordpress_id: 1573
-tags:
-  - gnupg key
-  - security
 ---
 
 For those who want to be able to verify .deb packages I make: I have a new GnuPG key.

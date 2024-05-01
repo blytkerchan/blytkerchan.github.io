@@ -5,8 +5,6 @@ date: 2009-09-29 18:02:22+00:00
 layout: post
 title: Security at the Design Phase - Examples & Review
 wordpress_id: 240
-categories:
-  - Software Design
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

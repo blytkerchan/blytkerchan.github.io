@@ -5,8 +5,6 @@ date: 2012-07-19 21:30:30+00:00
 layout: post
 title: When hardware foils software -- and then helps it out!
 wordpress_id: 1895
-categories:
-  - Embedded software development
 tags:
   - debugging
 ---

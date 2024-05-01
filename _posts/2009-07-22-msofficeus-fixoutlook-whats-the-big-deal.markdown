@@ -11,6 +11,7 @@ title: "@msofficeus @fixoutlook - what's the big deal?"
 wordpress_id: 44
 categories:
   - Opinions
+  - Technology
 tags:
   - Microsoft
   - social media

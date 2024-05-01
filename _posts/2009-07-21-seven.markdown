@@ -1,19 +1,26 @@
 ---
 author: rlc
+categories:
+- Work Experience
+- Software Engineering
+- Programming
+- Project Management
+- Team Leadership
 comments: true
 date: 2009-07-21 02:03:46+00:00
-excerpt: |
-  Clarification
+excerpt: 'Clarification
+
   as clarity of summer -
+
   yet not unlike spring.
+
+  '
 layout: post
+tags:
+- experience
+- resume
 title: Seven?
 wordpress_id: 40
-categories:
-  - Reasons
-tags:
-  - experience
-  - resume
 ---
 
 I got a private comment asking me about the "seven years of experience" I talked about in [my previous post](/blog/2009/07/how-to-become-an-expert/). Let me explain what I do and do not count:

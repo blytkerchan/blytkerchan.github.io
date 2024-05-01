@@ -5,8 +5,6 @@ date: 2009-08-18 20:33:53+00:00
 layout: post
 title: Naming conventions and name mangling
 wordpress_id: 171
-categories:
-  - C &amp; C++
 tags:
   - naming
   - Posts that need to be re-tagged (WIP)

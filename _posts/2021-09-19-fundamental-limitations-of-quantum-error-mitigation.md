@@ -1,5 +1,11 @@
 ---
 author: rlc
+categories:
+- Technology
+- Science
+- Research
+- Quantum Computing
+- Cybersecurity
 comments: true
 date: 2021-09-19
 layout: post

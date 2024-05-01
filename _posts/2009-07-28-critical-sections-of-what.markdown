@@ -10,8 +10,7 @@ layout: post
 title: Critical sections - of what?
 wordpress_id: 94
 categories:
-  - C &amp; C++
-  - Software Design
+  - Software Development
 tags:
   - locking
   - terminology

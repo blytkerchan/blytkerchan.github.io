@@ -1,5 +1,14 @@
 ---
 author: rlc
+categories:
+- Technology
+- Health
+- Privacy
+- Security
+- Government
+- Software
+- Data Security
+- Vaccine Passports
 comments: true
 date: 2021-09-06
 layout: post

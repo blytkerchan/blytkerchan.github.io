@@ -1,15 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Bug Hunting
+- Blogging
+- Wallpapers
+- Theme Song
 comments: true
 date: 2011-03-02 17:47:03+00:00
 layout: post
+tags:
+- debugging
 title: A bulldog approach to bugs
 wordpress_id: 1276
-categories:
-  - Software Development
-  - This blog
-tags:
-  - debugging
 ---
 
 The only bugs I like are butterflies - and even then, only a specific blue butterfly that happens to be a drawing. Aside from those, I spend a lot of time rooting them out.

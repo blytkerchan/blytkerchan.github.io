@@ -1,17 +1,20 @@
 ---
 author: rlc
+categories:
+- Programming
+- Functional Programming
+- Object-Oriented Programming
+- Meta-Programming
 comments: true
 date: 2011-05-20 02:47:12+00:00
 layout: post
+tags:
+- C++
+- functional programming
+- programming
+- ranges
 title: Using Ranges and Functional Programming in C++
 wordpress_id: 1399
-categories:
-  - C++ for the self-taught
-tags:
-  - C++
-  - functional programming
-  - programming
-  - ranges
 ---
 
 C++ is a very versatile language. Among other things, you can do generic meta-programming and functional programming in C++, as well as the better-known facilities for procedural and object-oriented programming. In this installment, we will look at the functional programming facilities in the now-current C++ standard (C++03) as well as the upcoming C++0x standard. We will look at what a _closure_ is and how to apply one to a range, but we will first look at some simpler uses of ranges -- to warm up.

@@ -5,9 +5,6 @@ date: 2012-01-12 22:14:34+00:00
 layout: post
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785
-categories:
-  - C &amp; C++
-  - Windows
 tags:
   - API design
   - code

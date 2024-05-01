@@ -5,9 +5,6 @@ date: 2013-09-05 02:34:41+00:00
 layout: post
 title: Sometimes, your right hand should know what your left hand is doing
 wordpress_id: 2349
-categories:
-  - C &amp; C++
-  - Software Development
 tags:
   - alignment
   - code annotation

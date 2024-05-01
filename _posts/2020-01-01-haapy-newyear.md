@@ -1,11 +1,17 @@
 ---
 author: rlc
+categories:
+- New Year
+- Decades
+- Calendar
+- Rant
 comments: true
 date: 2020-01-01 23:21:38-05:00
 layout: post
 slug: happy-newyear
 title: Happy new year!
 ---
+
 Happy new year!
 
 2019 was an interesting year for many reasons, and I was lucky enough to finish it with family and friends in sunny Florida. 2020 also promises to be interesting, but being the nerd and nit-picker that I am, let me just rant about one minor detail...

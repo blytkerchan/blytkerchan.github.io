@@ -5,8 +5,6 @@ date: 2013-09-24 00:36:51+00:00
 layout: post
 title: "Why #fixthathouse?"
 wordpress_id: 2382
-categories:
-  - Opinions
 tags:
   - politics
 ---

@@ -1,15 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Bug Fixing
+- Memory Management
+- Code Maintenance
+- Programming Best Practices
 comments: true
 date: 2009-10-26 15:22:17+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Badly defined semantics
 wordpress_id: 324
-categories:
-  - C &amp; C++
-  - Software Design
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 There is probably nothing worse than badly defined semantics: functions that might (or might not) take ownership of the object you pass to them can be a serious maintenance headache.

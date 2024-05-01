@@ -5,9 +5,6 @@ date: 2009-10-01 19:11:10+00:00
 layout: post
 title: The importance of meaningful work
 wordpress_id: 109
-categories:
-  - Business
-  - Opinions
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

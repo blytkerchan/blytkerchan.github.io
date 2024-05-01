@@ -1,21 +1,21 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Code Refactoring
+- API Design
+- Compiler Optimization
+- Bug Detection
 comments: true
 date: 2014-10-18 13:35:32+00:00
 layout: post
-title: "Radical Refactoring: Have the compiler to (some of) the reviewing"
-wordpress_id: 3346
-categories:
-  - Anecdotes
-  - C &amp; C++
-  - C++ for the self-taught
-  - Embedded software development
-  - Radical Refactoring
 tags:
-  - compiler
-  - compiler-assisted reviewing
-  - radical refactoring
-  - refactoring
+- compiler
+- compiler-assisted reviewing
+- radical refactoring
+- refactoring
+title: 'Radical Refactoring: Have the compiler to (some of) the reviewing'
+wordpress_id: 3346
 ---
 
 One of the most common sources of bugs is ambiguity: some too-subtle API change that's missed in a library update and introduces a subtle bug, that finally only gets found out in the field. My answer to that problem is radical: make changes breaking changes -- make sure the code just won't compile unless fixed: the compiler is generally better at finding things you missed than you are.

@@ -1,17 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Data Management
+- Embedded Systems
 comments: true
 date: 2012-12-05 02:21:06+00:00
 layout: post
+tags:
+- struct design
 title: How to design a struct for storage or communicating
 wordpress_id: 1966
-categories:
-  - C &amp; C++
-  - C++ for the self-taught
-  - Embedded software development
-  - Software Design
-tags:
-  - struct design
 ---
 
 One of the most common ways of "persisting" or communicating data in an embedded device is to just dump it into persistent storage or onto the wire: rather than generating XML, JSON or some other format which would later have to be parsed and which takes a lot of resources both ways, both in terms of CPU time to generate and parse and in terms of storage overhead, dumping binary data into storage or onto the wire has only the -- inevitable -- overhead of accessing storage/the wire itself. There are, however, several caveats to this, some of which I run into on a more-or-less regular basis when trying to decipher some of that data, so in stead of just being frustrated with hard-to-decipher data, I choose to describe how it should be done in stead.

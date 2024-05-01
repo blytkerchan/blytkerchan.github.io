@@ -1,15 +1,18 @@
 ---
 author: rlc
+categories:
+- Sorting Algorithms
+- Radix Sort
+- Education
+- Parenting
 comments: true
 date: 2011-11-08 00:25:20+00:00
 layout: post
+tags:
+- algorithms
+- sorting
 title: Radix Sort
 wordpress_id: 1714
-categories:
-  - Interesting stuff
-tags:
-  - algorithms
-  - sorting
 ---
 
 ![image](/assets/2011/11/wpid-IMG_20111107_191330.jpg)

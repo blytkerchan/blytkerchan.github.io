@@ -1,16 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Computer Programming
+- Data Encapsulation
+- RAII (Resource Acquisition Is Initialization)
 comments: true
 date: 2010-08-01 23:31:26+00:00
 layout: post
-title: "Socks 5: Credentials on Windows"
-wordpress_id: 847
-categories:
-  - C++ for the self-taught
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - SOCKS
-  - Windows
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+- Windows
+title: 'Socks 5: Credentials on Windows'
+wordpress_id: 847
 ---
 
 In this installment, we will continue our implementation of GSSAPI/SSPI, this time on Windows, where we'll try to get some credentials.

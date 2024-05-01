@@ -5,8 +5,6 @@ date: 2010-07-02 00:52:22+00:00
 layout: post
 title: "Socks 5: Expanding the factory"
 wordpress_id: 810
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
   - SOCKS

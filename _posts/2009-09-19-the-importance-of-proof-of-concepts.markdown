@@ -1,20 +1,21 @@
 ---
 author: rlc
+categories:
+- Problem Solving
+- Software Development
+- Project Management
+- Business Analysis
+- Concept Development
+- Requirements Analysis
+- Testing
+- Risk Management
 comments: true
 date: 2009-09-19 01:18:00+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: The Importance of Proof-Of-Concepts
 wordpress_id: 194
-categories:
-  - Business
-  - C &amp; C++
-  - Opinions
-  - Reasons
-  - Software
-  - Software Design
-  - Technology
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Any problem is an invitation to find a solution.

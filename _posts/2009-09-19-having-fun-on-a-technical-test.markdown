@@ -5,10 +5,6 @@ date: 2009-09-19 03:15:34+00:00
 layout: post
 title: Having fun on a technical test
 wordpress_id: 196
-categories:
-  - Business
-  - Opinions
-  - Software
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

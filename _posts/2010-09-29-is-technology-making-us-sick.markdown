@@ -5,9 +5,6 @@ date: 2010-09-29 01:11:59+00:00
 layout: post
 title: Is technology making us sick?
 wordpress_id: 952
-categories:
-  - Opinions
-  - Technology
 tags:
   - health
   - technology

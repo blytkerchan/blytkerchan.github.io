@@ -5,9 +5,6 @@ date: 2011-10-17 00:50:21+00:00
 layout: post
 title: The underestimated legacy of Dennis Ritchie
 wordpress_id: 1708
-categories:
-  - C &amp; C++
-  - Opinions
 tags:
   - history
   - operating system design

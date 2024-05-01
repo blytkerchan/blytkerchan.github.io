@@ -5,8 +5,6 @@ date: 2016-03-08 09:38:49+00:00
 layout: post
 title: Schoenmaker, blijf bij je leest (Cobbler, stick to your last)
 wordpress_id: 3441
-categories:
-  - Opinions
 ---
 
 This is an old Dutch saying, which probably has its origins in a village with a particularly opinionated cobbler.

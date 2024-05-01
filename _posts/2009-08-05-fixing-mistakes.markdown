@@ -5,8 +5,6 @@ date: 2009-08-05 04:32:49+00:00
 layout: post
 title: Fixing mistakes
 wordpress_id: 116
-categories:
-  - C &amp; C++
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

@@ -1,17 +1,15 @@
 ---
 author: rlc
+categories:
+- Technical Writing
 comments: false
 date: 2015-06-30 01:49:30+00:00
 layout: post
+tags:
+- documentation
+- technical documentation
 title: Technical documentation
 wordpress_id: 3431
-categories:
-  - Opinions
-  - Quality
-  - Software Engineering
-tags:
-  - documentation
-  - technical documentation
 ---
 
 Developers tend to have a very low opinion of technical documentation: it is often wrong, partial, unclear and not worth the trouble of reading. This is, in part, a self-fulfilling prophecy: such low opinions of technical documentation results in them not being read, and not being invested in.

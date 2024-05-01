@@ -1,14 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Humor
+- Time Management
+- Standards
 comments: true
 date: 2014-07-03 03:59:21+00:00
 layout: post
+tags:
+- design by committee
 title: '"A camel is a horse designed by a committee"'
 wordpress_id: 3165
-categories:
-  - Software Engineering
-tags:
-  - design by committee
 ---
 
 I don't usually use this blog to vent frustration, but I've been reading standards lately...

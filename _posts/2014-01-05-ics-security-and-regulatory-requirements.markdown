@@ -5,9 +5,6 @@ date: 2014-01-05 05:24:12+00:00
 layout: post
 title: ICS security and regulatory requirements
 wordpress_id: 2490
-categories:
-  - Industrial Automation
-  - Software Engineering
 tags:
   - ICS security
   - regulation

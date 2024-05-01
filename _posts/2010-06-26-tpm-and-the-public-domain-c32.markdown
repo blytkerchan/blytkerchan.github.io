@@ -5,8 +5,6 @@ date: 2010-06-26 16:34:33+00:00
 layout: post
 title: TPM and the Public Domain (#c32)
 wordpress_id: 801
-categories:
-  - Opinions
 tags:
   - Canada
   - copyright

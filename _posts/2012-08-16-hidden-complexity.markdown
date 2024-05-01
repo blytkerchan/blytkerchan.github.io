@@ -6,9 +6,6 @@ layout: post
 published: false
 title: Hidden complexity
 wordpress_id: 1916
-categories:
-  - C++ for the self-taught
-  - Software Engineering
 tags:
   - complexity
 ---

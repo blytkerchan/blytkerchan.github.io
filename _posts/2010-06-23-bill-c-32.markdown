@@ -1,14 +1,18 @@
 ---
 author: rlc
+categories:
+- Copyright Law
+- Digital Rights Management (DRM)
+- Intellectual Property Rights
+- Technology and Innovation
+- Consumer Rights
 comments: true
 date: 2010-06-23 03:10:20+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Bill C-32
 wordpress_id: 771
-categories:
-  - Opinions
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 A few days ago, I was listening to the podcast for the CBC program [Spark](http://www.cbc.ca/spark/2010/06/spark-116-june-6-8-2010/), in which they mentioned a new bill, bill C-32. They had a person on the show, whose name I do not remember, who said it was a very "balanced" bill. That peaked my interest, so I decided to read the bill myself.

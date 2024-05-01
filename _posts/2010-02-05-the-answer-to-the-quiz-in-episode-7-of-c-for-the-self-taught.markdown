@@ -5,9 +5,6 @@ date: 2010-02-05 03:02:28+00:00
 layout: post
 title: The answer to the quiz in episode 7 of C++ for the self-taught
 wordpress_id: 463
-categories:
-  - C &amp; C++
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

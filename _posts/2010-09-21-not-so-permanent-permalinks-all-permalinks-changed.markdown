@@ -6,7 +6,6 @@ layout: post
 title: "Updated: Not-so-permanent permalinks (all permalinks changed)"
 wordpress_id: 948
 categories:
-  - C++ for the self-taught
   - This blog
 tags:
   - Posts that need to be re-tagged (WIP)

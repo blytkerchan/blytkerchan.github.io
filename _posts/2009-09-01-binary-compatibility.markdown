@@ -5,9 +5,6 @@ date: 2009-09-01 03:26:55+00:00
 layout: post
 title: Binary Compatibility
 wordpress_id: 177
-categories:
-  - C &amp; C++
-  - Software Design
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

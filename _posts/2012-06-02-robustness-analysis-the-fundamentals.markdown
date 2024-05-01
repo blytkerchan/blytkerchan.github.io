@@ -1,15 +1,19 @@
 ---
 author: rlc
+categories:
+- Economics
+- Engineering
+- Risk Management
+- Quality Assurance
+- Software Development
 comments: true
 date: 2012-06-02 13:45:11+00:00
 layout: post
-title: "Robustness analysis: the fundamentals"
-wordpress_id: 1840
-categories:
-  - Software Engineering
 tags:
-  - requirements analysis
-  - robustness analysis
+- requirements analysis
+- robustness analysis
+title: 'Robustness analysis: the fundamentals'
+wordpress_id: 1840
 ---
 
 Up until 2008, the global economy was humming along on what seemed like smooth sailing, doing a nice twenty knots on clear waters, with only an occasional radio message saying there were icebergs up ahead. Surely none of that was anything to be worried about: this new economy was well-designed, after all. Redundant and unnecessary checks had been removed but, in order for the economy to be robust, the engineers of the economy had made sure that at least two whole compartments could be flooded before anything really nasty would happen.

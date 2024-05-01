@@ -5,10 +5,6 @@ date: 2013-03-05 00:06:32+00:00
 layout: post
 title: Structure alignment and padding
 wordpress_id: 2050
-categories:
-  - C &amp; C++
-  - Embedded software development
-  - Software Development
 tags:
   - alignment
   - padding

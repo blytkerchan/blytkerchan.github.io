@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Travel
+- Tourism
+- Vacation destinations
 comments: true
 date: 2011-06-25 01:50:21+00:00
 layout: post
+tags:
+- travel
 title: Lonely Planet's Travel Top Ten
 wordpress_id: 1547
-categories:
-  - Opinions
-tags:
-  - travel
 ---
 
 Lonely Planet came out with a book on their top-ten places to visit recently. In light of recent events, some of their choices merit revision and as I don't have anything better to do right now, I thought I'd do a bit of revision on my iPod...

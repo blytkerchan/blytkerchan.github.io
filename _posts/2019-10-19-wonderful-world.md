@@ -1,11 +1,16 @@
 ---
 author: rlc
+categories:
+- Technology
+- Computers
+- Programming
 comments: true
 date: 2019-10-19 00:15:38-04:00
 layout: post
 slug: wonderful-world
 title: We live in a wonderful world
 ---
+
 We truly live in a wonderful world that would have been impossible to imagine only a few decades ago.
 
 Allow me to wax eloquent for a moment.

@@ -4,8 +4,6 @@ comments: true
 date: 2011-02-09 02:33:49+00:00
 layout: post
 wordpress_id: 1206
-categories:
-  - Software Engineering
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

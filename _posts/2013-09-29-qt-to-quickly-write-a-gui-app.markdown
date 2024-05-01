@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- GUI Frameworks
+- Programming Languages
+- User Interface Design
+- Productivity Tools
 comments: true
 date: 2013-09-29 03:14:51+00:00
 layout: post
+tags:
+- GUI
 title: Qt to quickly write a GUI app
 wordpress_id: 2393
-tags:
-  - GUI
 ---
 
 Today, my wife asked me to write an app that would tell her to sit straight every 15 minutes. I know apps like that already exist and I could've pointed her to one, but I decided to write one myself. The result is tannez-moi (which is French for "bother me").

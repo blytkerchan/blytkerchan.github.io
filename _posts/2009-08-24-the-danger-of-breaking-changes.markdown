@@ -5,11 +5,6 @@ date: 2009-08-24 19:39:57+00:00
 layout: post
 title: The Danger of Breaking Changes
 wordpress_id: 175
-categories:
-  - C &amp; C++
-  - Opinions
-  - Software
-  - Software Design
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

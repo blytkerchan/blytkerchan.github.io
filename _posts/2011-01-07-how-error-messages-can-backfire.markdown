@@ -5,8 +5,6 @@ date: 2011-01-07 00:46:11+00:00
 layout: post
 title: How error messages can backfire
 wordpress_id: 1144
-categories:
-  - Software Engineering
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

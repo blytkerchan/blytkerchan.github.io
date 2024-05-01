@@ -5,8 +5,6 @@ date: 2009-11-01 14:40:52+00:00
 layout: post
 title: 2-Control Structures
 wordpress_id: 294
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
 ---

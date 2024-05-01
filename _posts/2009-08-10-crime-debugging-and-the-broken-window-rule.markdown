@@ -5,8 +5,6 @@ date: 2009-08-10 01:42:40+00:00
 layout: post
 title: Crime, Debugging and the Broken Window Rule
 wordpress_id: 147
-categories:
-  - Software Design
 tags:
   - debugging
   - Posts that need to be re-tagged (WIP)

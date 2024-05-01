@@ -5,11 +5,6 @@ date: 2012-12-05 22:17:10+00:00
 layout: post
 title: What happens if structures aren't well-designed
 wordpress_id: 1979
-categories:
-  - C &amp; C++
-  - C++ for the self-taught
-  - Embedded software development
-  - Software Design
 tags:
   - struct design
 ---

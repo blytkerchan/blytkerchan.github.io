@@ -5,8 +5,6 @@ date: 2012-07-09 21:43:18+00:00
 layout: post
 title: Please use my time wisely
 wordpress_id: 1889
-categories:
-  - Software Development
 tags:
   - planning
   - project management

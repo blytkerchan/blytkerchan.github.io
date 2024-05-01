@@ -1,18 +1,23 @@
 ---
 author: rlc
+categories:
+- Technology
+- Pharmaceutical Industry
+- Barcode Inspection
+- Data Matrix
+- Vision Inspection Systems
+- Research
+- Privacy Concerns
 comments: true
 date: 2009-07-29 01:17:58+00:00
 layout: post
+tags:
+- barcodes
+- obfuscation
+- privacy
+- technology
 title: Storing data in an optical illusion
 wordpress_id: 90
-categories:
-  - Business
-  - Technology
-tags:
-  - barcodes
-  - obfuscation
-  - privacy
-  - technology
 ---
 
 For the past five years now, I've worked on vision inspection systems for the pharmaceutical industry. In those years, I have seen many applications in which cameras were used to read data on bottles, cartons, even tablets. Barcodes can be printed almost anywhere and can be of almost any size. One application I've worked on - with a whole bunch of other people, of course - had [Optel Vision](http://www.optelvision.com) systems inspect datamatrix 2D barcodes with ten digits in it (a 12x12 ECC200 datamatrix) printed on only 3x3 mm on the neckband of a vial. The system had to be able to inspect several dozens of these a minute, using VGA resolution cameras - and they were small enough that it was hard to find them if you didn't know where they were.

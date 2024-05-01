@@ -1,17 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Continuous Integration
+- Testing
+- Automation
 comments: true
 date: 2015-07-16 10:13:14+00:00
 layout: post
+tags:
+- continuous integration
 title: Three ideas you should steal from Continuous Integration
 wordpress_id: 3674
-categories:
-  - Quality
-  - Software Development
-  - Software Engineering
-  - Software Testing
-tags:
-  - continuous integration
 ---
 
 I like Continuous Integration -- a lot. Small incremental changes, continuous testing, continuous builds: these are Good Things. They provide statistics, things you can measure your progress with. But Continuous Integration requires an investment on the part of the development team, the testers, etc. There are, however, a few things you can adopt _right now_ so, I decided to give you a list of things I think you _should_ adopt.

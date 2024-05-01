@@ -1,18 +1,21 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Version Control Systems
+- Collaborative Development
+- Distributed Versioning Systems
+- Software Engineering Practices
 comments: true
 date: 2013-01-18 14:27:05+00:00
 layout: post
-title: "Flawed ways of working: centrally managed version control"
-wordpress_id: 2019
-categories:
-  - Software Development
-  - Software Engineering
 tags:
-  - git
-  - version control
-  - ways of working
-  - workflow
+- git
+- version control
+- ways of working
+- workflow
+title: 'Flawed ways of working: centrally managed version control'
+wordpress_id: 2019
 ---
 
 <!--more-->

@@ -1,15 +1,18 @@
 ---
 author: rlc
+categories:
+- Customer Service
+- Bug Reporting
+- Software Development
+- Feedback Collection
 comments: true
 date: 2012-01-11 22:40:16+00:00
 layout: post
-title: "Opening a support ticket with Microsoft (or: how not to support your customers)"
-wordpress_id: 1779
-categories:
-  - Opinions
 tags:
-  - customer support
-  - Microsoft
+- customer support
+- Microsoft
+title: 'Opening a support ticket with Microsoft (or: how not to support your customers)'
+wordpress_id: 1779
 ---
 
 I had to open a support ticket with Microsoft today: I found a bug in the TCP/IP stack of Windows Embedded Compact 7 that I wanted them to know about (and to fix). I also wanted to know when it would be _fixed_ -- after all, the bug is critical and the company I work for is a Microsoft Gold partner, so I had a reasonably high expectation of service.

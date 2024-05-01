@@ -5,8 +5,6 @@ date: 2015-07-20 10:16:10+00:00
 layout: post
 title: Git demystification
 wordpress_id: 3662
-categories:
-  - Opinions
 tags:
   - git
 ---

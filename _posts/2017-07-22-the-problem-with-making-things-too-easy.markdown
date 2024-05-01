@@ -5,10 +5,6 @@ date: 2017-07-22 02:20:14+00:00
 layout: post
 title: The problem with making things too easy
 wordpress_id: 4185
-categories:
-  - Anecdotes
-  - Software Development
-  - Software Engineering
 tags:
   - engineering
   - rant

@@ -5,8 +5,6 @@ date: 2009-09-25 22:06:09+00:00
 layout: post
 title: Installing Git on CentOS 5.2
 wordpress_id: 216
-categories:
-  - GNU/Linux (OS)
 tags:
   - CentOS
   - Posts that need to be re-tagged (WIP)

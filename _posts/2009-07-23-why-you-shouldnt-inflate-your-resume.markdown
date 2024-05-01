@@ -6,9 +6,12 @@ layout: post
 title: Why you shouldn't inflate your resume
 wordpress_id: 47
 categories:
-  - Business
-  - Opinions
-  - Reasons
+  - Employment
+  - Recruitment
+  - Expertise
+  - Education
+  - Job Titles
+  - Resume Accuracy
 tags:
   - resume
 ---

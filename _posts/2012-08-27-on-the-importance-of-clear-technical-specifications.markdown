@@ -5,9 +5,6 @@ date: 2012-08-27 21:00:01+00:00
 layout: post
 title: On the importance of clear technical specifications
 wordpress_id: 1906
-categories:
-  - Embedded software development
-  - Software Engineering
 tags:
   - specifications
   - technical specifications

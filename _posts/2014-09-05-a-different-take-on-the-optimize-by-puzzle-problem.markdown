@@ -1,16 +1,17 @@
 ---
 author: rlc
+categories:
+- Education
+- Mathematics
+- Problem-solving
+- Algorithms
 comments: true
 date: 2014-09-05 15:32:31+00:00
 layout: post
+tags:
+- optimization
 title: A different take on the "optimize by puzzle" problem
 wordpress_id: 3291
-categories:
-  - Algorithms
-  - C++ for the self-taught
-  - Software Design
-tags:
-  - optimization
 ---
 
 I explained the problem I presented in my [previous post](/blog/2014/09/optimization-by-puzzle/) to my wife overt dinner yesterday. She's a professor at law and a very intelligent person, but has no notion of set theory, graph theory, or algorithms. I'm sure many of my colleagues run into similar problems, so I thought I'd share the analogies I used to explain the problem, and the solution. I didn't get to explaining how to arrive at computational complexity, though.

@@ -1,19 +1,26 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- API Design
+- Software Architecture
+- Software Deployment
 comments: true
 date: 2009-07-18 16:40:34+00:00
-excerpt: |
-  spring cleaning brings it
+excerpt: 'spring cleaning brings it
+
   perhaps not any cleaner -
+
   at least much leaner
+
+  '
 layout: post
+tags:
+- design patterns
+- software design
 title: The IKEA Approach
 wordpress_id: 14
-categories:
-  - Software Design
-tags:
-  - design patterns
-  - software design
 ---
 
 Software usually comes as a single, monolithic block: you download a setup.exe or install.exe file, double-click it and see what happens. That's when the nightmare begins: except for a few software vendors, which include Apple, Sun and Microsoft but do not include some other big players, software doesn't usually integrate very well with.. software. Most Windows machines today are packed with applications that look out-of-place, don't interact well with other applications on the same machine, etc.

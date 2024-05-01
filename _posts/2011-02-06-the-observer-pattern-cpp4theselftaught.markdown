@@ -5,8 +5,6 @@ date: 2011-02-06 02:37:02+00:00
 layout: post
 title: The Observer Pattern
 wordpress_id: 1167
-categories:
-  - C++ for the self-taught
 tags:
   - design patterns
 ---

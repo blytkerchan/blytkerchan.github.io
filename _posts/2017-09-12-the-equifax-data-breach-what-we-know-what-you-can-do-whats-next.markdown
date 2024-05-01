@@ -5,8 +5,6 @@ date: 2017-09-12 01:48:09+00:00
 layout: post
 title: "The Equifax data breach: what we know, what you can do, what's next"
 wordpress_id: 4252
-categories:
-  - In the news
 tags:
   - class action
   - data breach

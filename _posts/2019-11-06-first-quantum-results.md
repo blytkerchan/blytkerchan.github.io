@@ -1,5 +1,11 @@
 ---
 author: rlc
+categories:
+- Technology
+- Quantum Computing
+- Computer Science
+- Physics
+- Research
 comments: true
 date: 2019-11-03
 layout: post

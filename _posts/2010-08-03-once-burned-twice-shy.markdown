@@ -1,16 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Contracting
+- Client Relations
+- Project Management
+- Embedded Systems
+- Firmware Development
 comments: true
 date: 2010-08-03 02:08:40+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Once burned, twice shy
 wordpress_id: 863
-categories:
-  - Business
-  - Opinions
-  - Software Development
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 "[Is Good Code Possible?](http://raptureinvenice.com/?p=63)" John Blanco asks on his blog. He goes on to tell a harrowing story on how he had to develop an iPhone app for a big retailer ("Gorilla Mart") in less than two weeks. Why he even accepted the contract is beyond me but then, he may not have had a choice.

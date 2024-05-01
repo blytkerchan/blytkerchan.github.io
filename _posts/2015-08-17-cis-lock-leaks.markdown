@@ -1,15 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development Best Practices
 comments: true
 date: 2015-08-17 02:03:34+00:00
 layout: post
-title: "CIS: Lock Leaks"
-wordpress_id: 3241
-categories:
-  - Common Issues with Synchronization
 tags:
-  - locking
-  - synchronization
+- locking
+- synchronization
+title: 'CIS: Lock Leaks'
+wordpress_id: 3241
 ---
 
 The two most popular threading APIs, the Windows API and pthreads, both have the same basic way of locking and unlocking a mutex -- that is, with two separate functions. This leaves the code prone to lock leak: the thread that acquired a lock doesn't release it because an error occurred.

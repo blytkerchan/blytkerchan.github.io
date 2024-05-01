@@ -5,9 +5,6 @@ date: 2011-07-28 16:56:30+00:00
 layout: post
 title: "Eclipse: kudos"
 wordpress_id: 1597
-categories:
-  - Software Design
-  - Software Engineering
 tags:
   - Eclipse
 ---

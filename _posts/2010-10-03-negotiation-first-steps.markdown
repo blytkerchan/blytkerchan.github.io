@@ -5,8 +5,6 @@ date: 2010-10-03 03:46:00+00:00
 layout: post
 title: "Negotiation: first steps"
 wordpress_id: 970
-categories:
-  - C++ for the self-taught
 tags:
   - Posts that need to be re-tagged (WIP)
 ---
