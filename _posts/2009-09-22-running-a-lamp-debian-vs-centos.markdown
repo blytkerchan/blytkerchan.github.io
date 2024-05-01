@@ -1,14 +1,19 @@
 ---
 author: rlc
+categories:
+- Technology
+- Operating Systems
+- Web Development
+- Linux distributions
 comments: true
 date: 2009-09-22 02:35:32+00:00
 layout: post
-title: "Running a LAMP: Debian vs. CentOS"
-wordpress_id: 197
 tags:
-  - CentOS
-  - Debian
-  - Posts that need to be re-tagged (WIP)
+- CentOS
+- Debian
+- Posts that need to be re-tagged (WIP)
+title: 'Running a LAMP: Debian vs. CentOS'
+wordpress_id: 197
 ---
 
 One of my clients uses CentOS for the production platform of their (web) application (written in PHP). They've asked me to take over the development and maintenance of their web application, so, naturally, I set up a new server with CentOS 5.2, rather than the Debian installation I would normally use.

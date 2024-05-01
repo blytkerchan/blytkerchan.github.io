@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Copyright Infringement
+- Internet Law
+- Digital Rights
+- Legislation
+- Intellectual Property
 comments: true
 date: 2011-10-09 03:15:33+00:00
 layout: post
-title: Making the enabling of online copyright infringement itself an infringement of copyright
-wordpress_id: 1697
 tags:
-  - copyright
+- copyright
+title: Making the enabling of online copyright infringement itself an infringement
+  of copyright
+wordpress_id: 1697
 ---
 
 [Bill C-11](https://web.archive.org/web/20111221034832/http://www.parl.gc.ca/LegisInfo/BillDetails.aspx?billId=5134851&Language=E&Mode=1) amends the Copyright Act in several different ways. One of the states purposes of those amendments is to "make the enabling of online copyright infringement itself an infringement of copyright". While I can understand that this adds significant new protections to copyrighted materials, I think this may quickly become either unenforceable, or introduce serious new restrictions on how communications over the Internet can legally take place. It all hinges on the definition of "enabling", however.

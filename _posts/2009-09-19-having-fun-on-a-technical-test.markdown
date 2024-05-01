@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Employment
+- Job search
+- Tech test
+- Programming
+- Language skills
 comments: true
 date: 2009-09-19 03:15:34+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Having fun on a technical test
 wordpress_id: 196
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I guess it's not a secret: I'm looking for a job, either short-term or long-term, so I put my CV on a few websites. I got called by head-hunters twice this week: once for a contract to start on Monday (I'm busy until the end of September/the beginning of October so I told 'em I couldn't start full-time until then) and one to start a bit later.

@@ -1,12 +1,16 @@
 ---
 author: rlc
+categories:
+- Programming Language
+- Esoteric Language
+- Turing Machine
 comments: true
 date: 2011-05-05 02:44:44+00:00
 layout: post
+tags:
+- brainf---
 title: Why I Recommend BrainF--- (and what I recommend it for)
 wordpress_id: 1368
-tags:
-  - brainf---
 ---
 
 BrainFuck is an esoteric Turing-complete programming language that consists of only the bare minimum commands for Turing-completeness. It is exactly this bare-minimum-ness that makes it an interesting language - although at first a bit awkward to wrap your head around.

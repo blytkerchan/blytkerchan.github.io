@@ -1,11 +1,23 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Industrial Control Systems
+- Communication Protocols
+- SCADA Systems
+- Vulnerability Research
+- Smart Grids
+- Responsible Disclosure
+- Fuzzing
+- IEC Standards
+- Modbus
+- Metasploit
+- Vendor-specific Protocols
 comments: true
 date: 2014-07-10 20:16:48+00:00
 layout: post
-title: "ICS Security: Current and Future Focus"
-wordpress_id: 2576
-  - ICS security
+title: 'ICS Security: Current and Future Focus'
+wordpress_id: 2576 - ICS security
 ---
 
 The flurry of DNP3-related vulnerabilities reported to ICS-CERT as part of [Automatak's project Robus](http://www.automatak.com/robus/) seems to have subsided a bit, so it may be time to take a look at where we are regarding ICS security, and where we might be going next.

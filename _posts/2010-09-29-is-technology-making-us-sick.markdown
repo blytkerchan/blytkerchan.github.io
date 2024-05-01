@@ -1,13 +1,19 @@
 ---
 author: rlc
+categories:
+- Technology
+- Health
+- Research
+- Science
+- Safety
 comments: true
 date: 2010-09-29 01:11:59+00:00
 layout: post
+tags:
+- health
+- technology
 title: Is technology making us sick?
 wordpress_id: 952
-tags:
-  - health
-  - technology
 ---
 
 In my view, technology should make our lives easier - that's what I try to work for, that's what this blog is about and that, in general, is what at least fundamental research is aimed at. But are we going about it the wrong way? Is technology really making our lives harder, rather than easier?

@@ -1,14 +1,21 @@
 ---
 author: rlc
+categories:
+- Technology
+- Software Development
+- Hardware
+- Innovation
+- Research
+- Engineering
 comments: true
 date: 2012-06-29 03:50:47+00:00
 layout: post
+tags:
+- requirements
+- requirements analysis
+- use-cases
 title: Sometimes, use-cases just aren't what you need
 wordpress_id: 1878
-tags:
-  - requirements
-  - requirements analysis
-  - use-cases
 ---
 
 I've written about use-cases on this blog before (parts [one](/blog/2010/02/use-cases-part-1-introduction-ingredients/), [two](/blog/2010/02/use-cases-part-2-what-use-cases-are-for-the-history-present-and-future-of-use-cases/) and [three](/blog/2010/03/use-cases-part-3-what-a-use-case-really-is/) of the sidebar on use-cases in my podcast come to mind) but I haven't really talked about when to avoid them.

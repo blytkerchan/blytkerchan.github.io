@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Programming
+- Data Analysis
+- Code Generation
+- Error Handling
+- Syntax
 comments: true
 date: 2013-11-30 20:11:40+00:00
 layout: post
-title: "Perl: Practical or Pathologically Eclectic? Both?"
-wordpress_id: 2415
 tags:
-  - perl
+- perl
+title: 'Perl: Practical or Pathologically Eclectic? Both?'
+wordpress_id: 2415
 ---
 
 There are two canonical acronyms for Perl: "Practical Extraction and Report Language" and "Pathologically Eclectic Rubbish Lister". Arguably, Perl can be both.

@@ -1,13 +1,18 @@
 ---
 author: rlc
+categories:
+- Security
+- Programming
+- Software Development
+- Open Source Software
 comments: true
 date: 2016-03-28 00:54:19+00:00
 layout: post
+tags:
+- checked iterators
+- iterators
 title: Checked output iterator
 wordpress_id: 3806
-tags:
-  - checked iterators
-  - iterators
 ---
 
 While writing about security -- which takes a great deal of my time lately, which is one of the reasons I haven't updated my blog as often as I usually would -- I came to the conclusion that, while I recommend using STL algorithms, iterators and containers for safety purposes that doesn't solve the problem when the standard algorithms don't check the validity of their output ranges.

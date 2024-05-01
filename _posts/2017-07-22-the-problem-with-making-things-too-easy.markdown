@@ -1,13 +1,22 @@
 ---
 author: rlc
+categories:
+- Technology
+- Software Development
+- Interior Design
+- Cognitive Bias
+- Firmware Development
+- Embedded Systems
+- Internet of Things (IoT)
+- Security
 comments: true
 date: 2017-07-22 02:20:14+00:00
 layout: post
+tags:
+- engineering
+- rant
 title: The problem with making things too easy
 wordpress_id: 4185
-tags:
-  - engineering
-  - rant
 ---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The thing with making things easier is that it makes mediocre people seem competent and incompetent people seem mediocre...</p>&mdash; Ronald (@blytkerchan) <a href="https://twitter.com/blytkerchan/status/888378949683773440?ref_src=twsrc%5Etfw">July 21, 2017</a></blockquote>

@@ -1,12 +1,27 @@
 ---
 author: rlc
+categories:
+- Government
+- Politics
+- Democracy
+- Parliamentary System
+- Constitutional Monarchy
+- Proportional Representation
+- Populism
+- Assassination
+- Transparency
+- Senate
+- Prime Minister
+- Question Period
+- Committees
+- Referendum
 comments: true
 date: 2013-09-24 00:36:51+00:00
 layout: post
-title: "Why #fixthathouse?"
-wordpress_id: 2382
 tags:
-  - politics
+- politics
+title: 'Why #fixthathouse?'
+wordpress_id: 2382
 ---
 
 Those of you who follow me on Twitter might wonder why, all of a sudden, I started tweeting assertions with the #fixthathouse hashtag. The reason is simple, [CBC The House](http://cbc.ca/thehouse) made me do it.

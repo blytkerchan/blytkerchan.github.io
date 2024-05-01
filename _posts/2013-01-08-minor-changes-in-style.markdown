@@ -1,5 +1,10 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Coding Style
+- Function Declaration
+- Code Maintainability
 comments: true
 date: 2013-01-08 23:20:06+00:00
 layout: post

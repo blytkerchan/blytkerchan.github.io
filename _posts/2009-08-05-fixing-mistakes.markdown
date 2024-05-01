@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2009-08-05 04:32:49+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Fixing mistakes
 wordpress_id: 116
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I just finished debugging a very, very nasty problem, which took me the better part of two hours to find and, once found, only a few minutes to fix. In this case, I have no one to blame but myself, so I really shouldn't complain too loudly, but I thought it was worth mentioning anyway, to show what can happen if you break the One Definition Rule.

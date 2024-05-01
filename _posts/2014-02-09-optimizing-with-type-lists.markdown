@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-02-09 17:27:27+00:00
 layout: post
+tags:
+- meta-programming
+- optimization
 title: Optimizing with type lists
 wordpress_id: 2563
-tags:
-  - meta-programming
-  - optimization
 ---
 
 In this post, I will take a brief look at how using type lists can help optimize certain applications.

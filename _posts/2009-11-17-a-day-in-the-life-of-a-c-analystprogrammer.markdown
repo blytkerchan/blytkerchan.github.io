@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- Work-Life Balance
+- Parenting
+- Podcasting
+- Blogging
 comments: true
 date: 2009-11-17 00:25:08+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: A Day In The Life Of A C++ Analyst/Programmer
 wordpress_id: 375
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 While listening to Spark, on CBC Radio, I had the idea it might be nice for non-developers (and aspiring developers) to know what a typical day might look like.

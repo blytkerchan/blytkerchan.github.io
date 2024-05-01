@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Programming
+- C++
+- Education
+- Software Development
+- Podcasting
+- Email Communication
 comments: true
 date: 2009-10-14 18:53:41+00:00
 layout: post
-title: "C++ for the self-taught: Introduction"
-wordpress_id: 268
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: 'C++ for the self-taught: Introduction'
+wordpress_id: 268
 ---
 
 I've decided to take a little time to make use of those 20000+ hours of C++ I have under my belt and make life a bit easier on those of you that are learning C++. In order to do that, I have created a new category called "C++ for the self-taught" that will basically show you how to program in C++.

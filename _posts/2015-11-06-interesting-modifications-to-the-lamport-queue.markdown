@@ -1,15 +1,23 @@
 ---
 author: rlc
+categories:
+- Computer Science
+- Programming
+- Multi-threading
+- Algorithms
+- Concurrency
+- Memory Model
+- Data Structures
 comments: true
 date: 2015-11-06 01:28:03+00:00
 layout: post
 permanent link: /blog/2015/11/interesting-modifications-to-the-lamport-queue/
 slug: interesting-modifications-to-the-lamport-queue
+tags:
+- Lamport queue
+- lock-free
 title: Interesting modifications to the Lamport queue
 wordpress_id: 3679
-tags:
-  - Lamport queue
-  - lock-free
 ---
 
 While researching lock-free queue algorithms, I came across a few articles that made some interesting modifications to the Lamport queue. One made it more efficient by exploiting C11's new memory model, while another made it more efficient by using cache locality. As I found the first one to be more interesting, and the refinements more useful for general multi-threaded programming, I thought I'd explain that one in a bit more detail.

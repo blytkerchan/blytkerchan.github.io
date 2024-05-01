@@ -1,13 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Hardware
+- Debugging
+- Technical Specifications
+- Device Communication
+- Driver Development
 comments: true
 date: 2012-08-27 21:00:01+00:00
 layout: post
+tags:
+- specifications
+- technical specifications
 title: On the importance of clear technical specifications
 wordpress_id: 1906
-tags:
-  - specifications
-  - technical specifications
 ---
 
 Even when the code is working like a charm, technical specifications -- and their different interpretations by different people -- can lead to confusion and hours-long debugging sessions.

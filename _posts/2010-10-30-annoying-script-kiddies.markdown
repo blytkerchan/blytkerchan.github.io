@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
 comments: true
 date: 2010-10-30 19:54:22+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Annoying Script Kiddies
 wordpress_id: 1128
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I don't host any of my sites, except for git.vlinder.ca, myself: my Internet connection isn't reliable enough, power outages are too frequent, and it's basically too much of a hassle. So, my sites are hosted by a professional hosting service and that service is responsible for the security of those sites. How annoying is it, then, when three of those sites get cracked through the FTP server?

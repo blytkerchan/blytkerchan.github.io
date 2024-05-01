@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Social Media
+- Journalism
+- Politics
 comments: true
 date: 2011-07-13 01:17:42+00:00
 layout: post
-title: "From #NotW in the GMT morning to #UBB in the EDT afternoon -- an example of devoted journalism"
-wordpress_id: 1570
 tags:
-  - journalism
+- journalism
+title: 'From #NotW in the GMT morning to #UBB in the EDT afternoon -- an example of
+  devoted journalism'
+wordpress_id: 1570
 ---
 
 I've just been catching up on my Twitter account's updates for today, where possibly the only non-tech person I follow, a politics journalist from the CBC called Kady O'Malley (@kady and @anotherkady) is still tweeting after 15 hours.

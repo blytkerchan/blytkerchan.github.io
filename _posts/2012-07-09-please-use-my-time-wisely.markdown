@@ -1,13 +1,17 @@
 ---
 author: rlc
+categories:
+- Customer Service
+- Software Development
+- Time Management
 comments: true
 date: 2012-07-09 21:43:18+00:00
 layout: post
+tags:
+- planning
+- project management
 title: Please use my time wisely
 wordpress_id: 1889
-tags:
-  - planning
-  - project management
 ---
 
 Just because I charge by the hour, that doesn't mean you should be wasting my time...

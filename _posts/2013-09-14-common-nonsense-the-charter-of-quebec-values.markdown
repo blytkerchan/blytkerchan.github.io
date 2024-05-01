@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Politics
+- Religion
+- Immigration
+- Diversity
+- Xenophobia
 comments: true
 date: 2013-09-14 02:15:32+00:00
 layout: post
-title: "Common nonsense: the charter of Quebec Values"
-wordpress_id: 2358
 tags:
-  - politics
+- politics
+title: 'Common nonsense: the charter of Quebec Values'
+wordpress_id: 2358
 ---
 
 [![20130913-211324.jpg](/assets/2013/09/20130913-211324.jpg)](/assets/2013/09/20130913-211324.jpg)

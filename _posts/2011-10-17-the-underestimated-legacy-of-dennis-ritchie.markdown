@@ -1,14 +1,20 @@
 ---
 author: rlc
+categories:
+- Computer Science
+- Programming Languages
+- Operating Systems
+- Software Development
+- Technology Innovation
 comments: true
 date: 2011-10-17 00:50:21+00:00
 layout: post
+tags:
+- history
+- operating system design
+- programming language design
 title: The underestimated legacy of Dennis Ritchie
 wordpress_id: 1708
-tags:
-  - history
-  - operating system design
-  - programming language design
 ---
 
 Dennis Ritchie is the inventor of the C programming language, which is the ancestor of a whole family of programming languages that includes C++, Java and C# -- probably the three most popular programming languages today -- as well as D and Objective-C, which are less popular but significant nonetheless.<!--more-->

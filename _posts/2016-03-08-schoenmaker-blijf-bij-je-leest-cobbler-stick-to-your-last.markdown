@@ -1,5 +1,11 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Software Development
+- Engineering
+- Opinions
 comments: true
 date: 2016-03-08 09:38:49+00:00
 layout: post

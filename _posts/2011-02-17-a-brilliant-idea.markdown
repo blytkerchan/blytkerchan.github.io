@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Project Management
+- Technology
+- Entrepreneurship
 comments: true
 date: 2011-02-17 03:53:07+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: A "brilliant" idea (?)
 wordpress_id: 1210
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 For a few days now, I've been carrying an idea around for a new app I could really use for my projects: something that integrates requirements management, risk management, workflow, billing, bug/issue tracking, action items, etc. with the code repositories. Wouldn't that be fun?

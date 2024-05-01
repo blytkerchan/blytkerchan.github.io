@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2009-10-14 16:40:54+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Rapid application development in PHP
 wordpress_id: 264
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 For the last few days, I've been out of my usual C++ cocoon and working, in stead, on a web app to help me better organize my projects and - more especially - help me better track them.

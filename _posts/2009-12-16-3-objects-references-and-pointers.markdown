@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Programming Concepts
 comments: true
 date: 2009-12-16 22:45:44+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: 5- Objects, References and Pointers
 wordpress_id: 326
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 The difference between references and pointers, what they are w.r.t. pointers and how to handle each has often been the source of confusion, sometimes even for seasoned programmers and often for formally trained, inexperienced programmers. Very often, especially in legacy code, I find one if the ugliest constructs imaginable: a function that returns a reference that is the result of dereferencing a pointer, if which the address is subsequently taken to validate its value. Ugh!

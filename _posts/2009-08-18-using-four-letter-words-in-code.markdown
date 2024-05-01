@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2009-08-18 15:33:41+00:00
 layout: post
+tags:
+- code
+- Posts that need to be re-tagged (WIP)
 title: Using Four-Letter Words In Code
 wordpress_id: 169
-tags:
-  - code
-  - Posts that need to be re-tagged (WIP)
 ---
 
 When writing firmware and device drivers, it is useful, sometimes, to have human-readable integer values - i.e. integer values that, when you read them in a debugger, mean something distinctive.<!--more--> This is different from using integers that have a distinctive bit pattern so you can read them on a scope (ex. 0xABABABAB, which is 10101011 repeated four times). So, when generating a new magic number, I usually use od, like this

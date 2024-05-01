@@ -1,12 +1,26 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming Best Practices
+- Code Quality
+- Clean Code
+- Variable Naming
+- Cross-Site Scripting
+- Security
+- Hungarian Notation
+- Coding Standards
+- Type Safety
+- Bug Fixing
+- Refactoring
+- Code Fragility
 comments: true
 date: 2009-08-14 16:12:15+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Name For Functionality, Not Type
 wordpress_id: 158
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I just read a [blog by Michel Fortin](http://web.archive.org/web/20111208114024/http://michelf.com/weblog/2009/hungarian-notation-the-original/), where he quotes [Joel On Software](http://www.joelonsoftware.com/articles/Wrong.html) regarding [Hungarian notation](http://en.wikipedia.org/wiki/Hungarian_notation), or rather, [Hungarian WartHogs](http://www.ddj.com/cpp/184403804). Naming a variable for its type, or a type for its location or namespace, is a mistake.

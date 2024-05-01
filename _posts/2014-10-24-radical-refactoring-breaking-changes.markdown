@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-10-24 20:36:11+00:00
 layout: post
-title: "Radical Refactoring: Breaking Changes"
-wordpress_id: 3349
 tags:
-  - breaking changes
-  - radical refactoring
-  - refactoring
+- breaking changes
+- radical refactoring
+- refactoring
+title: 'Radical Refactoring: Breaking Changes'
+wordpress_id: 3349
 ---
 
 One of the most common sources of bugs is ambiguity: some too-subtle API change that's missed in a library update and introduces a subtle bug, that finally only gets found out in the field. My answer to that problem is radical: make changes breaking changes -- make sure the code just won't compile unless fixed: the compiler is generally better at finding things you missed than you are.

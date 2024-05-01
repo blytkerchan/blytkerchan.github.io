@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Meaningful work
+- Motivation
+- Business perspective
+- Personal perspective
 comments: true
 date: 2009-10-01 19:11:10+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: The importance of meaningful work
 wordpress_id: 109
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 <!--more-->

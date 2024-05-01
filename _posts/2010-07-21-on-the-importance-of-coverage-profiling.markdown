@@ -1,13 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Testing
+- Code Coverage
+- Unit Testing
 comments: true
 date: 2010-07-21 02:49:41+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- profiling
 title: On the Importance of Coverage Profiling
 wordpress_id: 844
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - profiling
 ---
 
 Coverage profiling allows you to see which parts of the code have been run and are especially useful when unit-testing. Here's an anecdote to show just how important they can be.

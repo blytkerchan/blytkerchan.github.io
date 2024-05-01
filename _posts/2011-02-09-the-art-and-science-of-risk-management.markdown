@@ -1,11 +1,42 @@
 ---
 author: rlc
+categories:
+- Risk Management
+- Project Management
+- Software Development
+- Agile Methodologies
+- Communication
+- Risk Identification
+- Risk Analysis
+- Risk Planning
+- Risk Tracking
+- Risk Control
+- Risk Life-Cycle
+- Risk Severity Calculation
+- Risk Dependencies
+- Risk Dependency Management
+- Risk Dependency Tracking
+- Risk Dependency Graph
+- Risk Dependency Assessment
+- Risk Severity Analysis
+- Risk Severity Metrics
+- Risk Severity Calculation Methods
+- Risk Severity Prioritization
+- Risk Severity Impact
+- Risk Severity Probability
+- Risk Severity Evaluation
+- Risk Severity Planning
+- Risk Severity Enhancement
+- Risk Severity Quantification
+- Risk Severity Methodology
+- Risk Severity Improvement
+- Risk Severity Conclusion
 comments: true
 date: 2011-02-09 02:33:49+00:00
 layout: post
-wordpress_id: 1206
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+wordpress_id: 1206
 ---
 
 I like to take a rational approach to risk management: identify risks and opportunities, their probability and their impact, maximize the impact and probability of opportunities and minimize those of risks. In this article, I explain a bit of my approach, I expound upon risk dependencies, based on a recent article by Tak Wah Kwan and Hareton K.N. Leung, and I offer some practical advice.

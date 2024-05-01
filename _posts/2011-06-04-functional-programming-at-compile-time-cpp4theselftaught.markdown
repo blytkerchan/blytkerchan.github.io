@@ -1,14 +1,20 @@
 ---
 author: rlc
+categories:
+- Programming
+- Functional Programming
+- Meta-programming
+- Compile-time Programming
+- SFINAE
 comments: true
 date: 2011-06-04 21:09:09+00:00
 layout: post
+tags:
+- compile-time
+- functional programming
+- programming
 title: Functional Programming at Compile-Time
 wordpress_id: 1503
-tags:
-  - compile-time
-  - functional programming
-  - programming
 ---
 
 In the [previous installment](/blog/2011/05/using-ranges-and-functional-programming-in-c-cpp4theselftaught/) I talked about functional programming a bit, introducing the idea of _functors_ and _lambda expressions_. This time, we will look at another type of functional programming: a type that is done at compile-time.

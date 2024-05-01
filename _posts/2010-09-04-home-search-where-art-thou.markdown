@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Innovation
+- Security
+- Roaming
 comments: true
 date: 2010-09-04 00:51:43+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Home Search, Where Art Thou?
 wordpress_id: 892
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In my day to day life, there are few things I truly dislike doing: I'm a pretty happy person. There is one thing, though, that I really don't like - at all - and that strikes me as a truly pointless exercise in futility: searching. Shouldn't we have a solution for that by now?

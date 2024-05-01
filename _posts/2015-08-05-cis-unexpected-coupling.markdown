@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2015-08-05 23:12:10+00:00
 layout: post
-title: "CIS: Unexpected Coupling"
-wordpress_id: 3266
 tags:
-  - coupling
+- coupling
+title: 'CIS: Unexpected Coupling'
+wordpress_id: 3266
 ---
 
 One of the most common problems with synchronization occurs when things need each other that you didn't expect to need each other.

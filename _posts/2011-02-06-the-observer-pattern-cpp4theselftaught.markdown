@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- Computer Science
+- Design Patterns
+- C++
 comments: true
 date: 2011-02-06 02:37:02+00:00
 layout: post
+tags:
+- design patterns
 title: The Observer Pattern
 wordpress_id: 1167
-tags:
-  - design patterns
 ---
 
 In this installment of C++ for the self-taught, we will be looking at the Observer pattern: we will be starting the implementation of the proxy-part of our SOCKS server by accepting connections and servicing them.<!--more-->

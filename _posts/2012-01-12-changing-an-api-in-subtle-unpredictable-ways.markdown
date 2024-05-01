@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2012-01-12 22:14:34+00:00
 layout: post
+tags:
+- API design
+- code
+- design
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785
-tags:
-  - API design
-  - code
-  - design
 ---
 
 Many seasoned Windows systems programmers will know that you can wait for the death of a thread with `WaitForSingleObject` and for the deaths of multiple threads with its bigger brother, `WaitForMultipleObjects`. Big brother changes its behavior on some platforms, though -- as I just found out myself, the hard way.

@@ -1,15 +1,22 @@
 ---
 author: rlc
+categories:
+- Software Verification
+- Towards Reliable Software
+- Quality in Agile
+- The Introduction of Agile
+- Conclusion
 comments: true
 date: 2011-03-06 20:42:33+00:00
 layout: post
-title: The Evolution of the Software Engineering Practice Faced With The Knowledge That "Bugs Must Exist"
-wordpress_id: 1281
 tags:
-  - engineering
-  - history
-  - software
-  - software engineering
+- engineering
+- history
+- software
+- software engineering
+title: The Evolution of the Software Engineering Practice Faced With The Knowledge
+  That "Bugs Must Exist"
+wordpress_id: 1281
 ---
 
 Though laudable, the quest for bug-free software is doomed to failure. This should be news to no-one as the argument for this is as old as I am.

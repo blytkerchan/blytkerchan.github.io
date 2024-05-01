@@ -1,12 +1,16 @@
 ---
 author: rlc
+categories:
+- Education
+- Technology
+- Communication
 comments: true
 date: 2009-08-22 20:08:52+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: The Importance of Patterns
 wordpress_id: 173
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 When explaining the design of some application to some-one, I find the use of analogies is one of the best tools available to me - better than diagrams and much better than technical terms: when using technical terms, the listener often starts "glazing over" after only a few seconds - maybe a minute. It really serves no other purpose than showing off how smart you are - and that is usually a pretty stupid (and therefore self-defeating) thing to do.

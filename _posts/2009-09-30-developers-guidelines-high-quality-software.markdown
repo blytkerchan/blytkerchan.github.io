@@ -1,13 +1,24 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Coding Standards
+- Testing
+- Developer Guidelines
+- Enterprise Coding Conventions
+- API Design
+- Maintainability
+- Stability
+- Scalability
+- Quality Assurance
 comments: true
 date: 2009-09-30 18:19:42+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- software
 title: Developer's Guidelines & High-Quality Software
 wordpress_id: 247
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - software
 ---
 
 Yesterday, I was asked what I saw as the most important factors to ensure the development of quality software. What I cited was good design, good implementation following good standards, and good testing.<!--more--> On the testing end, I have a rule-of-thumb that says that at least 85% of the code should be covered with unit tests - and for the parts that aren't there should be a clear reason/rationale for it not being covered. Unit tests aren't enough, however: you also need functional tests, regression tests, etc. IMO, pre-production testing should be an important focus for any software-centric development team. But the subject of this post isn't testing - it's developer's guidelines.

@@ -1,13 +1,24 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Code Implementation
+- Server Communication
+- Client Communication
+- Code Optimization
+- Code Refactoring
+- Error Handling
+- Race Conditions
+- Object Oriented Programming
 comments: true
 date: 2010-05-16 12:00:22+00:00
 layout: post
-title: "Socks 5: Finishing sending a token"
-wordpress_id: 625
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - SOCKS
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+title: 'Socks 5: Finishing sending a token'
+wordpress_id: 625
 ---
 
 In this installment, we will finish the implementation for sending a token from the client to the server. We will answer the remaining open questions and, in doing so, improve the code a bit more. When we're done, we will have a client that sends a token to the server, and a server that reads the token and parses its envelope - which is a pretty good foundation to build on. We will later make that foundation a bit more solid by removing the classes involved from the test code and moving them to their final locations. First, however, let's take a look at those questions and the answers.

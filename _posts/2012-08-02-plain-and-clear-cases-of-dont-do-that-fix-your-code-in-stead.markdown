@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Programming
 comments: true
 date: 2012-08-02 17:04:20+00:00
 layout: post
+tags:
+- code
 title: Plain and clear cases of "don't do that - fix your code in stead"
 wordpress_id: 1913
-tags:
-  - code
 ---
 
 For the last few days, a [discussion](https://groups.google.com/forum/m/?fromgroups#!topic/comp.lang.c/YAuFFz7SmVc) (that has become heated from time to time) has been going on on the comp.lang.c usenet group. The subject is a "signal anomaly": the OP wants to catch SIGSEGV and carry on along its merry way.

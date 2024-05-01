@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Quality Assurance
+- Bug Testing
+- Contest
 comments: true
 date: 2009-08-06 15:53:29+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Testing QA
 wordpress_id: 140
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 During the development of the next version of Funky, version 1.4.00, I found a bug that hadn't been picked up during the release process for 1.3.00. Though the bug was in a corner of the interpreter that was new to version 1.3.00 and didn't cause anything too nasty - just a case where the interpreter rejects a script as invalid when it's not - it does mean an actual bug got through QA. I hate it when that happens.

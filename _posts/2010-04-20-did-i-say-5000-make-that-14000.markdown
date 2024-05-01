@@ -1,12 +1,16 @@
 ---
 author: rlc
+categories:
+- Podcasts
+- Coding
+- Audience engagement
 comments: true
 date: 2010-04-20 04:09:47+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Did I say 5000? Make that 14000(!)
 wordpress_id: 563
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 <!--more-->

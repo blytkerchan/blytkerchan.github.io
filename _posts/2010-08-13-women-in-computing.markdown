@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Diversity
+- Gender Equality
+- Technology
+- Workplace Culture
 comments: true
 date: 2010-08-13 02:18:06+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Women in computing
 wordpress_id: 872
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 When I ran a team of R&D; programmers, a while ago, at one point, we had one person from a visible minority, one person with a slight handicap, two women, two immigrants (one of which was one of the two women, the other was me) and at least one phytopathologist (me). We beat most of the statistics with that team, because there were about ten of us at the time. One of the members of my team remarked that it was the first time he'd worked in a team with two women in it - and he had worked in larger teams before.

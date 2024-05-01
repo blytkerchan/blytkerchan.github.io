@@ -1,5 +1,30 @@
 ---
 author: rlc
+categories:
+- Technology
+- Engineering
+- Software Development
+- Debugging
+- Real-time Systems
+- Industrial Devices
+- Data Logging
+- Memory Management
+- Processor Optimization
+- Resource Management
+- Windows Embedded Compact
+- Kernel Programming
+- Multi-threading
+- Data Structures
+- Algorithms
+- Performance Optimization
+- Error Handling
+- File Management
+- System Design
+- Optimization Techniques
+- Diagnostic Tools
+- Report Generation
+- Data Formatting
+- Operating Systems
 comments: true
 date: 2017-10-15 17:14:46+00:00
 layout: post

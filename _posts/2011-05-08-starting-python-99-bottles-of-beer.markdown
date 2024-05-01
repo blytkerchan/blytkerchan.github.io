@@ -1,13 +1,18 @@
 ---
 author: rlc
+categories:
+- Programming
+- Technology
+- Online tools
+- Coding languages
 comments: true
 date: 2011-05-08 00:35:32+00:00
 layout: post
+tags:
+- programming
+- Python
 title: Starting Python - 99 bottles of beer
 wordpress_id: 1384
-tags:
-  - programming
-  - Python
 ---
 
 After a brief discussion on the subject on StackOverflow chat, I've decided to try my hand at Python, using the on-line IDE at [Ideone.com](http://ideone.com).

@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2012-12-05 22:17:10+00:00
 layout: post
+tags:
+- struct design
 title: What happens if structures aren't well-designed
 wordpress_id: 1979
-tags:
-  - struct design
 ---
 
 In my [previous post](/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/), I explained how to design a structure for persisting and communicating. I didn't say why I explained it -- just that things get frustrating if these simple rules aren't followed. In this post, I will tell you why I wrote the previous one.

@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Operating Systems
+- Version Control
+- Integrated Development Environments
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Preprequisites for the project
 wordpress_id: 481
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In this installment, we'll get you set up to compile everything that needs compiling in our project. We'll try to keep it short and sweet and you'll be able to download most of what you need just by following the links on this page.

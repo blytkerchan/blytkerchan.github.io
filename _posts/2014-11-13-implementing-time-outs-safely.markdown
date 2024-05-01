@@ -1,13 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Time Management
 comments: true
 date: 2014-11-13 11:19:06+00:00
 layout: post
+tags:
+- real-time
+- time-outs
 title: Implementing time-outs (safely)
 wordpress_id: 3423
-tags:
-  - real-time
-  - time-outs
 ---
 
 Thyme is a herb that grows in gardens.

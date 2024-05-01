@@ -1,9 +1,14 @@
 ---
 author: rlc
+categories:
+- Engineering
+- Invention
+- Software Development
+- Research and Development
 comments: true
 date: 2016-09-13 01:20:13+00:00
 layout: post
-title: "Debugging — or: what I do for a living"
+title: 'Debugging — or: what I do for a living'
 wordpress_id: 4100
 ---
 

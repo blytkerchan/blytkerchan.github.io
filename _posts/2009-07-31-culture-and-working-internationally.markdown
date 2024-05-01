@@ -1,19 +1,28 @@
 ---
 author: rlc
+categories:
+- Cultural Dimensions
+- International Business
+- Psychology
+- Sociology
+- Gender Studies
 comments: true
 date: 2009-07-31 03:19:19+00:00
-excerpt: |
-  When autumn turns hence
+excerpt: 'When autumn turns hence
+
   to where winter must come forth
+
   spring awaits summer
+
+  '
 layout: post
+tags:
+- culture
+- emigration
+- travel
+- working internationally
 title: Culture and working internationally
 wordpress_id: 110
-tags:
-  - culture
-  - emigration
-  - travel
-  - working internationally
 ---
 
 Parts of culture are measurable: psychologists (mostly [Geert Hofstede](http://geert-hofstede.com/)) have come up with different indices to measure the behavior of peoples. These indices include the "Power Distance Index" (PDI), the "Individualism" index (IDV), the "Masculinity" index (MAS), the "Uncertainty Avoidance Index" (UAI) and the "Long Term Orientation" index (LTO).

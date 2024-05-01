@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Cybersecurity
+- SCADA
+- Open Source Software
 comments: true
 date: 2015-10-01 15:36:04+00:00
 layout: post
+tags:
+- DNP3
 title: Progress in DNP3 security
 wordpress_id: 3733
-tags:
-  - DNP3
 ---
 
 In [July last year](/blog/2014/07/ics-security-current-and-future-focus/), I discussed why Adam Crain and Chris Sistrunk fuzzed DNP3 stacks in devices from various vendors, finding many issues along the way (see [project Robus](https://automatak.com/robus/)). This time, I'll provide a bit of an overview of what has happened since.

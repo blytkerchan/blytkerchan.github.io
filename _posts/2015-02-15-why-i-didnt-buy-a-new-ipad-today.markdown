@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Consumer Behavior
 comments: true
 date: 2015-02-15 20:34:42+00:00
 layout: post
+tags:
+- happy high
+- kijken niet kopen
 title: Why I didn't buy a new iPad today
 wordpress_id: 3435
-tags:
-  - happy high
-  - kijken niet kopen
 ---
 
 Behavioural economists will tell you that the "happy high" you get from buying a new toy, a new device, a new computer, a new car or a new house usually wares off within three months. It's called the ever-receding horizon of happiness (or something like that -- something close to the ever-receding hair line) and it's why I have a small car (just big enough for day-to-day requirements but not big enough to take the whole family on vacation), a fairly crappy laptop computer (good enough to run OpenOffice Write and an SSH client on, but not good enough to compile FPGA firmware or big chunks of software in any hurry, but that's what the SSH client is there for) and why I've had the same iPad for the last five years or so.

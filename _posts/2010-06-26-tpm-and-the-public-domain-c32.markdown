@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Copyright Law
 comments: true
 date: 2010-06-26 16:34:33+00:00
 layout: post
+tags:
+- Canada
+- copyright
+- politics
 title: TPM and the Public Domain (#c32)
 wordpress_id: 801
-tags:
-  - Canada
-  - copyright
-  - politics
 ---
 
 Accroding to [The Appropriation Art Coalition](http://web.archive.org/web/20100120083653/http://www.appropriationart.ca/) applying TPM to public domain content effectively removes that content from the public domain. Is that really true? I don't think so, and here's why.

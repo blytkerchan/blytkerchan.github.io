@@ -1,16 +1,26 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Formal Specifications
+- Programming Languages
+- Haskell
+- System Design
+- Bug Fixing
+- Verification
+- Testing
+- User Interface Design
 comments: true
 date: 2013-09-25 16:36:23+00:00
 layout: post
+tags:
+- executable specifications
+- formal specifications
+- functional programming
+- Haskell
+- specifications
 title: The benefits of formal, executable specifications
 wordpress_id: 2387
-tags:
-  - executable specifications
-  - formal specifications
-  - functional programming
-  - Haskell
-  - specifications
 ---
 
 While a specification should not specify the C++ code that should be implemented for the specified feature, it should specify the feature in a verifiable manner. In some cases, formal -- and even executable -- specifications can be of great help.

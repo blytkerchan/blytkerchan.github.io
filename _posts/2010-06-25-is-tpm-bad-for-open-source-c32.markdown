@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Open Source Software
+- Copyright Law
+- Interoperability
+- Digital Rights Management (DRM)
+- Reverse Engineering
 comments: true
 date: 2010-06-25 16:59:04+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Is TPM bad for Open Source? (#c32)
 wordpress_id: 795
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 It's been argued that TPM and bill C-32 are bad for Free/Libre Open Source Software development. Is that true? If so, why? If not, why not? Personally, I don't think so, and I'll tell you why.

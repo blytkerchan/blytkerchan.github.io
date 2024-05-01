@@ -1,12 +1,28 @@
 ---
 author: rlc
+categories:
+- Science
+- Biology
+- Genetics
+- Biotechnology
+- Computer Science
+- Ethics
+- Research
+- Medicine
+- Industry
+- Evolution
+- Creation
+- Genetic Engineering
+- Recombinant DNA
+- Ethical Implications
+- Human Genome
 comments: true
 date: 2010-05-22 16:37:01+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome
 wordpress_id: 648
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 D.G. Gibson _et al._ [reported](http://www.sciencemag.org/cgi/content/abstract/science.1190719), in Science Magazine, the "Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome". Now, I used to be a biologist and have studied this particular type of biology for a number of years before leaving the field, mostly for financial reasons, for a career in computer science. I'm also a certifiable geek, as I think most of the readers of this blog are, so I thought I'd explain what this means, in geek terms.

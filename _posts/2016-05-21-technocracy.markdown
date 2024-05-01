@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Project Management
 comments: true
 date: 2016-05-21 17:48:27+00:00
 layout: post
+tags:
+- technocracy
 title: Technocracy
 wordpress_id: 3883
-tags:
-  - technocracy
 ---
 
 In a discussion with a "Product Owner" recently, I told him I take a more technocratic approach to project management than they did. We discussed different project management styles for the next hour or so.

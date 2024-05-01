@@ -1,13 +1,17 @@
 ---
 author: rlc
+categories:
+- Business
+- Technology
+- Communication
 comments: true
 date: 2009-11-17 20:59:37+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- requirements
 title: Implicit, Contextual Requirements
 wordpress_id: 379
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - requirements
 ---
 
 We tend to forget what we know implicitly: if we've been working in the same domain for long enough, we tend to forget that not everybody knows the same things and has the same experience we do. For example, some-one who has been working in distribution for a long time may think it's obvious that, even if you do switch to RFID, you will still need line-of-sight machine-readable codes (because RFID might fail and because the technology for using line-of-sight machine-readable codes is much mire ubiquitous than RFID is) and when they think of line-of-sight machine-readable codes, they think of barcodes and, depending on what and where they distribute, they might think of Data Matrix codes, UPC-12 codes, or any number of other barcodes.

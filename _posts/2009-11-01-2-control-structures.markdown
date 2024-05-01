@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Control Structures
 comments: true
 date: 2009-11-01 14:40:52+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: 2-Control Structures
 wordpress_id: 294
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In this post, we'll take a look at a few _control structures_ in C++. There are only a few of them, so we'll start by listing them all and giving you some examples of each, but we'll first take a look at what we mean by control structures.

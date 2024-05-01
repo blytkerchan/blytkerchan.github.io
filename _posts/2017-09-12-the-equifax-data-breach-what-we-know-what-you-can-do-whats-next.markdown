@@ -1,19 +1,26 @@
 ---
 author: rlc
+categories:
+- Technology
+- Security
+- Finance
+- Legal
+- Identity Theft
+- Data Breach
 comments: true
 date: 2017-09-12 01:48:09+00:00
 layout: post
-title: "The Equifax data breach: what we know, what you can do, what's next"
-wordpress_id: 4252
 tags:
-  - class action
-  - data breach
-  - Equifax
-  - financial system
-  - hack
-  - identity theft
-  - in the news
-  - security
+- class action
+- data breach
+- Equifax
+- financial system
+- hack
+- identity theft
+- in the news
+- security
+title: 'The Equifax data breach: what we know, what you can do, what''s next'
+wordpress_id: 4252
 ---
 
 <img src="/assets/2017/09/img_7368-141x300.jpg" alt="TL;DR mindmap">

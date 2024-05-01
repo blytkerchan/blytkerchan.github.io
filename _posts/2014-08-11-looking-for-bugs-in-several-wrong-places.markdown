@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Bug Hunting
+- Programming Languages
+- System Analysis
+- Firmware Development
+- Protocol Implementation
+- Configuration Management
 comments: true
 date: 2014-08-11 20:30:11+00:00
 layout: post
+tags:
+- debugging
 title: Looking for bugs (in several wrong places)
 wordpress_id: 3254
-tags:
-  - debugging
 ---
 
 I recently went on a bug-hunt in a huge system that I knew next to nothing about. The reason _I_ went on this bug-hunt was because, although I didn't know the system itself, I knew what the system was supposed to do, and I can read and write all the programming languages involved in developing the system (C++, C and VHDL). I'm also very familiar with the protocol of which the implementation was buggy, so not knowing the system was a minor inconvenience.

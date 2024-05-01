@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Copyright legislation
+- Political debate
+- Digital rights management (DRM)
+- Technology and copyright
+- Social media and politics
 comments: true
 date: 2010-06-24 21:25:31+00:00
 layout: post
-title: "Feedback on #C32: Constructive, Destructive or Pointless?"
-wordpress_id: 783
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: 'Feedback on #C32: Constructive, Destructive or Pointless?'
+wordpress_id: 783
 ---
 
 While some of the feed-back on bill C-32 (Copyright reform) seems to be constructive, much of it has become a foray of personal attacks on Conservative MP and Minister of Canadian Heritage and Official Languages, James Moore, who tabled the legislation with Tony Clement, Minister of Industry, on June 2. Of course, his [remarks](http://video.itworldcanada.com?bcpid=7044989001&bctid=101481423001) on the subject weren't very welcome either, calling opponents of the bill "radical extremists". So, the debate is on on what should probably be one of the more boring subjects in Ottawa: copyright legislation.

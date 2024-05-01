@@ -1,13 +1,18 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Crime prevention
+- Urban development
 comments: true
 date: 2009-08-10 01:42:40+00:00
 layout: post
+tags:
+- debugging
+- Posts that need to be re-tagged (WIP)
 title: Crime, Debugging and the Broken Window Rule
 wordpress_id: 147
-tags:
-  - debugging
-  - Posts that need to be re-tagged (WIP)
 ---
 
 In the late 1980s New York City was cleaned up from under the ground up: from 1984 to 1990, the New York subway was cleaned of its grafiti, then of its non-paying passengers. After that, when the chief of tge New York transit police became the chief of the New York city police, the city was cleaned up in the same way, and crime rates dropped dramatically.

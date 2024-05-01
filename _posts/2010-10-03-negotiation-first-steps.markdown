@@ -1,12 +1,21 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- Exception Handling
+- Security
+- Authentication
+- Negotiation
+- SSPI
+- Mechanism
 comments: true
 date: 2010-10-03 03:46:00+00:00
 layout: post
-title: "Negotiation: first steps"
-wordpress_id: 970
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: 'Negotiation: first steps'
+wordpress_id: 970
 ---
 
 As discussed [last month](/blog/2010/09/opacity-encapsulation-at-its-best-and-worst), the requirement for encapsulation pushes us towards allowing the user to know that there's a negotiation between the two peers, and does not alleviate the requirement that the user understand the errors. So in this installment, we will start using the new implementation of exceptions we worked out in the previous installment, and start on the negotiation mechanism from two installments ago.

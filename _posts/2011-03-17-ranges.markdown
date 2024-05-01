@@ -1,14 +1,19 @@
 ---
 author: rlc
+categories:
+- Iterators
+- Ranges
+- Containers
+- Standard Algorithms
 comments: true
 date: 2011-03-17 01:55:12+00:00
 layout: post
+tags:
+- C++
+- functional programming
+- ranges
 title: Ranges
 wordpress_id: 1303
-tags:
-  - C++
-  - functional programming
-  - ranges
 ---
 
 <!--more-->

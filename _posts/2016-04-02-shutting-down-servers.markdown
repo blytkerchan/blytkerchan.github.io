@@ -1,13 +1,19 @@
 ---
 author: rlc
+categories:
+- Technology
+- Software Development
+- Continuous Integration
+- Virtualization
+- Open Source Software
 comments: true
 date: 2016-04-02 19:16:09+00:00
 layout: post
+tags:
+- cloud services
+- SaaS
 title: Shutting down servers
 wordpress_id: 3810
-tags:
-  - cloud services
-  - SaaS
 ---
 
 I used to have a server with five operating systems, running in VMs, merrily humming away compiling whatever I coded. I say "used to have" because I shut it down a few weeks ago. Now, I have those same operating systems, as well as a large number of others, running on systems I don't need to worry about.

@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Cybersecurity
+- Design Patterns
+- Implementation Patterns
 comments: true
 date: 2009-09-29 18:02:22+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Security at the Design Phase - Examples & Review
 wordpress_id: 240
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 A [recent report from the SEI](http://www.sei.cmu.edu/library/abstracts/reports/09tr010.cfm) confirms once more what I have been saying for a few years now: security is a design-time concern as much as it is a concern at any other time during the application life-cycle. The very architecture of the application should take security into account from the outset, and that concern should be followed through down to implementation and deployment.

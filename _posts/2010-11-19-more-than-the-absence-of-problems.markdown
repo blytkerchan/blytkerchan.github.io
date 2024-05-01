@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Quality Assurance
 comments: true
 date: 2010-11-19 04:23:03+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: More than the absence of problems
 wordpress_id: 1133
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Quality can be defined in many ways: ISO defines quality relative to requirements as a measure of how well the object's characteristics meet those requirements. Those requirements can be specified (documented) or implied (customary). This has the advantage of making quality more or less measurable, but it has the disadvantage of making it harder to justify improving the product if the (minimum) requirements are met.

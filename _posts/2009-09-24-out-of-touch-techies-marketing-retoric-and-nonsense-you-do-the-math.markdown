@@ -1,12 +1,17 @@
 ---
 author: rlc
+categories:
+- Technology
+- Marketing
+- Business
+- Internet
 comments: true
 date: 2009-09-24 22:28:46+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Out-of-touch techies, marketing retoric, and nonsense. You do the math.
 wordpress_id: 213
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Sometimes, techies and marketers - and especially people who are both - can get very out-of-touch with the real world and start spewing out nonsense<!--more--> like this:

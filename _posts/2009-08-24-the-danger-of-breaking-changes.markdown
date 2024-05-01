@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2009-08-24 19:39:57+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: The Danger of Breaking Changes
 wordpress_id: 175
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 [Xerces-C](http://xerces.apache.org/xerces-c/) is without a doubt one of the most popular DOM implementations in C++ (and its Java sibling undoubtedly the most popular implementation for Java). As with any project that lives under the banner of the [Apache Foundation](http://apache.org/) the project is managed using a meritocracy-style project management scheme and has been, quite successfully, for the last decade.

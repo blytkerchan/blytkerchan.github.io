@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Software Development
+- Error Handling
+- Encryption
+- Information Security
 comments: true
 date: 2011-01-07 00:46:11+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: How error messages can backfire
 wordpress_id: 1144
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Error messages should provide enough information for the user to correct their error, but they shouldn't provide any more than that, or malicious users could abuse them - as shown recently with the ASP.NET server.

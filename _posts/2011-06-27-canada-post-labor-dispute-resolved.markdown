@@ -1,13 +1,24 @@
 ---
 author: rlc
+categories:
+- Labor Dispute
+- Government
+- Union
+- Canada Post
+- Constitutional Implications
+- Arbitration
+- Monopoly
+- Collective Bargaining
+- Individual Bargaining
+- Economy
 comments: true
 date: 2011-06-27 00:19:15+00:00
 layout: post
+tags:
+- Canada
+- organized labor
 title: Canada Post Labor Dispute -- Resolved?
 wordpress_id: 1549
-tags:
-  - Canada
-  - organized labor
 ---
 
 I've been watching the Canada Post labor dispute from afar over Twitter and saw the back-to-work bill pass on third reading. Does that mean the dispute is over? I don't think so...<!--more-->

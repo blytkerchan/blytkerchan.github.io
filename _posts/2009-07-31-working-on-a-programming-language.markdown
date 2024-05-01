@@ -1,17 +1,31 @@
 ---
 author: rlc
+categories:
+- Programming Language
+- Software Development
+- Functional Programming
+- Interpreter
+- Version Control
+- Grammar
+- Testing
+- Optimization
+- Recursion
+- Looping
 comments: true
 date: 2009-07-31 22:40:39+00:00
-excerpt: |
-  Like a warm spring breeze
-  writing is to summer's dawn
+excerpt: 'Like a warm spring breeze
+
+  writing is to summer''s dawn
+
   as language to dusk
+
+  '
 layout: post
+tags:
+- programming
+- programming language design
 title: Working on a programming language
 wordpress_id: 117
-tags:
-  - programming
-  - programming language design
 ---
 
 A few years ago, I started on the design and development of a new programming language, called Jail. The goal was to create an easy-to-learn, Object-Oriented programming language that could run on a VM as well as natively, on embedded devices, had support for threads, networking, etc.

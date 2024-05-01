@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Agile Methodologies
+- Project Management
+- Quality Assurance
+- Configuration Management
+- Documentation
+- Process Improvement
 comments: true
 date: 2009-09-29 02:51:02+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Can Agile and CMMI Come Together?
 wordpress_id: 227
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I just finished reading a [report](http://www.sei.cmu.edu/library/abstracts/reports/08tn003.cfm) by the [Software Engineering Institute](http://www.sei.cmu.edu/) that accomplishes something that earlier literature, including "[SCRUM Meets CMMi - Agility and discipline combined](http://www.ddj.com/cpp/201202684)" didn't accomplish: it takes a rational step back from both methods, shows where they're from and why they're different, how much of that difference is real and where the perceived differences come from, and how the two can come together. So, the short answer to my title is "yes".

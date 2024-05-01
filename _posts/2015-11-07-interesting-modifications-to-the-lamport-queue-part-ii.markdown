@@ -1,13 +1,19 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Optimization
+- Concurrency
+- Data Structures
 comments: true
 date: 2015-11-07 20:10:47+00:00
 layout: post
+tags:
+- Lamport queue
+- lock-free
 title: Interesting modifications to the Lamport queue, part II
 wordpress_id: 3763
-tags:
-  - Lamport queue
-  - lock-free
 ---
 
 In the [previous installment](/blog/2015/11/05/interesting-modifications-to-the-lamport-queue), on this subject, I described a few modifications to the Lamport queue introduced by Nhat Minh Le _et al._ to relax operations on shared state as much as possible, while maintaining correctness.

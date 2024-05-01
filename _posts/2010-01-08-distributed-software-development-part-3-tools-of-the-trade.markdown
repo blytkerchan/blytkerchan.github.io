@@ -1,13 +1,21 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Source Code Management
+- Version Control Systems
+- Distributed Versioning Tools
+- Documentation Management
+- Integrated Development Environments
+- Hardware Management
 comments: true
 date: 2010-01-08 04:24:21+00:00
 layout: post
-title: "Distributed Software Development Part 3: Tools Of The Trade"
-wordpress_id: 439
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - software
+- Posts that need to be re-tagged (WIP)
+- software
+title: 'Distributed Software Development Part 3: Tools Of The Trade'
+wordpress_id: 439
 ---
 
 For software development, there are a few things we need on a daily basis: our source code, our documentation, our integrated development environment (IDE) and our hardware. Without any one of these, a software developer is as useless as... well... something very useless.

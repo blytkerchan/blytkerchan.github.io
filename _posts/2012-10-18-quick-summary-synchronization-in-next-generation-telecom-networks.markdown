@@ -1,13 +1,17 @@
 ---
 author: rlc
+categories:
+- Telecommunications
+- Networking
+- Technology
 comments: true
 date: 2012-10-18 16:28:47+00:00
 layout: post
-title: "Quick Summary: Synchronization in Next-Generation Telecom Networks"
-wordpress_id: 1932
 tags:
-  - next-generation networks
-  - time synchronization
+- next-generation networks
+- time synchronization
+title: 'Quick Summary: Synchronization in Next-Generation Telecom Networks'
+wordpress_id: 1932
 ---
 
 This is a quick summary of the [ComSoc webinar on Synchronization in Next-Generation Telecom Networks](https://web.archive.org/web/20160620200541/http://webcast.you-niversity.com/youtools/companies/viewarchives.asp?account=395247&affiliateId=99&routing=b2d50ec7&stm=PDKIKX0D)

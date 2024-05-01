@@ -1,13 +1,23 @@
 ---
 author: rlc
+categories:
+- Software Engineering
+- Quality Assurance
+- Testing
+- Programming Languages
+- Operating Systems
+- Embedded Systems
+- Legacy Systems
+- Human Factors
+- Software Development Tools
 comments: true
 date: 2009-11-11 02:00:37+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- software
 title: The Quest For Bug-Free Software
 wordpress_id: 370
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - software
 ---
 
 In recent literature from the scientific side of software engineering, there've been a lot of publications on producing and maintaining high-quality software. A lot of focus is being put on tools, systems, procedures and processes that aim to reduce the price-tag of quality and avoid the price-tag of failure.

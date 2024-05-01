@@ -1,15 +1,20 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- DIY
+- Innovation
 comments: true
 date: 2017-04-18 20:17:32+00:00
 layout: post
+tags:
+- Arduino
+- C++
+- stupidity
+- vision
 title: This guy is out of his mind (and lucky if he can still see)
 wordpress_id: 4169
-tags:
-  - Arduino
-  - C++
-  - stupidity
-  - vision
 ---
 
 This guy has to be completely bonkers: he wrote an application in C# (would not have my language of choice) to detect a human face in a live video feed and point a laser at it.

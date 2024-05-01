@@ -1,13 +1,27 @@
 ---
 author: rlc
+categories:
+- Software Design
+- Encapsulation
+- Object-Oriented Design
+- Error Handling
+- Trade-offs
+- Security Context
+- Negotiation Process
+- Context Class
+- Credentials Class
+- Mechanism Class
+- Opaque Design
+- Maintainability
+- Distributed Architectures
 comments: true
 date: 2010-09-01 12:00:20+00:00
 layout: post
-title: "Opacity: Encapsulation at its best (and worst)"
-wordpress_id: 891
 tags:
-  - encapsulation
-  - Posts that need to be re-tagged (WIP)
+- encapsulation
+- Posts that need to be re-tagged (WIP)
+title: 'Opacity: Encapsulation at its best (and worst)'
+wordpress_id: 891
 ---
 
 One thing you may have noticed when looking at the code of our abstract factory, is that the base classes (interfaces) of each of our abstract objects don't have much to tell their users: there are hardly any accessors or mutators to be found. This is an attribute of encapsulation called _opacity_ and in this installment, we'll explore its advantages and disadvantages.

@@ -1,13 +1,25 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- C++
+- Memory Management
+- Resource Allocation
+- Resource Deallocation
+- Pointers
+- Smart Pointers
+- Constructor
+- Destructor
+- RAII (Resource Acquisition Is Initialization)
 comments: true
 date: 2010-01-01 19:29:11+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- RAII
 title: 6- Resource Allocation and RAII
 wordpress_id: 303
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - RAII
 ---
 
 In standard C++, there is no garbage collector: there is no built-in mechanism that will magically clean up after you if you make a mess. You do, however, have the possibility to allocate resources, such as memory or files, and work with them. You should, therefore, be able to manage them consistently so you don't "leak" them.

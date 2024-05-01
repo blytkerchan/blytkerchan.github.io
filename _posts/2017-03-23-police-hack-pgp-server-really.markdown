@@ -1,18 +1,24 @@
 ---
 author: rlc
+categories:
+- Technology
+- Law Enforcement
+- Privacy
+- Security
+- Crime
 comments: true
 date: 2017-03-23 22:19:45+00:00
 layout: post
+tags:
+- encryption
+- in the news
+- PGP
+- police
+- privacy
+- security
+- The Netherlands
 title: '"Police hack PGP server" -- really?'
 wordpress_id: 4162
-tags:
-  - encryption
-  - in the news
-  - PGP
-  - police
-  - privacy
-  - security
-  - The Netherlands
 ---
 
 This afternoon, this headline caught my attention: "[Police hack PGP server with 3.6 million messages from organized crime BlackBerrys](http://www.zdnet.com/article/police-hack-pgp-server-with-3-6-million-messages-from-organized-crime-blackberrys/)". When I read it, I thought: "either the journalist/title writer got it wrong, or PGP is broken".

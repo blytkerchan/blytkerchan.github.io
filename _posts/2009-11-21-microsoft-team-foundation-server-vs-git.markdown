@@ -1,11 +1,17 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Version Control Systems
+- Project Management
+- Productivity
+- Technology
 comments: true
 date: 2009-11-21 20:42:51+00:00
 layout: post
-title: Microsoft Team Foundation Server vs Git
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: Microsoft Team Foundation Server vs Git
 ---
 
 For the last few weeks, and in the coming months, I've had to (and will have to) work with Microsoft's Team Foundation Server (TFS).

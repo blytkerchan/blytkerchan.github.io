@@ -1,13 +1,20 @@
 ---
 author: rlc
+categories:
+- Business Management
+- Human Resources
+- Agile Development
+- Performance-based Pay
+- Remote Work
+- Project Management
 comments: true
 date: 2009-12-24 02:20:04+00:00
 layout: post
-title: "Distributed Software Development Part 2: Management Challenges"
-wordpress_id: 434
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - software
+- Posts that need to be re-tagged (WIP)
+- software
+title: 'Distributed Software Development Part 2: Management Challenges'
+wordpress_id: 434
 ---
 
 Business is largely about management which, in turn, is largely about reducing costs and reducing time-to-market. However, today's management models for human resources are largely based on two things: physical presence in the office and seniority. Performance is often only part of the equation when it comes to promotion - people tend to get promoted upto their level of incompetence - and bonuses. In the software industry, however, management models are changing towards a more participatory model in which managers have less and less to say on the "how", the "who" and the "when" of the development process but, in return, get more say in the "what" - the customer gets to say "why". In some forms of agile development, team members can even be "voted off the island", which can be very disconcerting indeed for the manager.

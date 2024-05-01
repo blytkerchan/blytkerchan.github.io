@@ -1,12 +1,21 @@
 ---
 author: rlc
+categories:
+- Version Control Systems
+- Software Development Tools
+- Distributed Systems
+- Graphical User Interfaces
+- Integration with IDEs
+- Understanding Git
+- Rebasing in Git
+- Continuous Integration
 comments: true
 date: 2015-07-20 10:16:10+00:00
 layout: post
+tags:
+- git
 title: Git demystification
 wordpress_id: 3662
-tags:
-  - git
 ---
 
 There are a few misconceptions I hear about Git that I find should be cleared up a bit, so here goes:

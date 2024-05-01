@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Programming
 comments: true
 date: 2009-08-14 14:39:55+00:00
 layout: post
+tags:
+- complexity
+- Posts that need to be re-tagged (WIP)
 title: Hiding Complexity in C++
 wordpress_id: 150
-tags:
-  - complexity
-  - Posts that need to be re-tagged (WIP)
 ---
 
 C++ is a programming language that, aside from staying as close to the machine as possible (but no closer) and as close to C as possible (but no closer), allows the programmer to express abstraction if a few very elegant constructs. That is probably the one thing I like best about C++.

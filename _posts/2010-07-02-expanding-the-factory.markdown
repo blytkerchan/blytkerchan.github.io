@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2010-07-02 00:52:22+00:00
 layout: post
-title: "Socks 5: Expanding the factory"
-wordpress_id: 810
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - SOCKS
+- Posts that need to be re-tagged (WIP)
+- SOCKS
+title: 'Socks 5: Expanding the factory'
+wordpress_id: 810
 ---
 
 In this installment, we will expand the `MechanismFactory` class for SSPI. We will take a slightly closer look at the SSPI call than we would normally do, and we will also take a look at the Unicode/"ANSI" differences on Windows. Because of this, we will _not_ have time to take a look at the GSS-API side of things, which we will therefore look into next time around.

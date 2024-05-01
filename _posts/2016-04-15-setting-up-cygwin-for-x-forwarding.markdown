@@ -1,15 +1,28 @@
 ---
 author: rlc
+categories:
+- Technology
+- Operating Systems
+- Software Installation
+- SSH Configuration
+- X Server Configuration
+- Linux Configuration
+- Windows Configuration
+- Networking
+- Cybersecurity
 comments: true
 date: 2016-04-15 16:52:52+00:00
+excerpt: This is one of those "recipe" posts that tend to be useful if you happen
+  to want to do exactly what I just did. The end result of this one is a Windows shortcut
+  called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux
+  box, with X forwarding.
 layout: post
+tags:
+- Cygwin
+- HOWTO
+- X forwarding
 title: Setting up Cygwin for X forwarding
 wordpress_id: 3816
-tags:
-  - Cygwin
-  - HOWTO
-  - X forwarding
-excerpt: This is one of those "recipe" posts that tend to be useful if you happen to want to do exactly what I just did. The end result of this one is a Windows shortcut called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux box, with X forwarding.
 ---
 
 For my day-to-day work I, like many people, use a mix of Linux, Windows and iOS; the three of which working less-than-seamlessly together to help make my working day productive. In my case, the Linux boxes are mostly Ubuntu boxes (I moved from vanilla Debian to Ubuntu a few years ago; from RedHat to Debian before that) and the Windows boxes are either a Windows 7 desktop, a Windows 7 laptop or a Windows 10 laptop.

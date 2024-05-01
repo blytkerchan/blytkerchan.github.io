@@ -1,15 +1,46 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Regulatory Compliance
+- Critical Infrastructure Protection
+- Smart Grids
+- Industry Standards
+- TCP/IP Communications
+- NERC-CIP Standards
+- Electronic Security Perimeter
+- Monitoring
+- Critical Cyber Assets
+- Firmware Quality
+- ICS Security
+- Pharmaceutical Industry
+- 21CFR.11 Requirements
+- Authentication
+- Audit Logs
+- Confidentiality
+- Integrity
+- Authenticity
+- Non-Repudiation
+- Electricity Grid
+- Smart Grid Technology
+- Regulatory Requirements
+- Aging Infrastructure
+- Intelligent Electronic Devices
+- Remote Terminal Units
+- Data Concentrators
+- Power Systems Devices
+- Security Concerns
+- Political Will
 comments: true
 date: 2014-01-05 05:24:12+00:00
 layout: post
+tags:
+- ICS security
+- regulation
+- regulatory requirements
+- requirements
 title: ICS security and regulatory requirements
 wordpress_id: 2490
-tags:
-  - ICS security
-  - regulation
-  - regulatory requirements
-  - requirements
 ---
 
 In North America, ICS security, as regards the electricity grid, is regulated by [NERC](http://www.nerc.com/), which provides and enforces, among other things, the Critical Infrastructure Protection (CIP) standards.

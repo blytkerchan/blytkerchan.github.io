@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Industrial Control Systems (ICSs)
+- Power Grid
+- Smart Grid
+- Smart Metering Devices
+- Energy Efficiency
+- Cybersecurity
 comments: true
 date: 2013-12-27 01:12:13+00:00
 layout: post
-title: "The importance of ICS security: pervasiveness of ICSs"
-wordpress_id: 2453
 tags:
-  - ICS security
+- ICS security
+title: 'The importance of ICS security: pervasiveness of ICSs'
+wordpress_id: 2453
 ---
 
 Industrial Control Systems (ICSs) are becoming pervasive throughout all branches of industry and all parts of our infrastructure: they are a part of every part of the electricity grid, from the nuclear power station to your home; they're found in the traffic lights of virtually every crossing; they regulate train traffic; they run the cookie factory that makes your favorite cookies and pack the pills your doctor prescribed.

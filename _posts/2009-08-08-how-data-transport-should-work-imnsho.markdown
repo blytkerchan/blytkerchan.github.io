@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Design
 comments: true
 date: 2009-08-08 18:59:29+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: How Data Transport Should Work IMNSHO
 wordpress_id: 146
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 One of the most ubiquitous problems in software design is to get data from one place to another. When some-one starts coding code that does that, you seem to inevitably end up with spaghetti code that mixes the higher-level code, the content and the transport together in an awful mix that looks like a cheap weeks-old spaghetti that was left half-eaten and abandoned next to a couch somewhere. Now, I have never seen what that actually looks like, but I have a rather vivid imagination - and I'll bet you have too.

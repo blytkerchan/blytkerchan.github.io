@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Integrated Development Environments (IDEs)
+- Software Architecture
+- Version Control
+- Software Maintenance
+- Software Design
+- Software Evolution
 comments: true
 date: 2011-07-28 16:56:30+00:00
 layout: post
-title: "Eclipse: kudos"
-wordpress_id: 1597
 tags:
-  - Eclipse
+- Eclipse
+title: 'Eclipse: kudos'
+wordpress_id: 1597
 ---
 
 One of the things I like about Eclipse is the way it is designed. I'm not talking about the GUI when I say that - although the GUI is arguably well-designed as well: I mean the way hundreds of pieces fit together to make Eclipse an IDE for Java, C, C++, PHP, Python, ..., etc.

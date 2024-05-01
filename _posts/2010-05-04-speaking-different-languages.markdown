@@ -1,12 +1,19 @@
 ---
 author: rlc
+categories:
+- Language and Linguistics
+- Coding Standards
+- Cultural Differences
+- National Identity
+- Corporate Policies
+- Quebec Language Laws
 comments: true
 date: 2010-05-04 00:06:43+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Speaking different languages
 wordpress_id: 590
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 As a dutchman living in Quebec, Canada - one of those parts of the world where francophones (french-speaking people) are surrounded by anglophones (english-speaking people) and yet thrive speaking french almost exclusively - I sometimes run into the "corner cases" of language related coding standards - e.g. the language comments are supposed to be written in.

@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Ethics
+- History
+- Project Management
+- Government
+- Technology
+- Business
+- Society
 comments: true
 date: 2016-05-25 02:48:23+00:00
 layout: post
+tags:
+- technocracy
 title: Technocracy II
 wordpress_id: 3893
-tags:
-  - technocracy
 ---
 
 In my [previous post](/blog/2016/05/technocracy/), I described technocracy as something that is positive in project and product management, and in team organization. In this post, to supply a boundary to my previous text, I will make the case for the opposite.

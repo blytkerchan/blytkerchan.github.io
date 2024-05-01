@@ -1,13 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Open Source
+- Linux
+- Security
+- Programming
 comments: true
 date: 2011-07-21 02:47:08+00:00
 layout: post
-title: "shtrict: a very restricted shell for *nix"
-wordpress_id: 1571
 tags:
-  - software
-  - tools
+- software
+- tools
+title: 'shtrict: a very restricted shell for *nix'
+wordpress_id: 1571
 ---
 
 I needed a restricted shell for my shell server - the one that's available from outside my firewall, so I wrote one. You can download it under the terms of the GNU General Public License, version 3.

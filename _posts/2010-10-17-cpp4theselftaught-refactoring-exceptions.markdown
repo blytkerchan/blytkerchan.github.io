@@ -1,13 +1,15 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2010-10-17 00:31:06+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
+- refactoring
 title: Refactoring Exceptions
 wordpress_id: 982
-tags:
-  - Posts that need to be re-tagged (WIP)
-  - refactoring
 ---
 
 As I mentioned in the [previous installment](/blog/2010/10/negotiation-first-steps), our current way of handling exceptions leaves a few things to be desired. In this installment, we will fix that problem.

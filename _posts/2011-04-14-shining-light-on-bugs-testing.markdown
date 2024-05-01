@@ -1,12 +1,14 @@
 ---
 author: rlc
+categories:
+- Software Testing
 comments: true
 date: 2011-04-14 01:16:17+00:00
 layout: post
-title: "Shining light on bugs: testing"
-wordpress_id: 1357
 tags:
-  - testing
+- testing
+title: 'Shining light on bugs: testing'
+wordpress_id: 1357
 ---
 
 Bugs like to hide in the darker corners of the code: the parts that are least exercised, less well-structured. They don't react to light very well. tests are like a spotlight that you shine upon specific pieces of the code. The first time you do that -- especially if the code has been around a while -- the bugs will come crawling out of the woodworks.

@@ -1,12 +1,15 @@
 ---
 author: rlc
+categories:
+- Science Books
 comments: true
 date: 2010-09-04 00:07:51+00:00
 layout: post
-title: '"Given the existence of A, B will create itself, therefore, C had nothing to do with it"'
-wordpress_id: 908
 tags:
-  - Posts that need to be re-tagged (WIP)
+- Posts that need to be re-tagged (WIP)
+title: '"Given the existence of A, B will create itself, therefore, C had nothing
+  to do with it"'
+wordpress_id: 908
 ---
 
 Stephen Hawking's new book promises a lot of hype. CNN Already published two separate articles about it on their site even though no-one has read it yet. I've added it to my [Amazon Science Books Wishlist](http://amzn.com/w/2NIU712R6L9YF), and will buy it when I come round to it unless some generous soul wants to offer it to me first. About the hype, though:

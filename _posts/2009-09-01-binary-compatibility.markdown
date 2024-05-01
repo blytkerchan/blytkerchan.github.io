@@ -1,12 +1,20 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Compatibility Management
+- API Compatibility
+- Binary Compatibility
+- Versioning
+- Interface Design
+- Maintenance Branches
 comments: true
 date: 2009-09-01 03:26:55+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: Binary Compatibility
 wordpress_id: 177
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 When writing library code, one of the snares to watch out for is _binary compatibility_. I have already [talked about the dangers](/blog/2009/08/the-danger-of-breaking-changes/) of breaking binary - and API - compatibility but I had neither defined what binary compatibility is, now how to prevent breaking it. In this post, I will do both - and I will explain how, at Vlinder Software, we go about managing incompatible changes.

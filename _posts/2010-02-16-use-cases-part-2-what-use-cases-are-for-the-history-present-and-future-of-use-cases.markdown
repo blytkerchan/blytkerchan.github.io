@@ -1,13 +1,21 @@
 ---
 author: rlc
+categories:
+- Software Development Models
+- Object-Oriented Programming
+- Agile Development Methods
+- Use-Cases
+- Software Engineering Education
+- Constructivism
 comments: true
 date: 2010-02-16 21:40:09+00:00
 layout: post
-title: "Use-Cases Part 2: What Use-Cases Are For (The history, present and future of use-cases)"
-wordpress_id: 388
 tags:
-  - Posts that need to be re-tagged (WIP)
-  - use-cases
+- Posts that need to be re-tagged (WIP)
+- use-cases
+title: 'Use-Cases Part 2: What Use-Cases Are For (The history, present and future
+  of use-cases)'
+wordpress_id: 388
 ---
 
 In the late 1980s and early 1990s, the "waterfall" software development model, which had been around (with that name) since the 1970s (see, for example, Boehm, B.W. Software engineering. IEEE 7~ans Comput. C-25, (1976), 1226-1241) was starting to be progressively "refined". When that happens, it usually means that there are problems with the model that need to be addressed - or the model will crumble and fall. Object-oriented programming was becoming more or less main-stream and early versions of C++ were cropping up. "Good practice" documents for programming on non-OO languages started to stress the use of OO-like APIs and soon enough, object-oriented programming would no longer be a mere buzzword.

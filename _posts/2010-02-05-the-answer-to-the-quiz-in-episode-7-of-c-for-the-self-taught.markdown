@@ -1,12 +1,18 @@
 ---
 author: rlc
+categories:
+- Programming
+- Computer Science
+- Software Development
+- C++ Language
+- Coding Standards
 comments: true
 date: 2010-02-05 03:02:28+00:00
 layout: post
+tags:
+- Posts that need to be re-tagged (WIP)
 title: The answer to the quiz in episode 7 of C++ for the self-taught
 wordpress_id: 463
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I know you must have been aching for the response to the quiz from three weeks ago. If you haven't thought of your own answer yet, go back to the code and have another look. Try running it through a compiler with all the warnings turned on - it might tell you what the bug is (more or less), but probably not how to solve it.

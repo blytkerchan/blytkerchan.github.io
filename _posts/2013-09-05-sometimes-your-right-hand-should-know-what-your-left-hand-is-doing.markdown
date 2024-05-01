@@ -1,14 +1,16 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2013-09-05 02:34:41+00:00
 layout: post
+tags:
+- alignment
+- code annotation
+- compiler bugs
 title: Sometimes, your right hand should know what your left hand is doing
 wordpress_id: 2349
-tags:
-  - alignment
-  - code annotation
-  - compiler bugs
 ---
 
 Especially if you're a compiler...
