@@ -16,7 +16,7 @@
       "request": "launch",
       "type": "msedge",
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}",
+      "webRoot": "${workspaceFolder}"
     },
     {
       "name": "Start dev back-end",
@@ -45,6 +45,14 @@
       "type": "node-terminal",
       "cwd": "${workspaceFolder}/test-frontend",
       "command": "npm run test"
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}"
     }
   ]
 }
