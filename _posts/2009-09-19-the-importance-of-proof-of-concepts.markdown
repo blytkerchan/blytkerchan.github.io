@@ -12,8 +12,6 @@ categories:
 comments: true
 date: 2009-09-19 01:18:00+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: The Importance of Proof-Of-Concepts
 wordpress_id: 194
 ---

@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2014-11-01 15:25:16+00:00
 layout: post
-tags:
-- communication
 title: Miss(ed) Communication
 wordpress_id: 3400
 ---

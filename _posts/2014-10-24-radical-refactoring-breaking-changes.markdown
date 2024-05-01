@@ -5,10 +5,6 @@ categories:
 comments: true
 date: 2014-10-24 20:36:11+00:00
 layout: post
-tags:
-- breaking changes
-- radical refactoring
-- refactoring
 title: 'Radical Refactoring: Breaking Changes'
 wordpress_id: 3349
 ---

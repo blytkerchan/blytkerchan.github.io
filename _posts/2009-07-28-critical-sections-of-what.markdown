@@ -1,19 +1,19 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2009-07-28 15:56:04+00:00
-excerpt: |
-  a glass of water
+excerpt: 'a glass of water
+
   may sometimes have a storm, but
+
   blizzards there are rare
+
+  '
 layout: post
 title: Critical sections - of what?
 wordpress_id: 94
-categories:
-  - Software Development
-tags:
-  - locking
-  - terminology
 ---
 
 "Critical section" is a confusing misnomer - especially for newbies: it gives the reader the impression that the _code_ is in some sort of "critical" mode and that nothing else can run while that code is running. More than one newbie I've worked with have been confused by this.

@@ -18,9 +18,6 @@ categories:
 comments: true
 date: 2010-04-16 12:00:54+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- SOCKS
 title: 'SOCKS 5 Step 2: exchanging a token'
 wordpress_id: 534
 ---

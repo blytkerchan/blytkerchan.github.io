@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2010-10-17 00:31:06+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- refactoring
 title: Refactoring Exceptions
 wordpress_id: 982
 ---

@@ -8,9 +8,6 @@ categories:
 comments: true
 date: 2010-07-21 02:49:41+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- profiling
 title: On the Importance of Coverage Profiling
 wordpress_id: 844
 ---

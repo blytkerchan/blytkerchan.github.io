@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2013-11-28 22:38:48+00:00
 layout: post
-tags:
-- bitcoin
 title: A few thoughts on BitCoin
 wordpress_id: 2421
 ---

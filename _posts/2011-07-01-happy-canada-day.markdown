@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2011-07-01 04:00:48+00:00
 layout: post
-tags:
-- Canada
 title: Happy Canada Day
 wordpress_id: 1553
 ---

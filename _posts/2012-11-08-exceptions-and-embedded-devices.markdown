@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2012-11-08 23:35:44+00:00
 layout: post
-tags:
-- embedded
-- error handling
 title: Exceptions and Embedded Devices
 wordpress_id: 1938
 ---

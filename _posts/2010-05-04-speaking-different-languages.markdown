@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-05-04 00:06:43+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Speaking different languages
 wordpress_id: 590
 ---

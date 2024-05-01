@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2014-11-09 02:15:19+00:00
 layout: post
-tags:
-- bungee coding
 title: Bungee coding
 wordpress_id: 3158
 ---

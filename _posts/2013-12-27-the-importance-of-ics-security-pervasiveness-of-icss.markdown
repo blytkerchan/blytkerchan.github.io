@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2013-12-27 01:12:13+00:00
 layout: post
-tags:
-- ICS security
 title: 'The importance of ICS security: pervasiveness of ICSs'
 wordpress_id: 2453
 ---

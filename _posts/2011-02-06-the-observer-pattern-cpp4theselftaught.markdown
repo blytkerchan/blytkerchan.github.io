@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2011-02-06 02:37:02+00:00
 layout: post
-tags:
-- design patterns
 title: The Observer Pattern
 wordpress_id: 1167
 ---

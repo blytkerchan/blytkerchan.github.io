@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-06-04 22:54:47+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 wordpress_id: 730
 ---
 

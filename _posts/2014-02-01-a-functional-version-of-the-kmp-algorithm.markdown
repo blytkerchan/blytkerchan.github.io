@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2014-02-01 21:09:52+00:00
 layout: post
-tags:
-- functional programming
-- Haskell
-- meta-programming
 title: A functional version of the KMP algorithm
 wordpress_id: 2527
 ---

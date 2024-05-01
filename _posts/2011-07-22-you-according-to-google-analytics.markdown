@@ -14,8 +14,6 @@ categories:
 comments: true
 date: 2011-07-22 03:28:31+00:00
 layout: post
-tags:
-- analytics
 title: You, according to Google Analytics
 wordpress_id: 1590
 ---

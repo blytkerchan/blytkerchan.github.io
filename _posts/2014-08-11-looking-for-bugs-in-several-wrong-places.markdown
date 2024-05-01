@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2014-08-11 20:30:11+00:00
 layout: post
-tags:
-- debugging
 title: Looking for bugs (in several wrong places)
 wordpress_id: 3254
 ---

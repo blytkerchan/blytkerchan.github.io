@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2009-08-08 18:59:29+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: How Data Transport Should Work IMNSHO
 wordpress_id: 146
 ---

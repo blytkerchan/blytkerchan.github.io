@@ -6,8 +6,6 @@ categories:
 comments: true
 date: 2009-10-14 19:17:37+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 1- "Hello, world!"
 wordpress_id: 273
 ---

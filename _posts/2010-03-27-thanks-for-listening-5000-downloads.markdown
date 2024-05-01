@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2010-03-27 22:28:44+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Thanks for listening - 5000+ downloads
 wordpress_id: 526
 ---

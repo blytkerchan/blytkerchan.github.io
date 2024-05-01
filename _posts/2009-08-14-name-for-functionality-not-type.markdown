@@ -17,8 +17,6 @@ categories:
 comments: true
 date: 2009-08-14 16:12:15+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Name For Functionality, Not Type
 wordpress_id: 158
 ---

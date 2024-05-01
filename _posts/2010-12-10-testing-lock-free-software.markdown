@@ -9,10 +9,6 @@ categories:
 comments: true
 date: 2010-12-10 03:53:05+00:00
 layout: post
-tags:
-- lock-free
-- Posts that need to be re-tagged (WIP)
-- software
 title: Testing Lock-Free Software
 wordpress_id: 1142
 ---

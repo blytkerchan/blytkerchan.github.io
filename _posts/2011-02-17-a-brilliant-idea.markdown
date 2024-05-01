@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2011-02-17 03:53:07+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: A "brilliant" idea (?)
 wordpress_id: 1210
 ---

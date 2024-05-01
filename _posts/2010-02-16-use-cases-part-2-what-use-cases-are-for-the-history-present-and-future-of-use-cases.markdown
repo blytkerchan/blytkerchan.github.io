@@ -10,9 +10,6 @@ categories:
 comments: true
 date: 2010-02-16 21:40:09+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- use-cases
 title: 'Use-Cases Part 2: What Use-Cases Are For (The history, present and future
   of use-cases)'
 wordpress_id: 388

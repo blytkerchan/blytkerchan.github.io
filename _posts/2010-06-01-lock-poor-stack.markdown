@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2010-06-01 23:26:58+00:00
 layout: post
-tags:
-- lock-poor
-- Posts that need to be re-tagged (WIP)
 title: Lock-Poor Stack
 wordpress_id: 713
 ---

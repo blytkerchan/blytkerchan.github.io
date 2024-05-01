@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2012-03-04 22:18:05+00:00
 layout: post
-tags:
-- sleep deprivation
 title: I'll be back (soon)
 wordpress_id: 1820
 ---

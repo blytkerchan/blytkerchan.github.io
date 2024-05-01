@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2013-03-05 00:06:32+00:00
 layout: post
-tags:
-- alignment
-- padding
 title: Structure alignment and padding
 wordpress_id: 2050
 ---

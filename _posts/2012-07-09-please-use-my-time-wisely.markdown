@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2012-07-09 21:43:18+00:00
 layout: post
-tags:
-- planning
-- project management
 title: Please use my time wisely
 wordpress_id: 1889
 ---

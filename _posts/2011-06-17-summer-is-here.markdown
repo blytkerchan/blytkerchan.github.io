@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2011-06-17 18:05:53+00:00
 layout: post
-tags:
-- wallpapers
 title: Summer is here
 wordpress_id: 1505
 ---

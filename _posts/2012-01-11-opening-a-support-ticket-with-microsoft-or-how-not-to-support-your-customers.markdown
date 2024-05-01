@@ -8,9 +8,6 @@ categories:
 comments: true
 date: 2012-01-11 22:40:16+00:00
 layout: post
-tags:
-- customer support
-- Microsoft
 title: 'Opening a support ticket with Microsoft (or: how not to support your customers)'
 wordpress_id: 1779
 ---

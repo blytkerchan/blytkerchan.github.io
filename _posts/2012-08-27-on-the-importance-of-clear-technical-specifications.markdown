@@ -10,9 +10,6 @@ categories:
 comments: true
 date: 2012-08-27 21:00:01+00:00
 layout: post
-tags:
-- specifications
-- technical specifications
 title: On the importance of clear technical specifications
 wordpress_id: 1906
 ---

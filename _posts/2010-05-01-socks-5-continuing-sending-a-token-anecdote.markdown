@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2010-05-01 12:00:31+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- SOCKS
 title: 'Socks 5: Continuing Sending a Token - Anecdote'
 wordpress_id: 584
 ---

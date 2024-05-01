@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2015-02-15 20:34:42+00:00
 layout: post
-tags:
-- happy high
-- kijken niet kopen
 title: Why I didn't buy a new iPad today
 wordpress_id: 3435
 ---

@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2009-12-06 20:58:59+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Staring into the depths of the yet unwritten
 wordpress_id: 422
 ---

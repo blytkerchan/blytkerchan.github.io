@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2010-08-01 23:31:26+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- SOCKS
-- Windows
 title: 'Socks 5: Credentials on Windows'
 wordpress_id: 847
 ---

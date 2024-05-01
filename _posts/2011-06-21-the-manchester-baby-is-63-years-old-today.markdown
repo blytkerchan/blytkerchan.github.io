@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2011-06-21 16:23:14+00:00
 layout: post
-tags:
-- history
 title: The Manchester Baby is 63 years old today
 wordpress_id: 1533
 ---

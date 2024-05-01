@@ -6,9 +6,6 @@ categories:
 comments: true
 date: 2011-07-21 02:36:44+00:00
 layout: post
-tags:
-- gnupg key
-- security
 title: New GnuPG key
 wordpress_id: 1573
 ---

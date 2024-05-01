@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2011-09-29 22:37:45+00:00
 layout: post
-tags:
-- copyright
-- in the news
-- politics
 title: Harper government reintroduces toughened online copyright law
 wordpress_id: 1692
 ---

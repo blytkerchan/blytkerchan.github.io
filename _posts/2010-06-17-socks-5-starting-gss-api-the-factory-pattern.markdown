@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2010-06-17 03:42:22+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- SOCKS
 title: 'Socks 5: Starting GSS-API - The Factory Pattern'
 wordpress_id: 746
 ---

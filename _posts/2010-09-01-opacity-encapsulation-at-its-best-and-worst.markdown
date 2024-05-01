@@ -17,9 +17,6 @@ categories:
 comments: true
 date: 2010-09-01 12:00:20+00:00
 layout: post
-tags:
-- encapsulation
-- Posts that need to be re-tagged (WIP)
 title: 'Opacity: Encapsulation at its best (and worst)'
 wordpress_id: 891
 ---

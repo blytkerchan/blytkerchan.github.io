@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2011-06-27 21:11:38+00:00
 layout: post
-tags:
-- debugging
-- hardware design
 title: Hardware designers, please, think of us!
 wordpress_id: 1551
 ---

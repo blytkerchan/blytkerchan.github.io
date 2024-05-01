@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2015-08-17 02:03:34+00:00
 layout: post
-tags:
-- locking
-- synchronization
 title: 'CIS: Lock Leaks'
 wordpress_id: 3241
 ---

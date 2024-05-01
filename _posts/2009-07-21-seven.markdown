@@ -16,9 +16,6 @@ excerpt: 'Clarification
 
   '
 layout: post
-tags:
-- experience
-- resume
 title: Seven?
 wordpress_id: 40
 ---

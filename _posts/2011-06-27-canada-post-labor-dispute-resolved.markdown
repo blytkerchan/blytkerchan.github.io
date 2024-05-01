@@ -14,9 +14,6 @@ categories:
 comments: true
 date: 2011-06-27 00:19:15+00:00
 layout: post
-tags:
-- Canada
-- organized labor
 title: Canada Post Labor Dispute -- Resolved?
 wordpress_id: 1549
 ---

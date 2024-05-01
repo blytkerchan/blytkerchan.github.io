@@ -16,11 +16,6 @@ excerpt: 'When autumn turns hence
 
   '
 layout: post
-tags:
-- culture
-- emigration
-- travel
-- working internationally
 title: Culture and working internationally
 wordpress_id: 110
 ---

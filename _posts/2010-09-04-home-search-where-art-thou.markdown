@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2010-09-04 00:51:43+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Home Search, Where Art Thou?
 wordpress_id: 892
 ---

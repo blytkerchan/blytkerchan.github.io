@@ -9,11 +9,6 @@ categories:
 comments: true
 date: 2013-01-18 14:27:05+00:00
 layout: post
-tags:
-- git
-- version control
-- ways of working
-- workflow
 title: 'Flawed ways of working: centrally managed version control'
 wordpress_id: 2019
 ---

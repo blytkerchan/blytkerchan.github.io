@@ -5,10 +5,6 @@ categories:
 comments: true
 date: 2010-06-26 16:34:33+00:00
 layout: post
-tags:
-- Canada
-- copyright
-- politics
 title: TPM and the Public Domain (#c32)
 wordpress_id: 801
 ---

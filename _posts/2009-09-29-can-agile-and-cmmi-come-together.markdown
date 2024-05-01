@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2009-09-29 02:51:02+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Can Agile and CMMI Come Together?
 wordpress_id: 227
 ---

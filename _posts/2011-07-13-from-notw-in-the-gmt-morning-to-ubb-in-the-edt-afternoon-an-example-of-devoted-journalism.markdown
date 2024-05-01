@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2011-07-13 01:17:42+00:00
 layout: post
-tags:
-- journalism
 title: 'From #NotW in the GMT morning to #UBB in the EDT afternoon -- an example of
   devoted journalism'
 wordpress_id: 1570

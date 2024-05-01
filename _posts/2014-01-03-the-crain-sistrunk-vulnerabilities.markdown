@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2014-01-03 00:25:38+00:00
 layout: post
-tags:
-- Crain-Sistrunk
-- DNP3
-- ICS security
 title: The Crain-Sistrunk vulnerabilities
 wordpress_id: 2427
 ---

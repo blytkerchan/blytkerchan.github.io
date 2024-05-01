@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2009-10-26 03:33:18+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Protect what's yours
 wordpress_id: 322
 ---

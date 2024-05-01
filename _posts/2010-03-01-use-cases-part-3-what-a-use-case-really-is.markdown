@@ -8,9 +8,6 @@ categories:
 comments: true
 date: 2010-03-01 21:41:25+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- use-cases
 title: 'Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases'
 wordpress_id: 391
 ---

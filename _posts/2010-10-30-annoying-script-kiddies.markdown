@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2010-10-30 19:54:22+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Annoying Script Kiddies
 wordpress_id: 1128
 ---

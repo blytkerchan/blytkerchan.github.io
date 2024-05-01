@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2009-11-21 20:42:51+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Microsoft Team Foundation Server vs Git
 ---
 

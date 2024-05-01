@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2011-07-10 16:01:23+00:00
 layout: post
-tags:
-- development
 title: '"Changer son fusil d''épaule"'
 wordpress_id: 1565
 ---

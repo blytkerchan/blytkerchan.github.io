@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2014-07-15 02:31:30+00:00
 layout: post
-tags:
-- e-mail
 title: 'Re: E-mail'
 wordpress_id: 3217
 ---

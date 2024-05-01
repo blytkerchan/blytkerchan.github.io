@@ -1,14 +1,12 @@
 ---
 author: rlc
+categories:
+- This blog
 comments: true
 date: 2010-09-21 22:26:44+00:00
 layout: post
-title: "Updated: Not-so-permanent permalinks (all permalinks changed)"
+title: 'Updated: Not-so-permanent permalinks (all permalinks changed)'
 wordpress_id: 948
-categories:
-  - This blog
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 Due to the addition of an important feature on the site, all permalinks for all posts have changed. Following the old links will send you to an error page where the the proposed options should include the page you're looking for.

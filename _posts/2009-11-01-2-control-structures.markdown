@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2009-11-01 14:40:52+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 2-Control Structures
 wordpress_id: 294
 ---

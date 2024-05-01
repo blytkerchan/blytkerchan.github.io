@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2010-10-27 02:48:23+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Events in SOA
 wordpress_id: 1103
 ---

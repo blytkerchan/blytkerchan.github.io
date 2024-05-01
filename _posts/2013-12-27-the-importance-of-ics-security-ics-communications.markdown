@@ -17,9 +17,6 @@ categories:
 comments: true
 date: 2013-12-27 01:40:12+00:00
 layout: post
-tags:
-- ICS communications
-- ICS security
 title: 'The importance of ICS security: ICS communications'
 wordpress_id: 2456
 ---

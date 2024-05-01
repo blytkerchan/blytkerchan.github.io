@@ -5,10 +5,6 @@ categories:
 comments: true
 date: 2012-01-12 22:14:34+00:00
 layout: post
-tags:
-- API design
-- code
-- design
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785
 ---

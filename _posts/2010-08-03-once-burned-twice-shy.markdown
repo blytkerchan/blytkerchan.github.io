@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-08-03 02:08:40+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Once burned, twice shy
 wordpress_id: 863
 ---

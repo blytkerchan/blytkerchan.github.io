@@ -9,11 +9,6 @@ categories:
 comments: true
 date: 2015-05-24 20:48:03+00:00
 layout: post
-tags:
-- canadian law
-- intellectual property
-- law
-- trade secrets
 title: 'Globe and Mail: Canada lacks law that defines, protects trade secrets'
 wordpress_id: 3507
 ---

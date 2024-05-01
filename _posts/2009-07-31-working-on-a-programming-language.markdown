@@ -21,9 +21,6 @@ excerpt: 'Like a warm spring breeze
 
   '
 layout: post
-tags:
-- programming
-- programming language design
 title: Working on a programming language
 wordpress_id: 117
 ---

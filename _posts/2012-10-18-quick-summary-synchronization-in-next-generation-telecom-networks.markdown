@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2012-10-18 16:28:47+00:00
 layout: post
-tags:
-- next-generation networks
-- time synchronization
 title: 'Quick Summary: Synchronization in Next-Generation Telecom Networks'
 wordpress_id: 1932
 ---

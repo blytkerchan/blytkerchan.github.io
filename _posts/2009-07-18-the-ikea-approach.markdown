@@ -16,9 +16,6 @@ excerpt: 'spring cleaning brings it
 
   '
 layout: post
-tags:
-- design patterns
-- software design
 title: The IKEA Approach
 wordpress_id: 14
 ---

@@ -10,9 +10,6 @@ categories:
 comments: true
 date: 2010-02-01 17:00:06+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- use-cases
 title: 'Use-Cases Part 1: Introduction & Ingredients'
 wordpress_id: 383
 ---

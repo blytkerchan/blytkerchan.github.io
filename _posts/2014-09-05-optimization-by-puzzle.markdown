@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2014-09-05 02:17:43+00:00
 layout: post
-tags:
-- optimization
 title: Optimization by puzzle
 wordpress_id: 3274
 ---

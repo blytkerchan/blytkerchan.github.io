@@ -15,9 +15,6 @@ excerpt: 'functional combines
 
   '
 layout: post
-tags:
-- functional programming
-- programming
 title: Funky, functional programming and looping
 wordpress_id: 103
 ---

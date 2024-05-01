@@ -8,11 +8,6 @@ categories:
 comments: true
 date: 2011-05-20 02:47:12+00:00
 layout: post
-tags:
-- C++
-- functional programming
-- programming
-- ranges
 title: Using Ranges and Functional Programming in C++
 wordpress_id: 1399
 ---

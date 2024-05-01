@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2016-04-02 19:16:09+00:00
 layout: post
-tags:
-- cloud services
-- SaaS
 title: Shutting down servers
 wordpress_id: 3810
 ---

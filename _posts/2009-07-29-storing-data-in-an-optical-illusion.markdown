@@ -11,11 +11,6 @@ categories:
 comments: true
 date: 2009-07-29 01:17:58+00:00
 layout: post
-tags:
-- barcodes
-- obfuscation
-- privacy
-- technology
 title: Storing data in an optical illusion
 wordpress_id: 90
 ---

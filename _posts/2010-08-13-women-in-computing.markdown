@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2010-08-13 02:18:06+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Women in computing
 wordpress_id: 872
 ---

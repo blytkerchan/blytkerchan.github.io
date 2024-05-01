@@ -6,8 +6,6 @@ categories:
 comments: true
 date: 2011-05-24 00:18:29+00:00
 layout: post
-tags:
-- copyright
 title: 'From XKCD.com: Copyright'
 wordpress_id: 1493
 ---

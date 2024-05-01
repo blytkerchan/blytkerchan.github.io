@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-06-25 16:59:04+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Is TPM bad for Open Source? (#c32)
 wordpress_id: 795
 ---

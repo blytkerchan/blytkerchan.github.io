@@ -9,10 +9,6 @@ categories:
 comments: true
 date: 2011-06-04 21:09:09+00:00
 layout: post
-tags:
-- compile-time
-- functional programming
-- programming
 title: Functional Programming at Compile-Time
 wordpress_id: 1503
 ---

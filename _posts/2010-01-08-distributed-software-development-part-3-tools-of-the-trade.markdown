@@ -11,9 +11,6 @@ categories:
 comments: true
 date: 2010-01-08 04:24:21+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- software
 title: 'Distributed Software Development Part 3: Tools Of The Trade'
 wordpress_id: 439
 ---

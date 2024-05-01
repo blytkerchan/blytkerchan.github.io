@@ -14,9 +14,6 @@ categories:
 comments: true
 date: 2009-09-30 18:19:42+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- software
 title: Developer's Guidelines & High-Quality Software
 wordpress_id: 247
 ---

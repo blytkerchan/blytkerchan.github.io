@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2011-06-25 01:50:21+00:00
 layout: post
-tags:
-- travel
 title: Lonely Planet's Travel Top Ten
 wordpress_id: 1547
 ---

@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2015-08-05 23:12:10+00:00
 layout: post
-tags:
-- coupling
 title: 'CIS: Unexpected Coupling'
 wordpress_id: 3266
 ---

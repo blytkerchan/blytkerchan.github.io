@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2012-01-01 03:50:40+00:00
 layout: post
-tags:
-- wallpapers
 title: Winter wallpapers
 ---
 

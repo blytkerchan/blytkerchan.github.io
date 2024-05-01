@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2009-08-07 22:24:50+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Google releases new dialect of Basic
 wordpress_id: 144
 ---

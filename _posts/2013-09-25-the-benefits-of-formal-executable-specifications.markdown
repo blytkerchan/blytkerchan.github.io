@@ -13,12 +13,6 @@ categories:
 comments: true
 date: 2013-09-25 16:36:23+00:00
 layout: post
-tags:
-- executable specifications
-- formal specifications
-- functional programming
-- Haskell
-- specifications
 title: The benefits of formal, executable specifications
 wordpress_id: 2387
 ---

@@ -19,9 +19,6 @@ categories:
 comments: true
 date: 2014-03-01 14:59:43+00:00
 layout: post
-tags:
-- Aegis
-- ICS security
 title: What the industry should do with the upcoming Aegis release
 wordpress_id: 3074
 ---

@@ -9,11 +9,6 @@ categories:
 comments: true
 date: 2011-03-06 20:42:33+00:00
 layout: post
-tags:
-- engineering
-- history
-- software
-- software engineering
 title: The Evolution of the Software Engineering Practice Faced With The Knowledge
   That "Bugs Must Exist"
 wordpress_id: 1281

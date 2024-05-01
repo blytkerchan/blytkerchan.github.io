@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2009-09-22 02:35:32+00:00
 layout: post
-tags:
-- CentOS
-- Debian
-- Posts that need to be re-tagged (WIP)
 title: 'Running a LAMP: Debian vs. CentOS'
 wordpress_id: 197
 ---

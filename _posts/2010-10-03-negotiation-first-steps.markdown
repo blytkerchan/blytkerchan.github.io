@@ -12,8 +12,6 @@ categories:
 comments: true
 date: 2010-10-03 03:46:00+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 'Negotiation: first steps'
 wordpress_id: 970
 ---

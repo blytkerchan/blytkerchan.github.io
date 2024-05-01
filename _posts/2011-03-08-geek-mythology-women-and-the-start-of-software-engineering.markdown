@@ -8,10 +8,6 @@ categories:
 comments: true
 date: 2011-03-08 13:44:47+00:00
 layout: post
-tags:
-- engineering
-- history
-- software
 title: 'Geek Mythology: Women and the Start of Software Engineering'
 wordpress_id: 1280
 ---

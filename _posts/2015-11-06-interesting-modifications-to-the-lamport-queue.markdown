@@ -13,9 +13,6 @@ date: 2015-11-06 01:28:03+00:00
 layout: post
 permanent link: /blog/2015/11/interesting-modifications-to-the-lamport-queue/
 slug: interesting-modifications-to-the-lamport-queue
-tags:
-- Lamport queue
-- lock-free
 title: Interesting modifications to the Lamport queue
 wordpress_id: 3679
 ---

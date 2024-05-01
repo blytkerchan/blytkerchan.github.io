@@ -17,10 +17,6 @@ excerpt: This is one of those "recipe" posts that tend to be useful if you happe
   called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux
   box, with X forwarding.
 layout: post
-tags:
-- Cygwin
-- HOWTO
-- X forwarding
 title: Setting up Cygwin for X forwarding
 wordpress_id: 3816
 ---

@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2010-09-14 00:55:12+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 'Bill #c32 seems to be getting less controversial'
 wordpress_id: 912
 ---

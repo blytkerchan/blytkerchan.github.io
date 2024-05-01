@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2013-06-10 17:00:46+00:00
 layout: post
-tags:
-- business decisions
-- Vlinder Software
 title: Why I decided Vlinder Software should stop selling Funky
 wordpress_id: 2324
 ---

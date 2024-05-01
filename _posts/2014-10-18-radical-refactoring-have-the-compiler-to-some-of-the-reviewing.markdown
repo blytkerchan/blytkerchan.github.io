@@ -9,11 +9,6 @@ categories:
 comments: true
 date: 2014-10-18 13:35:32+00:00
 layout: post
-tags:
-- compiler
-- compiler-assisted reviewing
-- radical refactoring
-- refactoring
 title: 'Radical Refactoring: Have the compiler to (some of) the reviewing'
 wordpress_id: 3346
 ---

@@ -1,14 +1,12 @@
 ---
 author: rlc
+categories:
+- This blog
 comments: true
 date: 2009-09-23 16:59:57+00:00
 layout: post
 title: A new theme
 wordpress_id: 211
-categories:
-  - This blog
-tags:
-  - Posts that need to be re-tagged (WIP)
 ---
 
 I promised I wouldn't talk about this blog too much on the blog, and I promise I won't do this often, but I thought it might be a good idea to notice that I've made a few minor changes.

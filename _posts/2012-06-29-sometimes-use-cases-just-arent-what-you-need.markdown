@@ -10,10 +10,6 @@ categories:
 comments: true
 date: 2012-06-29 03:50:47+00:00
 layout: post
-tags:
-- requirements
-- requirements analysis
-- use-cases
 title: Sometimes, use-cases just aren't what you need
 wordpress_id: 1878
 ---

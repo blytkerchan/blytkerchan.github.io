@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2009-10-26 15:22:17+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Badly defined semantics
 wordpress_id: 324
 ---

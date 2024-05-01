@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2015-07-16 10:13:14+00:00
 layout: post
-tags:
-- continuous integration
 title: Three ideas you should steal from Continuous Integration
 wordpress_id: 3674
 ---

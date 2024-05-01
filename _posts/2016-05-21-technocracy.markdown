@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2016-05-21 17:48:27+00:00
 layout: post
-tags:
-- technocracy
 title: Technocracy
 wordpress_id: 3883
 ---

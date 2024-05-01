@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2011-09-29 16:59:08+00:00
 layout: post
-tags:
-- banner
 title: Autumn is here - and so is the autumn banner
 wordpress_id: 1689
 ---

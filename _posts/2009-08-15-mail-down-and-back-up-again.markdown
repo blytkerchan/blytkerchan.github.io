@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2009-08-15 12:32:23+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Mail down - and back up again
 wordpress_id: 165
 ---

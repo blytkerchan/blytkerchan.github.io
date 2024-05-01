@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2009-12-01 22:37:17+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 4- Classes
 wordpress_id: 351
 ---

@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2009-08-18 20:33:53+00:00
 layout: post
-tags:
-- naming
-- Posts that need to be re-tagged (WIP)
 title: Naming conventions and name mangling
 wordpress_id: 171
 ---

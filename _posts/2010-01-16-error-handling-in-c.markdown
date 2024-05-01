@@ -15,8 +15,6 @@ categories:
 comments: true
 date: 2010-01-16 04:42:32+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Error handling in C
 wordpress_id: 441
 ---

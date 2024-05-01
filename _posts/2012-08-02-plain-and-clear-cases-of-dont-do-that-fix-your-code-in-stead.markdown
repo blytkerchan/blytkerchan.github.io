@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2012-08-02 17:04:20+00:00
 layout: post
-tags:
-- code
 title: Plain and clear cases of "don't do that - fix your code in stead"
 wordpress_id: 1913
 ---

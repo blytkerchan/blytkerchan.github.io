@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2009-08-24 19:39:57+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: The Danger of Breaking Changes
 wordpress_id: 175
 ---

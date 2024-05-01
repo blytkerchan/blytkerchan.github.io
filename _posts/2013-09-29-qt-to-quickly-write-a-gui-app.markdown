@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2013-09-29 03:14:51+00:00
 layout: post
-tags:
-- GUI
 title: Qt to quickly write a GUI app
 wordpress_id: 2393
 ---

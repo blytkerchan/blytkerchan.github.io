@@ -15,9 +15,6 @@ categories:
 comments: true
 date: 2010-01-01 19:29:11+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- RAII
 title: 6- Resource Allocation and RAII
 wordpress_id: 303
 ---

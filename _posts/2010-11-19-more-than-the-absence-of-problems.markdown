@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2010-11-19 04:23:03+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: More than the absence of problems
 wordpress_id: 1133
 ---

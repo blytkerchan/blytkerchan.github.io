@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2010-11-18 05:33:17+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: When the cup is full, carry it level
 wordpress_id: 1131
 ---

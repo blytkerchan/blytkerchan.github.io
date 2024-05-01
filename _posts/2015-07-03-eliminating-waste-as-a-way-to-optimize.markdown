@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2015-07-03 12:40:18+00:00
 layout: post
-tags:
-- optimization
 ---
 
 I recently had a chance to work on an implementation of an Arachnida-based web server that had started using a lot of memory as new features were being added.

@@ -21,8 +21,6 @@ excerpt: 'There have been a number of well-publicized security flaws in open sou
 
   '
 layout: post
-tags:
-- open source
 title: Is Open Source software security falling apart?
 wordpress_id: 3163
 ---

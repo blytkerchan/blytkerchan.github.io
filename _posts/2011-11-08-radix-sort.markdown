@@ -8,9 +8,6 @@ categories:
 comments: true
 date: 2011-11-08 00:25:20+00:00
 layout: post
-tags:
-- algorithms
-- sorting
 title: Radix Sort
 wordpress_id: 1714
 ---

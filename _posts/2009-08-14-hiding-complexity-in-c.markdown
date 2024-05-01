@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2009-08-14 14:39:55+00:00
 layout: post
-tags:
-- complexity
-- Posts that need to be re-tagged (WIP)
 title: Hiding Complexity in C++
 wordpress_id: 150
 ---

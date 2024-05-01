@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2011-05-05 02:44:44+00:00
 layout: post
-tags:
-- brainf---
 title: Why I Recommend BrainF--- (and what I recommend it for)
 wordpress_id: 1368
 ---

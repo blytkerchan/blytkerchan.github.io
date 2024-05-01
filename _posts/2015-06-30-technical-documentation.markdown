@@ -5,9 +5,6 @@ categories:
 comments: false
 date: 2015-06-30 01:49:30+00:00
 layout: post
-tags:
-- documentation
-- technical documentation
 title: Technical documentation
 wordpress_id: 3431
 ---

@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2014-09-05 15:32:31+00:00
 layout: post
-tags:
-- optimization
 title: A different take on the "optimize by puzzle" problem
 wordpress_id: 3291
 ---

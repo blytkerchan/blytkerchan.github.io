@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2009-10-14 16:40:54+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Rapid application development in PHP
 wordpress_id: 264
 ---

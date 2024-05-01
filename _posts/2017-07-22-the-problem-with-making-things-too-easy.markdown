@@ -12,9 +12,6 @@ categories:
 comments: true
 date: 2017-07-22 02:20:14+00:00
 layout: post
-tags:
-- engineering
-- rant
 title: The problem with making things too easy
 wordpress_id: 4185
 ---

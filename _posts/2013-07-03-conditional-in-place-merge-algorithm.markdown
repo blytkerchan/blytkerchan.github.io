@@ -6,8 +6,6 @@ categories:
 comments: true
 date: 2013-07-03 22:40:10+00:00
 layout: post
-tags:
-- algorithms
 title: Conditional in-place merge algorithm
 wordpress_id: 2336
 ---

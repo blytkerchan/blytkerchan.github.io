@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2015-09-04 01:08:33+00:00
 layout: post
-tags:
-- locking
-- synchronization
 title: 'CIS: "Protecting" code in stead of data'
 wordpress_id: 3236
 ---

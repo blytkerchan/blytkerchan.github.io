@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2012-06-02 13:45:11+00:00
 layout: post
-tags:
-- requirements analysis
-- robustness analysis
 title: 'Robustness analysis: the fundamentals'
 wordpress_id: 1840
 ---

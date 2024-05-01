@@ -12,8 +12,6 @@ categories:
 comments: true
 date: 2015-07-20 10:16:10+00:00
 layout: post
-tags:
-- git
 title: Git demystification
 wordpress_id: 3662
 ---

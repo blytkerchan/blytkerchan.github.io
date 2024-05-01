@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Preprequisites for the project
 wordpress_id: 481
 ---

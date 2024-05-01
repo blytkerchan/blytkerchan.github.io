@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2014-07-03 03:59:21+00:00
 layout: post
-tags:
-- design by committee
 title: '"A camel is a horse designed by a committee"'
 wordpress_id: 3165
 ---

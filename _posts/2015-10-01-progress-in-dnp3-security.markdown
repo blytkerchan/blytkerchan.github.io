@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2015-10-01 15:36:04+00:00
 layout: post
-tags:
-- DNP3
 title: Progress in DNP3 security
 wordpress_id: 3733
 ---

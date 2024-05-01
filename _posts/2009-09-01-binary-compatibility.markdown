@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2009-09-01 03:26:55+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Binary Compatibility
 wordpress_id: 177
 ---

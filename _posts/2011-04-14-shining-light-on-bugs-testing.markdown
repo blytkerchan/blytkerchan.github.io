@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2011-04-14 01:16:17+00:00
 layout: post
-tags:
-- testing
 title: 'Shining light on bugs: testing'
 wordpress_id: 1357
 ---

@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2009-08-22 20:08:52+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: The Importance of Patterns
 wordpress_id: 173
 ---

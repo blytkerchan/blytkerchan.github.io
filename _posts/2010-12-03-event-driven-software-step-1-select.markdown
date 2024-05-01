@@ -11,10 +11,6 @@ categories:
 comments: true
 date: 2010-12-03 04:12:04+00:00
 layout: post
-tags:
-- event-driven
-- Posts that need to be re-tagged (WIP)
-- software
 title: 'Event-driven software, step 1: select'
 wordpress_id: 1137
 ---

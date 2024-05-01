@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2014-10-22 01:38:53+00:00
 layout: post
-tags:
-- brainf---
-- VHDL
 title: Improving the BrainF interpreter
 wordpress_id: 3338
 ---

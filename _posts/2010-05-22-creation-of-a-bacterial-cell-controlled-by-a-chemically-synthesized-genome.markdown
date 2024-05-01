@@ -19,8 +19,6 @@ categories:
 comments: true
 date: 2010-05-22 16:37:01+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome
 wordpress_id: 648
 ---

@@ -8,8 +8,6 @@ comments: true
 date: 2012-08-16 01:57:41+00:00
 layout: post
 published: false
-tags:
-- complexity
 title: Hidden complexity
 wordpress_id: 1916
 ---

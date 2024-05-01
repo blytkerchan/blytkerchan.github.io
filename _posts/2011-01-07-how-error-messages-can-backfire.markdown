@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2011-01-07 00:46:11+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: How error messages can backfire
 wordpress_id: 1144
 ---

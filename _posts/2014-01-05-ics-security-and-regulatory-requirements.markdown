@@ -34,11 +34,6 @@ categories:
 comments: true
 date: 2014-01-05 05:24:12+00:00
 layout: post
-tags:
-- ICS security
-- regulation
-- regulatory requirements
-- requirements
 title: ICS security and regulatory requirements
 wordpress_id: 2490
 ---

@@ -5,9 +5,6 @@ categories:
 comments: true
 date: 2010-07-02 00:52:22+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- SOCKS
 title: 'Socks 5: Expanding the factory'
 wordpress_id: 810
 ---

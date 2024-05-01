@@ -14,9 +14,6 @@ excerpt: 'is this coming spring
 
   '
 layout: post
-tags:
-- Chrome OS
-- standards compliance
 title: 'Google Chrome OS: Promising - but promising what, exactly?'
 wordpress_id: 106
 ---

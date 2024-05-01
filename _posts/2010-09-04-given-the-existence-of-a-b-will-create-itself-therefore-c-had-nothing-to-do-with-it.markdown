@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2010-09-04 00:07:51+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: '"Given the existence of A, B will create itself, therefore, C had nothing
   to do with it"'
 wordpress_id: 908

@@ -14,10 +14,6 @@ excerpt: While at Chicago's O'Hare airport, waiting for my connecting flight to 
   else to communicate with the interpreter. There are a few buses I like for this
   kind of thing, and SPI is one of them.
 layout: post
-tags:
-- brainf---
-- SPI
-- VHDL
 title: Adding SPI support to the BrainF interpreter
 wordpress_id: 3359
 ---

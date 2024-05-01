@@ -7,9 +7,6 @@ categories:
 comments: true
 date: 2010-01-19 01:53:31+00:00
 layout: post
-tags:
-- compiler
-- Posts that need to be re-tagged (WIP)
 title: Confusing the compiler
 wordpress_id: 454
 ---

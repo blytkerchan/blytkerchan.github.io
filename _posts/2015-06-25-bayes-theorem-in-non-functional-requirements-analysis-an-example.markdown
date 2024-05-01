@@ -7,10 +7,6 @@ date: 2015-06-25 10:17:41+00:00
 excerpt: I am not a mathematician, but I do like Bayes' theorem for non-functional
   requirements analysis -- and I'd like to present an example of its application
 layout: post
-tags:
-- Bayes' theorem
-- non-functional requirements
-- requirements analysis
 title: Bayes' theorem in non-functional requirements analysis -- an example
 wordpress_id: 3540
 ---

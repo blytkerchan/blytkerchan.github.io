@@ -5,11 +5,6 @@ categories:
 comments: true
 date: 2017-03-04 20:26:12+00:00
 layout: post
-tags:
-- design patterns
-- maintainability
-- programming
-- rants
 title: Writing unmaintainable code in five easy steps
 wordpress_id: 4154
 ---

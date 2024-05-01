@@ -18,10 +18,6 @@ categories:
 comments: true
 date: 2011-01-10 00:12:46+00:00
 layout: post
-tags:
-- embedded
-- security
-- software
 title: Security Awareness and Embedded Software
 wordpress_id: 1148
 ---

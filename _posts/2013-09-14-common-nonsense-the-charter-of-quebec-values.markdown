@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2013-09-14 02:15:32+00:00
 layout: post
-tags:
-- politics
 title: 'Common nonsense: the charter of Quebec Values'
 wordpress_id: 2358
 ---

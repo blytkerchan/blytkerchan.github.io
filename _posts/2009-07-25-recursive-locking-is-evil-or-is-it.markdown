@@ -15,8 +15,6 @@ excerpt: 'recursive locking:
 
   '
 layout: post
-tags:
-- locking
 title: Recursive Locking Is Evil, or is it?
 wordpress_id: 57
 ---

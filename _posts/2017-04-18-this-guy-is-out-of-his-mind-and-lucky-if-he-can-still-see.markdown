@@ -8,11 +8,6 @@ categories:
 comments: true
 date: 2017-04-18 20:17:32+00:00
 layout: post
-tags:
-- Arduino
-- C++
-- stupidity
-- vision
 title: This guy is out of his mind (and lucky if he can still see)
 wordpress_id: 4169
 ---

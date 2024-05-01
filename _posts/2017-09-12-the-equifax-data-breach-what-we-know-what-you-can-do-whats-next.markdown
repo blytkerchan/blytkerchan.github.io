@@ -10,15 +10,6 @@ categories:
 comments: true
 date: 2017-09-12 01:48:09+00:00
 layout: post
-tags:
-- class action
-- data breach
-- Equifax
-- financial system
-- hack
-- identity theft
-- in the news
-- security
 title: 'The Equifax data breach: what we know, what you can do, what''s next'
 wordpress_id: 4252
 ---

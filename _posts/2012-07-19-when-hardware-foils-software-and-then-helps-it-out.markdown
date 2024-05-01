@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2012-07-19 21:30:30+00:00
 layout: post
-tags:
-- debugging
 title: When hardware foils software -- and then helps it out!
 wordpress_id: 1895
 ---

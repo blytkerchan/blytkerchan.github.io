@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2009-11-16 16:09:13+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 3- Data Structures
 wordpress_id: 340
 ---

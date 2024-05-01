@@ -7,8 +7,6 @@ categories:
 comments: true
 date: 2011-12-01 20:11:11+00:00
 layout: post
-tags:
-- announcements
 title: Sleep(...)
 wordpress_id: 1720
 ---

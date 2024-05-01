@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2012-07-02 00:35:10+00:00
 layout: post
-tags:
-- education
 title: Why CS shouldn't be taught before high school (and coding for kids is a bad
   idea)
 wordpress_id: 1891

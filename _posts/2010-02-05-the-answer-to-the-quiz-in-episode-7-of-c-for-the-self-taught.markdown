@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2010-02-05 03:02:28+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: The answer to the quiz in episode 7 of C++ for the self-taught
 wordpress_id: 463
 ---

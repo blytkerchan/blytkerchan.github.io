@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-05-26 23:08:22+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Quantum teleportation achieved over 16 km
 wordpress_id: 661
 ---

@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2011-07-28 16:56:30+00:00
 layout: post
-tags:
-- Eclipse
 title: 'Eclipse: kudos'
 wordpress_id: 1597
 ---

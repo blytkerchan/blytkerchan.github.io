@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2010-10-23 03:36:16+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Why IPv6 Matters
 wordpress_id: 1082
 ---

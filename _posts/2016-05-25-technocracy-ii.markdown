@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2016-05-25 02:48:23+00:00
 layout: post
-tags:
-- technocracy
 title: Technocracy II
 wordpress_id: 3893
 ---

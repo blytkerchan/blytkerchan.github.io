@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2010-06-27 02:52:20+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: 'TPM on your content under #c32 - handing away your rights?'
 wordpress_id: 799
 ---

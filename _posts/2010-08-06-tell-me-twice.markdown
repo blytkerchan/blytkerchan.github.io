@@ -8,8 +8,6 @@ categories:
 comments: true
 date: 2010-08-06 02:09:49+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Tell me twice
 wordpress_id: 865
 ---

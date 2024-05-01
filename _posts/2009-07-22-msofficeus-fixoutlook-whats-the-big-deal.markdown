@@ -1,21 +1,20 @@
 ---
 author: rlc
+categories:
+- Opinions
+- Technology
 comments: true
 date: 2009-07-22 13:49:16+00:00
-excerpt: |
-  flabbergasted I
+excerpt: 'flabbergasted I
+
   long for winter in summer?
+
   perhaps just autumn
+
+  '
 layout: post
-title: "@msofficeus @fixoutlook - what's the big deal?"
+title: '@msofficeus @fixoutlook - what''s the big deal?'
 wordpress_id: 44
-categories:
-  - Opinions
-  - Technology
-tags:
-  - Microsoft
-  - social media
-  - standards compliance
 ---
 
 At fixoutlook.org, they've started a Twitter campaign to ask Microsoft to fix Outlook's standards compliance w.r.t., HTML and standards compliance. Even my brother, [Jeroen](http://www.jeroenlandheer.com), who is usually a big Microsoft fan, got in in it - which is how I got to know about it.

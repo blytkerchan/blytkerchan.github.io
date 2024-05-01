@@ -9,10 +9,6 @@ categories:
 comments: true
 date: 2011-10-17 00:50:21+00:00
 layout: post
-tags:
-- history
-- operating system design
-- programming language design
 title: The underestimated legacy of Dennis Ritchie
 wordpress_id: 1708
 ---

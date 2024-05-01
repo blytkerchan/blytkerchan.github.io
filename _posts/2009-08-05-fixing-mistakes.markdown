@@ -5,8 +5,6 @@ categories:
 comments: true
 date: 2009-08-05 04:32:49+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Fixing mistakes
 wordpress_id: 116
 ---

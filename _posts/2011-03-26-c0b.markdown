@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2011-03-26 15:35:33+00:00
 layout: post
-tags:
-- C++0b
 title: C++0b
 wordpress_id: 1355
 ---

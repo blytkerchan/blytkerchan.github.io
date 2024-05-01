@@ -9,8 +9,6 @@ categories:
 comments: true
 date: 2010-05-24 17:16:21+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: Albion College decides to scrap Computer Science and Journalism majors
 wordpress_id: 657
 ---

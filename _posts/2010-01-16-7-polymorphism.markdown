@@ -9,9 +9,6 @@ categories:
 comments: true
 date: 2010-01-16 19:57:58+00:00
 layout: post
-tags:
-- polymorphism
-- Posts that need to be re-tagged (WIP)
 title: 7- Polymorphism
 wordpress_id: 365
 ---

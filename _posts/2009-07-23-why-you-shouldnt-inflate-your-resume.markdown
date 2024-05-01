@@ -1,19 +1,17 @@
 ---
 author: rlc
+categories:
+- Employment
+- Recruitment
+- Expertise
+- Education
+- Job Titles
+- Resume Accuracy
 comments: true
 date: 2009-07-23 00:39:11+00:00
 layout: post
 title: Why you shouldn't inflate your resume
 wordpress_id: 47
-categories:
-  - Employment
-  - Recruitment
-  - Expertise
-  - Education
-  - Job Titles
-  - Resume Accuracy
-tags:
-  - resume
 ---
 
 Many people inflate their resumes when they apply for a job. When I'm on the hiring side of the equasion, I tend to frown upon such practices: though I usually don't care much about references, I do check the outliers. But what I check more is expertise - and that's something I can't stand inflation on.

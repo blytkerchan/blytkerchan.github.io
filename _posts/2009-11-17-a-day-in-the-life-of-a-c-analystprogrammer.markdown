@@ -10,8 +10,6 @@ categories:
 comments: true
 date: 2009-11-17 00:25:08+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
 title: A Day In The Life Of A C++ Analyst/Programmer
 wordpress_id: 375
 ---

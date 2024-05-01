@@ -10,9 +10,6 @@ categories:
 comments: true
 date: 2009-12-24 01:48:17+00:00
 layout: post
-tags:
-- Posts that need to be re-tagged (WIP)
-- software
 title: 'Distributed Software Development Part 1: The Safe Boom'
 wordpress_id: 431
 ---

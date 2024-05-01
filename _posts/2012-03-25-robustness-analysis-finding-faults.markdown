@@ -11,8 +11,6 @@ categories:
 comments: true
 date: 2012-03-25 18:16:34+00:00
 layout: post
-tags:
-- robustness analysis
 title: 'Robustness analysis: finding fault(s)'
 wordpress_id: 1823
 ---

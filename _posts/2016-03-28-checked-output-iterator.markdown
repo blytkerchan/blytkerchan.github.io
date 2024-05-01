@@ -8,9 +8,6 @@ categories:
 comments: true
 date: 2016-03-28 00:54:19+00:00
 layout: post
-tags:
-- checked iterators
-- iterators
 title: Checked output iterator
 wordpress_id: 3806
 ---
