@@ -1,9 +1,11 @@
 from dotenv import load_dotenv
+import openai
 from openai import OpenAI
 import io
 import frontmatter
 import glob
 import os
+import time
 
 DIRECTORY="../_posts"
 
@@ -24,17 +26,25 @@ client = OpenAI(api_key=os.environ["OPENAI_API_SECRET"])
 
 filenames = glob.glob(f"{DIRECTORY}/*.md") + glob.glob(f"{DIRECTORY}/*.markdown")
 for fname in filenames:
-    print(f'{fname}: ', end='')
-    with io.open(fname, 'r') as f:
-        post = frontmatter.load(f)
-    if 'categories' not in post.metadata.keys():
-        categories = get_text_categories(client, post.content)
-        post.metadata['categories'] = categories
-        with io.open(fname, 'wb') as f:
-            frontmatter.dump(post, f)
-        print('!')
-    else:
-        print('.')
-    pass
+    done = False
+    while not done:
+        print(f'{fname}: ', end='', flush=True)
+        with io.open(fname, 'r') as f:
+            post = frontmatter.load(f)
+        if 'categories' not in post.metadata.keys():
+            try:
+                categories = get_text_categories(client, post.content)
+                post.metadata['categories'] = categories
+                with io.open(fname, 'wb') as f:
+                    frontmatter.dump(post, f)
+                print('!')
+                time.sleep(20)
+            except openai.RateLimitError:
+                print('zzz...', end='', flush=True)
+                time.sleep(8 * 60)
+                continue
+        else:
+            print('.')
+        done = True
 
 
