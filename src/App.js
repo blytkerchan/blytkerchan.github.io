@@ -34,6 +34,7 @@ const App = (props) => {
       menu.push({
         path: `/category/${cat}`,
         title: `${categories.getCategoryName(cat)} (${categories.getCategoryCount(cat)})`,
+        icon: "bi-stack",
       });
     });
     setMenu(menu);
