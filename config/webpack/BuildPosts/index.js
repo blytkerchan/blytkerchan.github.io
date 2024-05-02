@@ -1,6 +1,7 @@
 const fs = require("fs");
 const marked = require("marked");
 const fm = require("front-matter");
+const uuid = require("uuid").v4;
 
 const { globSync } = require("glob");
 const URL = require("url").URL;
@@ -18,11 +19,13 @@ class BuildPosts {
     indexFile: "_posts/index.json",
     feedFile: "feed.xml",
     configFile: "package.json",
+    categoriesFile: "_posts/categories.json",
   };
 
   constructor(options = {}) {
     this.options = { ...BuildPosts.defaultOptions, ...options };
     this.posts = {};
+    this.categories = {};
 
     let configFileName = this.options.configFile;
     if (configFileName[0] !== "/") {
@@ -57,6 +60,7 @@ class BuildPosts {
       fromDirName += "/";
     }
 
+    post["uuid"] = uuid();
     post["filename"] = removePrefix(filename, fromDirName);
     if (!Object.keys(post).includes["date"]) {
       const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
@@ -96,6 +100,15 @@ class BuildPosts {
     } else {
       post["published"] = post["published"] !== "false";
     }
+
+    if (Object.keys(post).includes("categories")) {
+      post["categories"].forEach((category) => {
+        if (!Object.keys(this.categories).includes(category)) {
+          this.categories[category] = new Set();
+        }
+        this.categories[category].add(post["uuid"]);
+      });
+    }
     return post;
   }
 
@@ -108,6 +121,11 @@ class BuildPosts {
   generateIndexJson(RawSource, compilation, posts) {
     const indexContent = JSON.stringify(posts);
     compilation.emitAsset(this.options.indexFile, new RawSource(indexContent));
+  }
+
+  generateCategoriesJson(RawSource, compilation, categories) {
+    const jsonContent = JSON.stringify(categories);
+    compilation.emitAsset(this.options.categoriesFile, new RawSource(jsonContent));
   }
 
   getPublicUrl() {
@@ -262,6 +280,25 @@ class BuildPosts {
           });
 
           return this.generateFeedXml(RawSource, compilation, posts);
+        }
+      );
+
+      // create the categories file
+      compilation.hooks.processAssets.tap(
+        {
+          name: pluginName,
+
+          // Using one of the later asset processing stages to ensure
+          // that all assets were already added to the compilation by other plugins.
+          stage: Compilation.PROCESS_ASSETS_STAGE_SUMMARIZE,
+        },
+        (assets) => {
+          var categories = {};
+          Object.keys(this.categories).forEach((category) => {
+            categories[category] = Array.from(this.categories[category]);
+          });
+
+          return this.generateCategoriesJson(RawSource, compilation, categories);
         }
       );
     });
