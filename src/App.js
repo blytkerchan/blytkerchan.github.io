@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RouterProvider } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -26,17 +27,25 @@ const App = (props) => {
   const categories = useCategories();
   categories.fetchCategories(environment);
 
+  const { t } = useTranslation();
+
   useEffect(() => {
     document.title = environment.title;
     const cats = categories.listCategories();
     const menu = JSON.parse(JSON.stringify(mainMenu));
+    const catMenu = {
+      title: t("Categories"),
+      icon: "bi-stack",
+      path: "/categories",
+      children: [],
+    };
     cats.forEach((cat) => {
-      menu.push({
+      catMenu.children.push({
         path: `/category/${cat}`,
         title: `${categories.getCategoryName(cat)} (${categories.getCategoryCount(cat)})`,
-        icon: "bi-stack",
       });
     });
+    menu.push(catMenu);
     setMenu(menu);
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/Page");
