@@ -103,10 +103,13 @@ class BuildPosts {
 
     if (Object.keys(post).includes("categories")) {
       post["categories"].forEach((category) => {
-        if (!Object.keys(this.categories).includes(category)) {
-          this.categories[category] = new Set();
+        const categorySlug = category.toLowerCase().replaceAll(" ", "-");
+        if (!Object.keys(this.categories).includes(categorySlug)) {
+          this.categories[categorySlug] = {};
+          this.categories[categorySlug]["posts"] = new Set();
+          this.categories[categorySlug]["name"] = category;
         }
-        this.categories[category].add(post["uuid"]);
+        this.categories[categorySlug]["posts"].add(post["uuid"]);
       });
     }
     return post;
@@ -295,7 +298,9 @@ class BuildPosts {
         (assets) => {
           var categories = {};
           Object.keys(this.categories).forEach((category) => {
-            categories[category] = Array.from(this.categories[category]);
+            categories[category] = {};
+            categories[category]["posts"] = Array.from(this.categories[category]["posts"]);
+            categories[category]["name"] = this.categories[category]["name"];
           });
 
           return this.generateCategoriesJson(RawSource, compilation, categories);

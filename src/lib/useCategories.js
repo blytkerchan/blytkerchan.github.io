@@ -15,11 +15,11 @@ export default function usePosts() {
         .then((res) => res.json())
         .then((categories) => {
           setCategories(categories);
-          return Object.entries(categories)
-            .map(([k, v]) => [k, v.length])
-            .reduce((acc, obj) => Object.assign(acc, obj), {});
-        })
-        .then((categoryCounts) => {
+          const categoryCounts = Object.fromEntries(
+            Object.entries(categories)
+              .filter(([k, v]) => v["posts"].length > env.minPostsPerCategory)
+              .map(([k, v]) => [k, v["posts"].length])
+          );
           setCategoryCounts(categoryCounts);
           return categoryCounts;
         })
@@ -38,7 +38,10 @@ export default function usePosts() {
     return categoryCounts[cat];
   };
   const getCategoryPosts = (cat) => {
-    return categories[cat];
+    return categories[cat]["posts"];
+  };
+  const getCategoryName = (cat) => {
+    return categories[cat]["name"];
   };
 
   return {
@@ -46,5 +49,6 @@ export default function usePosts() {
     listCategories,
     getCategoryCount,
     getCategoryPosts,
+    getCategoryName,
   };
 }
