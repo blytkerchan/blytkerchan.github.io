@@ -7,6 +7,9 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "./App.css";
 
+import mainMenu from "./config/mainMenu";
+import userMenu from "./config/userMenu";
+
 import environment from "./config/environment";
 
 import Toaster from "./components/Toaster";
@@ -32,7 +35,7 @@ const App = (props) => {
   return (
     <>
       <Toaster />
-      <RouterProvider router={router(environment)} />
+      <RouterProvider router={router({ mainMenu, userMenu, env: environment })} />
     </>
   );
 };

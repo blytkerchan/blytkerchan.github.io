@@ -1,8 +1,5 @@
 import React from "react";
 
-import mainMenu from "../config/mainMenu";
-import userMenu from "../config/userMenu";
-
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 import Blog from "../pages/Blog";
@@ -13,7 +10,7 @@ import Layout from "../layout/Layout";
 // Pages to lazy-load
 const Page = React.lazy(() => import("../pages/Page"));
 
-function router(env) {
+function router({ mainMenu, userMenu, env }) {
   const routingConfig = [
     {
       path: "/",
