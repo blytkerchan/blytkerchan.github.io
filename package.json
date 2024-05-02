@@ -82,6 +82,7 @@
     "eslint-config-react-app": "^7.0.1",
     "express": "^4.19.2",
     "file-loader": "^6.2.0",
+    "front-matter": "^4.0.2",
     "fs-extra": "^11.2.0",
     "glob": "^10.3.12",
     "globby": "^14.0.1",

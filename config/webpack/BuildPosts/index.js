@@ -1,5 +1,6 @@
 const fs = require("fs");
 const marked = require("marked");
+const fm = require("front-matter");
 
 const { globSync } = require("glob");
 const URL = require("url").URL;
@@ -42,141 +43,60 @@ class BuildPosts {
   }
 
   parseInputMarkdown(filename) {
-    const fileContents = fs.readFileSync(filename);
-    const fileContentsStr = fileContents.toString();
-    const fileLines = fileContentsStr.split("\n");
+    const data = fs.readFileSync(filename, "utf-8");
+    const file = fm(data);
+    const post = file["attributes"];
+    let fromDirName = this.options.from;
+    if (fromDirName[0] !== "/") {
+      fromDirName =
+        this.options.paths.appPath +
+        (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
+        fromDirName;
+    }
+    if (fromDirName[fromDirName.length - 1] !== "/") {
+      fromDirName += "/";
+    }
 
-    const ParserState = Object.freeze({
-      INITIAL: 0,
-      PARSING_METADATA: 1,
-      PARSING_MULTI_LINE_VALUE: 2,
-      PARSING_ARRAY: 3,
-      PARSING_BODY: 4,
-      DONE: 5,
-      ERROR: 6,
-    });
-    var nonEmptyLineSeen = false;
-    var parserState = ParserState.INITIAL;
-    var parsingValueName = "";
-    var parsingValue;
-    var post = {};
-    var moreMarkerFound = false;
-
-    fileLines.forEach((line) => {
-      if (parserState === ParserState.PARSING_BODY || line.length > 0) {
-        const startsWithWhiteSpace = line !== line.trimStart();
-        if (!startsWithWhiteSpace && parserState === ParserState.PARSING_MULTI_LINE_VALUE) {
-          post[parsingValueName] = parsingValue.join("\n");
-          parserState = ParserState.PARSING_METADATA;
-        } else if (!line.trimStart().startsWith("- ") && parserState === ParserState.PARSING_ARRAY) {
-          post[parsingValueName] = parsingValue;
-          parserState = ParserState.PARSING_METADATA;
-        }
-        switch (parserState) {
-          default:
-          case ParserState.INITIAL:
-            if (!nonEmptyLineSeen && line.trimEnd() === "---") {
-              parserState = ParserState.PARSING_METADATA;
-            }
-            break;
-          case ParserState.PARSING_METADATA:
-            if (line.trimEnd() === "---") {
-              parserState = ParserState.PARSING_BODY;
-            } else if (!startsWithWhiteSpace) {
-              const colonIndex = line.indexOf(":");
-              if (colonIndex < 0) {
-                parserState = ParserState.ERROR;
-              } else {
-                parsingValueName = line.slice(0, colonIndex).trim();
-                parsingValue = line.slice(colonIndex + 1).trim();
-                if (parsingValue === "|") {
-                  parserState = ParserState.PARSING_MULTI_LINE_VALUE;
-                  parsingValue = [];
-                } else if (parsingValue.length === 0) {
-                  parserState = ParserState.PARSING_ARRAY;
-                  parsingValue = [];
-                } else {
-                  post[parsingValueName] = parsingValue;
-                }
-              }
-            } else {
-              parserState = ParserState.ERROR;
-            }
-            break;
-          case ParserState.PARSING_MULTI_LINE_VALUE:
-            line = line.trim();
-            parsingValue.push(line);
-            break;
-          case ParserState.PARSING_ARRAY:
-            line = line.trimStart().slice(2);
-            line = line.trim();
-            parsingValue.push(line);
-            break;
-          case ParserState.PARSING_BODY:
-            if (!Object.keys(post).includes("body")) {
-              post["body"] = [];
-            }
-            if (line.includes("<!--more-->") && !Object.keys(post).includes("excerpt") && !moreMarkerFound) {
-              const finalLine = line.slice(0, line.indexOf("<!--more-->"));
-              post["excerpt"] = post["body"].join("\n") + finalLine;
-              moreMarkerFound = true;
-            }
-            post["body"].push(line);
-        }
-        nonEmptyLineSeen = true;
-      }
-    });
-    if (parserState !== ParserState.ERROR) {
-      let fromDirName = this.options.from;
-      if (fromDirName[0] !== "/") {
-        fromDirName =
-          this.options.paths.appPath +
-          (this.options.paths.appPath[this.options.paths.appPath.length - 1] === "/" ? "" : "/") +
-          fromDirName;
-      }
-      if (fromDirName[fromDirName.length - 1] !== "/") {
-        fromDirName += "/";
-      }
-      post["filename"] = removePrefix(filename, fromDirName);
-      if (!Object.keys(post).includes["date"]) {
-        const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
-        const found = post["filename"].match(re);
-        post["date"] = new Date(Date.parse(`${found[1]}-${found[2]}-${found[3]}`)).toISOString();
-      }
-      if (!Object.keys(post).includes("slug")) {
-        const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
-        const found = post["filename"].match(re);
-        post["slug"] = removePrefix(post["filename"], `${found[0]}-`).toLowerCase();
-        post["slug"] = post["slug"].slice(0, post["slug"].indexOf("."));
-      }
-      post["body"] = post["body"].join("\n");
-      if (!Object.keys(post).includes("excerpt")) {
+    post["filename"] = removePrefix(filename, fromDirName);
+    if (!Object.keys(post).includes["date"]) {
+      const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+      const found = post["filename"].match(re);
+      post["date"] = new Date(Date.parse(`${found[1]}-${found[2]}-${found[3]}`)).toISOString();
+    }
+    if (!Object.keys(post).includes("slug")) {
+      const re = /^([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+      const found = post["filename"].match(re);
+      post["slug"] = removePrefix(post["filename"], `${found[0]}-`).toLowerCase();
+      post["slug"] = post["slug"].slice(0, post["slug"].indexOf("."));
+    }
+    post["body"] = file["body"];
+    if (!Object.keys(post).includes("excerpt")) {
+      if (post["body"].includes("<!--more-->")) {
+        post["excerpt"] = post["body"].slice(0, post["body"].indexOf("<!--more-->"));
+      } else {
         post["excerpt"] = post["body"];
       }
-      if (!Object.keys(post).includes("permalink")) {
-        const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
-        const found = post["filename"].match(re);
-        var publicUrl = this.getPublicUrl();
-        post["permalink"] = `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}${
-          this.config["useHashRouting"] ? "#/" : ""
-        }blog/${found[1]}/${found[2]}/${found[3]}/${post["slug"]}`;
-        post["locallink"] = `${this.config["useHashRouting"] ? "#/" : ""}/blog/${found[1]}/${found[2]}/${found[3]}/${
-          post["slug"]
-        }`;
-      } else {
-        console.warn(`${filename} contained a permalink - YMMV`);
-        post["locallink"] = post["permalink"];
-      }
-      if (!Object.keys(post).includes("published")) {
-        post["published"] = true;
-      } else {
-        post["published"] = post["published"] !== "false";
-      }
-      return post;
-    } else {
-      console.error(`Failed to parse markdown header for ${filename}`);
-      return null;
     }
+    if (!Object.keys(post).includes("permalink")) {
+      const re = /([0-9]{4})-?([0-9]{2})-?([0-9]{2})/;
+      const found = post["filename"].match(re);
+      var publicUrl = this.getPublicUrl();
+      post["permalink"] = `${publicUrl}${publicUrl[publicUrl.length - 1] === "/" ? "" : "/"}${
+        this.config["useHashRouting"] ? "#/" : ""
+      }blog/${found[1]}/${found[2]}/${found[3]}/${post["slug"]}`;
+      post["locallink"] = `${this.config["useHashRouting"] ? "#/" : ""}/blog/${found[1]}/${found[2]}/${found[3]}/${
+        post["slug"]
+      }`;
+    } else {
+      console.warn(`${filename} contained a permalink - YMMV`);
+      post["locallink"] = post["permalink"];
+    }
+    if (!Object.keys(post).includes("published")) {
+      post["published"] = true;
+    } else {
+      post["published"] = post["published"] !== "false";
+    }
+    return post;
   }
 
   removeBody(_post) {
