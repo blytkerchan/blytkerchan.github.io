@@ -31,7 +31,6 @@ const Posts = ({ env }) => {
     }
 
     setPosts(currentPage.pagePosts);
-    console.log("Scrolling!");
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
   }, [currentPage, the_posts, env, env.title]);
 
