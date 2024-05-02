@@ -27,7 +27,7 @@ em {
 .vln-fullscreen-block {
   display: none;
 }
-@media (min-width: 576px) {
+@media (min-width: 1024px) {
   .vln-fullscreen-block {
     display: block;
   }
@@ -36,7 +36,7 @@ em {
 .vln-fullscreen-inline {
   display: none;
 }
-@media (min-width: 576px) {
+@media (min-width: 1024px) {
   .vln-fullscreen-inline {
     display: inline;
   }
@@ -45,7 +45,7 @@ em {
 .vln-smallscreen-block {
   display: none;
 }
-@media (max-width: 575px) {
+@media (max-width: 1023px) {
   .vln-smallscreen-block {
     display: block;
   }
@@ -54,7 +54,7 @@ em {
 .vln-smallscreen-inline {
   display: none;
 }
-@media (max-width: 575px) {
+@media (max-width: 1023px) {
   .vln-smallscreen-inline {
     display: inline;
   }
