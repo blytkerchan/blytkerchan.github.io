@@ -208,6 +208,7 @@ class BuildPosts {
         (assets) => {
           // fetch all the markdown files in the input directory
           // make sure it's a directory
+          this.categories = {};
 
           let fromDirName = this.options.from;
           if (fromDirName[0] !== "/") {
