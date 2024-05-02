@@ -14,10 +14,13 @@ import Toaster from "./components/Toaster";
 import router from "./lib/router";
 
 import usePosts from "./lib/usePosts";
+import useCategories from "./lib/useCategories";
 
 const App = (props) => {
   const posts = usePosts();
   posts.fetchPosts(environment);
+  const categories = useCategories();
+  categories.fetchCategories(environment);
 
   useEffect(() => {
     document.title = environment.title;
