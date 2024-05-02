@@ -23,9 +23,12 @@ export default function usePosts() {
           setCategoryCounts(categoryCounts);
           return categoryCounts;
         })
-        .then((categoryCounts) => Object.entries(categoryCounts))
-        .then((categoryCountKVP) => categoryCountKVP.sort((first, second) => second[1] - first[2]))
-        .then((sortedCategoryCountKVP) => sortedCategoryCountKVP.map((kvp) => kvp[0]))
+        .then((categoryCounts) => Object.entries(categoryCounts).sort((first, second) => second[1] - first[1]))
+        .then((sortedCategoryCountKVP) => {
+          const sortedCategories = sortedCategoryCountKVP.map((kvp) => kvp[0]);
+          console.log(sortedCategories);
+          return sortedCategories;
+        })
         .then((sortedCategories) => setSortedCategories(sortedCategories));
     } else {
       return Promise.resolve();
