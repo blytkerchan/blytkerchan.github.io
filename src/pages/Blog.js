@@ -15,22 +15,22 @@ const Page = ({ env }) => {
   const posts = usePosts();
 
   const location = useLocation();
-  var permalink = null;
+  var locallink = null;
 
   if (env.useHashRouting) {
-    permalink = location.hash.substring(1);
+    locallink = location.hash.substring(1);
   } else {
-    permalink = location.pathname;
+    locallink = location.pathname;
   }
 
   useEffect(() => {
-    fetch(`/_posts/${posts.findPost(permalink).filename}`)
+    fetch(`/_posts/${posts.findPostByLocalLink(locallink).filename}`)
       .then((res) => {
         console.log(res);
         return res.text();
       })
       .then((contents) => setContents(contents));
-  }, [permalink, posts]);
+  }, [locallink, posts]);
 
   return (
     <Markdown
