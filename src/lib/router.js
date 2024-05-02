@@ -19,7 +19,7 @@ function router(env) {
       path: "/",
       element: <Layout mainMenu={mainMenu} userMenu={userMenu} env={env} />,
       errorElement: (
-        <Layout mainMenu={mainMenu} userMenu={userMenu}>
+        <Layout mainMenu={mainMenu} userMenu={userMenu} env={env}>
           <Error />
         </Layout>
       ),

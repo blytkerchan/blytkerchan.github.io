@@ -5,14 +5,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Spinner from "./Spinner";
-import environment from "../config/environment";
 
-const Layout = (props) => {
-  const mainMenu = props.mainMenu;
-  const userMenu = props.userMenu;
+const Layout = ({ mainMenu, userMenu, env, children }) => {
   return (
     <>
-      <Header name={environment.title} logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
+      <Header name={env.title} logoLocation="/logo.svg" mainMenu={mainMenu} userMenu={userMenu} />
       <div className="d-flex">
         <div className="vln-fullscreen-block">
           <div className="p-2 flex-shrink-1">
@@ -26,7 +23,7 @@ const Layout = (props) => {
                 <React.Suspense fallback=<Spinner />>
                   <Outlet />
                 </React.Suspense>
-                {props.children}
+                {children}
               </div>
             </div>
           </div>
