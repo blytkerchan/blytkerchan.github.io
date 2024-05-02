@@ -13,7 +13,7 @@ DIRECTORY="../_posts"
 
 def get_text_tags(openai_client, text):
     prompt = f"""generate tags for the following text. Output should be a list of one tag per line.
-Tags should correspond to the contents of the text
+Tags should correspond to the contents of the text and should include a score with one decimal in parentheses
 Text: "{text}"
 """
     response = openai_client.chat.completions.create(model="gpt-3.5-turbo", temperature=0.0, messages=[{ "role": "user", "content": prompt}])
