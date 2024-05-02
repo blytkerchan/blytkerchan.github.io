@@ -49,7 +49,7 @@ const App = (props) => {
     setMenu(menu);
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/Page");
-  }, [environment.title, categories]);
+  }, [environment.title]);
 
   return (
     <>
