@@ -14,6 +14,7 @@ export default function usePosts() {
       return fetch(env.categoriesEndpoint)
         .then((res) => res.json())
         .then((categories) => {
+          Object.keys(categories).forEach((slug) => (categories[slug]["slug"] = slug));
           setCategories(categories);
           const categoryCounts = Object.fromEntries(
             Object.entries(categories)
