@@ -4,6 +4,7 @@ import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 import Blog from "../pages/Blog";
 import Categories from "../pages/Categories";
+import Category from "../pages/Category";
 import Error from "../pages/Error";
 import Posts from "../pages/Posts";
 
@@ -37,6 +38,10 @@ function router({ mainMenu, userMenu, env }) {
         {
           path: "categories",
           element: <Categories env={env} />,
+        },
+        {
+          path: "category/*",
+          element: <Category env={env} />,
         },
       ],
     },

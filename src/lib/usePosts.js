@@ -18,7 +18,8 @@ export default function usePosts() {
         )
         .then((posts) => {
           setPostsByLocalLink(posts);
-          setPostList(Object.values(posts));
+          const postList = Object.values(posts);
+          setPostList(postList);
           return postList;
         })
         .then((posts) => posts.map((post) => ({ [post.uuid]: post })).reduce((acc, obj) => Object.assign(acc, obj), {}))

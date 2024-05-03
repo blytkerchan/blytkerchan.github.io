@@ -9,10 +9,10 @@ const Categories = ({ env }) => {
   const { t } = useTranslation();
   const [cats, setCats] = useState([]);
 
-  const the_categories = useCategories();
+  const theCategories = useCategories();
 
   useEffect(() => {
-    setCats(the_categories.listCategories());
+    setCats(theCategories.listCategories());
   }, []);
 
   return (
@@ -22,7 +22,7 @@ const Categories = ({ env }) => {
         {cats.map((slug) => (
           <li key={slug}>
             <Link className="category-link" to={`/category/${slug}`}>
-              {the_categories.getCategoryName(slug)}&nbsp;({the_categories.getCategoryCount(slug)})
+              {theCategories.getCategoryName(slug)}&nbsp;({theCategories.getCategoryCount(slug)})
             </Link>
           </li>
         ))}
