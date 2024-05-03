@@ -10,6 +10,19 @@ categories:
 comments: true
 date: 2021-08-28
 layout: post
+tags:
+- VHDL code (1.0)
+- firmware engineers (0.8)
+- signals (0.7)
+- datasheet pin name (0.6)
+- Hungarian warthogs (0.5)
+- software (0.9)
+- type system (0.8)
+- PotatoLauncherTargetingStatus (0.7)
+- compiler (0.8)
+- gate usage (0.6)
+- readability (0.9)
+- software guy's code (0.7)
 title: Here’s something I don’t understand
 ---
 

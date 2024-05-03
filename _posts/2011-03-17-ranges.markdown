@@ -8,6 +8,25 @@ categories:
 comments: true
 date: 2011-03-17 01:55:12+00:00
 layout: post
+tags:
+- STL (1.0)
+- Iterators (1.0)
+- Ranges (1.0)
+- Containers (1.0)
+- Standard Algorithms (1.0)
+- Design (0.8)
+- C++ Programming Language (0.8)
+- Tutorial (0.7)
+- Presentation (0.7)
+- Input Iterators (1.0)
+- Output Iterators (1.0)
+- Forward Iterators (1.0)
+- Bidirectional Iterators (1.0)
+- Random-Access Iterators (1.0)
+- Traversal Categories (1.0)
+- Value Access Categories (1.9)
+- Classification of Containers (1.0)
+- Classification of Algorithms (1.0)
 title: Ranges
 wordpress_id: 1303
 ---

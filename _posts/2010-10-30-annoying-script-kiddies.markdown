@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2010-10-30 19:54:22+00:00
 layout: post
+tags:
+- website hosting (0.9)
+- security breach (0.8)
+- FTP server (0.7)
+- professional hosting service (0.6)
+- cyber security (0.5)
+- defacing websites (0.4)
+- internet reliability (0.3)
+- power outages (0.2)
+- annoying hackers (0.1)
 title: Annoying Script Kiddies
 wordpress_id: 1128
 ---

@@ -10,6 +10,20 @@ comments: true
 date: 2019-11-12
 layout: post
 slug: quantum-teleportation
+tags:
+- quantum computing (0.9)
+- quantum teleportation (0.9)
+- Star Trek (0.7)
+- qubits (0.8)
+- Heisenberg compensators (0.6)
+- Enterprise (0.6)
+- physics (0.5)
+- teleportation circuit (0.7)
+- Captain Kirk (0.6)
+- energy conversion (0.5)
+- sci-fi (0.4)
+- no cloning theorem (0.7)
+- Tom Riker (0.4)
 title: Quantum teleportation
 ---
 

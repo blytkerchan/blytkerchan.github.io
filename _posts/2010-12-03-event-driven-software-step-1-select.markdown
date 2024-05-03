@@ -11,6 +11,24 @@ categories:
 comments: true
 date: 2010-12-03 04:12:04+00:00
 layout: post
+tags:
+- networking (1.0)
+- event-driven software design (1.0)
+- select function (1.0)
+- synchronous multiplexing (0.8)
+- socket file descriptors (0.8)
+- event handling (0.8)
+- socket creation (0.8)
+- address family (0.8)
+- socket type (0.8)
+- protocol (0.8)
+- bind (0.8)
+- listen (0.8)
+- connect (0.8)
+- server socket (0.8)
+- client socket (0.8)
+- event-driven loop (0.8)
+- observer pattern (0.8)
 title: 'Event-driven software, step 1: select'
 wordpress_id: 1137
 ---

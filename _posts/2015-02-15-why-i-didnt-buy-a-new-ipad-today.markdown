@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2015-02-15 20:34:42+00:00
 layout: post
+tags:
+- Behavioural economics (0.9)
+- Consumer behavior (0.8)
+- Materialism (0.7)
+- Technology consumption (0.6)
+- Product satisfaction (0.5)
+- Minimalism (0.4)
+- Apple products (0.3)
+- Personal finance (0.2)
+- Prioritizing needs (0.1)
 title: Why I didn't buy a new iPad today
 wordpress_id: 3435
 ---

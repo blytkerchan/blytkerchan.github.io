@@ -8,6 +8,12 @@ categories:
 comments: true
 date: 2011-09-29 16:59:08+00:00
 layout: post
+tags:
+- autumn (0.8)
+- banner (0.7)
+- time management (0.6)
+- Canada Day (0.9)
+- desktop wallpapers (0.8)
 title: Autumn is here - and so is the autumn banner
 wordpress_id: 1689
 ---

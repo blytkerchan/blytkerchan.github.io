@@ -10,6 +10,23 @@ categories:
 comments: true
 date: 2009-10-14 18:53:41+00:00
 layout: post
+tags:
+- C++ (1.0)
+- Programming (0.8)
+- Learning (0.7)
+- Cygwin (0.6)
+- Linux (0.5)
+- Free software (0.7)
+- Podcast (0.4)
+- Object-oriented design (0.8)
+- RAII (0.6)
+- Secure programming (0.7)
+- Templates (0.6)
+- Design patterns (0.7)
+- Networking (0.6)
+- Syntax (0.7)
+- Grammar (0.5)
+- Hello, world! (0.5)
 title: 'C++ for the self-taught: Introduction'
 wordpress_id: 268
 ---

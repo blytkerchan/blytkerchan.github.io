@@ -8,6 +8,16 @@ categories:
 comments: true
 date: 2014-02-01 21:09:52+00:00
 layout: post
+tags:
+- algorithm (0.9)
+- KMP (0.8)
+- compile-time (0.7)
+- C++ (0.6)
+- functional programming (0.6)
+- Haskell (0.6)
+- template meta-function (0.5)
+- recursion (0.5)
+- enable_if (0.4)
 title: A functional version of the KMP algorithm
 wordpress_id: 2527
 ---

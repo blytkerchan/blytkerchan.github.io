@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2013-01-18 14:27:05+00:00
 layout: post
+tags:
+- version control systems (1.0)
+- Linus Torvalds (0.8)
+- Git (0.7)
+- Subversion (0.7)
+- productivity (0.6)
+- software development (0.6)
+- collaboration (0.6)
+- distributed version control (0.6)
+- code management (0.5)
+- software engineering (0.5)
 title: 'Flawed ways of working: centrally managed version control'
 wordpress_id: 2019
 ---

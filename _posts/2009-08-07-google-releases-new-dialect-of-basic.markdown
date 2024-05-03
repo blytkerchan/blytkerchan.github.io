@@ -8,6 +8,25 @@ categories:
 comments: true
 date: 2009-08-07 22:24:50+00:00
 layout: post
+tags:
+- Microsoft (.8)
+- C# (.7)
+- .NET (.6)
+- Visual Basic (.9)
+- Google (.8)
+- Python (.5)
+- Java (.6)
+- ASP (.4)
+- Android (.9)
+- Simple (.9)
+- Java platform (.7)
+- Herbert Czymontek (.6)
+- Sun (.4)
+- Borland (.3)
+- Semplice (.7)
+- Android SDK (.6)
+- Windows Forms API (.5)
+- Dr. Dobb's (.4)
 title: Google releases new dialect of Basic
 wordpress_id: 144
 ---

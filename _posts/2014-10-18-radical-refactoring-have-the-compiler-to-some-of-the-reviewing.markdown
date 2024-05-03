@@ -9,6 +9,14 @@ categories:
 comments: true
 date: 2014-10-18 13:35:32+00:00
 layout: post
+tags:
+- bug detection (0.9)
+- API changes (0.8)
+- compiler (0.9)
+- code review (0.7)
+- platform compatibility (0.6)
+- refactoring (0.8)
+- economic considerations (0.5)
 title: 'Radical Refactoring: Have the compiler to (some of) the reviewing'
 wordpress_id: 3346
 ---

@@ -8,6 +8,21 @@ categories:
 comments: true
 date: 2013-01-08 23:20:06+00:00
 layout: post
+tags:
+- coding style (0.9)
+- readability (0.8)
+- function declaration (0.7)
+- code integration (0.6)
+- maintainability (0.6)
+- parameter organization (0.5)
+- code modification (0.5)
+- habit change (0.4)
+- function call (0.4)
+- error spotting (0.3)
+- parameter alignment (0.3)
+- code understanding (0.3)
+- parameter modification (0.3)
+- comments (0.2)
 title: Minor changes in style
 wordpress_id: 2010
 ---

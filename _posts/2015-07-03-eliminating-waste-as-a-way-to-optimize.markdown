@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2015-07-03 12:40:18+00:00
 layout: post
+tags:
+- Arachnida (0.9)
+- Web server (0.8)
+- Memory optimization (0.7)
+- Service separation (0.6)
+- String optimization (0.8)
+- Memory profiling (0.7)
+- Low-hanging fruit (0.6)
+- Caching (0.6)
+- RAII (0.7)
+- Static variables (0.7)
 ---
 
 I recently had a chance to work on an implementation of an Arachnida-based web server that had started using a lot of memory as new features were being added.

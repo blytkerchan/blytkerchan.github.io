@@ -12,6 +12,15 @@ categories:
 comments: true
 date: 2015-07-20 10:16:10+00:00
 layout: post
+tags:
+- Git misconceptions (1.0)
+- Graphical tools for Git (0.8)
+- Central repository in Git (0.7)
+- SSH in Git (0.6)
+- IDE integration with Git (0.9)
+- Understanding Git (1.0)
+- Rebasing in Git (0.8)
+- Continuous integration in Git (0.9)
 title: Git demystification
 wordpress_id: 3662
 ---

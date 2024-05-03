@@ -9,6 +9,14 @@ categories:
 comments: true
 date: 2011-03-02 17:47:03+00:00
 layout: post
+tags:
+- bugs (0.9)
+- butterflies (0.8)
+- software errors (0.7)
+- bug-hunting (0.8)
+- theme song (0.6)
+- wallpapers (0.5)
+- debugging (0.7)
 title: A bulldog approach to bugs
 wordpress_id: 1276
 ---

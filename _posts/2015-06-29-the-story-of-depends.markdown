@@ -9,6 +9,19 @@ categories:
 comments: true
 date: 2015-06-29 03:01:17+00:00
 layout: post
+tags:
+- Vlinder Software (0.9)
+- Depends (0.9)
+- Dependency tracker (0.8)
+- Jail project (0.6)
+- Safe Memory Reclamation algorithm (0.7)
+- Lock-free code (0.6)
+- Adapter pattern (0.7)
+- Dr. Dobbs (0.6)
+- GNU Make (0.6)
+- Microsoft Visual Studio (0.6)
+- Commercial support (0.7)
+- GPLv2 (0.6)
 title: The story of "Depends"
 wordpress_id: 3647
 ---

@@ -6,6 +6,15 @@ categories:
 - Photography
 date: 2016-09-10 22:17:27+00:00
 layout: post
+tags:
+- cat (0.9)
+- Twitterverse (0.7)
+- vote (0.5)
+- Felicia (0.4)
+- relaxing (0.3)
+- image (0.3)
+- Twitter (0.2)
+- social media (0.2)
 title: Really, Twitterverse?
 ---
 

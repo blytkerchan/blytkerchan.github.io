@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2013-09-05 02:34:41+00:00
 layout: post
+tags:
+- compiler (1.0)
+- debugging (0.8)
+- C++ (0.7)
+- Microsoft Visual Studio (0.6)
+- embedded systems (0.5)
+- bug fixing (0.9)
+- alignment (0.8)
+- stack corruption (0.7)
+- Windows Embedded Compact 7 (0.6)
+- code structure (0.5)
 title: Sometimes, your right hand should know what your left hand is doing
 wordpress_id: 2349
 ---

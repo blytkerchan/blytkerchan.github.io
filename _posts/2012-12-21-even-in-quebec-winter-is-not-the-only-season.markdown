@@ -6,6 +6,12 @@ categories:
 comments: true
 date: 2012-12-21 00:41:51+00:00
 layout: post
+tags:
+- reminder (0.8)
+- colleagues (0.7)
+- office whiteboard (0.9)
+- drawing (0.6)
+- image (0.5)
 title: Even in Quebec, Winter is not the only season
 wordpress_id: 1999
 ---

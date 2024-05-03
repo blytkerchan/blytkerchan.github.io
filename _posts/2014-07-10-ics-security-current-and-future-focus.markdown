@@ -16,6 +16,21 @@ categories:
 comments: true
 date: 2014-07-10 20:16:48+00:00
 layout: post
+tags:
+- ICS security (1.0)
+- DNP3 (1.0)
+- SCADA protocols (0.9)
+- OpenDNP3 (0.8)
+- Smart Grid (0.7)
+- Security features (0.6)
+- Technical Committee (0.5)
+- Responsible disclosure (0.9)
+- Fuzzing tool (0.8)
+- Vendor-specific protocols (0.7)
+- Modbus (0.6)
+- IEC 61850 (0.5)
+- IEC 60870 (0.4)
+- Home-grown protocols (0.3)
 title: 'ICS Security: Current and Future Focus'
 wordpress_id: 2576 - ICS security
 ---

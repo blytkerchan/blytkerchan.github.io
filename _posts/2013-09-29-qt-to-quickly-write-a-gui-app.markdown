@@ -9,6 +9,20 @@ categories:
 comments: true
 date: 2013-09-29 03:14:51+00:00
 layout: post
+tags:
+- App Development (0.9)
+- GUI Framework (0.8)
+- C++ (0.7)
+- Qt (0.9)
+- System Tray (0.6)
+- Registry (0.4)
+- RAII (0.3)
+- Qt Creator (0.5)
+- Widget (0.4)
+- Gtk+ (0.2)
+- .NET (0.2)
+- wxWidgets (0.2)
+- Windows 8 (0.3)
 title: Qt to quickly write a GUI app
 wordpress_id: 2393
 ---

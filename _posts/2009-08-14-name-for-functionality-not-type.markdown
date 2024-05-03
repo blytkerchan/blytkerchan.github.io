@@ -17,6 +17,17 @@ categories:
 comments: true
 date: 2009-08-14 16:12:15+00:00
 layout: post
+tags:
+- programming (0.9)
+- coding (0.8)
+- clean code (0.8)
+- Joel On Software (0.7)
+- Hungarian notation (0.9)
+- variable naming (0.7)
+- cross-site scripting (0.8)
+- security (0.7)
+- code readability (0.8)
+- coding style (0.7)
 title: Name For Functionality, Not Type
 wordpress_id: 158
 ---

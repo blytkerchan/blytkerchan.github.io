@@ -10,6 +10,18 @@ categories:
 comments: true
 date: 2010-08-03 02:08:40+00:00
 layout: post
+tags:
+- software development (1.0)
+- contracts (0.9)
+- end-user applications (0.8)
+- embedded software (0.7)
+- firmware (0.6)
+- server software (0.5)
+- web services (0.4)
+- code quality (0.8)
+- client communication (0.7)
+- project management (0.6)
+- stakeholder involvement (0.5)
 title: Once burned, twice shy
 wordpress_id: 863
 ---

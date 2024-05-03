@@ -9,6 +9,28 @@ categories:
 comments: true
 date: 2011-02-06 02:37:02+00:00
 layout: post
+tags:
+- C++ (1.0)
+- Observer pattern (1.0)
+- Proxy (0.7)
+- SOCKS server (0.7)
+- Code re-use (0.6)
+- Functional clarity (0.6)
+- Subject (0.6)
+- Server class (0.6)
+- Application class (0.6)
+- Interface (0.6)
+- Event handling (0.5)
+- Implementation (0.5)
+- Architecture (0.5)
+- Directed acyclic graph (0.5)
+- Single-threaded (0.5)
+- IPv6 readiness (0.5)
+- Thread synchronization (0.5)
+- Polymorphic (0.5)
+- Pointer (0.5)
+- Iterator (0.5)
+- No fail guarantee (0.5)
 title: The Observer Pattern
 wordpress_id: 1167
 ---

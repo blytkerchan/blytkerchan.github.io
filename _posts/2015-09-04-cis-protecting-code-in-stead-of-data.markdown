@@ -5,6 +5,25 @@ categories:
 comments: true
 date: 2015-09-04 01:08:33+00:00
 layout: post
+tags:
+- Windows API (1.0)
+- synchronization primitive (0.8)
+- mutual exclusion device (0.7)
+- CRITICAL_SECTION (1.0)
+- critical section (0.9)
+- shared resource (0.8)
+- threads (0.6)
+- processes (0.6)
+- data protection (0.8)
+- concurrent access (0.7)
+- ScopedLock class (0.9)
+- exception-safety (0.8)
+- lock leaks (0.7)
+- POSIX (0.6)
+- Mutex class (0.8)
+- encapsulation (0.7)
+- newbies (0.5)
+- mutex (0.9)
 title: 'CIS: "Protecting" code in stead of data'
 wordpress_id: 3236
 ---

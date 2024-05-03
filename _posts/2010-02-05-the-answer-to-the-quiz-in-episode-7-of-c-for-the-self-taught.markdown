@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2010-02-05 03:02:28+00:00
 layout: post
+tags:
+- programming (0.9)
+- C++ (0.8)
+- bugs (0.7)
+- constructors (0.7)
+- initialization (0.7)
+- variables (0.6)
+- classes (0.6)
+- pointers (0.5)
+- compiler (0.5)
+- coding habits (0.4)
 title: The answer to the quiz in episode 7 of C++ for the self-taught
 wordpress_id: 463
 ---

@@ -10,6 +10,29 @@ categories:
 comments: true
 date: 2009-12-24 01:48:17+00:00
 layout: post
+tags:
+- Peak oil (0.9)
+- Climate change (0.8)
+- Economic realities (0.7)
+- Computing industry (0.6)
+- Distributed software development (0.9)
+- Outsourcing (0.8)
+- Linux kernel (0.5)
+- Open-source projects (0.6)
+- Profit (0.7)
+- Economical aspects (0.6)
+- Software development (0.6)
+- Business (0.7)
+- Hardware (0.6)
+- Software (0.6)
+- Communication (0.8)
+- Digital communication (0.7)
+- Technology (0.6)
+- Telepresence (0.7)
+- Scientific knowledge (0.6)
+- Technological know-how (0.6)
+- Quality of life (0.7)
+- Profit margin (0.6)
 title: 'Distributed Software Development Part 1: The Safe Boom'
 wordpress_id: 431
 ---

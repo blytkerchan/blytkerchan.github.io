@@ -5,6 +5,15 @@ categories:
 comments: true
 date: 2011-02-20 01:18:43+00:00
 layout: post
+tags:
+- coding (0.9)
+- programming (0.8)
+- debugging (0.7)
+- domain-specific languages (0.8)
+- expressive code (0.7)
+- serialization (0.9)
+- Barton-Nackman idiom (0.9)
+- operator overloading (0.8)
 title: Applying the Barton-Nackman idiom
 wordpress_id: 1264
 ---

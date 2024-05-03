@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2010-06-26 16:34:33+00:00
 layout: post
+tags:
+- Appropriation Art Coalition (1.0)
+- TPM (1.0)
+- Public Domain (1.0)
+- Bill C-32 (1.0)
+- Copyright (0.8)
+- Digital Lock (0.7)
+- Legislation (0.6)
+- Copyright Holder (0.5)
+- Technological Protection Measure (0.5)
 title: TPM and the Public Domain (#c32)
 wordpress_id: 801
 ---

@@ -9,6 +9,18 @@ categories:
 comments: true
 date: 2010-01-16 19:57:58+00:00
 layout: post
+tags:
+- development project (1.0)
+- C++ type system (0.9)
+- object-oriented programming (0.8)
+- virtual keyword (0.7)
+- class inheritance (0.6)
+- UML diagram (0.5)
+- Run-Time Type Information (0.5)
+- cast operators (0.4)
+- virtual keyword (0.7)
+- polymorphism (0.9)
+- graphical user interface (0.6)
 title: 7- Polymorphism
 wordpress_id: 365
 ---

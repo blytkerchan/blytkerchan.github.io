@@ -10,6 +10,19 @@ categories:
 comments: true
 date: 2010-02-16 21:40:09+00:00
 layout: post
+tags:
+- Software Development (1.0)
+- Waterfall Model (0.8)
+- Object-Oriented Programming (0.7)
+- C++ (0.5)
+- Agile Programming (0.9)
+- User Requirements (0.8)
+- Use-Cases (1.0)
+- UML (0.6)
+- Agile Manifesto (0.7)
+- Self-Managed Teams (0.6)
+- Functional Decomposition (0.5)
+- Constructivism (0.8)
 title: 'Use-Cases Part 2: What Use-Cases Are For (The history, present and future
   of use-cases)'
 wordpress_id: 388

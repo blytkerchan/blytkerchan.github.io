@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2009-11-16 16:09:13+00:00
 layout: post
+tags:
+- object-oriented programming (1.0)
+- data (0.8)
+- programming languages (0.7)
+- C++ (0.6)
+- struct (0.9)
+- structure (0.8)
+- Plain Old Data (0.7)
+- variable (0.6)
+- class (0.5)
+- function overloading (0.9)
 title: 3- Data Structures
 wordpress_id: 340
 ---

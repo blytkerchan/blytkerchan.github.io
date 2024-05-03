@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2009-08-14 14:39:55+00:00
 layout: post
+tags:
+- C++ (1.0)
+- Programming Language (0.8)
+- Abstraction (0.7)
+- Elegant Constructs (0.6)
+- Recursion (0.8)
+- Object Construction (0.9)
+- Cast Operator Overloading (0.9)
+- Filesystem Monitoring (0.7)
+- Pseudo-Function (0.6)
+- Code Readability (0.8)
 title: Hiding Complexity in C++
 wordpress_id: 150
 ---

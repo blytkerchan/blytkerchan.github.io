@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2011-03-08 13:44:47+00:00
 layout: post
+tags:
+- Geek mythology (1.0)
+- Charles Babbage (0.8)
+- Analytical Engine (0.9)
+- hardware engineering (1.0)
+- Ada Lovelace (0.8)
+- software engineering (1.0)
+- women in software development (0.9)
+- project management (0.7)
+- agile software development (0.9)
+- International Women's Day (1.0)
 title: 'Geek Mythology: Women and the Start of Software Engineering'
 wordpress_id: 1280
 ---

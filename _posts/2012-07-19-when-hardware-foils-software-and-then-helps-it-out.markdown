@@ -9,6 +9,15 @@ categories:
 comments: true
 date: 2012-07-19 21:30:30+00:00
 layout: post
+tags:
+- oscilloscope (1.0)
+- signal processing (0.9)
+- timing (0.7)
+- GPIO (0.8)
+- optical coupler (0.6)
+- FPGA (0.9)
+- RS-485 (0.5)
+- printed circuit board (0.8)
 title: When hardware foils software -- and then helps it out!
 wordpress_id: 1895
 ---

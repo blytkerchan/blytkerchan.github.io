@@ -8,6 +8,17 @@ comments: true
 date: 2012-08-16 01:57:41+00:00
 layout: post
 published: false
+tags:
+- coding (0.9)
+- explanation (0.8)
+- C (0.7)
+- C++ (0.7)
+- rewrites (0.6)
+- educational purposes (0.6)
+- techniques (0.5)
+- programmers (0.5)
+- class template (0.4)
+- code (0.4)
 title: Hidden complexity
 wordpress_id: 1916
 ---

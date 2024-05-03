@@ -9,6 +9,24 @@ categories:
 comments: true
 date: 2015-05-24 20:48:03+00:00
 layout: post
+tags:
+- industrial espionage (1.0)
+- intellectual property theft (1.0)
+- China (0.9)
+- Canada (0.8)
+- trade secrets (0.7)
+- economic espionage (0.7)
+- legislation (0.6)
+- Nortel Networks Corp. (0.5)
+- FBI (0.5)
+- IP theft (0.5)
+- technology companies (0.4)
+- cybersecurity (0.4)
+- professionals (0.4)
+- mind-set (0.3)
+- FBI agent (0.3)
+- agriculture (0.3)
+- telecommunications (0.3)
 title: 'Globe and Mail: Canada lacks law that defines, protects trade secrets'
 wordpress_id: 3507
 ---

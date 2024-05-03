@@ -15,6 +15,17 @@ excerpt: 'recursive locking:
 
   '
 layout: post
+tags:
+- RSS streams (1.0)
+- comp.programming.threads (1.0)
+- POSIX threads (0.8)
+- recursive locks (1.0)
+- design flaws (0.7)
+- David Schwartz (0.6)
+- thread synchronization (0.9)
+- threading architecture (0.8)
+- recursive locking (0.9)
+- code maintenance (0.7)
 title: Recursive Locking Is Evil, or is it?
 wordpress_id: 57
 ---

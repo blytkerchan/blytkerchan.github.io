@@ -13,6 +13,22 @@ date: 2015-11-06 01:28:03+00:00
 layout: post
 permanent link: /blog/2015/11/interesting-modifications-to-the-lamport-queue/
 slug: interesting-modifications-to-the-lamport-queue
+tags:
+- queue-algorithms (1.0)
+- Lamport-queue (1.0)
+- C11-memory-model (1.0)
+- cache-locality (1.0)
+- multi-threaded-programming (1.0)
+- SPSC (1.0)
+- MPSC (1.0)
+- SPMC (1.0)
+- MPMC (1.0)
+- lock-freedom (1.0)
+- contention (1.0)
+- memory-barriers (1.0)
+- data-race (1.0)
+- happens-before (1.0)
+- atomic-operations (1.0)
 title: Interesting modifications to the Lamport queue
 wordpress_id: 3679
 ---

@@ -5,6 +5,21 @@ categories:
 comments: true
 date: 2010-09-04 00:07:51+00:00
 layout: post
+tags:
+- Stephen Hawking (1.0)
+- New book (0.8)
+- Hype (0.9)
+- CNN (0.7)
+- Science Books (0.8)
+- Wishlist (0.6)
+- Gravity (0.9)
+- Debate (0.7)
+- Metaphysics (0.8)
+- Philosophy (0.7)
+- Kant (0.6)
+- Cause and effect (0.8)
+- Universe (0.7)
+- Eleven dimensions (0.8)
 title: '"Given the existence of A, B will create itself, therefore, C had nothing
   to do with it"'
 wordpress_id: 908

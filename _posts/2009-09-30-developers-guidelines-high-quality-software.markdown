@@ -14,6 +14,27 @@ categories:
 comments: true
 date: 2009-09-30 18:19:42+00:00
 layout: post
+tags:
+- software development (1.0)
+- quality software (0.9)
+- good design (0.8)
+- good implementation (0.7)
+- good testing (0.6)
+- unit tests (0.9)
+- functional tests (0.8)
+- regression tests (0.7)
+- pre-production testing (0.6)
+- developer's guidelines (1.0)
+- coding conventions (0.9)
+- enterprise-wide standards (0.8)
+- API design (0.7)
+- maintainability (0.9)
+- stability (0.8)
+- scalability (0.7)
+- guideline quality (1.0)
+- presentation (0.9)
+- structure (0.8)
+- enforcement (0.7)
 title: Developer's Guidelines & High-Quality Software
 wordpress_id: 247
 ---

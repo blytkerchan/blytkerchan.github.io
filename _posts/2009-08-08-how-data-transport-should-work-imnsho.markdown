@@ -5,6 +5,30 @@ categories:
 comments: true
 date: 2009-08-08 18:59:29+00:00
 layout: post
+tags:
+- software design (1.0)
+- data transfer (0.9)
+- spaghetti code (0.8)
+- GS1 EPCGlobal standards (0.7)
+- message layer (0.9)
+- transport layer (0.9)
+- application layer (0.9)
+- message-transport binder (0.9)
+- channels (0.8)
+- event channel (0.7)
+- exception channel (0.7)
+- data channel (0.7)
+- MTB (0.8)
+- message format (0.8)
+- serialization (0.8)
+- deserialization (0.8)
+- Transport Layer Security (0.7)
+- TLS (0.7)
+- SSL (0.7)
+- TCP/IP (0.7)
+- addressing (0.7)
+- association (0.7)
+- validation (0.7)
 title: How Data Transport Should Work IMNSHO
 wordpress_id: 146
 ---

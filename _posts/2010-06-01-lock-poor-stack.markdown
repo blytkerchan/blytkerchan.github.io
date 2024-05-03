@@ -9,6 +9,19 @@ categories:
 comments: true
 date: 2010-06-01 23:26:58+00:00
 layout: post
+tags:
+- C/C++ (1.0)
+- Lock-poor stack (1.0)
+- Relacy (1.0)
+- Atomic operations (1.0)
+- Memory management (1.0)
+- GNU General Public License (1.0)
+- Thread safety (1.0)
+- Stack implementation (1.0)
+- Lock-free (1.0)
+- Reference management (1.0)
+- Testing (1.0)
+- Multithreading (1.0)
 title: Lock-Poor Stack
 wordpress_id: 713
 ---

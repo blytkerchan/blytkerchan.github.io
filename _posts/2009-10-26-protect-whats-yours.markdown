@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2009-10-26 03:33:18+00:00
 layout: post
+tags:
+- intellectual property (3.0)
+- copyrights (2.5)
+- software (2.0)
+- open source (1.5)
+- free software (1.5)
+- author rights (1.0)
+- legal protection (1.0)
+- agreements (1.0)
+- ownership (1.0)
+- copyright infringements (1.0)
 title: Protect what's yours
 wordpress_id: 322
 ---

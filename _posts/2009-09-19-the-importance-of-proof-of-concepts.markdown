@@ -12,6 +12,21 @@ categories:
 comments: true
 date: 2009-09-19 01:18:00+00:00
 layout: post
+tags:
+- problem solving (0.9)
+- abstract concepts (0.8)
+- proof of concept (1.0)
+- functional requirements (0.7)
+- non-functional requirements (0.6)
+- security requirements (0.5)
+- MySQL (0.8)
+- ODBC (0.9)
+- feasibility (0.8)
+- hypothesis testing (0.7)
+- production code (0.8)
+- fail fast (0.9)
+- human resources (0.6)
+- time-to-market (0.8)
 title: The Importance of Proof-Of-Concepts
 wordpress_id: 194
 ---

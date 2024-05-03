@@ -10,6 +10,20 @@ categories:
 comments: true
 date: 2009-07-23 00:39:11+00:00
 layout: post
+tags:
+- resume honesty (0.9)
+- job application (0.8)
+- expertise (0.9)
+- inflation (0.8)
+- internships (0.7)
+- psychologists (0.6)
+- experience (0.8)
+- responsibilities (0.7)
+- titles (0.6)
+- translation (0.7)
+- accuracy (0.8)
+- IT (0.8)
+- software (0.8)
 title: Why you shouldn't inflate your resume
 wordpress_id: 47
 ---

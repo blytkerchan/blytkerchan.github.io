@@ -16,6 +16,27 @@ excerpt: 'spring cleaning brings it
 
   '
 layout: post
+tags:
+- software (1.0)
+- integration (0.8)
+- buggy (0.7)
+- spaghetti code (0.9)
+- API (0.9)
+- select function (0.9)
+- design by contract (0.8)
+- service-oriented architecture (0.9)
+- object-oriented architecture (0.8)
+- monolithic code (0.9)
+- IKEA (0.8)
+- deployment (0.8)
+- Joomla (0.9)
+- WordPress (0.9)
+- Debian GNU/Linux (0.9)
+- Funky (0.9)
+- Model-View-Controller (0.9)
+- Qt (0.9)
+- Linux kernel (0.9)
+- predictable design (0.9)
 title: The IKEA Approach
 wordpress_id: 14
 ---

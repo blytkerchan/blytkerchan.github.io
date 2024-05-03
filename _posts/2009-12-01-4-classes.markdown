@@ -10,6 +10,26 @@ categories:
 comments: true
 date: 2009-12-01 22:37:17+00:00
 layout: post
+tags:
+- object-oriented programming (1.0)
+- class (1.0)
+- data structures (0.8)
+- pointers (0.8)
+- references (0.8)
+- objects (0.8)
+- RAII (0.8)
+- functions (0.7)
+- inheritance (0.9)
+- polymorphism (0.8)
+- abstract (0.7)
+- base class (0.7)
+- constructor (0.7)
+- member functions (0.7)
+- getters (0.7)
+- setters (0.7)
+- minimalism (0.8)
+- Furniture (0.7)
+- C++ (0.6)
 title: 4- Classes
 wordpress_id: 351
 ---

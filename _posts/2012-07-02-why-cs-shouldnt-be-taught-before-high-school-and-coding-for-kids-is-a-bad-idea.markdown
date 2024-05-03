@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2012-07-02 00:35:10+00:00
 layout: post
+tags:
+- computer science (1.0)
+- high school curriculum (0.9)
+- coding (0.8)
+- programming languages (0.7)
+- education system (0.6)
+- software engineering (0.5)
+- problem solving (0.5)
+- teaching (0.4)
+- children (0.4)
+- learning (0.3)
 title: Why CS shouldn't be taught before high school (and coding for kids is a bad
   idea)
 wordpress_id: 1891

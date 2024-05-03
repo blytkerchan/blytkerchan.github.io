@@ -11,6 +11,19 @@ categories:
 comments: true
 date: 2009-09-29 02:51:02+00:00
 layout: post
+tags:
+- Software Engineering Institute (1.0)
+- SCRUM (0.9)
+- CMMi (1.0)
+- Agile (1.0)
+- Manifesto for Agile Software Development (0.9)
+- Documentation (0.8)
+- Contracts (0.7)
+- Plans (0.8)
+- CMMI (1.0)
+- Iterative and Incremental Design (0.9)
+- Configuration Management (0.8)
+- Quality Assurance (0.8)
 title: Can Agile and CMMI Come Together?
 wordpress_id: 227
 ---

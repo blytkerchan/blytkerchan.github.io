@@ -8,6 +8,18 @@ categories:
 comments: true
 date: 2009-09-24 22:28:46+00:00
 layout: post
+tags:
+- techies (0.9)
+- marketers (0.8)
+- out-of-touch (0.7)
+- web (0.9)
+- software industry (0.6)
+- business (0.8)
+- web professionals (0.7)
+- NGO (0.5)
+- Internet access (0.6)
+- developing countries (0.6)
+- micro-businesses (0.6)
 title: Out-of-touch techies, marketing retoric, and nonsense. You do the math.
 wordpress_id: 213
 ---

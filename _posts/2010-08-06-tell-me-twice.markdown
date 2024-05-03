@@ -8,6 +8,14 @@ categories:
 comments: true
 date: 2010-08-06 02:09:49+00:00
 layout: post
+tags:
+- communication protocols (1.0)
+- error detection (1.0)
+- bit flipping (1.0)
+- serial protocols (1.0)
+- parity bits (1.0)
+- CRC checking (1.0)
+- reducing errors (1.0)
 title: Tell me twice
 wordpress_id: 865
 ---

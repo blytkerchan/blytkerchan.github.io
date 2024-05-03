@@ -7,6 +7,17 @@ categories:
 comments: true
 date: 2013-06-10 17:00:46+00:00
 layout: post
+tags:
+- Vlinder Software (0.9)
+- announcement (0.7)
+- end-of-life cycle (0.8)
+- CEO (0.6)
+- founder (0.5)
+- software development (0.7)
+- Funky language (0.8)
+- Boost.Spirit (0.7)
+- Domain-Specific Languages (0.8)
+- DSLs (0.7)
 title: Why I decided Vlinder Software should stop selling Funky
 wordpress_id: 2324
 ---

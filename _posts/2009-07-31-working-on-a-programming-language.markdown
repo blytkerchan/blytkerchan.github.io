@@ -21,6 +21,40 @@ excerpt: 'Like a warm spring breeze
 
   '
 layout: post
+tags:
+- programming language (1.0)
+- Jail (0.9)
+- Object-Oriented (0.8)
+- VM (0.7)
+- embedded devices (0.6)
+- threads (0.5)
+- networking (0.4)
+- C (0.9)
+- libmemory (0.8)
+- SMR (0.7)
+- libcontain (0.6)
+- Yacc/Bison (0.5)
+- GCC (0.4)
+- Funky (1.0)
+- functional programming (0.9)
+- interpreter (0.8)
+- grammar (0.7)
+- evaluator (0.6)
+- testing (0.5)
+- statement (0.9)
+- function (0.8)
+- arguments (0.7)
+- inline function (0.6)
+- recursions (0.5)
+- loops (0.4)
+- while (0.9)
+- pred (0.8)
+- body (0.7)
+- control (0.6)
+- ping (0.5)
+- interpreter (0.9)
+- stand-alone (0.8)
+- C++ (0.7)
 title: Working on a programming language
 wordpress_id: 117
 ---

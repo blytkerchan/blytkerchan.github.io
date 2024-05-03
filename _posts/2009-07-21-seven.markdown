@@ -16,6 +16,17 @@ excerpt: 'Clarification
 
   '
 layout: post
+tags:
+- software engineering (3.0)
+- work experience (2.5)
+- job titles (2.0)
+- programming (1.5)
+- team leadership (1.0)
+- project management (1.0)
+- software architecture (1.0)
+- career history (1.0)
+- professional background (1.0)
+- qualifications (1.0)
 title: Seven?
 wordpress_id: 40
 ---

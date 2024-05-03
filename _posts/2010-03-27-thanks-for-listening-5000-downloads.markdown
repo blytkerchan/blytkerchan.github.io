@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2010-03-27 22:28:44+00:00
 layout: post
+tags:
+- podcast (0.9)
+- statistics (0.8)
+- downloads (0.8)
+- popularity (0.7)
+- feedback (0.6)
+- improvement (0.6)
+- blog (0.5)
+- comments (0.5)
+- listener (0.4)
+- reply (0.3)
 title: Thanks for listening - 5000+ downloads
 wordpress_id: 526
 ---

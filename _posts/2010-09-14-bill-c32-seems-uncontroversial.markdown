@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2010-09-14 00:55:12+00:00
 layout: post
+tags:
+- copyright (5.0)
+- contract (4.0)
+- bill C-32 (4.0)
+- public domain (4.0)
+- TPM (5.0)
+- FLOSS (4.0)
+- ethics (4.0)
+- privacy (4.0)
+- software engineering (3.0)
+- trust (3.0)
 title: 'Bill #c32 seems to be getting less controversial'
 wordpress_id: 912
 ---

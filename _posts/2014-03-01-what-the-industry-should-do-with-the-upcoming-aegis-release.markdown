@@ -19,6 +19,17 @@ categories:
 comments: true
 date: 2014-03-01 14:59:43+00:00
 layout: post
+tags:
+- Aegis (1.0)
+- Fuzzing tool (0.8)
+- Vulnerabilities (0.7)
+- Firmware upgrades (0.6)
+- Cybersecurity (0.9)
+- Smart grid (0.8)
+- Exploits (0.7)
+- Utilities (0.8)
+- Risk analysis (0.6)
+- Cyberterrorist attacks (0.7)
 title: What the industry should do with the upcoming Aegis release
 wordpress_id: 3074
 ---

@@ -5,6 +5,26 @@ categories:
 comments: true
 date: 2009-08-05 04:32:49+00:00
 layout: post
+tags:
+- debugging (1.0)
+- firmware (0.8)
+- compiler (0.7)
+- One Definition Rule (1.0)
+- C++ (0.6)
+- pragma pack (1.0)
+- alignment (0.6)
+- RTOS (0.5)
+- Microsoft Visual Studio (0.5)
+- GNU Compiler Collection (0.5)
+- union (0.7)
+- structure (0.6)
+- class (0.5)
+- template code (0.5)
+- static assertion (0.5)
+- translation unit (0.5)
+- header file (0.5)
+- simulation (0.6)
+- memory-mapped structure (0.6)
 title: Fixing mistakes
 wordpress_id: 116
 ---

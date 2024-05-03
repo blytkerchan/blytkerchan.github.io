@@ -9,6 +9,14 @@ categories:
 comments: true
 date: 2011-07-10 16:01:23+00:00
 layout: post
+tags:
+- problem solving (0.9)
+- programming (0.8)
+- real-time embedded programming (0.7)
+- innovation (0.6)
+- collaboration (0.5)
+- epiphany (0.4)
+- hindsight (0.3)
 title: '"Changer son fusil d''épaule"'
 wordpress_id: 1565
 ---

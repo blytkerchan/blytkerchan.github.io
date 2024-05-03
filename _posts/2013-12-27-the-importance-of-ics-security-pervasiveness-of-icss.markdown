@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2013-12-27 01:12:13+00:00
 layout: post
+tags:
+- Industrial Control Systems (ICSs) (1.0)
+- Power grid (0.9)
+- Smart metering devices (0.8)
+- Smart grid (0.7)
+- Electricity grid (0.6)
+- Energy efficiency (0.5)
+- Communication security (0.4)
+- Infrastructure (0.3)
+- Resilience (0.3)
+- End-of-life (0.2)
 title: 'The importance of ICS security: pervasiveness of ICSs'
 wordpress_id: 2453
 ---

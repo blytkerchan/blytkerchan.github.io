@@ -9,6 +9,24 @@ categories:
 comments: true
 date: 2010-05-24 17:16:21+00:00
 layout: post
+tags:
+- Albion College (0.9)
+- faculty reduction (0.8)
+- elimination of courses (0.7)
+- Computer Science (0.9)
+- Journalism (0.9)
+- career options (0.7)
+- formal training (0.6)
+- out-sourcing (0.8)
+- North American market (0.7)
+- specialized CS jobs (0.8)
+- financial motivation (0.6)
+- marketing problem (0.7)
+- Journalism importance (0.9)
+- globalization (0.7)
+- democracy (0.6)
+- insolvency (0.5)
+- irrelevance (0.5)
 title: Albion College decides to scrap Computer Science and Journalism majors
 wordpress_id: 657
 ---

@@ -10,6 +10,20 @@ categories:
 comments: true
 date: 2009-12-24 02:20:04+00:00
 layout: post
+tags:
+- Management (0.9)
+- Cost reduction (0.8)
+- Time-to-market (0.8)
+- Human resources (0.7)
+- Performance evaluation (0.6)
+- Promotion (0.6)
+- Agile development (0.7)
+- Team dynamics (0.6)
+- Remote work (0.8)
+- Goal setting (0.6)
+- Deadline management (0.7)
+- Workplace flexibility (0.7)
+- Project management tools (0.6)
 title: 'Distributed Software Development Part 2: Management Challenges'
 wordpress_id: 434
 ---

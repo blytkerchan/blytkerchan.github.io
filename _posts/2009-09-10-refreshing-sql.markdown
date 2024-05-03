@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2009-09-10 13:01:57+00:00
 layout: post
+tags:
+- SQL (0.9)
+- MySQL (0.8)
+- Stored Procedures (0.7)
+- Business Logic (0.6)
+- Database Design (0.6)
+- Error Signalling (0.5)
+- PHP MVC Frameworks (0.5)
+- Coupling (0.5)
+- Loosely-Coupled Code (0.5)
+- Spaghetti Code (0.4)
 title: Refreshing SQL
 wordpress_id: 189
 ---

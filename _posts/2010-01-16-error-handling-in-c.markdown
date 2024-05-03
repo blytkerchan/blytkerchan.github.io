@@ -15,6 +15,18 @@ categories:
 comments: true
 date: 2010-01-16 04:42:32+00:00
 layout: post
+tags:
+- programming (0.9)
+- C++ (0.8)
+- error handling (0.9)
+- exceptions (0.8)
+- C (0.7)
+- RTTI (0.6)
+- return values (0.7)
+- state machine (0.8)
+- OpenSSL (0.7)
+- setjmp (0.6)
+- longjmp (0.6)
 title: Error handling in C
 wordpress_id: 441
 ---

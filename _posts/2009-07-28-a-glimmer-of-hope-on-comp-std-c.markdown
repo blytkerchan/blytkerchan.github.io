@@ -14,6 +14,15 @@ excerpt: 'Sun to early spring
 
   '
 layout: post
+tags:
+- C++ (0.8)
+- concepts (0.7)
+- meta-programming (0.6)
+- threading (0.5)
+- functional programming (0.9)
+- lambda expressions (0.8)
+- polymorphic lambdas (0.7)
+- comp.std.c++ (0.8)
 title: A glimmer of hope on comp.std.c++
 wordpress_id: 87
 ---

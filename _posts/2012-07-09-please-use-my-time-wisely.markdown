@@ -7,6 +7,16 @@ categories:
 comments: true
 date: 2012-07-09 21:43:18+00:00
 layout: post
+tags:
+- Time Management (0.9)
+- Software Development (0.8)
+- Client Communication (0.7)
+- Efficiency (0.6)
+- Code Compilation (0.5)
+- Problem Solving (0.4)
+- Support Plans (0.3)
+- Debugging (0.2)
+- Source Code (0.1)
 title: Please use my time wisely
 wordpress_id: 1889
 ---

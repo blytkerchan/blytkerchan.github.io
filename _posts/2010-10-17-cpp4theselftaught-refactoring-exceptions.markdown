@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2010-10-17 00:31:06+00:00
 layout: post
+tags:
+- refactoring (1.0)
+- exceptions (1.0)
+- clean break (0.9)
+- compiler errors (0.8)
+- Exception class (1.0)
+- error handling (0.9)
+- re-entrant (0.8)
+- no-fail guarantee (0.9)
+- mutable keyword (0.8)
 title: Refactoring Exceptions
 wordpress_id: 982
 ---

@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2010-05-26 23:08:22+00:00
 layout: post
+tags:
+- Physics (1.0)
+- Quantum teleportation (1.0)
+- China (1.0)
+- TCP/IP (1.0)
+- Heisenberg uncertainty principle (1.0)
+- Quantum state (1.0)
+- Probability (1.0)
+- TCP packet (1.0)
+- Destination (1.0)
+- Accuracy (1.0)
 title: Quantum teleportation achieved over 16 km
 wordpress_id: 661
 ---

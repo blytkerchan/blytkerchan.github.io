@@ -10,6 +10,21 @@ categories:
 comments: true
 date: 2010-02-01 17:00:06+00:00
 layout: post
+tags:
+- C++ (0.8)
+- self-taught (0.7)
+- project (0.9)
+- use-case (1.0)
+- UML (0.6)
+- stakeholders (0.8)
+- user stories (0.9)
+- agile development (0.7)
+- actors (0.6)
+- cryptography (0.5)
+- malicious users (0.6)
+- communication (0.8)
+- design (0.8)
+- solution (0.8)
 title: 'Use-Cases Part 1: Introduction & Ingredients'
 wordpress_id: 383
 ---

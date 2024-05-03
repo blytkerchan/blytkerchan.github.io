@@ -5,6 +5,30 @@ categories:
 comments: true
 date: 2009-12-16 22:45:44+00:00
 layout: post
+tags:
+- pointers (0.9)
+- references (0.9)
+- confusion (0.8)
+- stack (0.7)
+- heap (0.7)
+- objects (0.7)
+- constructors (0.7)
+- destructors (0.7)
+- NULL (0.6)
+- ownership (0.6)
+- special value (0.6)
+- memory (0.5)
+- validation (0.5)
+- legacy code (0.5)
+- dereferencing (0.5)
+- construct (0.5)
+- destroy (0.5)
+- initialize (0.5)
+- allocation (0.5)
+- smart (0.5)
+- understand (0.5)
+- copy (0.5)
+- pass objects (0.5)
 title: 5- Objects, References and Pointers
 wordpress_id: 326
 ---

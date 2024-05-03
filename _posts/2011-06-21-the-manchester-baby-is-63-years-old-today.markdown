@@ -8,6 +8,16 @@ categories:
 comments: true
 date: 2011-06-21 16:23:14+00:00
 layout: post
+tags:
+- programmable computer (0.9)
+- memory (0.8)
+- Manchester Baby (0.7)
+- B. Jack Copeland (0.6)
+- University of Canterbury (0.5)
+- history (0.4)
+- technology (0.3)
+- anniversary (0.2)
+- modern (0.1)
 title: The Manchester Baby is 63 years old today
 wordpress_id: 1533
 ---

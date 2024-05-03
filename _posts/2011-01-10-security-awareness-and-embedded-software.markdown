@@ -18,6 +18,30 @@ categories:
 comments: true
 date: 2011-01-10 00:12:46+00:00
 layout: post
+tags:
+- interview (0.9)
+- embedded systems (0.9)
+- security issue (0.8)
+- rootkits (0.7)
+- BIOS attacks (0.7)
+- access control (0.6)
+- distributed denial of service (DDOS) (0.8)
+- critical civilian infrastructure (0.8)
+- web security (0.7)
+- application layer (0.6)
+- presentation layer (0.6)
+- Singularity project (0.8)
+- embedded software (0.8)
+- systems software (0.7)
+- C# (0.7)
+- Java (0.6)
+- C++ (0.7)
+- programming languages (0.6)
+- systems programming (0.7)
+- radical change (0.8)
+- industry productivity (0.7)
+- security awareness (0.8)
+- policy makers (0.7)
 title: Security Awareness and Embedded Software
 wordpress_id: 1148
 ---

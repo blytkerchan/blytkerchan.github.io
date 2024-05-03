@@ -8,6 +8,20 @@ categories:
 comments: true
 date: 2016-03-28 00:54:19+00:00
 layout: post
+tags:
+- security (0.9)
+- STL algorithms (0.8)
+- iterators (0.7)
+- containers (0.6)
+- safety (0.8)
+- output ranges (0.5)
+- Microsoft Visual Studio (0.7)
+- checked iterator (0.9)
+- debugging (0.6)
+- compilers (0.7)
+- Apache license (0.6)
+- GitHub (0.7)
+- pull requests (0.5)
 title: Checked output iterator
 wordpress_id: 3806
 ---

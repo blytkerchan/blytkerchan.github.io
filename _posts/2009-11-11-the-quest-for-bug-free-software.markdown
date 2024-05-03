@@ -13,6 +13,33 @@ categories:
 comments: true
 date: 2009-11-11 02:00:37+00:00
 layout: post
+tags:
+- software engineering (1.0)
+- high-quality software (0.9)
+- tools (0.8)
+- systems (0.7)
+- procedures (0.6)
+- processes (0.6)
+- software quality (0.9)
+- testing (0.8)
+- IEEE Transactions on Software Engineering (0.7)
+- hardware architectures (0.6)
+- Intel's IA-32 (x86) architecture (0.5)
+- Windows (0.5)
+- Linux (0.5)
+- embedded systems (0.6)
+- legacy code (0.6)
+- C and C++ (0.7)
+- Java (0.5)
+- C# (0.5)
+- cell phones (0.6)
+- hand-held devices (0.6)
+- software bugs (0.8)
+- human endeavor (0.7)
+- human intellect (0.7)
+- experimentation (0.6)
+- human-centric approach (0.7)
+- bug-free software (0.8)
 title: The Quest For Bug-Free Software
 wordpress_id: 370
 ---

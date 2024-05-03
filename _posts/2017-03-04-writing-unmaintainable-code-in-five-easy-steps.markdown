@@ -5,6 +5,13 @@ categories:
 comments: true
 date: 2017-03-04 20:26:12+00:00
 layout: post
+tags:
+- unpredictability (0.9)
+- unreadability (0.8)
+- object-orientation (0.7)
+- Mjolnir (0.6)
+- frameworks (0.5)
+- test documentation (0.4)
 title: Writing unmaintainable code in five easy steps
 wordpress_id: 4154
 ---

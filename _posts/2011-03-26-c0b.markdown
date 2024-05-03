@@ -9,6 +9,19 @@ categories:
 comments: true
 date: 2011-03-26 15:35:33+00:00
 layout: post
+tags:
+- C++ (1.0)
+- Standard Committee (0.8)
+- Madrid (0.5)
+- C++0x (1.0)
+- ISO (0.7)
+- Threads (0.6)
+- Ranges (0.4)
+- Lambda Expressions (0.9)
+- Automatic Type Deduction (0.8)
+- Rvalue References (0.7)
+- Functional Programming (0.6)
+- GCC (0.5)
 title: C++0b
 wordpress_id: 1355
 ---

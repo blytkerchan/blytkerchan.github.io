@@ -16,6 +16,31 @@ excerpt: 'When autumn turns hence
 
   '
 layout: post
+tags:
+- culture (1.0)
+- Geert Hofstede (0.9)
+- Power Distance Index (0.8)
+- Individualism (0.7)
+- Masculinity (0.6)
+- Uncertainty Avoidance Index (0.8)
+- Long Term Orientation (0.7)
+- Netherlands (0.9)
+- egalitarian (0.8)
+- monarchy (0.6)
+- tolerance (0.7)
+- risk (0.6)
+- prime minister (0.6)
+- Wim Kok (0.7)
+- business (0.8)
+- authority (0.7)
+- equality (0.8)
+- Quebec (0.7)
+- WWII (0.6)
+- North Carolina (0.6)
+- immigrant (0.8)
+- expatriate (0.7)
+- international environment (0.9)
+- soft skills (0.8)
 title: Culture and working internationally
 wordpress_id: 110
 ---

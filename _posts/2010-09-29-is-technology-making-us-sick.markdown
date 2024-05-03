@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2010-09-29 01:11:59+00:00
 layout: post
+tags:
+- technology (5.0)
+- health (4.0)
+- research (3.0)
+- medical profession (2.0)
+- mobile phones (1.0)
+- email (1.0)
+- safety (1.0)
+- security (1.0)
+- physicians (1.0)
+- myopia (1.0)
 title: Is technology making us sick?
 wordpress_id: 952
 ---

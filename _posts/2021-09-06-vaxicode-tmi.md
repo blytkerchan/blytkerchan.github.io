@@ -12,6 +12,22 @@ categories:
 comments: true
 date: 2021-09-06
 layout: post
+tags:
+- driving (0.9)
+- QR code (0.9)
+- vaccine passport (0.9)
+- privacy implications (0.8)
+- SHC (0.7)
+- X.509 certificates (0.7)
+- European standard (0.7)
+- certificate revocation list (0.8)
+- implementation options (0.8)
+- privacy (0.9)
+- OCSP (0.6)
+- revocation list-based approach (0.7)
+- Tim Horton's (0.6)
+- intrusion of privacy (0.8)
+- VaxiCode Verif (0.6)
 title: Contents of the Quebec vaccine passport -- TMI?
 ---
 

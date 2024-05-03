@@ -17,6 +17,22 @@ categories:
 comments: true
 date: 2013-12-27 01:40:12+00:00
 layout: post
+tags:
+- ICS (1.0)
+- Machine-to-machine communications (0.9)
+- DNP3 (1.0)
+- Modbus (0.8)
+- Security (1.0)
+- Authentication (0.9)
+- Authorization (0.8)
+- Non-repudiation (0.7)
+- TLS (0.9)
+- Transport layer security (0.8)
+- Public key infrastructure (PKI) (0.9)
+- Network security (0.9)
+- Radio communications (0.8)
+- Serial connections (0.7)
+- Obscurity (0.8)
 title: 'The importance of ICS security: ICS communications'
 wordpress_id: 2456
 ---

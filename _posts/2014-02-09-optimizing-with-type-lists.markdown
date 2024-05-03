@@ -5,6 +5,21 @@ categories:
 comments: true
 date: 2014-02-09 17:27:27+00:00
 layout: post
+tags:
+- optimization (0.9)
+- type lists (0.8)
+- template meta-programming (0.7)
+- Vlinder Software (0.6)
+- C++ (0.5)
+- library (0.4)
+- configuration headers (0.6)
+- allocators (0.7)
+- meta library (0.8)
+- type list meta-programs (0.9)
+- Haskell (0.7)
+- KMP algorithm (0.6)
+- user-interesting information (0.8)
+- allocation algorithms (0.7)
 title: Optimizing with type lists
 wordpress_id: 2563
 ---

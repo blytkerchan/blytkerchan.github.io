@@ -10,6 +10,21 @@ categories:
 comments: true
 date: 2010-05-04 00:06:43+00:00
 layout: post
+tags:
+- language diversity (0.9)
+- coding standards (0.8)
+- francophone (0.7)
+- anglophone (0.7)
+- ASCII encoding (0.6)
+- franglais (0.6)
+- Quebec (0.5)
+- corporate policies (0.5)
+- language laws (0.5)
+- cultural differences (0.4)
+- multilingualism (0.4)
+- national identity (0.4)
+- Spock (0.3)
+- Star Trek (0.3)
 title: Speaking different languages
 wordpress_id: 590
 ---

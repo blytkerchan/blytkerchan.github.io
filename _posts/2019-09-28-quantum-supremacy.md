@@ -12,6 +12,24 @@ comments: true
 date: 2019-09-28 23:32:00-04:00
 layout: post
 slug: quantum-supremacy
+tags:
+- technology (0.9)
+- quantum computing (0.8)
+- physics (0.7)
+- Google (0.6)
+- experiment (0.6)
+- quantum supremacy (0.9)
+- random numbers (0.7)
+- Feynman (0.5)
+- qubits (0.7)
+- classical computers (0.6)
+- linear algebra (0.6)
+- supercomputers (0.5)
+- IBM (0.4)
+- Shor's algorithm (0.6)
+- RSA (0.5)
+- cyber security (0.4)
+- Diffie-Hellman (0.4)
 title: Quantum Supremacy
 ---
 

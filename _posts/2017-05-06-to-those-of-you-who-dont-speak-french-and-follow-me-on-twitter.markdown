@@ -5,6 +5,18 @@ categories:
 comments: true
 date: 2017-05-06 09:30:25+00:00
 layout: post
+tags:
+- French Election (0.9)
+- Emmanuel Macron (0.8)
+- Marine le Pen (0.7)
+- American Presidential Election (0.6)
+- Checks and Balances (0.8)
+- Geert Wilders (0.5)
+- NATO (0.4)
+- European Union (0.7)
+- Louis Chedid (0.3)
+- Anne Frank (0.4)
+- Nazi Occupation (0.4)
 title: To those of you who don't speak French and follow me on Twitter
 wordpress_id: 4174
 ---

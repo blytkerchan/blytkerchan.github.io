@@ -11,6 +11,40 @@ categories:
 comments: true
 date: 2009-09-01 03:26:55+00:00
 layout: post
+tags:
+- library code (1.0)
+- binary compatibility (1.0)
+- API compatibility (1.0)
+- backward compatible (1.0)
+- forward compatibility (1.0)
+- ABI (Application Binary Interface) (1.0)
+- C++ (1.0)
+- object layout (1.0)
+- C (1.0)
+- function prototype (1.0)
+- name mangling (1.0)
+- shared libraries (1.0)
+- dynamic linker (1.0)
+- dynamic loader (1.0)
+- compile (1.0)
+- link (1.0)
+- executable application (1.0)
+- memory allocator (1.0)
+- template functions (1.0)
+- template classes (1.0)
+- default parameter values (1.0)
+- translation units (1.0)
+- linker (1.0)
+- virtual machine (1.0)
+- Incubator (1.0)
+- versioning (1.0)
+- interface design (1.0)
+- built-in equivalents (1.0)
+- roll your own (1.0)
+- C API (1.0)
+- STL (1.0)
+- Boost (1.0)
+- Maintenance branches (1.0)
 title: Binary Compatibility
 wordpress_id: 177
 ---

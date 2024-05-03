@@ -9,6 +9,19 @@ categories:
 comments: true
 date: 2011-03-06 20:42:33+00:00
 layout: post
+tags:
+- software development (1.0)
+- bug-free software (0.9)
+- software verification (0.8)
+- formal proof (0.7)
+- static verification tools (0.6)
+- software engineering (0.6)
+- agile development (0.8)
+- continuous integration (0.7)
+- unit testing (0.6)
+- quality assurance (0.8)
+- test automation (0.7)
+- software testing (0.7)
 title: The Evolution of the Software Engineering Practice Faced With The Knowledge
   That "Bugs Must Exist"
 wordpress_id: 1281

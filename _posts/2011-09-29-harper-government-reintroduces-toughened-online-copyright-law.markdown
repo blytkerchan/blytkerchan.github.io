@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2011-09-29 22:37:45+00:00
 layout: post
+tags:
+- Vancouver Sun (1.0)
+- bill C-32 (1.0)
+- re-introduced (0.9)
+- modification (0.8)
+- conservative majority (0.7)
+- Parliament (0.6)
+- Copyright Modernization Act (1.0)
+- C-11 (1.0)
+- update (0.9)
+- Oct 8, 2008 (0.8)
 title: Harper government reintroduces toughened online copyright law
 wordpress_id: 1692
 ---

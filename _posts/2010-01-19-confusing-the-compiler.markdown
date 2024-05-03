@@ -7,6 +7,14 @@ categories:
 comments: true
 date: 2010-01-19 01:53:31+00:00
 layout: post
+tags:
+- compiler (0.9)
+- confusion (0.8)
+- error (0.9)
+- macro (0.7)
+- warning (0.8)
+- parameters (0.8)
+- function (0.8)
 title: Confusing the compiler
 wordpress_id: 454
 ---

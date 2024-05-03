@@ -5,6 +5,21 @@ categories:
 comments: true
 date: 2014-10-24 20:36:11+00:00
 layout: post
+tags:
+- bugs (1.0)
+- API (0.8)
+- library (0.7)
+- smart pointer (0.9)
+- design flaw (0.8)
+- testing framework (0.6)
+- implementation (0.7)
+- code changes (0.7)
+- requirements (0.6)
+- executive decision (0.5)
+- Vlinder Software (0.6)
+- namespace (0.7)
+- automated builds (0.6)
+- upgrade (0.7)
 title: 'Radical Refactoring: Breaking Changes'
 wordpress_id: 3349
 ---

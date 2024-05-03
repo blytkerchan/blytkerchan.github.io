@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2010-07-02 00:52:22+00:00
 layout: post
+tags:
+- SSPI (1.0)
+- MechanismFactory (1.0)
+- Unicode (0.9)
+- ANSI (0.8)
+- RAII (0.7)
+- Overloading (0.6)
+- Windows (0.6)
+- Caching (0.6)
+- Testing (0.5)
+- Debugging (0.5)
 title: 'Socks 5: Expanding the factory'
 wordpress_id: 810
 ---

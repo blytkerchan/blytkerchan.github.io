@@ -34,6 +34,27 @@ categories:
 comments: true
 date: 2014-01-05 05:24:12+00:00
 layout: post
+tags:
+- ICS security (1.0)
+- NERC (0.9)
+- Critical Infrastructure Protection (0.8)
+- Smart grids (0.7)
+- TCP/IP communications (0.6)
+- Cyber Security (0.8)
+- Electronic Security Perimeter (0.8)
+- Pharmaceutical industry (0.7)
+- 21CFR.11 requirements (0.8)
+- Confidentiality (0.6)
+- Integrity (0.6)
+- Authenticity (0.6)
+- Non-Repudiation (0.6)
+- Electricity grid (0.9)
+- Smart grid technology (0.7)
+- Aging infrastructure (0.7)
+- Firmware quality (0.7)
+- Regulatory requirements (0.8)
+- Intelligent electronic devices (0.7)
+- Security vulnerabilities (0.8)
 title: ICS security and regulatory requirements
 wordpress_id: 2490
 ---

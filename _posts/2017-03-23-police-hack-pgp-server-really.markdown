@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2017-03-23 22:19:45+00:00
 layout: post
+tags:
+- 1. PGP (1.0)
+- 2. Police (0.8)
+- 3. Server (0.7)
+- 4. Encryption (0.6)
+- 5. Security (0.6)
+- 6. Dutch (0.5)
+- 7. Law enforcement (0.5)
+- 8. Privacy (0.5)
+- 9. Hack (0.4)
+- 10. BlackBerrys (0.4)
 title: '"Police hack PGP server" -- really?'
 wordpress_id: 4162
 ---

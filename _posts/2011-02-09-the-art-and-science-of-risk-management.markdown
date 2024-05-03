@@ -34,6 +34,19 @@ categories:
 comments: true
 date: 2011-02-09 02:33:49+00:00
 layout: post
+tags:
+- risk-management (1.0)
+- agile-methodologies (0.9)
+- project-management (0.8)
+- software-development (0.7)
+- risk-identification (0.6)
+- risk-analysis (0.6)
+- risk-dependencies (1.0)
+- severity-metrics (0.9)
+- risk-life-cycle (0.8)
+- iso-31000 (0.7)
+- communication (0.6)
+- risk-severity (1.0)
 wordpress_id: 1206
 ---
 

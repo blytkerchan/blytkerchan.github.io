@@ -12,6 +12,17 @@ excerpt: 'a glass of water
 
   '
 layout: post
+tags:
+- Critical Section (1.0)
+- Mutex (1.0)
+- Microsoft (0.8)
+- Legacy Code (0.7)
+- Bug (0.6)
+- Thread Safety (0.9)
+- Re-entrant Code (0.8)
+- Spinlock (0.7)
+- Data Protection (0.7)
+- Code Modification (0.6)
 title: Critical sections - of what?
 wordpress_id: 94
 ---

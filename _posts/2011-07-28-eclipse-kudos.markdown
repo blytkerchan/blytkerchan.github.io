@@ -11,6 +11,20 @@ categories:
 comments: true
 date: 2011-07-28 16:56:30+00:00
 layout: post
+tags:
+- software development (0.9)
+- Eclipse IDE (0.8)
+- software architecture (0.7)
+- EGit (0.6)
+- Git integration (0.5)
+- IDE design (0.8)
+- software projects (0.7)
+- complete rewrites (0.6)
+- API compatibility (0.5)
+- system scalability (0.4)
+- maintenance patches (0.4)
+- plugin architecture (0.6)
+- software installation (0.5)
 title: 'Eclipse: kudos'
 wordpress_id: 1597
 ---

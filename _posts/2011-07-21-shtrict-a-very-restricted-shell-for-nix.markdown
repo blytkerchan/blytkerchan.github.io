@@ -9,6 +9,18 @@ categories:
 comments: true
 date: 2011-07-21 02:47:08+00:00
 layout: post
+tags:
+- restricted shell (1.0)
+- shell server (0.8)
+- firewall (0.6)
+- GNU General Public License (0.9)
+- commands (0.7)
+- syslog (0.5)
+- Ubuntu Natty (0.4)
+- package (0.6)
+- ZIP (0.4)
+- DEB (0.3)
+- sources (0.7)
 title: 'shtrict: a very restricted shell for *nix'
 wordpress_id: 1571
 ---

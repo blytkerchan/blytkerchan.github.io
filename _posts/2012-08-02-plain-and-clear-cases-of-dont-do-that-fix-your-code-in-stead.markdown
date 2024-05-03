@@ -5,6 +5,25 @@ categories:
 comments: true
 date: 2012-08-02 17:04:20+00:00
 layout: post
+tags:
+- discussion (1.0)
+- signal anomaly (1.0)
+- SIGSEGV (1.0)
+- Access Violation (1.0)
+- bug (1.0)
+- programmer laziness (1.0)
+- null pointer (1.0)
+- comp.lang.c (1.0)
+- C standard (1.0)
+- signals in C (1.0)
+- POSIX (1.0)
+- code structure (1.0)
+- DOM (1.0)
+- MSXML (1.0)
+- broken code (1.0)
+- HPET (1.0)
+- chipsets (1.0)
+- Access Violation (1.0)
 title: Plain and clear cases of "don't do that - fix your code in stead"
 wordpress_id: 1913
 ---

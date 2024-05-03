@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2013-09-14 02:15:32+00:00
 layout: post
+tags:
+- politics (0.9)
+- Quebec (0.8)
+- government job (0.7)
+- PQ charter of values (0.7)
+- religious neutrality (0.7)
+- multi-ethnic society (0.6)
+- diversity (0.6)
+- uniforms (0.5)
+- headscarf (0.5)
+- xenophobia (0.5)
 title: 'Common nonsense: the charter of Quebec Values'
 wordpress_id: 2358
 ---

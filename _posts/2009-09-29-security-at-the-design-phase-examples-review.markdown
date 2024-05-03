@@ -8,6 +8,27 @@ categories:
 comments: true
 date: 2009-09-29 18:02:22+00:00
 layout: post
+tags:
+- security (1.0)
+- design-time concern (0.9)
+- application life-cycle (0.8)
+- defects (0.7)
+- agile practices (0.6)
+- Architectural-level patterns (0.9)
+- Distrustful Decomposition (0.8)
+- PrivSep (Privilege Separation) (0.8)
+- Defer to Kernel (0.8)
+- Design-level patterns (0.9)
+- Secure State Machine (0.8)
+- Secure Visitor (0.8)
+- Implementation-level patterns (0.9)
+- Secure Directory (0.8)
+- Pathname Canonicalization (0.8)
+- Input Validation (0.8)
+- Runtime Acquisition Is Initialization (0.8)
+- Proxy pattern (0.7)
+- authorization (0.7)
+- RAII (0.7)
 title: Security at the Design Phase - Examples & Review
 wordpress_id: 240
 ---

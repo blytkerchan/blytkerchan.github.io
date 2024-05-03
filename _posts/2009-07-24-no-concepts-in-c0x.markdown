@@ -1,16 +1,30 @@
 ---
 author: rlc
+categories:
+- Programming
 comments: true
 date: 2009-07-24 21:50:37+00:00
-excerpt: |
-  Sadness of winter
+excerpt: 'Sadness of winter
+
   decided this summer, when
+
   no concept survived
+
+  '
 layout: post
+tags:
+- C++ (1.0)
+- Generic programming (0.9)
+- Concepts (1.0)
+- Standards committee (0.8)
+- Bjarne Stroustrup (0.7)
+- Template system (0.8)
+- Meta-programming (0.9)
+- Types (0.8)
+- Template meta-programming (0.9)
+- Libraries (0.7)
 title: No Concepts in C++0x
 wordpress_id: 54
-categories:
-  - Programming
 ---
 
 The _**one feature**_ I had really been looking forward to in C++0x, generic programming concepts, have been scrapped from C++0x by the standards committee. In my opinion, this it was sad day indeed for C++. Bjarne Stroustrup explains why [here](http://www.ddj.com/architect/218600111). In short, it was a cautious attempt to prevent catastrophy by letting concepts into the language without being ready.

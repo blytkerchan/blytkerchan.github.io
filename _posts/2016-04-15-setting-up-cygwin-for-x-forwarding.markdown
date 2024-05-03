@@ -17,6 +17,27 @@ excerpt: This is one of those "recipe" posts that tend to be useful if you happe
   called "Linux terminal" on the desktop, that opens up an SSH terminal to a Linux
   box, with X forwarding.
 layout: post
+tags:
+- Linux (0.9)
+- Windows (0.8)
+- iOS (0.5)
+- Ubuntu (0.7)
+- Debian (0.6)
+- RedHat (0.4)
+- X-over-SSH (0.6)
+- Putty (0.4)
+- Xming (0.4)
+- Cygwin (0.9)
+- SSH (0.8)
+- X server (0.7)
+- Xorg-server (0.6)
+- Vim (0.5)
+- Mintty (0.5)
+- X11Forwarding (0.6)
+- XWin (0.4)
+- DISPLAY environment variable (0.5)
+- X logo (0.4)
+- Xterm (0.4)
 title: Setting up Cygwin for X forwarding
 wordpress_id: 3816
 ---

@@ -9,6 +9,29 @@ categories:
 comments: true
 date: 2011-06-04 21:09:09+00:00
 layout: post
+tags:
+- functional programming (1.0)
+- lambda expressions (1.0)
+- compile-time (1.0)
+- meta-functions (1.0)
+- functors (1.0)
+- Fibonacci sequence (1.0)
+- SFINAE (1.0)
+- C++ (1.0)
+- meta-programming (1.0)
+- template (1.0)
+- overloading (1.0)
+- compile-time constant (1.0)
+- recursive specialization (1.0)
+- substitution failure (1.0)
+- function call (1.0)
+- compile-time error (1.0)
+- candidate function (1.0)
+- compile-time optimization (1.0)
+- variadic function (1.0)
+- member type (1.0)
+- nested typedef (1.0)
+- on-line IDE (1.0)
 title: Functional Programming at Compile-Time
 wordpress_id: 1503
 ---

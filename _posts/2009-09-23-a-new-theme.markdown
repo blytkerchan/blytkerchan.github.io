@@ -5,6 +5,14 @@ categories:
 comments: true
 date: 2009-09-23 16:59:57+00:00
 layout: post
+tags:
+- blogging (0.9)
+- website design (0.8)
+- theme change (0.7)
+- RSS feed (0.6)
+- categorization (0.8)
+- improvements (0.9)
+- user feedback (0.7)
 title: A new theme
 wordpress_id: 211
 ---

@@ -7,6 +7,22 @@ categories:
 comments: true
 date: 2011-07-13 01:17:42+00:00
 layout: post
+tags:
+- Twitter (0.9)
+- updates (0.7)
+- non-tech person (0.6)
+- politics journalist (0.8)
+- CBC (0.9)
+- Kady O'Malley (0.9)
+- liveblogging (0.7)
+- NotW scandal (0.8)
+- CRTC (0.6)
+- Usage-Based Billing (0.6)
+- CBC Radio (0.8)
+- journalism (0.8)
+- News International (0.7)
+- hacking (0.6)
+- voicemail (0.5)
 title: 'From #NotW in the GMT morning to #UBB in the EDT afternoon -- an example of
   devoted journalism'
 wordpress_id: 1570

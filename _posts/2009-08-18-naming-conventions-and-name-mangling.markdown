@@ -5,6 +5,18 @@ categories:
 comments: true
 date: 2009-08-18 20:33:53+00:00
 layout: post
+tags:
+- C++ (1.0)
+- naming convention (0.9)
+- underscores (0.8)
+- global namespace (0.7)
+- name mangling (0.6)
+- C (0.5)
+- scope (0.9)
+- static class members (0.8)
+- enumerators (0.7)
+- compiler (0.9)
+- standards-compliant (0.8)
 title: Naming conventions and name mangling
 wordpress_id: 171
 ---

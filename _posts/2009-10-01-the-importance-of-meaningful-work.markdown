@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2009-10-01 19:11:10+00:00
 layout: post
+tags:
+- Meaningful work (1.0)
+- Malcolm Gladwell (0.8)
+- Outliers (0.7)
+- Motivation (0.9)
+- Productivity (0.6)
+- Job satisfaction (0.8)
+- Personal growth (0.7)
+- Financial stability (0.5)
+- Career change (0.6)
+- Work-life balance (0.6)
 title: The importance of meaningful work
 wordpress_id: 109
 ---

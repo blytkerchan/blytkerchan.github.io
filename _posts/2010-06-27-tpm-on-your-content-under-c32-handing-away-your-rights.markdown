@@ -5,6 +5,15 @@ categories:
 comments: true
 date: 2010-06-27 02:52:20+00:00
 layout: post
+tags:
+- copyright (0.9)
+- TPM (0.8)
+- software (0.7)
+- digital rights (0.6)
+- TPM circumvention (0.8)
+- copyright owner (0.7)
+- technology protection measure (0.8)
+- software piracy (0.5)
 title: 'TPM on your content under #c32 - handing away your rights?'
 wordpress_id: 799
 ---

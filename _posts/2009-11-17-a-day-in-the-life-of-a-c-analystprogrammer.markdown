@@ -10,6 +10,22 @@ categories:
 comments: true
 date: 2009-11-17 00:25:08+00:00
 layout: post
+tags:
+- CBC Radio (1.0)
+- typical day (0.8)
+- non-developers (0.7)
+- aspiring developers (0.6)
+- analyst-programmer (0.9)
+- functional requirements (0.8)
+- software design (0.7)
+- teamwork (0.9)
+- project management (0.7)
+- peer reviews (0.6)
+- scrum (0.8)
+- work-life balance (0.7)
+- podcasts (0.8)
+- programming (0.9)
+- analyst (0.7)
 title: A Day In The Life Of A C++ Analyst/Programmer
 wordpress_id: 375
 ---

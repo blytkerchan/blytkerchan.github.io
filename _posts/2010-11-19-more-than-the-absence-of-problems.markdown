@@ -5,6 +5,21 @@ categories:
 comments: true
 date: 2010-11-19 04:23:03+00:00
 layout: post
+tags:
+- Quality (5.0)
+- ISO (4.0)
+- Requirements (3.5)
+- Excellence (3.0)
+- Prevention (2.5)
+- Software (2.0)
+- Hardware (1.5)
+- Integration (1.0)
+- Testing (4.0)
+- Stability (3.5)
+- Design (3.0)
+- Implementation (2.5)
+- Failure (2.0)
+- Root Cause (4.0)
 title: More than the absence of problems
 wordpress_id: 1133
 ---

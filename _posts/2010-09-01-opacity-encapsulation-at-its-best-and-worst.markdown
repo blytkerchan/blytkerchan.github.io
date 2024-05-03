@@ -17,6 +17,20 @@ categories:
 comments: true
 date: 2010-09-01 12:00:20+00:00
 layout: post
+tags:
+- design (1.0)
+- abstract factory (0.9)
+- encapsulation (1.0)
+- opacity (1.0)
+- advantages (0.8)
+- disadvantages (0.8)
+- mechanism (0.9)
+- credentials (0.9)
+- security context (0.8)
+- negotiation (0.9)
+- trade-offs (0.9)
+- user control (0.8)
+- error handling (0.8)
 title: 'Opacity: Encapsulation at its best (and worst)'
 wordpress_id: 891
 ---

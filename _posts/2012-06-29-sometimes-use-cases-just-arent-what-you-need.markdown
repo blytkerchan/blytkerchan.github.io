@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2012-06-29 03:50:47+00:00
 layout: post
+tags:
+- blogging (1.0)
+- use-cases (1.0)
+- hardware (0.8)
+- requirements (0.7)
+- future-proofing (0.6)
+- configuration (0.6)
+- system design (0.5)
+- innovation (0.5)
+- memristor (0.4)
+- long-term planning (0.4)
 title: Sometimes, use-cases just aren't what you need
 wordpress_id: 1878
 ---

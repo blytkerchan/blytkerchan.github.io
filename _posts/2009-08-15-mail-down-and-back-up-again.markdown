@@ -8,6 +8,14 @@ categories:
 comments: true
 date: 2009-08-15 12:32:23+00:00
 layout: post
+tags:
+- hosting provider (0.8)
+- DNS provider (0.7)
+- MX entry (0.6)
+- mail service (0.8)
+- website downtime (0.5)
+- notification (0.6)
+- Michel (0.4)
 title: Mail down - and back up again
 wordpress_id: 165
 ---

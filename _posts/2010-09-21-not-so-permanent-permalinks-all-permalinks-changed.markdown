@@ -5,6 +5,15 @@ categories:
 comments: true
 date: 2010-09-21 22:26:44+00:00
 layout: post
+tags:
+- site feature (0.8)
+- permalinks (0.9)
+- error page (0.6)
+- inconvenience (0.7)
+- blogging engine (0.5)
+- bugs (0.4)
+- broken link (0.8)
+- convenience (0.7)
 title: 'Updated: Not-so-permanent permalinks (all permalinks changed)'
 wordpress_id: 948
 ---

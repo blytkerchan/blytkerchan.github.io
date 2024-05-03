@@ -13,6 +13,18 @@ categories:
 comments: true
 date: 2013-09-25 16:36:23+00:00
 layout: post
+tags:
+- specification (1.0)
+- C++ (0.8)
+- formal specification (0.9)
+- executable specifications (0.8)
+- Haskell (0.9)
+- LED (0.7)
+- binary inputs (0.7)
+- whiteboard (0.6)
+- truth table (0.6)
+- implementation (0.8)
+- formalism (0.7)
 title: The benefits of formal, executable specifications
 wordpress_id: 2387
 ---

@@ -12,6 +12,17 @@ categories:
 comments: true
 date: 2017-07-22 02:20:14+00:00
 layout: post
+tags:
+- software development (0.9)
+- competence (0.8)
+- incompetence (0.7)
+- Dunning-Kruger effect (0.9)
+- firmware development (0.8)
+- embedded devices (0.7)
+- IoT devices (0.6)
+- multi-threading (0.7)
+- security breach (0.6)
+- skill-set (0.8)
 title: The problem with making things too easy
 wordpress_id: 4185
 ---

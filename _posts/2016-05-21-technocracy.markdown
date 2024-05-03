@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2016-05-21 17:48:27+00:00
 layout: post
+tags:
+- project management (0.9)
+- team management (0.8)
+- agile development (0.7)
+- system architecture (0.8)
+- technocratic approach (0.9)
+- software development (0.6)
+- team organization (0.7)
+- code review (0.6)
+- vision statement (0.8)
+- milestone planning (0.7)
 title: Technocracy
 wordpress_id: 3883
 ---

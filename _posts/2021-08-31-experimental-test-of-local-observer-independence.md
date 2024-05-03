@@ -18,6 +18,22 @@ categories:
 comments: true
 date: 2021-08-31
 layout: post
+tags:
+- quantum mechanics (0.9)
+- interpretations (0.8)
+- Copenhagen interpretation (0.7)
+- many worlds interpretation (0.7)
+- Wigner's Friend experiment (0.8)
+- Schrödinger's cat (0.7)
+- Heisenberg's uncertainty principle (0.7)
+- observer influence (0.8)
+- wave function (0.8)
+- entanglement (0.8)
+- Dirac notation (0.7)
+- Proietti et al. experiment (0.8)
+- observer independence (0.8)
+- free choice (0.6)
+- locality (0.6)
 title: Experimental test of local observer-independence
 ---
 

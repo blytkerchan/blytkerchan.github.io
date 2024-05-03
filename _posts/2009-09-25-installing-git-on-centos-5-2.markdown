@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2009-09-25 22:06:09+00:00
 layout: post
+tags:
+- CentOS (0.9)
+- Git (0.9)
+- RPM (0.8)
+- Source build (0.7)
+- Development server (0.6)
+- Dependencies (0.6)
+- Installation (0.6)
+- Home directory (0.5)
+- Opt (0.5)
+- Clone (0.5)
 title: Installing Git on CentOS 5.2
 wordpress_id: 216
 ---

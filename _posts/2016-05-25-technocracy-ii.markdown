@@ -11,6 +11,30 @@ categories:
 comments: true
 date: 2016-05-25 02:48:23+00:00
 layout: post
+tags:
+- project management (0.9)
+- technocracy (0.8)
+- ethics (0.7)
+- history (0.6)
+- government (0.6)
+- experts (0.6)
+- engineering (0.5)
+- responsibility (0.5)
+- morality (0.5)
+- business (0.4)
+- society (0.4)
+- humanity (0.4)
+- mistakes (0.4)
+- deportation (0.3)
+- war crimes (0.3)
+- atrocities (0.3)
+- ethical implications (0.3)
+- team organization (0.2)
+- boundaries (0.2)
+- Holocaust (0.2)
+- software development (0.2)
+- Ford (0.2)
+- safety (0.2)
 title: Technocracy II
 wordpress_id: 3893
 ---

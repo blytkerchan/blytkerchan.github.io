@@ -8,6 +8,17 @@ comments: true
 date: 2019-10-19 00:15:38-04:00
 layout: post
 slug: wonderful-world
+tags:
+- Technology (5.0)
+- Computer History (4.5)
+- Programming (4.0)
+- Software Engineering (3.5)
+- Computer Science (3.0)
+- Internet (3.0)
+- Moore's Law (2.5)
+- Quantum Computing (2.0)
+- Innovation (2.0)
+- Future Technology (1.5)
 title: We live in a wonderful world
 ---
 

@@ -5,6 +5,19 @@ categories:
 comments: true
 date: 2013-03-05 00:06:32+00:00
 layout: post
+tags:
+- struct-design (1.0)
+- magic-numbers (0.9)
+- versions (0.8)
+- alignment (1.0)
+- endianness (0.7)
+- padding (1.0)
+- sizeof-operator (0.9)
+- debugging (0.9)
+- alignment-errors (0.8)
+- structure-size (0.9)
+- padding-errors (0.8)
+- byte-alignment (0.9)
 title: Structure alignment and padding
 wordpress_id: 2050
 ---

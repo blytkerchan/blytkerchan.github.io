@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2012-06-02 13:45:11+00:00
 layout: post
+tags:
+- global economy (0.9)
+- robustness analysis (0.9)
+- Canada (0.8)
+- economy (0.8)
+- 24/7 embedded system (0.7)
+- fundamentals (0.7)
+- development processes (0.6)
+- code review (0.6)
+- error-prevention techniques (0.6)
+- static analysis tools (0.6)
 title: 'Robustness analysis: the fundamentals'
 wordpress_id: 1840
 ---

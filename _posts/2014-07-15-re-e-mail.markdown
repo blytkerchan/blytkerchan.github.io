@@ -7,6 +7,17 @@ categories:
 comments: true
 date: 2014-07-15 02:31:30+00:00
 layout: post
+tags:
+- Email management (0.9)
+- Communication efficiency (0.8)
+- Inbox organization (0.7)
+- Prioritizing emails (0.6)
+- Response time (0.5)
+- Avoiding email overload (0.4)
+- Effective communication (0.4)
+- Email etiquette (0.3)
+- Managing work emails (0.3)
+- VIP communication (0.2)
 title: 'Re: E-mail'
 wordpress_id: 3217
 ---

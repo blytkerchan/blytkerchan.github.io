@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2011-10-09 03:15:33+00:00
 layout: post
+tags:
+- Copyright Act (0.9)
+- Bill C-11 (0.8)
+- Online copyright infringement (0.7)
+- Enabling infringement (0.6)
+- Internet communications (0.5)
+- Peer-to-peer networks (0.4)
+- BitTorrent (0.4)
+- Copyright holder (0.3)
+- Public domain (0.3)
+- Middle-man liability (0.2)
 title: Making the enabling of online copyright infringement itself an infringement
   of copyright
 wordpress_id: 1697

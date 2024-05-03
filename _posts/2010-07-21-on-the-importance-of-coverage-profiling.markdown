@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2010-07-21 02:49:41+00:00
 layout: post
+tags:
+- Coverage Profiling (1.0)
+- Unit Testing (0.9)
+- Code Coverage (0.9)
+- Debugging (0.8)
+- Software Testing (0.7)
+- Test Coverage (0.7)
+- ADT (0.6)
+- Bug Detection (0.6)
+- Path Tracing (0.5)
+- Code Analysis (0.5)
 title: On the Importance of Coverage Profiling
 wordpress_id: 844
 ---

@@ -10,6 +10,22 @@ comments: true
 date: 2019-11-03
 layout: post
 slug: first-quantum-results
+tags:
+- quantum computing (1.0)
+- quantum circuits (1.0)
+- IBM (0.8)
+- Google (0.5)
+- Hadamard gate (0.9)
+- CNOT gate (0.9)
+- quantum computers (0.9)
+- error analysis (0.9)
+- quantum simulator (0.8)
+- quantum errors (0.9)
+- quantum results (0.8)
+- quantum entanglement (0.7)
+- quantum gates (0.8)
+- quantum experiments (0.7)
+- quantum comparison (0.6)
 title: My first results with quantum computing experiments
 ---
 

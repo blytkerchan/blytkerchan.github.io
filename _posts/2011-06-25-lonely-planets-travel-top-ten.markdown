@@ -7,6 +7,21 @@ categories:
 comments: true
 date: 2011-06-25 01:50:21+00:00
 layout: post
+tags:
+- Lonely Planet (0.9)
+- travel destinations (0.8)
+- Syria (0.9)
+- civil unrest (0.7)
+- Japan (0.9)
+- nuclear accident (0.8)
+- vacation (0.8)
+- world news (0.6)
+- Italy (0.8)
+- tourism (0.7)
+- United States (0.7)
+- Canada (0.7)
+- Europe (0.7)
+- frugal travel (0.6)
 title: Lonely Planet's Travel Top Ten
 wordpress_id: 1547
 ---

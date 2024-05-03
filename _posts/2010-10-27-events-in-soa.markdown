@@ -7,6 +7,20 @@ categories:
 comments: true
 date: 2010-10-27 02:48:23+00:00
 layout: post
+tags:
+- Gartner (0.9)
+- SOA (0.9)
+- Event-driven interactions (0.8)
+- EPCGlobal (0.7)
+- Auto-ID lab (0.6)
+- EPCIS (0.8)
+- Service-oriented architecture (0.8)
+- Query Control Interface (0.7)
+- Capturing Interface (0.6)
+- XML-over-HTTP (0.6)
+- IBM (0.7)
+- SAP (0.7)
+- Business analysis tools (0.6)
 title: Events in SOA
 wordpress_id: 1103
 ---

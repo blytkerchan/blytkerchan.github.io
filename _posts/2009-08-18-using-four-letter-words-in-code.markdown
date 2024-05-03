@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2009-08-18 15:33:41+00:00
 layout: post
+tags:
+- firmware (0.9)
+- device drivers (0.8)
+- integer values (0.9)
+- debugger (0.7)
+- bit pattern (0.6)
+- magic number (0.9)
+- od command (0.7)
+- documentation (0.8)
+- programmer (0.7)
+- technical documentation (0.8)
 title: Using Four-Letter Words In Code
 wordpress_id: 169
 ---

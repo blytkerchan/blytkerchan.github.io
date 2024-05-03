@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2012-01-12 22:14:34+00:00
 layout: post
+tags:
+- Windows systems programming (1.0)
+- WaitForSingleObject (0.8)
+- WaitForMultipleObjects (1.0)
+- thread management (0.9)
+- API design (0.7)
+- Microsoft (0.6)
+- Windows Embedded Compact (0.8)
+- thread synchronization (0.8)
+- software development (0.7)
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785
 ---

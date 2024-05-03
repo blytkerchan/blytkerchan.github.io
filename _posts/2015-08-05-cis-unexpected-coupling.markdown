@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2015-08-05 23:12:10+00:00
 layout: post
+tags:
+- synchronization (0.9)
+- server application (0.8)
+- database (0.8)
+- triggers (0.7)
+- communication (0.7)
+- coupling (0.9)
+- API (0.6)
+- retro-action (0.7)
+- Windows API (0.6)
+- anonymous pipes (0.6)
 title: 'CIS: Unexpected Coupling'
 wordpress_id: 3266
 ---

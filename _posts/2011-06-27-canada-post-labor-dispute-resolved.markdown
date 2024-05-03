@@ -14,6 +14,21 @@ categories:
 comments: true
 date: 2011-06-27 00:19:15+00:00
 layout: post
+tags:
+- Canada Post (0.9)
+- labor dispute (0.8)
+- back-to-work bill (0.7)
+- constitutional implications (0.6)
+- litigation (0.8)
+- arbitration process (0.6)
+- double monopoly (0.9)
+- postal service (0.7)
+- CUPW union (0.8)
+- Harper (0.7)
+- collective bargaining (0.8)
+- monopoly on mail delivery (0.7)
+- FedEx (0.6)
+- UPS (0.6)
 title: Canada Post Labor Dispute -- Resolved?
 wordpress_id: 1549
 ---

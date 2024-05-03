@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2010-06-04 22:54:47+00:00
 layout: post
+tags:
+- coding(0.9)
+- binary search(0.8)
+- algorithm(0.7)
+- efficiency(0.6)
+- complexity(0.6)
+- iterators(0.6)
+- equivalence(0.5)
+- equality(0.5)
+- sorting(0.5)
+- search space(0.5)
 wordpress_id: 730
 ---
 

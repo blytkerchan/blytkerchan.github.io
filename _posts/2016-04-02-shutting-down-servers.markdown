@@ -9,6 +9,18 @@ categories:
 comments: true
 date: 2016-04-02 19:16:09+00:00
 layout: post
+tags:
+- server (0.9)
+- operating systems (0.8)
+- VMs (0.7)
+- Continuous Integration (0.9)
+- OpenDNP3 (0.8)
+- CMake (0.7)
+- configuration management (0.7)
+- AppVeyor (0.8)
+- Travis-CI (0.8)
+- build jobs (0.7)
+- release process (0.8)
 title: Shutting down servers
 wordpress_id: 3810
 ---

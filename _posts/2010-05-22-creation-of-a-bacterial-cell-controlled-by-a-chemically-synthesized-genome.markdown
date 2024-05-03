@@ -19,6 +19,28 @@ categories:
 comments: true
 date: 2010-05-22 16:37:01+00:00
 layout: post
+tags:
+- biology (0.9)
+- genetics (0.8)
+- DNA (0.8)
+- genome (0.8)
+- synthetic biology (0.7)
+- biotechnology (0.6)
+- genetic engineering (0.6)
+- microbiology (0.5)
+- computer science (0.4)
+- FPGA (0.4)
+- VHDL (0.4)
+- bacteria (0.4)
+- research (0.3)
+- technology (0.3)
+- ethics (0.3)
+- evolution (0.3)
+- creation (0.3)
+- science (0.2)
+- engineering (0.2)
+- genome sequencing (0.2)
+- transplantation (0.2)
 title: Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome
 wordpress_id: 648
 ---

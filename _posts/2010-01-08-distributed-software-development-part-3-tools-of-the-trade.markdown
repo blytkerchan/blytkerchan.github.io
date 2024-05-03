@@ -11,6 +11,33 @@ categories:
 comments: true
 date: 2010-01-08 04:24:21+00:00
 layout: post
+tags:
+- software development (1.0)
+- source code (0.9)
+- documentation (0.8)
+- integrated development environment (IDE) (0.7)
+- hardware (0.6)
+- intellectual property (0.5)
+- version management system (0.5)
+- distributed versioning tool (0.5)
+- security (0.4)
+- distributed software development (0.4)
+- binary files (0.3)
+- game development (0.3)
+- version control system (0.3)
+- Wiki (0.3)
+- Mediawiki (0.3)
+- SharePoint (0.3)
+- collaboration (0.3)
+- Visual Studio (0.3)
+- Eclipse (0.3)
+- C++ (0.3)
+- Java (0.3)
+- hardware manipulation (0.2)
+- custom hardware (0.2)
+- remote work (0.2)
+- software tools (0.2)
+- team collaboration (0.2)
 title: 'Distributed Software Development Part 3: Tools Of The Trade'
 wordpress_id: 439
 ---

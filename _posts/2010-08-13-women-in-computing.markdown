@@ -8,6 +8,23 @@ categories:
 comments: true
 date: 2010-08-13 02:18:06+00:00
 layout: post
+tags:
+- Diversity (0.9)
+- Gender equality (0.8)
+- Women in computing (0.9)
+- Minorities in tech (0.7)
+- Inclusivity (0.8)
+- History of computing (0.7)
+- Ada Lovelace (0.6)
+- Grace Hopper (0.6)
+- Hedy Lamarr (0.6)
+- Mary Allen Wilkes (0.6)
+- Adele Goldberg (0.6)
+- Sally Floyd (0.6)
+- Object-oriented programming (0.7)
+- Quality assurance (0.6)
+- Firmware (0.6)
+- Gender stereotypes (0.7)
 title: Women in computing
 wordpress_id: 872
 ---

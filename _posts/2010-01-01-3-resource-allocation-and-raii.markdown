@@ -15,6 +15,25 @@ categories:
 comments: true
 date: 2010-01-01 19:29:11+00:00
 layout: post
+tags:
+- C++ (1.0)
+- Garbage Collector (0.8)
+- Resource Allocation (0.9)
+- Resource Deallocation (0.9)
+- New Keyword (0.7)
+- Delete Keyword (0.7)
+- Pointers (0.9)
+- Smart Pointers (0.9)
+- Constructor (0.9)
+- Destructor (0.9)
+- RAII (0.9)
+- Debugging (0.8)
+- Pass by Value (0.7)
+- Pass by Reference (0.7)
+- Auto_ptr (0.8)
+- Ownership (0.8)
+- Memory Leak (0.8)
+- Valgrind (0.8)
 title: 6- Resource Allocation and RAII
 wordpress_id: 303
 ---

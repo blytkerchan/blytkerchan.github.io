@@ -5,6 +5,19 @@ categories:
 comments: true
 date: 2014-11-09 02:15:19+00:00
 layout: post
+tags:
+- bungee coding (0.9)
+- VHDL (0.8)
+- digital signal processing (0.7)
+- Fourier transforms (0.6)
+- real-time constraints (0.5)
+- Web interface (0.4)
+- PLC-style logic (0.7)
+- protocol stacks (0.6)
+- Python code generation (0.8)
+- technical design (0.9)
+- fast-paced project (0.7)
+- proof-of-concept (0.8)
 title: Bungee coding
 wordpress_id: 3158
 ---

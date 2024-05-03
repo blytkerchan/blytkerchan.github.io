@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2016-11-16 12:08:33+00:00
 layout: post
+tags:
+- meeting efficiency (0.9)
+- Scrum (0.8)
+- agile methodology (0.7)
+- project management (0.6)
+- team productivity (0.5)
+- overhead costs (0.8)
+- developer time (0.6)
+- legacy code (0.4)
+- daily meetings (0.7)
+- economic argument (0.6)
 title: Meetings, meetings, and more meetings
 wordpress_id: 4126
 ---

@@ -15,6 +15,23 @@ excerpt: 'functional combines
 
   '
 layout: post
+tags:
+- scriptable simulator (1.0)
+- firmware (0.8)
+- Python (0.7)
+- Boost.Python (0.9)
+- C++ (0.8)
+- scripting languages (0.8)
+- embeddable (0.9)
+- Funky (1.0)
+- looping (0.9)
+- functional programming (0.8)
+- Lisp (0.7)
+- Scheme (0.7)
+- while loop (0.9)
+- predicate (0.8)
+- embeddable functional programming language (0.9)
+- socket (0.8)
 title: Funky, functional programming and looping
 wordpress_id: 103
 ---

@@ -11,6 +11,23 @@ categories:
 comments: true
 date: 2012-03-25 18:16:34+00:00
 layout: post
+tags:
+- large project (0.9)
+- system implementation (0.8)
+- robustness analysis (0.9)
+- fault finding (0.7)
+- weakness types (0.6)
+- single point of failure (0.8)
+- error handling (0.9)
+- error recovery (0.7)
+- error reporting (0.8)
+- resource management (0.9)
+- concurrency (0.8)
+- security (0.8)
+- language artifacts (0.7)
+- design phase (0.7)
+- verification (0.8)
+- robustness assessment (0.8)
 title: 'Robustness analysis: finding fault(s)'
 wordpress_id: 1823
 ---

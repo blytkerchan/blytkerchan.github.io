@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2010-06-23 03:10:20+00:00
 layout: post
+tags:
+- podcast (0.9)
+- CBC (0.8)
+- bill C-32 (0.9)
+- copyright (0.9)
+- technological protection measures (0.9)
+- DRM (0.8)
+- Creative Commons (0.8)
+- licensing (0.8)
+- interoperability (0.7)
+- rights management information (0.8)
 title: Bill C-32
 wordpress_id: 771
 ---

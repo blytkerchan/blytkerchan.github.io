@@ -8,6 +8,22 @@ categories:
 comments: true
 date: 2012-12-05 02:21:06+00:00
 layout: post
+tags:
+- data communication (1.0)
+- embedded devices (1.0)
+- persistence (1.0)
+- binary data (1.0)
+- magic number (1.0)
+- versioning (1.0)
+- structure alignment (1.0)
+- pragma pack (1.0)
+- variable-sized data (1.0)
+- reserved fields (1.0)
+- memset (1.0)
+- common magic numbers (1.0)
+- zero-termination (1.0)
+- reading and writing (1.0)
+- parsing (1.0)
 title: How to design a struct for storage or communicating
 wordpress_id: 1966
 ---

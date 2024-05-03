@@ -9,6 +9,38 @@ categories:
 comments: true
 date: 2021-09-19
 layout: post
+tags:
+- relaxing (0.9)
+- movies (0.5)
+- music (0.5)
+- reading (0.8)
+- papers (0.8)
+- cybersecurity (0.7)
+- quantum computing (0.9)
+- Arxiv (0.6)
+- error mitigation (0.8)
+- quantum error correction (0.9)
+- quantum circuits (0.8)
+- noise (0.7)
+- hardware errors (0.6)
+- QPU (0.6)
+- classical computer (0.6)
+- cosmic rays (0.5)
+- error correction codes (0.7)
+- quantum gates (0.7)
+- quantum state (0.7)
+- quantum channel (0.7)
+- error channel (0.7)
+- quantum experiment (0.7)
+- accuracy (0.8)
+- theorem (0.7)
+- probabilistic error cancellation (0.7)
+- Richardson extrapolation (0.6)
+- Virtual distillation (0.6)
+- Clifford gates (0.6)
+- Pauli channel (0.6)
+- dynamic error correction (0.8)
+- desktop quantum coprocessor (0.7)
 title: Fundamental limitations of quantum error mitigation
 ---
 

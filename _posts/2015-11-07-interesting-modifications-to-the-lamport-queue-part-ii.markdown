@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2015-11-07 20:10:47+00:00
 layout: post
+tags:
+- queue-optimization (1.0)
+- lamport-queue (1.0)
+- shared-state (1.0)
+- memory-barriers (1.0)
+- atomic-operations (1.0)
+- synchronization-cost (1.0)
+- memory-model (1.0)
+- optimization-tradeoff (1.0)
+- caching (1.0)
+- reducing-operations (1.0)
 title: Interesting modifications to the Lamport queue, part II
 wordpress_id: 3763
 ---

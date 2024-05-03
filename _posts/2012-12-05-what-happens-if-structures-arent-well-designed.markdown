@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2012-12-05 22:17:10+00:00
 layout: post
+tags:
+- software design (0.9)
+- communication (0.8)
+- structure design (0.8)
+- debugging (0.7)
+- software maintenance (0.7)
+- firmware (0.6)
+- version control (0.6)
+- data alignment (0.5)
+- magic numbers (0.5)
+- software evolution (0.5)
 title: What happens if structures aren't well-designed
 wordpress_id: 1979
 ---

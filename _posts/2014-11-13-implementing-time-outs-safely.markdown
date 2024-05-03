@@ -7,6 +7,15 @@ categories:
 comments: true
 date: 2014-11-13 11:19:06+00:00
 layout: post
+tags:
+- gardening (0.9)
+- code implementation (0.8)
+- time-outs (0.9)
+- monotonic counter (0.9)
+- HPET (0.7)
+- counter frequency (0.8)
+- overflow prevention (0.8)
+- embedded systems (0.7)
 title: Implementing time-outs (safely)
 wordpress_id: 3423
 ---

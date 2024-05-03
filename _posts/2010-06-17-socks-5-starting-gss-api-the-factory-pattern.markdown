@@ -7,6 +7,15 @@ categories:
 comments: true
 date: 2010-06-17 03:42:22+00:00
 layout: post
+tags:
+- Abstract Factory Pattern (1.0)
+- IPv6 (0.8)
+- GSS-API (0.9)
+- SSPI (0.9)
+- Binary Search Algorithm (0.7)
+- Windows Projects (0.6)
+- Mechanism Interface (0.8)
+- Mechanism Factory (0.8)
 title: 'Socks 5: Starting GSS-API - The Factory Pattern'
 wordpress_id: 746
 ---

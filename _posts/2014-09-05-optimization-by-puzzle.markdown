@@ -7,6 +7,14 @@ categories:
 comments: true
 date: 2014-09-05 02:17:43+00:00
 layout: post
+tags:
+- algorithm (0.9)
+- query routine (0.8)
+- set manipulation (0.7)
+- C++ (0.6)
+- interview question (0.5)
+- complexity analysis (0.8)
+- GitHub (0.4)
 title: Optimization by puzzle
 wordpress_id: 3274
 ---

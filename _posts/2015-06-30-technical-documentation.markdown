@@ -5,6 +5,17 @@ categories:
 comments: false
 date: 2015-06-30 01:49:30+00:00
 layout: post
+tags:
+- technical documentation (0.9)
+- communication (0.8)
+- investment (0.8)
+- code quality (0.7)
+- usability (0.7)
+- customer expectations (0.6)
+- product quality (0.6)
+- tools (0.6)
+- time management (0.5)
+- software engineering (0.5)
 title: Technical documentation
 wordpress_id: 3431
 ---

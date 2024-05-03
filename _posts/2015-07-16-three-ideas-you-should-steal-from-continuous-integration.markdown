@@ -8,6 +8,18 @@ categories:
 comments: true
 date: 2015-07-16 10:13:14+00:00
 layout: post
+tags:
+- Continuous Integration (1.0)
+- Small incremental changes (0.8)
+- Continuous testing (0.9)
+- Continuous builds (0.9)
+- Investment (0.7)
+- Fail Fast (1.0)
+- Self-documenting code (0.9)
+- Test cases (0.8)
+- Build fast (0.9)
+- Automate testing (1.0)
+- Feedback (0.8)
 title: Three ideas you should steal from Continuous Integration
 wordpress_id: 3674
 ---

@@ -18,6 +18,20 @@ categories:
 comments: true
 date: 2013-09-24 00:36:51+00:00
 layout: post
+tags:
+- political reform (0.9)
+- parliamentary democracy (0.8)
+- Dutch system (0.7)
+- proportional representation (0.9)
+- populism (0.6)
+- Geert Wilders (0.5)
+- Canadian system (0.8)
+- transparency (0.7)
+- senate reform (0.8)
+- accountability (0.7)
+- question period (0.6)
+- committee selection (0.7)
+- corrective referendum (0.8)
 title: 'Why #fixthathouse?'
 wordpress_id: 2382
 ---

@@ -7,6 +7,21 @@ categories:
 comments: true
 date: 2011-05-05 02:44:44+00:00
 layout: post
+tags:
+- programming-language (1.0)
+- Turing-complete (0.8)
+- BrainFuck (1.0)
+- esoteric (0.7)
+- Turing-machine (0.6)
+- universal-computer (0.5)
+- algorithm (0.4)
+- BrainF*** (0.8)
+- Turing-Machine (0.6)
+- ASCII (0.3)
+- I/O (0.3)
+- QuickSort (0.4)
+- newbie-programmers (0.5)
+- veterans (0.5)
 title: Why I Recommend BrainF--- (and what I recommend it for)
 wordpress_id: 1368
 ---

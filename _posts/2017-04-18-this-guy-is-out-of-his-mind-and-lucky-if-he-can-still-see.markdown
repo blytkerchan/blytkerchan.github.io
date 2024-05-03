@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2017-04-18 20:17:32+00:00
 layout: post
+tags:
+- C# (0.9)
+- Arduino (0.8)
+- OpenCV (0.7)
+- Laser pointer (0.6)
+- Face detection (0.8)
+- Live video feed (0.6)
+- Programming (0.7)
+- Dangerous project (0.5)
+- Innovative (0.6)
+- YouTube video (0.5)
 title: This guy is out of his mind (and lucky if he can still see)
 wordpress_id: 4169
 ---

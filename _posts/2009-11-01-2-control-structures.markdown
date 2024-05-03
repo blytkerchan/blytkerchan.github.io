@@ -5,6 +5,21 @@ categories:
 comments: true
 date: 2009-11-01 14:40:52+00:00
 layout: post
+tags:
+- control structures (1.0)
+- C++ (0.8)
+- goto (0.7)
+- switch-case (0.7)
+- if-else (0.7)
+- while (0.7)
+- do-while (0.7)
+- for (0.7)
+- return (0.7)
+- programming (0.5)
+- code (0.5)
+- semantics (0.5)
+- enumerators (0.5)
+- RAII (0.5)
 title: 2-Control Structures
 wordpress_id: 294
 ---

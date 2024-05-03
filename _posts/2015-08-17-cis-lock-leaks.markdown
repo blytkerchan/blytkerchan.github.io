@@ -5,6 +5,18 @@ categories:
 comments: true
 date: 2015-08-17 02:03:34+00:00
 layout: post
+tags:
+- Threading APIs (0.8)
+- Windows API (0.7)
+- pthreads (0.7)
+- Mutex (0.9)
+- Locking (0.8)
+- Unlocking (0.8)
+- Lock leak (0.9)
+- Deadlocks (0.7)
+- RAII (0.9)
+- Coding standards (0.6)
+- Static analysis tool (0.6)
 title: 'CIS: Lock Leaks'
 wordpress_id: 3241
 ---

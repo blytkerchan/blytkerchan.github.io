@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2011-04-14 01:16:17+00:00
 layout: post
+tags:
+- code coverage (0.9)
+- bugs (0.8)
+- testing (0.7)
+- unit tests (0.7)
+- acceptance tests (0.7)
+- black box tests (0.6)
+- functional tests (0.6)
+- smoke tests (0.5)
+- white box tests (0.5)
+- regression tests (0.5)
 title: 'Shining light on bugs: testing'
 wordpress_id: 1357
 ---

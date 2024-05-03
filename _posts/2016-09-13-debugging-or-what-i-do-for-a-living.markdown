@@ -8,6 +8,14 @@ categories:
 comments: true
 date: 2016-09-13 01:20:13+00:00
 layout: post
+tags:
+- engineering (0.9)
+- software (0.8)
+- inventor (0.7)
+- lab (0.6)
+- clock synchronization (0.9)
+- electricity grid automation (0.8)
+- debugging (0.7)
 title: 'Debugging — or: what I do for a living'
 wordpress_id: 4100
 ---

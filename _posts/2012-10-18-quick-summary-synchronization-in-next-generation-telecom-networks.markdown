@@ -7,6 +7,18 @@ categories:
 comments: true
 date: 2012-10-18 16:28:47+00:00
 layout: post
+tags:
+- ComSoc webinar (0.9)
+- Synchronization (0.8)
+- Next-Generation Telecom Networks (0.7)
+- Clock synchronization (0.6)
+- Synchronous Ethernet (0.7)
+- IEEE-1588 PTP (0.7)
+- NTP (0.6)
+- Ethernet (0.5)
+- Networks (0.4)
+- Carrier (0.4)
+- Heterogeneous network (0.5)
 title: 'Quick Summary: Synchronization in Next-Generation Telecom Networks'
 wordpress_id: 1932
 ---

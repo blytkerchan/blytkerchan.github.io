@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2016-03-08 09:38:49+00:00
 layout: post
+tags:
+- Dutch saying (1.0)
+- Opinionated cobbler (0.8)
+- Scripting engine (0.9)
+- String classes (0.9)
+- C-style strings (0.7)
+- Copy-on-write string (0.7)
+- Swiss army knife (0.6)
+- Litmus test (0.6)
+- Security flaw (0.8)
+- SSL implementation (0.8)
 title: Schoenmaker, blijf bij je leest (Cobbler, stick to your last)
 wordpress_id: 3441
 ---

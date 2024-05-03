@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2016-04-20 02:45:44+00:00
 layout: post
+tags:
+- real-time systems (1.0)
+- worst-case timing (1.0)
+- average-case timing (1.0)
+- coffee shop (1.0)
+- Geeks (1.0)
+- soft system (0.9)
+- non-blocking state test (0.9)
+- redundancy (1.0)
+- real-time post-condition (0.9)
 title: Real-time thirsty
 wordpress_id: 3843
 ---

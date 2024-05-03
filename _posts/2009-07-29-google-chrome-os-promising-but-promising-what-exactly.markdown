@@ -14,6 +14,20 @@ excerpt: 'is this coming spring
 
   '
 layout: post
+tags:
+- Google Chrome OS (1.0)
+- Microsoft (0.8)
+- Netbooks (0.7)
+- Web browsing (0.6)
+- Operating systems (0.9)
+- Google promises (0.8)
+- Desktop systems (0.7)
+- Developers toolkit (0.5)
+- Xorg (0.4)
+- Qt (0.4)
+- GUI (0.6)
+- Security (0.7)
+- Java plugin (0.5)
 title: 'Google Chrome OS: Promising - but promising what, exactly?'
 wordpress_id: 106
 ---

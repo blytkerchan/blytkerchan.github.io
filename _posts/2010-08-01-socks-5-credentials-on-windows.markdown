@@ -8,6 +8,22 @@ categories:
 comments: true
 date: 2010-08-01 23:31:26+00:00
 layout: post
+tags:
+- GSSAPI/SSPI (1.0)
+- Windows (1.0)
+- credentials (1.0)
+- data encapsulation (1.0)
+- abstract factory (1.0)
+- SSPI (1.0)
+- GSSAPI (1.0)
+- Mechanism (1.0)
+- RAII (1.0)
+- security (1.0)
+- headers (1.0)
+- MechanismFactory (1.0)
+- unit test (1.0)
+- auto_ptr (1.0)
+- Credentials (1.0)
 title: 'Socks 5: Credentials on Windows'
 wordpress_id: 847
 ---

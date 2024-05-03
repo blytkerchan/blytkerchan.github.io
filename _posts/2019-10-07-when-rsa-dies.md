@@ -10,6 +10,18 @@ comments: true
 date: 2019-10-07 12:32:00-04:00
 layout: post
 slug: when-rsa-dies
+tags:
+- cryptography (1.0)
+- RSA (0.9)
+- Diffie-Hellman (0.9)
+- quantum computing (0.8)
+- quantum resistance (0.8)
+- ElGamal (0.8)
+- asymmetric cryptography (0.7)
+- SIDH (0.7)
+- quantum-resistant (0.7)
+- PKI (0.7)
+- digital signature algorithm (0.7)
 title: When RSA dies
 ---
 

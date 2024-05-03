@@ -9,6 +9,13 @@ categories:
 comments: true
 date: 2012-03-04 22:18:05+00:00
 layout: post
+tags:
+- parenting (0.8)
+- podcast (0.7)
+- sleep (0.9)
+- blogging (0.6)
+- schedule (0.5)
+- patience (0.7)
 title: I'll be back (soon)
 wordpress_id: 1820
 ---

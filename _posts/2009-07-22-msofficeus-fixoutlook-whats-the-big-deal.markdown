@@ -13,6 +13,23 @@ excerpt: 'flabbergasted I
 
   '
 layout: post
+tags:
+- fixoutlook.org (1.0)
+- Twitter campaign (0.8)
+- Microsoft (0.9)
+- Outlook (0.9)
+- HTML (0.9)
+- standards compliance (0.9)
+- Word (0.8)
+- XML (0.7)
+- XSL stylesheet (0.7)
+- Explorer (0.6)
+- IE-readible HTML (0.6)
+- E-mail Standards Project (0.8)
+- GMail (0.7)
+- web-based (0.6)
+- HTML mail (0.7)
+- E-mail clients (0.7)
 title: '@msofficeus @fixoutlook - what''s the big deal?'
 wordpress_id: 44
 ---

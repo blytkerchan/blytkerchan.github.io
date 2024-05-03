@@ -8,6 +8,22 @@ categories:
 comments: true
 date: 2015-10-01 15:36:04+00:00
 layout: post
+tags:
+- DNP3 (1.0)
+- SCADA protocol (0.7)
+- EPRI (0.8)
+- Secure Authentication (0.9)
+- Key Management Protocol (0.8)
+- Fuzzing (0.6)
+- OpenDNP3 (0.8)
+- Robus (0.7)
+- Modbus (0.7)
+- Security (0.9)
+- Interoperability (0.8)
+- TLS (0.7)
+- Face-to-face meeting (0.6)
+- CERT advisory (0.7)
+- Open Source (0.8)
 title: Progress in DNP3 security
 wordpress_id: 3733
 ---

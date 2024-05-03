@@ -7,6 +7,17 @@ categories:
 comments: true
 date: 2009-08-22 20:08:52+00:00
 layout: post
+tags:
+- analogies (0.9)
+- diagrams (0.8)
+- technical terms (0.6)
+- UML diagrams (0.7)
+- message pump (0.8)
+- explanation (0.7)
+- debugging (0.6)
+- memory (0.6)
+- magic number (0.7)
+- lay person (0.5)
 title: The Importance of Patterns
 wordpress_id: 173
 ---

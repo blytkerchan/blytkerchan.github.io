@@ -12,6 +12,17 @@ categories:
 comments: true
 date: 2010-10-03 03:46:00+00:00
 layout: post
+tags:
+- programming (1.0)
+- exceptions (1.0)
+- encapsulation (1.0)
+- negotiation (1.0)
+- SSPI (1.0)
+- context (1.0)
+- credentials (1.0)
+- mechanism (1.0)
+- authentication (1.0)
+- error handling (1.0)
 title: 'Negotiation: first steps'
 wordpress_id: 970
 ---

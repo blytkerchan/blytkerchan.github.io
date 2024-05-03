@@ -8,6 +8,19 @@ categories:
 comments: true
 date: 2011-02-17 03:53:07+00:00
 layout: post
+tags:
+- App Development (0.9)
+- Project Management (0.8)
+- Requirements Management (0.7)
+- Risk Management (0.6)
+- Workflow (0.5)
+- Billing (0.4)
+- Bug Tracking (0.8)
+- Issue Tracking (0.7)
+- Code Repositories (0.6)
+- Embedded Systems (0.4)
+- Distributed Development (0.5)
+- Software Development (0.6)
 title: A "brilliant" idea (?)
 wordpress_id: 1210
 ---

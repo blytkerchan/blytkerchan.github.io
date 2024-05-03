@@ -11,6 +11,29 @@ categories:
 comments: true
 date: 2010-09-17 01:52:01+00:00
 layout: post
+tags:
+- error handling (1.0)
+- C++
+- object-oriented language (1.0)
+- constructor (1.0)
+- special methods (1.0)
+- contractual basis (1.0)
+- exception-safety (1.0)
+- Boost (1.0)
+- contract theory (1.0)
+- pre-conditions (1.0)
+- post-conditions (1.0)
+- invariants (1.0)
+- exceptions (1.0)
+- run-time errors (1.0)
+- logic errors (1.0)
+- resource management (1.0)
+- RAII (1.0)
+- advantages (1.0)
+- value-type classes (1.0)
+- inadequacies (1.0)
+- C-style error handling (1.0)
+- Conclusion (1.0)
 title: Error handling in C++
 wordpress_id: 939
 ---

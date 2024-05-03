@@ -10,6 +10,22 @@ categories:
 comments: true
 date: 2017-09-12 01:48:09+00:00
 layout: post
+tags:
+- data breach (0.9)
+- Equifax (0.8)
+- New York Attorney General (0.7)
+- identity theft (0.6)
+- hackers (0.5)
+- investigation (0.5)
+- class action lawsuit (0.4)
+- financial system (0.4)
+- security audit (0.3)
+- credit card information (0.3)
+- personal information (0.3)
+- vulnerability (0.3)
+- security measures (0.2)
+- market capitalisation (0.2)
+- security issues (0.2)
 title: 'The Equifax data breach: what we know, what you can do, what''s next'
 wordpress_id: 4252
 ---

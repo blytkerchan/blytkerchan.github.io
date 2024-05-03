@@ -11,6 +11,18 @@ categories:
 comments: true
 date: 2009-07-29 01:17:58+00:00
 layout: post
+tags:
+- pharmaceutical industry (0.9)
+- vision inspection systems (0.8)
+- cameras (0.7)
+- barcodes (0.9)
+- datamatrix (0.8)
+- Optel Vision (0.6)
+- MIT (0.7)
+- Bokode (0.8)
+- RFID (0.6)
+- positioning (0.7)
+- privacy concerns (0.8)
 title: Storing data in an optical illusion
 wordpress_id: 90
 ---

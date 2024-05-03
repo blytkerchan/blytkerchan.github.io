@@ -14,6 +14,18 @@ categories:
 comments: true
 date: 2010-05-16 12:00:22+00:00
 layout: post
+tags:
+- implementation (0.9)
+- token (0.8)
+- client (0.7)
+- server (0.7)
+- code (0.6)
+- test (0.6)
+- sleep (0.5)
+- diff (0.5)
+- question (0.5)
+- race condition (0.5)
+- copy constructor (0.5)
 title: 'Socks 5: Finishing sending a token'
 wordpress_id: 625
 ---

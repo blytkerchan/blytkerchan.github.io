@@ -10,6 +10,19 @@ categories:
 date: 2024-04-03
 layout: post
 permalink: https://vlindersoftware.github.io/python-event-superschema/
+tags:
+- Interoperability (0.9)
+- Information systems (0.8)
+- Data meaning (0.7)
+- Data formatting (0.6)
+- Semantics (0.5)
+- Micro-services (0.9)
+- Message processing (0.8)
+- De-coupling (0.7)
+- System architecture (0.6)
+- Communication (0.8)
+- Message definition (0.7)
+- Ground rules (0.6)
 title: Python super-schema
 ---
 

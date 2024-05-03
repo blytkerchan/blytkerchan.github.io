@@ -7,6 +7,28 @@ date: 2015-06-25 10:17:41+00:00
 excerpt: I am not a mathematician, but I do like Bayes' theorem for non-functional
   requirements analysis -- and I'd like to present an example of its application
 layout: post
+tags:
+- mathematics (0.9)
+- Bayes' theorem (0.8)
+- non-functional requirements analysis (0.7)
+- IEEE Standard 1815-2012 (0.6)
+- DNP (0.5)
+- TCP/IP (0.5)
+- availability requirements (0.4)
+- networking (0.4)
+- link status (0.4)
+- device failure (0.4)
+- uptime (0.4)
+- connection status (0.4)
+- probability (0.4)
+- TCP connection (0.4)
+- DNP3 devices (0.4)
+- link status request (0.4)
+- availability (0.4)
+- link status request time-out (0.4)
+- flow chart (0.4)
+- disconnect/reconnect (0.4)
+- system's link (0.4)
 title: Bayes' theorem in non-functional requirements analysis -- an example
 wordpress_id: 3540
 ---

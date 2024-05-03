@@ -7,6 +7,13 @@ categories:
 comments: true
 date: 2011-12-01 20:11:11+00:00
 layout: post
+tags:
+- C++ (0.8)
+- self-taught (0.7)
+- parental leave (0.6)
+- podcast (0.5)
+- blog (0.5)
+- installment (0.4)
 title: Sleep(...)
 wordpress_id: 1720
 ---

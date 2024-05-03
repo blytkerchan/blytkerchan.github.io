@@ -9,6 +9,16 @@ categories:
 comments: true
 date: 2009-09-19 03:15:34+00:00
 layout: post
+tags:
+- Job search (0.9)
+- CV (0.7)
+- Head-hunters (0.6)
+- Tech test (0.8)
+- C++ (0.8)
+- Boost::tokenizer (0.5)
+- Showing off (0.7)
+- Immigrant (0.4)
+- French (0.3)
 title: Having fun on a technical test
 wordpress_id: 196
 ---

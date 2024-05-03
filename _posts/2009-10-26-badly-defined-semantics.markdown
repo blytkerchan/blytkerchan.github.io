@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2009-10-26 15:22:17+00:00
 layout: post
+tags:
+- semantics (0.9)
+- maintenance (0.8)
+- bugs (0.7)
+- memory leak (0.8)
+- raw pointers (0.6)
+- ownership (0.7)
+- error code (0.6)
+- RAII (0.9)
+- smart pointer (0.8)
+- C++ (0.7)
 title: Badly defined semantics
 wordpress_id: 324
 ---

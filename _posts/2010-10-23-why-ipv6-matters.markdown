@@ -10,6 +10,20 @@ categories:
 comments: true
 date: 2010-10-23 03:36:16+00:00
 layout: post
+tags:
+- Internet Growth (0.9)
+- IPv4 Addresses (0.8)
+- IPv6 Adoption (0.9)
+- Obama Administration (0.7)
+- Smart Grid (0.8)
+- Cloud Computing (0.8)
+- IPv6 Features (0.9)
+- Robustness (0.8)
+- Auto-configuration (0.7)
+- Mobility (0.7)
+- Speed (0.8)
+- Streaming (0.8)
+- Security (0.9)
 title: Why IPv6 Matters
 wordpress_id: 1082
 ---

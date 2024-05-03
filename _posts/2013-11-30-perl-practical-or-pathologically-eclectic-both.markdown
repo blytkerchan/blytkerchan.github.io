@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2013-11-30 20:11:40+00:00
 layout: post
+tags:
+- Perl (0.9)
+- Extraction (0.7)
+- Reporting (0.6)
+- Data processing (0.5)
+- Code generation (0.4)
+- Database dumps (0.4)
+- Error messages (0.4)
+- Syntax (0.4)
+- Eclectic (0.8)
+- Practical (0.7)
 title: 'Perl: Practical or Pathologically Eclectic? Both?'
 wordpress_id: 2415
 ---

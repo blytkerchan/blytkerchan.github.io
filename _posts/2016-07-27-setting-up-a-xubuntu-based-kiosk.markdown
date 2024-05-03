@@ -18,6 +18,27 @@ categories:
 comments: true
 date: 2016-07-27 11:16:52+00:00
 layout: post
+tags:
+- HOWTO (1.0)
+- Xubuntu (1.0)
+- kiosk (1.0)
+- USB stick (1.0)
+- wired network (1.0)
+- auxiliary applications (1.0)
+- Chrome (1.0)
+- screen saver (1.0)
+- children (1.0)
+- TV (1.0)
+- public kiosk (1.0)
+- touch screen (1.0)
+- on-screen keyboards (1.0)
+- external hard drive (1.0)
+- guest session (1.0)
+- autologin (1.0)
+- mouse (1.0)
+- hard drive (1.0)
+- virtual machine (1.0)
+- harden setup (1.0)
 title: Setting up a Xubuntu-based kiosk
 wordpress_id: 4060
 ---

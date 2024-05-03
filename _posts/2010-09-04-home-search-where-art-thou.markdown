@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2010-09-04 00:51:43+00:00
 layout: post
+tags:
+- technology (0.9)
+- searching (0.8)
+- RFID (0.8)
+- EPCIS (0.7)
+- inventory (0.7)
+- security (0.7)
+- localization (0.6)
+- network (0.6)
+- roaming (0.6)
+- solution (0.5)
 title: Home Search, Where Art Thou?
 wordpress_id: 892
 ---

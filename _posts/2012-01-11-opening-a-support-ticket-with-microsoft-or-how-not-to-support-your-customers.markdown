@@ -8,6 +8,17 @@ categories:
 comments: true
 date: 2012-01-11 22:40:16+00:00
 layout: post
+tags:
+- Microsoft (0.9)
+- Bug report (0.8)
+- TCP/IP stack (0.7)
+- Windows Embedded Compact 7 (0.7)
+- Customer service (0.8)
+- Bug fixing (0.7)
+- Software feedback (0.6)
+- Bug reporting process (0.7)
+- Microsoft Gold partner (0.6)
+- User experience (0.8)
 title: 'Opening a support ticket with Microsoft (or: how not to support your customers)'
 wordpress_id: 1779
 ---

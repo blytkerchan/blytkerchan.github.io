@@ -21,6 +21,7 @@ comments: true
 date: 2014-10-03 20:00:42+00:00
 layout: post
 slug: writing-a-brainf-interpreter-in-vhdl
+tags: null
 title: Writing a BrainF interpreter ... in VHDL
 wordpress_id: 3303
 ---

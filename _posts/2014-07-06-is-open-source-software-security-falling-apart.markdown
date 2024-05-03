@@ -21,6 +21,25 @@ excerpt: 'There have been a number of well-publicized security flaws in open sou
 
   '
 layout: post
+tags:
+- security (3.0)
+- open source (2.5)
+- software (2.0)
+- bugs (1.5)
+- vulnerabilities (1.5)
+- proprietary (1.2)
+- code (1.0)
+- Heartbleed (1.0)
+- Truecrypt (1.0)
+- OpenJDK (1.0)
+- Linux kernel (1.0)
+- GnuTLS (1.0)
+- CVE (1.0)
+- transparency (1.0)
+- quality (1.0)
+- popularity (1.0)
+- awareness (1.0)
+- Microsoft Windows CE (1.0)
 title: Is Open Source software security falling apart?
 wordpress_id: 3163
 ---

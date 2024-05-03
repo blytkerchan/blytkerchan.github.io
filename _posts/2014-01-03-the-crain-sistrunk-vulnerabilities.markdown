@@ -8,6 +8,24 @@ categories:
 comments: true
 date: 2014-01-03 00:25:38+00:00
 layout: post
+tags:
+- industrial control systems (1.0)
+- ICSs (0.8)
+- security through obscurity (0.7)
+- Crain-Sistrunk vulnerabilities (0.9)
+- Project Robus (0.6)
+- DNP3 (0.9)
+- serial communications (0.8)
+- NERC (0.7)
+- SCADA (0.6)
+- DNP3 Secure Authentication (0.8)
+- negative testing (0.9)
+- smart fuzzer (0.8)
+- black hat hackers (0.7)
+- Internet-connected devices (0.8)
+- TLS (0.7)
+- firmware updates (0.8)
+- electrical grid (0.7)
 title: The Crain-Sistrunk vulnerabilities
 wordpress_id: 2427
 ---

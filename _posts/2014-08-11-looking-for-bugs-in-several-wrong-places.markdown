@@ -11,6 +11,19 @@ categories:
 comments: true
 date: 2014-08-11 20:30:11+00:00
 layout: post
+tags:
+- bug-hunt (1.0)
+- programming languages (0.8)
+- protocol (0.7)
+- firmware (0.9)
+- bug (1.0)
+- testing (0.6)
+- configuration (0.8)
+- DSP (0.7)
+- FPGA (0.7)
+- binary search (0.5)
+- bug-fixing (0.9)
+- system analysis (0.7)
 title: Looking for bugs (in several wrong places)
 wordpress_id: 3254
 ---

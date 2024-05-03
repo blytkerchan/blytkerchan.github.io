@@ -9,6 +9,15 @@ comments: true
 date: 2019-11-03
 layout: post
 permalink: /assets/2019/11/quantum-exponential.pdf
+tags:
+- quantum computers (0.9)
+- quantum supremacy (0.8)
+- linear algebra (0.7)
+- quantum entanglement (0.9)
+- classical computers (0.6)
+- exponential time (0.5)
+- memory (0.4)
+- PDF format (0.3)
 title: Why classical computers need exponentially more time and memory to simulate
   quantum computers
 ---

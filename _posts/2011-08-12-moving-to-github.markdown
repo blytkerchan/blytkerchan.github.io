@@ -7,6 +7,22 @@ categories:
 comments: true
 date: 2011-08-12 00:32:06+00:00
 layout: post
+tags:
+- open source projects (1.0)
+- GitHub (1.0)
+- gradual process (0.7)
+- old projects (0.6)
+- defunct projects (0.5)
+- Git-based options (0.8)
+- features (0.9)
+- ticket tracking (0.8)
+- Request Tracker (0.7)
+- Traq (0.7)
+- Internet connection (0.6)
+- Gitorious (0.8)
+- issue tracker (0.9)
+- front-end (0.6)
+- updates (0.7)
 title: Moving to GitHub
 wordpress_id: 1635
 ---

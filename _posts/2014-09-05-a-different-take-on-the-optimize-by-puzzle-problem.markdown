@@ -8,6 +8,15 @@ categories:
 comments: true
 date: 2014-09-05 15:32:31+00:00
 layout: post
+tags:
+- set theory (0.9)
+- graph theory (0.8)
+- algorithms (0.9)
+- computational complexity (0.7)
+- children (0.6)
+- names (0.7)
+- Venn chart (0.5)
+- analogies (0.6)
 title: A different take on the "optimize by puzzle" problem
 wordpress_id: 3291
 ---

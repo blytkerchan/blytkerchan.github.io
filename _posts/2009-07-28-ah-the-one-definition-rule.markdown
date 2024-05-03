@@ -5,6 +5,16 @@ categories:
 comments: true
 date: 2009-07-28 03:59:36+00:00
 layout: post
+tags:
+- Scott Meyers (0.9)
+- Francis Glassborow (0.8)
+- one-definition rule (0.9)
+- non-inline functions (0.7)
+- template functions (0.6)
+- C++ (0.9)
+- translation unit (0.8)
+- complexity (0.7)
+- programming language (0.8)
 title: Ah - The One Definition Rule
 wordpress_id: 81
 ---

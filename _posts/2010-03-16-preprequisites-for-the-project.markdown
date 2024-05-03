@@ -9,6 +9,25 @@ categories:
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
+tags:
+- software (1.0)
+- compiling (1.0)
+- Windows (0.8)
+- Linux (0.8)
+- Debian (0.7)
+- Git (0.9)
+- version control (0.8)
+- IDE (0.7)
+- Microsoft Visual Studio (0.7)
+- Eclipse (0.7)
+- MinGW (0.8)
+- Cygwin (0.7)
+- prerequisites (0.9)
+- SDK (0.8)
+- free software (0.8)
+- portable (0.7)
+- compiler (0.7)
+- libraries (0.7)
 title: Preprequisites for the project
 wordpress_id: 481
 ---

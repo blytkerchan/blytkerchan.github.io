@@ -18,6 +18,24 @@ categories:
 comments: true
 date: 2010-04-16 12:00:54+00:00
 layout: post
+tags:
+- programming (9.0)
+- implementation (8.5)
+- RFC 1961 (8.0)
+- GSS API (7.5)
+- namespaces (7.0)
+- Token class (6.5)
+- serialization (6.0)
+- deserialization (5.5)
+- network programming (5.0)
+- RAII (4.5)
+- BSD sockets (4.0)
+- state machine (3.5)
+- functor (3.0)
+- multithreading (2.5)
+- C++ (2.0)
+- code review (1.5)
+- porting (1.0)
 title: 'SOCKS 5 Step 2: exchanging a token'
 wordpress_id: 534
 ---

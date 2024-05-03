@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2009-11-21 20:42:51+00:00
 layout: post
+tags:
+- Microsoft (0.9)
+- Team Foundation Server (TFS) (0.9)
+- Multi-tasking (0.7)
+- Productivity (0.6)
+- Version Control (0.8)
+- Git (0.8)
+- Centralized System (0.6)
+- User Interface (0.7)
+- Development Team (0.6)
+- Efficiency (0.7)
 title: Microsoft Team Foundation Server vs Git
 ---
 

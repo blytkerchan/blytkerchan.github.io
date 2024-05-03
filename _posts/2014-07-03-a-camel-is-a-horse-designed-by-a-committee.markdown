@@ -8,6 +8,36 @@ categories:
 comments: true
 date: 2014-07-03 03:59:21+00:00
 layout: post
+tags:
+- blogging (0.9)
+- frustration (0.8)
+- standards (0.9)
+- horse (0.9)
+- pony (0.9)
+- donkey (0.8)
+- ass (0.7)
+- cow (0.8)
+- dromedary (0.7)
+- camel (0.8)
+- protocols (0.9)
+- IEEE (0.9)
+- time (0.9)
+- TAI (0.8)
+- UTC (0.9)
+- time zones (0.9)
+- daylight savings time (0.9)
+- Chatham Island (0.7)
+- Nepal (0.7)
+- Chile (0.7)
+- Israel (0.8)
+- IRIG-B (0.8)
+- NTP (0.7)
+- synchro-phasors (0.7)
+- PTP (0.8)
+- NTP (0.7)
+- C37.238-2011 (0.8)
+- DST (0.8)
+- design by committee (0.9)
 title: '"A camel is a horse designed by a committee"'
 wordpress_id: 3165
 ---

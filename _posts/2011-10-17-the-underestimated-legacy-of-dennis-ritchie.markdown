@@ -9,6 +9,17 @@ categories:
 comments: true
 date: 2011-10-17 00:50:21+00:00
 layout: post
+tags:
+- C programming language (0.9)
+- Dennis Ritchie (0.8)
+- UNIX kernel (0.7)
+- Operating systems (0.6)
+- Programming languages (0.6)
+- Legacy (0.5)
+- Inventor (0.5)
+- Data structuring (0.4)
+- Hardware control (0.4)
+- Programming language design (0.4)
 title: The underestimated legacy of Dennis Ritchie
 wordpress_id: 1708
 ---

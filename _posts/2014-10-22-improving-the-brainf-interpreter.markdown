@@ -5,6 +5,18 @@ categories:
 comments: true
 date: 2014-10-22 01:38:53+00:00
 layout: post
+tags:
+- VHDL (1.0)
+- BrainF (1.0)
+- Interpreter (0.9)
+- Instructions (0.8)
+- Debug (0.7)
+- Registers (0.6)
+- Compiler (0.6)
+- Test Bench (0.6)
+- Breakpoints (0.5)
+- Simulation (0.5)
+- Interrupt (0.5)
 title: Improving the BrainF interpreter
 wordpress_id: 3338
 ---

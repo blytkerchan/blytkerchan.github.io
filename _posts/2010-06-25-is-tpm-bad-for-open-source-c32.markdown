@@ -10,6 +10,17 @@ categories:
 comments: true
 date: 2010-06-25 16:59:04+00:00
 layout: post
+tags:
+- Free/Libre Open Source Software (1.0)
+- TPM (0.8)
+- Bill C-32 (0.8)
+- Copyright (0.7)
+- Interoperability (0.9)
+- Reverse-engineering (0.7)
+- DRM (0.8)
+- Media player (0.6)
+- Open source software (0.9)
+- Industry (0.6)
 title: Is TPM bad for Open Source? (#c32)
 wordpress_id: 795
 ---

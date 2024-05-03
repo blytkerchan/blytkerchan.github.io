@@ -10,6 +10,20 @@ categories:
 comments: true
 date: 2012-08-27 21:00:01+00:00
 layout: post
+tags:
+- debugging (1.0)
+- technical specifications (1.0)
+- driver (1.0)
+- registers (1.0)
+- hardware (1.0)
+- confusion (1.0)
+- mapping (1.0)
+- polling (1.0)
+- masking (1.0)
+- AND operator (1.0)
+- XOR operator (1.0)
+- schematics (1.0)
+- errors (1.0)
 title: On the importance of clear technical specifications
 wordpress_id: 1906
 ---

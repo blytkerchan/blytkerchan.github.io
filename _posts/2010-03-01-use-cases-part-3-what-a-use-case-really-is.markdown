@@ -8,6 +8,22 @@ categories:
 comments: true
 date: 2010-03-01 21:41:25+00:00
 layout: post
+tags:
+- use-cases (1.0)
+- functional requirements (0.9)
+- project (0.8)
+- writing (0.7)
+- user requirements (0.7)
+- UML (0.6)
+- stakeholders (0.6)
+- error handling (0.6)
+- design (0.5)
+- actors (0.5)
+- goals (0.5)
+- requirements engineering (0.5)
+- guarantees (0.5)
+- user stories (0.5)
+- modeling (0.4)
 title: 'Use-Cases Part 3: What A Use-Case Really Is & Writing Use-Cases'
 wordpress_id: 391
 ---

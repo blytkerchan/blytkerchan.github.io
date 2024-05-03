@@ -14,6 +14,23 @@ excerpt: While at Chicago's O'Hare airport, waiting for my connecting flight to 
   else to communicate with the interpreter. There are a few buses I like for this
   kind of thing, and SPI is one of them.
 layout: post
+tags:
+- airport (0.9)
+- coding (0.8)
+- BrainF interpreter (0.7)
+- SPI (0.9)
+- full-duplex (0.6)
+- clock (0.5)
+- master (0.4)
+- slave (0.4)
+- MOSI (0.3)
+- MISO (0.3)
+- debouncing (0.7)
+- FIFO (0.6)
+- GitHub (0.4)
+- select (0.8)
+- deselect (0.8)
+- testbench (0.5)
 title: Adding SPI support to the BrainF interpreter
 wordpress_id: 3359
 ---

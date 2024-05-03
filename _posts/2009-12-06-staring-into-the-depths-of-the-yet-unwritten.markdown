@@ -9,6 +9,22 @@ categories:
 comments: true
 date: 2009-12-06 20:58:59+00:00
 layout: post
+tags:
+- environmental impact (0.9)
+- peak oil (0.8)
+- polar bears (0.7)
+- smart grid (0.6)
+- electric cars (0.6)
+- communication technology (0.6)
+- work from home (0.6)
+- cost of living (0.5)
+- local consumption (0.5)
+- employee productivity (0.5)
+- home office (0.5)
+- communication tools (0.5)
+- virtual meetings (0.5)
+- redundant communication (0.5)
+- remote work (0.5)
 title: Staring into the depths of the yet unwritten
 wordpress_id: 422
 ---

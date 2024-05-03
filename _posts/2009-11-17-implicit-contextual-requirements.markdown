@@ -7,6 +7,19 @@ categories:
 comments: true
 date: 2009-11-17 20:59:37+00:00
 layout: post
+tags:
+- implicit knowledge (0.9)
+- RFID technology (0.8)
+- line-of-sight machine-readable codes (0.8)
+- barcodes (0.7)
+- Data Matrix codes (0.6)
+- UPC-12 codes (0.6)
+- biometric data (0.7)
+- travel documents (0.7)
+- requirements specifications (0.9)
+- mis-communication (0.8)
+- explicit requirements (0.8)
+- verification and validation (0.8)
 title: Implicit, Contextual Requirements
 wordpress_id: 379
 ---

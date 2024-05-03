@@ -7,6 +7,17 @@ categories:
 comments: true
 date: 2010-05-01 12:00:31+00:00
 layout: post
+tags:
+- Podcast (1.0)
+- Programmer (0.8)
+- Header files (0.9)
+- Forward declarations (1.0)
+- Preprocessor (0.7)
+- Compile times (0.9)
+- Development team (0.8)
+- Project management (1.0)
+- Productivity (0.9)
+- Software projects (0.8)
 title: 'Socks 5: Continuing Sending a Token - Anecdote'
 wordpress_id: 584
 ---

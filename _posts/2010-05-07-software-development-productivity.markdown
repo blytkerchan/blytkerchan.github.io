@@ -5,6 +5,27 @@ categories:
 comments: true
 date: 2010-05-07 23:02:05+00:00
 layout: post
+tags:
+- project management (0.9)
+- software productivity (0.8)
+- waste reduction (0.7)
+- time management (0.6)
+- software development (0.6)
+- tools optimization (0.5)
+- resource allocation (0.5)
+- bug fixing (0.5)
+- unit testing (0.8)
+- code review (0.7)
+- functional testing (0.8)
+- test prioritization (0.6)
+- smoke testing (0.6)
+- deep testing (0.6)
+- exhaustive testing (0.5)
+- developer productivity (0.7)
+- quality assurance (0.6)
+- management decisions (0.5)
+- team productivity (0.5)
+- developer selection (0.5)
 title: Software development productivity
 wordpress_id: 621
 ---

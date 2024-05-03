@@ -9,6 +9,17 @@ comments: true
 date: 2018-09-11 14:42:36+00:00
 layout: post
 slug: That-lunch-wasnt-free
+tags:
+- Spectre (0.8)
+- Meltdown (0.8)
+- bugs (0.6)
+- free lunch (0.9)
+- instruction-level parallelism (0.7)
+- hardware parallelism (0.8)
+- imperative programming (0.7)
+- declarative programming (0.9)
+- computer architecture (0.6)
+- cache optimization (0.7)
 title: That lunch wasn't free after all
 ---
 

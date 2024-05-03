@@ -8,6 +8,16 @@ categories:
 comments: true
 date: 2011-05-08 00:35:32+00:00
 layout: post
+tags:
+- Python (0.9)
+- StackOverflow (0.8)
+- IDE (0.7)
+- Programming (0.6)
+- Syntax (0.5)
+- Indentation (0.4)
+- Comments (0.3)
+- Learning (0.2)
+- Code (0.1)
 title: Starting Python - 99 bottles of beer
 wordpress_id: 1384
 ---

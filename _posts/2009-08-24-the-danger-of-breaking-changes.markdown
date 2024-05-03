@@ -5,6 +5,22 @@ categories:
 comments: true
 date: 2009-08-24 19:39:57+00:00
 layout: post
+tags:
+- Xerces-C (1.0)
+- DOM implementation (0.8)
+- Apache Foundation (0.7)
+- XML processing (0.6)
+- Altova XML Spy (0.5)
+- API compatibility (0.6)
+- Version numbers (0.5)
+- Binary compatibility (0.6)
+- Memory management (0.7)
+- Forking (0.6)
+- Software development (0.5)
+- Xerces-C3 (0.5)
+- Release management (0.6)
+- Bug fixes (0.6)
+- Deprecated API (0.7)
 title: The Danger of Breaking Changes
 wordpress_id: 175
 ---

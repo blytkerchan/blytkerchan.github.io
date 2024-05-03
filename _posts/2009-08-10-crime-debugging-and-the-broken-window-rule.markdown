@@ -8,6 +8,15 @@ categories:
 comments: true
 date: 2009-08-10 01:42:40+00:00
 layout: post
+tags:
+- New York City (0.9)
+- clean-up (0.8)
+- crime rates (0.7)
+- discipline (0.6)
+- code structure (0.9)
+- readable code (0.8)
+- comments (0.7)
+- maintenance nightmare (0.6)
 title: Crime, Debugging and the Broken Window Rule
 wordpress_id: 147
 ---

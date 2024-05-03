@@ -8,6 +8,12 @@ categories:
 comments: true
 date: 2011-07-01 04:00:48+00:00
 layout: post
+tags:
+- Canada Day (0.8)
+- autumn wallpapers (0.9)
+- Canada-themed (0.8)
+- celebration (0.6)
+- images (0.5)
 title: Happy Canada Day
 wordpress_id: 1553
 ---

@@ -8,6 +8,16 @@ comments: true
 date: 2019-12-24
 layout: post
 slug: weird-title
+tags:
+- Washington Post (0.9)
+- journalism (0.8)
+- subscription (0.7)
+- balanced reporting (0.6)
+- NASA (0.8)
+- shooting stars (0.9)
+- space probe (0.7)
+- astronomy (0.6)
+- asteroid (0.7)
 title: Weird title in this morning's Washington Post
 ---
 

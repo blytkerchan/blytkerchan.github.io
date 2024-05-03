@@ -9,6 +9,18 @@ categories:
 comments: true
 date: 2012-11-08 23:35:44+00:00
 layout: post
+tags:
+- error handling (0.9)
+- exceptions (0.9)
+- embedded devices (0.8)
+- robust code (0.7)
+- performance (0.6)
+- bug report (0.6)
+- device start-up (0.5)
+- file systems (0.5)
+- connection management (0.5)
+- peer connection (0.4)
+- software development (0.4)
 title: Exceptions and Embedded Devices
 wordpress_id: 1938
 ---

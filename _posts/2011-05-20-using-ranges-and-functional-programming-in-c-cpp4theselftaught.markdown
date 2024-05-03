@@ -8,6 +8,24 @@ categories:
 comments: true
 date: 2011-05-20 02:47:12+00:00
 layout: post
+tags:
+- C++ (1.0)
+- versatile language (0.9)
+- generic meta-programming (0.8)
+- functional programming (1.0)
+- procedural programming (0.7)
+- object-oriented programming (0.8)
+- C++03 (0.9)
+- C++0x (0.9)
+- closure (0.8)
+- ranges (0.9)
+- STL containers (0.8)
+- STL algorithms (0.8)
+- generic template meta-programming (0.9)
+- lambda expressions (0.9)
+- functor (0.8)
+- function object (0.8)
+- compile-time (0.8)
 title: Using Ranges and Functional Programming in C++
 wordpress_id: 1399
 ---

@@ -9,6 +9,16 @@ categories:
 comments: true
 date: 2011-06-27 21:11:38+00:00
 layout: post
+tags:
+- embedded software development (0.9)
+- device driver debugging (0.8)
+- real-time system (0.7)
+- output signal (0.6)
+- GPIO (0.8)
+- hardware design (0.7)
+- soldering iron (0.5)
+- resistor (0.6)
+- firmware debugging (0.7)
 title: Hardware designers, please, think of us!
 wordpress_id: 1551
 ---

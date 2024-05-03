@@ -6,6 +6,17 @@ categories:
 comments: true
 date: 2011-07-21 02:36:44+00:00
 layout: post
+tags:
+- .deb packages (1.0)
+- GnuPG key (1.0)
+- verification (0.9)
+- public key (0.8)
+- download (0.7)
+- software analyst (0.6)
+- Ronald Landheer-Cieslak (0.5)
+- keyID (0.4)
+- Fingerprint (0.3)
+- SKS 1.1.1 (0.2)
 title: New GnuPG key
 wordpress_id: 1573
 ---

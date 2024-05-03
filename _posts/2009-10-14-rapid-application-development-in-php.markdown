@@ -5,6 +5,17 @@ categories:
 comments: true
 date: 2009-10-14 16:40:54+00:00
 layout: post
+tags:
+- C++ (0.9)
+- Web app (0.8)
+- Agile methodology (0.7)
+- Scrum (0.7)
+- Kanban (0.6)
+- PHP (0.8)
+- GUI development (0.6)
+- Symfony (0.8)
+- Object-relational mapping (0.7)
+- Database schema (0.6)
 title: Rapid application development in PHP
 wordpress_id: 264
 ---

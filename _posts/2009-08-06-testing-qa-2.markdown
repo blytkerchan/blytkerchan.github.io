@@ -8,6 +8,16 @@ categories:
 comments: true
 date: 2009-08-06 15:53:29+00:00
 layout: post
+tags:
+- Software Development (0.9)
+- Bug Testing (0.8)
+- Quality Assurance (0.7)
+- Funky (0.6)
+- Interpreter (0.5)
+- Contest (0.4)
+- Minor Bug (0.3)
+- Post-Mortem Review (0.2)
+- QA Process (0.8)
 title: Testing QA
 wordpress_id: 140
 ---

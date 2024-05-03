@@ -8,6 +8,14 @@ categories:
 comments: true
 date: 2010-11-18 05:33:17+00:00
 layout: post
+tags:
+- Workload (0.8)
+- Time management (0.7)
+- Trust (0.6)
+- Podcast (0.5)
+- C++ (0.4)
+- Self-taught (0.3)
+- Schedule (0.3)
 title: When the cup is full, carry it level
 wordpress_id: 1131
 ---

@@ -6,6 +6,25 @@ categories:
 comments: true
 date: 2009-10-14 19:17:37+00:00
 layout: post
+tags:
+- C++ (1.0)
+- compiler (0.8)
+- interpreted languages (0.6)
+- preprocessor (0.9)
+- operator overloading (0.8)
+- namespaces (0.9)
+- function (0.7)
+- GNU Make (0.7)
+- G++ (0.7)
+- translation unit (0.8)
+- '#include directive (0.9)'
+- header files (0.7)
+- source files (0.7)
+- Namespaces (0.8)
+- main function (0.9)
+- implementation (0.7)
+- cout (0.8)
+- overloading (0.8)
 title: 1- "Hello, world!"
 wordpress_id: 273
 ---

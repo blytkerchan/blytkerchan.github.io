@@ -11,6 +11,17 @@ categories:
 comments: true
 date: 2011-06-17 18:05:53+00:00
 layout: post
+tags:
+- Summer (0.9)
+- Desktop backgrounds (0.8)
+- Site headers (0.7)
+- Wallpaper (0.9)
+- Vlinder logo (0.6)
+- Lily flower (0.8)
+- Canadian province (0.7)
+- Download (0.8)
+- Image sizes (0.6)
+- Architecture ideas (0.7)
 title: Summer is here
 wordpress_id: 1505
 ---

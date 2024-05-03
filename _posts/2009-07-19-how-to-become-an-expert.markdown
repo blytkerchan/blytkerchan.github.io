@@ -15,6 +15,17 @@ excerpt: 'Many summers spent
 
   '
 layout: post
+tags:
+- software design (0.9)
+- expertise (0.8)
+- C++ (0.7)
+- programming (0.6)
+- technical skills (0.5)
+- job interview (0.4)
+- candidate evaluation (0.4)
+- team lead (0.3)
+- software architecture (0.3)
+- coding (0.2)
 title: How to become an expert
 wordpress_id: 36
 ---
