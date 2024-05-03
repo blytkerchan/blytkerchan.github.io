@@ -11,6 +11,7 @@ import rehypeKatex from "rehype-katex";
 import { Link, useLocation } from "react-router-dom";
 
 const Page = ({ env }) => {
+  const [title, setTitle] = useState("");
   const [contents, setContents] = useState("");
   const posts = usePosts();
 
@@ -24,7 +25,9 @@ const Page = ({ env }) => {
   }
 
   useEffect(() => {
-    fetch(`/_posts/${posts.findPostByLocalLink(locallink).filename}`)
+    const post = posts.findPostByLocalLink(locallink);
+    setTitle(post.title);
+    fetch(`/_posts/${post.filename}`)
       .then((res) => {
         console.log(res);
         return res.text();
@@ -33,15 +36,18 @@ const Page = ({ env }) => {
   }, [locallink, posts]);
 
   return (
-    <Markdown
-      remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
-      rehypePlugins={[rehypeRaw, rehypeKatex]}
-      components={{
-        a: (props) => <Link to={props.href}>{props.children}</Link>,
-      }}
-    >
-      {contents}
-    </Markdown>
+    <>
+      <h1 className="post-title">{title}</h1>
+      <Markdown
+        remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeRaw, rehypeKatex]}
+        components={{
+          a: (props) => <Link to={props.href}>{props.children}</Link>,
+        }}
+      >
+        {contents}
+      </Markdown>
+    </>
   );
 };
 
