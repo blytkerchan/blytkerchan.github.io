@@ -21,7 +21,6 @@ const Posts = ({ env }) => {
   const the_posts = usePosts();
 
   useEffect(() => {
-    document.title = env.title;
     if (currentPage.pagePosts.length === 0) {
       const posts = the_posts.listPosts();
       currentPage.pagePosts = posts.slice(
@@ -32,7 +31,7 @@ const Posts = ({ env }) => {
 
     setPosts(currentPage.pagePosts);
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
-  }, [currentPage, the_posts, env, env.title]);
+  }, [currentPage, the_posts, env]);
 
   const handleOlder = (e) => {
     setCurrentPage({ page: currentPage.page + 1, pagePosts: [] });
