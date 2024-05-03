@@ -3,6 +3,7 @@ import React from "react";
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 import Blog from "../pages/Blog";
+import Categories from "../pages/Categories";
 import Error from "../pages/Error";
 import Posts from "../pages/Posts";
 
@@ -32,6 +33,10 @@ function router({ mainMenu, userMenu, env }) {
         {
           path: "blog/*",
           element: <Blog env={env} />,
+        },
+        {
+          path: "categories",
+          element: <Categories env={env} />,
         },
       ],
     },
