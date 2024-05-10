@@ -25,15 +25,31 @@ const Page = ({ env }) => {
   }
 
   useEffect(() => {
-    const post = posts.findPostByLocalLink(locallink);
-    setTitle(post.title);
-    fetch(`/_posts/${post.filename}`)
-      .then((res) => {
-        console.log(res);
-        return res.text();
-      })
-      .then((contents) => setContents(contents));
-  }, [locallink, posts]);
+    if (posts.fetched) {
+      const post = posts.findPostByLocalLink(locallink);
+      if (!post) {
+        // 404 error
+      } else {
+        setTitle(post.title);
+        if (!post.contents) {
+          if (!post.status || (post.status != "fetching" && post.stauts != "fetched")) {
+            post.status = "fetching";
+            fetch(`/_posts/${post.filename}`)
+              .then((res) => {
+                return res.text();
+              })
+              .then((contents) => {
+                post.contents = contents;
+                post.status = "fetched";
+                setContents(contents);
+              });
+          }
+        } else {
+          setContents(post.contents);
+        }
+      }
+    }
+  }, []);
 
   return (
     <>

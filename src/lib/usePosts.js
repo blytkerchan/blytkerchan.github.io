@@ -45,5 +45,6 @@ export default function usePosts() {
     listPosts,
     findPostByLocalLink,
     findPostByUUID,
+    fetched,
   };
 }
