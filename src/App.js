@@ -19,6 +19,7 @@ import router from "./lib/router";
 
 import usePosts from "./lib/usePosts";
 import useCategories from "./lib/useCategories";
+import useTitle from "./lib/useTitle";
 
 const App = (props) => {
   const [menu, setMenu] = useState([]);
@@ -28,9 +29,10 @@ const App = (props) => {
   categories.fetchCategories(environment);
 
   const { t } = useTranslation();
+  const { title } = useTitle();
 
   useEffect(() => {
-    document.title = environment.title;
+    document.title = title;
     const cats = categories.listCategories();
     const menu = JSON.parse(JSON.stringify(mainMenu));
     const catMenu = {
@@ -49,7 +51,7 @@ const App = (props) => {
     setMenu(menu);
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
     import("./pages/Page");
-  }, [environment.title]);
+  }, [title]);
 
   return (
     <>

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+import useTitle from "../lib/useTitle";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
@@ -11,7 +14,11 @@ import rehypeKatex from "rehype-katex";
 const Page = (props) => {
   const [contents, setContents] = useState("");
 
+  const { t } = useTranslation();
+  const { setSubtitle } = useTitle();
+
   useEffect(() => {
+    setSubtitle(t(`pages:${props.name}`));
     fetch(`/${props.name}.md`)
       .then((res) => res.text())
       .then((text) => setContents(text));

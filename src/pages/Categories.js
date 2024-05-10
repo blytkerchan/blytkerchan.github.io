@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import useCategories from "../lib/useCategories";
+import useTitle from "../lib/useTitle";
 
 import { useTranslation } from "react-i18next";
 
@@ -10,11 +11,13 @@ const Categories = ({ env }) => {
   const [cats, setCats] = useState([]);
 
   const theCategories = useCategories();
+  const { setSubtitle } = useTitle();
 
   useEffect(() => {
     setCats(theCategories.listCategories());
   }, []);
 
+  setSubtitle(t("Categories"));
   return (
     <div id="cats">
       <h2 className="category-list-heading">{t("Categories")}</h2>

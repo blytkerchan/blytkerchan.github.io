@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { Button } from "react-bootstrap";
 
+import useTitle from "../lib/useTitle";
+
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
 import remarkMath from "remark-math";
@@ -15,10 +17,13 @@ import { useTranslation } from "react-i18next";
 
 const Posts = ({ env }) => {
   const { t } = useTranslation();
+  const { setSubtitle } = useTitle();
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState({ page: 0, pagePosts: [] });
 
   const the_posts = usePosts();
+
+  setSubtitle(t("Home"));
 
   useEffect(() => {
     if (currentPage.pagePosts.length === 0) {

@@ -1,11 +1,16 @@
 import { useRouteError } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import useTitle from "../lib/useTitle";
 
 const Error = (props) => {
   const { t } = useTranslation();
 
+  const { setSubtitle } = useTitle();
+
   const error = useRouteError();
   console.error(error);
+
+  setSubtitle(t("Error"));
 
   return (
     <div id="error-page">
