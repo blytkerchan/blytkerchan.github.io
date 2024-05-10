@@ -2,14 +2,16 @@ import React from "react";
 
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
-import Blog from "../pages/Blog";
-import Categories from "../pages/Categories";
-import Category from "../pages/Category";
 import Error from "../pages/Error";
-import Posts from "../pages/Posts";
 
 import Layout from "../layout/Layout";
-// Pages to lazy-load
+
+import Posts from "../pages/Posts";
+
+// Components to lazy-load
+const Blog = React.lazy(() => import("../pages/Blog"));
+const Categories = React.lazy(() => import("../pages/Categories"));
+const Category = React.lazy(() => import("../pages/Category"));
 const Page = React.lazy(() => import("../pages/Page"));
 
 function router({ mainMenu, userMenu, env }) {

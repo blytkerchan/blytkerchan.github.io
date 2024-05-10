@@ -50,7 +50,9 @@ const App = (props) => {
     menu.push(catMenu);
     setMenu(menu);
     // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
-    import("./pages/Page");
+    import("./pages/Blog");
+    import("./pages/Categories");
+    import("./pages/Category");
   }, [title]);
 
   return (
