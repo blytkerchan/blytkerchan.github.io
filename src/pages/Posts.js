@@ -75,16 +75,18 @@ const Posts = ({ env }) => {
           </li>
         ))}
       </ul>
-      <Button
-        variant="secondary"
-        onClick={handleOlder}
-        disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
-      >
-        {t("Older")}
-      </Button>
-      <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
-        {t("Newer")}
-      </Button>
+      <div style={{ paddingTop: "20px" }}>
+        <Button
+          variant="secondary"
+          onClick={handleOlder}
+          disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
+        >
+          {t("Older")}
+        </Button>
+        <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
+          {t("Newer")}
+        </Button>
+      </div>
     </div>
   );
 };
