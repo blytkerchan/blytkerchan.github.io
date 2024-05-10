@@ -29,7 +29,7 @@ const Layout = ({ mainMenu, userMenu, env, children }) => {
           </div>
         </div>
       </div>
-      <Footer>Place sticky footer content here.</Footer>
+      <Footer>{env.footerText}</Footer>
     </>
   );
 };

@@ -12,6 +12,9 @@ const environment = {
   minPostsPerCategory: Object.keys(packageJson.blog).includes("minPostsPerCategory")
     ? packageJson.blog.minPostsPerCategory
     : 5,
+  footerText: Object.keys(packageJson.blog).includes("footerText")
+    ? packageJson.blog.footerText
+    : `Vlinder Software's Phoenix v${packageJson.version}`,
 };
 
 export default environment;
