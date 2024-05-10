@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Spinner from "../layout/Spinner";
+import Spinner from "./Spinner";
 import useCategories from "../lib/useCategories";
 import useTitle from "../lib/useTitle";
 

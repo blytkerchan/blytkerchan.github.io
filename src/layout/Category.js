@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
-import { Link } from "react-router-dom";
-import Spinner from "../layout/Spinner";
 
-import { Button } from "react-bootstrap";
-
+import usePosts from "../lib/usePosts";
 import useTitle from "../lib/useTitle";
+import Spinner from "./Spinner";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
@@ -13,46 +11,62 @@ import remarkMath from "remark-math";
 import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
 
-import usePosts from "../lib/usePosts";
+import { Link, useLocation } from "react-router-dom";
+
+import useCategories from "../lib/useCategories";
 import { useTranslation } from "react-i18next";
 
-const Posts = ({ env }) => {
+const Category = ({ env }) => {
   const { t } = useTranslation();
-  const { setSubtitle } = useTitle();
+  const [categoryName, setCategoryName] = useState("");
   const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState({ page: 0, pagePosts: [] });
+
+  const theCategories = useCategories();
+  const thePosts = usePosts();
   const [ready, setReady_] = useState(false);
   const setReady = () => setReady_(true);
 
-  const the_posts = usePosts();
+  const location = useLocation();
+  var slug = null;
 
-  setSubtitle(t("Home"));
+  if (env.useHashRouting) {
+    slug = location.hash.substring(1).substring("/category/".length);
+  } else {
+    slug = location.pathname.substring("/category/".length);
+  }
+
+  const { setSubtitle } = useTitle();
 
   useEffect(() => {
-    if (currentPage.pagePosts.length === 0) {
-      const posts = the_posts.listPosts();
-      currentPage.pagePosts = posts.slice(
-        currentPage.page * env.pageSize,
-        currentPage.page * env.pageSize + env.pageSize
-      );
-    }
+    setCategoryName(theCategories.getCategoryName(slug));
+    setSubtitle(theCategories.getCategoryName(slug));
+    const postUUIDs = theCategories.getCategoryPosts(slug);
+    var posts = [];
+    postUUIDs.forEach((post) => {
+      posts.push(thePosts.findPostByUUID(post));
+    });
+    posts.sort((lhs, rhs) => {
+      const a = rhs.date;
+      const b = lhs.date;
+      if (a === b) {
+        return 0;
+      }
 
-    setPosts(currentPage.pagePosts);
+      if (a > b) {
+        return 1;
+      }
+
+      return -1;
+    });
+    setPosts(posts);
     setReady();
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
-  }, [currentPage, the_posts, env]);
-
-  const handleOlder = (e) => {
-    setCurrentPage({ page: currentPage.page + 1, pagePosts: [] });
-  };
-  const handleNewer = (e) => {
-    setCurrentPage({ page: currentPage.page - 1, pagePosts: [] });
-  };
+  }, [slug]);
 
   if (ready) {
     return (
-      <div id="posts">
-        <h2 className="post-list-heading">{t("Posts")}</h2>
+      <div id="category-posts">
+        <h2 className="post-list-heading">{t(categoryName)}</h2>
         <ul className="post-list">
           {posts.map(({ title, permalink, locallink, excerpt, date }) => (
             <li key={permalink}>
@@ -80,18 +94,6 @@ const Posts = ({ env }) => {
             </li>
           ))}
         </ul>
-        <div style={{ paddingTop: "20px" }}>
-          <Button
-            variant="secondary"
-            onClick={handleOlder}
-            disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
-          >
-            {t("Older")}
-          </Button>
-          <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
-            {t("Newer")}
-          </Button>
-        </div>
       </div>
     );
   } else {
@@ -99,4 +101,4 @@ const Posts = ({ env }) => {
   }
 };
 
-export default Posts;
+export default Category;

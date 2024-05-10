@@ -2,17 +2,17 @@ import React from "react";
 
 import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
-import Error from "../pages/Error";
+import Error from "../layout/Error";
 
 import Layout from "../layout/Layout";
 
-import Posts from "../pages/Posts";
+import Posts from "../layout/Posts";
 
 // Components to lazy-load
-const Blog = React.lazy(() => import("../pages/Blog"));
-const Categories = React.lazy(() => import("../pages/Categories"));
-const Category = React.lazy(() => import("../pages/Category"));
-const Page = React.lazy(() => import("../pages/Page"));
+const Blog = React.lazy(() => import("../layout/Blog"));
+const Categories = React.lazy(() => import("../layout/Categories"));
+const Category = React.lazy(() => import("../layout/Category"));
+const Page = React.lazy(() => import("../layout/Page"));
 
 function router({ mainMenu, userMenu, env }) {
   const routingConfig = [

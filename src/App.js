@@ -49,10 +49,10 @@ const App = (props) => {
     });
     menu.push(catMenu);
     setMenu(menu);
-    // Pages likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
-    import("./pages/Blog");
-    import("./pages/Categories");
-    import("./pages/Category");
+    // layouts likely to be used that are lazy-loaded are loaded here so it speeds up UX a bit
+    import("./layout/Blog");
+    import("./layout/Categories");
+    import("./layout/Category");
   }, [title]);
 
   return (

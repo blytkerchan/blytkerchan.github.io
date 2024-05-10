@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import usePosts from "../lib/usePosts";
 import useTitle from "../lib/useTitle";
-import Spinner from "../layout/Spinner";
+import Spinner from "./Spinner";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
