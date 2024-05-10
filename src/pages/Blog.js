@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import usePosts from "../lib/usePosts";
 import useTitle from "../lib/useTitle";
+import Spinner from "../layout/Spinner";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
@@ -16,6 +17,8 @@ const Page = ({ env }) => {
   const [contents, setContents] = useState("");
   const posts = usePosts();
   const { setSubtitle } = useTitle();
+  const [ready, setReady_] = useState(false);
+  const setReady = () => setReady_(true);
 
   const location = useLocation();
   var locallink = null;
@@ -45,29 +48,35 @@ const Page = ({ env }) => {
                 post.contents = contents;
                 post.status = "fetched";
                 setContents(contents);
+                setReady();
               });
           }
         } else {
           setContents(post.contents);
+          setReady();
         }
       }
     }
   }, []);
 
-  return (
-    <>
-      <h1 className="post-title">{title}</h1>
-      <Markdown
-        remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeRaw, rehypeKatex]}
-        components={{
-          a: (props) => <Link to={props.href}>{props.children}</Link>,
-        }}
-      >
-        {contents}
-      </Markdown>
-    </>
-  );
+  if (ready) {
+    return (
+      <>
+        <h1 className="post-title">{title}</h1>
+        <Markdown
+          remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
+          rehypePlugins={[rehypeRaw, rehypeKatex]}
+          components={{
+            a: (props) => <Link to={props.href}>{props.children}</Link>,
+          }}
+        >
+          {contents}
+        </Markdown>
+      </>
+    );
+  } else {
+    return <Spinner id="spinner" />;
+  }
 };
 
 export default Page;

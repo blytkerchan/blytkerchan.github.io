@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 
 import usePosts from "../lib/usePosts";
 import useTitle from "../lib/useTitle";
+import Spinner from "../layout/Spinner";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
@@ -22,6 +23,8 @@ const Category = ({ env }) => {
 
   const theCategories = useCategories();
   const thePosts = usePosts();
+  const [ready, setReady_] = useState(false);
+  const setReady = () => setReady_(true);
 
   const location = useLocation();
   var slug = null;
@@ -56,41 +59,46 @@ const Category = ({ env }) => {
       return -1;
     });
     setPosts(posts);
+    setReady();
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
   }, [slug]);
 
-  return (
-    <div id="category-posts">
-      <h2 className="post-list-heading">{t(categoryName)}</h2>
-      <ul className="post-list">
-        {posts.map(({ title, permalink, locallink, excerpt, date }) => (
-          <li key={permalink}>
-            <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
-            <h3>
-              <Link className="post-link" to={locallink}>
-                {title}
-              </Link>
-            </h3>
+  if (ready) {
+    return (
+      <div id="category-posts">
+        <h2 className="post-list-heading">{t(categoryName)}</h2>
+        <ul className="post-list">
+          {posts.map(({ title, permalink, locallink, excerpt, date }) => (
+            <li key={permalink}>
+              <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
+              <h3>
+                <Link className="post-link" to={locallink}>
+                  {title}
+                </Link>
+              </h3>
 
-            <Markdown
-              remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
-              rehypePlugins={[rehypeRaw, rehypeKatex]}
-              components={{
-                a: (props) => <Link to={props.href}>{props.children}</Link>,
-              }}
-            >
-              {excerpt}
-            </Markdown>
-            <span className="post-more-link">
-              <Link className="post-more-link" to={locallink}>
-                {t("more...")}
-              </Link>
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+              <Markdown
+                remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeRaw, rehypeKatex]}
+                components={{
+                  a: (props) => <Link to={props.href}>{props.children}</Link>,
+                }}
+              >
+                {excerpt}
+              </Markdown>
+              <span className="post-more-link">
+                <Link className="post-more-link" to={locallink}>
+                  {t("more...")}
+                </Link>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  } else {
+    return <Spinner id="spinner" />;
+  }
 };
 
 export default Category;

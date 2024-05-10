@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
+import Spinner from "../layout/Spinner";
 
 import { Button } from "react-bootstrap";
 
@@ -20,6 +21,8 @@ const Posts = ({ env }) => {
   const { setSubtitle } = useTitle();
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState({ page: 0, pagePosts: [] });
+  const [ready, setReady_] = useState(false);
+  const setReady = () => setReady_(true);
 
   const the_posts = usePosts();
 
@@ -35,6 +38,7 @@ const Posts = ({ env }) => {
     }
 
     setPosts(currentPage.pagePosts);
+    setReady();
     document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
   }, [currentPage, the_posts, env]);
 
@@ -45,50 +49,54 @@ const Posts = ({ env }) => {
     setCurrentPage({ page: currentPage.page - 1, pagePosts: [] });
   };
 
-  return (
-    <div id="posts">
-      <h2 className="post-list-heading">{t("Posts")}</h2>
-      <ul className="post-list">
-        {posts.map(({ title, permalink, locallink, excerpt, date }) => (
-          <li key={permalink}>
-            <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
-            <h3>
-              <Link className="post-link" to={locallink}>
-                {title}
-              </Link>
-            </h3>
+  if (ready) {
+    return (
+      <div id="posts">
+        <h2 className="post-list-heading">{t("Posts")}</h2>
+        <ul className="post-list">
+          {posts.map(({ title, permalink, locallink, excerpt, date }) => (
+            <li key={permalink}>
+              <span className="post-meta">{new Date(Date.parse(date)).toLocaleDateString()}</span>
+              <h3>
+                <Link className="post-link" to={locallink}>
+                  {title}
+                </Link>
+              </h3>
 
-            <Markdown
-              remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
-              rehypePlugins={[rehypeRaw, rehypeKatex]}
-              components={{
-                a: (props) => <Link to={props.href}>{props.children}</Link>,
-              }}
-            >
-              {excerpt}
-            </Markdown>
-            <span className="post-more-link">
-              <Link className="post-more-link" to={locallink}>
-                {t("more...")}
-              </Link>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <div style={{ paddingTop: "20px" }}>
-        <Button
-          variant="secondary"
-          onClick={handleOlder}
-          disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
-        >
-          {t("Older")}
-        </Button>
-        <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
-          {t("Newer")}
-        </Button>
+              <Markdown
+                remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeRaw, rehypeKatex]}
+                components={{
+                  a: (props) => <Link to={props.href}>{props.children}</Link>,
+                }}
+              >
+                {excerpt}
+              </Markdown>
+              <span className="post-more-link">
+                <Link className="post-more-link" to={locallink}>
+                  {t("more...")}
+                </Link>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div style={{ paddingTop: "20px" }}>
+          <Button
+            variant="secondary"
+            onClick={handleOlder}
+            disabled={currentPage.page === Math.floor(the_posts.listPosts().length / env.pageSize)}
+          >
+            {t("Older")}
+          </Button>
+          <Button variant="primary" onClick={handleNewer} disabled={currentPage.page === 0} className="float-end">
+            {t("Newer")}
+          </Button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <Spinner id="spinner" />;
+  }
 };
 
 export default Posts;
