@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import useTitle from "../lib/useTitle";
-import Spinner from "../layout/Spinner";
+import Spinner from "./Spinner";
 
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
