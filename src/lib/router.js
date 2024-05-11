@@ -9,6 +9,7 @@ import Layout from "../layout/Layout";
 import Posts from "../layout/Posts";
 
 // Components to lazy-load
+const Asset = React.lazy(() => import("../layout/Asset"));
 const Blog = React.lazy(() => import("../layout/Blog"));
 const Categories = React.lazy(() => import("../layout/Categories"));
 const Category = React.lazy(() => import("../layout/Category"));
@@ -32,6 +33,10 @@ function router({ mainMenu, userMenu, env }) {
         {
           path: "about",
           element: <Page name="about" />,
+        },
+        {
+          path: "assets/*",
+          element: <Asset env={env} />,
         },
         {
           path: "blog/*",
