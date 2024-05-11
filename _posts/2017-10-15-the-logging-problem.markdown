@@ -1,63 +1,63 @@
 ---
 author: rlc
 categories:
-- Technology
-- Engineering
-- Software Development
-- Debugging
-- Real-time Systems
-- Industrial Devices
-- Data Logging
-- Memory Management
-- Processor Optimization
-- Resource Management
-- Windows Embedded Compact
-- Kernel Programming
-- Multi-threading
-- Data Structures
-- Algorithms
-- Performance Optimization
-- Error Handling
-- File Management
-- System Design
-- Optimization Techniques
-- Diagnostic Tools
-- Report Generation
-- Data Formatting
-- Operating Systems
+  - Technology
+  - Engineering
+  - Software Development
+  - Debugging
+  - Real-time Systems
+  - Industrial Devices
+  - Data Logging
+  - Memory Management
+  - Processor Optimization
+  - Resource Management
+  - Windows Embedded Compact
+  - Kernel Programming
+  - Multi-threading
+  - Data Structures
+  - Algorithms
+  - Performance Optimization
+  - Error Handling
+  - File Management
+  - System Design
+  - Optimization Techniques
+  - Diagnostic Tools
+  - Report Generation
+  - Data Formatting
+  - Operating Systems
 comments: true
 date: 2017-10-15 17:14:46+00:00
 layout: post
 tags:
-- industrial devices (1.0)
-- real-time (1.0)
-- logging (1.0)
-- diagnose (1.0)
-- timing constraints (0.9)
-- system (0.9)
-- debug messages (1.0)
-- memory (0.9)
-- processor time (0.9)
-- resources (0.9)
-- error (1.0)
-- debugging (1.0)
-- Windows Embedded Compact (1.0)
-- driver (1.0)
-- I/O Control (0.9)
-- OAL (0.9)
-- kernel-mode (0.9)
-- hooking (1.0)
-- queue (1.0)
-- multi-producer single-consumer (0.9)
-- FIFO (1.0)
-- named event (0.9)
-- flush-to-disk (0.9)
-- abstract data type (0.9)
-- MPMC queue (0.9)
-- atomic operations (0.9)
-- optimization (1.0)
-- sprintf (1.0)
-- WriteFile (1.0)
+  - industrial devices (1.0)
+  - real-time (1.0)
+  - logging (1.0)
+  - diagnose (1.0)
+  - timing constraints (0.9)
+  - system (0.9)
+  - debug messages (1.0)
+  - memory (0.9)
+  - processor time (0.9)
+  - resources (0.9)
+  - error (1.0)
+  - debugging (1.0)
+  - Windows Embedded Compact (1.0)
+  - driver (1.0)
+  - I/O Control (0.9)
+  - OAL (0.9)
+  - kernel-mode (0.9)
+  - hooking (1.0)
+  - queue (1.0)
+  - multi-producer single-consumer (0.9)
+  - FIFO (1.0)
+  - named event (0.9)
+  - flush-to-disk (0.9)
+  - abstract data type (0.9)
+  - MPMC queue (0.9)
+  - atomic operations (0.9)
+  - optimization (1.0)
+  - sprintf (1.0)
+  - WriteFile (1.0)
 title: The Logging "problem"
 wordpress_id: 3457
 ---
@@ -77,7 +77,7 @@ In a recent[^1] implementation to solve this problem in Windows Embedded Compact
 
 [^1]: Publication of this post is significantly delayed to allow the implementation in question to be patented before this hits the web.
 
-{% gist 9702620403f11773fe3b1200ce785eee kernel-hooks.cpp %}
+<gist id="blytkerchan/9702620403f11773fe3b1200ce785eee" file="kernel-hooks.cpp"></gist>
 
 and all the `writeDebugString` hook function needs to do is queue the message. We make sure that for debug messages, the OEM function also gets called at some point -- either directly in the hook or elsewhere -- so the solution appears transparent.
 
@@ -121,11 +121,11 @@ The driver further created a named event, using Windows' `CreateEvent` function,
 
 The interface of the abstract data type looks a bit like this:
 
-{% gist 9702620403f11773fe3b1200ce785eee debugmessagequeue.hpp %}
+<gist id="blytkerchan/9702620403f11773fe3b1200ce785eee" file="debugmessagequeue.hpp"></gist>
 
 The "intrusive" part in the descriptive list above is fairly clear: when you pop all of the buckets, you get an implementation-defined _thing_ called `Buckets`, which you go through to get all the messages and release afterwards. If we assume that `Buckets` has an STL-like interface, the consuming thread would look something like this:
 
-{% gist 9702620403f11773fe3b1200ce785eee consumingthread.cpp %}
+<gist id="blytkerchan/9702620403f11773fe3b1200ce785eee" file="consumingthread.cpp"></gist>
 
 ### Pushing into the queue
 
@@ -144,7 +144,7 @@ If no free buckets are available, a bucket can be popped from the queue. In orde
 
 This means `push` looks something like this:
 
-{% gist 9702620403f11773fe3b1200ce785eee push.cpp %}
+<gist id="blytkerchan/9702620403f11773fe3b1200ce785eee" file="push.cpp"></gist>
 
 in which `allocateBucket` is coded according to the selected method.
 
