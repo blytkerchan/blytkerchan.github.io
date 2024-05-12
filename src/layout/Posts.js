@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 
 import useTitle from "../lib/useTitle";
 
+import remarkLink from "../remark/links";
 import remarkGfm from "remark-gfm";
 import remarkImages from "remark-images";
 import remarkMath from "remark-math";
@@ -64,10 +65,22 @@ const Posts = ({ env }) => {
               </h3>
 
               <Markdown
-                remarkPlugins={[remarkImages, remarkGfm, remarkMath]}
+                remarkPlugins={[remarkImages, remarkGfm, remarkMath, remarkLink]}
                 rehypePlugins={[rehypeRaw, rehypeKatex]}
                 components={{
-                  a: (props) => <Link to={props.href}>{props.children}</Link>,
+                  a: (props) => {
+                    if (!("target" in props)) {
+                      return <Link to={props.href}>{props.children}</Link>;
+                    } else {
+                      var newProps = {};
+                      Object.keys(props).forEach((prop) => {
+                        if (prop != "children") {
+                          newProps[prop] = props[prop];
+                        }
+                      });
+                      return <a {...newProps}>{props.children}</a>;
+                    }
+                  },
                 }}
               >
                 {excerpt}

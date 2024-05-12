@@ -15,6 +15,7 @@ const environment = {
   footerText: Object.keys(packageJson.blog).includes("footerText")
     ? packageJson.blog.footerText
     : `Vlinder Software's Phoenix v${packageJson.version}`,
+  baseUrl: Object.keys(packageJson.blog).includes("baseUrl") ? packageJson.blog.baseUrl : `/`,
 };
 
 export default environment;
