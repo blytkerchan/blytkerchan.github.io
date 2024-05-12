@@ -11,6 +11,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
 
 import { Link, useLocation } from "react-router-dom";
+import ReactEmbedGist from "react-embed-gist";
 
 const Page = ({ env }) => {
   const [title, setTitle] = useState("");
@@ -68,6 +69,9 @@ const Page = ({ env }) => {
           rehypePlugins={[rehypeRaw, rehypeKatex]}
           components={{
             a: (props) => <Link to={props.href}>{props.children}</Link>,
+            gist: (props) => (
+              <ReactEmbedGist gist={props.id} file={props.file} loadingFallback={<Spinner />}></ReactEmbedGist>
+            ),
           }}
         >
           {contents}
