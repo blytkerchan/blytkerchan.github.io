@@ -1,16 +1,34 @@
 ---
 author: rlc
+categories:
+- Education
+- Technology
+- Journalism
+- Economics
+- Politics
 comments: true
 date: 2010-05-24 17:16:21+00:00
 layout: post
-permalink: /blog/2010/05/albion-college-decides-to-scrap-computer-science-and-journalism-majors/
-slug: albion-college-decides-to-scrap-computer-science-and-journalism-majors
+tags:
+- Albion College (0.9)
+- faculty reduction (0.8)
+- elimination of courses (0.7)
+- Computer Science (0.9)
+- Journalism (0.9)
+- career options (0.7)
+- formal training (0.6)
+- out-sourcing (0.8)
+- North American market (0.7)
+- specialized CS jobs (0.8)
+- financial motivation (0.6)
+- marketing problem (0.7)
+- Journalism importance (0.9)
+- globalization (0.7)
+- democracy (0.6)
+- insolvency (0.5)
+- irrelevance (0.5)
 title: Albion College decides to scrap Computer Science and Journalism majors
 wordpress_id: 657
-categories:
-- Opinions
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 I came across this article while surfing the web this afternoon<!--more-->: [Albion College officials defend decisions on faculty reduction and elimination of courses -- MLive.com](http://www.mlive.com/news/jackson/index.ssf/2010/05/albion_college_officials_defen.html). Apparently, Computer Science and Journalism (as well as a few other topics) aren't reasonable career options in the twenty-first century.

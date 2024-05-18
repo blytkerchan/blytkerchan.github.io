@@ -1,31 +1,33 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2012-01-12 22:14:34+00:00
 layout: post
-permalink: /blog/2012/01/changing-an-api-in-subtle-unpredictable-ways/
-slug: changing-an-api-in-subtle-unpredictable-ways
+tags:
+- Windows systems programming (1.0)
+- WaitForSingleObject (0.8)
+- WaitForMultipleObjects (1.0)
+- thread management (0.9)
+- API design (0.7)
+- Microsoft (0.6)
+- Windows Embedded Compact (0.8)
+- thread synchronization (0.8)
+- software development (0.7)
 title: Changing an API in subtle, unpredictable ways
 wordpress_id: 1785
-categories:
-- C &amp; C++
-- Windows
-tags:
-- API design
-- code
-- design
 ---
 
 Many seasoned Windows systems programmers will know that you can wait for the death of a thread with `WaitForSingleObject` and for the deaths of multiple threads with its bigger brother, `WaitForMultipleObjects`. Big brother changes its behavior on some platforms, though -- as I just found out myself, the hard way.
+
 <!--more-->
+
 `WaitForMultipleObjects` takes four parameters: the number of objects to wait for, the handles of the objects to wait for, whether or not it should wait for all of the objects to be signalled before returning, and a time-out. One common way to wait for a bunch of threads to die looks like this:
 
-    
     HANDLE threads[thread_count__] = { the threads }
     DWORD wfmo_result(WaitForMultipleObjects(thread_count__, threads, TRUE, INFINITE));
     // handle errors here
-
-
 
 The snag is in the third parameter. On some platforms, it _has to be_ `FALSE` -- otherwise `WaitForMultipleObjects` will (may?) return immediately.
 
@@ -33,8 +35,6 @@ Personally, I find this kind of thing really annoying: when you have an API that
 
 I can understand that with the Embedded Compact scheduler, it may not be feasible to implement a wait-for-all option very efficiently but, knowing your users need the option and will likely port applications between platforms, would it really be too much to ask to do something along these lines:
 
-
-    
     DWORD WaitForMultipleObjects(DWORD nObjects, HANDLE *lpHandles, BOOL bWaitForAll, DWORD dwTimeOut)
     {
     	if (bWaitForAll)
@@ -66,8 +66,6 @@ I can understand that with the Embedded Compact scheduler, it may not be feasibl
     		// current implementation
     	}
     }
-
-
 
 I've even written this code in Microsoft style -- hungarian wartHogs and all. If anyone at Microsoft is reading this: a QFE for Windows Embedded Compact 7 with this code (or something similar) in it would be appreciated (but I won't be holding my breath).
 

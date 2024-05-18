@@ -1,18 +1,34 @@
 ---
 author: rlc
+categories:
+- Physics
+- Technology
+- Science
+- Quantum Teleportation
+- TCP/IP
+- Networking
 comments: true
 date: 2010-05-26 23:08:22+00:00
 layout: post
-permalink: /blog/2010/05/quantum-teleportation-achieved-over-16-km/
-slug: quantum-teleportation-achieved-over-16-km
+tags:
+- Physics (1.0)
+- Quantum teleportation (1.0)
+- China (1.0)
+- TCP/IP (1.0)
+- Heisenberg uncertainty principle (1.0)
+- Quantum state (1.0)
+- Probability (1.0)
+- TCP packet (1.0)
+- Destination (1.0)
+- Accuracy (1.0)
 title: Quantum teleportation achieved over 16 km
 wordpress_id: 661
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 Recently, in [this report](http://www.physorg.com/news193551675.html), it's been reported that a physics laboratory in China achieved a new distance record in quantum teleportation: 16 km. That's quite a feat, considering that up until now, the max. distance had been a few hundred meters.
+
 <!--more-->
+
 While working on a project with a team in the US, I was monitoring a system (before debugging it) that failed in a part that I wasn't going to debug, involving a TCP/IP error. I quipped that "unless [they] are using TCP over quantum teleportation, the Heisenberg uncertainty principle doesn't apply here" (i.e. it didn't just break because I was looking at it). That got me thinking: how feasible would it be to implement TCP/IP over quantum teleportation, with the current state of affairs?
 
 The answer is: completely infeasible. Here's why:

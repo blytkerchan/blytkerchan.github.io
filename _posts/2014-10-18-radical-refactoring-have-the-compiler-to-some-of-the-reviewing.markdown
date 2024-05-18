@@ -1,27 +1,30 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Code Refactoring
+- API Design
+- Compiler Optimization
+- Bug Detection
 comments: true
 date: 2014-10-18 13:35:32+00:00
 layout: post
-permalink: /blog/2014/10/radical-refactoring-have-the-compiler-to-some-of-the-reviewing/
-slug: radical-refactoring-have-the-compiler-to-some-of-the-reviewing
+tags:
+- bug detection (0.9)
+- API changes (0.8)
+- compiler (0.9)
+- code review (0.7)
+- platform compatibility (0.6)
+- refactoring (0.8)
+- economic considerations (0.5)
 title: 'Radical Refactoring: Have the compiler to (some of) the reviewing'
 wordpress_id: 3346
-categories:
-- Anecdotes
-- C &amp; C++
-- C++ for the self-taught
-- Embedded software development
-- Radical Refactoring
-tags:
-- compiler
-- compiler-assisted reviewing
-- radical refactoring
-- refactoring
 ---
 
 One of the most common sources of bugs is ambiguity: some too-subtle API change that's missed in a library update and introduces a subtle bug, that finally only gets found out in the field. My answer to that problem is radical: make changes breaking changes -- make sure the code just won't compile unless fixed: the compiler is generally better at finding things you missed than you are.
+
 <!--more-->
+
 I recently had to review a chunk of code that ported an application from one platform to a different flavor of that platform. The different flavor in question didn't support a given library, but because all flavors were compiled from the same source tree, the headers of the unsupported library were still available. Regrettably the only way to distinguish between one flavor of the platform and another at compile-time was using an `#ifdef`.
 
 The code was therefore littered with `#ifdef`s, but the `#include` directive that included the library's header files was still there -- so all the API calls that were no longer supported would still compile (and, in this case, link as well, but do the wrong thing at run-time in oh-so-subtle ways).

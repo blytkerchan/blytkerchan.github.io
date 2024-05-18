@@ -1,21 +1,56 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Technology
+- National Security
+- Software Development
+- Embedded Systems
+- Network Security
+- Denial of Service Attacks
+- Critical Infrastructure
+- Programming Languages
+- Systems Programming
+- Industry Standards
+- Awareness Campaigns
+- Public Policy
+- Regulation
 comments: true
 date: 2011-01-10 00:12:46+00:00
 layout: post
-permalink: /blog/2011/01/security-awareness-and-embedded-software/
-slug: security-awareness-and-embedded-software
+tags:
+- interview (0.9)
+- embedded systems (0.9)
+- security issue (0.8)
+- rootkits (0.7)
+- BIOS attacks (0.7)
+- access control (0.6)
+- distributed denial of service (DDOS) (0.8)
+- critical civilian infrastructure (0.8)
+- web security (0.7)
+- application layer (0.6)
+- presentation layer (0.6)
+- Singularity project (0.8)
+- embedded software (0.8)
+- systems software (0.7)
+- C# (0.7)
+- Java (0.6)
+- C++ (0.7)
+- programming languages (0.6)
+- systems programming (0.7)
+- radical change (0.8)
+- industry productivity (0.7)
+- security awareness (0.8)
+- policy makers (0.7)
 title: Security Awareness and Embedded Software
 wordpress_id: 1148
-tags:
-- embedded
-- security
-- software
 ---
 
 In a recent interview with Ivan Arce of Core Security Technologies by Gary McGraw of Cigital, Arce made the point that embedded systems are becoming a security issue. At about the same time, US Army General Keith B. Alexander, director of the US National Security Agency, said that a separate secure network needs to be created for critical civilian infrastructure. They are probably both right.
+
 <!--more-->
-While Arce and McGraw were talking mostly about rootkits and BIOS attacks in the section of the interview I am about to quote from, I believe the points that they were making are more generally applicable. In fact, Arce is probably right when he expresses his view that embedded systems are becoming more of an issue because access to them is more widespread and cheaper and because the security of the code running on those systems is up to the standards of 10 years ago if anything, between 10 and 20 years ago (...) and these things are ubiquitous[^1]. 
+
+While Arce and McGraw were talking mostly about rootkits and BIOS attacks in the section of the interview I am about to quote from, I believe the points that they were making are more generally applicable. In fact, Arce is probably right when he expresses his view that embedded systems are becoming more of an issue because access to them is more widespread and cheaper and because the security of the code running on those systems is up to the standards of 10 years ago if anything, between 10 and 20 years ago (...) and these things are ubiquitous[^1].
 
 [^1]: _Silver Bullet Taslks with Ivan Arce_; IEEE Security & Privacy Nov/Dec 2010 pp. 9-13.
 
@@ -26,7 +61,6 @@ Similarly, comprimised embedded devices in a power grid could turn off power to 
 From my point of view, McGraw is exactly right when he says: "The Web is getting a lot of myopic interest, with people focusing so much attention on the application layer and the presentation layer that they forget that this other area of attack exists"[^2]. He also asserts that "the attackers are not forgetting that."[^3] - and he might be right about that as well.
 
 [^2]: ibid.
-
 [^3]: ibid.
 
 So, what should we do about this problem? Is Microsoft's [Singularity](http://research.microsoft.com/en-us/projects/singularity/) project on the right track? Should we radically change the way embedded software is made? Or should we just continue with "business as usual"?
@@ -38,16 +72,15 @@ Personally, I don't think Singularity is on the right track - at least not for e
 Singularity is an attempt at radically changing the way systems software is written by using a higher-level language in stead of a language that is designed for writing systems software. C# is designed to write applications software and is, as such, not a suitable language for writing systems software as it lacks some of the very same biases that make C and C++ less suitable for writing applications software[^5]. If a higher-level programming language is needed for systems programming, I would prefer C++ over any derivative of C# or Java hands down: it provides the flexibility of any programming paradigm you might want to use[^6] as well as the systems-programming bias that, in my opinion, is needed for systems programming. For one thing, C++ is well-defined in a "bare" (free-standing) environment, meaning you can use it in a well-defined way to write a hosted environment.
 
 [^5]: Don't take this to mean that I think C and C++ are not suitable for applications software: they are, but one does have to know what one is doing in order to get to the same kinds of productivity levels as one can get with Java and C#.
-
 [^6]: Aside from object-oriented programming, C++ provides support for empirical, procedural, structured and functional programming -- something that most other general-purpose programming languages with a bias for systems programming do not. This allows the C++ programmer to use the most appropriate programming paradigm in any given situation, thereby arguably providing for the most approprate code, both in questions of maintainability as performance.
 
 But there is also the matter of being an attempt at radical change: while I am all for radical change when it's warranted, radically changing the way an entire industry works is beyond the power even of a hegemon such as Microsoft. That is not a sufficient argument for it not being a good idea, though: for that, we need to take a look at what would happen if we were to radically change the way embedded software is written.
 
-A rough, "wet finger evaluation" guesstimate of the number of embedded software programmers world-wide would be "millions": between about ten and twenty million programmers, about a quarter to a third of which work on embedded software - maybe less. Even if there were "only" a million, that's still the size of a small European country (Ireland, for example). Radically changing the way all these people work would entail two things: 
+A rough, "wet finger evaluation" guesstimate of the number of embedded software programmers world-wide would be "millions": between about ten and twenty million programmers, about a quarter to a third of which work on embedded software - maybe less. Even if there were "only" a million, that's still the size of a small European country (Ireland, for example). Radically changing the way all these people work would entail two things:
 
-  1. stop them from working the way they work now
-  2. get them to work in the "radically new" way
-Of course, you'd also have to avoid them slipping back to their old, "bad", habits.
+1. stop them from working the way they work now
+2. get them to work in the "radically new" way
+   Of course, you'd also have to avoid them slipping back to their old, "bad", habits.
 
 Thousands of lines of embedded code are being written every day. Stopping a few million people from being productive so they can be re-trained in a radically new way of thinking would prevent those thousands of lines of code from being written. That would mean that the industry's productivity would fall to zero - overnight. Once all those people are trained, we still have millions of lines of embedded code to maintain and, ultimately, replace using the radically new way of doing things. That means that technological progress -- which normally builds on the foundations laid by previous generations of technology -- would be ground to a halt as well. Also, among the millions of people that do embedded development today, many have years of experience -- all of which is down the drain if some radically new way of development is to be used.
 

@@ -1,16 +1,38 @@
 ---
 author: rlc
+categories:
+- Website Analytics
+- User Demographics
+- Language Preferences
+- Browser Usage
+- Visitor Behavior
+- Operating System Preferences
+- Search Engine Optimization
+- Content Preferences
+- Geographic Diversity
+- User Engagement
 comments: true
 date: 2011-07-22 03:28:31+00:00
 layout: post
-permalink: /blog/2011/07/you-according-to-google-analytics/
-slug: you-according-to-google-analytics
+tags:
+- Google Analytics (1.0)
+- Site Visitors (0.8)
+- User Demographics (0.7)
+- Geographical Diversity (0.6)
+- Language Preferences (0.6)
+- Page Views (0.8)
+- Bounce Rate (0.5)
+- Time on Site (0.7)
+- Open Source Software (0.9)
+- Search Keywords (0.8)
+- Referral Traffic (0.5)
+- Operating Systems (0.7)
+- Content Preferences (0.8)
+- Weekday Traffic (0.6)
+- Language Diversity (0.6)
+- Content Engagement (0.7)
 title: You, according to Google Analytics
 wordpress_id: 1590
-categories:
-- This blog
-tags:
-- analytics
 ---
 
 This blog uses Google Analytics, which provides a treasure-trove of information about the site's visitors. To use that information to improve the site, it has to be parsed.

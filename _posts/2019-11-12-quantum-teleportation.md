@@ -1,11 +1,32 @@
 ---
 author: rlc
+categories:
+- Quantum Computing
+- Teleportation
+- Star Trek
+- Physics
+- Sci-fi
 comments: true
 date: 2019-11-12
 layout: post
 slug: quantum-teleportation
+tags:
+- quantum computing (0.9)
+- quantum teleportation (0.9)
+- Star Trek (0.7)
+- qubits (0.8)
+- Heisenberg compensators (0.6)
+- Enterprise (0.6)
+- physics (0.5)
+- teleportation circuit (0.7)
+- Captain Kirk (0.6)
+- energy conversion (0.5)
+- sci-fi (0.4)
+- no cloning theorem (0.7)
+- Tom Riker (0.4)
 title: Quantum teleportation
 ---
+
 A bit more fun with quantum computing...
 
 Quantum teleportation is one of those things that Star Trek fans (like myself) like to believe is a dream come true: if it's possible to teleport qubits, surely it may be possible to teleport real-world things some day?

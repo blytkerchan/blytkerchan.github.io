@@ -1,24 +1,40 @@
 ---
 author: rlc
+categories:
+- Programming
+- Software Development
+- Exception Handling
+- Security
+- Authentication
+- Negotiation
+- SSPI
+- Mechanism
 comments: true
 date: 2010-10-03 03:46:00+00:00
 layout: post
-permalink: /blog/2010/10/negotiation-first-steps/
-slug: negotiation-first-steps
+tags:
+- programming (1.0)
+- exceptions (1.0)
+- encapsulation (1.0)
+- negotiation (1.0)
+- SSPI (1.0)
+- context (1.0)
+- credentials (1.0)
+- mechanism (1.0)
+- authentication (1.0)
+- error handling (1.0)
 title: 'Negotiation: first steps'
 wordpress_id: 970
-categories:
-- C++ for the self-taught
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 As discussed [last month](/blog/2010/09/opacity-encapsulation-at-its-best-and-worst), the requirement for encapsulation pushes us towards allowing the user to know that there's a negotiation between the two peers, and does not alleviate the requirement that the user understand the errors. So in this installment, we will start using the new implementation of exceptions we worked out in the previous installment, and start on the negotiation mechanism from two installments ago.
+
 <!--more-->
+
 The new `Negotiation` class will have to carry everything needed during a negotiation - such as the context handle, a buffer to store the token data in, etc. and will have to be passed to the `Mechanism` to be worked on. That means that anything that may need to be passed to the `InitializeSecurityContext` SSPI function will need to be in there. The class itself doesn't really matter much, then, as long as it takes care of the resources of anything it carries around. The code of the new class can, of course, be found in the Git repository
 
-The interesting bits for this installment are in the following code: 
-    
+The interesting bits for this installment are in the following code:
+
     /*virtual */std::auto_ptr< Security::Context > Mechanism::getContext(
     	Security::Details::Negotiation & _negotiation,
     	RFC1961::Token *& token,
@@ -97,7 +113,7 @@ The interesting bits for this installment are in the following code:
     		 * empty. */
     		++negotiation.step_;
     		// don't touch retval - we're not done yet
-    
+
     		// if token pointed to anything, we will assume the resources of that
     		// thing will be handled by the owner. There is no way of knowing,
     		// otherwise, how to get rid of it ourselves. In any case, we now
@@ -178,7 +194,6 @@ The interesting bits for this installment are in the following code:
     	}
     	return retval;
     }
-    
 
 There's a few caveats you need to notice about this code. For one thing, notice the `dynamic_cast` on line 8. While many people will tell you not to use `dynamic_cast` in production code, because it is supposedly slow, it is only slow when it has a lot of work to do and, in this case, it only has a lot of work to do if it fails. Note that I cast to a reference, however, which means that `dynamic_cast` will throw an exception if it fails - which is exactly what I want: if the user didn't give me a proper `Negotiation` object, I don't want to carry on. Same thing for the credentials on line 9.
 
@@ -186,8 +201,8 @@ Lines 10 through 25 set up buffer descriptors are needed for the call to the SSP
 
 Another caveat to look for is when we throw exceptions: we find a draw-back in the implementation of our `Exception` class because it doesn't carry a payload. We'll have to fix that.
 
-Everything that is thrown by this new code is declared as follows: 
-    
+Everything that is thrown by this new code is declared as follows:
+
     --- a/lib/security/Mechanism.h
     +++ b/lib/security/Mechanism.h
     @@ -5,6 +5,7 @@
@@ -195,7 +210,7 @@ Everything that is thrown by this new code is declared as follows:
      #include <string>
      #include "Details/Negotiation.h"
     +#include "../exceptions/Exception.h"
-    
+
      namespace Vlinder { namespace Chausette { namespace RFC1961 { struct Token; }}}
      namespace Vlinder { namespace Chausette { namespace Security {
     @@ -13,6 +14,14 @@ namespace Vlinder { namespace Chausette { namespace Security {
@@ -211,19 +226,17 @@ Everything that is thrown by this new code is declared as follows:
     +               typedef Vlinder::Exceptions::Exception< std::runtime_error, Error, incomplete_credentials__ > IncompleteCredentials;
     +               typedef Vlinder::Exceptions::Exception< std::runtime_error, Error, incomplete_message__ > IncompleteMessage;
                     virtual ~Mechanism() = 0;
-    
+
                     virtual std::auto_ptr< Details::Negotiation > startNegotiation() = 0;
 
+Finally, the `Negotiation` class looks like this:
 
-
-Finally, the `Negotiation` class looks like this: 
-    
     namespace Vlinder { namespace Chausette { namespace SSPI { namespace Details {
     	struct Negotiation : Security::Details::Negotiation
     	{
     		Negotiation();
     		/*virtual */~Negotiation()/* = 0*/;
-    
+
     		unsigned int step_;
     		CtxtHandle context_handle_;
     		bool context_handle_valid_;
@@ -235,10 +248,7 @@ Finally, the `Negotiation` class looks like this:
 
 which, as you can see, contains only things that need to be carried around. You should notice the `context_handle_valid_` flag, though, which tells the destructor whether or not it should destroy the context handle. In the `getContext` function, it is set on lines 42, 65, 85 and 113 - each time before an exception might be thrown - and cleared on line 121 - after which ownership is handed off to the `Context` class.
 
-
-
 ### In Conclusion
-
 
 This installment has perhaps been a bit heavier on code than usual - and a bit lighter on the theoretical side - but if you comb through the code you will see that it applies a lot of what we've discussed before.
 

@@ -1,29 +1,35 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Embedded Systems
+- Error Handling
+- Exception Handling
+- Bug Fixing
 comments: true
 date: 2012-11-08 23:35:44+00:00
 layout: post
-permalink: /blog/2012/11/exceptions-and-embedded-devices/
-slug: exceptions-and-embedded-devices
+tags:
+- error handling (0.9)
+- exceptions (0.9)
+- embedded devices (0.8)
+- robust code (0.7)
+- performance (0.6)
+- bug report (0.6)
+- device start-up (0.5)
+- file systems (0.5)
+- connection management (0.5)
+- peer connection (0.4)
+- software development (0.4)
 title: Exceptions and Embedded Devices
 wordpress_id: 1938
-categories:
-- C &amp; C++
-- Embedded software development
-tags:
-- embedded
-- error handling
 ---
 
-Lately, I've had a number of discussions on this subject, in which the same questions cropped up again and again: 
+Lately, I've had a number of discussions on this subject, in which the same questions cropped up again and again:
 
+1. should exceptions be used in embedded devices?
 
-	
-  1. should exceptions be used in embedded devices?
-
-	
-  2. should exceptions occur in "normal operation" (i.e. is every exception a bug)?
-
+2. should exceptions occur in "normal operation" (i.e. is every exception a bug)?
 
 My answer to these two questions are yes and yes (no) resp.: exceptions can and should be used (appropriately) in embedded devices and exceptions may occur during normal operation (i.e. not every exception that occurs is a bug).
 
@@ -31,14 +37,13 @@ My answer to these two questions are yes and yes (no) resp.: exceptions can and 
 
 Exceptions are a way of signaling an error to calling code, and encapsulating that error in an object which should contain sufficient information to tell the calling code what's going on and what it can do about it. A good example of an exception is one that is thrown when the calling code attempts to write to a connection that has already been closed, possibly asynchronously, without the knowledge of the calling code. A connection that may be closed asynchronously (which all connections may be: they may be closed by whatever they are connected to) does not allow for a self-evident way of checking whether the connection is still usable - i.e. the following snippet of code will not reliably work:
 
-    
     if (connection->usable())
     {
         connection->write(data);
     }
 
-because between the call to usable and the call to write, the connection may be closed asynchronously. If `write` is defined as consuming the data sent from the buffer, moving it out of the buffer, `write` could be called in a loop until there is no data left, like this: 
-    
+because between the call to usable and the call to write, the connection may be closed asynchronously. If `write` is defined as consuming the data sent from the buffer, moving it out of the buffer, `write` could be called in a loop until there is no data left, like this:
+
     while (!data.empty())
     {
         connection->write(data);
@@ -54,9 +59,7 @@ This example also nicely illustrates that not every exception at run-time is a b
 
 What about the performance penalties of throwing exceptions? While it is true that `throw` is more costly than `return` at run-time, that cost is mitigated by the fact that exceptions are exceptional and help make the software more robust. If there are so many exceptions being thrown as to have a noticeable negative impact on device performance, there is a problem -- but that problem is not inherent to using exceptions. Rather, it is inherent to using exceptions inappropriately.
 
-
-* * *
-
+---
 
 This post was prompted by a bug report: one of the file systems I wrote raised an exception at device start-up systematically if one of the device's expansion cards wasn't present. The cause of this was that the file system was being mounted _on the absent device_. The device in question being a PCIe device which could be enumerated with the OS' API (and was enumerated elsewhere to know whether the device was present) the bug was mounting the file system on an absent device - not the file system's code returning false from its initialization routine after internally aborting a class construction by throwing an exception.
 

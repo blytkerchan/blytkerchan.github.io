@@ -1,19 +1,33 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Technology
+- SCADA
+- Industrial Control Systems
 comments: true
 date: 2014-01-03 00:25:38+00:00
 layout: post
-permalink: /blog/2014/01/the-crain-sistrunk-vulnerabilities/
-slug: the-crain-sistrunk-vulnerabilities
+tags:
+- industrial control systems (1.0)
+- ICSs (0.8)
+- security through obscurity (0.7)
+- Crain-Sistrunk vulnerabilities (0.9)
+- Project Robus (0.6)
+- DNP3 (0.9)
+- serial communications (0.8)
+- NERC (0.7)
+- SCADA (0.6)
+- DNP3 Secure Authentication (0.8)
+- negative testing (0.9)
+- smart fuzzer (0.8)
+- black hat hackers (0.7)
+- Internet-connected devices (0.8)
+- TLS (0.7)
+- firmware updates (0.8)
+- electrical grid (0.7)
 title: The Crain-Sistrunk vulnerabilities
 wordpress_id: 2427
-categories:
-- Industrial Automation
-- Software Engineering
-tags:
-- Crain-Sistrunk
-- DNP3
-- ICS security
 ---
 
 In the two previous posts, I've shown that industrial control systems -- ICSs -- [are becoming more pervasive](/blog/2013/12/the-importance-of-ics-security-pervasiveness-of-icss/), and that they [rely on security through obscurity](/blog/2013/12/the-importance-of-ics-security-ics-communications/).
@@ -24,38 +38,28 @@ Now, let's make the link with current events.
 
 This is where the Crain-Sistrunk vulnerabilities come in: Adam Crain and Chris Sistrunk have discovered vulnerabilities in the vast majority of ICSs that implement DNP3.
 
-The relevance of these vulnerabilities, which are documented as part of [Project Robus](https://web.archive.org/web/20141117212310/http://automatak.com/robus/), is in the fact that they have exposed three things that were not known (or acknowledged) before: 
+The relevance of these vulnerabilities, which are documented as part of [Project Robus](https://web.archive.org/web/20141117212310/http://automatak.com/robus/), is in the fact that they have exposed three things that were not known (or acknowledged) before:
 
-  1. serial communications are a viable attack vector to knock out a master device
-  2. the vast majority of devices implementing DNP3 are vulnerable to attack, _regardless of whether they implement DNP3 Secure Authentication_
-  3. _all_ of these vulnerabilities could have been found using negative testing when writing the protocol stack
-
+1. serial communications are a viable attack vector to knock out a master device
+2. the vast majority of devices implementing DNP3 are vulnerable to attack, _regardless of whether they implement DNP3 Secure Authentication_
+3. _all_ of these vulnerabilities could have been found using negative testing when writing the protocol stack
 
 Let's look at these three points, one by one:
 
-
 ### Serial communications are a viable attack vector to knock out a master device
 
-
-Industry standards generally focus on TCP/IP communications for as far as they are concerned with security. In the context of smart grids, the [NERC (North American Electric Reliability Corporation) Critical Infrastructure Protection](http://web.archive.org/web/20151019112638/http://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx) standards are a good example: CIP-005-3a, the electronic security perimeter standard, includes dial-up and non-routable protocols as entry points to the electronic perimeter (section B, requirement R1.1) but electronic access control is only required "where technically feasible" and only if access is interactive: 
+Industry standards generally focus on TCP/IP communications for as far as they are concerned with security. In the context of smart grids, the [NERC (North American Electric Reliability Corporation) Critical Infrastructure Protection](http://web.archive.org/web/20151019112638/http://www.nerc.com/pa/Stand/Pages/CIPStandards.aspx) standards are a good example: CIP-005-3a, the electronic security perimeter standard, includes dial-up and non-routable protocols as entry points to the electronic perimeter (section B, requirement R1.1) but electronic access control is only required "where technically feasible" and only if access is interactive:
 
 <blockquote><b>CIP-005-3a. Section B. Requirement R2.4</b>: Where external interactive access into the Electronic Security Perimeter has been enabled, the Responsible Entity shall implement strong procedural or technical controls at the access points to ensure authenticity of the accessing party, where technically feasible.</blockquote>
 
-
-
-Monitoring electronic access is for dial-up and non-routable protocols is only required where technically feasible as well: 
+Monitoring electronic access is for dial-up and non-routable protocols is only required where technically feasible as well:
 
 <blockquote><b>CIP-005-3a. Section B. Requirement R3.1</b> For dial-up accessible Critical Cyber Assets that use non-routable protocols, the Responsible Entity shall implement and document monitoring process(es) at each access point to the dial-up device, where technically feasible.</blockquote>
 
+These requirements have generally been interpreted as meaning two things:
 
-
-These requirements have generally been interpreted as meaning two things: 
-
-
-
-  1. NERC-CIP requirements are generally construed as applying only to TCP/IP connections
-  2. NERC-CIP security requirements are generally are only applied at the edge of a substation.
-
+1. NERC-CIP requirements are generally construed as applying only to TCP/IP connections
+2. NERC-CIP security requirements are generally are only applied at the edge of a substation.
 
 The fact that Crain and Sistrunk were able to crash devices or otherwise make them misbehave using only a serial connection means that the first premise -- security is only important for TCP/IP networks -- is patently false: security, especially when considering robustness a security issue, is an issue for any kind of communication, including serial communication.
 
@@ -63,10 +67,7 @@ The fact that a master device could be compromised through the type of attack Cr
 
 This means you can crash a device at a substation near you from the metering device in your back yard -- not a very smart thing to do (pretty easy to trace) but I'm sure a smart criminal will be able to find a way to cover his tracks.
 
-
-
 ### The vast majority of devices implementing DNP3 are vulnerable to attack, _regardless of whether they implement DNP3 Secure Authentication_
-
 
 DNP3 is one of the rare machine-to-machine protocols designed for SCADA (Supervisory Control And Data Acquisition) networks that has any security features whatsoever. The feature in question is DNP3 Secure Authentication.
 
@@ -74,10 +75,7 @@ As I mentioned above, this feature is often colloquially called "Secure DNP3" wh
 
 The Crain-Sistrunk vulnerabilities don't really care whether you have secure authentication enabled or not: they exploit vulnerabilities in input validation, which happens regardless of whether the message being parsed is authenticated or not.
 
-
-
 ### _All_ of these vulnerabilities could have been found using negative testing when writing the protocol stack
-
 
 DNP3 compliance is tested using positive tests of the "do this, the device should do that" variety. They test interoperability, not the robustness of the implementation, nor any aspect of security aside from authentication.
 
@@ -89,11 +87,7 @@ Assuming you try to do your best to get all that right, most engineers won't thi
 
 The Crain-Sistrunk vulnerabilities were all found through negative testing, using their "smart fuzzer": they tested boundary cases to see if they could get a device to misbehave, for example by asking for more data than the device could produce. This is the kind of thing black hat hackers (which Crain and Sistrunk are _not_) will do as well -- the difference is that they won't tell you about what they find: they'll either sell it to someone who wants to do harm, or do some harm themselves.
 
-
-
-* * *
-
-
+---
 
 A large number of DNP3-enabled devices are connected directly to the Internet, do not use TLS, do not use Secure Authentication, and will not be immediately updated to fix these errors. They will remain vulnerable for the time being.
 

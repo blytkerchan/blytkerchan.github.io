@@ -1,35 +1,42 @@
 ---
 author: rlc
+categories:
+- Technology
+- Security
 comments: true
 date: 2011-07-21 02:36:44+00:00
 layout: post
-permalink: /blog/2011/07/new-gnupg-key/
-slug: new-gnupg-key
+tags:
+- .deb packages (1.0)
+- GnuPG key (1.0)
+- verification (0.9)
+- public key (0.8)
+- download (0.7)
+- software analyst (0.6)
+- Ronald Landheer-Cieslak (0.5)
+- keyID (0.4)
+- Fingerprint (0.3)
+- SKS 1.1.1 (0.2)
 title: New GnuPG key
 wordpress_id: 1573
-tags:
-- gnupg key
-- security
 ---
 
 For those who want to be able to verify .deb packages I make: I have a new GnuPG key.
 
-
-    
     Type bits/keyID     Date       User ID
     pub  2048R/6D3CD07B 2011-07-20 Ronald Landheer-Cieslak (Software Analyst) <rlc@vlinder.ca>
     	 Hash=E0C9DE42CFF88A35CACE3EB488A1783E
-    	 Fingerprint=9DAC FA3D D7A5 001F A0B2  DA59 5E0C 4AF1 6D3C D07B 
-
+    	 Fingerprint=9DAC FA3D D7A5 001F A0B2  DA59 5E0C 4AF1 6D3C D07B
 
 You can download it from keys.gnupg.net
+
 <!--more-->
+
 Or you can copy-paste it here:
 
-    
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: SKS 1.1.1
-    
+
     mQENBE4mTjYBCAC6wSK1541hTLmerT2I/zQldklHs2xcJH+PB6vOyyuD3s2F/D/xLcwYsMAE
     AG+9m6tXIWPqmpNQMjgy/I9HkVvSqChvJ9iaW+gEif6wgLyX/u0OehCrxd8zfj9YsFs9+Gtm
     svmx//93KsLFvxqSDKK4qC8+0+oVTxdQY+eucIgMqFQLZoXPr778+0gARb7PXxLAuFBreM7J

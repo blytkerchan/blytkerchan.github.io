@@ -1,22 +1,33 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Software Development
+- Computer Science
 comments: true
 date: 2009-07-25 00:07:38+00:00
 excerpt: 'recursive locking:
 
-  winter''s way of saying "yes",
+  winter''''s way of saying "yes",
 
-  to summer''s loud "no"'
+  to summer''''s loud "no"
+
+  '
 layout: post
-permalink: /blog/2009/07/recursive-locking-is-evil-or-is-it/
-slug: recursive-locking-is-evil-or-is-it
+tags:
+- RSS streams (1.0)
+- comp.programming.threads (1.0)
+- POSIX threads (0.8)
+- recursive locks (1.0)
+- design flaws (0.7)
+- David Schwartz (0.6)
+- thread synchronization (0.9)
+- threading architecture (0.8)
+- recursive locking (0.9)
+- code maintenance (0.7)
 title: Recursive Locking Is Evil, or is it?
 wordpress_id: 57
-categories:
-- Opinions
-- Software Design
-tags:
-- locking
 ---
 
 while perusing my different RSS streams today, I came across a discussion on [comp.programming.threads](http://groups.google.ca/group/comp.programming.threads/topics) - a group that is way too active for me to be able to participate in it anymore, but I still try to follow the discussions a bit through Google Group's RSS streams. The original discussion was on a book on POSIX threads, but it pointed to [a discussion on the use of recursive locks](http://groups.google.ca/group/comp.programming.threads/browse_thread/thread/05208d3770bd543e), and why it's an "evil" practice. [One message in particular](http://groups.google.com/group/comp.programming.threads/msg/990c60898cbc684f) struck me as very well-written, as it explains why we should use locks, and in what kind of cases.

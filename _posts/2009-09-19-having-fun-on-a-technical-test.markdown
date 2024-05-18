@@ -1,21 +1,30 @@
 ---
 author: rlc
+categories:
+- Employment
+- Job search
+- Tech test
+- Programming
+- Language skills
 comments: true
 date: 2009-09-19 03:15:34+00:00
 layout: post
-permalink: /blog/2009/09/having-fun-on-a-technical-test/
-slug: having-fun-on-a-technical-test
+tags:
+- Job search (0.9)
+- CV (0.7)
+- Head-hunters (0.6)
+- Tech test (0.8)
+- C++ (0.8)
+- Boost::tokenizer (0.5)
+- Showing off (0.7)
+- Immigrant (0.4)
+- French (0.3)
 title: Having fun on a technical test
 wordpress_id: 196
-categories:
-- Business
-- Opinions
-- Software
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 I guess it's not a secret: I'm looking for a job, either short-term or long-term, so I put my CV on a few websites. I got called by head-hunters twice this week: once for a contract to start on Monday (I'm busy until the end of September/the beginning of October so I told 'em I couldn't start full-time until then) and one to start a bit later.
+
 <!--more-->
 
 The second (first one to call, actually) is for a position that looks a lot like the one I have at Optel, but they wanted two references and wanted me to take a tech test on C++. That was fun.

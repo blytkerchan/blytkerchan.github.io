@@ -1,11 +1,38 @@
 ---
 author: rlc
+categories:
+- Technology
+- Physics
+- Quantum Computing
+- Computer Science
+- Engineering
+- Mathematics
+- Cybersecurity
 comments: true
 date: 2019-09-28 23:32:00-04:00
 layout: post
 slug: quantum-supremacy
+tags:
+- technology (0.9)
+- quantum computing (0.8)
+- physics (0.7)
+- Google (0.6)
+- experiment (0.6)
+- quantum supremacy (0.9)
+- random numbers (0.7)
+- Feynman (0.5)
+- qubits (0.7)
+- classical computers (0.6)
+- linear algebra (0.6)
+- supercomputers (0.5)
+- IBM (0.4)
+- Shor's algorithm (0.6)
+- RSA (0.5)
+- cyber security (0.4)
+- Diffie-Hellman (0.4)
 title: Quantum Supremacy
 ---
+
 A few days ago, the Financial Times [reported](https://www.ft.com/content/b9bb4e54-dbc1-11e9-8f9b-77216ebe1f17) that "Google claims to have reached quantum supremacy". The paper in question, available [here](https://www.docdroid.net/h9oBikj/quantum-supremacy-using-a-programmable-superconducting-processor.pdf), explains how they reached this milestone, and how they proved it. It does beg the question, though: what *is* quantum supremacy?
 <!--more-->
 The experiment Google conducted is essentially an applied physics experiment: as long as quantum supremacy has not been proven to be possible, there may be some "hidden laws of physics" to prevent it. As Feynman once said: "if you think you understand quantum mechanics, you don't understand quantum mechanics". Engineers have a nack for pushing what they build just beyond the boundaries of what science can explain and understand. This experiment is one of those occasions where they did just that.
@@ -27,4 +54,3 @@ Random numbers are immensely important, and the way they generated these shows t
 With quantum supremacy attained for at least this particular class of problems, and IBM putting a 53-qubit quantum computer as well as three 20-qubit quantum computers [in the cloud](https://techcrunch.com/2019/09/18/ibm-will-soon-launch-a-53-qubit-quantum-computer/), quantum computers that can break a 2048-bit RSA key using Shor's algorithm [are only about a decade away](https://quantumcomputingreport.com/our-take/applying-moores-law-to-quantum-qubits/). *We don't have viable quantum-resistant alternatives to RSA yet!* We do have a viable quantum-resistant alternative to Diffie-Hellman, but that is not enough to implement PKI.
 
 I'll try to find some time to explain that later.
-

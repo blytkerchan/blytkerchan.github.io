@@ -1,20 +1,29 @@
 ---
 author: rlc
+categories:
+- Education
+- Technology
+- Communication
 comments: true
 date: 2009-08-22 20:08:52+00:00
 layout: post
-permalink: /blog/2009/08/the-importance-of-patterns/
-slug: the-importance-of-patterns
+tags:
+- analogies (0.9)
+- diagrams (0.8)
+- technical terms (0.6)
+- UML diagrams (0.7)
+- message pump (0.8)
+- explanation (0.7)
+- debugging (0.6)
+- memory (0.6)
+- magic number (0.7)
+- lay person (0.5)
 title: The Importance of Patterns
 wordpress_id: 173
-categories:
-- Software Design
-- Technology
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 When explaining the design of some application to some-one, I find the use of analogies is one of the best tools available to me - better than diagrams and much better than technical terms: when using technical terms, the listener often starts "glazing over" after only a few seconds - maybe a minute. It really serves no other purpose than showing off how smart you are - and that is usually a pretty stupid (and therefore self-defeating) thing to do.
+
 <!--more-->
 
 Using diagrams works well with engineers (and former engineers) because it seems to get to a part of their brain that is wired similarly to the analyst's/architect's brain. UML diagrams - especially sequence diagrams, I find - register very well with most people as they are very easy to understand to most, and easy to explain to most others.

@@ -1,27 +1,35 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-10-22 01:38:53+00:00
 layout: post
-permalink: /blog/2014/10/improving-the-brainf-interpreter/
-slug: improving-the-brainf-interpreter
+tags:
+- VHDL (1.0)
+- BrainF (1.0)
+- Interpreter (0.9)
+- Instructions (0.8)
+- Debug (0.7)
+- Registers (0.6)
+- Compiler (0.6)
+- Test Bench (0.6)
+- Breakpoints (0.5)
+- Simulation (0.5)
+- Interrupt (0.5)
 title: Improving the BrainF interpreter
 wordpress_id: 3338
-categories:
-- Software Development
-- VHDL
-tags:
-- brainf---
-- VHDL
 ---
 
 As I wrote in a [previous post](/blog/2014/10/writing-a-brainf-interpreter-in-vhdl/), I wrote a BrainF interpreter in VHDL over a week-end. I decided to improve it a bit.
+
 <!--more-->
+
 The first think was to add `nop` and `halt` instructions. The `halt` instruction, with which the program buffer is filled by default, halts interpretation and can be put in the BrainF code as a `#` sign. As this is a "normal" instruction, it can be skipped using an "if"-like loop `[#]` which might come in handy for assertions and somesuch. To really be useful I'd have to expose some debug registers -- e.g. with the values of the memory pointer and the instruction pointer, but that'll come later.
 
-The `nop` and `halt` instructions were easier to add than I had expected: I added them to the start of the list of instructions, because I expect a VHDL compiler to translate this into a 4-bit integer and I'd like `nop` to be instruction 0. 
+The `nop` and `halt` instructions were easier to add than I had expected: I added them to the start of the list of instructions, because I expect a VHDL compiler to translate this into a 4-bit integer and I'd like `nop` to be instruction 0.
 [aside type="code" status="closed"]
-    
+
     diff --git a/BrainF.vhdl b/BrainF.vhdl
     index 13895be..da7e11b 100644
     --- a/BrainF.vhdl
@@ -35,12 +43,11 @@ The `nop` and `halt` instructions were easier to add than I had expected: I adde
          type Instructions is array(0 to (MAX_INSTRUCTION_COUNT - 1)) of Instruction;
          type Pipeline is array(0 to 1) of Instruction;
          subtype IPointer is integer range 0 to MAX_INSTRUCTION_COUNT;
-    
 
 [/aside]
 Any instruction that is not recognized now maps to a `nop`, so the `dot` instruction now has to be explicitly translated -- as does, of course, `halt`.
 [aside type="code" status="closed"]
-    
+
     @@ -43,13 +43,15 @@ architecture behavior of BrainF is
          function toInstruction(i : std_logic_vector(7 downto 0)) return Instruction is
          begin
@@ -58,15 +65,14 @@ Any instruction that is not recognized now maps to a `nop`, so the `dot` instruc
              end case;
          end toInstruction;
          function increment(b : std_logic_vector(7 downto 0)) return std_logic_vector is
-    
 
 [/aside]
 and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s.
 [aside type="code" status="closed"]
-    
+
     @@ -75,13 +77,13 @@ architecture behavior of BrainF is
-         signal stalled                      : std_logic := '0'; -- signals it's going forward in a loop. The p_fetch process will continue 
-                                                                 -- fetching until it finds the corresponding end-of-loop and puts that in pipe(0) at that time. 
+         signal stalled                      : std_logic := '0'; -- signals it's going forward in a loop. The p_fetch process will continue
+                                                                 -- fetching until it finds the corresponding end-of-loop and puts that in pipe(0) at that time.
          -- produced by p_fetch
     -    signal pipe                         : Pipeline := (others => dot);
     +    signal pipe                         : Pipeline := (others => nop);
@@ -80,15 +86,14 @@ and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s
          signal prev_load_instructions       : std_logic := '0';
          signal instruction_step             : std_logic := '0';
          signal iwptr                        : IPointer := 0;
-    
 
 [/aside]We immediately stall when we halt, and we reset to a pipe filled with `nop`s...[aside type="code" status="closed"]
-    
+
     @@ -129,6 +131,10 @@ begin
                          else
                              stalled <= '0';
                          end if;
-    +                when halt => 
+    +                when halt =>
     +                    stalled <= '1';
     +                when nop =>
     +                    null;
@@ -105,8 +110,8 @@ and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s
                  nest_count <= 0;
                  done <= '0';
     @@ -160,7 +166,7 @@ begin
-                     -- pipe(1). Hence, while we can anticipate our not stalling (and therefore load the next instruction 
-                     -- into pipe(1) regardless) we have to make sure that if we do stall, we start by backing up the 
+                     -- pipe(1). Hence, while we can anticipate our not stalling (and therefore load the next instruction
+                     -- into pipe(1) regardless) we have to make sure that if we do stall, we start by backing up the
                      -- instruction pointer twice (or not count the end_loop instruction as nesting).
     -                if (pipe(1) = begin_loop or pipe(1) = end_loop) and stalled /= '1' and expect_stall = '0' then
     +                if (pipe(1) = begin_loop or pipe(1) = end_loop or pipe(1) = halt) and stalled /= '1' and expect_stall = '0' then
@@ -153,14 +158,13 @@ and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s
                                  end if;
                              end if;
                          end if;
-    +                    
+    +
                          prev_memory_byte_read_ack <= memory_byte_read_ack;
                      end if;
                      prev_read_memory <= read_memory;
-    
 
 [/aside]The test bench required a few changes:[aside type="code" status="closed"]
-    
+
     diff --git a/BrainF_tb.vhdl b/BrainF_tb.vhdl
     index 452abab..53d74f2 100644
     --- a/BrainF_tb.vhdl
@@ -179,21 +183,21 @@ and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s
          end component;
     -    type State is (initial, start_loading_program, loading_program, running_program, success);
     +    type State is (warmup, initial, start_loading_program, loading_program, running_program, success);
-         
+
          function to_std_logic_vector(c : character) return std_logic_vector is
              variable cc : integer;
     @@ -62,7 +63,7 @@ architecture behavior of BrainF_tb is
          signal memory_byte_read_ack     : std_logic := '0';
          signal done                     : std_logic := '0';
-         
-    -    signal tb_state                 : State := initial;  
-    +    signal tb_state                 : State := warmup;  
-         
+
+    -    signal tb_state                 : State := initial;
+    +    signal tb_state                 : State := warmup;
+
          signal should_be_done           : std_logic := '0';
-         
+
     @@ -88,13 +89,24 @@ begin
          should_be_done <= '1' after PROGRAM_TIMEOUT;
-         
+
          p_tb : process(clock)
     -        variable countdown : integer := INITIAL_COUNTDOWN;
     +        variable countdown : integer := WARMUP_COUNTDOWN;
@@ -226,7 +230,6 @@ and we fill the pipe with `nop`s rather than `dot`s and the program with `halt`s
                      assert program_full = '0' report "Program cannot be initially full" severity failure;
                      assert ack_instruction = '0' report "Cannot acknowledge an instruction I haven't given yet" severity failure;
                      assert memory_byte_ready = '0' report "Cannot have memory ready when I haven't asked for anything yet" severity failure;
-    
 
 [/aside]
 Now that the program buffer is initialized with `halt` instructions, the interpreter fires up for three clock ticks before halting, so I had to add an extra state to the testbench (called it "warming up") during which the program-done signal isn't set yet, and after which it is.

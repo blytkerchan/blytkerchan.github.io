@@ -1,10 +1,42 @@
 ---
 author: rlc
+categories:
+- Physics
+- Quantum Mechanics
+- Interpretations of Quantum Mechanics
+- Observer Effect
+- Schrödinger's Cat
+- Wigner's Friend Experiment
+- Copenhagen Interpretation
+- Many Worlds Interpretation
+- Heisenberg's Uncertainty Principle
+- Wave Function
+- Entanglement
+- Observer Independence
+- Free Will
+- Locality
 comments: true
 date: 2021-08-31
 layout: post
+tags:
+- quantum mechanics (0.9)
+- interpretations (0.8)
+- Copenhagen interpretation (0.7)
+- many worlds interpretation (0.7)
+- Wigner's Friend experiment (0.8)
+- Schrödinger's cat (0.7)
+- Heisenberg's uncertainty principle (0.7)
+- observer influence (0.8)
+- wave function (0.8)
+- entanglement (0.8)
+- Dirac notation (0.7)
+- Proietti et al. experiment (0.8)
+- observer independence (0.8)
+- free choice (0.6)
+- locality (0.6)
 title: Experimental test of local observer-independence
 ---
+
 In a recent [paper published on arxiv](https://arxiv.org/pdf/1902.05080.pdf), what was formerly a thought experiment has been realized (with minor tweaks) and, while some say this indicates [there is no objective reality](https://interestingengineering.com/new-physics-experiment-indicates-no-objective-reality), I rather think it means something else. 
 
 <!--more-->

@@ -1,17 +1,21 @@
 ---
 author: rlc
+categories:
+- Programming
+- Education
+- Parenting
 comments: true
 date: 2011-12-01 20:11:11+00:00
 layout: post
-permalink: /blog/2011/12/sleep/
-slug: sleep
+tags:
+- C++ (0.8)
+- self-taught (0.7)
+- parental leave (0.6)
+- podcast (0.5)
+- blog (0.5)
+- installment (0.4)
 title: Sleep(...)
 wordpress_id: 1720
-categories:
-- C++ for the self-taught
-- This blog
-tags:
-- announcements
 ---
 
 For those of you waiting for the next installment of "C++ for the self-taught": I'm on parental leave at the moment. The podcast (and the rest of the blog) will be back in a few weeks.

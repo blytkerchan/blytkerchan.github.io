@@ -1,43 +1,64 @@
 ---
 author: rlc
+categories:
+- Technology
+- Humor
+- Time Management
+- Standards
 comments: true
 date: 2014-07-03 03:59:21+00:00
 layout: post
-permalink: /blog/2014/07/a-camel-is-a-horse-designed-by-a-committee/
-slug: a-camel-is-a-horse-designed-by-a-committee
+tags:
+- blogging (0.9)
+- frustration (0.8)
+- standards (0.9)
+- horse (0.9)
+- pony (0.9)
+- donkey (0.8)
+- ass (0.7)
+- cow (0.8)
+- dromedary (0.7)
+- camel (0.8)
+- protocols (0.9)
+- IEEE (0.9)
+- time (0.9)
+- TAI (0.8)
+- UTC (0.9)
+- time zones (0.9)
+- daylight savings time (0.9)
+- Chatham Island (0.7)
+- Nepal (0.7)
+- Chile (0.7)
+- Israel (0.8)
+- IRIG-B (0.8)
+- NTP (0.7)
+- synchro-phasors (0.7)
+- PTP (0.8)
+- NTP (0.7)
+- C37.238-2011 (0.8)
+- DST (0.8)
+- design by committee (0.9)
 title: '"A camel is a horse designed by a committee"'
 wordpress_id: 3165
-categories:
-- Software Engineering
-tags:
-- design by committee
 ---
 
 I don't usually use this blog to vent frustration, but I've been reading standards lately...
 
 There are four versions of the horse:
 
+- **Pony**. Horses as the Good Lord intended them. Strong and sturdy, yet soft and cuddly; obedient yet intelligent; and I'm told they're rather tasty too!
 
-  * **Pony**. Horses as the Good Lord intended them. Strong and sturdy, yet soft and cuddly; obedient yet intelligent; and I'm told they're rather tasty too!
+- **Horse**. All the qualities of the pony, without the esthetics.
 
+- **Donkey**. The beta version of the pony: strong and sturdy, but none of the frills and quite a few bugs in the programming. Also: they don't taste nearly as good (or so I'm told).
 
-  * **Horse**. All the qualities of the pony, without the esthetics.
+- **Ass**. What the beta version became when the PMO took over.
 
+- **Cow**. A forked-off project from the (then open-source) Horse project that went for taste, combined with a bigger ass for the workload (in the form of an ox -- you didn't think I misspelled ass, did you?)
 
-  * **Donkey**. The beta version of the pony: strong and sturdy, but none of the frills and quite a few bugs in the programming. Also: they don't taste nearly as good (or so I'm told).
+- **Dromedary**. When some of the committee members got tired of trying to reach a consensus, they took what they had and ran with it -- even if it's running was more than a bit awkward.
 
-
-  * **Ass**. What the beta version became when the PMO took over.
-
-
-  * **Cow**. A forked-off project from the (then open-source) Horse project that went for taste, combined with a bigger ass for the workload (in the form of an ox -- you didn't think I misspelled ass, did you?)
-
-
-  * **Dromedary**. When some of the committee members got tired of trying to reach a consensus, they took what they had and ran with it -- even if it's running was more than a bit awkward.
-
-
-  * **Camel**. None of the looks. Some of the features. Some features you didn't think a horse should have. Some you didn't think a horse _could_ have. More of the smell. Much, much more.
-
+- **Camel**. None of the looks. Some of the features. Some features you didn't think a horse should have. Some you didn't think a horse _could_ have. More of the smell. Much, much more.
 
 When _you_ count, that doesn't add up to four, does it?
 
@@ -51,7 +72,7 @@ IEEE StdTM C37.118.1-2011 is a bit of a mystery to me. For one thing, it's suppo
 
 IEEE StdTM 1588 is even worse: it defines PTP, the Precision Time Protocol. It's first version, PTPv1, is in compatible with its second version PTPv2, which is internally incompatible with itself as it defines two ways, one incompatible with the other, to measure the propagation delay of an event message.
 
-IEEE 1588 uses TAI as its base[^1] 
+IEEE 1588 uses TAI as its base[^1]
 
 [^1]: TAI stands for International Atomic Time -- but just like I thought gigaoctet sounded too french, IAT just wasn't french enough...
 
@@ -59,20 +80,13 @@ Most other systems use UTC (GPS being a notable exception). UTC is TAI plus a le
 
 Actually, IEEE-1588 specifies eight different ways to synchronize the time, none of which compatible with one another. C37.238-2011 tells you which should be used for power systems. IEEE 1588-2002 has been adopted by the IEC as IEC 61588:2004 but is, of course, already obsolete.
 
-
-
 <blockquote>Thyme is a herb that grows in gardens. Time is a system to measure delays and duration. Time zones are a way for governments to cause headaches to engineers.</blockquote>
-
-
 
 Most protocols that convey information about time zones do either one of three things:
 
-
-
-	
-  1. convey the number of minutes to add to or subtract from UTC
-  2. convey a table of time zone definitions and an index for the time zone to apply, the time zone definitions indicating information about the time zone, such as when daylight savings time starts and ends, and what the offset w.r.t. UTC should be, usually in seconds[^2]
-  3. convey the number of half-hours to add to or subtract from UTC
+1. convey the number of minutes to add to or subtract from UTC
+2. convey a table of time zone definitions and an index for the time zone to apply, the time zone definitions indicating information about the time zone, such as when daylight savings time starts and ends, and what the offset w.r.t. UTC should be, usually in seconds[^2]
+3. convey the number of half-hours to add to or subtract from UTC
 
 [^2]: Usually, but not always, protocols that convey this much information do it well enough to convey the information right in all cases.
 
@@ -85,31 +99,25 @@ Daylight Savings Time is determined by the government of the day, and is therefo
 Israel is even worse -- you can read all about it on [Wikipedia](http://en.wikipedia.org/wiki/Israel_Summer_Time), but the rule is basically "after Passover and before Yom Kippur, there might be DST for about 150 days a year, more or less". Computers don't generally know what the Knesset is going to approve, so it gets very hard to configure a system to handle Israel Daylight Time correctly.
 Most people just don't try.
 
+---
 
-* * *
+**Note:** this post turned out to be a lot denser than I intended. Some things may need clarification:
 
+1. IRIG-B is a US military standard to synchronize time systems. It is simple, primitive and elegant as well as robust. It a the single-minded military flavour
 
-**Note:** this post turned out to be a lot denser than I intended. Some things may need clarification: 
+2. IEEE StdTM 1344 defines communications for synchro-phasors, and includes an extension to IRIG-B to communicate time zone and quality information.
 
-  1. IRIG-B is a US military standard to synchronize time systems. It is simple, primitive and elegant as well as robust. It a the single-minded military flavour
+3. IEEE StdTM C37.118 replaces IEEE StdTM 1344 and includes a different, equivalent but incompatible, extension to IRIG-B
 
-
-  2. IEEE StdTM 1344 defines communications for synchro-phasors, and includes an extension to IRIG-B to communicate time zone and quality information.
-
-
-  3. IEEE StdTM C37.118 replaces IEEE StdTM 1344 and includes a different, equivalent but incompatible, extension to IRIG-B
-
-
-  4. IEEE StdTM 1588-2002 defines PTPv1, the Precision Time Protocol which is effectively intended to replace NTP and displace IRIG-B and its extensions. It was adopted by the IEC in 2005.
-The first version of PTP didn't meet the goals it set out to meet, so a second version was created. This second version is not compatible with the first and the standard, though well written, is uselessly complex (not complicated, mind you, but complex).
-Because of this complexity and to facilitate adoption in the industry, a committee in the IEEE Power and Energy Society drafted a standard to tell the industry how to use 1588. That standard is C37.238-2011
-
+4. IEEE StdTM 1588-2002 defines PTPv1, the Precision Time Protocol which is effectively intended to replace NTP and displace IRIG-B and its extensions. It was adopted by the IEC in 2005.
+   The first version of PTP didn't meet the goals it set out to meet, so a second version was created. This second version is not compatible with the first and the standard, though well written, is uselessly complex (not complicated, mind you, but complex).
+   Because of this complexity and to facilitate adoption in the industry, a committee in the IEEE Power and Energy Society drafted a standard to tell the industry how to use 1588. That standard is C37.238-2011
 
 So at the end you have a standard to tell you how to use a standard which replaces a standard that supersedes a standard extension of a standard.
 
 Time zones and DST are another extreme example of design by committee -- legislative or governmental rather than technical, but committee nonetheless.
 
-* * * 
+---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;I wanted to say gigaoctets but it sounded too French&quot; -<a href="https://twitter.com/blytkerchan?ref_src=twsrc%5Etfw">@blytkerchan</a></p>&mdash; Code Monkey Hate Bug (@jadamcrain) <a href="https://twitter.com/jadamcrain/status/461649300494483456?ref_src=twsrc%5Etfw">April 30, 2014</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

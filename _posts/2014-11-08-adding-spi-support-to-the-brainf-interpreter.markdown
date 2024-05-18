@@ -1,18 +1,38 @@
 ---
 author: rlc
+categories:
+- Technology
+- Programming
+- Transportation
+- Electronics
+- Engineering
 comments: true
 date: 2014-11-08 20:42:38+00:00
+excerpt: While at Chicago's O'Hare airport, waiting for my connecting flight to Reno,
+  I had a bit of time to start coding on my BrainF interpreter again -- once I had
+  found an outlet, that is. My goal was to add something that would allow something
+  else to communicate with the interpreter. There are a few buses I like for this
+  kind of thing, and SPI is one of them.
 layout: post
-permalink: /blog/2014/11/adding-spi-support-to-the-brainf-interpreter/
-slug: adding-spi-support-to-the-brainf-interpreter
+tags:
+- airport (0.9)
+- coding (0.8)
+- BrainF interpreter (0.7)
+- SPI (0.9)
+- full-duplex (0.6)
+- clock (0.5)
+- master (0.4)
+- slave (0.4)
+- MOSI (0.3)
+- MISO (0.3)
+- debouncing (0.7)
+- FIFO (0.6)
+- GitHub (0.4)
+- select (0.8)
+- deselect (0.8)
+- testbench (0.5)
 title: Adding SPI support to the BrainF interpreter
 wordpress_id: 3359
-categories:
-- VHDL
-tags:
-- brainf---
-- SPI
-- VHDL
 ---
 
 While at Chicago's O'Hare airport, waiting for my connecting flight to Reno, I had a bit of time to start coding on my BrainF interpreter again -- once I had found an outlet, that is[^1]. My goal was to add something that would allow something else to communicate with the interpreter. There are a few buses I like for this kind of thing, and SPI is one of them.
@@ -29,19 +49,19 @@ As you're reading and writing at the same time, you need to be kind to your mast
 
 Now, I just mentioned noise: these inputs are going to have to be debounced, which means they are going to be at least a bit desynchronized. But for the BrainF interpreter, we can pretend we're living in a noise-free world for now, and forget about debouncing for a bit -- I'll add one of those later.
 
-Having a few hours to kill, I decided to make this SPI slave generic, and try to make it robust (without taking the fun out of writing it). I want to be able to interface with it putting a pair of FIFOs in front of it -- or hooking it up directly to the interpreter, if need be -- so I need a good interface. This is what I came up with: 
-    
+Having a few hours to kill, I decided to make this SPI slave generic, and try to make it robust (without taking the fun out of writing it). I want to be able to interface with it putting a pair of FIFOs in front of it -- or hooking it up directly to the interpreter, if need be -- so I need a good interface. This is what I came up with:
+
     entity SPISlave is
         port(
               clock                 : in std_logic
             ; resetN                : in std_logic
-            
+
             -- bus to the outside
             ; spi_clock_I           : in std_logic
             ; spi_slave_select_NI   : in std_logic
             ; spi_mosi_I            : in std_logic
             ; spi_miso_O            : out std_logic
-            
+
             -- internal bus:
             -- signal to this component that data_I contains something
             ; data_ready_I          : in std_logic
@@ -58,42 +78,33 @@ Having a few hours to kill, I decided to make this SPI slave generic, and try to
             );
     end entity;
 
-
 Of course, `clock` and `resetN` do what you'd expect them to do. The next four signals are the four signals defined by SPI. As I said, the component doesn't do any debouncing of its own, so there should be a debouncer in front of the three inputs.
 
 The internal bus is intended to be versatile: tell it that you have data ready and it will ack when you can put the next byte in -- so you can use the ack to pop from a FIFO, for example. There's no ack the other way around: we can't slow down the master and we don't have a FIFO inside the SPI component, so if you want to buffer, you have to do it outside the SPI component -- push on `new_data_byte_O and data_ready_O` and pop when you're ready. As long as you're faster than the SPI bus in consuming the data, you'll be fine even without a FIFO.
 
 There's a bunch of internal signals, a flip-flop for the data-ready output, and some other details I won't go into right now -- you can see it all at the new [GitHub repo](https://github.com/blytkerchan/BrainF).
 
-There are fiveimportant events the slave has to handle: 
+There are fiveimportant events the slave has to handle:
 
+1. being selected
 
-	
-  1. being selected
+2. being deselected
 
-	
-  2. being deselected
+3. new data being available to send
 
-	
-  3. new data being available to send
+4. rising edge of the SPI clock
 
-	
-  4. rising edge of the SPI clock
+5. falling edge of the SPI clock
 
-	
-  5. falling edge of the SPI clock
+<img src="/assets/2014/10/select-1-300x90.png" alt="Selection just before a SPI clock rising edge">
 
-
-
-{% include image.html url="/assets/2014/10/select-1-300x90.png" caption="Selection just before a SPI clock rising edge" %}
-
-{% include image.html url="/assets/2014/10/select-3-300x90.png" caption="Selection just before a SPI clock falling edge" %}
+<img src="/assets/2014/10/select-3-300x90.png" alt="Selection just before a SPI clock falling edge">
 
 **Being selected** means the master is now talking to us, which means we should start sending it data if we have any and we should read the data it sends us. The question is when the select becomes effective: my implementation needs at least a clock tick between the falling edge of the select# signal and the first rising edge of the SPI clock, and will ignore a falling edge in the SPI clock if it occurs before that first rising edge.
 
-{% include image.html url="/assets/2014/10/select-2-300x90.png" caption="Delesection - first case" %}
+<img src="/assets/2014/10/select-2-300x90.png" alt="Delesection - first case">
 
-{% include image.html url="/assets/2014/10/select-4-300x90.png" caption="Delesection - second case" %}
+<img src="/assets/2014/10/select-4-300x90.png" alt="Delesection - second case">
 
 **Being deselected** means we should stop driving the MISO output immediately, and should stop reading the MOSI input. This can occur at any time, so we need to make sure that we align the 8-bit byte boundary for the next time we're selected.
 

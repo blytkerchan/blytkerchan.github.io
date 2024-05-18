@@ -1,22 +1,44 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- API Design
+- Software Architecture
+- Software Deployment
 comments: true
 date: 2009-07-18 16:40:34+00:00
 excerpt: 'spring cleaning brings it
 
   perhaps not any cleaner -
 
-  at least much leaner'
+  at least much leaner
+
+  '
 layout: post
-permalink: /blog/2009/07/the-ikea-approach/
-slug: the-ikea-approach
+tags:
+- software (1.0)
+- integration (0.8)
+- buggy (0.7)
+- spaghetti code (0.9)
+- API (0.9)
+- select function (0.9)
+- design by contract (0.8)
+- service-oriented architecture (0.9)
+- object-oriented architecture (0.8)
+- monolithic code (0.9)
+- IKEA (0.8)
+- deployment (0.8)
+- Joomla (0.9)
+- WordPress (0.9)
+- Debian GNU/Linux (0.9)
+- Funky (0.9)
+- Model-View-Controller (0.9)
+- Qt (0.9)
+- Linux kernel (0.9)
+- predictable design (0.9)
 title: The IKEA Approach
 wordpress_id: 14
-categories:
-- Software Design
-tags:
-- design patterns
-- software design
 ---
 
 Software usually comes as a single, monolithic block: you download a setup.exe or install.exe file, double-click it and see what happens. That's when the nightmare begins: except for a few software vendors, which include Apple, Sun and Microsoft but do not include some other big players, software doesn't usually integrate very well with.. software. Most Windows machines today are packed with applications that look out-of-place, don't interact well with other applications on the same machine, etc.
@@ -37,30 +59,28 @@ The point is: services like this (remote searching, distributed caching, etc.) a
 
 That's how software should be. Of course, most software can't be completely picture-only in its documentation, but there's a lot you can do in a picture or in a video to explain what needs explaining (which is why I introduced demo videos as Vlinder Software). You open the box (double-click setup.exe or install.exe), follow the set-up wizard and install what you need, putting it all together as it should be.
 
-
-## Good examples****
-
+## Good examples\*\*\*\*
 
 The following are a few applications that I think are good examples on the _deployment_ side
 
 - [![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)](http://www.joomla.org/)[**Joomla!**](http://www.joomla.org/)
-    is relatively easy to install, is based on Mambo and has extentions that allow you to extend almost any part of the CMS and customize it. The reason why I give it only a four-star rating is that it needs a bit more documentation.
+  is relatively easy to install, is based on Mambo and has extentions that allow you to extend almost any part of the CMS and customize it. The reason why I give it only a four-star rating is that it needs a bit more documentation.
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[**WordPress**](http://www.wordpress.org/)
-    is very easy to install and lets you download and add plugins, themes, etc. from inside the installed application (something Joomla doesn't do)
+  is very easy to install and lets you download and add plugins, themes, etc. from inside the installed application (something Joomla doesn't do)
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)**[Debian GNU/Linux](http://debian.org)**
-    Debian comes with an excellent installer that allows you to install the OS on practically any system. It also comes with an excellent package manager - apt - that tracks package dependencies very well and is very stable. IMHO, it's the best Linux distro around.
+  Debian comes with an excellent installer that allows you to install the OS on practically any system. It also comes with an excellent package manager - apt - that tracks package dependencies very well and is very stable. IMHO, it's the best Linux distro around.
 
 Notice that I didn't put any of my own software in here: in my first post, I promised not to do any gratuitous publicity on this blog :)
 
 On the "under the hood" side of things, though, I can't get around using the examples I know best, which evidently include my own software.
 
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png) [**Funky**](http://funky.vlinder.ca), for example
-    embeds the interpreter as a single class but uses quite a few classes behind the scenes. Each function has well-defined behavior and does only what you would expect it to do. The one bug that got shipped, _ever_ was an assertion failure when your script had a valid, but unexpected, layout. Removing the assertion fixed the problem.
+  embeds the interpreter as a single class but uses quite a few classes behind the scenes. Each function has well-defined behavior and does only what you would expect it to do. The one bug that got shipped, _ever_ was an assertion failure when your script had a valid, but unexpected, layout. Removing the assertion fixed the problem.
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)Another example is [**Joomla**](http://joomla.org), again
-    the people who designed Joomla have evidently understood the Model-View-Controller design pattern very well, and have made an excellent implementation of a CMS using it. I have used Joomla's code to explain the MVC design pattern on several occasions, as it is without a doubt the clearest example of it that I have seen so far.
+  the people who designed Joomla have evidently understood the Model-View-Controller design pattern very well, and have made an excellent implementation of a CMS using it. I have used Joomla's code to explain the MVC design pattern on several occasions, as it is without a doubt the clearest example of it that I have seen so far.
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)[Qt](https://web.archive.org/web/20170808091903/https://www.qt.io/developers/) is another excellent example
-    originally created by TrollTech, then Qt Software, now Nokia, Qt is an excellent C++ framework for GUI design and implementation that is cross-platform, stable and pretty efficient for something that portable. [KDE](http://kde.org) is based on Qt, as are most of the interfaces of C++ programs we write at [Vlinder Software](http://vlinder.ca) today. Qt comes with excellent documentation, a predictable design and a full set of features for cross-platform development.
+  originally created by TrollTech, then Qt Software, now Nokia, Qt is an excellent C++ framework for GUI design and implementation that is cross-platform, stable and pretty efficient for something that portable. [KDE](http://kde.org) is based on Qt, as are most of the interfaces of C++ programs we write at [Vlinder Software](http://vlinder.ca) today. Qt comes with excellent documentation, a predictable design and a full set of features for cross-platform development.
 - ![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/fullstar.png)![](/assets/emptystar.png)**[the Linux kernel](http://kernel.org)**
-    started out as a monolithic kernel, but has become more and more modular ever since and is now a very flexible kernel with a pretty good design where the internal APIs are concerned.
+  started out as a monolithic kernel, but has become more and more modular ever since and is now a very flexible kernel with a pretty good design where the internal APIs are concerned.
 
 Each of these follow the basic rule of good design: being **predictable** and making simple blocks that fit together but do not depend on eachother. Just like a screwdriver doesn't depend on a particular screw and a screw doesn't depend on a particular screwdriver.

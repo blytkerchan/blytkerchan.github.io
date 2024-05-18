@@ -1,19 +1,40 @@
 ---
 author: rlc
+categories:
+- Software Design
 comments: true
 date: 2009-08-08 18:59:29+00:00
 layout: post
-permalink: /blog/2009/08/how-data-transport-should-work-imnsho/
-slug: how-data-transport-should-work-imnsho
+tags:
+- software design (1.0)
+- data transfer (0.9)
+- spaghetti code (0.8)
+- GS1 EPCGlobal standards (0.7)
+- message layer (0.9)
+- transport layer (0.9)
+- application layer (0.9)
+- message-transport binder (0.9)
+- channels (0.8)
+- event channel (0.7)
+- exception channel (0.7)
+- data channel (0.7)
+- MTB (0.8)
+- message format (0.8)
+- serialization (0.8)
+- deserialization (0.8)
+- Transport Layer Security (0.7)
+- TLS (0.7)
+- SSL (0.7)
+- TCP/IP (0.7)
+- addressing (0.7)
+- association (0.7)
+- validation (0.7)
 title: How Data Transport Should Work IMNSHO
 wordpress_id: 146
-categories:
-- Software Design
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 One of the most ubiquitous problems in software design is to get data from one place to another. When some-one starts coding code that does that, you seem to inevitably end up with spaghetti code that mixes the higher-level code, the content and the transport together in an awful mix that looks like a cheap weeks-old spaghetti that was left half-eaten and abandoned next to a couch somewhere. Now, I have never seen what that actually looks like, but I have a rather vivid imagination - and I'll bet you have too.
+
 <!--more-->
 
 In my opinion, there is a right way to do it - and there are many, many wrong ways. The _right_ way is trying to chop your data into messages and building a transport layer that is compeltely ignorant of those messages. The GS1 EPCGlobal standards, with which I have worked for the last few years, up until a few months ago, got this exactly right and since I first read their model in 2007, I have applied it in numerous occasions and have started to advocate it whenever there was a reason to do so. I have since refined a few aspects of it to better suit my purposes, so I think it's about time I did some explaining.
@@ -38,11 +59,11 @@ In order to subscribe to the event and exception channels and in order to use th
 
 The MTB, which would usually be a self-contained singleton, exposes at least the following methods:
 
-  * send(Message): Message
-  * send(Message, NoResponseTag): void
-  * expect(Message, Message): void
-  * attach(Channel, Observer): void
-  * detach(Channel, Observer): void
+- send(Message): Message
+- send(Message, NoResponseTag): void
+- expect(Message, Message): void
+- attach(Channel, Observer): void
+- detach(Channel, Observer): void
 
 The first method sends a message and returns the resulting response; the second sends a message and doesn't return anything; the third sends a message and expects another message as a response, and will raise an exception if the two don't match; the third attaches an object as an observer to one of the two observable channels (the event channel and the exception channel) and the third detaches such an observer, providing a no-fail guarantee. The first four methods all provide a strong guarantee. (If implemented in a language that allows for return-type overloads, the first and second methods can be overloaded on return type rather than using a tag to distinguish them.)
 
@@ -59,21 +80,21 @@ The API consists of any number of overloads of a _getMessage_ function, each of 
 This is where we see our three channels again, though this time, the code in question doesn't know, semantically, what those channels are about. The Transport Layer is completely oblivious to the contents, format and semantics of the messages it transports: it sees it simply as data that may be provided with a little bit of meta-data to allow it to perform some actions asynchronously - namely associating and validating response messages.
 
 The Transport Layer is the only part of the message transport that is concerned with things like Transport Layer Security (TLS, SSL, etc.) authentication (TLS and SSL again), TCP/IP, addressing, etc. While the Message-Transport Binder _may_ know how to map a symbolic node name to an IP address, that is
- all that it would know about addressing. The Transport Layer, which may or may not be implemented as a device driver in some cases, knows how to get a message from address A to address B.
+all that it would know about addressing. The Transport Layer, which may or may not be implemented as a device driver in some cases, knows how to get a message from address A to address B.
 
 It provides a similar API to the low-level MTB API:
 
-  * send(Buffer, AssociationInfo): Buffer
-  * send(Buffer): void
-  * expect(Buffer, ValidationInfo): void
-  * attach(Channel, Observer): void
-  * detach(Channel, Observer): void
+- send(Buffer, AssociationInfo): Buffer
+- send(Buffer): void
+- expect(Buffer, ValidationInfo): void
+- attach(Channel, Observer): void
+- detach(Channel, Observer): void
 
 The first method is provided with a buffer to send - which corresponds to the serialized message, but the Transport Layer doesn't know that - and is given the meta-data necessary to associate an incoming message from the data channel with the message it sent. The AssociationInfo object contains three bits of data:
 
-  1. an expected message length: any message that arrives on the data channel that is not of the required length cannot be associated with the message in question;
-  2. an association mask and
-  3. an association value
+1. an expected message length: any message that arrives on the data channel that is not of the required length cannot be associated with the message in question;
+2. an association mask and
+3. an association value
 
 Any message that arrives on the data channel (as a return message) is checked for its length after which the association mask is applied to the message. If the masked value corresponds to the assocation value, the message is returned as the return message for the one that was originally sent. The reason for this is that, although the Application Layer may not be interested in a response for certain messages, the other end of the communication (which receives those messages as an event) may return something (i.e. respond on their event channel, which is the data channel on our side). If those messages aren't matched, they'll be ignored but, in order to be able to ignore them, the Transport Layer needs to know how to associate the two.
 

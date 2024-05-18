@@ -1,14 +1,28 @@
 ---
 author: rlc
+categories:
+- Technology
+- Website Management
+- Software Installation
+- Website Address Change
+- Website Design
+- Website Maintenance
+- Link Management
 comments: true
 date: 2011-02-02 01:32:55+00:00
 layout: post
-permalink: /blog/2011/02/a-new-look-and-a-new-address/
-slug: a-new-look-and-a-new-address
+tags:
+- software installation (0.9)
+- website address change (0.8)
+- website update (0.7)
+- link redirection (0.6)
+- technical difficulties (0.5)
+- website maintenance (0.4)
+- permalink (0.3)
+- static pages (0.2)
+- blog (0.1)
 title: A new look and a new address
 wordpress_id: 1152
-categories:
-- This blog
 ---
 
 Due to some technical difficulties I was having with the previous installation of the software running this site, I decided to re-install the software from scratch and, while at it, change the address from landheer-cieslak.com to rlc.vlinder.ca. The look has been updated a bit and some further improvements will take place over the next few weeks.<!--more-->

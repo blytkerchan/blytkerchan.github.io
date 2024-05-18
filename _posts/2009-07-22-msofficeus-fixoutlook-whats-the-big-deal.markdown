@@ -1,23 +1,37 @@
 ---
 author: rlc
+categories:
+- Opinions
+- Technology
 comments: true
 date: 2009-07-22 13:49:16+00:00
 excerpt: 'flabbergasted I
 
   long for winter in summer?
 
-  perhaps just autumn'
+  perhaps just autumn
+
+  '
 layout: post
-permalink: /blog/2009/07/msofficeus-fixoutlook-whats-the-big-deal/
-slug: msofficeus-fixoutlook-whats-the-big-deal
+tags:
+- fixoutlook.org (1.0)
+- Twitter campaign (0.8)
+- Microsoft (0.9)
+- Outlook (0.9)
+- HTML (0.9)
+- standards compliance (0.9)
+- Word (0.8)
+- XML (0.7)
+- XSL stylesheet (0.7)
+- Explorer (0.6)
+- IE-readible HTML (0.6)
+- E-mail Standards Project (0.8)
+- GMail (0.7)
+- web-based (0.6)
+- HTML mail (0.7)
+- E-mail clients (0.7)
 title: '@msofficeus @fixoutlook - what''s the big deal?'
 wordpress_id: 44
-categories:
-- Opinions
-tags:
-- Microsoft
-- social media
-- standards compliance
 ---
 
 At fixoutlook.org, they've started a Twitter campaign to ask Microsoft to fix Outlook's standards compliance w.r.t., HTML and standards compliance. Even my brother, [Jeroen](http://www.jeroenlandheer.com), who is usually a big Microsoft fan, got in in it - which is how I got to know about it.

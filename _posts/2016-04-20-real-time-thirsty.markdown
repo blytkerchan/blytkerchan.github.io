@@ -1,51 +1,49 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2016-04-20 02:45:44+00:00
 layout: post
-permalink: /blog/2016/04/real-time-thirsty/
-slug: real-time-thirsty
+tags:
+- real-time systems (1.0)
+- worst-case timing (1.0)
+- average-case timing (1.0)
+- coffee shop (1.0)
+- Geeks (1.0)
+- soft system (0.9)
+- non-blocking state test (0.9)
+- redundancy (1.0)
+- real-time post-condition (0.9)
 title: Real-time thirsty
 wordpress_id: 3843
-categories:
-- Algorithms
-- Software Engineering
-tags:
-- real-time
 ---
 
-{% include shadowbox.html open_only=true %}
 <b><i>The TL;DR:</i></b><br/>
 
 In this post, I show using a fictitious example why real-time systems are defined by their worst-case timing rather than their average-case timing.
 
-</div>
-
 Imagine you're running a coffee shop -- not the kind you find in Amsterdam, but one where they actually serve coffee. Your customers are generally in a hurry, so they just want to get a cup of coffee, pay and leave to catch their plane, train or automobile. To attract more customers and appeal to the Geek crowd, you name your coffee shop "Real-Time Thirsty" and promise an "Average case serving within one minute!".
 
 While you get many customers, you're not getting the Geeks-in-a-hurry crowd you were expecting.
-<!--more-->
 
+<!--more-->
 
 ## Average-case vs. worst-case timing
 
-
-{% include image.html url="/assets/2016/04/IMG_07981-e1461091049572-768x531.jpg" caption="Fig. 1: Ordering coffee" %}
+<img src="/assets/2016/04/IMG_07981-e1461091049572-768x531.jpg" alt="Fig. 1: Ordering coffee" />
 
 Fig. 1 shows the interaction needed to get a cup of coffee: the customer requests a coffee, the barista gets a cup, fills it, asks for money and gives the coffee to the customer. The whole exchange might take all of one minute in the average case -- you're keeping your promise, so why won't the Geeks-in-a-hurry come?
 
-{% include image.html url="/assets/2016/04/File-2016-04-19-19-56-47-1024x771.jpeg" caption="Fig. 2: Coffee not ready" %}
+<img src="/assets/2016/04/File-2016-04-19-19-56-47-1024x771.jpeg" alt="Fig. 2: Coffee not ready" />
 
 The problem happens when the coffee still needs to be brewed when the customer gets there: the barista happily accepts the order, starts brewing the coffee and asks the customer to pay. The customer, now expecting his coffee to arrive "any moment now" ends up waiting a full fifteen minutes for his coffee, misses his plane, train or automobile and is righteously pissed off (Pardon my French).
 
 The Geeks, of course, know a real-time system when they see one, and can smell a "soft" system from a mile away. In your case, with your promise of an average-case serving time of one minute, they knew something was wrong when they saw the promise -- whether you keep it or not.
 
-
-
 ## "Warn" if not ready -- non-blocking state test
 
-
-{% include image.html url="/assets/2016/04/File-2016-04-19-20-15-13-1024x753.jpeg" caption="Fig. 3: Warn if not brewed" %}
+<img src="/assets/2016/04/File-2016-04-19-20-15-13-1024x753.jpeg" alt="Fig. 3: Warn if not brewed" />
 
 After being yelled at a few times, the barista has decided to warn the customer. This allows the customer to evaluate whether they will meet their deadline if they wait for coffee[^1].
 
@@ -55,12 +53,9 @@ In general, your customers are now fairly happy: the try to obtain a coffee and 
 
 Now, some Geeks have started coming, but none of them are in both thirsty and in a hurry: some are thirsty and not in a hurry while others are in a hurry, but could forego their dose of caffeinated beverage if required to.
 
-
-
 ## Redundancy
 
-
-{% include image.html url="/assets/2016/04/File-2016-04-19-20-55-40-1024x644.jpeg" caption="Fig. 4: Hopefully avoidable scenario" %}
+<img src="/assets/2016/04/File-2016-04-19-20-55-40-1024x644.jpeg" alt="Fig. 4: Hopefully avoidable scenario" />
 
 After observing the Geeks that are in a hurry but not all that thirsty for a while, you notice that some of them, when warned, go to one of your competitors to get their coffee. The coffee at your competitor is slightly more expensive, but Geeks-who-need-caffeine don't seem to mind. After reading up on the subject a bit, you note that what they're doing is implementing redundancy -- which is something you could do yourself.
 
@@ -75,4 +70,3 @@ After having taken your statement, the police officer rightly takes you into cus
 A somewhat calmer Geek then explains your mistake: while brewing more pots reduces the frequency of worst-case-time performance, it does not reduce the worst-case time itself. Your worst-case time was still fifteen minutes.
 
 Pouring your coffee faster would have reduced the average time, but would have done nothing for the worst case. Brewing smaller pots, on the other hand, would have reduced the worst-case time (but increased the frequency of their occurrence).
-

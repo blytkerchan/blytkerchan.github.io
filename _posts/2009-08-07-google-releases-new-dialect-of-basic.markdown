@@ -1,20 +1,38 @@
 ---
 author: rlc
+categories:
+- Programming Language
+- Software Development
+- Mobile Development
+- Technology Trends
 comments: true
 date: 2009-08-07 22:24:50+00:00
 layout: post
-permalink: /blog/2009/08/google-releases-new-dialect-of-basic/
-slug: google-releases-new-dialect-of-basic
+tags:
+- Microsoft (.8)
+- C# (.7)
+- .NET (.6)
+- Visual Basic (.9)
+- Google (.8)
+- Python (.5)
+- Java (.6)
+- ASP (.4)
+- Android (.9)
+- Simple (.9)
+- Java platform (.7)
+- Herbert Czymontek (.6)
+- Sun (.4)
+- Borland (.3)
+- Semplice (.7)
+- Android SDK (.6)
+- Windows Forms API (.5)
+- Dr. Dobb's (.4)
 title: Google releases new dialect of Basic
 wordpress_id: 144
-categories:
-- Business
-- Software
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 And here I though Basic was on its way out: Microsoft has been touting the advantages of C# and .NET in general far more than they have the advantages of Visual Basic (I remember when it became "visual": it used to be "quick" and that never said anything about run time); and Google _seemed_ to be much more interested in Python and Java than they were in the whole Basic scene. In the circles I've frequented for the last several years, Basic was used only in ASP applications and then only if, for some reason, using C# was out of the question. Basic was basically legacy code that hadn't been replaced yet.
+
 <!--more-->
 
 Now, Basic is back - and it's Google that brought it back. As part of their [Android](http://android.com) platform, they've introduced [Simple](http://code.google.com/p/simple/), a dialect for Basic that is apparently complete written in Java - and completely written by hand. I've taken a look at the code for the parser, written by Herbert Czymontek, who was formerly employed at Sun but now works for Google. At Sun, he worked on Semplice, a project to bring Visual Basic to the Java platform, so it only makes sense that at Google, he would continue on a similar line as he did at Sun (and before that at Borland): he already knew Visual Basic pretty well and, of course, Java as well.

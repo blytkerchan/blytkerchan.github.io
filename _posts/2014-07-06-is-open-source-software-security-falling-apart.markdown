@@ -1,18 +1,47 @@
 ---
 author: rlc
+categories:
+- Open Source Software
+- Software Security
+- Vulnerabilities
+- Proprietary Software
 comments: true
 date: 2014-07-06 01:21:17+00:00
+excerpt: 'There have been a number of well-publicized security flaws in open source
+  software lately -- the most well-publicized of course being the OpenSSL Heartbleed
+  bug.
+
+
+  Then there''s the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in
+  the Linux kernel.
+
+
+  So, is there a systemic problem with Open Source software? Does proprietary software
+  have the same problem?
+
+  '
 layout: post
-permalink: /blog/2014/07/is-open-source-software-security-falling-apart/
-slug: is-open-source-software-security-falling-apart
+tags:
+- security (3.0)
+- open source (2.5)
+- software (2.0)
+- bugs (1.5)
+- vulnerabilities (1.5)
+- proprietary (1.2)
+- code (1.0)
+- Heartbleed (1.0)
+- Truecrypt (1.0)
+- OpenJDK (1.0)
+- Linux kernel (1.0)
+- GnuTLS (1.0)
+- CVE (1.0)
+- transparency (1.0)
+- quality (1.0)
+- popularity (1.0)
+- awareness (1.0)
+- Microsoft Windows CE (1.0)
 title: Is Open Source software security falling apart?
 wordpress_id: 3163
-categories:
-- Opinions
-- Software Development
-- Software Testing
-tags:
-- open source
 ---
 
 There have been a number of well-publicized security flaws in open source software lately -- the most well-publicized of course being the OpenSSL Heartbleed bug[^1].
@@ -23,24 +52,17 @@ Then there's the demise of Truecrypt, recent bugs in GnuTLS and recent bugs in t
 
 So, is there a systemic problem with Open Source software? Does proprietary software have the same problem?
 
-<!--more-->
-
 Writing secure code is hard. That's (probably) why Truecrypt gave up the ghost[^2] and it's why security bugs happen in the first place. For every N lines of code, there are M bugs where $0 \le M \le cN$.
 
 [^2]: Truecrypt gave up the ghost in May of this year, ostensibly because modern OSs come with their own disk encryption options. This does not reflect the quality of Truecrypt -- just that it is no longer maintained.
 
 The only way to not write buggy code is to not write code at all. This is true regardless of whether you're getting paid for writing the code, and regardless of how much experience you have writing code. Of course, more experienced coders are less likely to write buggy code most of the time, but even the most experienced coder is guaranteed to write buggy code some of the time.
 
-So why are security bugs in Open Source software popping up left and right? I see two reasons for that: 
+So why are security bugs in Open Source software popping up left and right? I see two reasons for that:
 
+1. Open Source software is getting more popular
 
-	
-  1. Open Source software is getting more popular
-
-	
-  2. Open Source software is Open Source software
-
-
+2. Open Source software is Open Source software
 
 Open Source software is embedded in your telephone, used by banks, governments and the military, and most businesses around the world. It is the very definition of ubiquitous. The size of open source projects ranges from huge (Linux kernel, for example) to tiny ([Github's "gists"](https://gist.github.com/discover), for example) and their quality is equally on the complete range (great to extremely poor).
 
@@ -48,18 +70,19 @@ In recent years, with the advent of the Internet and with Open Source code becom
 
 The fact that Open Source software is Open Source software means that if problems are found in the software, those problems are not hidden.
 
-Let's have a look at all unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014 so far (there aren't that many): 
-      <table >
-         CVE entries for unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014
-         
+Let's have a look at all unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014 so far (there aren't that many):
+
+<table >
+CVE entries for unknown vulnerabilities with unknown impacts and/or unknown attack vectors in 2014
+
             <tr >
                CVE ID
                Description
             </tr>
-         
+
          <tbody >
             <tr >
-               
+
 <td width="150" >
                   [CVE-2014-0462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0462)
                
@@ -135,6 +158,6 @@ Running queries over the CVE database, I've found that the percentage of vulnera
 One would expect to find more vulnerabilities in a category of software as it becomes more popular, as it would be increasingly scrutinized, followed by a decrease as awareness goes up. Awareness has been, and remained, high w.r.t. security in the Open Source world for decades -- well before it became as popular as it is today.
 I verified this premise by looking for recent vulnerabilities in old software -- Microsoft Windows CE 4.2[^3]. Microsoft Windows CE 4.2 has been obsolete for a very long time, but devices using it are still being shipped and maintained, even though support for the embedded OS by Microsoft ceased in 2008. While there are recent vulnerabilities in newer versions of CE, security researchers don't seem to bother with old, obsolete platforms as much as they do with the shiny new ones. Popularity spurs interest from hackers (regardless of the color of their hat) as well as the general public. That doesn't mean there are no vulnerabilities in older software: it means vulnerabilities are more likely to be found in more popular software, if they're there.
 
-[^3]: I had to do that anyway  for unrelated research.
+[^3]: I had to do that anyway for unrelated research.
 
 So, is Open Source software security falling apart? No, it's not: Open Source software is as healthy as ever, and as safe as it ever has been. As with all software, procurement should be done with open eyes and a healthy dose of scepticism, but a preference for the proprietary does not appear founded if it is based on a premise of better software security.

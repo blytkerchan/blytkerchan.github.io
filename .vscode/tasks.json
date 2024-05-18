@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "react-scripts start"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": ["$eslint-compact"],
+      "label": "npm: lint",
+      "detail": "eslint"
+    },
+    {
+      "type": "npm",
+      "script": "serve",
+      "presentation": {
+        "focus": true,
+        "panel": "dedicated"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        {
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": { "regexp": "^.*Compiled successfully.*$" },
+            "endsPattern": { "regexp": "^.*You can now view.*$" }
+          },
+          "applyTo": "closedDocuments",
+          "owner": "npm",
+          "pattern": "$tsc"
+        }
+      ],
+      "label": "npm: serve",
+      "isBackground": true
+    }
+  ]
+}

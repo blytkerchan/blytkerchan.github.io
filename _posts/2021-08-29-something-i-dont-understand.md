@@ -1,10 +1,31 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Firmware Engineering
+- VHDL Programming
+- Coding Standards
+- Semantic Naming
+- Type Systems
 comments: true
 date: 2021-08-28
 layout: post
+tags:
+- VHDL code (1.0)
+- firmware engineers (0.8)
+- signals (0.7)
+- datasheet pin name (0.6)
+- Hungarian warthogs (0.5)
+- software (0.9)
+- type system (0.8)
+- PotatoLauncherTargetingStatus (0.7)
+- compiler (0.8)
+- gate usage (0.6)
+- readability (0.9)
+- software guy's code (0.7)
 title: Here’s something I don’t understand
 ---
+
 Every time I look at VHDL code written by (sometimes veteran, sometimes not so much) firmware engineers, the code looks similar: a bunch of signals coming in with their direction encore in the name, and sometimes the polarity as well, but very little in the way of functionality: sometimes it’s just the datasheet pin name of the device the signal is from that made it all the way into the component I’m looking at (which, when I find that annoying, is not the top). 
 
 This part I kinda get: it’s the same issue we’ve had in software for ages, dating back before the Hungarian warthogs of the 1990s. 

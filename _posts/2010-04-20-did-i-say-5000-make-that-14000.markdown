@@ -1,18 +1,28 @@
 ---
 author: rlc
+categories:
+- Podcasts
+- Coding
+- Audience engagement
 comments: true
 date: 2010-04-20 04:09:47+00:00
 layout: post
-permalink: /blog/2010/04/did-i-say-5000-make-that-14000/
-slug: did-i-say-5000-make-that-14000
+tags:
+- Podcast (0.9)
+- Downloads (0.8)
+- Audience (0.7)
+- Thankful (0.6)
+- Coding (0.5)
+- Server (0.4)
+- Audience growth (0.3)
+- Appreciation (0.2)
+- Podcasting (0.1)
 title: Did I say 5000? Make that 14000(!)
 wordpress_id: 563
-categories:
-- C++ for the self-taught
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
+
 <!--more-->
+
 Wow.
 
 What else can I say? Two weeks ago, I said "thanks for listening" because there'd been 5000 downloads of the Podcast. Apparently, you went ahead and told all your friends and colleagues, so now the podcast has been downloaded another 9000 times - getting us from 5000 to 14000 in two weeks!

@@ -1,22 +1,27 @@
 ---
 author: rlc
+categories:
+- Project Management
 comments: true
 date: 2016-05-21 17:48:27+00:00
 layout: post
-permalink: /blog/2016/05/technocracy/
-slug: technocracy
+tags:
+- project management (0.9)
+- team management (0.8)
+- agile development (0.7)
+- system architecture (0.8)
+- technocratic approach (0.9)
+- software development (0.6)
+- team organization (0.7)
+- code review (0.6)
+- vision statement (0.8)
+- milestone planning (0.7)
 title: Technocracy
 wordpress_id: 3883
-categories:
-- Software Development
-- Software Engineering
-tags:
-- technocracy
 ---
 
 In a discussion with a "Product Owner" recently, I told him I take a more technocratic approach to project management than they did. We discussed different project management styles for the next hour or so.
 
-{% include shadowbox.html open_only=true %}
 <b><i>TL;DR:</i></b> I believe that
 
 <ul>
@@ -24,8 +29,8 @@ In a discussion with a "Product Owner" recently, I told him I take a more techno
 <li>to successfully manage an "agile" development team and create a viable product, one has to have a vision and break it down from there.</li>
 </ul>
 
-</div>
 <!--more-->
+
 Well-running teams tend to be able to execute their tasks efficiently, but large development teams do not necessarily have a clear vision of where the product, or product line, is going and therefore don't necessarily know what direction to take the code in. This may have an adverse effect on the product's system architecture, especially with agile teams that tend to decide the architecture by the seat of their pants.
 
 This is why I tend to take a more "technocratic" approach to project management and team management: I do not believe that every person in a large team is equally apt to work on every part of a large system architecture. Rather, the architecture should be compartmentalized and each part of the architecture should have a small group of designated "experts": people that know that part of the system inside out and work on it whenever work needs to be done on it.
@@ -42,18 +47,11 @@ The team being entirely composed of human beings and human beings being what the
 
 My approach would be as follows:
 
+1. Formulate a clear vision statement: the vision should be clear and enunciate a specific, measurable, attainable goal of what the product platform should look like in three years: e.g. "90% of our most-used configurations can be configured to functional equivalence using the new firmware platform" -- note that the system behavior will be functionally equivalent but not necessarily the same; note that not all configurations are to be supported but "only" 90%, in order of most use by customers. Both of these caveats should be made explicit in a single paragraph to accompany the vision statement.
 
+2. Formulate ten milestones, each five iterations apart, to work toward that goal. The first milestone should be to determine what those most-used configurations are and what it means to be functionally equivalent. With five three-week iterations that gives the team fifteen weeks to come up with answers (while also working on change requests, bugs, etc.) -- which is not a lot of time.
+   The milestones following that would, in my approach, be to develop the firmware platform and required functions for the new firmware platform in order of dependence.
 
-	
-  1. Formulate a clear vision statement: the vision should be clear and enunciate a specific, measurable, attainable goal of what the product platform should look like in three years: e.g. "90% of our most-used configurations can be configured to functional equivalence using the new firmware platform" -- note that the system behavior will be functionally equivalent but not necessarily the same; note that not all configurations are to be supported but "only" 90%, in order of most use by customers. Both of these caveats should be made explicit in a single paragraph to accompany the vision statement.
-
-	
-  2. Formulate ten milestones, each five iterations apart, to work toward that goal. The first milestone should be to determine what those most-used configurations are and what it means to be functionally equivalent. With five three-week iterations that gives the team fifteen weeks to come up with answers (while also working on change requests, bugs, etc.) -- which is not a lot of time.
-The milestones following that would, in my approach, be to develop the firmware platform and required functions for the new firmware platform in order of dependence.
-
-	
-  3. For each sprint, set goals that are specific to reaching the next milestone.
-
-
+3. For each sprint, set goals that are specific to reaching the next milestone.
 
 Lively discussions are sure to ensue, but with the inevitability of the vision and the need to reach that envisioned reality by the deadline, team buy-in is virtually guaranteed (and is necessary for motivation) and the whole thing is specific, measurable, attainable, relevant and time-boxed.

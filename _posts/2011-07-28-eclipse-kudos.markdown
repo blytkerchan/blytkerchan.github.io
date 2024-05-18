@@ -1,29 +1,43 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Integrated Development Environments (IDEs)
+- Software Architecture
+- Version Control
+- Software Maintenance
+- Software Design
+- Software Evolution
 comments: true
 date: 2011-07-28 16:56:30+00:00
 layout: post
-permalink: /blog/2011/07/eclipse-kudos/
-slug: eclipse-kudos
+tags:
+- software development (0.9)
+- Eclipse IDE (0.8)
+- software architecture (0.7)
+- EGit (0.6)
+- Git integration (0.5)
+- IDE design (0.8)
+- software projects (0.7)
+- complete rewrites (0.6)
+- API compatibility (0.5)
+- system scalability (0.4)
+- maintenance patches (0.4)
+- plugin architecture (0.6)
+- software installation (0.5)
 title: 'Eclipse: kudos'
 wordpress_id: 1597
-categories:
-- Software Design
-- Software Engineering
-tags:
-- Eclipse
 ---
 
 One of the things I like about Eclipse is the way it is designed. I'm not talking about the GUI when I say that - although the GUI is arguably well-designed as well: I mean the way hundreds of pieces fit together to make Eclipse an IDE for Java, C, C++, PHP, Python, ..., etc.
-<!--more-->
-I found this presentation on Slide Share that explains what Eclipse is, and a bit of what's new:
 
+<!--more-->
+
+I found this presentation on Slide Share that explains what Eclipse is, and a bit of what's new:
 
 **[Whats new in Eclipse Indigo ? (@DemoCamp Grenoble 2011)](http://www.slideshare.net/mickaelistria/whats-new-in-eclipse-indigo-democamp-grenoble-2011)**
 
 View more [presentations](http://www.slideshare.net/) from [Mickael Istria](http://www.slideshare.net/mickaelistria)
-
-
 
 The parts I like most are the inclusion of EGit, which works really well, I find, to integrate Git into the IDE, but what strikes me most is that there no, and as far as I can tell has never been, any great departure from the previous versions of Eclipse: from one release to the next, Eclipse evolves but does so in a gradual, rather than a radical, process.
 

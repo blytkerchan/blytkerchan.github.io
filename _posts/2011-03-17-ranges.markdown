@@ -1,26 +1,46 @@
 ---
 author: rlc
+categories:
+- Iterators
+- Ranges
+- Containers
+- Standard Algorithms
 comments: true
 date: 2011-03-17 01:55:12+00:00
 layout: post
-permalink: /blog/2011/03/ranges/
-slug: ranges
+tags:
+- STL (1.0)
+- Iterators (1.0)
+- Ranges (1.0)
+- Containers (1.0)
+- Standard Algorithms (1.0)
+- Design (0.8)
+- C++ Programming Language (0.8)
+- Tutorial (0.7)
+- Presentation (0.7)
+- Input Iterators (1.0)
+- Output Iterators (1.0)
+- Forward Iterators (1.0)
+- Bidirectional Iterators (1.0)
+- Random-Access Iterators (1.0)
+- Traversal Categories (1.0)
+- Value Access Categories (1.9)
+- Classification of Containers (1.0)
+- Classification of Algorithms (1.0)
 title: Ranges
 wordpress_id: 1303
-categories:
-- C++ for the self-taught
-tags:
-- C++
-- functional programming
-- ranges
 ---
+
 <!--more-->
+
 [![Iterators, Ranges, Containers and Standard Algorithms](/assets/2011/03/img0-300x225.png)](/assets/2011/03/img0.png)
 
 The concept of a _range_ is one of the fundamental concepts in the design of the STL and of the C++ programming language. In this installment, we will take a close look at what a range is, and we will take a look at some parts of the design of the STL. This will help you to understand the lines of code I skipped over when we looked at the code in the previous installment. In the next installment, we will look at that code again.
 
 This installment is heavily based on a tutorial presentation on ranges in the STL, of which the slides are included.
+
 <!--more-->
+
 [![Outline: Definition of an Iterator; Definition of a Range; Classification of Iterators; Classification of Containers; Classification of Algorithms; Code](/assets/2011/03/img1-300x225.png)](/assets/2011/03/img1.png)
 
 In this installment, we will go through the presentation on iterators, ranges, containers and standard algorithms. We will see what an iterator is, what a range is, what kind of iterators there are, what kind of containers there are and what kind of algorithms there are. By the end of the presentation -- and of this installment -- you will understand why certain algorithms need certain types of iterators, and why iterator categories are important.

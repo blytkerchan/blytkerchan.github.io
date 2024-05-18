@@ -1,21 +1,37 @@
 ---
 author: rlc
+categories:
+- Technology
+- Operating Systems
+- Web Development
+- Linux distributions
 comments: true
 date: 2009-09-22 02:35:32+00:00
 layout: post
-permalink: /blog/2009/09/running-a-lamp-debian-vs-centos/
-slug: running-a-lamp-debian-vs-centos
+tags:
+- CentOS (0.9)
+- Debian (0.9)
+- web application (0.7)
+- PHP (0.6)
+- server setup (0.5)
+- Linux systems (0.5)
+- RedHat (0.4)
+- computer science (0.4)
+- RPM format (0.4)
+- apt (0.4)
+- yum (0.4)
+- LAMP (0.8)
+- Linux Standard Base (0.3)
+- package availability (0.3)
+- user-friendly interface (0.3)
+- maintenance (0.3)
+- development (0.3)
 title: 'Running a LAMP: Debian vs. CentOS'
 wordpress_id: 197
-categories:
-- GNU/Linux (OS)
-tags:
-- CentOS
-- Debian
-- Posts that need to be re-tagged (WIP)
 ---
 
 One of my clients uses CentOS for the production platform of their (web) application (written in PHP). They've asked me to take over the development and maintenance of their web application, so, naturally, I set up a new server with CentOS 5.2, rather than the Debian installation I would normally use.
+
 <!--more-->
 
 I like Debian for a lot of reasons: it is generally a stable system that is well-documented, secure and easy to handle. The "easy to handle" part is, of course, because I happen to know my way around a Debian system. When I started out, seven years ago, professionally working on Linux systems, I started out on the then-current RedHat distro.

@@ -1,18 +1,25 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming Languages
+- Business/Company Announcement
 comments: true
 date: 2013-06-10 17:00:46+00:00
 layout: post
-permalink: /blog/2013/06/why-i-decided-vlinder-software-should-stop-selling-funky/
-slug: why-i-decided-vlinder-software-should-stop-selling-funky
+tags:
+- Vlinder Software (0.9)
+- announcement (0.7)
+- end-of-life cycle (0.8)
+- CEO (0.6)
+- founder (0.5)
+- software development (0.7)
+- Funky language (0.8)
+- Boost.Spirit (0.7)
+- Domain-Specific Languages (0.8)
+- DSLs (0.7)
 title: Why I decided Vlinder Software should stop selling Funky
 wordpress_id: 2324
-categories:
-- Reasons
-- Vlinder Software
-tags:
-- business decisions
-- Vlinder Software
 ---
 
 If you follow the News feed from [Vlinder Software's site](http://vlinder.ca) you know that I've posted an announcement saying Funky is now in its end-of-life cycle. This is our first product to enter end-of-life, but what it basically means is that we won't actively work on improving the software anymore.

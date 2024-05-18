@@ -1,11 +1,25 @@
 ---
 author: rlc
+categories:
+- Technology
+- Blogging
+- Web development
 comments: true
 date: 2018-09-11 14:42:36+00:00
 layout: post
 slug: Reboot
+tags:
+- Blogging (0.8)
+- Website migration (0.7)
+- Jekyll (0.9)
+- Wordpress (0.6)
+- Vim (0.5)
+- PDF files (0.7)
+- LaTeX (0.6)
+- Bug reporting (0.8)
 title: reboot
 ---
+
 Readers of this blog may wonder what happened: the layout is completely different, but the thing is also a lot faster..??!
 
 The reason for this is simple: I stopped using Wordpress. It was giving me more trouble than it was worth, so I decided to move the site, and all of its contents, to Jekyll. This has the advantage of being able to write directly in Vim, with the only minor disadvantage of having to build the site.

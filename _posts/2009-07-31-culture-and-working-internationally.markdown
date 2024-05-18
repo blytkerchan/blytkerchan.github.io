@@ -1,25 +1,48 @@
 ---
 author: rlc
+categories:
+- Cultural Dimensions
+- International Business
+- Psychology
+- Sociology
+- Gender Studies
 comments: true
 date: 2009-07-31 03:19:19+00:00
 excerpt: 'When autumn turns hence
 
   to where winter must come forth
 
-  spring awaits summer'
+  spring awaits summer
+
+  '
 layout: post
-permalink: /blog/2009/07/culture-and-working-internationally/
-slug: culture-and-working-internationally
+tags:
+- culture (1.0)
+- Geert Hofstede (0.9)
+- Power Distance Index (0.8)
+- Individualism (0.7)
+- Masculinity (0.6)
+- Uncertainty Avoidance Index (0.8)
+- Long Term Orientation (0.7)
+- Netherlands (0.9)
+- egalitarian (0.8)
+- monarchy (0.6)
+- tolerance (0.7)
+- risk (0.6)
+- prime minister (0.6)
+- Wim Kok (0.7)
+- business (0.8)
+- authority (0.7)
+- equality (0.8)
+- Quebec (0.7)
+- WWII (0.6)
+- North Carolina (0.6)
+- immigrant (0.8)
+- expatriate (0.7)
+- international environment (0.9)
+- soft skills (0.8)
 title: Culture and working internationally
 wordpress_id: 110
-categories:
-- Business
-- Opinions
-tags:
-- culture
-- emigration
-- travel
-- working internationally
 ---
 
 Parts of culture are measurable: psychologists (mostly [Geert Hofstede](http://geert-hofstede.com/)) have come up with different indices to measure the behavior of peoples. These indices include the "Power Distance Index" (PDI), the "Individualism" index (IDV), the "Masculinity" index (MAS), the "Uncertainty Avoidance Index" (UAI) and the "Long Term Orientation" index (LTO).

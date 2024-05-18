@@ -1,39 +1,40 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2014-10-24 20:36:11+00:00
 layout: post
-permalink: /blog/2014/10/radical-refactoring-breaking-changes/
-slug: radical-refactoring-breaking-changes
+tags:
+- bugs (1.0)
+- API (0.8)
+- library (0.7)
+- smart pointer (0.9)
+- design flaw (0.8)
+- testing framework (0.6)
+- implementation (0.7)
+- code changes (0.7)
+- requirements (0.6)
+- executive decision (0.5)
+- Vlinder Software (0.6)
+- namespace (0.7)
+- automated builds (0.6)
+- upgrade (0.7)
 title: 'Radical Refactoring: Breaking Changes'
 wordpress_id: 3349
-categories:
-- Anecdotes
-- C &amp; C++
-- C++ for the self-taught
-- Embedded software development
-- Radical Refactoring
-tags:
-- breaking changes
-- radical refactoring
-- refactoring
 ---
 
 One of the most common sources of bugs is ambiguity: some too-subtle API change that's missed in a library update and introduces a subtle bug, that finally only gets found out in the field. My answer to that problem is radical: make changes breaking changes -- make sure the code just won't compile unless fixed: the compiler is generally better at finding things you missed than you are.
+
 <!--more-->
+
 Recently, I found a bug in a smart pointer implementation in Acari, Vlinder Software's toolbox library used for, among other things, the Arachnida HTTP(s) server/client framework. The bug was subtle, not likely to cause problems in most current deployments of Arachnida, but limiting for one of our customers (so it had to be fixed).
 
 When I started setting up the necessary testing framework, I came to the conclusion that the bug in question was a design flaw, and that not only the code would have to be changed, but the calling code at at least one of the call sites as well. I now had two things to make sure of:
 
+1. the design had to be reviewed to make sure no other flaws were present
 
-
-	
-  1. the design had to be reviewed to make sure no other flaws were present
-
-	
-  2. the calling sites that needed to be changed had to be spotted unambiguously, and changed in a way clearly specified
-
-
+2. the calling sites that needed to be changed had to be spotted unambiguously, and changed in a way clearly specified
 
 I decided to review the requirements that were at the base of the original design, clarify the requirement that was missed and led to the flaw, set up the necessary test cases for each of the functional requirements, design a new implementation to meet all the requirements, and implement that new design. This decision led to a delay in the release of version 2.3 of Arachnnida (which was planned for the end of 2014Q3 but will now come out early-to-mid 2014Q4) -- which made it an executive decision.
 

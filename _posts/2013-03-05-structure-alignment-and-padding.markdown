@@ -1,43 +1,48 @@
 ---
 author: rlc
+categories:
+- Software Development
 comments: true
 date: 2013-03-05 00:06:32+00:00
 layout: post
-permalink: /blog/2013/03/structure-alignment-and-padding/
-slug: structure-alignment-and-padding
+tags:
+- struct-design (1.0)
+- magic-numbers (0.9)
+- versions (0.8)
+- alignment (1.0)
+- endianness (0.7)
+- padding (1.0)
+- sizeof-operator (0.9)
+- debugging (0.9)
+- alignment-errors (0.8)
+- structure-size (0.9)
+- padding-errors (0.8)
+- byte-alignment (0.9)
 title: Structure alignment and padding
 wordpress_id: 2050
-categories:
-- C &amp; C++
-- Embedded software development
-- Software Development
-tags:
-- alignment
-- padding
 ---
 
 In my [previous post](/blog/2012/12/how-to-design-a-struct-for-storage-or-networking/) on the subject, I talked about using magic numbers and versions, alignment, and later added a note about endianness after a suggestion from Michel Fortin. This time, I'll talk about padding, how the sizeof operator can be misleading and how to debug padding and alignment errors.
 
 <!--more-->
 
-A few days ago we were debugging the interface between some application code and one of my drivers. The driver implemented an I/O control which, before doing anything with the buffer passed to it, checked the sizes and output a trace if they didn't match the expected size: 
-    
+A few days ago we were debugging the interface between some application code and one of my drivers. The driver implemented an I/O control which, before doing anything with the buffer passed to it, checked the sizes and output a trace if they didn't match the expected size:
+
     bool validateBufferSize(size_t expected_size, size_t actual_size, char const *fmt, ...)
     {
         if (expected_size != actual_size)
         { ... Output a message ... }
         return expected_size == actual_size;
     }
-    
+
     ...
-    
+
     if (validateBufferSize(sizeof(OutputType), output_buffer_size))
     { ... Do stuff ... }
     else
     { ... Return with error ...}
-    
-    ...
 
+    ...
 
 There is a problem with this approach: while everything inside my structure was properly aligned, the largest field in the structure was a 64-bit integer, which requires an alignment on 8 bytes. The structure, however, came to a total size of 444 bytes.
 

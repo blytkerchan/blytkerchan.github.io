@@ -1,19 +1,30 @@
 ---
 author: rlc
+categories:
+- This blog
 comments: false
 date: 2009-07-16 14:20:47+00:00
 excerpt: 'the first of summer
 
   the very last of winter?
 
-  the first of blog posts'
+  the first of blog posts
+
+  '
 layout: post
-permalink: /blog/2009/07/a-new-blog/
-slug: a-new-blog
+tags:
+- Technology (1.0)
+- Software development (0.9)
+- Personal blog (0.8)
+- Vlinder Software (0.7)
+- Theology musings (0.5)
+- ACM Communications (0.4)
+- IEEE literature (0.4)
+- Dr. Dobb's Report (0.4)
+- Product development (0.6)
+- Fiction writing (0.3)
 title: A new blog
 wordpress_id: 1017
-categories:
-- This blog
 ---
 
 The landheer-cieslak.com website had more or less been replaced by [vlinder.ca](http://vlinder.ca) for a while now, so it was about time to get a new site at this location. I've chosen to make this a personal technology blog. Of course, there's already the Vlinder development blog, but that's slated to move to the vlinder.ca domain and is intended to talk about product development at Vlinder Software. There's also Soli Deo Gloria, but that's an outlet for my theology musings and hasn't been very active of late (I'm too busy reading and writing fiction in the theology department to muse about theology on the blog).

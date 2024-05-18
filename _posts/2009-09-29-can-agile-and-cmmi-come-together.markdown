@@ -1,25 +1,38 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Agile Methodologies
+- Project Management
+- Quality Assurance
+- Configuration Management
+- Documentation
+- Process Improvement
 comments: true
 date: 2009-09-29 02:51:02+00:00
 layout: post
-permalink: /blog/2009/09/can-agile-and-cmmi-come-together/
-slug: can-agile-and-cmmi-come-together
+tags:
+- Software Engineering Institute (1.0)
+- SCRUM (0.9)
+- CMMi (1.0)
+- Agile (1.0)
+- Manifesto for Agile Software Development (0.9)
+- Documentation (0.8)
+- Contracts (0.7)
+- Plans (0.8)
+- CMMI (1.0)
+- Iterative and Incremental Design (0.9)
+- Configuration Management (0.8)
+- Quality Assurance (0.8)
 title: Can Agile and CMMI Come Together?
 wordpress_id: 227
-categories:
-- Business
-- Opinions
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 I just finished reading a [report](http://www.sei.cmu.edu/library/abstracts/reports/08tn003.cfm) by the [Software Engineering Institute](http://www.sei.cmu.edu/) that accomplishes something that earlier literature, including "[SCRUM Meets CMMi - Agility and discipline combined](http://www.ddj.com/cpp/201202684)" didn't accomplish: it takes a rational step back from both methods, shows where they're from and why they're different, how much of that difference is real and where the perceived differences come from, and how the two can come together. So, the short answer to my title is "yes".
+
 <!--more-->
 
 One thing I have often said about, and to, self-proclaimed agilists, is that diving into code head-first isn't agile - it's just plain stupid. It gives agile a bad name and it is bad for both the software and the clients that pay for the software. That doesn't mean that everything should be documented and specified before you start coding: I agree with the [Manifesto for Agile Software Development](http://agilemanifesto.org), and I'll even quote it completely here:
-
-
 
 <blockquote>We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:<br/>
 <br/>
@@ -29,8 +42,6 @@ One thing I have often said about, and to, self-proclaimed agilists, is that div
 <b>Responding to change</b> over following a plan<br/>
 <br/>
 That is, while there is value in the items on the right, we value the items on the left more.</blockquote>
-
-
 
 There is an importance to the contents of the last line: _while there is value in the items on the right_. I.e., processes and tools are still needed - just look at all the scrum tools that are cropping up everywhere to visualize burndown charts and if a daily stand-up meeting and a weekly sprint isn't a process, I don't know what it is.
 

@@ -1,21 +1,40 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Operating Systems
+- Version Control
+- Integrated Development Environments
 comments: true
 date: 2010-03-16 04:16:33+00:00
 layout: post
-permalink: /blog/2010/03/preprequisites-for-the-project/
-slug: preprequisites-for-the-project
+tags:
+- software (1.0)
+- compiling (1.0)
+- Windows (0.8)
+- Linux (0.8)
+- Debian (0.7)
+- Git (0.9)
+- version control (0.8)
+- IDE (0.7)
+- Microsoft Visual Studio (0.7)
+- Eclipse (0.7)
+- MinGW (0.8)
+- Cygwin (0.7)
+- prerequisites (0.9)
+- SDK (0.8)
+- free software (0.8)
+- portable (0.7)
+- compiler (0.7)
+- libraries (0.7)
 title: Preprequisites for the project
 wordpress_id: 481
-categories:
-- C++ for the self-taught
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 In this installment, we'll get you set up to compile everything that needs compiling in our project. We'll try to keep it short and sweet and you'll be able to download most of what you need just by following the links on this page.
-<!--more-->
 
+<!--more-->
 
 ## Prerequisites
 

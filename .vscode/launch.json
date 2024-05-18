@@ -1,0 +1,58 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "npm test",
+      "name": "Run npm test",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "preLaunchTask": "npm: serve",
+      "name": "Launch Edge",
+      "request": "launch",
+      "type": "msedge",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Start dev back-end",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run start-dev-server"
+    },
+    {
+      "name": "Backend: run tests",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run test"
+    },
+    {
+      "name": "Backend: insert user",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-server",
+      "command": "npm run insert-user me@example.com VeryComplexPassword"
+    },
+    {
+      "name": "Front-end: run integration tests",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/test-frontend",
+      "command": "npm run test"
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${fileDirname}"
+    }
+  ]
+}

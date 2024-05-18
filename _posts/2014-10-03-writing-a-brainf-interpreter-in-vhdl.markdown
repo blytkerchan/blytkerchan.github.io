@@ -1,18 +1,29 @@
 ---
 author: rlc
+categories:
+- Software Development
+- Programming
+- Interpreters
+- Parsers
+- VHDL
+- Design Patterns
+- State Machines
+- AST (Abstract Syntax Tree)
+- Coding Style
+- Signal Processing
+- Simulation
+- Testing
+- Optimization
+- Assertions
+- Test Bench
+- ModelSim
 comments: true
 date: 2014-10-03 20:00:42+00:00
 layout: post
-permalink: /blog/2014/10/writing-a-brainf-interpreter-in-vhdl/
 slug: writing-a-brainf-interpreter-in-vhdl
+tags: null
 title: Writing a BrainF interpreter ... in VHDL
 wordpress_id: 3303
-categories:
-- Software Development
-- VHDL
-tags:
-- brainf---
-- VHDL
 ---
 
 I've written parsers and interpreters before, but usually in C++ or, if I was feeling like doing _all_ of the hard work myself, in C.
@@ -29,7 +40,6 @@ While I've written parsers and interpreters without sleeping children in my arms
 
 My first draft had a few syntax errors and typos -- I don't have a VHDL compiler on my iPad -- but the general idea was there:
 
-    
     -- BrainF* interpreter
     -- Version: 20140927
     -- Author:  Ronald Landheer-Cieslak
@@ -38,7 +48,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
     library ieee:
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
-    
+
     entity BrainF is
         generic(
               MAX_INSTRUCTION_COUNT : positive := 65536
@@ -47,17 +57,17 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
         port(
               resetN : in std_logic
             ; clock : in std_logic
-            
+
             ; load_instructions : in std_logic
             ; instruction : in std_logic_vector(7 downto 0)
             ; ack_instruction : out std_logic
             ; program_full : out std_logic
-            
+
             ; read_memory : in std_logic
             ; memory_byte : out std_logic_vector(7 downto 0)
             ; memory_byte_ready : out std_logic
             ; memory_byte_read_ack : in std_logic
-            
+
             ; done : out std_logic
             );
     end entity;
@@ -67,10 +77,10 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
         type Pipeline is array(0 to 1) of Instruction;
         type IPointer is integer range 0 to MAX_INSTRUCTION_COUNT;
         type NestCount is integer range 0 to MAX_INSTRUCTION_COUNT - 1;
-        
+
         type Memory is array(0 to (MEMORY_SIZE - 1)) of std_logic_vector(7 downto 0);
         type Pointer is integer range 0 to (MEMORY_SIZE - 1);
-        
+
         function toInstruction(i : std_logic_vector(7 downto 0)) return Instruction is
         begin
             case i is
@@ -99,7 +109,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
                 return std_logic_vector(unsigned(b) - 1);
             end if;
         end decrement;
-        
+
         -- produced by p_interpret
         signal ptr : Pointer := 0;
         signal mem : Memory := (others => (others => '0')));
@@ -135,7 +145,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
                     when advance =>
                         if ptr = MEMORY_SIZE - 1 then
                             ptr <= 0;
-                        else 
+                        else
                             ptr <= ptr + 1;
                         end if;
                     when back_up =>
@@ -160,7 +170,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
                 end if;
             end if;
         end process;
-        
+
         p_fetch : process(resetN, clock)
         begin
             if resetN = '0' or load_instructions = '1' then
@@ -218,7 +228,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
                 end if;
             end if;
         end process;
-        
+
         p_loadInstructions : process(clock, resetN)
         begin
             if resetN = '0' then
@@ -243,7 +253,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
                                 program_full <= '1';
                             end if;
                         end if;
-                    
+
                         instruction_step <= not instruction_step and not program_full;
                     else
                         iwptr <= 0;
@@ -254,7 +264,7 @@ My first draft had a few syntax errors and typos -- I don't have a VHDL compiler
             end if;
         end process;
         ack_instruction <= instruction_step;
-        
+
         p_readMemory : process(clock, resetN)
             variable rptr : integer range 0 to MEMORY_SIZE := 0;
         begin
@@ -301,49 +311,39 @@ This meant I had to stall `p_fetch` before `p_interpret` told it to stall, _even
 
 In stead, I added an `expect_stall` signal, which is set if the instruction being read into `pipe(1)` is either `begin_loop` or `end_loop`. On the next instruction, if `expect_stall` is high that means we don't know whether `p_interpret` is going to stall yet, so we shouldn't go any further for now. Hence, all it does when `expect_stall` is high, is pull it down again.
 
-    
                     if (pipe(0) = begin_loop or pipe(0) = end_loop) and expect_stall = '1' then
                         expect_stall <= '0';
                     else
 
-
 This didn't quite solve the issue yet: when `stalled` finally became visible, the instruction pointer, `iptr` was still two instructions ahead of the location of `begin_loop` or `end_loop` instruction:
-    
-    
+
     pipe(0) | pipe(1) | next
                         ^^^^
                         iptr
-    
-
 
 so if the `p_interpret` process didn't stall, all was fine and dandy but if it did, and `pipe(0)` contained the `end_loop` instruction, `iptr` would have to be adjusted before going backward -- and would have to be re-adjusted when the going backward was done. To make sure the `end_loop` instruction wasn't seen twice - and therefore wouldn't count itself as a nested loop, I coded the adjustment as follows:
 
-    
                             if should_back_up_on_stall = '1' then
                                 assert iptr >= 3 report "Stalled with an invalid instruction pointer!" severity failure;
                                 pipe(1) <= program(iptr - 3);
                                 iptr <= iptr - 3;
                                 should_back_up_on_stall <= '0';
                             else
-    
-
 
 As you can see, there's a `should_back_up_on_stall` signal there. That indicates that the instruction we expected a stall for was `end_loop`. I tried fiddling a bit with a three-step pipe so I didn't have to use a separate signal to indicate the direction I was going to go, but I ended up using this approach because it is easier to read the code -- and it works!
 
 When it's done looping, the `p_interpret` process drops the `stalled` signal but the instruction pointer gets re-adjusted before that's visible:
 
-    
                         elsif stalled = '1' and nest_count = 0 and pipe(0) = end_loop and pipe(1) = begin_loop and should_back_up_on_stall = '0' then
                             -- we are done backing up!
                             pipe(0) <= pipe(1);
                             iptr <= iptr + 2;
                             done_skipping := True;
 
-
 so the `p_fetch` process counts on the `p_interpret` process to do "the right thing" -- even if it's not visible yet.
 
 Running the code, which now looks like this:
-    
+
     -- BrainF* interpreter
     -- Version: 20140929
     -- Author:  Ronald Landheer-Cieslak
@@ -352,7 +352,7 @@ Running the code, which now looks like this:
     library ieee;
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
-    
+
     entity BrainF is
         generic(
               MAX_INSTRUCTION_COUNT : positive := 65536
@@ -361,17 +361,17 @@ Running the code, which now looks like this:
         port(
               resetN : in std_logic
             ; clock : in std_logic
-            
+
             ; load_instructions : in std_logic
             ; instruction_octet : in std_logic_vector(7 downto 0)
             ; ack_instruction : out std_logic := '0'
             ; program_full : out std_logic := '0'
-            
+
             ; read_memory : in std_logic
             ; memory_byte : out std_logic_vector(7 downto 0) := (others => '0')
             ; memory_byte_ready : out std_logic := '0'
             ; memory_byte_read_ack : in std_logic
-            
+
             ; done : out std_logic := '0'
             );
     end entity;
@@ -382,10 +382,10 @@ Running the code, which now looks like this:
         subtype IPointer is integer range 0 to MAX_INSTRUCTION_COUNT;
         type InterpreterState is (execute_instruction, fetch_instruction);
         subtype NestCount is integer range 0 to MAX_INSTRUCTION_COUNT - 1;
-        
+
         type Memory is array(0 to (MEMORY_SIZE - 1)) of std_logic_vector(7 downto 0);
         subtype Pointer is integer range 0 to (MEMORY_SIZE - 1);
-        
+
         function toInstruction(i : std_logic_vector(7 downto 0)) return Instruction is
         begin
             case i is
@@ -414,12 +414,12 @@ Running the code, which now looks like this:
                 return std_logic_vector(unsigned(b) - 1);
             end if;
         end decrement;
-        
+
         -- produced by p_interpret
         signal ptr                          : Pointer := 0;
         signal mem                          : Memory := (others => (others => '0'));
-        signal stalled                      : std_logic := '0'; -- signals it's going forward in a loop. The p_fetch process will continue 
-                                                                -- fetching until it finds the corresponding end-of-loop and puts that in pipe(0) at that time. 
+        signal stalled                      : std_logic := '0'; -- signals it's going forward in a loop. The p_fetch process will continue
+                                                                -- fetching until it finds the corresponding end-of-loop and puts that in pipe(0) at that time.
         -- produced by p_fetch
         signal pipe                         : Pipeline := (others => dot);
         signal iptr                         : IPointer := 0;
@@ -454,7 +454,7 @@ Running the code, which now looks like this:
                     when advance =>
                         if ptr = MEMORY_SIZE - 1 then
                             ptr <= 0;
-                        else 
+                        else
                             ptr <= ptr + 1;
                         end if;
                     when back_up =>
@@ -463,7 +463,7 @@ Running the code, which now looks like this:
                         else
                             ptr <= ptr - 1;
                         end if;
-                    when begin_loop => 
+                    when begin_loop =>
                         if mem(ptr) = x"00" then
                             stalled <= '1';
                         else
@@ -479,7 +479,7 @@ Running the code, which now looks like this:
                 end if;
             end if;
         end process;
-        
+
         p_fetch : process(resetN, clock, load_instructions, read_memory)
             variable done_skipping : boolean := False;
         begin
@@ -493,18 +493,18 @@ Running the code, which now looks like this:
                 done_skipping := False;
             elsif load_instructions ='0' and read_memory = '0' then
                 if rising_edge(clock) then
-                    -- if pipe(1) contains a begin_loop instruction, the p_interpret process may start stalling as soon as 
+                    -- if pipe(1) contains a begin_loop instruction, the p_interpret process may start stalling as soon as
                     -- it sees it, which we will only know one (extra) clock cycle afterwards. In that case, we don't want
                     -- to give it the next instruction unless we know it has had time to take a decision. Hence, if there's
                     -- a begin_loop instruction in pipe(1) we set the expect_stall flag. If there's a begin_loop in pipe(0)
                     -- and the expect_stall flag is set, we clear the flag and do nothing else. If the flag is not set, we
                     -- check whether the stalled signal is raised and, if so, start searching for the end of the loop. If
                     -- it's not set, we continue as normal.
-                    -- if pipe(1) contains an end_loop instruction, p_interpret may also stall but if it does, we need to 
-                    -- start backing up. When pipe(1) contains an instruction, the instruction pointer (iptr) already 
-                    -- points one past the instruction, because we're getting ready to read the next instruction into 
-                    -- pipe(1). Hence, while we can anticipate our not stalling (and therefore load the next instruction 
-                    -- into pipe(1) regardless) we have to make sure that if we do stall, we start by backing up the 
+                    -- if pipe(1) contains an end_loop instruction, p_interpret may also stall but if it does, we need to
+                    -- start backing up. When pipe(1) contains an instruction, the instruction pointer (iptr) already
+                    -- points one past the instruction, because we're getting ready to read the next instruction into
+                    -- pipe(1). Hence, while we can anticipate our not stalling (and therefore load the next instruction
+                    -- into pipe(1) regardless) we have to make sure that if we do stall, we start by backing up the
                     -- instruction pointer twice (or not count the end_loop instruction as nesting).
                     if (pipe(1) = begin_loop or pipe(1) = end_loop) and stalled /= '1' and expect_stall = '0' then
                         expect_stall <= '1';
@@ -564,7 +564,7 @@ Running the code, which now looks like this:
                 end if;
             end if;
         end process;
-        
+
         p_loadInstructions : process(clock, resetN)
         begin
             if resetN = '0' then
@@ -589,7 +589,7 @@ Running the code, which now looks like this:
                                 internal_program_full <= '1';
                             end if;
                         end if;
-                    
+
                         instruction_step <= not instruction_step and not internal_program_full;
                     else
                         iwptr <= 0;
@@ -601,7 +601,7 @@ Running the code, which now looks like this:
         end process;
         ack_instruction <= instruction_step;
         program_full <= internal_program_full;
-        
+
         p_readMemory : process(clock, resetN, read_memory)
             variable rptr : integer range 0 to MEMORY_SIZE := 0;
         begin
@@ -641,7 +641,7 @@ I tend to put assertions in code intended for synthesis as well as in the test b
 The test bench I wrote for this interpreter isn't quite complete yet: it doesn't fetch the altered memory from the interpreter to check what happened, nor does it take output from the interpreter during its runs (unlike regular BrainF, the `dot` opcode is implemented as a no-op, not as an output), but for a week-end pet project, I think it turned out pretty nice.
 
 Here's the code for the test bench:
-    
+
     -- BrainF* interpreter - testbench
     -- Version: 20140929
     -- Author:  Ronald Landheer-Cieslak
@@ -651,7 +651,7 @@ Here's the code for the test bench:
     use ieee.std_logic_1164.all;
     use ieee.numeric_std.all;
     use work.txt_util.all;
-    
+
     entity BrainF_tb is
     end entity;
     architecture behavior of BrainF_tb is
@@ -662,7 +662,7 @@ Here's the code for the test bench:
         --constant PROGRAM : string := "++[-][[-+]]";
         constant PROGRAM : string := ">+++++++++[<++++++++>-]<.>+++++++[<++++>-]<+.+++++++..+++.[-]>++++++++[<++++>-] <.>+++++++++++[<++++++++>-]<-.--------.+++.------.--------.[-]>++++++++[<++++>- ]<+.[-]++++++++++.";
         constant PROGRAM_TIMEOUT : Time := 138 ns;
-    
+
         component BrainF is
             generic(
                   MAX_INSTRUCTION_COUNT : positive := 65536
@@ -671,31 +671,31 @@ Here's the code for the test bench:
             port(
                   resetN : in std_logic
                 ; clock : in std_logic
-                
+
                 ; load_instructions : in std_logic
                 ; instruction_octet : in std_logic_vector(7 downto 0)
                 ; ack_instruction : out std_logic
                 ; program_full : out std_logic
-                
+
                 ; read_memory : in std_logic
                 ; memory_byte : out std_logic_vector(7 downto 0)
                 ; memory_byte_ready : out std_logic
                 ; memory_byte_read_ack : in std_logic
-                
+
                 ; done : out std_logic
                 );
         end component;
         type State is (initial, start_loading_program, loading_program, running_program, success);
-        
+
         function to_std_logic_vector(c : character) return std_logic_vector is
             variable cc : integer;
         begin
             cc := character'pos(c);
             return std_logic_vector(to_unsigned(cc, 8));
         end to_std_logic_vector;
-        
+
         signal clock                    : std_logic := '0';
-        
+
         signal load_instructions        : std_logic := '0';
         signal instruction_octet        : std_logic_vector(7 downto 0) := (others => '0');
         signal ack_instruction          : std_logic := '0';
@@ -705,11 +705,11 @@ Here's the code for the test bench:
         signal memory_byte_ready        : std_logic := '0';
         signal memory_byte_read_ack     : std_logic := '0';
         signal done                     : std_logic := '0';
-        
-        signal tb_state                 : State := initial;  
-        
+
+        signal tb_state                 : State := initial;
+
         signal should_be_done           : std_logic := '0';
-        
+
         signal end_of_simulation        : std_logic := '0';
     begin
         interpreter : BrainF
@@ -730,7 +730,7 @@ Here's the code for the test bench:
         clock <= not clock after 1 ps;
         -- generate the time-out signal
         should_be_done <= '1' after PROGRAM_TIMEOUT;
-        
+
         p_tb : process(clock)
             variable countdown : integer := INITIAL_COUNTDOWN;
             variable program_load_counter : integer := 0;
@@ -770,7 +770,7 @@ Here's the code for the test bench:
                     if should_be_done = '1' then
                         assert done = '1' report "Timeout!" severity failure;
                     end if;
-                    if done = '1' then 
+                    if done = '1' then
                         tb_state <= success;
                     end if;
                 when success =>
@@ -778,12 +778,12 @@ Here's the code for the test bench:
                 when others => null;
                 end case;
             end if;
-        end process;    
+        end process;
     end behavior;
 
 And this is what it looked like in ModelSim:
 
-{% include image.html url="/assets/2014/09/wave-300x125.png" caption="Waveform for the BrainF interpreter interpreting 'Hello world!'" %}
+<img src="/assets/2014/09/wave-300x125.png" alt="Waveform for the BrainF interpreter interpreting 'Hello world!'" />
 
 One thing you can see clearly in the waveform is that there's room for optimization: there's a large amount of time where the interterpreter's `ptr` register doesn't move, but the interpreter seems pretty busy. This is when it's executing these instructions: `[-]` -- that is: setting the current memory cell value to 0. Doing a bit more look-ahead to detect `[-]` and replacing it with an instruction setting the current cell to 0 as a one-shot deal would probably save quite a bit of time running the "Hello world" test case.
 
@@ -791,86 +791,65 @@ Another thing that takes the interpreter some time is finding out that it's done
 
 Other ideas are welcome. If there's any enthusiasm, I might invest a bit more time in this project...
 
-
-* * *
-
+---
 
 I get comments about my coding style sometimes, both in C++ and in VHDL, so let's get some of them out of the way:
 
+1. I like to name things for what they do -- what their function is.  
+   That means there are very few abbreviations in my code: I say _reset_ rather than _rst_, etc. Exceptions occur when names clash: VHDL is case-insensitive (much to my chagrin) which means `Pointer` and `pointer` are the same thing. I still use `UpperCamelCase` for types, `lowerCamelCase` for functions, procedures and processes (with a `p_` prefix for processes) and `snake_style` for variables and signals, but that doesn't mean clashes don't occur, in which case abbreviations are the way to go.
 
+2. These two bits of code do the same thing:
 
+   pipe(1) <= program(iptr - 3);
+   iptr <= iptr - 3;
 
-  1. I like to name things for what they do -- what their function is.  
-That means there are very few abbreviations in my code: I say _reset_ rather than _rst_, etc. Exceptions occur when names clash: VHDL is case-insensitive (much to my chagrin) which means `Pointer` and `pointer` are the same thing. I still use `UpperCamelCase` for types, `lowerCamelCase` for functions, procedures and processes (with a `p_` prefix for processes) and `snake_style` for variables and signals, but that doesn't mean clashes don't occur, in which case abbreviations are the way to go.
-
-
-  2. These two bits of code do the same thing:
-
-    
-    pipe(1) <= program(iptr - 3);
-    iptr <= iptr - 3;
-
-
-
-    
-    iptr <= iptr - 3;
-    pipe(1) <= program(iptr - 3);
-
+   iptr <= iptr - 3;
+   pipe(1) <= program(iptr - 3);
 
 but these two do not:
 
-    
     memory_byte <= mem(rptr);
     rptr := rptr + 1;
 
 
 
-    
+
     rptr := rptr + 1;
     memory_byte <= mem(rptr);
-
 
 You'll usually see me prefer the first version over the second: it's more consistent and it's easier to read for someone who doesn't remember signal assignments aren't immediate.
 
+3.  I hardly ever use prefixes or suffixes for anything: in C++, I use them to denote scope; in VHDL, I sometimes suffix inputs with `I`, outputs with `O` I/Os with `IO`; but always things that have negative logic with `N`. Processes tend to get a name, and tend to have a `p_` prefix so as not to confuse them with functions. The suffixes convey _important_ information which would otherwise not be available in the name alone -- so the in, out and inout suffixes are only there if there could possibly be any confusion (although I'm tending towards using them more).
 
-  3. I hardly ever use prefixes or suffixes for anything: in C++, I use them to denote scope; in VHDL, I sometimes suffix inputs with `I`, outputs with `O` I/Os with `IO`; but always things that have negative logic with `N`. Processes tend to get a name, and tend to have a `p_` prefix so as not to confuse them with functions. The suffixes convey _important_ information which would otherwise not be available in the name alone -- so the in, out and inout suffixes are only there if there could possibly be any confusion (although I'm tending towards using them more).
+4.  Reset signals always use negative logic, all other signals use positive logic.
 
+5.  I try not to duplicate code unless the alternative is unreadable. For example: the current version of
 
-  4. Reset signals always use negative logic, all other signals use positive logic.
-
-
-  5. I try not to duplicate code unless the alternative is unreadable. For example: the current version of 
-    
-                        if stalled = '0' then
-                            pipe(0) <= pipe(1);
-                        elsif stalled = '1' and nest_count = 0 and pipe(0) = begin_loop and pipe(1) = end_loop then
-                            -- we're done skipping over the loop!
-                            pipe(0) <= pipe(1);
-                        elsif stalled = '1' and nest_count = 0 and pipe(0) = end_loop and pipe(1) = begin_loop and should_back_up_on_stall = '0' then
-                            -- we are done backing up!
-                            pipe(0) <= pipe(1);
-                            iptr <= iptr + 2;
-                            done_skipping := True;
+                      if stalled = '0' then
+                          pipe(0) <= pipe(1);
+                      elsif stalled = '1' and nest_count = 0 and pipe(0) = begin_loop and pipe(1) = end_loop then
+                          -- we're done skipping over the loop!
+                          pipe(0) <= pipe(1);
+                      elsif stalled = '1' and nest_count = 0 and pipe(0) = end_loop and pipe(1) = begin_loop and should_back_up_on_stall = '0' then
+                          -- we are done backing up!
+                          pipe(0) <= pipe(1);
+                          iptr <= iptr + 2;
+                          done_skipping := True;
 
 is an exception (the assignment from `pipe(1)` to `pipe(0)` is repeated) only because the alternative was a five-line-long condition (not stalled or stalled but not nested and either beginning or ending a loop but if ending a loop then we should also be backing up otherwise we're not really ending it...)
 
+6. I like encapsulating things in functions. Functions should be pure. Often, synthesis can get rid of them altogether because they just end up wiring things from one bit to another -- but they make the code a lot easier to read.
 
-  6. I like encapsulating things in functions. Functions should be pure. Often, synthesis can get rid of them altogether because they just end up wiring things from one bit to another -- but they make the code a lot easier to read.
+7. The same is true for enumerations: while my seven opcodes all have a name, they can be represented with just three bits, but `dot` is easier to read than `"000"`
 
+8. My punctuation may seem a bit strange to some, but punctuation _is_ a bit strange: some lists are comma-separated while others are semicolon-separated and compilers tend to be finicky about where you put your commas and semicolons, so a comma-separated list that looks like `foo(a, b, c)` on a single line will expand to the following when put on multiple lines:
 
-  7. The same is true for enumerations: while my seven opcodes all have a name, they can be represented with just three bits, but `dot` is easier to read than `"000"`
-
-
-  8. My punctuation may seem a bit strange to some, but punctuation _is_ a bit strange: some lists are comma-separated while others are semicolon-separated and compilers tend to be finicky about where you put your commas and semicolons, so a comma-separated list that looks like `foo(a, b, c)` on a single line will expand to the following when put on multiple lines:
-    
-    foo(
-          a
-        , b
-        , c
-        )
+   foo(
+   a
+   , b
+   , c
+   )
 
 This mostly began as a way to make diffs clearer: it's a lot less common to add things to the start of a list than it is to add things anywhere else. Inserting in a list that's formatted like this results in a single-line diff (just a line for what's been added) -- the existing lines remain untouched.
 
 It took some getting used to, but now I find it easier to read this way as well.
-
-

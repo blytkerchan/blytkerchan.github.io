@@ -1,23 +1,34 @@
 ---
 author: rlc
+categories:
+- Technology
+- Software Development
+- Continuous Integration
+- Virtualization
+- Open Source Software
 comments: true
 date: 2016-04-02 19:16:09+00:00
 layout: post
-permalink: /blog/2016/04/shutting-down-servers/
-slug: shutting-down-servers
+tags:
+- server (0.9)
+- operating systems (0.8)
+- VMs (0.7)
+- Continuous Integration (0.9)
+- OpenDNP3 (0.8)
+- CMake (0.7)
+- configuration management (0.7)
+- AppVeyor (0.8)
+- Travis-CI (0.8)
+- build jobs (0.7)
+- release process (0.8)
 title: Shutting down servers
 wordpress_id: 3810
-categories:
-- Continuous Integration
-- Software Development
-- Software Engineering
-tags:
-- cloud services
-- SaaS
 ---
 
 I used to have a server with five operating systems, running in VMs, merrily humming away compiling whatever I coded. I say "used to have" because I shut it down a few weeks ago. Now, I have those same operating systems, as well as a large number of others, running on systems I don't need to worry about.
+
 <!--more-->
+
 Vlinder Software has never been in the business of maintaining servers: I've been running Continuous Integration builds on my software, building for all target platforms with all supported configurations, for the last several years now and have been doing that on my in-house server; but that was never a core business -- it was a necessity.
 
 A few weeks ago, my server suffered a disk failure. I didn't have time at the time to do anything about it, so I just turned it off and let it be for a while: I wasn't working on anything that needed by CI build system, so aside from the daily builds the whole CI system was idle anyway.

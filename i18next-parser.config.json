@@ -1,0 +1,7 @@
+{
+  "locales": ["en", "fr", "nl"],
+  "output": "public/locales/$LOCALE/$NAMESPACE.json",
+  "input": "{public,src}/**/*.js{,on}",
+  "createOldCatalogs": false,
+  "keepRemoved": true
+}

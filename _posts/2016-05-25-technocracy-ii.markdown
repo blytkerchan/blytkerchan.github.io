@@ -1,25 +1,53 @@
 ---
 author: rlc
+categories:
+- Ethics
+- History
+- Project Management
+- Government
+- Technology
+- Business
+- Society
 comments: true
 date: 2016-05-25 02:48:23+00:00
 layout: post
-permalink: /blog/2016/05/technocracy-ii/
-slug: technocracy-ii
+tags:
+- project management (0.9)
+- technocracy (0.8)
+- ethics (0.7)
+- history (0.6)
+- government (0.6)
+- experts (0.6)
+- engineering (0.5)
+- responsibility (0.5)
+- morality (0.5)
+- business (0.4)
+- society (0.4)
+- humanity (0.4)
+- mistakes (0.4)
+- deportation (0.3)
+- war crimes (0.3)
+- atrocities (0.3)
+- ethical implications (0.3)
+- team organization (0.2)
+- boundaries (0.2)
+- Holocaust (0.2)
+- software development (0.2)
+- Ford (0.2)
+- safety (0.2)
 title: Technocracy II
 wordpress_id: 3893
-categories:
-- Opinions
-tags:
-- technocracy
 ---
 
 In my [previous post](/blog/2016/05/technocracy/), I described technocracy as something that is positive in project and product management, and in team organization. In this post, to supply a boundary to my previous text, I will make the case for the opposite.
+
 <!--more-->
+
 Technocracy is government by technical experts. Such technical experts may be engineers or medical doctors for example. Technical experts, engineers, medical doctors, and other such technocrats are notoriously blind to the limits of their expertise. It is due to that blindness that during the second world war an expert in logistics could play a pivotal role in the deportation of millions of Jews to the German death camps.
 
 This is not to say that all engineers, medical doctors, and experts in general would, if given the chance, commit war crimes and atrocities. It is however a glaring historical example of how technocracy can go horribly wrong.
 
-The reason for this, in my view, is that there is no moral,  ethical, hermeneutical force driving technocracy: technocracy, at its core, has no moral compass to guide it — only a target, a short-term goal to reach. Whether that goal is to efficiently and profitably run a hospital (leading to non-paying patients dying in the street), efficiently removing a perceived threat to the German way of life (leading to the holocaust), or efficiently implementing a less objectionable project; is of little import to the technocrat.
+The reason for this, in my view, is that there is no moral, ethical, hermeneutical force driving technocracy: technocracy, at its core, has no moral compass to guide it — only a target, a short-term goal to reach. Whether that goal is to efficiently and profitably run a hospital (leading to non-paying patients dying in the street), efficiently removing a perceived threat to the German way of life (leading to the holocaust), or efficiently implementing a less objectionable project; is of little import to the technocrat.
 
 Norman Cousins once said: "History is a vast early-warning system". He was, of course, right, but history is also routinely ignored. We ignore it, however, at our own peril: those who do not learn from the mistakes of the past are bound to repeat them, to paraphrase George Santayana.
 

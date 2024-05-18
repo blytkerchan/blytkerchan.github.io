@@ -1,35 +1,45 @@
 ---
 author: rlc
+categories:
+- Programming Language
+- Esoteric Language
+- Turing Machine
 comments: true
 date: 2011-05-05 02:44:44+00:00
 layout: post
-permalink: /blog/2011/05/why-i-recommend-brainf-and-what-i-recommend-it-for/
-slug: why-i-recommend-brainf-and-what-i-recommend-it-for
+tags:
+- programming-language (1.0)
+- Turing-complete (0.8)
+- BrainFuck (1.0)
+- esoteric (0.7)
+- Turing-machine (0.6)
+- universal-computer (0.5)
+- algorithm (0.4)
+- BrainF*** (0.8)
+- Turing-Machine (0.6)
+- ASCII (0.3)
+- I/O (0.3)
+- QuickSort (0.4)
+- newbie-programmers (0.5)
+- veterans (0.5)
 title: Why I Recommend BrainF--- (and what I recommend it for)
 wordpress_id: 1368
-categories:
-- Interesting stuff
-- Opinions
-- Software Engineering
-tags:
-- brainf---
 ---
 
 BrainFuck is an esoteric Turing-complete programming language that consists of only the bare minimum commands for Turing-completeness. It is exactly this bare-minimum-ness that makes it an interesting language - although at first a bit awkward to wrap your head around.
 
-    
     >>++++[<+++++>-]<+++[<+++++>-]<-.------.---------.>>++++++++[<++++
     ++++>-]<.[-]++++[<+++++>-]<-.----------.---.+++++.----------.+.+++
     ++++++++++.>>+++++++[<+++++++>-]<---.[-]+++[<----->-]<.--.
 
-
 <!--more-->
-BrainFuck is commonly called BrainF*** or something similar, to hide the explicative in the language's name. Understanding the BrainFuck language means understanding the Turing machine, and vice-versa.
+
+BrainFuck is commonly called BrainF\*\*\* or something similar, to hide the explicative in the language's name. Understanding the BrainFuck language means understanding the Turing machine, and vice-versa.
 
 A Turing machine, in fact, is a model of a universal computer that consists of an infinite ribbon which can be navigated in steps and of which only the "current" value can be read from and written to. BrainFuck makes the ribbon 32K, but otherwise does the same thing: `>` goes to the next cell, `<` to the previous one, `+` increments the current value, `-` decrements it, and `[...]` is a loop construct. Dots and commas are used for I/O.
 
-The example above outputs my E-mail address. Let's decipher it: 
-    
+The example above outputs my E-mail address. Let's decipher it:
+
     >>              Set the ribbon position to 2
     ++++            set the cell to 4
     [               while the current cell is not 0
@@ -63,8 +73,6 @@ The example above outputs my E-mail address. Let's decipher it:
     [<+++++>-]<-    etc.
     ----------.---.+++++.----------.+.+++++++++++++.>
     >+++++++[<+++++++>-]<---.[-]+++[<----->-]<.--.
-
-
 
 Now, _in theory_ it is possible to implement _any_ algorithm in BrainFuck -- it is not just a neat way to encode E-mail addresses. That is why I recommend it. I wouldn't expect anybody to actually come up with a potable implementation of, say [QuickSort in BrainFuck](http://codegolf.stackexchange.com/questions/2445/implement-quicksort-in-brainfuck) -- although it would be immensely interesting to see one -- but I would expect anyone who spends a few hours mucking around with BrainFuck to get a much better idea of what a Turing Machine is.
 

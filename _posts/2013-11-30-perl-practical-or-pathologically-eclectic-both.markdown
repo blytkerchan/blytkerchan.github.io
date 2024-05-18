@@ -1,16 +1,27 @@
 ---
 author: rlc
+categories:
+- Programming
+- Data Analysis
+- Code Generation
+- Error Handling
+- Syntax
 comments: true
 date: 2013-11-30 20:11:40+00:00
 layout: post
-permalink: /blog/2013/11/perl-practical-or-pathologically-eclectic-both/
-slug: perl-practical-or-pathologically-eclectic-both
+tags:
+- Perl (0.9)
+- Extraction (0.7)
+- Reporting (0.6)
+- Data processing (0.5)
+- Code generation (0.4)
+- Database dumps (0.4)
+- Error messages (0.4)
+- Syntax (0.4)
+- Eclectic (0.8)
+- Practical (0.7)
 title: 'Perl: Practical or Pathologically Eclectic? Both?'
 wordpress_id: 2415
-categories:
-- Opinions
-tags:
-- perl
 ---
 
 There are two canonical acronyms for Perl: "Practical Extraction and Report Language" and "Pathologically Eclectic Rubbish Lister". Arguably, Perl can be both.
@@ -29,8 +40,8 @@ Most of the time, these simply result in a snicker -- or maybe a good laugh -- w
 
 Another part of the eclectic side of Perl shows in its syntax: it is extremely versatile and, once you set your mind to it, strangely coherent, but, umm.. `@{${$t}{$_}}`? really? (That, by the way, is getting an array from an array reference from a hash reference at the key that is indicated by whatever is lexically "current").
 
-But it really is strangely coherent: once you understand that `$_` is whatever is current, and you grok the logic of what "current" means, you can see that `${$t}{$_}` in which `$t`  is a hashref, must be whatever is at that key in the hash referenced by `$t`.
+But it really is strangely coherent: once you understand that `$_` is whatever is current, and you grok the logic of what "current" means, you can see that `${$t}{$_}` in which `$t` is a hashref, must be whatever is at that key in the hash referenced by `$t`.
 
-So IMO, the jury is still out -- much like it is still out on the French Revolution: Perl is certainly eclectic, but perhaps not pathalogically so.  
+So IMO, the jury is still out -- much like it is still out on the French Revolution: Perl is certainly eclectic, but perhaps not pathalogically so.
 
 It is, however, certainly practical/

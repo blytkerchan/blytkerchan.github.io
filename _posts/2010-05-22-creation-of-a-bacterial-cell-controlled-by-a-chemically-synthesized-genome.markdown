@@ -1,21 +1,54 @@
 ---
 author: rlc
+categories:
+- Science
+- Biology
+- Genetics
+- Biotechnology
+- Computer Science
+- Ethics
+- Research
+- Medicine
+- Industry
+- Evolution
+- Creation
+- Genetic Engineering
+- Recombinant DNA
+- Ethical Implications
+- Human Genome
 comments: true
 date: 2010-05-22 16:37:01+00:00
 layout: post
-permalink: /blog/2010/05/creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized-genome/
-slug: creation-of-a-bacterial-cell-controlled-by-a-chemically-synthesized-genome
+tags:
+- biology (0.9)
+- genetics (0.8)
+- DNA (0.8)
+- genome (0.8)
+- synthetic biology (0.7)
+- biotechnology (0.6)
+- genetic engineering (0.6)
+- microbiology (0.5)
+- computer science (0.4)
+- FPGA (0.4)
+- VHDL (0.4)
+- bacteria (0.4)
+- research (0.3)
+- technology (0.3)
+- ethics (0.3)
+- evolution (0.3)
+- creation (0.3)
+- science (0.2)
+- engineering (0.2)
+- genome sequencing (0.2)
+- transplantation (0.2)
 title: Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome
 wordpress_id: 648
-categories:
-- Science
-- Technology
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 D.G. Gibson _et al._ [reported](http://www.sciencemag.org/cgi/content/abstract/science.1190719), in Science Magazine, the "Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome". Now, I used to be a biologist and have studied this particular type of biology for a number of years before leaving the field, mostly for financial reasons, for a career in computer science. I'm also a certifiable geek, as I think most of the readers of this blog are, so I thought I'd explain what this means, in geek terms.
+
 <!--more-->
+
 First, let me start with an analogy: if you buy a PC that comes with an OS pre-installed, this is the equivalent of reading the source code of the OS, re-writing it with a few (minor) changes and installing it in the PC, replacing the old OS. People around the world do this every day on their computers, but it's a first when the computer is actually a single-cell micro-organism.
 
 In this analogy, the genetic material of a micro-organism is compared with the OS of a PC. This is arguably a poor analogy, and I'll explain why (which will also explain a bit of the difficulty that scientists have in understanding the genome). First of all, the genome does not contain instructions that are executed by something exterior to it: it does contain instructions, but it also has its own structure and the instructions it contains are more like blueprints than like statements in C or C++. In fact, the genome is more like VHDL (VHSIC hardware definition language) than it is like C. However, an FPGA (field-programmable gate array) doesn't normally carry its VHDL code around in VHDL: the VHDL code goes through a couple of phases before it can program an FPGA. The genome's instructions go through such phases as well: it is made up of DNA, which is translated to RNA, which is then interpreted at the ribosome (which itself consists of RNA and proteins) to create proteins - so if the DNA is the VHDL, the proteins are the gates of the FPGA. Note, though, that the translation from DNA to RNA and from RNA to protein is done by proteins which, themselves, were made in the same way.
@@ -42,12 +75,12 @@ If you followed me up to here, the rest should not be a problem to understand: t
 
 Of course, 19 random mutations amounted over a million base pairs (which is what they ended up with) is hardly enough to identify that genome, so they replaced four larger chunks of DNA with DNA that they designed themselves, but which did not encode any functionality. If you take a look at the figure S1 you can see what those "watermark" sequences look like. Note the parts they've highlighted in green: `TTAACTAGCTAA`. These sequences are called _primer_ sequences. They are short sequences that allow the polumerase chain reaction (PCR) to start the copying process. They are intentionally short enough to easily synthesize but long enough to both bind to the DNA easily and be a unique sequence, not found in the DNA too many times.
 
-The details of how they assembled the genome (in four steps, using larger and larger chunks) aren't all that interesting - at least to the layman. When I read it, I particularly liked the way they got rid of the linear yeast DNA once they had assembled the (circular) bacterial genome - using physical rather than chemical processes. Another interesting caveat is that, once they arrived at 100 kb (~100,000 byte pairs) chunks, they tested to make sure that there were no significant mutations in those 100 kb chunks. They did so by replacing the corresponding chunk in the natural genome and selecting the colonies that survived. Using this technique, they found an error in one of the fragments that had to be corrected. This same error also served as a negative control for the genome transplantation experiments: now that they had a way to produce a genome that was sure to kill recipient bacteria, they could verify that the transplantation worked in three independent ways: 
+The details of how they assembled the genome (in four steps, using larger and larger chunks) aren't all that interesting - at least to the layman. When I read it, I particularly liked the way they got rid of the linear yeast DNA once they had assembled the (circular) bacterial genome - using physical rather than chemical processes. Another interesting caveat is that, once they arrived at 100 kb (~100,000 byte pairs) chunks, they tested to make sure that there were no significant mutations in those 100 kb chunks. They did so by replacing the corresponding chunk in the natural genome and selecting the colonies that survived. Using this technique, they found an error in one of the fragments that had to be corrected. This same error also served as a negative control for the genome transplantation experiments: now that they had a way to produce a genome that was sure to kill recipient bacteria, they could verify that the transplantation worked in three independent ways:
 
-  1. bacteria that received a natural genome from a donor subspecies would contain the known genetic markers of that subspecies (in our FPGA analogy, this means the FPGA that received the VHDL of the other model would start behaving like that other model)
-  2. bacteria that received a synthetic genome would have the markers of that genome (in our FPGA analogy, the receiving FPGA would have all the known gates that were in the new VHDL and none of the ones that were supposedly replaced)
-  3. bacteria that received the known-buggy genome would all die (in our FPGA analogy, they'd probably short out - there are no built-in safeties in biology)
-Note that the second of these three is perhaps the most important: the four "watermark" sequences that were designed into the synthetic genome (the ones with the special `TTAACTAGCTAA` sequence I talked about earlier) are visible on an agarose gel after PCR amplification. This is when you isolate the DNA from your bacteria and run it through a PCR which would allow the watermark sequences to be copied many times over, then put it in an agarose gel (a gel made of a substance called agarose) and put it in an electic field (which is why this part of the process is called "electrophoreses"). The DNA is pulled, by the electric field, to one of the two poles (I forget which, it's been a while). Depending on the size of the DNA strands, they are slowed down by the gel, so if you keep the electric field there a while, chunks of different sizes get separated from each other. After that, you can see the different sizes of the DNA strands that were separated from each other separately on the gel, under UV light. You can even use that possibility to cut the gel into pieces and take just the DNA of a particular size you're interested in. You have to do that quickly though, because the UV light damages the DNA.
+1. bacteria that received a natural genome from a donor subspecies would contain the known genetic markers of that subspecies (in our FPGA analogy, this means the FPGA that received the VHDL of the other model would start behaving like that other model)
+2. bacteria that received a synthetic genome would have the markers of that genome (in our FPGA analogy, the receiving FPGA would have all the known gates that were in the new VHDL and none of the ones that were supposedly replaced)
+3. bacteria that received the known-buggy genome would all die (in our FPGA analogy, they'd probably short out - there are no built-in safeties in biology)
+   Note that the second of these three is perhaps the most important: the four "watermark" sequences that were designed into the synthetic genome (the ones with the special `TTAACTAGCTAA` sequence I talked about earlier) are visible on an agarose gel after PCR amplification. This is when you isolate the DNA from your bacteria and run it through a PCR which would allow the watermark sequences to be copied many times over, then put it in an agarose gel (a gel made of a substance called agarose) and put it in an electic field (which is why this part of the process is called "electrophoreses"). The DNA is pulled, by the electric field, to one of the two poles (I forget which, it's been a while). Depending on the size of the DNA strands, they are slowed down by the gel, so if you keep the electric field there a while, chunks of different sizes get separated from each other. After that, you can see the different sizes of the DNA strands that were separated from each other separately on the gel, under UV light. You can even use that possibility to cut the gel into pieces and take just the DNA of a particular size you're interested in. You have to do that quickly though, because the UV light damages the DNA.
 
 Like I said, though: in order to know that your transplantation worked, you need to have both the markers of your wanted genome to be present, and the markers of your unwanted genome to be absent. Nature (or God) wasn't kind enough to equip bacteria with markers we can easily replicate using PCR that we would also not need in the actual bacteria (so you could remove them from the synthetic bacteria and be done with it). However, He was kind enough to equip us with enzymes that can cut DNA at specific sequences. In biology, we call this "digesting" DNA. You don't want to completely digest your DNA though, because you basically wouldn't have any left if you do. However, if you digest the DNA _partially_ - i.e. you let the digestion process go on for a limited amount of time - you get chunks of DNA that, on the gel I just talked about, give you a distinctive pattern. These patterns are different from one genome to another (sufficiently different to distinguish one person from another using a similar technique), so you can use them as a test to verify that no unwanted genomes are present in your recipient bacteria. To do that, you take some unwanted DNA, some wanted DNA and the DNA you're testing and you digest them with the same amount of digesting enzymes for the same amount of time, then put them next to each other on a gel. If all is well, you'll see two identical lanes on your gel: the transformed bacteria's DNA and the wanted DNA. If something is wrong, you'll see three different patterns: the unwanted DNA, the wanted DNA, and some odd mixture of the two. When you see that, you could start over - but as you've probably tried many, many transformations at the same time, you're likely to be lucky if your method works at all.
 
@@ -55,19 +88,15 @@ Once they performed those tests and had results consistent with what they expect
 
 What they found in _Mycoplasma mycoides_ JCVI-syn1.0 confirmed that it was a successfully transplanted bacteria with the synthetic genome: the sequence didn't reveal any bits of the receiver bacteria's subspecies' genome (i.e. "[they] did not find any sequences in the synthetic genome that could be identified as belonging to _M. capricolum_"), and matched the synthetic genome with a few minor mishaps. Notably, one of the genes in the genome (apparently not a vital one) was interrupted by a piece of DNA from _E. coli_ that shouldn't have been there and hadn't been detected at an earlier stage, there were eight new single-nucleotide "polymorphisms" (single-letter changes in the DNA sequence that don't actually have it encode anything different from what was there before due to the fact the the "DNA code" is partically redundant) and a bit of DNA that was duplicated (i.e. repeated). So the copy wasn't perfect, but it was certainly good enough. They performed a whole slew of other tests on the newly minted _Mycoplasma mycoides_ JCVI-syn1.0 bacteria which showed that it was different from the two other bacteria involved in the process (three of you count _E. coli_, that some genes were broken but their corresponding DNA was still present (those are bugs, not features) and that they grow just like normal, natural bacteria would.
 
-From the article: 
+From the article:
 
 <blockquote>"In 1995, the quality standard for sequencing was considered to be one error in 10,000 bp and the sequencing of a microbial genome required months. Today, the accuracy is substantially higher. Genome coverage of 30-50X is not unusual, and sequencing only requires a few days. However, obtaining an error-free genome that could be transplanted into a recipient cell to create a new cell controlled only by the synthetic genome was complicated and required many quality control steps. Our success was thwarted for many weeks by a single base pair deletion in the essential gene <i>dnaA</i>. One wrong base out of over one million in an essential gene rendered the genome inactive, while major genome insertions and deletions in non-essential parts of the genome had no observable impact on viability. The demonstration that our synthetic genome gives rise to transplants with the characteristics of <i>M. mycoides</i> cells implies that the DNA sequence upon which it is based is accurate enough to specify a living cell with the appropriate properties."</blockquote>
 
-
-
 In english, this means that DNA sequencing technology has come a long way in the last fifteen years, but while large chunks of DNA may not be vital to the organism (i.e. it can live with errors in it) a single base-pair deletion rendered the genome non-vital and had to be fixed - which delayed the whole process for several weeks.
 
-Another important note from the article - and this is where any controvercy will come from: 
+Another important note from the article - and this is where any controvercy will come from:
 
 <blockquote>"This work provides a proof of principle for producing cells based upon genome sequences designed in the computer. DNA sequencing of a cellular genome allows storage of the genetic instructions for life as a digital file. The synthetic genome described in this paper has only limited modifications from the naturally occurring M. mycoides genome. However, the approach we have developed should be applicable to the synthesis and transplantation of more novel genomes as genome design progresses."</blockquote>
-
-
 
 **Does this mean that we can now design _any_ genome on a computer _from scratch_, synthesize the DNA of that genome with a little help from _E. coli_ and _S. cerevisiae_ and put it in a cell to give that cell any properties we could possibly want?** Well... no. For one thing, there is a limitation in our knowledge, at the moment, of the purpose of a large part of the genes in a genome. In fact, there are quite a few parts of DNA of which we don't really know what they're for - even if do have the sequence. Let's say that we are novices at VHDL: we can copy and paste bits of code, try some relatively minor modifications and upload it to an FPGA, but that is still a long way from being an expert VHDL artist who'd be able to make the FPGA do whatever your desktop PC would be able to do. Aside from that, there are intrinsic limitations in the receiving bacteria: the genomic DNA transplanted into these bacteria needs to be sufficiently similar to what was there before for the cell to integrate the DNA in question. That doesn't mean, though, that the "synthetic cells" are no different after transplantation than they were before: after the several thousand cell multiplications those cells have to go through in order to form a colony, there are practically no proteins of the original proteome left in the cell. It does mean, however, that there is a limit to the level in which the genome can be radically different from the one that was there in the original cell. If one would want to create a truly radically different cell, it would arguably be possible by re-iterating the process several times - which I would call "evolution by design" (something we do in computer science every day: debugging, modifying, incrementally adding new features, etc.).
 

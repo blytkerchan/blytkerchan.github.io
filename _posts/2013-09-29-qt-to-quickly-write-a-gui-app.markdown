@@ -1,18 +1,36 @@
 ---
 author: rlc
+categories:
+- Software Development
+- GUI Frameworks
+- Programming Languages
+- User Interface Design
+- Productivity Tools
 comments: true
 date: 2013-09-29 03:14:51+00:00
 layout: post
-permalink: /blog/2013/09/qt-to-quickly-write-a-gui-app/
-slug: qt-to-quickly-write-a-gui-app
+tags:
+- App Development (0.9)
+- GUI Framework (0.8)
+- C++ (0.7)
+- Qt (0.9)
+- System Tray (0.6)
+- Registry (0.4)
+- RAII (0.3)
+- Qt Creator (0.5)
+- Widget (0.4)
+- Gtk+ (0.2)
+- .NET (0.2)
+- wxWidgets (0.2)
+- Windows 8 (0.3)
 title: Qt to quickly write a GUI app
 wordpress_id: 2393
-tags:
-- GUI
 ---
 
 Today, my wife asked me to write an app that would tell her to sit straight every 15 minutes. I know apps like that already exist and I could've pointed her to one, but I decided to write one myself. The result is tannez-moi (which is French for "bother me").
+
 <!--more-->
+
 It's written in C++ and uses Qt as a GUI framework. It allows you to set a message, an interval and a start and stop time and displays the message in the system tray at the given interval between the given times. It stores its configuration in the registry so it remembers it when you start it.
 
 It's been a while since I last used Qt to write anything new. It has a few flaws: the moc framework (which does the signals and slots) could use a better parser so it would pick up typos at compile-time; there's probably a lot more code than necessary; and it turns C++ RAII on its head, but for GUI apps, that's not really a problem.

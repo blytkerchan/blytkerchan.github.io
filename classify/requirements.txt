@@ -1,0 +1,7 @@
+openai
+pandas
+python-dotenv
+python-frontmatter
+tqdm
+scikit-learn
+

@@ -1,18 +1,40 @@
 ---
 author: rlc
+categories:
+- Cybersecurity
+- Industrial Control Systems (ICS)
+- Machine-to-Machine (M2M) Communications
+- Network Security
+- Authentication
+- Authorization
+- Non-repudiation
+- Transport Layer Security (TLS)
+- Public Key Infrastructure (PKI)
+- Radio Communications
+- Dial-up Connections
+- Serial Connections
+- Optic Fiber Networks
 comments: true
 date: 2013-12-27 01:40:12+00:00
 layout: post
-permalink: /blog/2013/12/the-importance-of-ics-security-ics-communications/
-slug: the-importance-of-ics-security-ics-communications
+tags:
+- ICS (1.0)
+- Machine-to-machine communications (0.9)
+- DNP3 (1.0)
+- Modbus (0.8)
+- Security (1.0)
+- Authentication (0.9)
+- Authorization (0.8)
+- Non-repudiation (0.7)
+- TLS (0.9)
+- Transport layer security (0.8)
+- Public key infrastructure (PKI) (0.9)
+- Network security (0.9)
+- Radio communications (0.8)
+- Serial connections (0.7)
+- Obscurity (0.8)
 title: 'The importance of ICS security: ICS communications'
 wordpress_id: 2456
-categories:
-- Industrial Automation
-- Software Engineering
-tags:
-- ICS communications
-- ICS security
 ---
 
 For an ICS, having communications abilities generally means implementing some machine-to-machine communications protocol, such as DNP3 or Modbus. These protocols, which allow the device to report data to a "master" device and take their cue from those devices w.r.t. things they should be doing, are generally not designed with security in mind: most of them do not require, or expect, user authentication for any commands you might send them, and don't implement anything approaching what you'd expect from, e.g., a bank (confidentiality, integrity, authentication, authorization, non-repudiation).

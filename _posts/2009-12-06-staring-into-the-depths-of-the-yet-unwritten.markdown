@@ -1,16 +1,32 @@
 ---
 author: rlc
+categories:
+- Environment
+- Technology
+- Economics
+- Communication
+- Work trends
 comments: true
 date: 2009-12-06 20:58:59+00:00
 layout: post
-permalink: /blog/2009/12/staring-into-the-depths-of-the-yet-unwritten/
-slug: staring-into-the-depths-of-the-yet-unwritten
+tags:
+- environmental impact (0.9)
+- peak oil (0.8)
+- polar bears (0.7)
+- smart grid (0.6)
+- electric cars (0.6)
+- communication technology (0.6)
+- work from home (0.6)
+- cost of living (0.5)
+- local consumption (0.5)
+- employee productivity (0.5)
+- home office (0.5)
+- communication tools (0.5)
+- virtual meetings (0.5)
+- redundant communication (0.5)
+- remote work (0.5)
 title: Staring into the depths of the yet unwritten
 wordpress_id: 422
-categories:
-- Opinions
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
 
 By the end of the next decade, there will be no oil left for consumers such as myself and we'll have reached peak oil.
@@ -18,7 +34,9 @@ By the end of the decade after that, the last wild polar bear will have drowned 
 By the end of my expected natural life-span, there will be no edible fish left in the ocean.
 
 These statements, which are corroborated by leading economist and, for the one about the polar ice cap, meteorologists rather than environmentalists, have a profound impact on the way we work and on the computing industry in general.
+
 <!--more-->
+
 This is where we take out our crystal balls, get a cup of green tea (to look at the leaves) and start staring into the depths of the yet unwritten - spooky!
 
 For one thing, communications networks won't disappear just because we run out of oil, fish and polar bears, so the Internet is very likely to continue operating as if nothing's changed. That's a good thing, too: we're gonna need it! Where else would we get the reports of all that lively stuff going on in our back yards - you know, that polar bear coming over for lunch (just before you shoot it) - if not on the Internet?

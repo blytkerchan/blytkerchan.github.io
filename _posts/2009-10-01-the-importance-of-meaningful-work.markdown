@@ -1,22 +1,30 @@
 ---
 author: rlc
+categories:
+- Meaningful work
+- Motivation
+- Business perspective
+- Personal perspective
 comments: true
 date: 2009-10-01 19:11:10+00:00
 layout: post
-permalink: /blog/2009/10/the-importance-of-meaningful-work/
-slug: the-importance-of-meaningful-work
+tags:
+- Meaningful work (1.0)
+- Malcolm Gladwell (0.8)
+- Outliers (0.7)
+- Motivation (0.9)
+- Productivity (0.6)
+- Job satisfaction (0.8)
+- Personal growth (0.7)
+- Financial stability (0.5)
+- Career change (0.6)
+- Work-life balance (0.6)
 title: The importance of meaningful work
 wordpress_id: 109
-categories:
-- Business
-- Opinions
-tags:
-- Posts that need to be re-tagged (WIP)
 ---
+
 <!--more-->
 <blockquote>"<i>Autonomy, complexity and a connection between effort and reward are the three qualities that work as to have if it is to be satisfying. It's not how much money we make that ultimately makes us happy between nine and five - it's whether our work fulfills us. (...) Work that fulfills those three criteria is meaningful. Hard work is a prison sentence only if it does not have meaning. Once it does, it becomes the kind of thing that makes you grab your wife around the waist and dance a jig. (...) If you work hard enough, and assert yourself, and use your mind and imagination, you can shape the world to your desires.</i>" - Malcolm Gladwell, <i>Outliers</i></blockquote>
-
-
 
 I've just finished reading Outliers by Malcolm Gladwell and found it a fascinating book. The passage I quote above explains what, in his view, it takes for work to be meaningful. I would tend to agree with him on the ingredients of meaningful work, but I also think he understates the importance of meaningful work: it doesn't just make you grab your wife around the waist and dance a jig - it gives a meaning to the better part of your daily life.
 

@@ -1,0 +1,31 @@
+.dropdown-item {
+  color: #0d6efd;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0d6efd;
+  border-radius: var(--bs-nav-pills-border-radius);
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #0d6efd;
+  background-color: #8ddefd;
+}
+
+.accordion-button {
+  color: #0d6efd;
+}
+.accordion-button:not(.collapsed) {
+  color: #0d6efd;
+}
+.accordion-button:hover {
+  color: #0d6efd;
+  background-color: #8ddefd;
+}
+
+.nav-item:hover {
+  color: #0d6efd;
+  background-color: #8ddefd;
+}
