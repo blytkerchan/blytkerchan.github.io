@@ -1,6 +1,7 @@
 import { createGlobalState } from "react-hooks-global-state";
 const initialState = { postsByLocalLink: {}, postsByUUID: {}, fetched: false, postList: [] };
 const { useGlobalState } = createGlobalState(initialState);
+import useError from "../lib/useError";
 
 export default function usePosts() {
   const [postsByLocalLink, setPostsByLocalLink] = useGlobalState("postsByLocalLink");
@@ -25,6 +26,9 @@ export default function usePosts() {
         .then((posts) => posts.map((post) => ({ [post.uuid]: post })).reduce((acc, obj) => Object.assign(acc, obj), {}))
         .then((posts) => {
           setPostsByUUID(posts);
+        })
+        .catch((err) => {
+          setError(err);
         });
     } else {
       return Promise.resolve();

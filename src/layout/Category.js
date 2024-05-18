@@ -68,7 +68,7 @@ const Category = ({ env }) => {
     } else {
       set404();
     }
-  }, []);
+  }, [slug]);
 
   if (notFound) {
     return (

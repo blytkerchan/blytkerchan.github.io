@@ -1,12 +1,15 @@
 import { createGlobalState } from "react-hooks-global-state";
 const initialState = { categories: {}, categoryCounts: {}, sortedCategories: [], fetched: false };
 const { useGlobalState } = createGlobalState(initialState);
+import useError from "../lib/useError";
 
 export default function usePosts() {
   const [categories, setCategories] = useGlobalState("categories");
   const [categoryCounts, setCategoryCounts] = useGlobalState("categoryCounts");
   const [sortedCategories, setSortedCategories] = useGlobalState("sortedCategories");
   const [fetched, setFetched] = useGlobalState("fetched");
+
+  const { setError } = useError();
 
   const fetchCategories = (env) => {
     if (!fetched) {
@@ -30,7 +33,10 @@ export default function usePosts() {
           console.log(sortedCategories);
           return sortedCategories;
         })
-        .then((sortedCategories) => setSortedCategories(sortedCategories));
+        .then((sortedCategories) => setSortedCategories(sortedCategories))
+        .catch((err) => {
+          setError(err);
+        });
     } else {
       return Promise.resolve();
     }

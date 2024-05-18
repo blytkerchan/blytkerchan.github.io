@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import useError from "../lib/useError";
 
 import useElementDimensions from "../lib/useElementDimensions";
 
@@ -56,6 +57,9 @@ const Asset = ({ env }) => {
 
         // Clean up and remove the link
         link.parentNode.removeChild(link);
+      })
+      .catch((err) => {
+        setError(err);
       });
 
     return (

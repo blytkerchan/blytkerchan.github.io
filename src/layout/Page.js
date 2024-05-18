@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+const { setError } = useError();
 
 import useTitle from "../lib/useTitle";
 import Spinner from "./Spinner";
@@ -26,7 +27,10 @@ const Page = (props) => {
     fetch(`/${props.name}.md`)
       .then((res) => res.text())
       .then((text) => setContents(text))
-      .then(() => setReady());
+      .then(() => setReady())
+      .catch((err) => {
+        setError(err);
+      });
   });
 
   if (ready) {
