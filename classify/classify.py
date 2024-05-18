@@ -1,3 +1,4 @@
+#! /bin/env python
 """Use ChatGPT to classify posts into categories
 Expects the OpenAI API key to be in the OPENAI_API_SECRET variable (in a .env file)"""
 from dotenv import load_dotenv
