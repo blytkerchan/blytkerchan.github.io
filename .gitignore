@@ -22,7 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.*
 test-frontend/chromedriver/
 
 scratchpad.css
+
+**/.env
+**/.nyc_output/
