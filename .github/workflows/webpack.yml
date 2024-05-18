@@ -29,18 +29,18 @@ jobs:
           npm install
           npm run build
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
+      # - uses: actions/setup-python@v5
+      #   with:
+      #     python-version: ${{ matrix.python-version }}
 
-      - name: Publish to GH pages
-        shell: bash
-        run: |
-          python3 -m venv .venv
-          . .venv/bin/activate
-          pip install -U pip
-          pip install ghp-import
-          ghp-import -n -p -f build
+      # - name: Publish to GH pages
+      #   shell: bash
+      #   run: |
+      #     python3 -m venv .venv
+      #     . .venv/bin/activate
+      #     pip install -U pip
+      #     pip install ghp-import
+      #     ghp-import -n -p -f build
 
       - name: publish artifacts
         uses: actions/upload-artifact@v4
