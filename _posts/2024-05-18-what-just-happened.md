@@ -3,6 +3,20 @@ author: rlc
 date: 2024-05-18
 layout: post
 title: What just happened?
+categories:
+  - This blog
+tags:
+  - Blog Update (9.5)
+  - React Development (8.7)
+  - Web Performance (8.3)
+  - Markdown Rendering (7.8)
+  - Webpack Indexing (7.4)
+  - Lazy Loading (7.1)
+  - AI Categorization (6.9)
+  - Responsive Design (6.5)
+  - Programming Languages (6.0)
+  - Dark Mode Implementation (5.8)
+  - Jekyll to Phoenix.ui Transition (5.4)
 ---
 
 Regular visitors of this blog will have noticed that something has changed.<!--more-->
@@ -21,3 +35,5 @@ For the React developers out there, it actually has a few nice features:
 I also used artificial intelligence to categorize the blog posts on the blog, making them easier to find. These categories will show up at the left-hand-side in a drop-down menu.
 
 There's still a few things I'd like to do, like implement a dark mode, but those can wait.
+
+The main driver for this, btw, wasn't just that I had some time to work on it: Jekyll is very nice, but working with Jekyll has turned out to be a bit of a pain: every time I wanted to add a new blog post and wanted to run it locally, I basically had to depend on my old setup, running on my Raspberry Pi, still working because updating Ruby and Jekyll's dependencies just never worked the way it was supposed to. I already know (in alphabetical order) three flavors of Assembly, C, C++, C#, Java, Javascript, Perl, Python, Typescript, VHDL, and Verilog, and I have a working knowledge of Go and Rust, but I couldn't bring myself to learn yet another programming language just to debug my blog (so no Ruby for me).
