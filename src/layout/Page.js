@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-const { setError } = useError();
 
+import useError from "../lib/useError";
 import useTitle from "../lib/useTitle";
 import Spinner from "./Spinner";
 
@@ -21,6 +21,7 @@ const Page = (props) => {
   const { setSubtitle } = useTitle();
   const [ready, setReady_] = useState(false);
   const setReady = () => setReady_(true);
+  const { setError } = useError();
 
   useEffect(() => {
     setSubtitle(t(`pages:${props.name}`));
