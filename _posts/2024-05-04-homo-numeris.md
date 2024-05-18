@@ -3,6 +3,24 @@ author: rlc
 date: 2024-05-04
 layout: post
 title: Homo numeris?
+categories:
+  - Digital Diplomacy
+  - Cybersecurity and AI Vulnerabilities
+  - Technological Innovation in Government
+  - AI Ethics and Future Implications
+  - Science Fiction and Speculative Technology
+tags:
+  - Digital Diplomacy (9.8)
+  - Cybersecurity (8.6)
+  - AI Representation (8.2)
+  - Consular Affairs (7.9)
+  - Information Warfare (7.5)
+  - Digital Identity (7.1)
+  - Cyber-Attack Vulnerability (6.8)
+  - AI in Government (6.4)
+  - Quantum Computing (6.0)
+  - AI Ethics (5.7)
+  - Science Fiction (5.3)
 ---
 
 The Ukrainian government [announced on May 1](https://mfa.gov.ua/en/news/mzs-ukrayini-priznachilo-cifrovu-osobu-dlya-informuvannya-shchodo-konsulskih-pitan) that they would use a “digital person” to represent the ministry of foreign affairs for at least some of their announcements. It (she?) will be a representative for the ministry on consular affairs and is called “Victoria Shi”, which refers to Ukraine's goal of victory in their war with Russia (or perhaps rather Russia’s war on them) and the fact that it’s an artificial intelligence.<!--more-->
