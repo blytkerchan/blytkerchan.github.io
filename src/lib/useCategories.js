@@ -48,11 +48,16 @@ export default function usePosts() {
     return categories[cat]["name"];
   };
 
+  const categoryExists = (cat) => {
+    return cat in categories;
+  };
+
   return {
     fetchCategories,
     listCategories,
     getCategoryCount,
     getCategoryPosts,
     getCategoryName,
+    categoryExists,
   };
 }

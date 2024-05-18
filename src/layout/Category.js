@@ -25,7 +25,9 @@ const Category = ({ env }) => {
   const theCategories = useCategories();
   const thePosts = usePosts();
   const [ready, setReady_] = useState(false);
+  const [notFound, setNotFound_] = useState(false);
   const setReady = () => setReady_(true);
+  const set404 = () => setNotFound_(true);
 
   const location = useLocation();
   var slug = null;
@@ -39,32 +41,47 @@ const Category = ({ env }) => {
   const { setSubtitle } = useTitle();
 
   useEffect(() => {
-    setCategoryName(theCategories.getCategoryName(slug));
-    setSubtitle(theCategories.getCategoryName(slug));
-    const postUUIDs = theCategories.getCategoryPosts(slug);
-    var posts = [];
-    postUUIDs.forEach((post) => {
-      posts.push(thePosts.findPostByUUID(post));
-    });
-    posts.sort((lhs, rhs) => {
-      const a = rhs.date;
-      const b = lhs.date;
-      if (a === b) {
-        return 0;
-      }
+    if (theCategories.categoryExists(slug)) {
+      setCategoryName(theCategories.getCategoryName(slug));
+      setSubtitle(theCategories.getCategoryName(slug));
+      const postUUIDs = theCategories.getCategoryPosts(slug);
+      var posts = [];
+      postUUIDs.forEach((post) => {
+        posts.push(thePosts.findPostByUUID(post));
+      });
+      posts.sort((lhs, rhs) => {
+        const a = rhs.date;
+        const b = lhs.date;
+        if (a === b) {
+          return 0;
+        }
 
-      if (a > b) {
-        return 1;
-      }
+        if (a > b) {
+          return 1;
+        }
 
-      return -1;
-    });
-    setPosts(posts);
-    setReady();
-    document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
-  }, [slug]);
+        return -1;
+      });
+      setPosts(posts);
+      setReady();
+      document.getElementById("scrollBox").scroll({ top: 0, behavior: "smooth" });
+    } else {
+      set404();
+    }
+  }, []);
 
-  if (ready) {
+  if (notFound) {
+    return (
+      <>
+        <h1>{t("Not found")}</h1>
+        <p>{t("It looks like you've found a broken permalink - or perhaps you mis-typed the URL?")}</p>
+        <Link to="/">{t("Take me back!")}</Link>
+        <div className="h-100 d-flex align-items-center justify-content-center" style={{ minHeight: "75vh" }}>
+          <img src="/404.png" width="75%" />
+        </div>
+      </>
+    );
+  } else if (ready) {
     return (
       <div id="category-posts">
         <h2 className="post-list-heading">{t(categoryName)}</h2>
