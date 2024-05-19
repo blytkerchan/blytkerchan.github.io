@@ -5,13 +5,13 @@ configValidationMode: error
 plugins:
   - serverless-s3-sync
 
-custom: 
+custom:
   siteName: ${self:custom.zoneName.${opt:stage, 'dev'}, "${self:custom.zoneName.default}"}
   zoneName:
     prod: rlc.vlinder.ca
-    default: ${opt:stage, 'dev'}-rlc.vlinder.ca.com
+    default: ${opt:stage, 'dev'}-rlc.vlinder.ca
   hostedZoneName: vlinder.ca
-  aliasHostedZoneId: Z3AQBSTGFYJSTF    # us-east-1
+  aliasHostedZoneId: Z3AQBSTGFYJSTF # us-east-1
   cloudFrontHostedZoneId: Z2FDTNDATAQYW2
   aliasDNSName: s3-website-us-east-1.amazonaws.com
   s3Sync:
@@ -45,27 +45,19 @@ resources:
               Effect: Allow
               Principal: "*"
               Action:
-              - s3:GetObject
+                - s3:GetObject
               Resource:
-                Fn::Join: [
-                  "", [
-                    "arn:aws:s3:::",
-                    {
-                      "Ref": "StaticSiteS3Bucket"
-                    },
-                    "/*"
-                  ]
-                ]
+                Fn::Join: ["", ["arn:aws:s3:::", { "Ref": "StaticSiteS3Bucket" }, "/*"]]
     StaticSiteDnsRecord:
       Type: "AWS::Route53::RecordSet"
       Properties:
         AliasTarget:
           DNSName:
-            Fn::GetAtt: [ StaticSiteCloudFrontDistribution, DomainName ]
+            Fn::GetAtt: [StaticSiteCloudFrontDistribution, DomainName]
           HostedZoneId: ${self:custom.cloudFrontHostedZoneId}
         HostedZoneName: ${self:custom.hostedZoneName}.
         Name: ${self:custom.siteName}
-        Type: 'A'
+        Type: "A"
     StaticSiteCloudFrontDistribution:
       Type: AWS::CloudFront::Distribution
       Properties:
@@ -76,7 +68,7 @@ resources:
               CustomOriginConfig:
                 HTTPPort: 80
                 OriginProtocolPolicy: http-only
-          Enabled: 'true'
+          Enabled: "true"
           Aliases:
             - ${self:custom.siteName}
           DefaultRootObject: index.html
@@ -96,12 +88,11 @@ resources:
               - PUT
             TargetOriginId: StaticSite
             ForwardedValues:
-              QueryString: 'false'
+              QueryString: "false"
               Cookies:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
           ViewerCertificate:
-            AcmCertificateArn: 'arn:aws:acm:us-east-1:981855120431:certificate/ff9f2822-3713-4b74-b65f-f2ad2cbd43da'
+            AcmCertificateArn: "arn:aws:acm:us-east-1:981855120431:certificate/ff9f2822-3713-4b74-b65f-f2ad2cbd43da"
             MinimumProtocolVersion: TLSv1.2_2018
             SslSupportMethod: sni-only
-
