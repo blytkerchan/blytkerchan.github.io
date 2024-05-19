@@ -15,14 +15,19 @@ jobs:
         node-version: [20.x]
 
     steps:
-      - uses: actions/download-artifact@v4
-      - name: Display structure of downloaded files
-        run: ls -R
-
       - name: get Run ID
+        id: get-run-id
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId'
+        run: |
+          RUN_ID=$(gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId')
+          echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
+
+      - uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ steps.get-run-id.outputs.run-id }}
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
