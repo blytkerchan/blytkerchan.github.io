@@ -1,4 +1,4 @@
-name: Set up our Webpack
+name: Webpack
 
 on:
   workflow_dispatch: {}
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -34,4 +34,9 @@ jobs:
         with:
           name: site
           path: build
-  
+
+      - name: publish serverless.yml
+        uses: actions/upload-artifact@v4
+        with:
+          name: serverless.yml
+          path: serverless.yml
