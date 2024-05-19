@@ -19,6 +19,9 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
+      - name: get Run ID
+        run: gh run list --json  databaseId --workflow webpack.yml --limit 1 -q '.[0].databaseId'
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
