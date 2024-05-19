@@ -1,0 +1,3 @@
+OK, autumn has been here for about a week already, and the banner was ready two months ago, but I only now had both the time and the inclination to put it up...
+
+You might remember that the corresponding desktop wallpapers are in the [Canada Day post](http://rlc.vlinder.ca/blog/2011/07/happy-canada-day/).

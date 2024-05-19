@@ -1,0 +1,1 @@
+<img src="/assets/2014/10/IMG_1303-1024x279.png" alt="Miss(ed) Communication" />

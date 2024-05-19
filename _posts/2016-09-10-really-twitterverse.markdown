@@ -1,0 +1,3 @@
+<img src="/assets/2016/09/image-2-1024x768.jpeg" alt="Felicia, our cat, relaxing" />
+
+The Twitterverse has spoken, quietly, with a single vote -- a cat it is...

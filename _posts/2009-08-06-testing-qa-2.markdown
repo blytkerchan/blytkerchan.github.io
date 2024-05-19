@@ -1,0 +1,9 @@
+During the development of the next version of Funky, version 1.4.00, I found a bug that hadn't been picked up during the release process for 1.3.00. Though the bug was in a corner of the interpreter that was new to version 1.3.00 and didn't cause anything too nasty - just a case where the interpreter rejects a script as invalid when it's not - it does mean an actual bug got through QA. I hate it when that happens.
+
+<!--more-->
+
+So, now we're testing QA to see if anything else got through and to see whether it's "normal" that this one got through. The way we're doing that is by launching a contest: if you find the bug - or any other bug for that matter, we're giving away an unencumbered perpetual license to all current dialects of Funky - and if you fix the bug, we'll pay you $50 Canadian.
+
+Seeing the nature of the bug, which is really very minor (a script that gets rejected as invalid by the interpreter, but is such a corner case that we might as well have argued that it is really invalid) we decided we can do that with this particular bug: we don't need to bring out a new version of Funky that fixes the bug right away (except to registered users, who might actually want to use the missing feature at some point). So we took this as an opportunity to test QA.
+
+The idea is that if you can't find the bug with an incentive to do so, but we _can_ find the bug, though not during the right release process (after all, I found it during the development process for the next version, but we should've picked it up in QA) our process might need a bit of a review so the bug will get caught next time (i.e. a post-mortem review) but we don't need a major overhaul. If bugs start popping out of the woodworks during the contest, we _definitely_ need to take a closer look at QA.

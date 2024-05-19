@@ -1,0 +1,1 @@
+An just to remind myself and some of my colleagues, I drew this on the office whiteboard yesterday: [![20121220-193947.jpg](/assets/2012/12/20121220-193947.jpg)](/assets/2012/12/20121220-193947.jpg)

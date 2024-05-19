@@ -1,0 +1,1 @@
+[![Copyright](http://imgs.xkcd.com/comics/copyright.jpg)](http://xkcd.com/14/)

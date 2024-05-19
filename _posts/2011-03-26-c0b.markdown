@@ -1,0 +1,9 @@
+The C++ standard committee has been meeting in Madrid and has, according to the latest news, approved the new C++ standard. [As Michael Wong said on his C/C++ Cafe Blog](https://web.archive.org/web/20160611151934/https://www.ibm.com/developerworks/mydeveloperworks/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/the_c_0x_standard_has_been_approved_to_ship23?lang=en), C++0x is now C++0b -- though it might be C++0c by the time ISO gets done with it.
+
+<!--more-->
+
+C++0x is a significant step forward in C++: it introduces threads, the concept of ranges, lambda expressions, automatic type deduction (no longer will you need to write impossibly long names), rvalue references, and more.
+
+One of the features that can make your code look really strange is lambdas: putting a function body, with instructions on how variables from the environment are "captured", in a place where you would currently only be able to put an expression may make the code a bit harder to understand for people new to C++0x, new to functional programming, or both.
+
+From my point of view, almost everything in the new standard is a real improvement (though some are more important to me than others). Once the first compliant version of GCC is out (no current version can claim compliance because the standard doesn't exist yet) I think I'll spend a bit of time experimenting :)
