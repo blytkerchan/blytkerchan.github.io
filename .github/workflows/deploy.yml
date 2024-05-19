@@ -28,6 +28,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh run download ${{ steps.get-run-id.outputs.run-id }} --repo ${{ github.repository }}
+          cp serverless-config/serverless.yml serverless.yml
+          mv site build
 
       - name: Display structure of downloaded files
         run: ls -R
@@ -36,3 +38,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Set up serverless
+        run: |
+          npm i -g serverless
+          serverless plugin install -n serverless-s3-sync
