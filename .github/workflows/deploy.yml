@@ -22,6 +22,7 @@ jobs:
         run: |
           RUN_ID=$(gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId')
           echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
+          echo ${RUN_ID}
 
       - uses: actions/download-artifact@v4
         with:
