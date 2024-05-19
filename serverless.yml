@@ -9,14 +9,14 @@ custom:
   siteName: ${self:custom.zoneName.${opt:stage, 'dev'}, "${self:custom.zoneName.default}"}
   zoneName:
     prod: rlc.vlinder.ca
-    default: ${opt:stage, 'dev'}.rlc.vlinder.ca.com
-  hostedZoneName: rlc.vlinder.ca
+    default: ${opt:stage, 'dev'}-rlc.vlinder.ca.com
+  hostedZoneName: vlinder.ca
   aliasHostedZoneId: Z3AQBSTGFYJSTF    # us-east-1
   cloudFrontHostedZoneId: Z2FDTNDATAQYW2
   aliasDNSName: s3-website-us-east-1.amazonaws.com
   s3Sync:
     - bucketName: ${self:custom.siteName}
-      localDir: _site
+      localDir: build
 
 # No need to edit below here
 
@@ -101,7 +101,7 @@ resources:
                 Forward: none
             ViewerProtocolPolicy: redirect-to-https
           ViewerCertificate:
-            AcmCertificateArn: 'arn:aws:acm:us-east-1:981855120431:certificate/58d98960-42ee-47de-81de-d36623c86a8a'
+            AcmCertificateArn: 'arn:aws:acm:us-east-1:981855120431:certificate/ff9f2822-3713-4b74-b65f-f2ad2cbd43da'
             MinimumProtocolVersion: TLSv1.2_2018
             SslSupportMethod: sni-only
 
