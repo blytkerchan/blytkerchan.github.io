@@ -1,0 +1,26 @@
+name: Set up our Webpack
+
+on:
+  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["Webpack"]
+    types: ["completed"]
+
+jobs:
+  build:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: "*"
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
