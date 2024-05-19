@@ -27,7 +27,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run download ${{ steps.get-run-id.outputs.run-id }}
+          gh run download ${{ steps.get-run-id.outputs.run-id }} --repo ${{ github.repository }}
 
       - name: Display structure of downloaded files
         run: ls -R
