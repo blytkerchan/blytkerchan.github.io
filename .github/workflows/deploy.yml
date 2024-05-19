@@ -16,12 +16,8 @@ jobs:
 
     steps:
       - uses: actions/download-artifact@v4
-        with:
-          name: site
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: serverless.yml
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
