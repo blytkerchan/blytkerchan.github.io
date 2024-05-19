@@ -1,4 +1,4 @@
-name: Set up our Webpack
+name: Deploy
 
 on:
   workflow_dispatch: {}
