@@ -1,0 +1,107 @@
+service: making-life-easier
+
+configValidationMode: error
+
+plugins:
+  - serverless-s3-sync
+
+custom: 
+  siteName: ${self:custom.zoneName.${opt:stage, 'dev'}, "${self:custom.zoneName.default}"}
+  zoneName:
+    prod: rlc.vlinder.ca
+    default: ${opt:stage, 'dev'}.rlc.vlinder.ca.com
+  hostedZoneName: rlc.vlinder.ca
+  aliasHostedZoneId: Z3AQBSTGFYJSTF    # us-east-1
+  cloudFrontHostedZoneId: Z2FDTNDATAQYW2
+  aliasDNSName: s3-website-us-east-1.amazonaws.com
+  s3Sync:
+    - bucketName: ${self:custom.siteName}
+      localDir: _site
+
+# No need to edit below here
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+resources:
+  Resources:
+    StaticSiteS3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.siteName}
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: index.html
+    StaticSiteS3BucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket:
+          Ref: StaticSiteS3Bucket
+        PolicyDocument:
+          Statement:
+            - Sid: PublicReadGetObject
+              Effect: Allow
+              Principal: "*"
+              Action:
+              - s3:GetObject
+              Resource:
+                Fn::Join: [
+                  "", [
+                    "arn:aws:s3:::",
+                    {
+                      "Ref": "StaticSiteS3Bucket"
+                    },
+                    "/*"
+                  ]
+                ]
+    StaticSiteDnsRecord:
+      Type: "AWS::Route53::RecordSet"
+      Properties:
+        AliasTarget:
+          DNSName:
+            Fn::GetAtt: [ StaticSiteCloudFrontDistribution, DomainName ]
+          HostedZoneId: ${self:custom.cloudFrontHostedZoneId}
+        HostedZoneName: ${self:custom.hostedZoneName}.
+        Name: ${self:custom.siteName}
+        Type: 'A'
+    StaticSiteCloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Origins:
+            - DomainName: ${self:custom.siteName}.s3.amazonaws.com
+              Id: StaticSite
+              CustomOriginConfig:
+                HTTPPort: 80
+                OriginProtocolPolicy: http-only
+          Enabled: 'true'
+          Aliases:
+            - ${self:custom.siteName}
+          DefaultRootObject: index.html
+          CustomErrorResponses:
+            - ErrorCode: 404
+              ResponseCode: 200
+              ResponsePagePath: /index.html
+          DefaultCacheBehavior:
+            AllowedMethods:
+              - DELETE
+              - GET
+              - HEAD
+              - OPTIONS
+              - PATCH
+              - POST
+              - POST
+              - PUT
+            TargetOriginId: StaticSite
+            ForwardedValues:
+              QueryString: 'false'
+              Cookies:
+                Forward: none
+            ViewerProtocolPolicy: redirect-to-https
+          ViewerCertificate:
+            AcmCertificateArn: 'arn:aws:acm:us-east-1:981855120431:certificate/58d98960-42ee-47de-81de-d36623c86a8a'
+            MinimumProtocolVersion: TLSv1.2_2018
+            SslSupportMethod: sni-only
+
