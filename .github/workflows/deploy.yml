@@ -78,4 +78,4 @@ jobs:
 
       - name: Invalidate the index.html and index.json files
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/feed.xml" "/manifest.json" "/asset-manifest.json"
+          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/_posts/categories.json" "/feed.xml" "/manifest.json" "/asset-manifest.json"
