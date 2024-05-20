@@ -55,6 +55,12 @@ jobs:
         run: |
           serverless deploy
 
-      - name: Get stack ID
+      - name: Get distribution ID
+        id: get-distribution-id
         run: |
-          aws cloudformation describe-stacks --stack-name making-life-easier-dev --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name making-life-easier-dev --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
+          echo distribution-id=$(echo ${DISTRIBUTION_ID}) >> $GITHUB_OUTPUT
+
+      - name: Invalidate the index.html and index.json files
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths  "/index.html" "/_posts/index.json"
