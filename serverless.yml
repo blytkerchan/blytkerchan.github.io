@@ -106,4 +106,5 @@ resources:
   Outputs:
     CloudFrontDistributionID:
       Description: "CloudFront distribution ID"
-      Value: !Ref StaticSiteCloudFrontDistribution
+      Value:
+        Ref: StaticSiteCloudFrontDistribution
