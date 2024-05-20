@@ -28,3 +28,4 @@ scratchpad.css
 
 **/.env
 **/.nyc_output/
+ .serverless/
