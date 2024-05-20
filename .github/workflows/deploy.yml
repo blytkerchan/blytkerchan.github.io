@@ -21,8 +21,7 @@ jobs:
           BRANCH_NAME=$(echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}})
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
           case ${BRANCH_NAME} in
-          main)
-            echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          main) echo "stage=prod" >> $GITHUB_OUTPUT ;;
           *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
           esac
 
@@ -74,4 +73,4 @@ jobs:
 
       - name: Invalidate the index.html and index.json files
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/feed.xml"
+          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/feed.xml" "/manifest.json" "/asset-manifest.json"
