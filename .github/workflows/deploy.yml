@@ -21,7 +21,8 @@ jobs:
           BRANCH_NAME=$(echo ${GITHUB_REF_NAME:-${GITHUB_REF#refs/heads/}})
           echo "branch=${GITHUB_REF_NAME:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
           case ${BRANCH_NAME} in
-          main) echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          prod) echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          main) echo "stage=qa" >> $GITHUB_OUTPUT ;;
           *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
           esac
 
@@ -30,7 +31,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          RUN_ID=$(gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId')
+          RUN_ID=$(gh run list --json headBranch,databaseId --workflow webpack.yml --repo ${{ github.repository }}  -q '.[] | select(.headBranch=="${{ steps.get-branch-and-stage.outputs.branch }}") | .databaseId' | head -n1)
           echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
 
       - name: Download artefacts
