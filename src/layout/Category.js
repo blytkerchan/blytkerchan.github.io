@@ -47,7 +47,10 @@ const Category = ({ env }) => {
       const postUUIDs = theCategories.getCategoryPosts(slug);
       var posts = [];
       postUUIDs.forEach((post) => {
-        posts.push(thePosts.findPostByUUID(post));
+        const thePost = thePosts.findPostByUUID(post);
+        if (thePost) {
+          posts.push(thePost);
+        }
       });
       posts.sort((lhs, rhs) => {
         const a = rhs.date;
