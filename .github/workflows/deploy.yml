@@ -15,11 +15,16 @@ jobs:
         node-version: [20.x]
 
     steps:
-      - name: get prod or dev
-        id: get-prod-or-dev
+      - name: get branch and stage
+        id: get-branch-and-stage
         run: |
-          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}"
+          BRANCH_NAME=$(echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}})
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+          case ${BRANCH_NAME} in
+          main)
+            echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
+          esac
 
       - name: get Run ID
         id: get-run-id
@@ -59,12 +64,12 @@ jobs:
 
       - name: Deploy
         run: |
-          serverless deploy
+          serverless deploy -s ${{ steps.get-branch-and-stage.outputs.stage }}
 
       - name: Get distribution ID
         id: get-distribution-id
         run: |
-          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name making-life-easier-dev --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name making-life-easier-${{ steps.get-branch-and-stage.outputs.stage }} --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
           echo distribution-id=$(echo ${DISTRIBUTION_ID}) >> $GITHUB_OUTPUT
 
       - name: Invalidate the index.html and index.json files
