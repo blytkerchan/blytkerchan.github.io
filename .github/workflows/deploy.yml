@@ -1,0 +1,76 @@
+name: Deploy
+
+on:
+  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["Webpack"]
+    types: ["completed"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: get branch and stage
+        id: get-branch-and-stage
+        run: |
+          BRANCH_NAME=$(echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}})
+          echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+          case ${BRANCH_NAME} in
+          main) echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
+          esac
+
+      - name: get Run ID
+        id: get-run-id
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN_ID=$(gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId')
+          echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
+
+      - name: Download artefacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download ${{ steps.get-run-id.outputs.run-id }} --repo ${{ github.repository }}
+          cp serverless-config/serverless.yml serverless.yml
+          mv site build
+
+      - name: Display structure of downloaded files
+        run: ls -R
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Set up serverless
+        run: |
+          npm i -g serverless
+          serverless plugin install -n serverless-s3-sync
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy
+        run: |
+          serverless deploy -s ${{ steps.get-branch-and-stage.outputs.stage }}
+
+      - name: Get distribution ID
+        id: get-distribution-id
+        run: |
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name making-life-easier-${{ steps.get-branch-and-stage.outputs.stage }} --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
+          echo distribution-id=$(echo ${DISTRIBUTION_ID}) >> $GITHUB_OUTPUT
+
+      - name: Invalidate the index.html and index.json files
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/feed.xml" "/manifest.json" "/asset-manifest.json"
