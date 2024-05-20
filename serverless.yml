@@ -106,7 +106,4 @@ resources:
   Outputs:
     CloudFrontDistributionID:
       Description: "CloudFront distribution ID"
-      Value: !Ref CloudFrontDistribution
-    CloudFrontURL:
-      Description: "CloudFront URL"
-      Value: !GetAtt CloudFrontDistribution.DomainName
+      Value: !Ref StaticSiteCloudFrontDistribution
