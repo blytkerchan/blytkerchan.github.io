@@ -23,7 +23,7 @@ jobs:
           RUN_ID=$(gh run list --json  databaseId --workflow webpack.yml --repo ${{ github.repository }}  --limit 1 -q '.[0].databaseId')
           echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
 
-      - name: get Run ID
+      - name: Download artefacts
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -54,3 +54,7 @@ jobs:
       - name: Deploy
         run: |
           serverless deploy
+
+      - name: Get stack ID
+        run: |
+          aws cloudformation describe-stacks --stack-name making-life-easier-dev --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text
