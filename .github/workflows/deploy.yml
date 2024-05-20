@@ -21,7 +21,12 @@ jobs:
           BRANCH_NAME=$(echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}})
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
           case ${BRANCH_NAME} in
-          main) echo "stage=prod" >> $GITHUB_OUTPUT ;;
+          main)
+            case ${{ github.event_name }} in
+            pull_request) echo "stage=dev" >> $GITHUB_OUTPUT ;;
+            *) echo "stage=prod" >> $GITHUB_OUTPUT ;;
+            esac
+            ;;
           *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
           esac
 
