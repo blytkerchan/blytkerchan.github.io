@@ -103,3 +103,10 @@ resources:
             AcmCertificateArn: "arn:aws:acm:us-east-1:981855120431:certificate/ff9f2822-3713-4b74-b65f-f2ad2cbd43da"
             MinimumProtocolVersion: TLSv1.2_2018
             SslSupportMethod: sni-only
+  Outputs:
+    CloudFrontDistributionID:
+      Description: "CloudFront distribution ID"
+      Value: !Ref CloudFrontDistribution
+    CloudFrontURL:
+      Description: "CloudFront URL"
+      Value: !GetAtt CloudFrontDistribution.DomainName
