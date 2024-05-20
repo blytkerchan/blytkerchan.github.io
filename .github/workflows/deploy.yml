@@ -18,6 +18,10 @@ jobs:
       - name: get branch and stage
         id: get-branch-and-stage
         run: |
+          echo $GITHUB_HEAD_REF
+          echo $GITHUB_REF
+          echo $GITHUB_REF_NAME
+          echo $GITHUB_BASE_REF
           BRANCH_NAME=$(echo ${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}})
           echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
           case ${BRANCH_NAME} in
