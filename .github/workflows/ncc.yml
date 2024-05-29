@@ -28,7 +28,7 @@ jobs:
           mkdir -p build
           npm i -g @vercel/ncc
           npm install
-          ncc build -o handlers/ src/handlers/index.js
+          ncc build -m -o handlers/ src/handlers/index.js
 
       - name: publish artifacts
         uses: actions/upload-artifact@v4
