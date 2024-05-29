@@ -4,6 +4,7 @@ configValidationMode: error
 
 plugins:
   - serverless-s3-sync
+  - "@silvermine/serverless-plugin-cloudfront-lambda-edge"
 
 custom:
   siteName: ${self:custom.zoneName.${opt:stage, 'dev'}, "${self:custom.zoneName.default}"}
@@ -17,12 +18,15 @@ custom:
   s3Sync:
     - bucketName: ${self:custom.siteName}
       localDir: build
+  lambdaAtEdge:
+    retain: true
 
 # No need to edit below here
 
 provider:
   name: aws
   runtime: nodejs20.x
+  region: us-east-1
 
 resources:
   Resources:
@@ -83,6 +87,14 @@ resources:
             - ErrorCode: 403
               ResponseCode: 200
               ResponsePagePath: /index.html
+          CacheBehaviors:
+            - PathPattern: "/blog/*"
+              TargetOriginId: StaticSite
+              ViewerProtocolPolicy: redirect-to-https
+              ForwardedValues:
+                QueryString: "false"
+                Cookies:
+                  Forward: none
           DefaultCacheBehavior:
             AllowedMethods:
               - DELETE
@@ -108,3 +120,23 @@ resources:
       Description: "CloudFront distribution ID"
       Value:
         Ref: StaticSiteCloudFrontDistribution
+
+package:
+  individually: true
+  excludeDevDependencies: true
+  patterns: "!**/*"
+functions:
+  metadata:
+    name: "${opt:stage, 'dev'}-${self:service}-meta-data-rewriter"
+    handler: handlers.rewriteMetaData
+    runtime: nodejs20.x
+    package:
+      patterns:
+        - handlers/*.js
+      individually: true
+    lambdaAtEdge:
+      distribution: StaticSiteCloudFrontDistribution
+      eventType: "origin-request"
+      pathPattern: "/blog/*"
+    memorySize: 128
+    timeout: 5
