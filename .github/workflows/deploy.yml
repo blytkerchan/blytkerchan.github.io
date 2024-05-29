@@ -2,9 +2,9 @@ name: Deploy
 
 on:
   workflow_dispatch: {}
-  workflow_run:
-    workflows: ["Webpack"]
-    types: ["completed"]
+  # workflow_run:
+  #   workflows: ["Webpack", "NCC"]
+  #   types: ["completed"]
 
 jobs:
   build:
@@ -26,19 +26,22 @@ jobs:
           *) echo "stage=dev" >> $GITHUB_OUTPUT ;;
           esac
 
-      - name: get Run ID
-        id: get-run-id
+      - name: get webpack Run ID
+        id: get-run-ids
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          RUN_ID=$(gh run list --json headBranch,databaseId --workflow webpack.yml --repo ${{ github.repository }}  -q '.[] | select(.headBranch=="${{ steps.get-branch-and-stage.outputs.branch }}") | .databaseId' | head -n1)
-          echo run-id=$(echo ${RUN_ID}) >> $GITHUB_OUTPUT
+          WEBPACK_RUN_ID=$(gh run list --json headBranch,databaseId --workflow webpack.yml --repo ${{ github.repository }}  -q '.[] | select(.headBranch=="${{ steps.get-branch-and-stage.outputs.branch }}") | .databaseId' | head -n1)
+          NCC_RUN_ID=$(gh run list --json headBranch,databaseId --workflow ncc.yml --repo ${{ github.repository }}  -q '.[] | select(.headBranch=="${{ steps.get-branch-and-stage.outputs.branch }}") | .databaseId' | head -n1)
+          echo webpack-run-id=$(echo ${WEBPACK_RUN_ID}) >> $GITHUB_OUTPUT
+          echo ncc-run-id=$(echo ${NCC_RUN_ID}) >> $GITHUB_OUTPUT
 
       - name: Download artefacts
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run download ${{ steps.get-run-id.outputs.run-id }} --repo ${{ github.repository }}
+          gh run download ${{ steps.get-run-ids.outputs.webpack-run-id }} --repo ${{ github.repository }}
+          gh run download ${{ steps.get-run-ids.outputs.ncc-run-id }} --repo ${{ github.repository }}
           cp serverless-config/serverless.yml serverless.yml
           mv site build
 
@@ -69,9 +72,9 @@ jobs:
       - name: Get distribution ID
         id: get-distribution-id
         run: |
-          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name making-life-easier-${{ steps.get-branch-and-stage.outputs.stage }} --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name phoenix-ui-${{ steps.get-branch-and-stage.outputs.stage }} --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionID'].OutputValue" --output text)
           echo distribution-id=$(echo ${DISTRIBUTION_ID}) >> $GITHUB_OUTPUT
 
       - name: Invalidate the index.html and index.json files
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/_posts/categories.json" "/feed.xml" "/manifest.json" "/asset-manifest.json"
+          aws cloudfront create-invalidation --distribution-id ${{ steps.get-distribution-id.outputs.distribution-id }} --paths "/index.html" "/_posts/index.json" "/_posts/categories.json" "/feed.xml" "/manifest.json" "/asset-manifest.json" "/blog/*"

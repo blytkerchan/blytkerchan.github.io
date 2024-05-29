@@ -2,6 +2,7 @@ const fs = require("fs");
 const marked = require("marked");
 const fm = require("front-matter");
 const uuid = require("uuid").v4;
+const removeMd = require("remove-markdown");
 
 const { globSync } = require("glob");
 const URL = require("url").URL;
@@ -182,6 +183,52 @@ class BuildPosts {
     compilation.emitAsset(this.options.feedFile, new RawSource(feedContent));
   }
 
+  generateMetaJson(RawSource, compilation, post) {
+    const thePost = this.posts[post];
+
+    const firstImageHtmlTag = thePost["body"].match(/<img\s+src\s*=\s*['"]([^'"]+)/);
+    const firstImageHtmlTagIndex = firstImageHtmlTag?.index;
+    const firstImageHtmlTagSrc = firstImageHtmlTag ? firstImageHtmlTag[1] : null;
+    const firstImageMdTag = thePost["body"].match(/!\[[^\]]+\]\(([^\)]+)\)/);
+    const firstImageMdTagIndex = firstImageMdTag?.index;
+    const firstImageMdTagSrc = firstImageMdTag ? firstImageMdTag[1] : null;
+    var thumbnailImage = thePost["thumbnail"];
+
+    if (!thumbnailImage) {
+      if (firstImageHtmlTag && firstImageMdTag) {
+        if (firstImageHtmlTagIndex < firstImageMdTagIndex) {
+          thumbnailImage = firstImageHtmlTagSrc;
+        } else {
+          thumbnailImage = firstImageMdTagSrc;
+        }
+      } else if (firstImageHtmlTag) {
+        thumbnailImage = firstImageHtmlTagSrc;
+      } else if (firstImageMdTag) {
+        thumbnailImage = firstImageMdTagSrc;
+      }
+    }
+
+    if (!thumbnailImage) {
+      thumbnailImage = this.config.defaultThumbnailImage;
+    }
+
+    var tags = thePost["tags"]?.map((tag) => tag.replace(/\s+\(.*\)$/, ""));
+    var meta = {
+      author: thePost["author"],
+      published_time: thePost["date"],
+      title: thePost["title"],
+      type: "article",
+      tag: tags,
+      site_name: this.config.title,
+      description: removeMd(thePost["excerpt"]),
+      thumbnailImage: thumbnailImage,
+    };
+    compilation.emitAsset(
+      `meta/${post.replace(/\.md$/, ".json").replace(/\.markdown$/, ".json")}`,
+      new RawSource(JSON.stringify(meta))
+    );
+  }
+
   apply(compiler) {
     const pluginName = BuildPosts.name;
 
@@ -305,6 +352,22 @@ class BuildPosts {
           });
 
           return this.generateCategoriesJson(RawSource, compilation, categories);
+        }
+      );
+
+      // create the meta json files
+      compilation.hooks.processAssets.tap(
+        {
+          name: pluginName,
+
+          // Using one of the later asset processing stages to ensure
+          // that all assets were already added to the compilation by other plugins.
+          stage: Compilation.PROCESS_ASSETS_STAGE_SUMMARIZE,
+        },
+        (assets) => {
+          Object.keys(this.posts).forEach((post) => {
+            return this.generateMetaJson(RawSource, compilation, post);
+          });
         }
       );
     });
