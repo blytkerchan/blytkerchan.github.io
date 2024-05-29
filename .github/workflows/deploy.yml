@@ -57,6 +57,7 @@ jobs:
         run: |
           npm i -g serverless
           serverless plugin install -n serverless-s3-sync
+          serverless plugin install -n @silvermine/serverless-plugin-cloudfront-lambda-edge
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
