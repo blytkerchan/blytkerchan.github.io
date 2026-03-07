@@ -6,8 +6,15 @@ Interns and junior developers are at the "learning to read and write" stage of t
 
 To continue innovating, especially in large businesses, companies need fresh ideas, new perspectives, and change agents to join their ranks. The generation of young developers joining the workforce today are supposed to be that zephyr of fresh air that, just strong enough to blow the dust away yet gentle enough to leave the old dogs soundly asleep, keeps the innovation oxygenated and alive. For that to work, though, they need to be allowed to learn, to train their brain rather than the model, and (most importantly) to make mistakes.
 
+While letting sleeping dogs lie certainly makes the individual's life easier, old dogs can't learn new tricks if they're left asleep. Innovation starts with doing something differently, looking at whatever you're working on from a new perspective, and killing the age-old "we've always done it this way" mentality. The introduction of AI does part of that, and part of what it does is positive change, but a concern raised by Gesnot in his paper is that it brings *the same* change everywhere it's used. The cultural diversity and distinctiveness brought to the table by young engineers in a global team is at risk of effaced by the uniformity of the AI assistants they employ.
+
+At a societal level, the concern is similar: we've already seen what a social media echo chamber can do to political discourse and how "engagement" has become an economic good. With the advent of bots integrated into social media, a boombox of like-minded noise is added to that echo chamber. This can amplify our own errors in judgement as well as influence our decisions and cognitive biases in social settings, as it has already been shown to do in experimental settings. (See [Vincente and Matute, "<i>Humans inherit artificial intelligence biases</i>"](https://doi.org/10.1038/s41598-023-42384-8).)
+
+
+
 In conversations these last few weeks, the topic of AI and its role in software development and business management has often come up.
 
+- we’ve always used tools to offload come cognitive work, such as writing to not have to remember. This has undoubtedly reduced our ability to remember things since oral histories are no longer part of our way to record history.
 - automate using AI to allow the human to be the creative element
 - train  young developers by making them intern in the QA/V&V part of the business
 - pair young developers with seniors and have them review code and ask questions
