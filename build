@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Build the Jekyll site
+
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+echo "Building Jekyll site..."
+bundle exec jekyll build
+
+echo "Build complete. Output in _site/"
