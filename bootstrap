@@ -1,0 +1,127 @@
+#!/usr/bin/env bash
+# Bootstrap script for Jekyll blog development
+# Source this script: . bootstrap
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+echo "=== Jekyll Blog Bootstrap ==="
+echo
+
+# Check for required tools
+check_command() {
+    if ! command -v "$1" &> /dev/null; then
+        echo "ERROR: $1 is not installed or not in PATH"
+        return 1
+    fi
+    echo "✓ $1 found: $($1 --version 2>&1 | head -n1)"
+    return 0
+}
+
+echo "Checking required tools..."
+if ! check_command ruby; then
+    echo
+    echo "To install Ruby:"
+    echo "  - Ubuntu/Debian: sudo apt-get install ruby-full"
+    echo "  - Fedora/RHEL: sudo dnf install ruby ruby-devel"
+    echo "  - macOS: brew install ruby (or use system Ruby)"
+    echo "  - Or use rbenv/rvm for version management"
+    echo
+    return 1
+fi
+
+if ! check_command gem; then
+    echo
+    echo "gem should be included with Ruby. Try reinstalling Ruby."
+    echo
+    return 1
+fi
+
+# Check for build tools (needed for native extensions)
+if ! command -v gcc &> /dev/null || ! command -v make &> /dev/null; then
+    echo
+    echo "WARNING: Build tools (gcc, make) not found!"
+    echo "Many gems require compilation of native extensions."
+    echo
+    echo "To install build tools:"
+    echo "  - Ubuntu/Debian: sudo apt-get install build-essential"
+    echo "  - Fedora/RHEL: sudo dnf groupinstall 'Development Tools'"
+    echo "  - macOS: xcode-select --install"
+    echo
+    read -p "Continue anyway? (y/N) " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        return 1
+    fi
+else
+    echo "✓ Build tools found: $(gcc --version 2>&1 | head -n1)"
+fi
+
+echo
+
+# Ensure gem bin directory is in PATH
+if command -v ruby &> /dev/null; then
+    GEM_BIN_DIR="$(ruby -e 'puts Gem.user_dir')/bin"
+    if [[ -d "$GEM_BIN_DIR" ]] && [[ ":$PATH:" != *":$GEM_BIN_DIR:"* ]]; then
+        export PATH="$GEM_BIN_DIR:$PATH"
+        echo "✓ Added $GEM_BIN_DIR to PATH"
+    fi
+fi
+
+# Check if bundle command is available
+if ! command -v bundle &> /dev/null; then
+    echo "bundle command not found. Installing bundler..."
+    if gem install bundler --user-install; then
+        # Refresh PATH with gem bin directory
+        if command -v ruby &> /dev/null; then
+            GEM_BIN_DIR="$(ruby -e 'puts Gem.user_dir')/bin"
+            if [[ -d "$GEM_BIN_DIR" ]]; then
+                export PATH="$GEM_BIN_DIR:$PATH"
+                echo "Updated PATH with $GEM_BIN_DIR"
+            fi
+        fi
+        
+        # Check again
+        if ! command -v bundle &> /dev/null; then
+            echo "ERROR: bundle command still not found after installation"
+            echo
+            echo "Please add this line to your ~/.bashrc or ~/.bash_profile:"
+            echo "  export PATH=\"\$(ruby -e 'puts Gem.user_dir')/bin:\$PATH\""
+            echo "Then run: source ~/.bashrc"
+            echo
+            echo "Or install via system package: sudo apt install ruby-bundler"
+            return 1
+        fi
+    else
+        echo "ERROR: Failed to install bundler"
+        echo "Try: sudo apt install ruby-bundler"
+        return 1
+    fi
+fi
+
+echo "✓ bundle command found: $(bundle --version)"
+
+echo
+
+# Configure bundler to use local vendor/bundle for gems
+echo "Configuring bundler to use local gem path..."
+if ! bundle config set --local path vendor/bundle; then
+    echo "Warning: Failed to configure bundler path, continuing anyway..."
+fi
+
+# Install dependencies
+echo "Installing Ruby dependencies..."
+cd "$SCRIPT_DIR"
+if ! bundle install; then
+    echo "ERROR: Failed to install dependencies"
+    echo "Try running: bundle install --verbose for more details"
+    return 1
+fi
+
+echo
+echo "=== Bootstrap complete! ==="
+echo
+echo "Available commands:"
+echo "  ./build        - Build the site"
+echo "  ./serve        - Serve the site locally with live reload"
+echo "  bundle update  - Update dependencies"
+echo
