@@ -1,3 +1,9 @@
+---
+author: rlc
+date: 2026-03-14
+layout: post
+title: Learning, despite AI
+---
 About two years ago, I posted on [this blog](https://rlc.vlinder.ca/blog/2024/08/11/learning-despite-ai), expressing a concern that has since only grown. 
 
 The tech industry has become reliant on AI for productivity, with Satya Nadella, Microsoft’s CEO, claiming that [up to 30% of Microsoft’s code is written by AI](https://www.cnbc.com/2025/04/29/satya-nadella-says-as-much-as-30percent-of-microsoft-code-is-written-by-ai.html) as of last year, the banking sector is expecting to cut significant parts of its workforce, [replacing them with AI](https://www.reuters.com/business/finance/us-bank-executives-say-ai-will-boost-productivity-cut-jobs-2025-12-09/) and large companies like [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-and-microsoft-drive-industrial-productivity-generative-artificial-intelligence) and [Volkswagen](https://www.wsj.com/tech/ai/volkswagen-to-invest-1-2-billion-in-artificial-intelligence-by-2030-e41b2021) are making big-bet investments in AI to boost their productivity. This and other factors have led to [a decline in entry-level positions](https://www.hakia.com/news/junior-developer-crisis-2026/) and increasing pressure on young developers to perform and keep up with "the machine": software developers are expected to use AI to boost their productivity and write more code, rather than stop and think about what they’re doing.
@@ -7,14 +13,6 @@ According to faculty staff, [students are over reliant on AI](https://www.elon.e
 One article of note describes the issue particularly well: 
 
 > Programming students have a widespread access to powerful Generative AI tools like ChatGPT. While this can help understand the learning material and assist with exercises, educators are voicing more and more concerns about an overreliance on generated outputs and lack of critical thinking skills. It is thus important to understand how students actually use generative AI and what impact this could have on their learning behavior. To this end, we conducted a study including an exploratory experiment with 37 programming students, giving them monitored access to ChatGPT while solving a code authoring exercise. The task was not directly solvable by ChatGPT and required code comprehension and reasoning. While only 23 of the students actually opted to use the chatbot, the majority of those eventually prompted it to simply generate a full solution. We observed two prevalent usage strategies: to seek knowledge about general concepts and to directly generate solutions. Instead of using the bot to comprehend the code and their own mistakes, students often got trapped in a vicious cycle of submitting wrong generated code and then asking the bot for a fix. Those who self-reported using generative AI regularly were more likely to prompt the bot to generate a solution. Our findings indicate that concerns about potential decrease in programmers’ agency and productivity with Generative AI are justified. We discuss how researchers and educators can respond to the potential risk of students uncritically over-relying on Generative AI. We also discuss potential modifications to our study design for large-scale replications. (Rahe and Maalej, "How Do Programming Students Use Generative AI?". [arXiv:2501.10091](https://arxiv.org/abs/2501.10091))
-
-<!--
-
-Interns and junior developers are at the "learning to read and write" stage of their professional development: they are honing their skills and discovering what good looks like. Just like the first few meals you cook will feed you but won’t taste all that good, an author’s first book probably won’t be a masterpiece, and a painter’s first paintings won’t be the beautiful expression they may bring to the canvas later, a developer’s first code might run as expected but won’t be elegant and efficient. Becoming good, or even great, at a creative skill requires practice, patience, and time.
-
-Those interns and junior developers are being hindered in that development by demands of productivity that they cannot achieve, let alone sustain, without "help" from AI. The problem with the pressure to use AI to boost your productivity as a young developer should be obvious: to effectively and safely use AI "assistants" like GitHub Copilot, you need to be better than the assistant, or use it in a way to allow it to teach you, while remaining skeptical about what it tells you — "take it with a grain of salt" if you will.
-
--->
 
 At a societal level, the concern becomes even greater: [The Impact of Artificial Intelligence on Human Thought](https://doi.org/10.48550/arXiv.2508.16628) by Rénald Gesnot highlights a variety of societal concerns, including the "standardization of thought", and "cognitive offloading" and the sedanterization that comes with it. (See also [Derga <i>et al.</i>: "<i>From tools to threats: a reflection on the impact of artificial-intelligence chatbots on cognitive health</i>"](https://pmc.ncbi.nlm.nih.gov/articles/PMC11020077/)). This puts our ability, as humans and as a society, to be creative and to innovate at risk.
 
@@ -37,12 +35,3 @@ Finally, when they've had a chance to learn what good looks like, have accumulat
 This approach has two advantages: first, it brings immediate value by making Junior find bugs, contribute to your shift-left quality program, and eliminate some of your technical debt in test automation, while also allowing them to learn your product and become more effective and second, it builds a solid foundation for future innovation by ensuring the competence of tomorrow's greybeards.
 
 That's the longer view: today's high-performing seniors were once juniors developers. They've had the opportunity to learn, make mistakes, and be the subject of the occasional muttered expletive of the seniors of their time. Today's junior needs a similar investment of time and patience to become tomorrow's SME. The question isn’t whether you can afford to be patient with juniors now. It’s whether you can afford not to be.
-<!--
-In conversations these last few weeks, the topic of AI and its role in software development and business management has often come up.
-
-- we’ve always used tools to offload come cognitive work, such as writing to not have to remember. This has undoubtedly reduced our ability to remember things since oral histories are no longer part of our way to record history.
-- automate using AI to allow the human to be the creative element
-- train  young developers by making them intern in the QA/V&V part of the business
-- pair young developers with seniors and have them review code and ask questions
-- coach the seniors and incentivize them to be teachers
-- have the younguns learn something difficult, *then* use AI to compare what they learned with what the assistant tells them, so they learn to understand the limits of the technology-->
