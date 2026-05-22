@@ -1,5 +1,5 @@
 ---
-title: "PSA: `build-paper` has moved to `vln-devsecops`"
+title: "PSA: build-paper has moved to vln-devsecops"
 date: 2026-05-22
 tags: [github-actions, devops, announcement]
 author: rlc
