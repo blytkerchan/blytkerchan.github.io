@@ -5,6 +5,7 @@ layout: post
 title: We are leaving the Middle Ages
 ---
 We are living in a time when most of the software we use on a daily basis is written by hand using archaic, hand-crafted tooling. The tools, practices, and methods developers use on a daily basis are taught to them by the "masters" of the trade in the modern equivalent of apprenticeships. The modern equivalent of guilds, engineering orders and associations like the IEEE, ACM, and OIQ here in Quebec, set the loosely-enforced standards, like the SWEBOK, which are mostly ignored by practitioners.
+<!--more-->
 
 Our tools are compilers, toolchains, and IDEs. The equivalent of the carpenter's wood and nails are our programming languages, which we mould into useful-but-vulnerable software. Some of us craft the equivalent of battering rams (malware) while others craft the equivalent of the castle gates (firewalls) or drawbridges (protocols), but we all use the same tools of the trade in a myriad of bespoke variations.
 
