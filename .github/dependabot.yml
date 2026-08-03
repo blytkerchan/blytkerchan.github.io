@@ -15,7 +15,7 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: "deps(ruby)"
+      prefix: "deps(actions)"
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
