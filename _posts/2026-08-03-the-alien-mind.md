@@ -3,6 +3,7 @@ layout: post
 title: 'The Alien Mind'
 author: 'rlc'
 date: 2026-08-03
+excerpt: Modern AI tools can produce polished prose and clean-looking code, but polish is not proof of alignment. In this post, I argue that we should treat LLMs as an alien mind: useful, fast, and often insightful, yet fundamentally opaque. The safest path is applied paranoia: distrust, test, verify, and never ship what you do not understand.
 ---
 
 ## Introduction
